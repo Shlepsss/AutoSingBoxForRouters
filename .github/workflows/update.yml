@@ -17,12 +17,11 @@ jobs:
         run: |
           SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
       
-          JSON=$(jq -n 
-            --arg sub "$SUB" 
-            '{
-              core: "singbox",
-              input: $sub,
-              options: {
+          curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- <<EOF > config.json
+            {
+              "core": "singbox",
+              "input": "$SUB",
+              "options": {
                 "addTun": true,
                 "addSocks": true,
                 "tunName": "singtun0",
@@ -30,12 +29,8 @@ jobs:
                 "useExtended": false,
                 "detour": false
               }
-            }')
-      
-          curl -sS -X POST "https://api.web2core.workers.dev" 
-            -H "Content-Type: application/json" 
-            -d "$JSON" 
-            -o config.json
+            }
+            EOF
 
       - name: Commit config
         run: |
