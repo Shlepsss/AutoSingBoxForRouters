@@ -15,12 +15,6 @@ def filter_lines(raw: str):
     clean = []
 
     for line in lines:
-        line = line.strip()
-
-        if not line:
-            continue
-
-        # оставляем только прокси-схемы
         if line.startswith(("vless://", "vmess://", "trojan://")):
             clean.append(line)
 
@@ -61,5 +55,5 @@ def main():
 
     print("Done.")
 
-if name == "main":
+if __name__ == "__main__":
     main()
