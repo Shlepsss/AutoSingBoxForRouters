@@ -23,7 +23,7 @@ def filter_lines(raw: str):
 def build_config(clean_input: str):
     payload = {
         "core": "singbox",
-        "input": "vless://4e783039-6260-4107-9a11-2ab7dc18ded8@185.242.19.251:80?encryption=none&type=ws&security=none&path=%2Fstatic&host=top2019950683.mwscdn.ru#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%5B%2ACIDR%5D",
+        "input": clean_input,
         "options": {
             "addTun": True,
             "addSocks": True,
