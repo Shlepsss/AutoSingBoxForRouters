@@ -15,19 +15,27 @@ jobs:
 
       - name: Build config via API
         run: |
-          SUB=$(curl -s https://YOUR_SUB_URL | tr -d '\r')
+          SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
       
-          curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- <<EOF > config.json
-          {
-            "core": "singbox",
-            "input": "$SUB",
-            "options": {
-              "addTun": true,
-              "addSocks": true,
-              "useExtended": false
-            }
-          }
-          EOF
+          JSON=$(jq -n 
+            --arg sub "$SUB" 
+            '{
+              core: "singbox",
+              input: $sub,
+              options: {
+                "addTun": true,
+                "addSocks": true,
+                "tunName": "singtun0",
+                "genClashSecret": false,
+                "useExtended": false,
+                "detour": false
+              }
+            }')
+      
+          curl -sS -X POST "https://api.web2core.workers.dev" 
+            -H "Content-Type: application/json" 
+            -d "$JSON" 
+            -o config.json
 
       - name: Commit config
         run: |
