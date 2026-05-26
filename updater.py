@@ -3,7 +3,7 @@ import json
 
 SUB_URL = "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt"
 
-API_URL = "https://api.web2core.workers.dev/"
+API_URL = "https://api.web2core.workers.dev"
 
 def fetch_subscription():
     r = requests.get(SUB_URL, timeout=15)
@@ -27,12 +27,14 @@ def build_config(clean_input: str):
         "options": {
             "addTun": True,
             "addSocks": True,
-            "tunName": "singtun0"
-            "useExtended": False
+            "tunName": "singtun0",
+            "genClashSecret": False,
+            "useExtended": False,
+            "detour": False
         }
     }
 
-    r = requests.post(API_URL, json=payload, timeout=60)
+    r = requests.post(API_URL, json=payload, timeout=15)
     r.raise_for_status()
 
     return r.json()
