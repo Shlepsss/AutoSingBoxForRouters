@@ -16,18 +16,19 @@ jobs:
       - name: Build config via API
         run: |
           SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
-          CLEAN=$(echo "$SUB" | grep -E `^(vless|vmess|trojan)://')
-
-          if[-z "$CLEAN"]; then
-            echo "ERROR: Nety keys v spiske"
+          CLEAN=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://')
+      
+          if [ -z "$CLEAN" ]; then
+            echo "ERROR: Нет ключей в списке"
             exit 1
-            fi
+          fi
       
           jq -n --arg input "$SUB" '{
             core: "singbox",
             input: $input,
             options: { addTun: true, addSocks: true, tunName: "singtun0", genClashSecret: false, useExtended: false, detour: false }
           }' | curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- > config.json
+
 
       - name: Commit config
         run: |
