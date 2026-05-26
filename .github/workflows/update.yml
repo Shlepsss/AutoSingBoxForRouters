@@ -16,6 +16,12 @@ jobs:
       - name: Build config via API
         run: |
           SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
+          CLEAN=$(echo "$SUB" | grep -E `^(vless|vmess|trojan)://')
+
+          if[-z "$CLEAN"]; then
+            echo "ERROR: Nety keys v spiske"
+            exit 1
+            fi
       
           jq -n --arg input "$SUB" '{
             core: "singbox",
