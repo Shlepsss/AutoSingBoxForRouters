@@ -1,7 +1,7 @@
 import requests
 import json
 
-SUB_URL = "https://YOUR_SUBSCRIPTION_URL"
+SUB_URL = "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt"
 
 API_URL = "https://api.web2core.workers.dev/"
 
