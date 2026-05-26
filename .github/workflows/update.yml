@@ -17,9 +17,7 @@ jobs:
         run: |
           SUB=$(curl -s https://YOUR_SUB_URL | tr -d '\r')
       
-          curl -sS -X POST "https://api.web2core.workers.dev/" 
-            -H "Content-Type: application/json" 
-            --data-binary @- <<EOF > config.json
+          curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- <<EOF > config.json
           {
             "core": "singbox",
             "input": "$SUB",
