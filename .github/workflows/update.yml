@@ -2,7 +2,7 @@ name: Build SingBox Config
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */1 * * *"
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: Build config via API
         run: |
           SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
-          CLEAN=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://' | head -n 5)
+          CLEAN=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://' | grep -Ei 'russia|ru' | head -n 5)
       
           if [ -z "$CLEAN" ]; then
             echo "ERROR: Нет ключей в списке"
