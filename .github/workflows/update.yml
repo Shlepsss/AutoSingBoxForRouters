@@ -2,7 +2,7 @@ name: Build SingBox Config
 
 on:
   schedule:
-    - cron: "0 */1 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 jobs:
@@ -13,36 +13,70 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Build config via API
+      - name: Build configs via API
         run: |
+
           SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
-          CLEAN=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://' | grep -Ei 'russia' | head -n 5)
-          CLEAN10=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://' | grep -Ei 'russia' | head -n 10)
-      
-          if [ -z "$CLEAN" ]; then
-            echo "ERROR: Нет ключей в списке"
-            exit 1
-          fi
-      
-          jq -n --arg input "$CLEAN" '{
-            core: "singbox",
-            input: $input,
-            options: { addTun: true, addSocks: true, genClashSecret: false, useExtended: false }
-          }' | curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- > config.json
 
-          jq -n --arg input "$CLEAN10" '{
-            core: "singbox",
-            input: $input,
-            options: { addTun: true, addSocks: true, genClashSecret: false, useExtended: false }
-          }' | curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- > config10.json
+          ALL=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://')
+
+          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
+
+          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
+
+          build_config () {
+
+            TARGET=$1
+            RU_TARGET=$2
+            OUTPUT=$3
+
+            RU_SELECTED=$(echo "$RUSSIA" | head -n "$RU_TARGET")
+
+            RU_COUNT=$(echo "$RU_SELECTED" | grep -c . || true)
+
+            NEED=$((TARGET - RU_COUNT))
+
+            NONRU_SELECTED=$(echo "$NON_RUSSIA" | head -n "$NEED")
+
+            FINAL=$(printf "%s\n%s\n" "$RU_SELECTED" "$NONRU_SELECTED" | grep .)
+
+            COUNT=$(echo "$FINAL" | grep -c . || true)
+
+            if [ "$COUNT" -eq 0 ]; then
+              echo "ERROR: Нет доступных ключей"
+              exit 1
+            fi
+
+            echo "Building $OUTPUT with $COUNT nodes..."
+
+            jq -n --arg input "$FINAL" '{
+              core: "singbox",
+              input: $input,
+              options: {
+                addTun: true,
+                addSocks: true,
+                genClashSecret: false,
+                useExtended: false
+              }
+            }' \
+            | curl -sS -X POST "https://api.web2core.workers.dev/" \
+                -H "Content-Type: application/json" \
+                --data-binary @- \
+            > "$OUTPUT"
+          }
+
+          # config.json → target 5, prefer 3 RU
+          build_config 5 3 config.json
+
+          # config10.json → target 10, prefer 6 RU
+          build_config 10 6 config10.json
 
 
-      - name: Commit config
+      - name: Commit configs
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add config.json
-          git add config10.json
-          git commit -m "auto update config" || exit 0
+          git add config.json config10.json
+          git commit -m "auto update configs" || exit 0
           git push
