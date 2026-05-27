@@ -21,28 +21,31 @@ jobs:
           ALL=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://')
 
           RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' || true)
+
+          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
 
           make_config () {
             SIZE=$1
             RU_PREF=$2
             OUT=$3
 
-            # Берём ТОЛЬКО русские узлы в количестве RU_PREF
+            # Берем указанное количество русских ключей
             RU=$(echo "$RUSSIA" | head -n "$RU_PREF")
             RU_COUNT=$(echo "$RU" | grep -c . || true)
 
-            # Если русских не хватает до SIZE, добираем НЕ-русскими
-            if [ "$RU_COUNT" -lt "$SIZE" ]; then
-              NEED=$((SIZE - RU_COUNT))
-              NONRU=$(echo "$NON_RUSSIA" | shuf | head -n "$NEED")
-              FINAL=$(printf "%s\n%s\n" "$RU" "$NONRU" | grep .)
-            else
-              # Если русских достаточно — используем только их (обрезаем до SIZE)
-              FINAL=$(echo "$RU" | head -n "$SIZE")
+            # Если русских меньше, чем RU_PREF, добираем из NON_RUSSIA
+            NEED=$((SIZE - RU_COUNT))
+            NONRU=""
+            if [ "$NEED" -gt 0 ]; then
+              NONRU=$(echo "$NON_RUSSIA" | head -n "$NEED")
             fi
 
+            # Финальный список (только русские, если хватает)
+            FINAL=$(printf "%s\n%s\n" "$RU" "$NONRU" | grep .)
+
             echo "Building $OUT with $(echo "$FINAL" | grep -c .) nodes..."
+            echo "  - Russian nodes: $RU_COUNT"
+            echo "  - Non-Russian nodes: $(echo "$NONRU" | grep -c . || echo 0)"
 
             jq -n --arg input "$FINAL" '{
               core: "singbox",
@@ -60,13 +63,6 @@ jobs:
             > "$OUT"
           }
 
-          # Все конфиги, кроме foreign, теперь используют ТОЛЬКО русские ключи,
-          # добавляя NON-RU только если русских не хватает до требуемого размера
-          make_config 5 5 config5.json
-          make_config 7 7 config7.json
-          make_config 10 10 config10.json
-
-          # PURE FOREIGN (без изменений — только иностранные узлы)
           make_foreign () {
             SIZE=$1
             OUT=$2
@@ -89,13 +85,44 @@ jobs:
             > "$OUT"
           }
 
-          make_foreign 5 config5_foreign.json
-          make_foreign 10 config10_foreign.json
+          # ---------------- RU HYBRID (только русские, NON-RU только если не хватает) ----------------
+          make_config 5 5 config5.json      # 5 русских, если не хватает - добираем
+          make_config 7 7 config7.json      # 7 русских
+          make_config 10 10 config10.json   # 10 русских
 
-          # shuffled duplicates (теперь тоже с приоритетом русских)
+          # shuffled duplicates (та же логика)
           make_config 5 5 config5_b.json
           make_config 7 7 config7_b.json
           make_config 10 10 config10_b.json
+
+          # ---------------- FOREIGN ONLY (только нерусские) ----------------
+          make_foreign 5 config5_foreign.json
+          make_foreign 10 config10_foreign.json
+
+          # ---------------- PATCH URLTEST ----------------
+          patch_interval () {
+            FILE=$1
+            INTERVAL=$2
+
+            echo "Patching $FILE -> interval=$INTERVAL"
+
+            jq --arg interval "$INTERVAL" '
+              (.outbounds[] | select(.type=="urltest") | .interval) = $interval |
+              (.outbounds[] | select(.type=="urltest") | .tolerance) = 50
+            ' "$FILE" > tmp.json && mv tmp.json "$FILE"
+          }
+
+          # 5-series → 1m
+          patch_interval config5.json "1m"
+          patch_interval config5_b.json "1m"
+          patch_interval config5_foreign.json "1m"
+
+          # all others → 2m
+          patch_interval config7.json "2m"
+          patch_interval config7_b.json "2m"
+          patch_interval config10.json "2m"
+          patch_interval config10_b.json "2m"
+          patch_interval config10_foreign.json "2m"
 
       - name: Commit configs
         run: |
@@ -104,6 +131,6 @@ jobs:
 
           git add config*.json
 
-          git commit -m "extended multi-config system" || exit 0
+          git commit -m "auto update sing-box configs" || exit 0
 
           git push
