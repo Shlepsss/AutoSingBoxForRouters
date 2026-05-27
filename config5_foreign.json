@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇧🇾 🇳🇱 🇵🇱 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2"
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-3",
+        "🇳🇱 The Netherlands [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +51,30 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇧🇾 🇳🇱 🇵🇱 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2"
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-3",
+        "🇳🇱 The Netherlands [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "84.201.162.110",
-      "server_port": 4438,
-      "uuid": "aeb2cc7b-e2c7-4f6f-9a50-350d19d0ff6c",
+      "server": "158.160.136.203",
+      "server_port": 443,
+      "uuid": "79be6869-7b5e-4ee8-9675-770284523435",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "obhod.riotvpn.eu",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -80,85 +82,82 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
       "type": "vless",
-      "server": "158.160.229.121",
+      "server": "51.250.102.69",
       "server_port": 443,
-      "uuid": "3d344acb-be0c-4275-8f3d-f4243939c5e4",
+      "uuid": "79be6869-7b5e-4ee8-9675-770284523435",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ya.ru",
+        "server_name": "cdp.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "EG3q0J7gCoc9d0eHDfXX86OhQT27rQk3flGdiZPXmQ8",
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-3",
+      "type": "vless",
+      "server": "51.250.108.162",
+      "server_port": 443,
+      "uuid": "79be6869-7b5e-4ee8-9675-770284523435",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "nl.clgate.network",
+      "server_port": 443,
+      "uuid": "f4bad870-4b45-4a46-bec6-d05fa31df1cb",
+      "tls": {
+        "enabled": true,
+        "server_name": "m.twitch.tv",
+        "reality": {
+          "enabled": true,
+          "public_key": "r2B2KwffHmyjWrmwKmI0o3uW9UEsn2l_Ko0UmyTjKgM",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇧🇾 🇳🇱 🇵🇱 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.162.110",
-      "server_port": 443,
-      "uuid": "aeb2cc7b-e2c7-4f6f-9a50-350d19d0ff6c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-      "type": "vless",
-      "server": "185.171.202.76",
-      "server_port": 42652,
-      "uuid": "Tel:Arshiacomplus",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "yahoo.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.229.121",
-      "server_port": 443,
-      "uuid": "3d344acb-be0c-4275-8f3d-f4243939c5e4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "EG3q0J7gCoc9d0eHDfXX86OhQT27rQk3flGdiZPXmQ8",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       }
     }
