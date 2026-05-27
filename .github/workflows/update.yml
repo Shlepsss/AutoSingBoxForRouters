@@ -135,11 +135,19 @@ jobs:
 
           git push
               # === НОВЫЙ ШАГ ДЛЯ ЗАГРУЗКИ НА ЯНДЕКС.ДИСК ===
-      - name: Upload configs to Yandex Disk
-        uses: kirpichk/yandex-disk-publish@v1
-        with:
-          token: ${{ secrets.YANDEX_TOKEN }}
-          source: './config*.json'    # Загрузить все файлы, начинающиеся с config
-          target: '/SingBox_Configs'  # Путь к ПАПКЕ на вашем Яндекс.Диске
-          # Опционально: удалить старые файлы в папке перед загрузкой, чтобы там были только новые
-          cleanup: 'true'
+      - name: Upload to Yandex Disk
+        env:
+          YA_TOKEN: ${{ secrets.YANDEX_TOKEN }}
+        run: |
+          # Создаём папку на Диске (если её нет)
+          curl -s -X MKCOL "https://webdav.yandex.ru/SingBox_Configs/" \
+               -u "$YA_TOKEN:"
+
+          # Загружаем каждый config-файл в папку /SingBox_Configs
+          for file in config*.json; do
+            echo "Uploading $file..."
+            curl -s -T "$file" "https://webdav.yandex.ru/SingBox_Configs/$file" \
+                 -u "$YA_TOKEN:"
+          done
+          
+          echo "✅ Все конфиги загружены на Яндекс.Диск в папку /SingBox_Configs"
