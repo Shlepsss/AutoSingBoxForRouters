@@ -21,7 +21,6 @@ jobs:
           ALL=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://')
 
           RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-
           NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' || true)
 
           make_config () {
@@ -29,14 +28,19 @@ jobs:
             RU_PREF=$2
             OUT=$3
 
+            # Берём ТОЛЬКО русские узлы в количестве RU_PREF
             RU=$(echo "$RUSSIA" | head -n "$RU_PREF")
             RU_COUNT=$(echo "$RU" | grep -c . || true)
 
-            NEED=$((SIZE - RU_COUNT))
-
-            NONRU=$(echo "$NON_RUSSIA" | shuf | head -n "$NEED")
-
-            FINAL=$(printf "%s\n%s\n" "$RU" "$NONRU" | grep .)
+            # Если русских не хватает до SIZE, добираем НЕ-русскими
+            if [ "$RU_COUNT" -lt "$SIZE" ]; then
+              NEED=$((SIZE - RU_COUNT))
+              NONRU=$(echo "$NON_RUSSIA" | shuf | head -n "$NEED")
+              FINAL=$(printf "%s\n%s\n" "$RU" "$NONRU" | grep .)
+            else
+              # Если русских достаточно — используем только их (обрезаем до SIZE)
+              FINAL=$(echo "$RU" | head -n "$SIZE")
+            fi
 
             echo "Building $OUT with $(echo "$FINAL" | grep -c .) nodes..."
 
@@ -56,11 +60,13 @@ jobs:
             > "$OUT"
           }
 
-          make_config 5 3 config5.json
-          make_config 7 5 config7.json
-          make_config 10 8 config10.json
+          # Все конфиги, кроме foreign, теперь используют ТОЛЬКО русские ключи,
+          # добавляя NON-RU только если русских не хватает до требуемого размера
+          make_config 5 5 config5.json
+          make_config 7 7 config7.json
+          make_config 10 10 config10.json
 
-          # PURE FOREIGN
+          # PURE FOREIGN (без изменений — только иностранные узлы)
           make_foreign () {
             SIZE=$1
             OUT=$2
@@ -86,11 +92,10 @@ jobs:
           make_foreign 5 config5_foreign.json
           make_foreign 10 config10_foreign.json
 
-          # shuffled duplicates (RU configs)
-          make_config 5 3 config5_b.json
-          make_config 7 5 config7_b.json
-          make_config 10 8 config10_b.json
-
+          # shuffled duplicates (теперь тоже с приоритетом русских)
+          make_config 5 5 config5_b.json
+          make_config 7 7 config7_b.json
+          make_config 10 10 config10_b.json
 
       - name: Commit configs
         run: |
