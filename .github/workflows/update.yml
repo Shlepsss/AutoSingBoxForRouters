@@ -29,6 +29,7 @@ jobs:
             TARGET=$1
             RU_TARGET=$2
             OUTPUT=$3
+            INTERVAL=$4
 
             RU_SELECTED=$(echo "$RUSSIA" | head -n "$RU_TARGET")
 
@@ -63,13 +64,26 @@ jobs:
                 -H "Content-Type: application/json" \
                 --data-binary @- \
             > "$OUTPUT"
+
+            echo "Patching urltest settings in $OUTPUT..."
+
+            jq --arg interval "$INTERVAL" '
+              (.outbounds[] | select(.type=="urltest") | .interval) = $interval |
+              (.outbounds[] | select(.type=="urltest") | .tolerance) = 50
+            ' "$OUTPUT" > tmp.json && mv tmp.json "$OUTPUT"
           }
 
-          # config.json → target 5, prefer 3 RU
-          build_config 5 3 config.json
+          # config.json
+          # 5 total
+          # prefer 3 RU
+          # urltest interval 1m
+          build_config 5 3 config.json "1m"
 
-          # config10.json → target 10, prefer 6 RU
-          build_config 10 6 config10.json
+          # config10.json
+          # 10 total
+          # prefer 6 RU
+          # urltest interval 3m
+          build_config 10 6 config10.json "3m"
 
 
       - name: Commit configs
@@ -78,5 +92,7 @@ jobs:
           git config user.email "actions@github.com"
 
           git add config.json config10.json
+
           git commit -m "auto update configs" || exit 0
+
           git push
