@@ -135,19 +135,21 @@ jobs:
 
           git push
               # === НОВЫЙ ШАГ ДЛЯ ЗАГРУЗКИ НА ЯНДЕКС.ДИСК ===
-      - name: Upload to Yandex Disk
+      - name: Upload to Yandex Disk via WebDAV
         env:
-          YA_TOKEN: ${{ secrets.YANDEX_TOKEN }}
+          YA_LOGIN: ${{ secrets.YANDEX_NAME }}
+          YA_PASS: ${{ secrets.YANDEX_TOKEN }}
         run: |
-          # Создаём папку на Диске (если её нет)
+          # Кодируем логин:пароль в base64 (правильный способ для WebDAV) [citation:3][citation:9]
+          AUTH_HEADER=$(echo -n "$YA_LOGIN:$YA_PASS" | base64)
+          
+          # Создаём папку
           curl -s -X MKCOL "https://webdav.yandex.ru/SingBox_Configs/" \
-               -u "$YA_TOKEN:"
-
-          # Загружаем каждый config-файл в папку /SingBox_Configs
+               -H "Authorization: Basic $AUTH_HEADER"
+          
+          # Загружаем файлы
           for file in config*.json; do
             echo "Uploading $file..."
             curl -s -T "$file" "https://webdav.yandex.ru/SingBox_Configs/$file" \
-                 -u "$YA_TOKEN:"
+                 -H "Authorization: Basic $AUTH_HEADER"
           done
-          
-          echo "✅ Все конфиги загружены на Яндекс.Диск в папку /SingBox_Configs"
