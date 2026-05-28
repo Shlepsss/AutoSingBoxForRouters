@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇫🇮 Finland [SNI-RU] sun6-21.userapi.com",
+        "🇪🇪 Estonia [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands [*CIDR] YA",
         "🇫🇷 France | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🇫🇷 France | 🌐 [*CIDR]-2"
+        "🇫🇮 Finland [SNI-RU] sun6-21.userapi.com",
+        "🇷🇺 Russia [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,30 +51,74 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇫🇮 Finland [SNI-RU] sun6-21.userapi.com",
+        "🇪🇪 Estonia [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands [*CIDR] YA",
         "🇫🇷 France | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🇫🇷 France | 🌐 [*CIDR]-2"
+        "🇫🇮 Finland [SNI-RU] sun6-21.userapi.com",
+        "🇷🇺 Russia [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+      "tag": "🇪🇪 Estonia [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "dey.lnmarketplace.net",
+      "server": "rapid-ridge.scan-cdn.com",
       "server_port": 443,
-      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "uuid": "bdddc783-a4f3-47f7-8850-21416d0a31f1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dey.lnmarketplace.net",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "7yOiLNiS26T6h2D_WAJV3HoV9Eiq41VWZvzrRs5idQ0",
+          "short_id": "5333d078e66c39f0"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.122.237",
+      "server_port": 1443,
+      "uuid": "cd5bb6c7-7736-4122-a1f9-a3e4f3dd8b18",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "h8BDQnylBOkY67mfYEWv47OtXIo8FOjL5Y1tlozo8D0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "185.171.202.76",
+      "server_port": 42652,
+      "uuid": "Tel:Arshiacomplus",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.speedtest.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     },
@@ -100,26 +144,6 @@
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "185.171.202.76",
-      "server_port": 42652,
-      "uuid": "Tel:Arshiacomplus",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.wikipedia.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia [*CIDR] YA",
       "type": "vless",
       "server": "51.250.113.157",
@@ -136,26 +160,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "185.171.202.76",
-      "server_port": 42652,
-      "uuid": "4e783787-4de7-51de-ae32-01ce7203b838",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "yahoo.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     }

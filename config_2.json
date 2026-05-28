@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "ð«ð· France | ð | [*CIDR]",
         "🇫🇷 France | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] YA",
-        "🇫🇷 France | 🌐 [*CIDR]-2"
+        "🇫🇷 France | 🌐 [*CIDR]-2",
+        "🇳🇱 The Netherlands [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "ð«ð· France | ð | [*CIDR]",
         "🇫🇷 France | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] YA",
-        "🇫🇷 France | 🌐 [*CIDR]-2"
+        "🇫🇷 France | 🌐 [*CIDR]-2",
+        "🇳🇱 The Netherlands [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -79,29 +79,6 @@
       }
     },
     {
-      "tag": "ð«ð· France | ð | [*CIDR]",
-      "type": "vmess",
-      "server": "185.248.33.173",
-      "server_port": 61587,
-      "uuid": "b2da9920-b0a7-4354-9e26-3833ab8d00d0",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "imafake.locker",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "imafake.locker"
-        },
-        "path": "/speedtest"
-      }
-    },
-    {
       "tag": "🇫🇷 France | 🌐 [*CIDR]",
       "type": "vless",
       "server": "185.171.202.76",
@@ -110,14 +87,14 @@
       "tls": {
         "enabled": true,
         "insecure": true,
-        "server_name": "yahoo.com",
+        "server_name": "www.speedtest.com",
         "alpn": [
           "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -150,7 +127,7 @@
       "tls": {
         "enabled": true,
         "insecure": true,
-        "server_name": "www.wikipedia.com",
+        "server_name": "yahoo.com",
         "alpn": [
           "h2",
           "http/1.1"
@@ -158,6 +135,27 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.122.237",
+      "server_port": 1443,
+      "uuid": "cd5bb6c7-7736-4122-a1f9-a3e4f3dd8b18",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "h8BDQnylBOkY67mfYEWv47OtXIo8FOjL5Y1tlozo8D0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }

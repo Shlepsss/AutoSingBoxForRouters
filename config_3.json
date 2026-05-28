@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France | 🌐 [*CIDR]",
+        "🇦🇹 Austria [*CIDR]",
         "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🇫🇷 France | 🌐 [*CIDR]-2",
-        "🇪🇪 Estonia [*CIDR]"
+        "🇪🇪 Estonia [*CIDR]",
+        "🇫🇮 Finland [SNI-RU] sun6-21.userapi.com",
+        "🇷🇺 Russia [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,33 +51,37 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France | 🌐 [*CIDR]",
+        "🇦🇹 Austria [*CIDR]",
         "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🇫🇷 France | 🌐 [*CIDR]-2",
-        "🇪🇪 Estonia [*CIDR]"
+        "🇪🇪 Estonia [*CIDR]",
+        "🇫🇮 Finland [SNI-RU] sun6-21.userapi.com",
+        "🇷🇺 Russia [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]",
+      "tag": "🇦🇹 Austria [*CIDR]",
       "type": "vless",
-      "server": "185.171.202.76",
-      "server_port": 42652,
-      "uuid": "Tel:Arshiacomplus",
+      "server": "ss.ll0ll.vip",
+      "server_port": 2096,
+      "uuid": "5610a52c-48e0-4e8c-9230-fb302b04d02e",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.wikipedia.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     },
     {
@@ -102,6 +106,49 @@
       }
     },
     {
+      "tag": "🇪🇪 Estonia [*CIDR]",
+      "type": "vless",
+      "server": "185.215.184.109",
+      "server_port": 443,
+      "uuid": "4aaac4d7-a9c3-4f5e-8112-64cca5e6a14c",
+      "tls": {
+        "enabled": true,
+        "server_name": "185.215.184.109.blanesik.space",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/sequre/grpc"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [SNI-RU] sun6-21.userapi.com",
+      "type": "vless",
+      "server": "eager-hill.scan-cdn.com",
+      "server_port": 8443,
+      "uuid": "bdddc783-a4f3-47f7-8850-21416d0a31f1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sun6-21.userapi.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Zr37gJWVIvP9JsYN3cqySyvpo2SoOcZClA5e-qHsPCE",
+          "short_id": "cfb415a429e83b04"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR] YA",
       "type": "vless",
       "server": "51.250.113.157",
@@ -118,47 +165,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "185.171.202.76",
-      "server_port": 42652,
-      "uuid": "4e783787-4de7-51de-ae32-01ce7203b838",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "yahoo.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia [*CIDR]",
-      "type": "vless",
-      "server": "eeshka.api.dznn.net",
-      "server_port": 443,
-      "uuid": "9bc46020-c550-439a-86c5-38f64abc1ffd",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eeshka.api.dznn.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg",
-          "short_id": "0a6ba2716a409da6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       }
     }
