@@ -34,15 +34,15 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR] YA",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇪🇪 Estonia [SNI-RU] ads.x5.ru",
-        "🇫🇮 Finland [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]"
+        "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇺🇸 United States | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
-      "tolerance": 50,
+      "tolerance": 100,
       "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
@@ -51,30 +51,50 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR] YA",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇪🇪 Estonia [SNI-RU] ads.x5.ru",
-        "🇫🇮 Finland [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]"
+        "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇺🇸 United States | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] YA",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "51.250.47.192",
-      "server_port": 8443,
-      "uuid": "2a7c6438-f02c-48d0-af9d-3a81db277698",
+      "server": "ru.memeplanet.org",
+      "server_port": 443,
+      "uuid": "94ae5ad5-8f3e-41bf-9546-99a1543d3cd1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "mydogcollections.com",
         "reality": {
           "enabled": true,
-          "public_key": "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo",
-          "short_id": "dc8109baf0f607ea"
+          "public_key": "RsG53RnTZKpPwbKt0mnj3963DinwNFHpk3eWaHH6oG4",
+          "short_id": "653253254366"
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+      "type": "vless",
+      "server": "185.171.202.76",
+      "server_port": 42652,
+      "uuid": "Tel:Arshiacomplus",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.speedtest.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -82,18 +102,18 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "nebulvpn.bot.nu",
-      "server_port": 6443,
-      "uuid": "81bc17b1-f73d-419c-a50b-9e2a4d255dfb",
+      "server": "85.198.85.193",
+      "server_port": 40470,
+      "uuid": "b43c896e-d9b8-4606-b902-b1bf6d10d2f9",
       "tls": {
         "enabled": true,
         "server_name": "5post-gate.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "G4vvT8e4oYVIZZ6G09Kt3tJtp0qNVex3gXiHz4wmuzc",
-          "short_id": "a145eec6d5130e"
+          "public_key": "kn16KgkUCMVfqSIwKI9fd0yDy6VcavlTt56LqE_7JWI",
+          "short_id": "1fad87"
         },
         "utls": {
           "enabled": true,
@@ -105,60 +125,18 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia [SNI-RU] ads.x5.ru",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "rapid-ridge.scan-cdn.com",
-      "server_port": 443,
-      "uuid": "bdddc783-a4f3-47f7-8850-21416d0a31f1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "7yOiLNiS26T6h2D_WAJV3HoV9Eiq41VWZvzrRs5idQ0",
-          "short_id": "5333d078e66c39f0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland [*CIDR]",
-      "type": "vless",
-      "server": "5.42.100.213",
+      "server": "5.188.114.12",
       "server_port": 8443,
-      "uuid": "bdddc783-a4f3-47f7-8850-21416d0a31f1",
-      "flow": "xtls-rprx-vision",
+      "uuid": "81bc17b1-f73d-419c-a50b-9e2a4d255dfb",
       "tls": {
         "enabled": true,
-        "server_name": "sun6-21.userapi.com",
+        "server_name": "5post-gate.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Zr37gJWVIvP9JsYN3cqySyvpo2SoOcZClA5e-qHsPCE",
-          "short_id": "cfb415a429e83b04"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]",
-      "type": "vless",
-      "server": "45.11.26.42",
-      "server_port": 9443,
-      "uuid": "9beef3b2-5749-4529-a91a-29af1c043d6b",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "1Ft21vrEzdxBXrTvxvxetfMqBrb-FtuSG1PDDhfCh2A",
-          "short_id": "aaaa"
+          "public_key": "kYBv0pzwgjZYoymSlSGPFxgoLgs92uXYUGZfZ2wwnnI",
+          "short_id": "dc93f297474b860f"
         },
         "utls": {
           "enabled": true,
@@ -166,8 +144,28 @@
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "api-maps.yandex.ru"
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "us01.lumixvpn.org",
+      "server_port": 443,
+      "uuid": "107d9e9e-5634-44ef-a90b-c5118832fae6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "us01.lumixvpn.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "Y4TRkvxDmVR_iIvCTHiixPYnkHVYxMI4d2P5HsXnaBk",
+          "short_id": "06341ef4c0fb6507"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     }
   ],
