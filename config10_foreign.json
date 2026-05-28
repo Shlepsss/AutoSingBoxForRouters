@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA",
         "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-3",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-4",
         "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-5",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-6",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-7"
       ],
       "url": "https://google.com/generate_204",
       "interval": "2m",
@@ -56,83 +56,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA",
         "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-3",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-4",
         "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-5",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-6",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-7"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "185.171.202.76",
-      "server_port": 42652,
-      "uuid": "4e783787-4de7-51de-ae32-01ce7203b838",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.wikipedia.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "dey.lnmarketplace.net",
+      "server": "de.sbrf-cdn342.ru",
       "server_port": 443,
-      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "uuid": "91e120bc-159a-4390-b4e1-197b19602ea0",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dey.lnmarketplace.net",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "sub.sbrf-cdn342.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
     {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "84.201.168.186",
-      "server_port": 443,
-      "uuid": "7813648d-fca0-4a66-85cc-e0a054575e3d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.57.73",
+      "server": "51.250.17.80",
       "server_port": 443,
       "uuid": "7813648d-fca0-4a66-85cc-e0a054575e3d",
       "flow": "xtls-rprx-vision",
@@ -153,7 +110,7 @@
     {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
       "type": "vless",
-      "server": "158.160.136.203",
+      "server": "84.201.168.186",
       "server_port": 443,
       "uuid": "7813648d-fca0-4a66-85cc-e0a054575e3d",
       "flow": "xtls-rprx-vision",
@@ -172,50 +129,32 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-3",
       "type": "vless",
-      "server": "dey.lnmarketplace.net",
+      "server": "51.250.102.69",
       "server_port": 443,
-      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
-      "tls": {
-        "enabled": true,
-        "server_name": "dey.lnmarketplace.net",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.146.244",
-      "server_port": 443,
-      "uuid": "a6cdf0b8-75d5-4ca1-8c3f-56a02ecb3bda",
+      "uuid": "91ff2ef2-ff0f-4f83-b85a-9fd50ea2a7ce",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "login.vk.com",
+        "server_name": "cdp.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "EO_bdRRKRGch6S0usr_4OCEBqV7B70p2ixSoG6OW-UU",
-          "short_id": "e6f0c31c92"
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-3",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-4",
       "type": "vless",
-      "server": "51.250.17.80",
+      "server": "158.160.136.203",
       "server_port": 443,
-      "uuid": "91ff2ef2-ff0f-4f83-b85a-9fd50ea2a7ce",
+      "uuid": "7813648d-fca0-4a66-85cc-e0a054575e3d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -254,9 +193,9 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "89.144.30.104",
+      "server": "dey.lnmarketplace.net",
       "server_port": 443,
       "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
       "tls": {
@@ -267,7 +206,70 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-5",
+      "type": "vless",
+      "server": "84.201.168.220",
+      "server_port": 443,
+      "uuid": "7813648d-fca0-4a66-85cc-e0a054575e3d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-6",
+      "type": "vless",
+      "server": "158.160.136.203",
+      "server_port": 443,
+      "uuid": "91ff2ef2-ff0f-4f83-b85a-9fd50ea2a7ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-7",
+      "type": "vless",
+      "server": "51.250.97.18",
+      "server_port": 443,
+      "uuid": "91ff2ef2-ff0f-4f83-b85a-9fd50ea2a7ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }
