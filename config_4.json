@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-        "🇦🇹 Austria [SNI-RU] id.vk.com",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]-2",
-        "🇩🇰 Denmark [SNI-RU] www.kinopoisk.ru"
+        "🇫🇷 France | 🌐 [*CIDR]",
+        "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇪🇪 Estonia [*CIDR]",
+        "ð«ð· France | ð | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,82 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-        "🇦🇹 Austria [SNI-RU] id.vk.com",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]-2",
-        "🇩🇰 Denmark [SNI-RU] www.kinopoisk.ru"
+        "🇫🇷 France | 🌐 [*CIDR]",
+        "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇪🇪 Estonia [*CIDR]",
+        "ð«ð· France | ð | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "72.56.33.191",
-      "server_port": 443,
-      "uuid": "01cf5781-5948-11f1-9a67-dc08fb041e0d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "2IAFC23dkBm2ZRPTcxSWZ5YkpVxJufIIZn3-aSPRH10",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      }
-    },
-    {
-      "tag": "🇦🇹 Austria [SNI-RU] id.vk.com",
-      "type": "vless",
-      "server": "ss.ll0ll.vip",
-      "server_port": 2096,
-      "uuid": "5610a52c-48e0-4e8c-9230-fb302b04d02e",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-      "type": "vless",
-      "server": "185.171.202.76",
-      "server_port": 42652,
-      "uuid": "4e783787-4de7-51de-ae32-01ce7203b838",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "yahoo.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]-2",
+      "tag": "🇫🇷 France | 🌐 [*CIDR]",
       "type": "vless",
       "server": "185.171.202.76",
       "server_port": 42652,
@@ -134,7 +69,7 @@
       "tls": {
         "enabled": true,
         "insecure": true,
-        "server_name": "www.speedtest.com",
+        "server_name": "www.wikipedia.com",
         "alpn": [
           "h2",
           "http/1.1"
@@ -146,23 +81,89 @@
       }
     },
     {
-      "tag": "🇩🇰 Denmark [SNI-RU] www.kinopoisk.ru",
+      "tag": "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
       "type": "vless",
-      "server": "81.17.159.63",
+      "server": "185.228.232.150",
       "server_port": 443,
-      "uuid": "c8b6167c-615a-53ec-ae23-87054336339e",
+      "uuid": "3ea2d8f2-12c1-4189-8cc5-91d0ee9f5ca0",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.kinopoisk.ru",
+        "server_name": "queuev4.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "XDBvi6U6TnvlyuCdsIUtQ_yjrjyTEvr0KLHvuo-pF0Q",
-          "short_id": "cf53a10184e17998"
+          "public_key": "C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA",
+          "short_id": "a1b2c3d4e5f6"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.113.157",
+      "server_port": 443,
+      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "65nqcY-jE1J_G27W-X_qGCSpXMEHif6MBLXN8kBoFB0",
+          "short_id": "1f18adc24d1d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia [*CIDR]",
+      "type": "vless",
+      "server": "185.215.184.109",
+      "server_port": 443,
+      "uuid": "4aaac4d7-a9c3-4f5e-8112-64cca5e6a14c",
+      "tls": {
+        "enabled": true,
+        "server_name": "185.215.184.109.blanesik.space",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/sequre/grpc"
+      }
+    },
+    {
+      "tag": "ð«ð· France | ð | [*CIDR]",
+      "type": "vmess",
+      "server": "185.248.33.173",
+      "server_port": 61587,
+      "uuid": "b2da9920-b0a7-4354-9e26-3833ab8d00d0",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "imafake.locker",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "imafake.locker"
+        },
+        "path": "/speedtest"
       }
     }
   ],
