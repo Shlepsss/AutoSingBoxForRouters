@@ -1,1 +1,0 @@
-curl -fL -o /opt/etc/sing-box/config.json https://raw.githubusercontent.com/Shlepsss/AutoSingBoxForRoutersWhiteListsRKN/main/config.json && [ -s /opt/etc/sing-box/config.json ] && /opt/etc/init.d/S99sing-box restart
