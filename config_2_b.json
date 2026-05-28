@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia [*CIDR]",
         "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
-        "🇱🇻 Latvia [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]-2",
         "🇷🇺 Russia [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
-        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,40 +53,39 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia [*CIDR]",
         "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
-        "🇱🇻 Latvia [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]-2",
         "🇷🇺 Russia [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
-        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
       "type": "vless",
-      "server": "eeshka.api.dznn.net",
-      "server_port": 443,
-      "uuid": "9bc46020-c550-439a-86c5-38f64abc1ffd",
-      "flow": "xtls-rprx-vision",
+      "server": "185.171.202.76",
+      "server_port": 42652,
+      "uuid": "Tel:Arshiacomplus",
       "tls": {
         "enabled": true,
-        "server_name": "eeshka.api.dznn.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg",
-          "short_id": "0a6ba2716a409da6"
-        },
+        "insecure": true,
+        "server_name": "www.wikipedia.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]-2",
       "type": "vless",
       "server": "185.171.202.76",
       "server_port": 42652,
@@ -103,48 +102,6 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "🇱🇻 Latvia [*CIDR]",
-      "type": "vless",
-      "server": "l11.l-itx.info",
-      "server_port": 2053,
-      "uuid": "5da05cf7-9913-45a9-a7c6-71a41b1cd713",
-      "tls": {
-        "enabled": true,
-        "server_name": "itx-server.digital"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "itx-server.digital"
-        },
-        "path": "/ws"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "l4-1.l-itx.info",
-      "server_port": 7443,
-      "uuid": "5da05cf7-9913-45a9-a7c6-71a41b1cd713",
-      "tls": {
-        "enabled": true,
-        "server_name": "colorlib.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
-          "short_id": "6ba85179e30d4fc3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "xyz"
       }
     },
     {
@@ -169,9 +126,33 @@
       }
     },
     {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "l4.l-itx.info",
+      "server_port": 7443,
+      "uuid": "5da05cf7-9913-45a9-a7c6-71a41b1cd713",
+      "tls": {
+        "enabled": true,
+        "server_name": "colorlib.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
+          "short_id": "6ba85179e30d4fc3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "xyz"
+      }
+    },
+    {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "158.160.130.173",
+      "server": "51.250.24.222",
       "server_port": 443,
       "uuid": "3203ecb2-2d94-4ec1-be9f-79eb2c8d5e51",
       "flow": "xtls-rprx-vision",
@@ -190,23 +171,43 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "85.158.109.113",
+      "server": "212.193.155.32",
       "server_port": 443,
-      "uuid": "87be8be2-9296-4912-944e-d49cc81485d8",
+      "uuid": "9ebab373-19fe-4535-aa95-4e348ea300f1",
       "tls": {
         "enabled": true,
-        "server_name": "www.kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw",
-          "short_id": "aabbccdd"
-        },
+        "server_name": "s28315.cdn.ngenix.net",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "s28315.cdn.ngenix.net"
+        },
+        "path": "/ws"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "46.235.186.50",
+      "server_port": 443,
+      "uuid": "9ebab373-19fe-4535-aa95-4e348ea300f1",
+      "tls": {
+        "enabled": true,
+        "server_name": "s28315.cdn.ngenix.net"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "s28315.cdn.ngenix.net"
+        },
+        "path": "/ws"
       }
     }
   ],
