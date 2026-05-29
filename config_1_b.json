@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇮 Finland [SNI-RU] kinopoisk.ru",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇮 Finland [SNI-RU] kinopoisk.ru",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇮 Finland [SNI-RU] kinopoisk.ru",
+      "type": "vless",
+      "server": "144.31.109.243",
+      "server_port": 50574,
+      "uuid": "11697f33-7b99-45ad-ba9d-7e6b3574e916",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CVJiOkrMyWN6mIX85kT5xqTlzOtW0_d08eoBIHw8Iyg",
+          "short_id": "cbae7fd41d21563e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] VK",
@@ -81,92 +102,62 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "185.228.232.150",
+      "server": "de.sbrf-cdn342.ru",
       "server_port": 443,
-      "uuid": "3ea2d8f2-12c1-4189-8cc5-91d0ee9f5ca0",
+      "uuid": "91e120bc-159a-4390-b4e1-197b19602ea0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "queuev4.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA",
-          "short_id": "a1b2c3d4e5f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "46.149.71.46",
-      "server_port": 9443,
-      "uuid": "d511e429-e32b-46a7-ac07-a0fffa9b634c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rutube.ru",
+        "server_name": "sub.sbrf-cdn342.ru",
         "alpn": [
           "http/1.1"
         ],
-        "reality": {
-          "enabled": true,
-          "public_key": "ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU",
-          "short_id": "43dcff53849b81e6"
-        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "46.149.71.46",
+      "server": "rus.scroogethebest.com",
       "server_port": 443,
-      "uuid": "d511e429-e32b-46a7-ac07-a0fffa9b634c",
+      "uuid": "31969cf4-c1bb-4a3e-b42b-574dfb271c73",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.avito.ru",
+        "server_name": "rus.scroogethebest.com",
         "reality": {
           "enabled": true,
-          "public_key": "ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU",
-          "short_id": "0123456789abcdef"
+          "public_key": "sbvKAdRy_0h33iRxgGwHAD1HC62WGwlkWwj0S5ptJEU",
+          "short_id": "9c2378562188c3cb"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "46.149.71.46",
-      "server_port": 443,
-      "uuid": "0dc3fe97-73e3-4cc2-89a7-331e66540365",
-      "flow": "xtls-rprx-vision",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
       "tls": {
         "enabled": true,
-        "server_name": "www.avito.ru",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "surfvpn24.ru",
         "reality": {
           "enabled": true,
-          "public_key": "ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU",
-          "short_id": "67ccfc02"
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       }
     }
