@@ -25,48 +25,60 @@ jobs:
             "https://raw.githack.com/igareck/vpn-configs-for-russia/main/WHITE-SNI-RU-all.txt"
           )
           
-          # Собираем ВСЕ ключи из всех источников
-          ALL_KEYS=""
-          for SOURCE in "${SOURCES[@]}"; do
-            echo "Fetching from: $SOURCE"
-            KEYS=$(curl -s "$SOURCE" | tr -d '\r' | grep -E '^(vless|vmess|trojan)://' | grep -Evi 'raw' || true)
-            ALL_KEYS="${ALL_KEYS}${KEYS}"$'\n'
-          done
-          
-          # Убираем дубликаты и пустые строки
-          ALL=$(echo "$ALL_KEYS" | grep -v '^$' | sort -u)
-          
-          # Разделяем на RU и NON-RU
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' | shuf || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          
-          # Функция создания конфига ровно из 7 ключей
-          # Приоритет: сначала RU, потом при нехватке NON-RU
-          make_config_7keys() {
-            OUT=$1
-            VARIANT=$2
+          # Функция создания конфига с правильным количеством ключей
+          make_config_with_rules() {
+            OUTPUT_FILE=$1
+            RUSSIAN_KEYS=$2
+            NON_RUSSIAN_KEYS=$3
+            CONFIG_NAME=$4
             
-            # Берем случайные русские ключи
-            RU_KEYS=$(echo "$RUSSIA" | shuf | head -n 7 || true)
-            RU_COUNT=$(echo "$RU_KEYS" | grep -c . || echo 0)
+            RU_COUNT=$(echo "$RUSSIAN_KEYS" | grep -c . 2>/dev/null || echo 0)
             
-            # Если русских меньше 7, добираем из нерусских
-            if [ "$RU_COUNT" -lt 7 ]; then
-              NEED=$((7 - RU_COUNT))
-              NONRU_KEYS=$(echo "$NON_RUSSIA" | shuf | head -n "$NEED" || true)
-              FINAL=$(printf "%s\n%s\n" "$RU_KEYS" "$NONRU_KEYS" | grep .)
+            # Определяем целевое количество ключей
+            if [ "$RU_COUNT" -ge 10 ]; then
+              # Берем 10 случайных RU ключей
+              FINAL=$(echo "$RUSSIAN_KEYS" | shuf | head -n 10)
             else
-              FINAL="$RU_KEYS"
+              # Определяем сколько нужно добавить NON-RU
+              if [ "$RU_COUNT" -le 3 ]; then
+                TARGET_TOTAL=5
+              elif [ "$RU_COUNT" -le 5 ]; then
+                TARGET_TOTAL=7
+              elif [ "$RU_COUNT" -le 8 ]; then
+                TARGET_TOTAL=10
+              elif [ "$RU_COUNT" -eq 9 ]; then
+                TARGET_TOTAL=10
+              else
+                TARGET_TOTAL=10
+              fi
+              
+              NEED_NON_RU=$((TARGET_TOTAL - RU_COUNT))
+              
+              # Если NEED_NON_RU отрицательный, берем RU_COUNT ключей
+              if [ "$NEED_NON_RU" -lt 0 ]; then
+                FINAL=$(echo "$RUSSIAN_KEYS" | shuf | head -n "$TARGET_TOTAL")
+              else
+                # Берем ВСЕ русские ключи
+                FINAL="$RUSSIAN_KEYS"
+                
+                # Добавляем нужное количество NON-RU
+                if [ "$NEED_NON_RU" -gt 0 ]; then
+                  NONRU_TO_ADD=$(echo "$NON_RUSSIAN_KEYS" | shuf | head -n "$NEED_NON_RU" 2>/dev/null || true)
+                  if [ -n "$NONRU_TO_ADD" ]; then
+                    FINAL=$(printf "%s\n%s\n" "$FINAL" "$NONRU_TO_ADD" | grep .)
+                  fi
+                fi
+              fi
             fi
             
-            # Перемешиваем финальный список для разнообразия
-            FINAL=$(echo "$FINAL" | shuf)
-            
-            FINAL_COUNT=$(echo "$FINAL" | grep -c . || echo 0)
-            RU_IN_FINAL=$(echo "$FINAL" | grep -Ei 'russia' | grep -c . || echo 0)
+            # Перемешиваем финальный список
+            FINAL=$(echo "$FINAL" | shuf | grep .)
+            FINAL_COUNT=$(echo "$FINAL" | grep -c . 2>/dev/null || echo 0)
+            RU_IN_FINAL=$(echo "$FINAL" | grep -Ei 'russia' | grep -c . 2>/dev/null || echo 0)
             NONRU_IN_FINAL=$((FINAL_COUNT - RU_IN_FINAL))
             
-            echo "Building $OUT (variant: $VARIANT)"
+            echo "Building $OUTPUT_FILE ($CONFIG_NAME)"
+            echo "  - Source RU keys: $RU_COUNT"
             echo "  - Total nodes: $FINAL_COUNT"
             echo "  - Russian nodes: $RU_IN_FINAL"
             echo "  - Non-Russian nodes: $NONRU_IN_FINAL"
@@ -84,27 +96,34 @@ jobs:
             | curl -sS -X POST "https://api.web2core.workers.dev/" \
                 -H "Content-Type: application/json" \
                 --data-binary @- \
-            > "$OUT"
+            > "$OUTPUT_FILE"
           }
-          
-          # Получаем количество ссылок (источников) для создания конфигов
-          # Каждая ссылка = свой конфиг + b-конфиг
-          SOURCES_COUNT=${#SOURCES[@]}
-          echo "Found $SOURCES_COUNT sources"
           
           # Создаем конфиги: по 2 конфига на каждый источник (основной и b)
           for i in "${!SOURCES[@]}"; do
             SOURCE_NUM=$((i + 1))
+            SOURCE_URL="${SOURCES[$i]}"
             
-            # Для каждого источника обновляем списки RU и NON-RU из оригинального ALL
-            # (чтобы каждый конфиг был независимым)
-            RUSSIA=$(echo "$ALL" | grep -Ei 'russia' | shuf || true)
-            NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-            make_config_7keys "config_${SOURCE_NUM}.json" "source${SOURCE_NUM}_main"
+            echo "Processing source $SOURCE_NUM: $SOURCE_URL"
             
-            RUSSIA=$(echo "$ALL" | grep -Ei 'russia' | shuf || true)
-            NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-            make_config_7keys "config_${SOURCE_NUM}_b.json" "source${SOURCE_NUM}_backup"
+            # СКАЧИВАЕМ ТОЛЬКО ЭТОТ ИСТОЧНИК для основного конфига
+            KEYS=$(curl -s "$SOURCE_URL" | tr -d '\r' | grep -E '^(vless|vmess|trojan)://' | grep -Evi 'raw' || true)
+            UNIQUE_KEYS=$(echo "$KEYS" | grep -v '^$' | sort -u)
+            
+            # Разделяем на RU и NON-RU для этого источника
+            RUSSIA=$(echo "$UNIQUE_KEYS" | grep -Ei 'russia' | shuf || true)
+            NON_RUSSIA=$(echo "$UNIQUE_KEYS" | grep -Evi 'russia' | shuf || true)
+            
+            # Создаем основной конфиг
+            make_config_with_rules "config_${SOURCE_NUM}.json" "$RUSSIA" "$NON_RUSSIA" "source${SOURCE_NUM}_main"
+            
+            # Для _b конфига берем другие ключи (если возможно)
+            # Перемешиваем заново, чтобы получить другой набор
+            RUSSIA_B=$(echo "$UNIQUE_KEYS" | grep -Ei 'russia' | shuf || true)
+            NON_RUSSIA_B=$(echo "$UNIQUE_KEYS" | grep -Evi 'russia' | shuf || true)
+            
+            # Создаем backup конфиг
+            make_config_with_rules "config_${SOURCE_NUM}_b.json" "$RUSSIA_B" "$NON_RUSSIA_B" "source${SOURCE_NUM}_backup"
           done
           
           # ---------------- PATCH URLTEST НА 1 МИНУТУ ДЛЯ ВСЕХ КОНФИГОВ ----------------
@@ -138,7 +157,7 @@ jobs:
           
           git add config_*.json
           
-          git commit -m "auto update sing-box configs (7 keys each, RU priority)" || exit 0
+          git commit -m "auto update sing-box configs (dynamic keys based on RU count)" || exit 0
           
           git push
           
