@@ -37,9 +37,9 @@ jobs:
             NON_RUSSIAN_KEYS=$(echo "$NON_RUSSIAN_KEYS" | grep -v '^$' | sed '/^[[:space:]]*$/d')
             
             # Считаем количество русских ключей (безопасно)
-            RU_COUNT=$(echo "$RUSSIAN_KEYS" | grep -c . 2>/dev/null | tr -d '\n\r ' || echo "0")
+            RU_COUNT=$(echo "$RUSSIAN_KEYS" | grep -c . 2>/dev/null | tr -d '\n\r\t ' | xargs)
             RU_COUNT=${RU_COUNT:-0}
-            RU_COUNT=$((RU_COUNT + 0))  # Принудительно преобразуем в число
+            RU_COUNT=$((RU_COUNT + 0))
             
             echo "Building $OUTPUT_FILE ($CONFIG_NAME)"
             echo "  - Source RU keys: $RU_COUNT"
@@ -99,7 +99,9 @@ jobs:
               echo "  - Strategy: No RU keys, taking $TARGET_TOTAL non-RU keys"
               
               # Если нерусских меньше 5 - берем сколько есть
-              NONRU_AVAILABLE=$(echo "$NON_RUSSIAN_KEYS" | grep -c . 2>/dev/null | tr -d '\n\r ' || echo "0")
+              NONRU_AVAILABLE=$(echo "$NON_RUSSIAN_KEYS" | grep -c . 2>/dev/null | tr -d '\n\r\t ' | xargs)
+              NONRU_AVAILABLE=${NONRU_AVAILABLE:-0}
+              NONRU_AVAILABLE=$((NONRU_AVAILABLE + 0))
               if [ "$NONRU_AVAILABLE" -lt "$TARGET_TOTAL" ]; then
                 echo "  - Warning: Only $NONRU_AVAILABLE non-RU keys available (less than $TARGET_TOTAL)"
               fi
@@ -107,8 +109,16 @@ jobs:
             
             # Убираем пустые строки и перемешиваем финальный список
             FINAL=$(echo "$FINAL" | grep -v '^$' | shuf)
-            FINAL_COUNT=$(echo "$FINAL" | grep -c . 2>/dev/null || echo "0")
-            RU_IN_FINAL=$(echo "$FINAL" | grep -Ei 'russia' | grep -c . 2>/dev/null || echo "0")
+            
+            # Безопасное получение числовых значений
+            FINAL_COUNT=$(echo "$FINAL" | grep -c . 2>/dev/null | tr -d '\n\r\t ' | xargs)
+            FINAL_COUNT=${FINAL_COUNT:-0}
+            FINAL_COUNT=$((FINAL_COUNT + 0))
+            
+            RU_IN_FINAL=$(echo "$FINAL" | grep -Ei 'russia' | grep -c . 2>/dev/null | tr -d '\n\r\t ' | xargs)
+            RU_IN_FINAL=${RU_IN_FINAL:-0}
+            RU_IN_FINAL=$((RU_IN_FINAL + 0))
+            
             NONRU_IN_FINAL=$((FINAL_COUNT - RU_IN_FINAL))
             
             echo "  - Total nodes: $FINAL_COUNT"
