@@ -32,57 +32,90 @@ jobs:
             NON_RUSSIAN_KEYS=$3
             CONFIG_NAME=$4
             
-            RU_COUNT=$(echo "$RUSSIAN_KEYS" | grep -c . 2>/dev/null || echo 0)
+            # Очищаем от пустых строк
+            RUSSIAN_KEYS=$(echo "$RUSSIAN_KEYS" | grep -v '^$' | sed '/^[[:space:]]*$/d')
+            NON_RUSSIAN_KEYS=$(echo "$NON_RUSSIAN_KEYS" | grep -v '^$' | sed '/^[[:space:]]*$/d')
             
-            # Определяем целевое количество ключей
-            if [ "$RU_COUNT" -ge 10 ]; then
-              # Берем 10 случайных RU ключей
-              FINAL=$(echo "$RUSSIAN_KEYS" | shuf | head -n 10)
-            else
-              # Определяем сколько нужно добавить NON-RU
-              if [ "$RU_COUNT" -le 3 ]; then
-                TARGET_TOTAL=5
-              elif [ "$RU_COUNT" -le 5 ]; then
-                TARGET_TOTAL=7
-              elif [ "$RU_COUNT" -le 8 ]; then
-                TARGET_TOTAL=10
-              elif [ "$RU_COUNT" -eq 9 ]; then
-                TARGET_TOTAL=10
-              else
-                TARGET_TOTAL=10
-              fi
-              
-              NEED_NON_RU=$((TARGET_TOTAL - RU_COUNT))
-              
-              # Если NEED_NON_RU отрицательный, берем RU_COUNT ключей
-              if [ "$NEED_NON_RU" -lt 0 ]; then
-                FINAL=$(echo "$RUSSIAN_KEYS" | shuf | head -n "$TARGET_TOTAL")
-              else
-                # Берем ВСЕ русские ключи
-                FINAL="$RUSSIAN_KEYS"
-                
-                # Добавляем нужное количество NON-RU
-                if [ "$NEED_NON_RU" -gt 0 ]; then
-                  NONRU_TO_ADD=$(echo "$NON_RUSSIAN_KEYS" | shuf | head -n "$NEED_NON_RU" 2>/dev/null || true)
-                  if [ -n "$NONRU_TO_ADD" ]; then
-                    FINAL=$(printf "%s\n%s\n" "$FINAL" "$NONRU_TO_ADD" | grep .)
-                  fi
-                fi
-              fi
-            fi
-            
-            # Перемешиваем финальный список
-            FINAL=$(echo "$FINAL" | shuf | grep .)
-            FINAL_COUNT=$(echo "$FINAL" | grep -c . 2>/dev/null || echo 0)
-            RU_IN_FINAL=$(echo "$FINAL" | grep -Ei 'russia' | grep -c . 2>/dev/null || echo 0)
-            NONRU_IN_FINAL=$((FINAL_COUNT - RU_IN_FINAL))
+            # Считаем количество русских ключей (безопасно)
+            RU_COUNT=$(echo "$RUSSIAN_KEYS" | grep -c . 2>/dev/null | tr -d '\n\r ' || echo "0")
+            RU_COUNT=${RU_COUNT:-0}
+            RU_COUNT=$((RU_COUNT + 0))  # Принудительно преобразуем в число
             
             echo "Building $OUTPUT_FILE ($CONFIG_NAME)"
             echo "  - Source RU keys: $RU_COUNT"
+            
+            # Определяем логику формирования набора ключей
+            if [ "$RU_COUNT" -ge 10 ]; then
+              # Если русских 10 или больше - берем 10 случайных русских
+              FINAL=$(echo "$RUSSIAN_KEYS" | shuf | head -n 10)
+              echo "  - Strategy: >=10 RU keys, taking 10 random RU keys"
+              
+            elif [ "$RU_COUNT" -ge 6 ]; then
+              # Если русских 6-9 - берем всех русских + добиваем нерусскими до 10
+              TARGET_TOTAL=10
+              NEED_NON_RU=$((TARGET_TOTAL - RU_COUNT))
+              FINAL="$RUSSIAN_KEYS"
+              
+              if [ "$NEED_NON_RU" -gt 0 ]; then
+                NONRU_TO_ADD=$(echo "$NON_RUSSIAN_KEYS" | shuf | head -n "$NEED_NON_RU" 2>/dev/null || true)
+                if [ -n "$NONRU_TO_ADD" ]; then
+                  FINAL=$(printf "%s\n%s\n" "$FINAL" "$NONRU_TO_ADD" | grep -v '^$')
+                fi
+              fi
+              echo "  - Strategy: $RU_COUNT RU keys (6-9), adding $NEED_NON_RU non-RU to reach 10 total"
+              
+            elif [ "$RU_COUNT" -ge 4 ]; then
+              # Если русских 4-5 - берем всех русских + добиваем нерусскими до 7
+              TARGET_TOTAL=7
+              NEED_NON_RU=$((TARGET_TOTAL - RU_COUNT))
+              FINAL="$RUSSIAN_KEYS"
+              
+              if [ "$NEED_NON_RU" -gt 0 ]; then
+                NONRU_TO_ADD=$(echo "$NON_RUSSIAN_KEYS" | shuf | head -n "$NEED_NON_RU" 2>/dev/null || true)
+                if [ -n "$NONRU_TO_ADD" ]; then
+                  FINAL=$(printf "%s\n%s\n" "$FINAL" "$NONRU_TO_ADD" | grep -v '^$')
+                fi
+              fi
+              echo "  - Strategy: $RU_COUNT RU keys (4-5), adding $NEED_NON_RU non-RU to reach 7 total"
+              
+            elif [ "$RU_COUNT" -ge 1 ]; then
+              # Если русских 1-3 - берем всех русских + добиваем нерусскими до 5
+              TARGET_TOTAL=5
+              NEED_NON_RU=$((TARGET_TOTAL - RU_COUNT))
+              FINAL="$RUSSIAN_KEYS"
+              
+              if [ "$NEED_NON_RU" -gt 0 ]; then
+                NONRU_TO_ADD=$(echo "$NON_RUSSIAN_KEYS" | shuf | head -n "$NEED_NON_RU" 2>/dev/null || true)
+                if [ -n "$NONRU_TO_ADD" ]; then
+                  FINAL=$(printf "%s\n%s\n" "$FINAL" "$NONRU_TO_ADD" | grep -v '^$')
+                fi
+              fi
+              echo "  - Strategy: $RU_COUNT RU keys (1-3), adding $NEED_NON_RU non-RU to reach 5 total"
+              
+            else
+              # Если русских ключей НЕТ (RU_COUNT = 0) - берем 5 нерусских ключей
+              TARGET_TOTAL=5
+              FINAL=$(echo "$NON_RUSSIAN_KEYS" | shuf | head -n "$TARGET_TOTAL" 2>/dev/null || true)
+              echo "  - Strategy: No RU keys, taking $TARGET_TOTAL non-RU keys"
+              
+              # Если нерусских меньше 5 - берем сколько есть
+              NONRU_AVAILABLE=$(echo "$NON_RUSSIAN_KEYS" | grep -c . 2>/dev/null | tr -d '\n\r ' || echo "0")
+              if [ "$NONRU_AVAILABLE" -lt "$TARGET_TOTAL" ]; then
+                echo "  - Warning: Only $NONRU_AVAILABLE non-RU keys available (less than $TARGET_TOTAL)"
+              fi
+            fi
+            
+            # Убираем пустые строки и перемешиваем финальный список
+            FINAL=$(echo "$FINAL" | grep -v '^$' | shuf)
+            FINAL_COUNT=$(echo "$FINAL" | grep -c . 2>/dev/null || echo "0")
+            RU_IN_FINAL=$(echo "$FINAL" | grep -Ei 'russia' | grep -c . 2>/dev/null || echo "0")
+            NONRU_IN_FINAL=$((FINAL_COUNT - RU_IN_FINAL))
+            
             echo "  - Total nodes: $FINAL_COUNT"
             echo "  - Russian nodes: $RU_IN_FINAL"
             echo "  - Non-Russian nodes: $NONRU_IN_FINAL"
             
+            # Отправляем запрос к API
             jq -n --arg input "$FINAL" '{
               core: "singbox",
               input: $input,
@@ -104,15 +137,25 @@ jobs:
             SOURCE_NUM=$((i + 1))
             SOURCE_URL="${SOURCES[$i]}"
             
+            echo "=========================================="
             echo "Processing source $SOURCE_NUM: $SOURCE_URL"
+            echo "=========================================="
             
             # СКАЧИВАЕМ ТОЛЬКО ЭТОТ ИСТОЧНИК для основного конфига
             KEYS=$(curl -s "$SOURCE_URL" | tr -d '\r' | grep -E '^(vless|vmess|trojan)://' | grep -Evi 'raw' || true)
             UNIQUE_KEYS=$(echo "$KEYS" | grep -v '^$' | sort -u)
             
+            TOTAL_KEYS=$(echo "$UNIQUE_KEYS" | grep -c . 2>/dev/null || echo "0")
+            echo "Total unique keys in source: $TOTAL_KEYS"
+            
             # Разделяем на RU и NON-RU для этого источника
             RUSSIA=$(echo "$UNIQUE_KEYS" | grep -Ei 'russia' | shuf || true)
             NON_RUSSIA=$(echo "$UNIQUE_KEYS" | grep -Evi 'russia' | shuf || true)
+            
+            RU_COUNT_TOTAL=$(echo "$RUSSIA" | grep -c . 2>/dev/null || echo "0")
+            NONRU_COUNT_TOTAL=$(echo "$NON_RUSSIA" | grep -c . 2>/dev/null || echo "0")
+            echo "RU keys in source: $RU_COUNT_TOTAL"
+            echo "Non-RU keys in source: $NONRU_COUNT_TOTAL"
             
             # Создаем основной конфиг
             make_config_with_rules "config_${SOURCE_NUM}.json" "$RUSSIA" "$NON_RUSSIA" "source${SOURCE_NUM}_main"
@@ -124,6 +167,8 @@ jobs:
             
             # Создаем backup конфиг
             make_config_with_rules "config_${SOURCE_NUM}_b.json" "$RUSSIA_B" "$NON_RUSSIA_B" "source${SOURCE_NUM}_backup"
+            
+            echo ""
           done
           
           # ---------------- PATCH URLTEST НА 1 МИНУТУ ДЛЯ ВСЕХ КОНФИГОВ ----------------
@@ -131,24 +176,39 @@ jobs:
             FILE=$1
             INTERVAL=$2
             
-            echo "Patching $FILE -> interval=$INTERVAL"
-            
-            jq --arg interval "$INTERVAL" '
-              (.outbounds[] | select(.type=="urltest") | .interval) = $interval |
-              (.outbounds[] | select(.type=="urltest") | .tolerance) = 100
-            ' "$FILE" > tmp.json && mv tmp.json "$FILE"
+            if [ -f "$FILE" ]; then
+              echo "Patching $FILE -> interval=$INTERVAL"
+              jq --arg interval "$INTERVAL" '
+                (.outbounds[] | select(.type=="urltest") | .interval) = $interval |
+                (.outbounds[] | select(.type=="urltest") | .tolerance) = 100
+              ' "$FILE" > tmp.json && mv tmp.json "$FILE"
+            else
+              echo "Warning: $FILE not found, skipping patch"
+            fi
           }
           
           # Применяем патч 1 минута для ВСЕХ конфигов
           for file in config_*.json; do
-            if [ -f "$file" ]; then
-              patch_interval "$file" "1m"
-            fi
+            patch_interval "$file" "1m"
           done
           
           # Выводим список созданных файлов
+          echo "=========================================="
           echo "Created configs:"
           ls -la config_*.json
+          
+          # Проверяем, что файлы не пустые
+          echo "=========================================="
+          echo "Config sizes:"
+          for file in config_*.json; do
+            if [ -f "$file" ]; then
+              SIZE=$(stat -c%s "$file" 2>/dev/null || stat -f%z "$file" 2>/dev/null || echo "0")
+              echo "$file: $SIZE bytes"
+              if [ "$SIZE" -lt 100 ]; then
+                echo "  WARNING: $file is too small, might be invalid!"
+              fi
+            fi
+          done
 
       - name: Commit configs
         run: |
@@ -171,11 +231,15 @@ jobs:
           
           # Создаём папку
           curl -s -X MKCOL "https://webdav.yandex.ru/SingBox_Configs/" \
-               -H "Authorization: Basic $AUTH_HEADER"
+               -H "Authorization: Basic $AUTH_HEADER" || true
           
           # Загружаем все файлы config_*.json
           for file in config_*.json; do
-            echo "Uploading $file..."
-            curl -s -T "$file" "https://webdav.yandex.ru/SingBox_Configs/$file" \
-                 -H "Authorization: Basic $AUTH_HEADER"
+            if [ -f "$file" ]; then
+              echo "Uploading $file..."
+              curl -s -T "$file" "https://webdav.yandex.ru/SingBox_Configs/$file" \
+                   -H "Authorization: Basic $AUTH_HEADER"
+            fi
           done
+          
+          echo "All configs uploaded to Yandex Disk"
