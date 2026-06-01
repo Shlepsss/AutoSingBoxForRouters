@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇦🇹 🇩🇪 [SNI-RU] yandex.ru",
-        "🇫🇷 France | 🌐 [SNI-RU] max.ru",
+        "🇸🇰 Slovakia [SNI-RU] ads.x5.ru",
         "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
-        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru-2",
-        "🇫🇮 Finland [SNI-RU] ads.x5.ru"
+        "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru",
+        "🇰🇿 Kazakhstan [SNI-RU] max.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,50 +51,29 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇦🇹 🇩🇪 [SNI-RU] yandex.ru",
-        "🇫🇷 France | 🌐 [SNI-RU] max.ru",
+        "🇸🇰 Slovakia [SNI-RU] ads.x5.ru",
         "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
-        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru-2",
-        "🇫🇮 Finland [SNI-RU] ads.x5.ru"
+        "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru",
+        "🇰🇿 Kazakhstan [SNI-RU] max.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇦🇹 🇩🇪 [SNI-RU] yandex.ru",
+      "tag": "🇸🇰 Slovakia [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "ctt.phantom.direct",
-      "server_port": 443,
-      "uuid": "d1aa0bc6-8b4f-45a8-8917-4664b3cab074",
+      "server": "89.46.42.73",
+      "server_port": 8443,
+      "uuid": "748b694f-c317-463e-a80b-f800fb03eb14",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "MvulKIGlZrkM65ni5qzHCtoECLxj1vqbKHA5831RGnk",
-          "short_id": "f83fd840aa1e1bc6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "ya-most-fr.harknmav.fun",
-      "server_port": 7443,
-      "uuid": "c23e11a6-d8b8-4884-a751-a71d4d1c320c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "shFF3ItNnCCFyXKCqkGqz0sUYu_qoE7h1-UbNlQvWQo",
-          "short_id": "fd1c2c12ca44261a"
+          "public_key": "A3PWLCRX9oeSyPvrmrwj2jUXcLo2uCwAISRBHtNE1Xw",
+          "short_id": "6ba85179e30d4fc2"
         },
         "utls": {
           "enabled": true,
@@ -123,18 +102,40 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru-2",
+      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "85.158.109.113",
+      "server": "spb.maxg.ch",
       "server_port": 443,
-      "uuid": "87be8be2-9296-4912-944e-d49cc81485d8",
+      "uuid": "a579e891-5407-4f31-a23d-539f901bf29a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.kinopoisk.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw",
-          "short_id": "aabbccdd"
+          "public_key": "QlQDX8jxqNJE1qtZmaZCDxE7gZqcLlOKdWd5YKNv0Gg",
+          "short_id": "555b9b33d083d3f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇰🇿 Kazakhstan [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "kaz1.frost-api.com",
+      "server_port": 443,
+      "uuid": "4ecce0bf-5bad-474a-882c-8ba910a9e00e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "fb916778d4"
         },
         "utls": {
           "enabled": true,
@@ -143,18 +144,19 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] ads.x5.ru",
+      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
       "type": "vless",
-      "server": "ru7.vitok.cc",
+      "server": "msknode1.frost-api.com",
       "server_port": 443,
-      "uuid": "1b9e301d-cecd-4eb1-8b36-eef811c2696d",
+      "uuid": "4ecce0bf-5bad-474a-882c-8ba910a9e00e",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "eXl8Dpux23etQ0aA_16LUQ9eBwfDqbCaJm7YusDIzUU",
-          "short_id": "5e841fab"
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "fb916778d4"
         },
         "utls": {
           "enabled": true,
