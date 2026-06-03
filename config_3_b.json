@@ -31,31 +31,137 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 [*CIDR] YA"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] YA-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] YA",
+        "🇳🇱 The Netherlands [*CIDR] YA-3"
       ],
-      "default": "🇩🇪 Germany | 🌐 [*CIDR] YA",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 100,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] YA-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] YA",
+        "🇳🇱 The Netherlands [*CIDR] YA-3"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
       "type": "vless",
-      "server": "158.160.253.147",
+      "server": "84.201.168.186",
       "server_port": 443,
-      "uuid": "f1c496bf-d2ab-45be-bc13-051d60d227b7",
+      "uuid": "61d75eb7-7c42-4db1-bd12-540aa949452d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.ru",
+        "server_name": "cdp.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "IOFyDX8n74KV_z3WS8mIN20P-NAWEN_mU9N4joYh2gQ",
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "185.241.194.34",
+      "server_port": 5987,
+      "uuid": "2397be53-f62b-42f7-80fe-5d22627c03a9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "L4kWgoTxqQc4kAGLrF_ARMRVMPy3_WInhjwt_8OPenU",
+          "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA-2",
+      "type": "vless",
+      "server": "51.250.108.162",
+      "server_port": 443,
+      "uuid": "4ba3cb46-9046-45e8-a9f7-89f01715486b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "pro-ru-84.emrata.top",
+      "server_port": 443,
+      "uuid": "6e84b643-1c90-41e7-9028-ce4dea28c21c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA-3",
+      "type": "vless",
+      "server": "158.160.130.173",
+      "server_port": 443,
+      "uuid": "61d75eb7-7c42-4db1-bd12-540aa949452d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }
