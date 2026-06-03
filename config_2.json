@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
         "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇭🇺 Hungary [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇲🇩 Moldova [*CIDR]",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇪🇪 Estonia | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,33 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
         "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇭🇺 Hungary [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇲🇩 Moldova [*CIDR]",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇪🇪 Estonia | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.249",
-      "server_port": 443,
-      "uuid": "87065fda-527f-4abc-830a-e017930ef786",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2197697635.mwscdn.ru",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
     },
     {
       "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
@@ -93,8 +74,41 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🇭🇺 Hungary [*CIDR]",
+      "type": "vless",
+      "server": "46.16.36.227",
+      "server_port": 8443,
+      "uuid": "931729a8-3c20-4841-89a1-f18dc9ce0a6f",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn7-09.vk-cdnvideo.com"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "vless",
+      "server": "141.193.213.11",
+      "server_port": 443,
+      "uuid": "@a_amr79",
+      "tls": {
+        "enabled": true,
+        "server_name": "unnes.ac.id.cyylr.eu.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "unnes.ac.id.cyylr.eu.cc"
+        },
+        "path": "/my-wbv"
       }
     },
     {
@@ -105,57 +119,28 @@
       "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "top3739667002.mwscdn.ru"
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR] YA",
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 443,
-      "uuid": "8a62bddc-1e14-492b-a1da-4ac7e43c4b7f",
+      "server": "185.251.88.213",
+      "server_port": 444,
+      "uuid": "6ed3c281-cf63-4501-9bae-b34c1ce00854",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "storage.yandex.net",
         "reality": {
           "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "50e09046c0c00159"
+          "public_key": "4GPqbNq26dMH4fpGoJuM0Ahhih7_iTYqfkBPV5A-gyo",
+          "short_id": "73818521bd8c190e"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "vless",
-      "server": "216.24.57.1",
-      "server_port": 443,
-      "uuid": "6e593426-1a8e-4226-984f-0ea174e218c7",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.cvs.freefiremobile.com.cyylr.eu.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
-        },
-        "path": "/id-pusat"
       }
     }
   ],
