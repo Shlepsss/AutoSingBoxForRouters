@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
-        "🇵🇱 Poland [*CIDR]"
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇭🇺 Hungary | 🌐 [*CIDR]",
+        "🇭🇺 Hungary | 🌐 [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,50 +51,47 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
-        "🇵🇱 Poland [*CIDR]"
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇭🇺 Hungary | 🌐 [*CIDR]",
+        "🇭🇺 Hungary | 🌐 [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
-      "type": "vless",
+      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+      "type": "trojan",
       "server": "216.24.57.1",
       "server_port": 443,
-      "uuid": "6e593426-1a8e-4226-984f-0ea174e218c7",
+      "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "dl.cvs.freefiremobile.com.cyylr.eu.cc",
-        "alpn": [
-          "http/1.1"
-        ]
+        "server_name": "www.creationlong.org"
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+          "Host": "www.creationlong.org"
         },
-        "path": "/id-pusat"
+        "path": "/assignment"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
       "type": "vless",
-      "server": "185.241.194.34",
-      "server_port": 5994,
-      "uuid": "2397be53-f62b-42f7-80fe-5d22627c03a9",
+      "server": "217all.ghost-lan.com",
+      "server_port": 443,
+      "uuid": "94b7ab50-419a-4eeb-85f1-a49a94160d17",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "surfvpn24.ru",
+        "server_name": "eh.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "trrVBG2fDc411qxZQ8__7x6ZlJC4lI2m_mwl-O-BEjQ",
-          "short_id": "c19de8fa"
+          "public_key": "O98FQZTRYOSk7c0sWes9pLZEX4oIE9lA_cZb6c3AHTU",
+          "short_id": "24a8e8f8b85dad93"
         },
         "utls": {
           "enabled": true,
@@ -103,66 +100,49 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "tag": "🇭🇺 Hungary | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "216.24.57.1",
-      "server_port": 443,
-      "uuid": "6e593426-1a8e-4226-984f-0ea174e218c7",
+      "server": "82.202.138.158",
+      "server_port": 8443,
+      "uuid": "931729a8-3c20-4841-89a1-f18dc9ce0a6f",
       "tls": {
         "enabled": true,
-        "server_name": "dl.cvs.freefiremobile.com.cyylr.eu.cc",
+        "server_name": "cdn7-09.vk-cdnvideo.com"
+      }
+    },
+    {
+      "tag": "🇭🇺 Hungary | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "82.202.138.158",
+      "server_port": 8443,
+      "uuid": "931729a8-3c20-4841-89a1-f18dc9ce0a6f",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn7-09.vk-cdnvideo.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
-        },
-        "path": "/id-pusat"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "141.193.213.11",
+      "server": "178.236.240.183",
       "server_port": 443,
-      "uuid": "@a_amr79",
+      "uuid": "1f514e3e-54b3-4ec4-82bd-3f2137357604",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "unnes.ac.id.cyylr.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "unnes.ac.id.cyylr.eu.cc"
-        },
-        "path": "/my-wbv"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]",
-      "type": "vless",
-      "server": "89.126.229.40",
-      "server_port": 443,
-      "uuid": "301d514e-4aa0-47b0-ba44-a0cb891cd52f",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
+        "server_name": "www.microsoft.com",
         "reality": {
           "enabled": true,
-          "public_key": "OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4",
-          "short_id": "a1b2c3d4"
+          "public_key": "pfbJB3DRXflwP8WwE8PqTJCdwn7RcXTgYxwkMH_dA34",
+          "short_id": "6f1573f9669b2e16"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       }
     }
