@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇲🇩 Moldova [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia [*CIDR] VK-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,56 +53,113 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇲🇩 Moldova [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia [*CIDR] VK-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
       "type": "vless",
-      "server": "89.208.208.92",
-      "server_port": 7443,
-      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
+      "server": "141.193.213.11",
+      "server_port": 443,
+      "uuid": "9232a847-8f7d-4548-a23a-a8b3550e0f15",
       "tls": {
         "enabled": true,
-        "server_name": "loadtest.dev.urent.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
-          "short_id": "3210e0eee6605048"
-        },
+        "server_name": "grabacademyportal.grab.com.cyylr.eu.cc",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "grabacademyportal.grab.com.cyylr.eu.cc"
+        },
+        "path": "/id-tksi"
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "89.126.229.40",
-      "server_port": 443,
-      "uuid": "301d514e-4aa0-47b0-ba44-a0cb891cd52f",
+      "server": "217.16.21.116",
+      "server_port": 5443,
+      "uuid": "7d876627-abf5-4865-8ff4-03f37d49de5d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4",
-          "short_id": "a1b2c3d4"
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]",
+      "type": "vless",
+      "server": "185.242.19.250",
+      "server_port": 443,
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
+      "type": "vless",
+      "server": "89.208.230.241",
+      "server_port": 5443,
+      "uuid": "7d876627-abf5-4865-8ff4-03f37d49de5d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "94.241.168.123",
+      "server_port": 2040,
+      "uuid": "17451fec-af94-4715-8c2f-7f6839130d0a",
+      "tls": {
+        "enabled": true,
+        "server_name": "tradingview.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "LidllyozUeeSbuzJ0ZfieGoy8YjVzqXX9H2m9whPaG0",
+          "short_id": "53197c66aef53c44"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     },
@@ -109,10 +168,10 @@
       "type": "vless",
       "server": "216.24.57.1",
       "server_port": 443,
-      "uuid": "565b50d4-604d-4a60-9fc2-d9d3dac0aec6",
+      "uuid": "1a5b24bc-6180-4fa7-922d-ba7ee8a7a2b7",
       "tls": {
         "enabled": true,
-        "server_name": "dl.cvs.freefiremobile.com.cyylr.eu.cc",
+        "server_name": "support.zoom.us.cyylr.eu.cc",
         "alpn": [
           "http/1.1"
         ],
@@ -124,52 +183,30 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+          "Host": "support.zoom.us.cyylr.eu.cc"
         },
         "path": "/id-pusat"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]-2",
-      "type": "trojan",
-      "server": "141.193.213.10",
-      "server_port": 443,
-      "password": "6b7f37af-a853-4f01-a031-5fa4eca4f5bf",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.ruangguru.com.cyylr.eu.cc"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ads.ruangguru.com.cyylr.eu.cc"
-        },
-        "path": "/in-do"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR] VK-3",
       "type": "vless",
-      "server": "216.24.57.1",
-      "server_port": 443,
-      "uuid": "19804f6b-3661-4eca-b294-ba37196dab5b",
+      "server": "gdg.herumhas.shop",
+      "server_port": 5443,
+      "uuid": "7d876627-abf5-4865-8ff4-03f37d49de5d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "graph.instagram.com.cyylr.eu.cc",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "graph.instagram.com.cyylr.eu.cc"
-        },
-        "path": "/id-tksi"
       }
     }
   ],
