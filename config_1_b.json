@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇺 Hungary [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]",
+        "🇭🇺 Hungary [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,82 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇺 Hungary [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]",
+        "🇭🇺 Hungary [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇭🇺 Hungary [*CIDR]",
-      "type": "vless",
-      "server": "85.208.85.91",
-      "server_port": 8443,
-      "uuid": "931729a8-3c20-4841-89a1-f18dc9ce0a6f",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn7-09.vk-cdnvideo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "74.49.215.177",
-      "server_port": 443,
-      "uuid": "9a98146a-235c-40ed-9633-a67fe3bf9f18",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloudflare.dns.xn--q9jyb4c"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 443,
-      "uuid": "6ea592b3-aa83-420d-80e4-171395dc999a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "50e09046c0c00159"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 8443,
-      "uuid": "d3e66314-d0af-40ba-8e8b-b36bbffbd3bd",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "764f497dda21c4fc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -145,6 +77,76 @@
           "enabled": true,
           "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "vless",
+      "server": "141.193.213.11",
+      "server_port": 443,
+      "uuid": "9232a847-8f7d-4548-a23a-a8b3550e0f15",
+      "tls": {
+        "enabled": true,
+        "server_name": "grabacademyportal.grab.com.cyylr.eu.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "grabacademyportal.grab.com.cyylr.eu.cc"
+        },
+        "path": "/id-tksi"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
+      "type": "vless",
+      "server": "216.24.57.1",
+      "server_port": 443,
+      "uuid": "565b50d4-604d-4a60-9fc2-d9d3dac0aec6",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.cvs.freefiremobile.com.cyylr.eu.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+        },
+        "path": "/id-pusat"
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]",
+      "type": "vless",
+      "server": "185.242.19.250",
+      "server_port": 443,
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇺 Hungary [*CIDR]",
+      "type": "vless",
+      "server": "85.208.85.91",
+      "server_port": 8443,
+      "uuid": "931729a8-3c20-4841-89a1-f18dc9ce0a6f",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn7-09.vk-cdnvideo.com"
       }
     }
   ],

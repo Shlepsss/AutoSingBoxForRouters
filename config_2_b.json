@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 Poland [*CIDR] YA",
+        "🇵🇱 Poland [*CIDR] YA-2",
         "🇫🇮 Finland | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇸🇪 [*CIDR]"
+        "🇲🇩 Moldova [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇵🇱 Poland [*CIDR] YA",
+        "🇵🇱 Poland [*CIDR] YA-2",
         "🇫🇮 Finland | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇸🇪 [*CIDR]"
+        "🇲🇩 Moldova [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -64,16 +64,37 @@
       "tag": "🇵🇱 Poland [*CIDR] YA",
       "type": "vless",
       "server": "158.160.240.208",
-      "server_port": 443,
-      "uuid": "eee643ba-bee8-4788-8328-cf0212591c0c",
+      "server_port": 8443,
+      "uuid": "08373093-3122-49b0-9f2c-fdbf12abec3f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
           "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
           "short_id": "d2c6d9f6e6e12bfe"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR] YA-2",
+      "type": "vless",
+      "server": "158.160.240.208",
+      "server_port": 443,
+      "uuid": "6ea592b3-aa83-420d-80e4-171395dc999a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
+          "short_id": "764f497dda21c4fc"
         },
         "utls": {
           "enabled": true,
@@ -90,9 +111,6 @@
       "tls": {
         "enabled": true,
         "server_name": "cd2.serviceali.ir",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -119,37 +137,18 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "tag": "🇲🇩 Moldova [*CIDR]",
       "type": "vless",
-      "server": "74.49.214.169",
+      "server": "185.242.19.250",
       "server_port": 443,
-      "uuid": "9a98146a-235c-40ed-9633-a67fe3bf9f18",
+      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
       "tls": {
         "enabled": true,
-        "server_name": "cloudflare.dns.xn--q9jyb4c"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇸🇪 [*CIDR]",
-      "type": "vless",
-      "server": "91.193.58.17",
-      "server_port": 2083,
-      "uuid": "af475b0e-0c07-40fe-b4db-3dea2c0a481d",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "edgetunnel-cmliu.lyqnihao.dpdns.org",
+        "server_name": "top3739667002.mwscdn.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "edgetunnel-cmliu.lyqnihao.dpdns.org"
-        },
-        "path": "/"
       }
     }
   ],
