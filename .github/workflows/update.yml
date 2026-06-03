@@ -140,6 +140,18 @@ jobs:
                 -H "Content-Type: application/json" \
                 --data-binary @- \
             > "$OUTPUT_FILE"
+            # Проверяем результат API
+            if ! jq empty "$OUTPUT_FILE" >/dev/null 2>&1; then
+              echo "ERROR: API returned invalid JSON for $OUTPUT_FILE"
+              rm -f "$OUTPUT_FILE"
+              return
+            fi
+            
+            if ! jq -e '.outbounds and (.outbounds | type == "array")' "$OUTPUT_FILE" >/dev/null 2>&1; then
+              echo "ERROR: API returned config without outbounds for $OUTPUT_FILE"
+              rm -f "$OUTPUT_FILE"
+              return
+            fi
           }
           
           # Создаем конфиги: по 2 конфига на каждый источник (основной и b)
@@ -185,16 +197,43 @@ jobs:
           patch_interval() {
             FILE=$1
             INTERVAL=$2
-            
-            if [ -f "$FILE" ]; then
-              echo "Patching $FILE -> interval=$INTERVAL"
-              jq --arg interval "$INTERVAL" '
-                (.outbounds[] | select(.type=="urltest") | .interval) = $interval |
-                (.outbounds[] | select(.type=="urltest") | .tolerance) = 100
-              ' "$FILE" > tmp.json && mv tmp.json "$FILE"
-            else
-              echo "Warning: $FILE not found, skipping patch"
+          
+            if [ ! -f "$FILE" ]; then
+              echo "Warning: $FILE not found"
+              return
             fi
+          
+            echo "Checking $FILE"
+          
+            # Проверка JSON
+            if ! jq empty "$FILE" >/dev/null 2>&1; then
+              echo "ERROR: Invalid JSON in $FILE"
+              rm -f "$FILE"
+              return
+            fi
+          
+            # Проверка наличия outbounds
+            if ! jq -e '.outbounds and (.outbounds | type == "array")' "$FILE" >/dev/null 2>&1; then
+              echo "ERROR: outbounds missing in $FILE"
+              rm -f "$FILE"
+              return
+            fi
+          
+            echo "Patching $FILE -> interval=$INTERVAL"
+          
+            if ! jq --arg interval "$INTERVAL" '
+                (.outbounds[]? | select(.type=="urltest") | .interval) = $interval |
+                (.outbounds[]? | select(.type=="urltest") | .tolerance) = 100
+              ' "$FILE" > tmp.json
+            then
+              echo "ERROR: jq patch failed for $FILE"
+              rm -f "$FILE" tmp.json
+              return
+            fi
+          
+            mv tmp.json "$FILE"
+          
+            echo "OK: $FILE"
           }
           
           # Применяем патч 1 минута для ВСЕХ конфигов
