@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | 🌐 [*CIDR] YA",
         "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
         "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-3",
-        "🇬🇧 United Kingdom [*CIDR] YA"
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,21 +51,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | 🌐 [*CIDR] YA",
         "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
         "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-3",
-        "🇬🇧 United Kingdom [*CIDR] YA"
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.109.44",
+      "server_port": 443,
+      "uuid": "63a16ebb-8687-42ac-972a-5914cafad1d5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "o7NN7G_0EYlNqfrTOoSTPUcJPnXEPo5AYct4Kb64aUY",
+          "short_id": "91da4ef59542fa99"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
       "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
       "type": "vless",
-      "server": "51.250.24.232",
+      "server": "51.250.24.222",
       "server_port": 443,
-      "uuid": "8c3ea797-4532-4d19-8999-c8e243bba638",
+      "uuid": "1f58ac86-2742-42d9-8ce3-2929edc390ea",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -84,9 +105,9 @@
     {
       "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
       "type": "vless",
-      "server": "51.250.103.104",
+      "server": "51.250.102.69",
       "server_port": 443,
-      "uuid": "8c3ea797-4532-4d19-8999-c8e243bba638",
+      "uuid": "1f58ac86-2742-42d9-8ce3-2929edc390ea",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -103,64 +124,40 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "89.208.208.92",
-      "server_port": 7443,
-      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
+      "server": "omg.herumhas.shop",
+      "server_port": 5443,
+      "uuid": "7d876627-abf5-4865-8ff4-03f37d49de5d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "loadtest.dev.urent.ru",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
-          "short_id": "3210e0eee6605048"
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-3",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "51.250.106.87",
-      "server_port": 443,
-      "uuid": "fdb3e2d8-b33e-448b-b9da-a7c1d3a5203e",
+      "server": "185.86.146.15",
+      "server_port": 5443,
+      "uuid": "7d876627-abf5-4865-8ff4-03f37d49de5d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdp.x5.ru",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom [*CIDR] YA",
-      "type": "vless",
-      "server": "178.154.204.55",
-      "server_port": 443,
-      "uuid": "ea7f64ed-64b5-453f-b5ab-dbc50c558209",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "wl-4-3.nodes.ac",
-        "reality": {
-          "enabled": true,
-          "public_key": "ljUVISw0FlRCXDz6xRTVnmms_IfVrIFLJ5bg81MDNQY",
-          "short_id": "7171871f66279d10"
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
