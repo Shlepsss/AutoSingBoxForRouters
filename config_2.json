@@ -34,9 +34,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "ð³ð± The Netherlands [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]-2",
         "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK-2"
       ],
@@ -51,9 +51,9 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "ð³ð± The Netherlands [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]-2",
         "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK-2"
       ],
@@ -61,50 +61,64 @@
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "87.228.101.191",
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
       "server_port": 443,
-      "uuid": "63a16ebb-8687-42ac-972a-5914cafad1d5",
-      "transport": {
-        "type": "grpc",
-        "service_name": "MyHistSssory"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.109.44",
-      "server_port": 443,
-      "uuid": "63a16ebb-8687-42ac-972a-5914cafad1d5",
-      "flow": "xtls-rprx-vision",
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "eh.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "o7NN7G_0EYlNqfrTOoSTPUcJPnXEPo5AYct4Kb64aUY",
-          "short_id": "91da4ef59542fa99"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "b635ecff-3b46-440f-be44-dd85ab63ee7d",
-      "tls": {
-        "enabled": true,
-        "server_name": "top3259365054.mwscdn.ru",
+        "server_name": "renderer-stream-1-411.mirra.now",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands | [*CIDR]-2",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
