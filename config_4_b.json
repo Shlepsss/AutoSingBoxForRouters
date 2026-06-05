@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
         "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
         "🇩🇪 Germany | 🌐 [SNI-RU] ads.x5.ru",
         "🇦🇹 Austria [SNI-RU] id.vk.com",
-        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
-        "🇦🇹 Austria [SNI-RU] id.vk.com-2"
+        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
         "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
         "🇩🇪 Germany | 🌐 [SNI-RU] ads.x5.ru",
         "🇦🇹 Austria [SNI-RU] id.vk.com",
-        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
-        "🇦🇹 Austria [SNI-RU] id.vk.com-2"
+        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "155.212.132.9",
+      "server_port": 4449,
+      "uuid": "025b5550-cb81-4a51-8e46-45cc1b54a46f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "n7SozQLXoCxDya7vBJwS5ebj39r4KCUZrfsnBfcCLGs",
+          "short_id": "762725443d44a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
@@ -73,7 +94,7 @@
         "reality": {
           "enabled": true,
           "public_key": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA",
-          "short_id": "9e1c2a1b130b"
+          "short_id": "b92f48e92d8ffa08"
         },
         "utls": {
           "enabled": true,
@@ -94,7 +115,7 @@
         "reality": {
           "enabled": true,
           "public_key": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA",
-          "short_id": "25819efc8a6ade"
+          "short_id": "7f892758"
         },
         "utls": {
           "enabled": true,
@@ -105,7 +126,7 @@
     {
       "tag": "🇦🇹 Austria [SNI-RU] id.vk.com",
       "type": "vless",
-      "server": "185.72.145.127",
+      "server": "ss.ll0ll.vip",
       "server_port": 2096,
       "uuid": "c09f00bc-ef4c-441e-8317-17ac954c54ad",
       "tls": {
@@ -127,7 +148,7 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] max.ru-2",
       "type": "vless",
       "server": "155.212.132.9",
       "server_port": 4449,
@@ -139,36 +160,12 @@
         "reality": {
           "enabled": true,
           "public_key": "n7SozQLXoCxDya7vBJwS5ebj39r4KCUZrfsnBfcCLGs",
-          "short_id": "c37545"
+          "short_id": "5803806787f2e298"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "🇦🇹 Austria [SNI-RU] id.vk.com-2",
-      "type": "vless",
-      "server": "213.109.202.159",
-      "server_port": 2096,
-      "uuid": "c09f00bc-ef4c-441e-8317-17ac954c54ad",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
       }
     }
   ],
