@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🇳🇱 The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇱🇻 Latvia [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-3",
         "🇫🇷 France [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,51 +53,91 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🇳🇱 The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇱🇻 Latvia [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-3",
         "🇫🇷 France [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "78.159.240.174",
+      "server": "ru01.goodmaximum.com",
       "server_port": 443,
-      "uuid": "ab268dc7-510f-4fb9-ace4-b7305a59c7bb",
+      "uuid": "73d75a84-7c29-0024-92ca-cc2fd46c254c",
       "tls": {
         "enabled": true,
-        "server_name": "95.85.246.16.speed-storage.ru",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "ru-cloud.221131513.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+          "short_id": "31181028b56c8704"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "/sequre/grpc/"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "155.212.215.179",
-      "server_port": 2087,
-      "uuid": "13d3d4bc-5e3b-11f1-bd95-ee5f4ed81fa1",
-      "flow": "xtls-rprx-vision",
+      "server": "ru01.goodmaximum.com",
+      "server_port": 443,
+      "uuid": "73d75a84-7c29-001e-92ca-cc2fd46c254c",
       "tls": {
         "enabled": true,
-        "server_name": "vk.ru",
+        "server_name": "ru-cloud.221131513.xyz",
         "reality": {
           "enabled": true,
-          "public_key": "ythLos6gxS1GOuPPGJ1xUYtSpOySaDM1mu2nzLqIWjc",
-          "short_id": "a4077e915d0cd15a"
+          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+          "short_id": "31181028b56c8704"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇻 Latvia [*CIDR]",
+      "type": "vless",
+      "server": "62.192.174.111",
+      "server_port": 443,
+      "uuid": "301d514e-4aa0-47b0-ba44-a0cb891cd52f",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4",
+          "short_id": "a1b2c3d4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-3",
+      "type": "vless",
+      "server": "ru02.goodmaximum.com",
+      "server_port": 443,
+      "uuid": "db95b766-43a8-001f-9b5d-5ca6f2735188",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ru-cloud.221131513.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+          "short_id": "77778028b56c8704"
         },
         "utls": {
           "enabled": true,
@@ -106,68 +148,59 @@
     {
       "tag": "🇫🇷 France [*CIDR]",
       "type": "trojan",
-      "server": "216.24.57.7",
+      "server": "212.183.88.136",
       "server_port": 443,
       "password": "humanity",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.calmloud.com",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "www.calmlunch.com"
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "www.calmloud.com"
+          "Host": "www.calmlunch.com"
         },
         "path": "/assignment"
       }
     },
     {
-      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "216.24.57.7",
-      "server_port": 443,
-      "uuid": "fc965ad9-bdd7-4815-ad71-b39ec5972dc1",
+      "server": "85.193.87.63",
+      "server_port": 2040,
+      "uuid": "17451fec-af94-4715-8c2f-7f6839130d0a",
       "tls": {
         "enabled": true,
-        "server_name": "octopusss4.com",
+        "server_name": "tradingview.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "LidllyozUeeSbuzJ0ZfieGoy8YjVzqXX9H2m9whPaG0",
+          "short_id": "53197c66aef53c44"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "octopusss4.com"
-        },
-        "path": "/tsghdws"
       }
     },
     {
-      "tag": "🇫🇮 Finland | 🌐 [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR] VK-4",
       "type": "vless",
-      "server": "216.24.57.7",
+      "server": "ru02.goodmaximum.com",
       "server_port": 443,
-      "uuid": "fc965ad9-bdd7-4815-ad71-b39ec5972dc1",
+      "uuid": "73d75a84-7c29-001f-92ca-cc2fd46c254c",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "octopusss4.com"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "octopusss4.com"
+        "server_name": "ru-cloud.221131513.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+          "short_id": "77778028b56c8704"
         },
-        "path": "/tsghdws"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],

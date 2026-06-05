@@ -34,9 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA-2",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇷🇺 Russia [*CIDR] VK-3",
+        "🇷🇺 Russia [*CIDR] VK-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -49,47 +53,31 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA-2",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇷🇺 Russia [*CIDR] VK-3",
+        "🇷🇺 Russia [*CIDR] VK-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇵🇱 [*CIDR] Beeline",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
       "type": "vless",
-      "server": "78.159.240.174",
-      "server_port": 443,
-      "uuid": "ab268dc7-510f-4fb9-ace4-b7305a59c7bb",
+      "server": "89.208.208.92",
+      "server_port": 7443,
+      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
       "tls": {
         "enabled": true,
-        "server_name": "95.85.246.16.speed-storage.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
+        "server_name": "loadtest.dev.urent.ru",
+        "reality": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "/sequre/grpc/"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-      "type": "vless",
-      "server": "78.159.240.174",
-      "server_port": 443,
-      "uuid": "ab268dc7-510f-4fb9-ace4-b7305a59c7bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "95.85.246.16.speed-storage.ru",
-        "alpn": [
-          "h2"
-        ],
+          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
+          "short_id": "3210e0eee6605048"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -97,26 +85,130 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "/sequre/grpc/"
+        "service_name": "grpc"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2",
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "78.159.240.174",
+      "server": "wh5.vpnburger.ru",
       "server_port": 443,
-      "uuid": "ab268dc7-510f-4fb9-ace4-b7305a59c7bb",
+      "uuid": "9cab10a8-7936-457f-bf1f-b9842439f494",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "95.85.246.16.speed-storage.ru",
+        "server_name": "wh5.vpnburger.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "QmwOXqJikZ9gbYtQiuwEt2SAn1U1KtaHHJa5vXemqFM",
+          "short_id": "3fa234ea9feaa048"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "/sequre/grpc/"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA-2",
+      "type": "vless",
+      "server": "84.201.170.238",
+      "server_port": 443,
+      "uuid": "9cab10a8-7936-457f-bf1f-b9842439f494",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "wh5.vpnburger.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "QmwOXqJikZ9gbYtQiuwEt2SAn1U1KtaHHJa5vXemqFM",
+          "short_id": "3fa234ea9feaa048"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "ru02.goodmaximum.com",
+      "server_port": 443,
+      "uuid": "73d75a84-7c29-001f-92ca-cc2fd46c254c",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-cloud.221131513.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+          "short_id": "77778028b56c8704"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
+      "type": "vless",
+      "server": "ru02.goodmaximum.com",
+      "server_port": 443,
+      "uuid": "db95b766-43a8-001f-9b5d-5ca6f2735188",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ru-cloud.221131513.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+          "short_id": "77778028b56c8704"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-3",
+      "type": "vless",
+      "server": "ru01.goodmaximum.com",
+      "server_port": 443,
+      "uuid": "73d75a84-7c29-001e-92ca-cc2fd46c254c",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-cloud.221131513.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+          "short_id": "31181028b56c8704"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-4",
+      "type": "vless",
+      "server": "ru01.goodmaximum.com",
+      "server_port": 443,
+      "uuid": "73d75a84-7c29-0024-92ca-cc2fd46c254c",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-cloud.221131513.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+          "short_id": "31181028b56c8704"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
