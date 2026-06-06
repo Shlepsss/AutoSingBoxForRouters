@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇫🇷 France [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇫🇷 France [*CIDR]-2"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇫🇷 France [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇺🇸 United States [*CIDR]",
+        "🇫🇷 France [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,16 +56,63 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇫🇷 France [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇫🇷 France [*CIDR]-2"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇫🇷 France [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇺🇸 United States [*CIDR]",
+        "🇫🇷 France [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.7",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.calmloud.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "www.calmloud.com"
+        },
+        "path": "/assignment"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "141.193.213.11",
+      "server_port": 443,
+      "password": "Telegram-Config0plus-983ced63-fcf0-4d15-b81b-432e32e9b932",
+      "tls": {
+        "enabled": true,
+        "server_name": "api24-normal.tiktokv.com.r3xxe.eu.cc"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "api24-normal.tiktokv.com.r3xxe.eu.cc"
+        },
+        "path": "/us-gllc"
+      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
@@ -82,6 +132,21 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]-2",
+      "type": "vless",
+      "server": "ru-vk-3.1001notes.ru",
+      "server_port": 443,
+      "uuid": "1014818b-5c5c-46b1-98fe-eaf8d5eba642",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-vk-3.1001notes.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
@@ -110,6 +175,27 @@
       }
     },
     {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "5.42.126.157",
+      "server_port": 443,
+      "uuid": "029a4bc6-4557-4b6b-a5fc-6232e943e43b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi.sellflow.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "l12.l-itx.info",
@@ -130,14 +216,39 @@
       }
     },
     {
-      "tag": "🇫🇷 France [*CIDR]",
-      "type": "vless",
-      "server": "155.212.165.172",
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "93.93.88.22",
       "server_port": 443,
-      "uuid": "1014818b-5c5c-46b1-98fe-eaf8d5eba642",
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "ru-vk-3.1001notes.ru",
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]",
+      "type": "vless",
+      "server": "217.149.25.106",
+      "server_port": 443,
+      "uuid": "029a4bc6-4557-4b6b-a5fc-6232e943e43b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ai.sellflow.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -145,55 +256,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "157.22.241.175",
-      "server_port": 7443,
-      "uuid": "f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4",
-      "tls": {
-        "enabled": true,
-        "server_name": "colorlib.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "xyz"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-      "type": "vless",
-      "server": "89.208.208.92",
-      "server_port": 7443,
-      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
-      "tls": {
-        "enabled": true,
-        "server_name": "loadtest.dev.urent.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
-          "short_id": "3210e0eee6605048"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR]-2",
+      "tag": "🇫🇷 France [*CIDR]-3",
       "type": "vless",
       "server": "ru-vk-2.1001notes.ru",
       "server_port": 443,

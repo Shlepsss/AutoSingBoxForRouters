@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇵🇱 Poland | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+        "🇫🇷 France [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇫🇷 France | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇫🇷 France [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇪🇸 Spain [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,16 +56,79 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇵🇱 Poland | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+        "🇫🇷 France [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇫🇷 France | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇫🇷 France [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇪🇸 Spain [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "83.229.14.125",
+      "server_port": 13569,
+      "uuid": "7283d2d5-7b14-431b-9d1f-96f2dac4a97b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "business.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Xl6notHrxamdPvx0cZGGPRQOT-PR1rkjryRazI9i1VI",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "vless",
+      "server": "141.193.213.10",
+      "server_port": 443,
+      "uuid": "724de599-277f-4ad1-ba40-57d06674a3e8",
+      "tls": {
+        "enabled": true,
+        "server_name": "space.byu.id.r3xxe.eu.cc"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "space.byu.id.r3xxe.eu.cc"
+        },
+        "path": "/us-gllc"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "5.42.126.157",
+      "server_port": 443,
+      "uuid": "029a4bc6-4557-4b6b-a5fc-6232e943e43b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi.sellflow.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -82,6 +148,96 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+      "type": "vless",
+      "server": "89.208.208.92",
+      "server_port": 7443,
+      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
+      "tls": {
+        "enabled": true,
+        "server_name": "loadtest.dev.urent.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
+          "short_id": "3210e0eee6605048"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.7",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        },
+        "path": "/assignment"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "157.22.241.175",
+      "server_port": 7443,
+      "uuid": "f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4",
+      "tls": {
+        "enabled": true,
+        "server_name": "colorlib.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "xyz"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "l12.l-itx.info",
+      "server_port": 7443,
+      "uuid": "f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4",
+      "tls": {
+        "enabled": true,
+        "server_name": "colorlib.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "xyz"
       }
     },
     {
@@ -106,117 +262,18 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
-      "type": "trojan",
-      "server": "216.24.57.6",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "www.creationlong.org"
-        },
-        "path": "/assignment"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇪🇸 Spain [*CIDR]",
       "type": "vless",
-      "server": "l12.l-itx.info",
-      "server_port": 7443,
-      "uuid": "f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4",
-      "tls": {
-        "enabled": true,
-        "server_name": "colorlib.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "xyz"
-      }
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "ru-vk-5.1001notes.ru",
+      "server": "es-xh-02.hpdata.click",
       "server_port": 443,
       "uuid": "1014818b-5c5c-46b1-98fe-eaf8d5eba642",
       "tls": {
         "enabled": true,
-        "server_name": "ru-vk-5.1001notes.ru",
+        "server_name": "es-xh-02.hpdata.click",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "157.22.241.175",
-      "server_port": 7443,
-      "uuid": "f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4",
-      "tls": {
-        "enabled": true,
-        "server_name": "colorlib.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "xyz"
-      }
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR]",
-      "type": "trojan",
-      "server": "216.24.57.6",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.calmloud.com",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "www.calmloud.com"
-        },
-        "path": "/assignment"
       }
     }
   ],
