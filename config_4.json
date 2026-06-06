@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
         "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇨🇿 Czechia [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru"
+        "🇨🇿 Czechia [SNI-RU] api-maps.yandex.ru-2",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,34 +50,13 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
         "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇨🇿 Czechia [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru"
+        "🇨🇿 Czechia [SNI-RU] api-maps.yandex.ru-2",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
-      "type": "vless",
-      "server": "103.113.68.235",
-      "server_port": 4343,
-      "uuid": "f1b7982e-64b8-48d3-b088-1b33d8b2f16d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "sun6-21.userapi.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA",
-          "short_id": "b92f48e92d8ffa08"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru",
@@ -122,24 +101,52 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
+      "tag": "🇨🇿 Czechia [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
-      "server": "103.113.68.235",
-      "server_port": 4449,
-      "uuid": "f1b7982e-64b8-48d3-b088-1b33d8b2f16d",
+      "server": "103.119.19.201",
+      "server_port": 2087,
+      "uuid": "347a56c2-a453-4b32-86cd-7522943df88c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "n7SozQLXoCxDya7vBJwS5ebj39r4KCUZrfsnBfcCLGs",
-          "short_id": "3689d0c3"
+          "public_key": "vZuBWF0YzlKI0fJWxU6hmOLHHQ5Qb1kf35HbZDcFCH4",
+          "short_id": "493c3d4e37c23c28"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
+      "type": "vless",
+      "server": "199.232.78.158",
+      "server_port": 443,
+      "uuid": "b4a00211-ae46-49bc-8f36-0c4425eb7e86",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "eh.vk.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "nesfsheshab.global.ssl.fastly.net"
+        },
+        "path": "/"
       }
     }
   ],
