@@ -34,15 +34,15 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
-        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]",
         "ð³ð± The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
-      "tolerance": 100,
+      "tolerance": 250,
       "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
@@ -51,34 +51,53 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
-        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]",
         "ð³ð± The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "51.250.108.162",
+      "server": "91.222.237.127",
       "server_port": 443,
-      "uuid": "a57b7b3f-b444-4304-8ee0-303f8b9d7b4b",
+      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdp.x5.ru",
+        "server_name": "ru.dendiboss.org",
         "reality": {
           "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
+          "public_key": "VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js",
+          "short_id": "9c2378562188c3cb"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands [*CIDR]",
+      "type": "vmess",
+      "server": "37.220.161.247",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
@@ -102,25 +121,6 @@
       }
     },
     {
-      "tag": "ð³ð± The Netherlands [*CIDR]",
-      "type": "vmess",
-      "server": "37.220.161.249",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
       "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "87.239.108.241",
@@ -141,24 +141,28 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "91.222.237.127",
+      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.6",
       "server_port": 443,
-      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
-      "flow": "xtls-rprx-vision",
+      "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "ru.dendiboss.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js",
-          "short_id": "9c2378562188c3cb"
-        },
+        "server_name": "www.creationlong.org",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "www.creationlong.org"
+        },
+        "path": "/assignment"
       }
     }
   ],

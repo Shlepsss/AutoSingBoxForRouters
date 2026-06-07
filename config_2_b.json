@@ -35,14 +35,14 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇺🇸 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇩🇪 Germany [*CIDR]"
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
-      "tolerance": 100,
+      "tolerance": 250,
       "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇺🇸 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇩🇪 Germany [*CIDR]"
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -76,26 +76,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇺🇸 [*CIDR]",
-      "type": "vless",
-      "server": "141.193.213.10",
-      "server_port": 443,
-      "uuid": "724de599-277f-4ad1-ba40-57d06674a3e8",
-      "tls": {
-        "enabled": true,
-        "server_name": "space.byu.id.r3xxe.eu.cc"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "space.byu.id.r3xxe.eu.cc"
-        },
-        "path": "/us-gllc"
       }
     },
     {
@@ -120,6 +102,27 @@
       }
     },
     {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.103.104",
+      "server_port": 443,
+      "uuid": "a57b7b3f-b444-4304-8ee0-303f8b9d7b4b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "87.239.108.241",
@@ -135,23 +138,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "de-xh-01.hpdata.click",
+      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.6",
       "server_port": 443,
-      "uuid": "1014818b-5c5c-46b1-98fe-eaf8d5eba642",
+      "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "de-xh-01.hpdata.click",
+        "server_name": "www.creationlong.org",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "www.creationlong.org"
+        },
+        "path": "/assignment"
       }
     }
   ],

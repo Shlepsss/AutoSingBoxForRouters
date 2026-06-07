@@ -36,13 +36,13 @@
       "outbounds": [
         "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇳🇱 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
-      "tolerance": 100,
+      "tolerance": 250,
       "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
@@ -53,9 +53,9 @@
         "auto",
         "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇳🇱 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -76,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -96,7 +96,53 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.6",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "www.creationlong.org"
+        },
+        "path": "/assignment"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.168.122",
+      "server_port": 443,
+      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Ec54Eop0jZft7rcJsPN4RHc4xG9smXhtenM52pJFUQI",
+          "short_id": "27e53bbcab7593d7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     },
@@ -114,48 +160,6 @@
           "enabled": true,
           "public_key": "VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js",
           "short_id": "9c2378562188c3cb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇳🇱 [*CIDR]",
-      "type": "vless",
-      "server": "141.193.213.10",
-      "server_port": 443,
-      "uuid": "a321980f-54ce-432a-862a-76035b9d78ad",
-      "tls": {
-        "enabled": true,
-        "server_name": "m.udemy.com.r3xxe.eu.cc",
-        "alpn": [
-          "networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "m.udemy.com.r3xxe.eu.cc"
-        },
-        "path": "/nl-tw"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.66.119",
-      "server_port": 443,
-      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6efMZQW-QEyBlfPK2yMNNax68OSrRow-FT9m3aRgrRo",
-          "short_id": "8f34383988cd0965"
         },
         "utls": {
           "enabled": true,

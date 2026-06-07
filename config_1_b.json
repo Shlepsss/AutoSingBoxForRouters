@@ -34,15 +34,15 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
+        "🇫🇷 France | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
-      "tolerance": 100,
+      "tolerance": 250,
       "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
@@ -51,51 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
+        "🇫🇷 France | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR]",
-      "type": "vless",
-      "server": "155.212.165.172",
-      "server_port": 443,
-      "uuid": "1014818b-5c5c-46b1-98fe-eaf8d5eba642",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-vk-3.1001notes.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "216.24.57.7",
-      "server_port": 443,
-      "uuid": "fc965ad9-bdd7-4815-ad71-b39ec5972dc1",
-      "tls": {
-        "enabled": true,
-        "server_name": "octopusss4.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "octopusss4.com"
-        },
-        "path": "/tsghdws"
-      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] VK",
@@ -136,6 +99,40 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "ru-vk-5.1001notes.ru",
+      "server_port": 443,
+      "uuid": "1014818b-5c5c-46b1-98fe-eaf8d5eba642",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-vk-5.1001notes.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "195.209.90.168",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
