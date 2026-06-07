@@ -222,7 +222,7 @@ jobs:
           
             if ! jq --arg interval "$INTERVAL" '
                 (.outbounds[]? | select(.type=="urltest") | .interval) = $interval |
-                (.outbounds[]? | select(.type=="urltest") | .tolerance) = 100
+                (.outbounds[]? | select(.type=="urltest") | .tolerance) = 250
               ' "$FILE" > tmp.json
             then
               echo "ERROR: jq patch failed for $FILE"
