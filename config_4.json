@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 Spain [SNI-RU] www.vk.com",
-        "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
         "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
+        "🇫🇷 France | 🌐 [SNI-RU] ya.ru",
+        "🇫🇮 Finland [SNI-RU] stats.vk-portal.net",
         "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2"
       ],
       "url": "https://google.com/generate_204",
@@ -51,47 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 Spain [SNI-RU] www.vk.com",
-        "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
         "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
+        "🇫🇷 France | 🌐 [SNI-RU] ya.ru",
+        "🇫🇮 Finland [SNI-RU] stats.vk-portal.net",
         "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇪🇸 Spain [SNI-RU] www.vk.com",
-      "type": "trojan",
-      "server": "193.148.19.210",
-      "server_port": 52794,
-      "password": "2eutknankxtbgkwcajzt",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.vk.com"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
-      "type": "vless",
-      "server": "31.207.5.43",
-      "server_port": 47200,
-      "uuid": "ffaa8e95-74e2-4ef4-8974-69dd3651b6f9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "stats.vk-portal.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "aom9XGtg9tre2RGo8XkCaRqlE02nrZ4smmnpLpzidRE",
-          "short_id": "b2a9bd658fc81dc6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
@@ -110,36 +77,73 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
+      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "199.232.78.158",
-      "server_port": 443,
-      "uuid": "b4a00211-ae46-49bc-8f36-0c4425eb7e86",
+      "server": "nl.riotvpn.eu",
+      "server_port": 8443,
+      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "eh.vk.com",
-        "alpn": [
-          "h3",
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "e67fb918ed6b9ffb"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "nesfsheshab.global.ssl.fastly.net"
+        "type": "grpc",
+        "service_name": "grpc-yandex"
+      }
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 [SNI-RU] ya.ru",
+      "type": "vless",
+      "server": "45.67.139.54",
+      "server_port": 7443,
+      "uuid": "10484bee-8516-400a-9b1e-efb5144ad324",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI",
+          "short_id": ""
         },
-        "path": "/"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [SNI-RU] stats.vk-portal.net",
+      "type": "vless",
+      "server": "78.17.134.254",
+      "server_port": 47200,
+      "uuid": "38f8b792-9e44-40d2-ab8d-c3bfc0b71bdc",
+      "tls": {
+        "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "aom9XGtg9tre2RGo8XkCaRqlE02nrZ4smmnpLpzidRE",
+          "short_id": "b2a9bd658fc81dc6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     },
     {
@@ -159,7 +163,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     }

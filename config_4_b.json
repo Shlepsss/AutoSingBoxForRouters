@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
-        "🇫🇮 Finland [SNI-RU] stats.vk-portal.net",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
         "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
-        "🇫🇮 Finland [SNI-RU] stats.vk-portal.net-2",
-        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2"
+        "🇦🇪 United Arab Emirates | 🌐 [SNI-RU] ads.x5.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2",
+        "🇺🇸 United States [SNI-RU] stats.vk-portal.net"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,55 +51,39 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
-        "🇫🇮 Finland [SNI-RU] stats.vk-portal.net",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
         "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
-        "🇫🇮 Finland [SNI-RU] stats.vk-portal.net-2",
-        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2"
+        "🇦🇪 United Arab Emirates | 🌐 [SNI-RU] ads.x5.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2",
+        "🇺🇸 United States [SNI-RU] stats.vk-portal.net"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
+      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
       "type": "vless",
-      "server": "31.207.5.43",
-      "server_port": 47200,
-      "uuid": "ffaa8e95-74e2-4ef4-8974-69dd3651b6f9",
-      "flow": "xtls-rprx-vision",
+      "server": "151.101.108.223",
+      "server_port": 443,
+      "uuid": "98c9f668-1f2f-4a6d-bd7a-606fab0ac035",
       "tls": {
         "enabled": true,
-        "server_name": "stats.vk-portal.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "aom9XGtg9tre2RGo8XkCaRqlE02nrZ4smmnpLpzidRE",
-          "short_id": "b2a9bd658fc81dc6"
-        },
+        "insecure": true,
+        "server_name": "eh.vk.com",
+        "alpn": [
+          "h3"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland [SNI-RU] stats.vk-portal.net",
-      "type": "vless",
-      "server": "78.17.134.254",
-      "server_port": 47200,
-      "uuid": "ffaa8e95-74e2-4ef4-8974-69dd3651b6f9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "stats.vk-portal.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "aom9XGtg9tre2RGo8XkCaRqlE02nrZ4smmnpLpzidRE",
-          "short_id": "b2a9bd658fc81dc6"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "jookeji.global.ssl.fastly.net"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "path": "/"
       }
     },
     {
@@ -124,23 +108,23 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] stats.vk-portal.net-2",
+      "tag": "🇦🇪 United Arab Emirates | 🌐 [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "78.17.134.254",
-      "server_port": 47200,
-      "uuid": "ffaa8e95-74e2-4ef4-8974-69dd3651b6f9",
+      "server": "ae.s3-rus.ru",
+      "server_port": 8443,
+      "uuid": "1b3ad457-abb4-4834-a0ba-e904121ac07c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "stats.vk-portal.net",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "aom9XGtg9tre2RGo8XkCaRqlE02nrZ4smmnpLpzidRE",
-          "short_id": "b2a9bd658fc81dc6"
+          "public_key": "x274vAATjQyRHChXL5coeXJB4ZuGx_-4Q_918Rw6lWA",
+          "short_id": "372c05b48fe83e5b"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
@@ -162,6 +146,27 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
+      "type": "vless",
+      "server": "31.207.5.43",
+      "server_port": 47200,
+      "uuid": "ffaa8e95-74e2-4ef4-8974-69dd3651b6f9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "aom9XGtg9tre2RGo8XkCaRqlE02nrZ4smmnpLpzidRE",
+          "short_id": "b2a9bd658fc81dc6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
