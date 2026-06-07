@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR] VK-2",
         "🇷🇺 Russia [*CIDR] VK-3",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇩🇪 Germany [*CIDR]"
+        "🇫🇷 France [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,16 +53,37 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR] VK-2",
         "🇷🇺 Russia [*CIDR] VK-3",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇩🇪 Germany [*CIDR]"
+        "🇫🇷 France [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "vless",
+      "server": "141.193.213.10",
+      "server_port": 443,
+      "uuid": "a321980f-54ce-432a-862a-76035b9d78ad",
+      "tls": {
+        "enabled": true,
+        "server_name": "m.udemy.com.r3xxe.eu.cc",
+        "alpn": [
+          "networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "m.udemy.com.r3xxe.eu.cc"
+        },
+        "path": "/nl-tw"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] VK",
@@ -80,33 +101,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.106.87",
-      "server_port": 443,
-      "uuid": "c86770fe-da6c-4007-86fc-e32573e74a4d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "random"
         }
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "91.222.237.127",
+      "server_port": 443,
+      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.dendiboss.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js",
+          "short_id": "9c2378562188c3cb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "91.220.109.185",
       "server_port": 443,
@@ -129,7 +150,7 @@
     {
       "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "87.239.108.241",
+      "server": "cockroachservice.ru",
       "server_port": 443,
       "uuid": "6c6bb37a-3315-45bc-88d6-0fbba043c07f",
       "tls": {
@@ -149,7 +170,7 @@
     {
       "tag": "🇷🇺 Russia [*CIDR] VK-3",
       "type": "vless",
-      "server": "cockroachservice.ru",
+      "server": "87.239.108.241",
       "server_port": 443,
       "uuid": "6c6bb37a-3315-45bc-88d6-0fbba043c07f",
       "tls": {
@@ -162,44 +183,26 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "91.222.237.127",
-      "server_port": 443,
-      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.dendiboss.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js",
-          "short_id": "9c2378562188c3cb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "de-xh-01.hpdata.click",
-      "server_port": 443,
-      "uuid": "1014818b-5c5c-46b1-98fe-eaf8d5eba642",
-      "tls": {
-        "enabled": true,
-        "server_name": "de-xh-01.hpdata.click",
-        "utls": {
-          "enabled": true,
           "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]",
+      "type": "trojan",
+      "server": "212.183.88.136",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        },
+        "path": "/assignment"
       }
     }
   ],
