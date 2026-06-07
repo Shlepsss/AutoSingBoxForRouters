@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇪 Ireland [SNI-RU] www.vk.com",
-        "🇩🇪 Germany | 🌐 [SNI-RU] rutube.ru",
-        "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
+        "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
+        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
         "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
-        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net"
+        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,83 +51,57 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇪 Ireland [SNI-RU] www.vk.com",
-        "🇩🇪 Germany | 🌐 [SNI-RU] rutube.ru",
-        "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
+        "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
+        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
         "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
-        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net"
+        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇮🇪 Ireland [SNI-RU] www.vk.com",
-      "type": "trojan",
-      "server": "146.70.90.194",
-      "server_port": 57452,
-      "password": "t1k169n5zmvvwn96r9ft",
+      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
+      "type": "vless",
+      "server": "199.232.78.158",
+      "server_port": 443,
+      "uuid": "b4a00211-ae46-49bc-8f36-0c4425eb7e86",
       "tls": {
         "enabled": true,
         "insecure": true,
-        "server_name": "www.vk.com"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] rutube.ru",
-      "type": "vless",
-      "server": "45.91.55.247",
-      "server_port": 7443,
-      "uuid": "6ca8ea5b-e47f-4c19-adee-365456e1e87c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rutube.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI",
-          "short_id": "be0ce047"
-        },
+        "server_name": "eh.vk.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "nesfsheshab.global.ssl.fastly.net"
+        },
+        "path": "/"
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+      "tag": "🇺🇸 United States [SNI-RU] stats.vk-portal.net",
       "type": "vless",
-      "server": "pl.riotvpn.eu",
-      "server_port": 443,
-      "uuid": "30bbbfc5-6a24-4348-8f3b-d44331b6aab8",
+      "server": "31.207.5.43",
+      "server_port": 47200,
+      "uuid": "ffaa8e95-74e2-4ef4-8974-69dd3651b6f9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "stats.vk-portal.net",
         "reality": {
           "enabled": true,
-          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
-          "short_id": "b76dcf9e1183fe1b"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
-      "type": "vless",
-      "server": "31.76.50.109",
-      "server_port": 443,
-      "uuid": "28cee14e-a124-4c9f-88e2-fcb6c1304ea3",
-      "tls": {
-        "enabled": true,
-        "server_name": "a.wb.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Ueqd3mFmtmBODNPEA2zOnS1L3FrcS0bLweBZQW5xmmw",
-          "short_id": "6069ba5ecbf75abb"
+          "public_key": "aom9XGtg9tre2RGo8XkCaRqlE02nrZ4smmnpLpzidRE",
+          "short_id": "b2a9bd658fc81dc6"
         },
         "utls": {
           "enabled": true,
@@ -154,6 +128,50 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
+      "type": "vless",
+      "server": "31.76.50.109",
+      "server_port": 443,
+      "uuid": "28cee14e-a124-4c9f-88e2-fcb6c1304ea3",
+      "tls": {
+        "enabled": true,
+        "server_name": "a.wb.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Ueqd3mFmtmBODNPEA2zOnS1L3FrcS0bLweBZQW5xmmw",
+          "short_id": "6069ba5ecbf75abb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "217.179.220.69",
+      "server_port": 8443,
+      "uuid": "bd78d4ee-c068-4125-94ba-50814578dc41",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "e67fb918ed6b9ffb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-yandex"
       }
     }
   ],
