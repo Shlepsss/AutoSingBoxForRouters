@@ -35,12 +35,12 @@
       "tag": "auto",
       "outbounds": [
         "ð³ð± The Netherlands | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] VK-3",
-        "ð³ð± The Netherlands | [*CIDR]-2"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,12 +54,12 @@
       "outbounds": [
         "auto",
         "ð³ð± The Netherlands | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] VK-3",
-        "ð³ð± The Netherlands | [*CIDR]-2"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -67,13 +67,17 @@
     {
       "tag": "ð³ð± The Netherlands | [*CIDR]",
       "type": "vmess",
-      "server": "renderer-stream-1-411.mirra.now",
+      "server": "37.220.161.247",
       "server_port": 443,
       "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
       "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
+        "server_name": "renderer-stream-1-411.mirra.now",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
       },
       "transport": {
         "type": "ws",
@@ -84,49 +88,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "91.222.237.43",
-      "server_port": 443,
-      "uuid": "87a61ee1-f6eb-48b4-ac90-c255ce067a07",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.dendiboss.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js",
-          "short_id": "9c2378562188c3cb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia [*CIDR] VK",
-      "type": "vless",
-      "server": "pro.herumhas.shop",
-      "server_port": 5443,
-      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "5.188.140.160",
       "server_port": 5443,
@@ -147,19 +109,19 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "ru-selectel-01.com",
-      "server_port": 8443,
-      "uuid": "739e2291-0823-45be-89ba-b47111e1e375",
+      "server": "185.247.17.197",
+      "server_port": 443,
+      "uuid": "ace02631-115f-4857-97c6-6ed4cf650427",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sni.ru-selectel-01.com",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "rZgu2lJcC2yrYnx66znee-Z75mW6m4TRfWt7_neoEVI",
-          "short_id": "caa0a516476ad539"
+          "public_key": "s9ze6J8hwCbf1nAcK_O3RXgQ3aufXd6b_edH8OqSAnU",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -168,9 +130,9 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK-3",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "217.herumhas.shop",
+      "server": "217.16.21.116",
       "server_port": 5443,
       "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
       "flow": "xtls-rprx-vision",
@@ -189,26 +151,66 @@
       }
     },
     {
-      "tag": "ð³ð± The Netherlands | [*CIDR]-2",
-      "type": "vmess",
-      "server": "37.220.161.247",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "147.45.99.249",
       "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
+      "uuid": "e438ed18-0208-4620-b7f4-56ba7045f397",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now",
+        "server_name": "gb.sellflow.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "37.9.4.147",
+      "server_port": 443,
+      "uuid": "443211c6-8ebb-4676-b796-f3a3a94c38a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "fLBaSnICDNyn0zZ-YqzdnoE9ZrlXZ7F7bXH46WkuGEI",
+          "short_id": "a2668873387ce099"
         },
-        "path": "/api/v1/gpu-stream/socket"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "46.229.215.189",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "smartcaptcha.yandexcloud.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
