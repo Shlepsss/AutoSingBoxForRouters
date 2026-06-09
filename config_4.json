@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States [SNI-RU] www.vk.com",
-        "🇷🇺 Russia [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru-2",
+        "🇦🇪 United Arab Emirates [SNI-RU] vk.ru",
         "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] yandex.by"
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2",
+        "🇺🇸 United States [SNI-RU] www.vk.com",
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,84 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States [SNI-RU] www.vk.com",
-        "🇷🇺 Russia [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru-2",
+        "🇦🇪 United Arab Emirates [SNI-RU] vk.ru",
         "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] yandex.by"
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2",
+        "🇺🇸 United States [SNI-RU] www.vk.com",
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇦🇪 United Arab Emirates [SNI-RU] vk.ru",
+      "type": "vless",
+      "server": "31.56.188.85",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "nl.riotvpn.eu",
+      "server_port": 8443,
+      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "e67fb918ed6b9ffb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-yandex"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2",
+      "type": "vless",
+      "server": "94.125.103.209",
+      "server_port": 8443,
+      "uuid": "1e8d112e-fed0-4f7c-91ec-df914ad49906",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-yandex"
+      }
     },
     {
       "tag": "🇺🇸 United States [SNI-RU] www.vk.com",
@@ -82,55 +152,14 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] max.ru",
+      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-3",
       "type": "vless",
-      "server": "pro.herumhas.shop",
-      "server_port": 5443,
-      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] max.ru-2",
-      "type": "vless",
-      "server": "217.herumhas.shop",
-      "server_port": 5443,
-      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "nl.riotvpn.eu",
+      "server": "94.125.103.210",
       "server_port": 8443,
-      "uuid": "7fe363a0-c6e2-4609-9301-7a7d92ddb780",
+      "uuid": "1e8d112e-fed0-4f7c-91ec-df914ad49906",
       "tls": {
         "enabled": true,
+        "insecure": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
@@ -145,26 +174,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] yandex.by",
-      "type": "vless",
-      "server": "l10-1.l-itx.info",
-      "server_port": 443,
-      "uuid": "f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.by",
-        "reality": {
-          "enabled": true,
-          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
-          "short_id": "6ba85179e30d4fc3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     }
   ],

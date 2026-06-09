@@ -36,11 +36,14 @@
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
+        "🇲🇩 Moldova [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia [*CIDR] VK-2",
+        "🇷🇺 Russia [*CIDR]-4",
         "🇱🇹 Lithuania [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]"
+        "🌐 Anycast-IP | 🇱🇹 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇫🇮 [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -55,11 +58,14 @@
         "auto",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
+        "🇲🇩 Moldova [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia [*CIDR] VK-2",
+        "🇷🇺 Russia [*CIDR]-4",
         "🇱🇹 Lithuania [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]"
+        "🌐 Anycast-IP | 🇱🇹 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇫🇮 [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -67,21 +73,21 @@
     {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "185.247.17.197",
-      "server_port": 443,
-      "uuid": "ace02631-115f-4857-97c6-6ed4cf650427",
+      "server": "46.229.215.189",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "smartcaptcha.yandexcloud.net",
         "reality": {
           "enabled": true,
-          "public_key": "s9ze6J8hwCbf1nAcK_O3RXgQ3aufXd6b_edH8OqSAnU",
+          "public_key": "92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -100,6 +106,21 @@
           "public_key": "92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc",
           "short_id": ""
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]",
+      "type": "vless",
+      "server": "185.242.19.250",
+      "server_port": 443,
+      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -128,6 +149,27 @@
       }
     },
     {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "ru-selectel-01.com",
+      "server_port": 8443,
+      "uuid": "739e2291-0823-45be-89ba-b47111e1e375",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sni.ru-selectel-01.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "rZgu2lJcC2yrYnx66znee-Z75mW6m4TRfWt7_neoEVI",
+          "short_id": "caa0a516476ad539"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "217.16.21.116",
@@ -149,60 +191,86 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
-      "server": "195.209.90.18",
+      "server": "194.87.104.251",
       "server_port": 443,
-      "uuid": "0d287747-b7be-4ba7-9b98-5bbd9dfa385c",
-      "tls": {
-        "enabled": true,
-        "server_name": "s95410.cdn.ngenix.net"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "s95410.cdn.ngenix.net"
-        },
-        "path": "/storage"
-      }
-    },
-    {
-      "tag": "ð³ð± The Netherlands | [*CIDR]",
-      "type": "vmess",
-      "server": "93.93.89.118",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]",
-      "type": "vless",
-      "server": "pl-modx.nodexphere.net",
-      "server_port": 443,
-      "uuid": "6a02a47b-ebbf-4593-8460-558330c04189",
+      "uuid": "427613c7-db39-43d6-8563-e0b06cef9ef9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl-modx.nodexphere.net",
+        "server_name": "bv.mediastreamer.online",
         "reality": {
           "enabled": true,
-          "public_key": "_S6MJ2-dROx_X7rUM_Gnh01MPAVVgnB0_x0t4_2XuVc",
-          "short_id": ""
+          "public_key": "M462IdgnftzbjSuNVPReQtKVBehda__nLw6iAquHlws",
+          "short_id": "e1205c56da"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "188.68.218.190",
+      "server_port": 443,
+      "uuid": "443211c6-8ebb-4676-b796-f3a3a94c38a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sso.passport.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CfR6qJ1nbTh-fEQ6F21VYHXfSwdaqcEZwTwmCRcUxnA",
+          "short_id": "de4158854173e0e8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇱🇹 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.97.141",
+      "server_port": 443,
+      "uuid": "740d6039-3509-40c2-bf47-3b1be8507826",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "megafon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_XzFwWlJRkJVyLKlHQN9bDzFKuNSwK6yVmV8qMQfniA",
+          "short_id": "a2a943e983"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇫🇮 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.117.209",
+      "server_port": 443,
+      "uuid": "346aaa84-399f-445a-82e0-147827f5cc7c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "D9CGr9Ki6Fh8B8bXMCSFv9IWqJY9oNMstKPLnfXF4k4",
+          "short_id": "c6804982707a3c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
