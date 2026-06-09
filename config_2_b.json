@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇲🇩 Moldova [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
         "ð³ð± The Netherlands [*CIDR]",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4"
+        "🇷🇺 Russia [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,16 +51,78 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇲🇩 Moldova [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
         "ð³ð± The Netherlands [*CIDR]",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4"
+        "🇷🇺 Russia [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]",
+      "type": "vless",
+      "server": "185.242.19.249",
+      "server_port": 443,
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "195.209.90.168",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]-2",
+      "type": "vless",
+      "server": "185.242.19.250",
+      "server_port": 443,
+      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru"
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands [*CIDR]",
+      "type": "vmess",
+      "server": "93.93.88.22",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -84,121 +144,6 @@
           "fingerprint": "firefox"
         }
       }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "185.91.52.217",
-      "server_port": 1445,
-      "uuid": "929dd28f-2bef-43e0-b300-03d874be5997",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-vk"
-      }
-    },
-    {
-      "tag": "ð³ð± The Netherlands [*CIDR]",
-      "type": "vmess",
-      "server": "195.209.90.168",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
-      "type": "vless",
-      "server": "cockroachservice.ru",
-      "server_port": 443,
-      "uuid": "6c6bb37a-3315-45bc-88d6-0fbba043c07f",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.cockroachservice.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "EZ9ZUwrabGCJfowEvD4fI0ANMsxYh7hchEAbsnOTl0s",
-          "short_id": "803367e3aceaa5e1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-      "type": "vless",
-      "server": "78.159.240.174",
-      "server_port": 443,
-      "uuid": "14ca5431-b1e3-4e70-909a-c8ed2b770adc",
-      "tls": {
-        "enabled": true,
-        "server_name": "95.85.246.16.speed-storage.ru"
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "/sequre/grpc/"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "ru.riotvpn.eu",
-      "server_port": 80,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
-      "tls": {
-        "enabled": true,
-        "server_name": "obhod.riotvpn.eu",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "ru-selectel-01.com",
-      "server_port": 8443,
-      "uuid": "8cd00214-09da-48d9-8004-8281ff918d36",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "sni.ru-selectel-01.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "rZgu2lJcC2yrYnx66znee-Z75mW6m4TRfWt7_neoEVI",
-          "short_id": "1c74cf626ef50bb3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "packet_encoding": "xudp"
     }
   ],
   "route": {
