@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+        "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 [SNI-RU] ya.ru",
         "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
         "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-2",
-        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru"
+        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-3",
+        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,80 +51,55 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+        "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 [SNI-RU] ya.ru",
         "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
         "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-2",
-        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru"
+        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-3",
+        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 [SNI-RU] ya.ru",
       "type": "vless",
-      "server": "pl.riotvpn.eu",
+      "server": "138.124.254.42",
       "server_port": 443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "ya.ru",
         "reality": {
           "enabled": true,
-          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
-          "short_id": "2f49bccf11150ef2"
+          "public_key": "Wg5joXzclHLegMLQA9ra4f7G0gwSRL09GxNm5vAIKnk",
+          "short_id": "127cb9d6d9d86586"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
     {
       "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "uk.riotvpn.eu",
-      "server_port": 443,
-      "uuid": "7fe363a0-c6e2-4609-9301-7a7d92ddb780",
+      "server": "31.76.109.55",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
-          "short_id": "2f49bccf11150ef2"
+          "public_key": "AYWvVCObGJ_5TnNMGj4z_UDSDzMJ3IcoRgIBCAeUWFs",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "pl.riotvpn.eu",
-      "server_port": 8443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
       }
     },
     {
@@ -132,10 +107,11 @@
       "type": "vless",
       "server": "uk.riotvpn.eu",
       "server_port": 443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
+      "uuid": "0698d601-aa2f-40a8-8060-e19723564e2f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "insecure": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
@@ -149,28 +125,46 @@
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-3",
       "type": "vless",
-      "server": "nl.riotvpn.eu",
-      "server_port": 8443,
-      "uuid": "1e8d112e-fed0-4f7c-91ec-df914ad49906",
+      "server": "uk.riotvpn.eu",
+      "server_port": 443,
+      "uuid": "eecbcbb9-b770-40cd-ab7b-50c68a19595d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "insecure": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
+          "short_id": "2f49bccf11150ef2"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-4",
+      "type": "vless",
+      "server": "uk.riotvpn.eu",
+      "server_port": 443,
+      "uuid": "b42e34e3-d95c-4f9e-9e8c-e327e2323b6c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
+          "short_id": "b76dcf9e1183fe1b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
