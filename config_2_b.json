@@ -36,14 +36,11 @@
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
+        "ð³ð± The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🌐 Anycast-IP | 🇨🇭 🇫🇮 🇸🇪 [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-8"
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -58,46 +55,17 @@
         "auto",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
+        "ð³ð± The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🌐 Anycast-IP | 🇨🇭 🇫🇮 🇸🇪 [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-8"
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "ru.riotvpn.eu",
-      "server_port": 80,
-      "uuid": "bd78d4ee-c068-4125-94ba-50814578dc41",
-      "tls": {
-        "enabled": true,
-        "server_name": "obhod.riotvpn.eu",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "45.12.114.81",
-      "server_port": 80,
-      "uuid": "bd78d4ee-c068-4125-94ba-50814578dc41",
-      "tls": {
-        "enabled": true,
-        "server_name": "obhod.riotvpn.eu"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "46.229.215.189",
       "server_port": 8443,
@@ -118,19 +86,61 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "ru.riotvpn.eu",
-      "server_port": 443,
-      "uuid": "0698d601-aa2f-40a8-8060-e19723564e2f",
-      "flow": "xtls-rprx-vision",
+      "server": "185.91.52.217",
+      "server_port": 1445,
+      "uuid": "929dd28f-2bef-43e0-b300-03d874be5997",
       "tls": {
         "enabled": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
-          "short_id": "2f49bccf11150ef2"
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-vk"
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands [*CIDR]",
+      "type": "vmess",
+      "server": "195.209.90.168",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "cockroachservice.ru",
+      "server_port": 443,
+      "uuid": "6c6bb37a-3315-45bc-88d6-0fbba043c07f",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.cockroachservice.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "EZ9ZUwrabGCJfowEvD4fI0ANMsxYh7hchEAbsnOTl0s",
+          "short_id": "803367e3aceaa5e1"
         },
         "utls": {
           "enabled": true,
@@ -139,11 +149,26 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
+      "type": "vless",
+      "server": "78.159.240.174",
+      "server_port": 443,
+      "uuid": "14ca5431-b1e3-4e70-909a-c8ed2b770adc",
+      "tls": {
+        "enabled": true,
+        "server_name": "95.85.246.16.speed-storage.ru"
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/sequre/grpc/"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "ru.riotvpn.eu",
       "server_port": 80,
-      "uuid": "7fe363a0-c6e2-4609-9301-7a7d92ddb780",
+      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
       "tls": {
         "enabled": true,
         "server_name": "obhod.riotvpn.eu",
@@ -154,26 +179,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
-      "type": "vless",
-      "server": "45.84.1.182",
-      "server_port": 80,
-      "uuid": "bd78d4ee-c068-4125-94ba-50814578dc41",
-      "tls": {
-        "enabled": true,
-        "server_name": "obhod.riotvpn.eu",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-7",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "ru-selectel-01.com",
       "server_port": 8443,
@@ -193,67 +199,6 @@
         }
       },
       "packet_encoding": "xudp"
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇭 🇫🇮 🇸🇪 [*CIDR]",
-      "type": "vless",
-      "server": "ru50.whost-solutions.ru",
-      "server_port": 443,
-      "uuid": "5ba2ac3f-167a-4aca-86df-7c72dc281bc0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru21.whost-solutions.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "IAdOYYmEMPFAhpVUhqfML58AVtYPdAb71R_HAPf0N0k",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "5.42.115.36",
-      "server_port": 443,
-      "uuid": "e438ed18-0208-4620-b7f4-56ba7045f397",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "gb.sellflow.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-8",
-      "type": "vless",
-      "server": "ru.riotvpn.eu",
-      "server_port": 80,
-      "uuid": "7fe363a0-c6e2-4609-9301-7a7d92ddb780",
-      "tls": {
-        "enabled": true,
-        "server_name": "obhod.riotvpn.eu",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
     }
   ],
   "route": {
