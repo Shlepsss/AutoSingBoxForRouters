@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "ð³ð± The Netherlands | [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]",
-        "ð³ð± The Netherlands [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇲🇩 Moldova [*CIDR]"
+        "🇲🇩 Moldova [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,40 +51,43 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "ð³ð± The Netherlands | [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]",
-        "ð³ð± The Netherlands [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇲🇩 Moldova [*CIDR]"
+        "🇲🇩 Moldova [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "ð³ð± The Netherlands | [*CIDR]",
-      "type": "vmess",
-      "server": "renderer-stream-1-411.mirra.now",
+      "tag": "🇲🇩 Moldova [*CIDR]",
+      "type": "vless",
+      "server": "185.242.19.249",
       "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "top3739667002.mwscdn.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]-2",
+      "type": "vless",
+      "server": "185.242.19.249",
+      "server_port": 443,
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -109,61 +112,36 @@
       }
     },
     {
-      "tag": "ð³ð± The Netherlands [*CIDR]",
-      "type": "vmess",
-      "server": "93.93.88.22",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+      "tag": "🇲🇩 Moldova [*CIDR]-3",
       "type": "vless",
-      "server": "89.208.208.92",
-      "server_port": 7443,
-      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
+      "server": "185.242.19.250",
+      "server_port": 443,
+      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "loadtest.dev.urent.ru",
-        "alpn": [
-          "http/1.1"
-        ],
-        "reality": {
-          "enabled": true,
-          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
-          "short_id": "3210e0eee6605048"
-        },
+        "server_name": "top3739667002.mwscdn.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
-      "tag": "🇲🇩 Moldova [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "185.242.19.249",
-      "server_port": 443,
-      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "server": "46.229.215.189",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
+        "insecure": true,
+        "server_name": "smartcaptcha.yandexcloud.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [*CIDR]",
         "🇲🇩 Moldova [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "🇲🇩 Moldova [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇨🇿 Czechia [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,35 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [*CIDR]",
         "🇲🇩 Moldova [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "🇲🇩 Moldova [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇨🇿 Czechia [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]",
-      "type": "vless",
-      "server": "195.133.198.249",
-      "server_port": 19443,
-      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rutube.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "🇲🇩 Moldova [*CIDR]",
@@ -89,7 +68,25 @@
       "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
+        "server_name": "top3739667002.mwscdn.ru"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "46.229.215.189",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "smartcaptcha.yandexcloud.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -97,7 +94,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "46.229.215.189",
       "server_port": 8443,
@@ -118,29 +115,14 @@
       }
     },
     {
-      "tag": "🇲🇩 Moldova [*CIDR]-2",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
       "type": "vless",
-      "server": "185.242.19.250",
+      "server": "195.208.65.144",
       "server_port": 443,
-      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "uuid": "0d287747-b7be-4ba7-9b98-5bbd9dfa385c",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇲🇩 Moldova [*CIDR]-3",
-      "type": "vless",
-      "server": "185.242.19.249",
-      "server_port": 443,
-      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
-      "tls": {
-        "enabled": true,
-        "server_name": "top707762634.mwscdn.ru",
+        "server_name": "s95410.cdn.ngenix.net",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -149,9 +131,29 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "top707762634.mwscdn.ru"
+          "Host": "s95410.cdn.ngenix.net"
         },
-        "path": "/livestreamcontent/"
+        "path": "/storage"
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia [*CIDR]",
+      "type": "vless",
+      "server": "103.200.28.25",
+      "server_port": 8443,
+      "uuid": "69a2af58-d74a-44ca-864a-e09b493f4274",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "vo6Xrwkla8OBS5O6lEinNvHXxW8DxCmb8HGHD86VzkU",
+          "short_id": "0e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],

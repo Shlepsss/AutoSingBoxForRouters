@@ -31,36 +31,115 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru"
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
+        "🇦🇪 United Arab Emirates [SNI-RU] vk.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru-2"
       ],
-      "default": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
+        "🇦🇪 United Arab Emirates [SNI-RU] vk.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru-2"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
       "type": "vless",
-      "server": "pl.riotvpn.eu",
-      "server_port": 8443,
-      "uuid": "b6c78959-ce5f-41d2-ad14-4be945c357c6",
+      "server": "45.91.55.234",
+      "server_port": 7443,
+      "uuid": "8bbf020e-653f-4a82-9900-1214e4e37dab",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rutube.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI",
+          "short_id": "be0ce047"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "nl.riotvpn.eu",
+      "server_port": 443,
+      "uuid": "0698d601-aa2f-40a8-8060-e19723564e2f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
+          "short_id": "2f49bccf11150ef2"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
+      }
+    },
+    {
+      "tag": "🇦🇪 United Arab Emirates [SNI-RU] vk.ru",
+      "type": "vless",
+      "server": "31.56.188.85",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru-2",
+      "type": "vless",
+      "server": "45.91.55.232",
+      "server_port": 7443,
+      "uuid": "8bbf020e-653f-4a82-9900-1214e4e37dab",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rutube.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI",
+          "short_id": "be0ce047"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],

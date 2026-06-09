@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇩 Moldova [*CIDR]",
-        "ð³ð± The Netherlands [*CIDR]",
+        "🇨🇿 Czechia [*CIDR]",
+        "🇱🇹 Lithuania | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🌐 Anycast-IP | 🇬🇧 🇵🇱 🇺🇸 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,43 +51,54 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇩 Moldova [*CIDR]",
-        "ð³ð± The Netherlands [*CIDR]",
+        "🇨🇿 Czechia [*CIDR]",
+        "🇱🇹 Lithuania | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🌐 Anycast-IP | 🇬🇧 🇵🇱 🇺🇸 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇲🇩 Moldova [*CIDR]",
+      "tag": "🇨🇿 Czechia [*CIDR]",
       "type": "vless",
-      "server": "185.242.19.249",
-      "server_port": 443,
-      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "server": "103.200.28.25",
+      "server_port": 8443,
+      "uuid": "69a2af58-d74a-44ca-864a-e09b493f4274",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru"
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "vo6Xrwkla8OBS5O6lEinNvHXxW8DxCmb8HGHD86VzkU",
+          "short_id": "0e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
-      "tag": "ð³ð± The Netherlands [*CIDR]",
-      "type": "vmess",
-      "server": "37.220.161.247",
+      "tag": "🇱🇹 Lithuania | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "188.68.218.190",
       "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
+      "uuid": "443211c6-8ebb-4676-b796-f3a3a94c38a6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
+        "server_name": "sso.passport.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CfR6qJ1nbTh-fEQ6F21VYHXfSwdaqcEZwTwmCRcUxnA",
+          "short_id": "de4158854173e0e8"
         },
-        "path": "/api/v1/gpu-stream/socket"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
@@ -112,14 +123,21 @@
       }
     },
     {
-      "tag": "🇲🇩 Moldova [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "server": "46.229.215.189",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
+        "insecure": true,
+        "server_name": "smartcaptcha.yandexcloud.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -127,18 +145,21 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇵🇱 🇺🇸 [*CIDR]",
       "type": "vless",
-      "server": "141.193.213.21",
+      "server": "144.31.4.235",
       "server_port": 443,
-      "uuid": "9f135709-60a1-4a9b-b31c-78d326d8752a",
+      "uuid": "36af4874-d6a3-4f7c-82a7-1cb724961b52",
       "tls": {
         "enabled": true,
-        "server_name": "www.middle.cc.cd",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "linek.perry.us.kg"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "linek.perry.us.kg"
+        },
+        "path": "/pdf"
       }
     }
   ],

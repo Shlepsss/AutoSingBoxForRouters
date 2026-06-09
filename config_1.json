@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇩 Moldova [*CIDR]",
         "ð³ð± The Netherlands | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]-2",
-        "ð³ð± The Netherlands | [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,30 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇩 Moldova [*CIDR]",
         "ð³ð± The Netherlands | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]-2",
-        "ð³ð± The Netherlands | [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇲🇩 Moldova [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
-      "tls": {
-        "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru"
-      }
-    },
-    {
       "tag": "ð³ð± The Netherlands | [*CIDR]",
       "type": "vmess",
-      "server": "renderer-stream-1-411.mirra.now",
+      "server": "37.220.161.247",
       "server_port": 443,
       "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
       "security": "auto",
@@ -99,6 +88,28 @@
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "insecure": true,
+        "server_name": "smartcaptcha.yandexcloud.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "46.229.215.189",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
         "server_name": "smartcaptcha.yandexcloud.net",
         "reality": {
           "enabled": true,
@@ -112,49 +123,40 @@
       }
     },
     {
-      "tag": "ð³ð± The Netherlands | [*CIDR]-2",
-      "type": "vmess",
-      "server": "37.220.161.247",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "vless",
+      "server": "141.193.213.21",
       "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
+      "uuid": "9f135709-60a1-4a9b-b31c-78d326d8752a",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
+        "server_name": "www.middle.cc.cd",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ]
       }
     },
     {
-      "tag": "ð³ð± The Netherlands | [*CIDR]-3",
-      "type": "vmess",
-      "server": "renderer-stream-1-411.mirra.now",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.19.156",
       "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
+      "uuid": "87a61ee1-f6eb-48b4-ac90-c255ce067a07",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "smartcaptcha.yandexcloud.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "iRbc5G3wZbluYutzDvrJlc356yJsEnhV1T4tvE-tCnM",
+          "short_id": "27e53bbcab7593d7"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
       }
     }
   ],
