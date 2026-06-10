@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] yandex.by",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-2",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-3",
-        "🇩🇪 Germany | 🌐 [SNI-RU] ads.x5.ru"
+        "🇬🇧 United Kingdom [SNI-RU] eh.vk.com",
+        "🇺🇸 United States [SNI-RU] www.vk.com",
+        "🇱🇹 Lithuania | 🌐 [SNI-RU] yastatic.net",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,133 +51,117 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] yandex.by",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-2",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-3",
-        "🇩🇪 Germany | 🌐 [SNI-RU] ads.x5.ru"
+        "🇬🇧 United Kingdom [SNI-RU] eh.vk.com",
+        "🇺🇸 United States [SNI-RU] www.vk.com",
+        "🇱🇹 Lithuania | 🌐 [SNI-RU] yastatic.net",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] eh.vk.com",
       "type": "vless",
-      "server": "83.168.91.242",
+      "server": "31.76.93.54",
       "server_port": 8443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
+      "uuid": "7b7fe91c-89cc-414d-9860-839b3845f50d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "eh.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+          "public_key": "BrGL0gTKK_Ir2VwJOa91Vd8870DswnOXhA6-F92RBGI",
+          "short_id": "a987b6bd1781daa3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] www.vk.com",
+      "type": "vless",
+      "server": "186.246.23.136",
+      "server_port": 8443,
+      "uuid": "b6eaf50a-0b56-45c4-a993-4cc4d3dd1ede",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "5XOAmA_awHUD2jyfv7KmWiiLOfrQC14zipdA-2scPlA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania | 🌐 [SNI-RU] yastatic.net",
+      "type": "vless",
+      "server": "entry.gconexustun.ru",
+      "server_port": 8449,
+      "uuid": "6cb2af25-9d59-43bd-a8fa-682e4898e081",
+      "tls": {
+        "enabled": true,
+        "server_name": "yastatic.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "HFqmZTQIXCBr5TWNuX_FgriBxkOoWhBjkcgPPQ8ez2M",
+          "short_id": "bea0fd9425001a02"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
       }
     },
     {
-      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] yandex.by",
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "l10-1.l-itx.info",
+      "server": "109.237.98.81",
       "server_port": 443,
-      "uuid": "f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4",
+      "uuid": "1dfd369b-d13c-4a2d-89e8-60961656d1ce",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.by",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "F2MKDw5CCtP1oXIej2EgNxB01k3eyNu7tKCFfucgnRA",
-          "short_id": "6ba85179e30d4fc3"
+          "public_key": "uAabfPYujQGS9CY-h1on-TOtHU-y-vrumPXWo6G6AVg",
+          "short_id": "e92d8fca"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-2",
+      "tag": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "83.168.91.244",
-      "server_port": 8443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
+      "server": "186.246.19.177",
+      "server_port": 10444,
+      "uuid": "bbaaff1e-c914-4817-9d33-58be35a3bee6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+          "public_key": "praGYag8YPbz_rcd_Pa6Fqsi_IiQtO3e1AosYBcu6h4",
+          "short_id": "378086fbdb7c61cd"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-3",
-      "type": "vless",
-      "server": "83.168.91.236",
-      "server_port": 8443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "185.254.98.173",
-      "server_port": 8443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
       }
     }
   ],
