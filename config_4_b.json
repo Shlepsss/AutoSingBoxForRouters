@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-        "🇫🇮 Finland | 🌐 [SNI-RU] max.ru",
-        "🇧🇬 Bulgaria | 🌐 [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru"
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+        "🇺🇸 United States | [SNI-RU] web.max.ru",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [SNI-RU] ads.x5.ru",
+        "🇺🇸 United States | [SNI-RU] web.max.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +51,52 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-        "🇫🇮 Finland | 🌐 [SNI-RU] max.ru",
-        "🇧🇬 Bulgaria | 🌐 [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru"
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+        "🇺🇸 United States | [SNI-RU] web.max.ru",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [SNI-RU] ads.x5.ru",
+        "🇺🇸 United States | [SNI-RU] web.max.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
+      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "nl.riotvpn.eu",
-      "server_port": 8443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
+      "server": "nl2.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "web.max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "e67fb918ed6b9ffb"
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+      "type": "vless",
+      "server": "93.152.205.216",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
         },
         "utls": {
           "enabled": true,
@@ -81,65 +105,47 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-yandex"
+        "service_name": "web.max.ru"
       }
     },
     {
-      "tag": "🇫🇮 Finland | 🌐 [SNI-RU] max.ru",
+      "tag": "🇺🇸 United States | [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "beamgedrive.topupaxme.icu",
-      "server_port": 5443,
-      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
-      "flow": "xtls-rprx-vision",
+      "server": "usa.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "web.max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
-          "short_id": ""
+          "public_key": "MF_E-_CYAXdWxC1N_wTkdFyk3K7_1cNqNDPb0vnwl20",
+          "short_id": "8311761729abcdef"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria | 🌐 [SNI-RU] ads.x5.ru",
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "nl.riotvpn.eu",
-      "server_port": 443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
+      "server": "78.159.245.72",
+      "server_port": 2027,
+      "uuid": "db72616a-517a-4673-b424-8c63181a8a08",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
-          "short_id": "2f49bccf11150ef2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
-      "type": "vless",
-      "server": "45.91.55.232",
-      "server_port": 7443,
-      "uuid": "8bbf020e-653f-4a82-9900-1214e4e37dab",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rutube.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI",
-          "short_id": "be0ce047"
+          "public_key": "EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0",
+          "short_id": "6ba7b8109dad11d1"
         },
         "utls": {
           "enabled": true,
@@ -148,23 +154,27 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇺🇸 United States | [SNI-RU] web.max.ru-2",
       "type": "vless",
-      "server": "109.237.98.81",
-      "server_port": 8080,
-      "uuid": "1dfd369b-d13c-4a2d-89e8-60961656d1ce",
+      "server": "usa.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "web.max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QPIGKqqN_iEsm-7Wh-SGXKI77Srub_yvqIfq3dUU_SM",
-          "short_id": "8ffcbc4643"
+          "public_key": "MF_E-_CYAXdWxC1N_wTkdFyk3K7_1cNqNDPb0vnwl20",
+          "short_id": "8311761729abcdef"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
       }
     }
   ],
