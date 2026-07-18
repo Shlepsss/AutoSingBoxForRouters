@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia | [*CIDR]",
         "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,16 +51,36 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia | [*CIDR]",
         "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "194.55.239.174",
+      "server_port": 443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "furrycdn.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "furrycdn.net"
+        },
+        "path": "/api/v1/video-stream"
+      }
     },
     {
       "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
@@ -75,7 +93,7 @@
         "server_name": "cf11.evan00.dpdns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -83,33 +101,11 @@
         "headers": {
           "Host": "cf11.evan00.dpdns.org"
         },
-        "path": "Telegram🇨🇳+@WangCai2"
+        "path": "Telegram🇨🇳"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "194.55.239.174",
-      "server_port": 443,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "furrycdn.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "furrycdn.net"
-        },
-        "path": "/api/v1/video-stream"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "194.55.239.174",
       "server_port": 443,
@@ -131,7 +127,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
       "server": "194.55.239.174",
       "server_port": 443,
@@ -155,61 +151,15 @@
     {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "171.22.134.213",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "77.222.46.162",
-      "server_port": 2200,
-      "uuid": "2aa7f4b1-e859-46d0-b8ac-8587811ab7b1",
+      "server": "89.253.223.21",
+      "server_port": 80,
+      "uuid": "f387e32c-a8ab-4adf-9c5c-fe371cf78f6b",
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "rzd.ru"
+          "Host": "26bc92586944.apruxdomain.online"
         },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "194.55.239.174",
-      "server_port": 443,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "furrycdn.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "furrycdn.net"
-        },
-        "path": "/api/v1/video-stream"
+        "path": "/"
       }
     }
   ],
