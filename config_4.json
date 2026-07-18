@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [SNI-RU] yandex.ru",
-        "🇺🇸 United States | [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
-        "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [SNI-RU] ads.x5.ru",
-        "🇷🇺 Russia [SNI-RU] yandex.ru",
-        "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-        "🇷🇺 Russia [SNI-RU] ads.x5.ru-2"
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 [SNI-RU] ads.x5.ru",
+        "🇫🇮 Finland [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] web.max.ru",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 [SNI-RU] ads.x5.ru-2",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,40 +51,62 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [SNI-RU] yandex.ru",
-        "🇺🇸 United States | [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
-        "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [SNI-RU] ads.x5.ru",
-        "🇷🇺 Russia [SNI-RU] yandex.ru",
-        "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-        "🇷🇺 Russia [SNI-RU] ads.x5.ru-2"
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 [SNI-RU] ads.x5.ru",
+        "🇫🇮 Finland [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] web.max.ru",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 [SNI-RU] ads.x5.ru-2",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] yandex.ru",
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇺 [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "wl6.zeuss.top",
-      "server_port": 47000,
-      "uuid": "0bb3239a-1e0f-4f44-9957-09e70d536125",
+      "server": "78.159.245.72",
+      "server_port": 2027,
+      "uuid": "db72616a-517a-4673-b424-8c63181a8a08",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "8gvuFoZFiWq4Bqrote2sLeQDvjWKV-FbptzTLAYbsEI",
-          "short_id": "f454ce18242fd762"
+          "public_key": "EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0",
+          "short_id": "6ba7b8109dad11d1"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇺🇸 United States | [SNI-RU] web.max.ru",
+      "tag": "🇫🇮 Finland [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "144.31.153.236",
+      "server_port": 2053,
+      "uuid": "2b4881ac-79ef-440c-9f7e-02b3701e7a58",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "FtdsU_DLWDJ1Fk7NESJAy_S0ezFFL_gaslsFDF23KCw",
+          "short_id": "7fe0c1c54e89aaae"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ApiMapsYandex"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] web.max.ru",
       "type": "vless",
       "server": "usa.vrsvpn.com",
       "server_port": 444,
@@ -101,7 +121,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -110,9 +130,30 @@
       }
     },
     {
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇺 [SNI-RU] ads.x5.ru-2",
+      "type": "vless",
+      "server": "78.159.245.72",
+      "server_port": 2027,
+      "uuid": "db72616a-517a-4673-b424-8c63181a8a08",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0",
+          "short_id": "6ba7b8109dad11d1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
       "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "nl2.vrsvpn.com",
+      "server": "93.152.205.216",
       "server_port": 444,
       "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
@@ -131,90 +172,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "web.max.ru"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "78.159.245.72",
-      "server_port": 2027,
-      "uuid": "db72616a-517a-4673-b424-8c63181a8a08",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0",
-          "short_id": "6ba7b8109dad11d1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] yandex.ru",
-      "type": "vless",
-      "server": "wl6.zeuss.top",
-      "server_port": 47000,
-      "uuid": "0bb3239a-1e0f-4f44-9957-09e70d536125",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "8gvuFoZFiWq4Bqrote2sLeQDvjWKV-FbptzTLAYbsEI",
-          "short_id": "f454ce18242fd762"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "wl3.zeuss.top",
-      "server_port": 443,
-      "uuid": "0bb3239a-1e0f-4f44-9957-09e70d536125",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "b2phLjakNMXTCVqq2rZu_53ce6DYj6jb5L6WRjDbTmw",
-          "short_id": "1551"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "wl3.zeuss.top",
-      "server_port": 443,
-      "uuid": "0bb3239a-1e0f-4f44-9957-09e70d536125",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "b2phLjakNMXTCVqq2rZu_53ce6DYj6jb5L6WRjDbTmw",
-          "short_id": "1551"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
       }
     }
   ],

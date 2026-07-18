@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 | [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] VK-2"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia [*CIDR]-7"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,46 +56,51 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 | [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] VK-2"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia [*CIDR]-7"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "87.228.122.108",
-      "server_port": 4100,
-      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
+      "server": "194.55.239.174",
+      "server_port": 443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
+        "server_name": "furrycdn.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/v1"
+        "headers": {
+          "Host": "furrycdn.net"
+        },
+        "path": "/api/v1/video-stream"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "212.67.9.113",
-      "server_port": 2200,
-      "uuid": "2aa7f4b1-e859-46d0-b8ac-8587811ab7b1",
+      "server": "194.55.239.174",
+      "server_port": 443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
+        "server_name": "furrycdn.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -103,28 +108,75 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/v1"
+        "headers": {
+          "Host": "furrycdn.net"
+        },
+        "path": "/api/v1/video-stream"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "yt.prostoshield.ru",
-      "server_port": 443,
-      "uuid": "b009383a-9f01-4d27-b437-973d9386deb8",
-      "flow": "xtls-rprx-vision",
+      "server": "26bc92586944.apruxdomain.online",
+      "server_port": 80,
+      "uuid": "f387e32c-a8ab-4adf-9c5c-fe371cf78f6b",
       "tls": {
         "enabled": true,
-        "server_name": "yt.prostoshield.ru",
-        "reality": {
+        "server_name": "26bc92586944.apruxdomain.online",
+        "utls": {
           "enabled": true,
-          "public_key": "efz4hwnlouHFI-ilC6r-Xn1bQ7L-GNY3TslVdNkhqBQ",
-          "short_id": "0af472dc07187ee3"
-        },
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "26bc92586944.apruxdomain.online"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "194.55.239.174",
+      "server_port": 443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "furrycdn.net",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "furrycdn.net"
+        },
+        "path": "/api/v1/video-stream"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "vless",
+      "server": "213.241.198.20",
+      "server_port": 443,
+      "uuid": "7612dd26-d0ce-4fe0-be7c-d093bb8645da",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf11.evan00.dpdns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cf11.evan00.dpdns.org"
+        },
+        "path": "Telegram🇨🇳+@WangCai2"
       }
     },
     {
@@ -149,49 +201,49 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
-      "server": "91.219.227.142",
-      "server_port": 47000,
-      "uuid": "0bb3239a-1e0f-4f44-9957-09e70d536125",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "8gvuFoZFiWq4Bqrote2sLeQDvjWKV-FbptzTLAYbsEI",
-          "short_id": "920c91af"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK",
-      "type": "vless",
-      "server": "109.120.189.154",
+      "server": "45.143.203.21",
       "server_port": 443,
-      "uuid": "4401809f-4d60-4df7-ab14-da48955c2cb3",
-      "flow": "xtls-rprx-vision",
+      "uuid": "3e7f67de-648e-4871-b51a-a225214d41ee",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "j.6sc.co",
         "reality": {
           "enabled": true,
-          "public_key": "KvQ0JuE-17nWMSvEnG9xdlqPWv3bZBn9JlDiLmyE-SE",
-          "short_id": "6aa44564cda562bc"
+          "public_key": "TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "type": "vless",
+      "server": "194.55.239.174",
+      "server_port": 443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "furrycdn.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "furrycdn.net"
+        },
+        "path": "/api/v1/video-stream"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-6",
       "type": "vless",
       "server": "194.55.239.174",
       "server_port": 443,
@@ -213,62 +265,22 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-7",
       "type": "vless",
-      "server": "87.228.122.108",
-      "server_port": 4100,
-      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "yt.prostoshield.ru",
+      "server": "45.143.203.21",
       "server_port": 443,
-      "uuid": "b009383a-9f01-4d27-b437-973d9386deb8",
-      "flow": "xtls-rprx-vision",
+      "uuid": "3e7f67de-648e-4871-b51a-a225214d41ee",
       "tls": {
         "enabled": true,
-        "server_name": "yt.prostoshield.ru",
+        "server_name": "j.6sc.co",
         "reality": {
           "enabled": true,
-          "public_key": "efz4hwnlouHFI-ilC6r-Xn1bQ7L-GNY3TslVdNkhqBQ",
-          "short_id": "0af472dc07187ee3"
+          "public_key": "TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK-2",
-      "type": "vless",
-      "server": "91.219.227.142",
-      "server_port": 47000,
-      "uuid": "0bb3239a-1e0f-4f44-9957-09e70d536125",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "8gvuFoZFiWq4Bqrote2sLeQDvjWKV-FbptzTLAYbsEI",
-          "short_id": "920c91af"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       }
     }
