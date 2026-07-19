@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-        "🇺🇸 United States [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
-        "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru-2"
+        "🇺🇸 United States | [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru-3",
+        "🇺🇸 United States [SNI-RU] web.max.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,65 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-        "🇺🇸 United States [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
-        "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru-2"
+        "🇺🇸 United States | [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru-3",
+        "🇺🇸 United States [SNI-RU] web.max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇺🇸 United States | [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
+      "server": "86.109.75.147",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "web.max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
+          "public_key": "MF_E-_CYAXdWxC1N_wTkdFyk3K7_1cNqNDPb0vnwl20",
+          "short_id": "8311761729abcdef"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+      "type": "vless",
+      "server": "93.152.205.216",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
       "type": "vless",
       "server": "nl2.vrsvpn.com",
       "server_port": 444,
@@ -97,7 +124,31 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru-3",
+      "type": "vless",
+      "server": "nl2.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -127,51 +178,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "web.max.ru"
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
-      "type": "vless",
-      "server": "93.152.205.216",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "web.max.ru"
-      }
-    },
-    {
-      "tag": "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
-      "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     }
   ],
