@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR] YA",
-        "🇩🇪 Germany [*CIDR] YA-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] YA-3",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-2"
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇸🇪 Sweden | 🌐 [*CIDR] VK",
+        "🇸🇪 Sweden | 🌐 [*CIDR] VK-2",
+        "🇩🇪 Germany | [*CIDR] YA-2",
+        "🇩🇪 Germany | [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR] YA",
-        "🇩🇪 Germany [*CIDR] YA-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] YA-3",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-2"
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇸🇪 Sweden | 🌐 [*CIDR] VK",
+        "🇸🇪 Sweden | 🌐 [*CIDR] VK-2",
+        "🇩🇪 Germany | [*CIDR] YA-2",
+        "🇩🇪 Germany | [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] YA",
+      "tag": "🇩🇪 Germany | [*CIDR] YA",
       "type": "vless",
       "server": "bs1.whitehost.org",
       "server_port": 443,
@@ -70,6 +70,27 @@
       "tls": {
         "enabled": true,
         "server_name": "wde3.whitedeu.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden | 🌐 [*CIDR] VK",
+      "type": "vless",
+      "server": "109.120.188.54",
+      "server_port": 443,
+      "uuid": "4401809f-4d60-4df7-ab14-da48955c2cb3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "4woJiVyGtLro6qRQdUcM2EJDHI3CLOeeE-knmSHk8lE",
+          "short_id": "1ca44564cda56661"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -77,7 +98,28 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] YA-2",
+      "tag": "🇸🇪 Sweden | 🌐 [*CIDR] VK-2",
+      "type": "vless",
+      "server": "109.120.188.54",
+      "server_port": 443,
+      "uuid": "4401809f-4d60-4df7-ab14-da48955c2cb3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "4woJiVyGtLro6qRQdUcM2EJDHI3CLOeeE-knmSHk8lE",
+          "short_id": "1ca44564cda56661"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR] YA-2",
       "type": "vless",
       "server": "bs1.whitehost.org",
       "server_port": 443,
@@ -88,35 +130,14 @@
         "server_name": "wde3.whitedeu.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
+      "tag": "🇩🇪 Germany | [*CIDR] YA-3",
       "type": "vless",
-      "server": "109.120.189.154",
-      "server_port": 443,
-      "uuid": "4401809f-4d60-4df7-ab14-da48955c2cb3",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KvQ0JuE-17nWMSvEnG9xdlqPWv3bZBn9JlDiLmyE-SE",
-          "short_id": "6aa44564cda562bc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR] YA-3",
-      "type": "vless",
-      "server": "93.77.188.102",
+      "server": "bs1.whitehost.org",
       "server_port": 443,
       "uuid": "cad59ee8-e80f-4d0f-a9dd-d082e00a75e4",
       "flow": "xtls-rprx-vision",
@@ -125,28 +146,7 @@
         "server_name": "wde3.whitedeu.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
-      "type": "vless",
-      "server": "109.120.189.154",
-      "server_port": 443,
-      "uuid": "4401809f-4d60-4df7-ab14-da48955c2cb3",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KvQ0JuE-17nWMSvEnG9xdlqPWv3bZBn9JlDiLmyE-SE",
-          "short_id": "6aa44564cda562bc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       }
     }
