@@ -34,10 +34,12 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] YA-2",
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] VK-2",
+        "🇷🇺 Russia [*CIDR] YA-3",
+        "🇪🇪 Estonia | 🌐 [*CIDR] YA",
+        "🇩🇪 Germany [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
@@ -51,14 +53,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] YA-2",
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] VK-2",
+        "🇷🇺 Russia [*CIDR] YA-3",
+        "🇪🇪 Estonia | 🌐 [*CIDR] YA",
+        "🇩🇪 Germany [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.182.90",
+      "server_port": 443,
+      "uuid": "0b0e9802-3a94-4cb0-83e3-293b94a1ee2e",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.vhub.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cloudflare.vhub.pro"
+        },
+        "path": "/websocket"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] YA",
@@ -77,7 +103,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
@@ -103,51 +129,67 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] VK",
+      "tag": "🇷🇺 Russia [*CIDR] YA-3",
       "type": "vless",
-      "server": "217.16.21.108",
-      "server_port": 7440,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
+      "server": "51.250.84.76",
+      "server_port": 443,
+      "uuid": "bdc00b0d-e5f5-4cde-8414-6eb7ab5af117",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "id.pervye.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR] VK-2",
-      "type": "vless",
-      "server": "217.16.21.108",
-      "server_port": 7440,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.pervye.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
+          "public_key": "Py03aPnCma9Ip4xCvtBsK77NScUYphSw46RmdjFSvls",
+          "short_id": "a374f536afccddfe"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.22.195",
+      "server_port": 443,
+      "uuid": "d8016f57-b34f-41ea-aca4-ce0d4131d980",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "9tKfmbONYzchVLBVki3UDOBgulMw2-_9fV5qm4aPiiM",
+          "short_id": "700e5b8399d12d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.182.90",
+      "server_port": 443,
+      "uuid": "0b0e9802-3a94-4cb0-83e3-293b94a1ee2e",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.vhub.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "ns"
+        "type": "ws",
+        "headers": {
+          "Host": "cloudflare.vhub.pro"
+        },
+        "path": "/websocket"
       }
     },
     {
