@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
+        "🇫🇷 France [SNI-RU] yandex.net",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-3",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-4",
-        "🇵🇱 Poland | 🌐 [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-5"
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-5",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,37 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
+        "🇫🇷 France [SNI-RU] yandex.net",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-3",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-4",
-        "🇵🇱 Poland | 🌐 [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-5"
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-5",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] eh.vk.com",
-      "type": "vless",
-      "server": "89.125.78.81",
-      "server_port": 8443,
-      "uuid": "2c5268a3-4d6b-43ec-8930-a5de3d3cbbb7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5EzvBAd05xtjMQD_gKnYPrHwDyRD-xJvKxWd_Xq7FA",
-          "short_id": "fcdc24ecde9642"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
@@ -99,6 +78,27 @@
           "enabled": true,
           "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
           "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France [SNI-RU] yandex.net",
+      "type": "vless",
+      "server": "45.192.2.115",
+      "server_port": 443,
+      "uuid": "0b8dfc50-9e2d-4b3c-85cd-870b478312a0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
+          "short_id": "f34818a561dfd1fe"
         },
         "utls": {
           "enabled": true,
@@ -123,7 +123,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -144,7 +144,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       }
     },
@@ -165,28 +165,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "194.135.34.189",
-      "server_port": 443,
-      "uuid": "2c5268a3-4d6b-43ec-8930-a5de3d3cbbb7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "zczckT0tZNDJue5SCz0NTLaHML3_wFFIzsWRtynbV3U",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
@@ -207,8 +186,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+      "type": "vless",
+      "server": "93.152.205.216",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
       }
     }
   ],
