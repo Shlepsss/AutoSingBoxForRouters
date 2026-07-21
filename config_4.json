@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇵🇱 | [SNI-RU] max.ru",
-        "🇷🇺 Russia | [SNI-RU] max.ru",
-        "🇩🇪 Germany | [SNI-RU] kinopoisk.ru",
-        "🌐 Anycast-IP | 🇩🇪 🇵🇱 | [SNI-RU] max.ru-2",
-        "🇷🇺 Russia | [SNI-RU] max.ru-2"
+        "🌐 Anycast-IP | 🇩🇪 🇵🇱 🇷🇺 | [SNI-RU] max.ru",
+        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+        "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [SNI-RU] max.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇵🇱 | [SNI-RU] max.ru",
-        "🇷🇺 Russia | [SNI-RU] max.ru",
-        "🇩🇪 Germany | [SNI-RU] kinopoisk.ru",
-        "🌐 Anycast-IP | 🇩🇪 🇵🇱 | [SNI-RU] max.ru-2",
-        "🇷🇺 Russia | [SNI-RU] max.ru-2"
+        "🌐 Anycast-IP | 🇩🇪 🇵🇱 🇷🇺 | [SNI-RU] max.ru",
+        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+        "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [SNI-RU] max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇵🇱 | [SNI-RU] max.ru",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇵🇱 🇷🇺 | [SNI-RU] max.ru",
       "type": "vless",
       "server": "node3.frost-api.com",
       "server_port": 443,
@@ -77,62 +77,82 @@
           "enabled": true,
           "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
           "short_id": "e7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "ru-185.monkeyisland.xyz",
-      "server_port": 443,
-      "uuid": "37c08b33-a273-4b66-a114-48abceb037a4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "alpn": [
-          "http/1.1"
-        ],
-        "reality": {
-          "enabled": true,
-          "public_key": "FN85iXr6eKOQLpileQaXWAQS9LcdwTFAfgMoZT6-5kQ",
-          "short_id": "cbbd2f61842e7cf7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] kinopoisk.ru",
-      "type": "vless",
-      "server": "109.107.168.109",
-      "server_port": 8444,
-      "uuid": "b12eebc2-369c-4f3c-96a0-a8bd150ca8d5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Lxs8Ruv2zHH0XW5EiQmuCaScfkGPCxWjW02YDWH8pyU",
-          "short_id": "eb0cca7312345678"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "89.222.123.211",
+      "server_port": 16923,
+      "uuid": "0eff0ab4-47eb-4584-b9a0-4db598092a05",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇵🇱 | [SNI-RU] max.ru-2",
+      "tag": "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [SNI-RU] max.ru",
       "type": "vless",
       "server": "node3.frost-api.com",
       "server_port": 443,
@@ -148,34 +168,9 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru-2",
-      "type": "vless",
-      "server": "ru-185.monkeyisland.xyz",
-      "server_port": 443,
-      "uuid": "37c08b33-a273-4b66-a114-48abceb037a4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "alpn": [
-          "http/1.1"
-        ],
-        "reality": {
-          "enabled": true,
-          "public_key": "FN85iXr6eKOQLpileQaXWAQS9LcdwTFAfgMoZT6-5kQ",
-          "short_id": "cbbd2f61842e7cf7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "packet_encoding": "xudp"
     }
   ],
   "route": {
