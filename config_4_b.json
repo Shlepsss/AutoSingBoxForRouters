@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [SNI-RU] id.vk.com",
         "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States | [SNI-RU] ads.x5.ru",
         "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | [SNI-RU] ads.x5.ru"
+        "🌐 Anycast-IP | 🇵🇱 🇷🇺 [SNI-RU] id.vk.com",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,60 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [SNI-RU] id.vk.com",
         "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States | [SNI-RU] ads.x5.ru",
         "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | [SNI-RU] ads.x5.ru"
+        "🌐 Anycast-IP | 🇵🇱 🇷🇺 [SNI-RU] id.vk.com",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "185.141.227.106",
-      "server_port": 10443,
-      "uuid": "c87d9e18-5016-4a0b-b2e3-0558be683264",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KONaLFa2_5efdUtXz0TDfj8DZf65Lqli1935Mr36DnU",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [SNI-RU] id.vk.com",
-      "type": "vless",
-      "server": "185.141.227.106",
-      "server_port": 9443,
-      "uuid": "c87d9e18-5016-4a0b-b2e3-0558be683264",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cjLqnMfUlCEnGbKJT3v8wPgv81SLR1Pxq76HxrivUG8",
-          "short_id": "afde73"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
     },
     {
       "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
@@ -128,6 +82,27 @@
       "transport": {
         "type": "grpc",
         "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "usa.izzzyvpn.ru",
+      "server_port": 443,
+      "uuid": "aea30a00-4cbb-4acc-b1c2-cb53a7522d09",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru:443",
+        "reality": {
+          "enabled": true,
+          "public_key": "dQ1UuZtHmkxbOa0CuhzD8xx5l2oX3PTYvEWWE7C2Djk",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     },
     {
@@ -155,24 +130,50 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | [SNI-RU] ads.x5.ru",
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇷🇺 [SNI-RU] id.vk.com",
       "type": "vless",
-      "server": "usa.izzzyvpn.ru",
-      "server_port": 443,
-      "uuid": "aea30a00-4cbb-4acc-b1c2-cb53a7522d09",
-      "flow": "xtls-rprx-vision",
+      "server": "185.141.227.106",
+      "server_port": 9443,
+      "uuid": "c87d9e18-5016-4a0b-b2e3-0558be683264",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru:443",
+        "server_name": "id.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "dQ1UuZtHmkxbOa0CuhzD8xx5l2oX3PTYvEWWE7C2Djk",
-          "short_id": ""
+          "public_key": "cjLqnMfUlCEnGbKJT3v8wPgv81SLR1Pxq76HxrivUG8",
+          "short_id": "afde73"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "152.233.31.72",
+      "server_port": 16923,
+      "uuid": "0eff0ab4-47eb-4584-b9a0-4db598092a05",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
       }
     }
   ],
