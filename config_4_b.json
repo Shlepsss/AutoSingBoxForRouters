@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net-2",
-        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2"
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
+        "🇨🇿 Czechia | 🌐 | [SNI-RU] vk.com",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,65 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net-2",
-        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2"
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
+        "🇨🇿 Czechia | 🌐 | [SNI-RU] vk.com",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "152.233.31.72",
-      "server_port": 16923,
-      "uuid": "da986116-4cb4-4b34-a738-4680949213b8",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "152.233.41.30",
-      "server_port": 16923,
-      "uuid": "cc791bbc-be47-4c15-a8dc-abef8990caba",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net",
+      "tag": "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
       "type": "vless",
       "server": "rus.fasti.win",
       "server_port": 443,
@@ -129,7 +81,71 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net-2",
+      "tag": "🇨🇿 Czechia | 🌐 | [SNI-RU] vk.com",
+      "type": "vless",
+      "server": "cxh1.w-mebel.pro",
+      "server_port": 443,
+      "uuid": "c1d62d53-2fcd-4951-ab96-c81486f59775",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "UZZID1Kkicu6Bwn6RqLZBWWkWCcexoVpUWOP6HWY2nM",
+          "short_id": "ad96a4ff2853b26c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "152.233.43.77",
+      "server_port": 16923,
+      "uuid": "8daaba82-fb49-45d4-98ab-aa6b78cf6ef1",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com",
+      "type": "trojan",
+      "server": "cztr1.w-mebel.pro",
+      "server_port": 443,
+      "password": "c1d62d53-2fcd-4951-ab96-c81486f59775",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "UzUMu3Jq0iuyiEXs362o2EJE2rzVPuD34HMnoAG-qFM",
+          "short_id": "e8a81db57cf11014"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
       "type": "vless",
       "server": "rus.fasti.win",
       "server_port": 443,
@@ -146,30 +162,6 @@
           "enabled": true,
           "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2",
-      "type": "vless",
-      "server": "152.233.31.72",
-      "server_port": 16923,
-      "uuid": "da986116-4cb4-4b34-a738-4680949213b8",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
       }
     }
   ],
