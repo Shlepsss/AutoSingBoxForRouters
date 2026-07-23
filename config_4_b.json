@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 Switzerland | [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] stats.vk-portal.net",
+        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
         "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
-        "🇰🇿 Kazakhstan | [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net-2"
+        "🇫🇷 France [SNI-RU] yandex.net",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,39 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 Switzerland | [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] stats.vk-portal.net",
+        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
         "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
-        "🇰🇿 Kazakhstan | [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net-2"
+        "🇫🇷 France [SNI-RU] yandex.net",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇭 Switzerland | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇩🇪 Germany [SNI-RU] stats.vk-portal.net",
       "type": "vless",
-      "server": "152.233.31.68",
+      "server": "desrv.noooo.win",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "tls": {
+        "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
+          "short_id": "992f3294e2336744"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "159.195.12.98",
       "server_port": 16923,
       "uuid": "781be37f-2ed2-40b3-a013-f416e0450fd0",
       "tls": {
@@ -76,31 +96,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "89.222.123.209",
-      "server_port": 16923,
-      "uuid": "adc38bb3-9ec9-4b70-9172-90b97b30abcc",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -129,11 +125,36 @@
       }
     },
     {
-      "tag": "🇰🇿 Kazakhstan | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇫🇷 France [SNI-RU] yandex.net",
       "type": "vless",
-      "server": "45.94.23.111",
+      "server": "45.192.2.157",
+      "server_port": 443,
+      "uuid": "5098e189-3462-4ff7-8ddd-4aaecfd060ea",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
+          "short_id": "f34818a561dfd1fe"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "159.195.12.98",
       "server_port": 16923,
-      "uuid": "adc38bb3-9ec9-4b70-9172-90b97b30abcc",
+      "uuid": "781be37f-2ed2-40b3-a013-f416e0450fd0",
       "tls": {
         "enabled": true,
         "server_name": "api-maps.yandex.ru",
@@ -144,32 +165,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net-2",
-      "type": "vless",
-      "server": "desrv.noooo.win",
-      "server_port": 443,
-      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
-      "tls": {
-        "enabled": true,
-        "server_name": "stats.vk-portal.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
-          "short_id": "992f3294e2336744"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
       }
     }
   ],
