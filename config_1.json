@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇪🇪 Estonia [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
-        "🇪🇪 Estonia [*CIDR]-2",
-        "🇩🇪 Germany [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇪🇪 Estonia [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
-        "🇪🇪 Estonia [*CIDR]-2",
-        "🇩🇪 Germany [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "185.147.27.119",
+      "server_port": 48444,
+      "uuid": "2785ec98-581e-43c1-a8b6-0fe3671f34ef",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "FApUbcJurXfV5Y3PG2xRycl1R7y0CxwmUU7FRgUpzG0",
+          "short_id": "6ba85179"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "tag": "🇪🇪 Estonia [*CIDR]",
       "type": "vless",
-      "server": "165.231.157.114",
+      "server": "165.231.157.117",
       "server_port": 443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "tls": {
@@ -71,7 +92,7 @@
         "server_name": "app-6a607097.adhil.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       }
     },
@@ -90,22 +111,25 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "randomized"
         }
       }
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "165.231.157.114",
-      "server_port": 443,
-      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "server": "146.185.197.54",
+      "server_port": 59999,
+      "uuid": "2785ec98-581e-43c1-a8b6-0fe3671f34ef",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "app-6a607097.adhil.uk",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "yastatic.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "x0t1otRGBv62aJKGNbsQRJGtwh-sp6CEScFS6S8y3EM",
+          "short_id": "6ba85179"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -113,50 +137,24 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "46.8.209.220",
-      "server_port": 8443,
-      "uuid": "547c0d9e-9bb5-4e83-b6e7-09953bc6004b",
+      "server": "45.139.27.188",
+      "server_port": 58888,
+      "uuid": "2785ec98-581e-43c1-a8b6-0fe3671f34ef",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cloudflare.vhub.pro",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "payment-widget.plus.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "rxMn56bQTHNQqXSWz_yyjTpg44Ou5wlHeDFHwDYH-Ek",
+          "short_id": "7f2c9a4e18d063bb"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cloudflare.vhub.pro"
-        },
-        "path": "/websocket"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@WangCai2"
       }
     }
   ],
