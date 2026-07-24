@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 [*CIDR] Beeline",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2"
+        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 [*CIDR] Beeline",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2"
+        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,7 +63,7 @@
     {
       "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
       "type": "vless",
-      "server": "66.90.90.13",
+      "server": "yt.noooo.win",
       "server_port": 8443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "flow": "xtls-rprx-vision",
@@ -80,11 +80,44 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 [*CIDR] Beeline",
       "type": "vless",
-      "server": "46.29.163.32",
-      "server_port": 29311,
-      "uuid": "dee59997-f3f0-4dc5-bb26-ae24ae63ec5a"
+      "server": "66.90.90.164",
+      "server_port": 8443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ai-6a607097.noooo.win",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "201.51.12.199",
+      "server_port": 443,
+      "uuid": "f3a8da6e-9557-43e3-b8d6-44350d0dc6f7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "yFdgeRvZ7pYNp7C5v3sOq1x3gwHxWYem62W2tB9RJ0k",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
@@ -101,42 +134,24 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@WangCai2"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2",
+      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-2",
       "type": "vless",
-      "server": "66.90.90.164",
+      "server": "66.90.90.13",
       "server_port": 8443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "ai-6a607097.noooo.win",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
