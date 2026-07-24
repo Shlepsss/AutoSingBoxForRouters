@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
         "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com",
+        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
+        "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com",
         "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-2",
-        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-3",
-        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-4"
+        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,34 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
         "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com",
+        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
+        "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com",
         "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-2",
-        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-3",
-        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-4"
+        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
-      "type": "vless",
-      "server": "desrv.noooo.win",
-      "server_port": 443,
-      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
-      "tls": {
-        "enabled": true,
-        "server_name": "stats.vk-portal.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
-          "short_id": "992f3294e2336744"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
     },
     {
       "tag": "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com",
@@ -96,7 +76,51 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
+      "type": "vless",
+      "server": "desrv.noooo.win",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "tls": {
+        "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
+          "short_id": "992f3294e2336744"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "ns.o11111o.club",
+      "server_port": 443,
+      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -120,7 +144,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -131,7 +155,7 @@
     {
       "tag": "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-3",
       "type": "vless",
-      "server": "ns.o11111o.club",
+      "server": "78.159.240.41",
       "server_port": 443,
       "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
       "tls": {
@@ -144,31 +168,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-4",
-      "type": "vless",
-      "server": "bs.o11111o.club",
-      "server_port": 443,
-      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
