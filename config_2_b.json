@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-        "🇳🇴 Norway | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇭 🇳🇱 | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,93 +51,46 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-        "🇳🇴 Norway | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇭 🇳🇱 | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@WangCai2"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@WangCai2"
-      }
-    },
-    {
-      "tag": "🇳🇴 Norway | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "178.253.42.156",
-      "server_port": 443,
-      "uuid": "cbb0f5a2-cef6-40a1-be04-c6dcd8263dfb",
-      "flow": "xtls-rprx-vision",
+      "server": "77.222.35.36",
+      "server_port": 4100,
+      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
       "tls": {
         "enabled": true,
-        "server_name": "www.ru.pinterest.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "91.185.83.116",
+      "server_port": 7443,
+      "uuid": "53ec7e52-9449-4bba-8256-330faded7577",
+      "tls": {
+        "enabled": true,
+        "server_name": "5post-gate.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "uv34kj8icuHbJem3muVK7aE7MQ__AV75_caC99ZinB4",
+          "public_key": "YvhcuqXRqPigT7_rp9vsV5LAdxXHN8eWB_17SchS_S8",
           "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇭 🇳🇱 | [*CIDR]",
-      "type": "vless",
-      "server": "45.151.62.156",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "dogs.abvphelp.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "aBs0x09cXtjTpsrGb21cJsEmDsaCaC1RPeutNu404V0",
-          "short_id": "6fa13cdb"
         },
         "utls": {
           "enabled": true,
@@ -150,15 +103,13 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-2",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "77.222.35.36",
+      "server_port": 4100,
+      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
@@ -166,10 +117,49 @@
       },
       "transport": {
         "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "77.222.35.36",
+      "server_port": 4100,
+      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "176.32.39.122",
+      "server_port": 443,
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "tls": {
+        "enabled": true,
+        "server_name": "media2.tcpdoor.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
+          "short_id": "3303c7a5"
         },
-        "path": "/Telegram🇨🇳+@WangCai2"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     }
   ],
