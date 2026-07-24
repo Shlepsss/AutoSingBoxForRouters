@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇱🇹 Lithuania | 🌐 | [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK",
+        "🇪🇪 Estonia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
+        "🇪🇪 Estonia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,111 +53,181 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇱🇹 Lithuania | 🌐 | [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK",
+        "🇪🇪 Estonia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
+        "🇪🇪 Estonia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK",
       "type": "vless",
-      "server": "77.222.35.36",
-      "server_port": 4100,
-      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "77.222.35.36",
-      "server_port": 4100,
-      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania | 🌐 | [*CIDR] YA",
-      "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server": "213.219.212.24",
       "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "uuid": "8bdaaef0-44b3-4f2f-8858-aa4d16a64e92",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "pro-ru-213.emrata.top",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "45.9.15.56",
+      "server_port": 443,
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tradingview.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "iudzEpcjL_9hNvn7rf05GwUfV5zMpf8TSumBNo4VLTM",
+          "short_id": "b30a30f0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
       "type": "vless",
-      "server": "77.222.35.36",
-      "server_port": 4100,
-      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
+      "server": "213.219.212.24",
+      "server_port": 443,
+      "uuid": "8bdaaef0-44b3-4f2f-8858-aa4d16a64e92",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "pro-ru-213.emrata.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
+      "type": "vless",
+      "server": "213.219.212.24",
+      "server_port": 443,
+      "uuid": "8bdaaef0-44b3-4f2f-8858-aa4d16a64e92",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pro-ru-213.emrata.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
+      "type": "vless",
+      "server": "213.219.212.24",
+      "server_port": 443,
+      "uuid": "8bdaaef0-44b3-4f2f-8858-aa4d16a64e92",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pro-ru-213.emrata.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "45.9.15.56",
+      "server_port": 443,
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tradingview.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "iudzEpcjL_9hNvn7rf05GwUfV5zMpf8TSumBNo4VLTM",
+          "short_id": "b30a30f0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
+      "type": "vless",
+      "server": "213.219.212.24",
       "server_port": 443,
-      "password": "521314",
+      "uuid": "8bdaaef0-44b3-4f2f-8858-aa4d16a64e92",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "pro-ru-213.emrata.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@WangCai2"
-      }
+      "packet_encoding": "xudp"
     }
   ],
   "route": {
