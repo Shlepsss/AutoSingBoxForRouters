@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-2",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-3",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2",
+        "🇪🇪 Estonia [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-3",
+        "🇪🇪 Estonia [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,40 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-2",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-3",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2",
+        "🇪🇪 Estonia [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-3",
+        "🇪🇪 Estonia [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
       "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
-      "type": "vless",
-      "server": "66.90.90.13",
+      "server": "66.90.90.164",
       "server_port": 8443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "flow": "xtls-rprx-vision",
@@ -101,25 +80,44 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2",
       "type": "vless",
-      "server": "yt.noooo.win",
+      "server": "66.90.90.20",
       "server_port": 8443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "ai-6a607097.noooo.win",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline-3",
+      "tag": "🇪🇪 Estonia [*CIDR]",
       "type": "vless",
-      "server": "66.90.90.13",
+      "server": "165.231.157.109",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "tls": {
+        "enabled": true,
+        "server_name": "app-6a607097.adhil.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-3",
+      "type": "vless",
+      "server": "66.90.90.164",
       "server_port": 8443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "flow": "xtls-rprx-vision",
@@ -136,25 +134,18 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
+      "tag": "🇪🇪 Estonia [*CIDR]-2",
+      "type": "vless",
+      "server": "165.231.157.114",
       "server_port": 443,
-      "password": "521314",
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "tls": {
         "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "app-6a607097.adhil.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@WangCai2"
       }
     }
   ],

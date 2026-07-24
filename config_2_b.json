@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
         "🇪🇪 Estonia [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,49 +51,32 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
         "🇪🇪 Estonia [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] Beeline",
       "type": "vless",
-      "server": "77.222.46.162",
-      "server_port": 2200,
-      "uuid": "2aa7f4b1-e859-46d0-b8ac-8587811ab7b1",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
+      "server": "66.90.90.13",
+      "server_port": 8443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "ai-6a607097.noooo.win",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@WangCai2"
       }
     },
     {
@@ -107,53 +90,72 @@
         "enabled": true,
         "server_name": "ai-6a607097.noooo.win",
         "alpn": [
-          "h2"
+          "h2",
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
+          "fingerprint": "qq"
         }
       }
     },
     {
       "tag": "🇪🇪 Estonia [*CIDR]",
       "type": "vless",
-      "server": "165.231.157.106",
+      "server": "165.231.157.117",
       "server_port": 443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "tls": {
         "enabled": true,
         "server_name": "app-6a607097.adhil.uk",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "193.33.133.57",
+      "server_port": 8443,
+      "uuid": "547c0d9e-9bb5-4e83-b6e7-09953bc6004b",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "cloudflare.vhub.pro",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
+          "Host": "cloudflare.vhub.pro"
         },
-        "path": "/Telegram🇨🇳+@WangCai2"
+        "path": "/websocket"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline-2",
+      "type": "vless",
+      "server": "66.90.90.164",
+      "server_port": 8443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ai-6a607097.noooo.win",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     }
   ],

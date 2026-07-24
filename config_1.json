@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇪🇪 Estonia [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3"
+        "🇪🇪 Estonia [*CIDR]-2",
+        "🇩🇪 Germany [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇪🇪 Estonia [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3"
+        "🇪🇪 Estonia [*CIDR]-2",
+        "🇩🇪 Germany [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,49 +63,22 @@
     {
       "tag": "🇪🇪 Estonia [*CIDR]",
       "type": "vless",
-      "server": "165.231.157.106",
+      "server": "165.231.157.114",
       "server_port": 443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "tls": {
         "enabled": true,
         "server_name": "app-6a607097.adhil.uk",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "176.32.39.122",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline",
       "type": "vless",
-      "server": "66.90.90.20",
+      "server": "yt.noooo.win",
       "server_port": 8443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "flow": "xtls-rprx-vision",
@@ -117,56 +90,73 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
+      "tag": "🇪🇪 Estonia [*CIDR]-2",
       "type": "vless",
-      "server": "176.32.39.122",
+      "server": "165.231.157.114",
       "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "tls": {
         "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "176.32.39.122",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
+        "server_name": "app-6a607097.adhil.uk",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "46.8.209.220",
+      "server_port": 8443,
+      "uuid": "547c0d9e-9bb5-4e83-b6e7-09953bc6004b",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.vhub.pro",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "cloudflare.vhub.pro"
+        },
+        "path": "/websocket"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "45.67.215.9",
+      "server_port": 443,
+      "password": "521314",
+      "tls": {
+        "enabled": true,
+        "server_name": "tjplay.lxdxo.kdns.fr",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "tjplay.lxdxo.kdns.fr"
+        },
+        "path": "/Telegram+@WangCai2"
       }
     }
   ],
