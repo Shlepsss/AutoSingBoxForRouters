@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR] VK-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]-6",
+        "🇷🇺 Russia | [*CIDR]-7",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR] VK-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]-6",
+        "🇷🇺 Russia | [*CIDR]-7",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "37.9.4.12",
+      "server_port": 443,
+      "uuid": "c01c2da7-6977-4b53-a493-cda17fa61b4f",
+      "tls": {
+        "enabled": true,
+        "server_name": "career.avito.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZGYwUN34SP8EaOhrGwqCcD1JxzhNx8CR1eh7VIsPR2Q",
+          "short_id": "2b1fb8ca1ce79287"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
@@ -95,53 +118,33 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "pro-ru-213.emrata.top",
+      "server": "186.246.6.189",
       "server_port": 443,
-      "uuid": "5c375098-b366-490d-9a1f-8f77e239c07d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "507e8554-4941-4297-9196-af102455f6ed",
       "tls": {
         "enabled": true,
-        "server_name": "pro-ru-213.emrata.top",
+        "server_name": "optim.tildacdn.pub",
         "reality": {
           "enabled": true,
-          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "public_key": "unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "37.9.4.12",
-      "server_port": 443,
-      "uuid": "c01c2da7-6977-4b53-a493-cda17fa61b4f",
-      "tls": {
-        "enabled": true,
-        "server_name": "career.avito.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZGYwUN34SP8EaOhrGwqCcD1JxzhNx8CR1eh7VIsPR2Q",
-          "short_id": "2b1fb8ca1ce79287"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc"
+        "type": "grpc",
+        "service_name": "ebl"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "funny2.oneok.name",
+      "server": "161.104.48.137",
       "server_port": 443,
       "uuid": "8b02563b-cf46-4c94-bb82-e0fdecd26630",
       "tls": {
@@ -154,7 +157,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -163,28 +166,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "pro-ru-213.emrata.top",
-      "server_port": 443,
-      "uuid": "5c375098-b366-490d-9a1f-8f77e239c07d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pro-ru-213.emrata.top",
-        "reality": {
-          "enabled": true,
-          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
       "type": "vless",
       "server": "186.246.6.189",
       "server_port": 443,
@@ -208,7 +190,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "161.104.48.137",
       "server_port": 443,
@@ -232,18 +214,41 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
       "type": "vless",
-      "server": "funny2.oneok.name",
+      "server": "37.9.4.12",
       "server_port": 443,
-      "uuid": "8b02563b-cf46-4c94-bb82-e0fdecd26630",
+      "uuid": "c01c2da7-6977-4b53-a493-cda17fa61b4f",
       "tls": {
         "enabled": true,
-        "server_name": "funny2.oneok.name",
+        "server_name": "career.avito.com",
         "reality": {
           "enabled": true,
-          "public_key": "erUxbU3_rhHJqRE6rTj-FRfz9IbTPnxx5DgKaT5C6Rs",
-          "short_id": "6d08059a"
+          "public_key": "ZGYwUN34SP8EaOhrGwqCcD1JxzhNx8CR1eh7VIsPR2Q",
+          "short_id": "2b1fb8ca1ce79287"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-6",
+      "type": "vless",
+      "server": "186.246.6.189",
+      "server_port": 443,
+      "uuid": "507e8554-4941-4297-9196-af102455f6ed",
+      "tls": {
+        "enabled": true,
+        "server_name": "optim.tildacdn.pub",
+        "reality": {
+          "enabled": true,
+          "public_key": "unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -252,43 +257,22 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "api.v1.StreamService"
+        "service_name": "ebl"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK-3",
+      "tag": "🇷🇺 Russia | [*CIDR]-7",
       "type": "vless",
-      "server": "pro-ru-213.emrata.top",
+      "server": "186.246.6.189",
       "server_port": 443,
-      "uuid": "5c375098-b366-490d-9a1f-8f77e239c07d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "507e8554-4941-4297-9196-af102455f6ed",
       "tls": {
         "enabled": true,
-        "server_name": "pro-ru-213.emrata.top",
+        "server_name": "optim.tildacdn.pub",
         "reality": {
           "enabled": true,
-          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "public_key": "unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE",
           "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "161.104.48.137",
-      "server_port": 443,
-      "uuid": "8b02563b-cf46-4c94-bb82-e0fdecd26630",
-      "tls": {
-        "enabled": true,
-        "server_name": "funny2.oneok.name",
-        "reality": {
-          "enabled": true,
-          "public_key": "erUxbU3_rhHJqRE6rTj-FRfz9IbTPnxx5DgKaT5C6Rs",
-          "short_id": "6d08059a"
         },
         "utls": {
           "enabled": true,
@@ -297,7 +281,28 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "api.v1.StreamService"
+        "service_name": "ebl"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "185.91.54.46",
+      "server_port": 8443,
+      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "PlAzlq9iZGrm6a4bpbd8oE3tgxyXubbGLN1BFhNS_x8",
+          "short_id": "9db07670a7b491cb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     }
   ],
