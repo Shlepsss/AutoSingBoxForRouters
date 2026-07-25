@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
-        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] 2gis.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] okko.tv",
-        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] 2gis.ru-2"
+        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
+        "🇳🇱 The Netherlands [SNI-RU] okko.tv",
+        "🇳🇱 The Netherlands [SNI-RU] okko.tv-2",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] 2gis.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
-        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] 2gis.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] okko.tv",
-        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] 2gis.ru-2"
+        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
+        "🇳🇱 The Netherlands [SNI-RU] okko.tv",
+        "🇳🇱 The Netherlands [SNI-RU] okko.tv-2",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] 2gis.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
       "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
+      "server": "l90909l.vip",
+      "server_port": 8082,
+      "uuid": "b4bc10bf-80f9-40c9-b4e5-29817c2f0992",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "id.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     },
     {
-      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
+      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
       "type": "vless",
       "server": "l90909l.vip",
       "server_port": 8082,
@@ -106,19 +109,19 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [SNI-RU] 2gis.ru",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] okko.tv",
       "type": "vless",
-      "server": "5.129.209.155",
+      "server": "72.56.82.52",
       "server_port": 443,
       "uuid": "439c8516-b796-47ca-991a-7e18540213d1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "2gis.ru",
+        "server_name": "okko.tv",
         "reality": {
           "enabled": true,
-          "public_key": "dDPM7ZlCd1CkZMlHJIllUovpoLMeL1ICT1xoYFMg2kQ",
-          "short_id": "a44add23a4"
+          "public_key": "G_l1LaRf_GTAyvU3vP6vIbr0jDqjz6D5e-lWd32RQzk",
+          "short_id": "b2aec1bfaab6d4e1"
         },
         "utls": {
           "enabled": true,
@@ -127,7 +130,7 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] okko.tv",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] okko.tv-2",
       "type": "vless",
       "server": "72.56.82.52",
       "server_port": 443,
@@ -148,7 +151,7 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [SNI-RU] 2gis.ru-2",
+      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] 2gis.ru",
       "type": "vless",
       "server": "5.129.209.155",
       "server_port": 443,
