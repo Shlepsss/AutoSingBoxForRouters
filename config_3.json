@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
-        "🇨🇭 Switzerland | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK-2",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA"
+        "🌐 Anycast-IP | 🇨🇭 🇺🇸 | [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇺🇸 [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
+        "🇷🇺 Russia | [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +53,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
-        "🇨🇭 Switzerland | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK-2",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA"
+        "🌐 Anycast-IP | 🇨🇭 🇺🇸 | [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇺🇸 [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
+        "🇷🇺 Russia | [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇨🇭 🇺🇸 | [*CIDR] VK",
       "type": "vless",
       "server": "95.163.211.21",
       "server_port": 443,
@@ -70,6 +74,69 @@
       "tls": {
         "enabled": true,
         "server_name": "abuse.sellflow.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK",
+      "type": "vless",
+      "server": "213.219.212.14",
+      "server_port": 443,
+      "uuid": "5084cf45-96a8-486b-a7cc-319462aebdc4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pro-ru-213.emrata.top",
+        "reality": {
+          "enabled": true,
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] VK",
+      "type": "vless",
+      "server": "95.163.211.150",
+      "server_port": 443,
+      "uuid": "0108c657-a9bd-4c99-9179-74050cf78889",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sellflow.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇺🇸 [*CIDR] VK",
+      "type": "vless",
+      "server": "95.163.211.106",
+      "server_port": 443,
+      "uuid": "0108c657-a9bd-4c99-9179-74050cf78889",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ai.sellflow.org",
         "reality": {
           "enabled": true,
           "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
@@ -82,57 +149,36 @@
       }
     },
     {
-      "tag": "🇨🇭 Switzerland | [*CIDR] VK",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
       "type": "vless",
-      "server": "95.163.211.21",
+      "server": "213.219.212.14",
       "server_port": 443,
-      "uuid": "0108c657-a9bd-4c99-9179-74050cf78889",
+      "uuid": "5084cf45-96a8-486b-a7cc-319462aebdc4",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "abuse.sellflow.org",
+        "server_name": "pro-ru-213.emrata.top",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK-2",
+      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
       "type": "vless",
-      "server": "95.163.211.106",
+      "server": "95.163.211.150",
       "server_port": 443,
       "uuid": "0108c657-a9bd-4c99-9179-74050cf78889",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "abuse.sellflow.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK",
-      "type": "vless",
-      "server": "95.163.211.21",
-      "server_port": 443,
-      "uuid": "0108c657-a9bd-4c99-9179-74050cf78889",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fr.sellflow.org",
+        "server_name": "sellflow.org",
         "reality": {
           "enabled": true,
           "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
@@ -145,18 +191,18 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK",
       "type": "vless",
-      "server": "ruded1.onlinestreamself.com",
+      "server": "95.163.211.106",
       "server_port": 443,
-      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
+      "uuid": "0108c657-a9bd-4c99-9179-74050cf78889",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "at.sellflow.org",
         "reality": {
           "enabled": true,
-          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
           "short_id": ""
         },
         "utls": {
