@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [*CIDR] CDN",
-        "🇷🇺 Russia | [*CIDR] VK",
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
         "🇫🇷 France | 🌐 | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR] VK-2"
+        "🇩🇪 Germany | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,45 +51,46 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands [*CIDR] CDN",
-        "🇷🇺 Russia | [*CIDR] VK",
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
         "🇫🇷 France | 🌐 | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR] VK-2"
+        "🇩🇪 Germany | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] CDN",
+      "tag": "🇩🇪 Germany | [*CIDR] YA",
       "type": "vless",
-      "server": "37.18.15.41",
+      "server": "51.250.96.37",
       "server_port": 443,
-      "uuid": "5cd8fc43-878f-11f1-8c93-54db13ea7d40",
+      "uuid": "439c8516-b796-47ca-991a-7e18540213d1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.nvidia.com",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "XZeD6_It9XHw6A0p6GCSJHDzLCT9AFvDaiNrpQpMRXE",
-          "short_id": "51d3e4f6"
+          "public_key": "z9Jl10TZml-pgMjTS0qmLyRwwEcqFV6S5Ti47DDP1ys",
+          "short_id": "D1aaddff4f"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "random"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
       "type": "vless",
-      "server": "95.163.211.150",
+      "server": "95.163.211.21",
       "server_port": 443,
       "uuid": "0108c657-a9bd-4c99-9179-74050cf78889",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sellflow.org",
+        "server_name": "abuse.sellflow.org",
         "reality": {
           "enabled": true,
           "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
@@ -97,7 +98,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
@@ -118,41 +119,41 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK",
-      "type": "vless",
-      "server": "95.163.211.106",
-      "server_port": 443,
-      "uuid": "1bf44cb7-f947-441c-abb5-242c47e78292",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "at.sellflow.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
+      "tag": "🇩🇪 Germany | [*CIDR] VK",
       "type": "vless",
-      "server": "95.163.211.150",
+      "server": "185.130.114.9",
+      "server_port": 443,
+      "uuid": "439c8516-b796-47ca-991a-7e18540213d1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "m.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "2aVI6zoPOZ9imH13iEtxkWeN3J5jgKdGSpApFtUCjWE",
+          "short_id": "D1aaddff4f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK",
+      "type": "vless",
+      "server": "95.163.211.21",
       "server_port": 443,
       "uuid": "0108c657-a9bd-4c99-9179-74050cf78889",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sellflow.org",
+        "server_name": "fr.sellflow.org",
         "reality": {
           "enabled": true,
           "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
