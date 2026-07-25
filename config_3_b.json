@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇨🇭 🇺🇸 | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] CDN-2",
-        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK-2"
+        "🌐 Anycast-IP | 🇪🇪 🇱🇻 🇵🇱 [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇨🇭 🇺🇸 | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] CDN-2",
-        "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK-2"
+        "🌐 Anycast-IP | 🇪🇪 🇱🇻 🇵🇱 [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇦🇹 [*CIDR] VK",
       "type": "vless",
       "server": "95.163.211.106",
       "server_port": 443,
@@ -69,7 +69,7 @@
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "abuse.sellflow.org",
+        "server_name": "at.sellflow.org",
         "reality": {
           "enabled": true,
           "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
@@ -82,18 +82,19 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] CDN",
+      "tag": "🌐 Anycast-IP | 🇨🇭 🇺🇸 | [*CIDR] VK",
       "type": "vless",
-      "server": "37.18.15.41",
+      "server": "95.163.211.106",
       "server_port": 443,
-      "uuid": "5cd8fc43-878f-11f1-8c93-54db13ea7d40",
+      "uuid": "1bf44cb7-f947-441c-abb5-242c47e78292",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.nvidia.com",
+        "server_name": "abuse.sellflow.org",
         "reality": {
           "enabled": true,
-          "public_key": "XZeD6_It9XHw6A0p6GCSJHDzLCT9AFvDaiNrpQpMRXE",
-          "short_id": "51d3e4f6"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -118,48 +119,52 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "37.18.15.41",
-      "server_port": 443,
-      "uuid": "5cd8fc43-878f-11f1-8c93-54db13ea7d40",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.nvidia.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "XZeD6_It9XHw6A0p6GCSJHDzLCT9AFvDaiNrpQpMRXE",
-          "short_id": "51d3e4f6"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇭 🇺🇸 [*CIDR] VK-2",
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇱🇻 🇵🇱 [*CIDR] VK",
       "type": "vless",
-      "server": "95.163.211.21",
+      "server": "89.208.231.229",
+      "server_port": 2053,
+      "uuid": "505386b6-8740-11f1-9ca5-1e6febe3e1df",
+      "tls": {
+        "enabled": true,
+        "server_name": "hh.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
+          "short_id": "7824dfd19eab1acc"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-direct"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "ruded1.onlinestreamself.com",
       "server_port": 443,
-      "uuid": "1bf44cb7-f947-441c-abb5-242c47e78292",
+      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "abuse.sellflow.org",
+        "server_name": "apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     }

@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
         "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-2",
         "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-3",
-        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-4",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com"
+        "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
         "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-2",
         "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-3",
-        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-4",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com"
+        "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -79,6 +79,30 @@
           "enabled": true,
           "fingerprint": "qq"
         }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "l90909l.vip",
+      "server_port": 8082,
+      "uuid": "b4bc10bf-80f9-40c9-b4e5-29817c2f0992",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     },
     {
@@ -124,7 +148,7 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-4",
+      "tag": "🇱🇹 Lithuania | 🌐 | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
@@ -140,32 +164,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
-      "type": "vless",
-      "server": "l90909l.vip",
-      "server_port": 8082,
-      "uuid": "b4bc10bf-80f9-40c9-b4e5-29817c2f0992",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
       }
     }
   ],
