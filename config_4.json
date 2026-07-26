@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
         "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
-        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
-        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-2"
+        "🇱🇹 Lithuania | [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
         "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
-        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
-        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-2"
+        "🇱🇹 Lithuania | [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "89.222.123.209",
+      "server_port": 16923,
+      "uuid": "e1570488-d499-40bb-b9d4-a69c25c4b5ca",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "152.233.43.74",
       "server_port": 16923,
@@ -89,7 +113,7 @@
       "type": "vless",
       "server": "89.222.123.209",
       "server_port": 16923,
-      "uuid": "82e0af2f-65db-4423-a952-2c60972b78e1",
+      "uuid": "4ab27adf-e13d-4eea-8cfc-a77f2a78c27b",
       "tls": {
         "enabled": true,
         "server_name": "api-maps.yandex.ru",
@@ -100,33 +124,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
       }
     },
     {
@@ -154,7 +157,7 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🇱🇹 Lithuania | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
@@ -170,7 +173,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       }
     }
