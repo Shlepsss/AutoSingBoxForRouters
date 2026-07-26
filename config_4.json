@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+        "ðºð¸ United States | [SNI-RU] ads.x5.ru",
         "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
-        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-2",
-        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-3"
+        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,53 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+        "ðºð¸ United States | [SNI-RU] ads.x5.ru",
         "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
-        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-2",
-        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-3"
+        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "rufl.mifbot.pro",
-      "server_port": 443,
-      "uuid": "11113f77-b439-4911-a8dd-414d2ee36b59",
-      "flow": "xtls-rprx-vision",
+      "tag": "ðºð¸ United States | [SNI-RU] ads.x5.ru",
+      "type": "vmess",
+      "server": "82.198.246.250",
+      "server_port": 180,
+      "uuid": "d13fc2f5-3e05-4795-81eb-44143a09e552",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZCYpNgP7BsaN5WzpxhO8IXtfoHm2DWZuchCAl-ACmyI",
-          "short_id": "6e4a9c1f0b7d23a8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "server_name": "ads.x5.ru"
       }
     },
     {
       "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "l90909l.vip",
+      "server_port": 8082,
+      "uuid": "b4bc10bf-80f9-40c9-b4e5-29817c2f0992",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
       "type": "vless",
       "server": "l90909l.vip",
       "server_port": 8082,
@@ -106,9 +121,9 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "89.222.123.209",
+      "server": "152.233.31.68",
       "server_port": 16923,
       "uuid": "82e0af2f-65db-4423-a952-2c60972b78e1",
       "tls": {
@@ -130,31 +145,7 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-2",
-      "type": "vless",
-      "server": "89.222.123.209",
-      "server_port": 16923,
-      "uuid": "4ab27adf-e13d-4eea-8cfc-a77f2a78c27b",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-3",
+      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "89.222.123.209",
       "server_port": 16923,
