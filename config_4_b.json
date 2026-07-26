@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
+        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
-        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru"
+        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,21 +51,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
+        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
-        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
-        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru"
+        "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "152.233.41.13",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "89.222.123.209",
       "server_port": 16923,
-      "uuid": "695e3dfd-14dd-4fa3-9c6a-f8108c376982",
+      "uuid": "82e0af2f-65db-4423-a952-2c60972b78e1",
       "tls": {
         "enabled": true,
         "server_name": "api-maps.yandex.ru",
@@ -109,9 +130,9 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "89.222.123.209",
+      "server": "152.233.31.68",
       "server_port": 16923,
       "uuid": "695e3dfd-14dd-4fa3-9c6a-f8108c376982",
       "tls": {
@@ -133,33 +154,9 @@
       }
     },
     {
-      "tag": "🇨🇭 Switzerland | 🌐 [SNI-RU] id.vk.com-2",
+      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
-      "server": "l90909l.vip",
-      "server_port": 8082,
-      "uuid": "b4bc10bf-80f9-40c9-b4e5-29817c2f0992",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "152.233.31.68",
+      "server": "89.222.123.209",
       "server_port": 16923,
       "uuid": "695e3dfd-14dd-4fa3-9c6a-f8108c376982",
       "tls": {
