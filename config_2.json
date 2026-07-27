@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]-6",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,161 +56,83 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]-6",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "spbnoda.shoptwo.xyz",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "45.67.215.9",
       "server_port": 443,
-      "uuid": "b4e99731-fa4f-4cc8-a848-95963dcb15a9",
-      "flow": "xtls-rprx-vision",
+      "password": "521314",
       "tls": {
         "enabled": true,
-        "server_name": "spbnoda.shoptwo.xyz",
-        "reality": {
-          "enabled": true,
-          "public_key": "lEw7Th7hb6fO4wu2Ykmq3A52Qsmesryh40YEzaRSknE",
-          "short_id": "a7183b9ea73e367f"
-        },
+        "insecure": true,
+        "server_name": "tjplay.lxdxo.kdns.fr",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "tjplay.lxdxo.kdns.fr"
+        },
+        "path": "/Telegram🇨🇳+@WangCai2"
       }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "186.246.6.189",
+      "server": "pro-ru-bridge.emrata.top",
       "server_port": 443,
-      "uuid": "507e8554-4941-4297-9196-af102455f6ed",
+      "uuid": "42c3337e-57f5-48d8-b7ad-46f75f5e7e8a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "optim.tildacdn.pub",
+        "server_name": "pro-ru-bridge.emrata.top",
         "reality": {
           "enabled": true,
-          "public_key": "unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE",
+          "public_key": "F8tqvcuJUSVbxv_i9ZsVOef3EPwULzzDqgvmj3vWNlA",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ebl"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "186.246.6.189",
-      "server_port": 443,
-      "uuid": "507e8554-4941-4297-9196-af102455f6ed",
-      "tls": {
-        "enabled": true,
-        "server_name": "optim.tildacdn.pub",
-        "reality": {
-          "enabled": true,
-          "public_key": "unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ebl"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "spbnoda.shoptwo.xyz",
-      "server_port": 443,
-      "uuid": "b4e99731-fa4f-4cc8-a848-95963dcb15a9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "spbnoda.shoptwo.xyz",
-        "reality": {
-          "enabled": true,
-          "public_key": "lEw7Th7hb6fO4wu2Ykmq3A52Qsmesryh40YEzaRSknE",
-          "short_id": "a7183b9ea73e367f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "37.9.4.12",
+      "server": "pro-ru-bridge.emrata.top",
       "server_port": 443,
-      "uuid": "c01c2da7-6977-4b53-a493-cda17fa61b4f",
+      "uuid": "42c3337e-57f5-48d8-b7ad-46f75f5e7e8a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "career.avito.com",
+        "server_name": "pro-ru-bridge.emrata.top",
         "reality": {
           "enabled": true,
-          "public_key": "ZGYwUN34SP8EaOhrGwqCcD1JxzhNx8CR1eh7VIsPR2Q",
-          "short_id": "2b1fb8ca1ce79287"
+          "public_key": "F8tqvcuJUSVbxv_i9ZsVOef3EPwULzzDqgvmj3vWNlA",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "83.217.223.103",
-      "server_port": 49055,
-      "uuid": "c37e6820-1abf-44b0-a096-bb243f1ff497"
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "37.9.4.12",
-      "server_port": 443,
-      "uuid": "c01c2da7-6977-4b53-a493-cda17fa61b4f",
-      "tls": {
-        "enabled": true,
-        "server_name": "career.avito.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZGYwUN34SP8EaOhrGwqCcD1JxzhNx8CR1eh7VIsPR2Q",
-          "short_id": "2b1fb8ca1ce79287"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
@@ -229,6 +151,106 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ebl"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "83.217.223.103",
+      "server_port": 49055,
+      "uuid": "c37e6820-1abf-44b0-a096-bb243f1ff497"
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "193.233.218.49",
+      "server_port": 44443,
+      "uuid": "b4ee2a7b-1966-4611-897f-c27f3e0e0b4a",
+      "tls": {
+        "enabled": true,
+        "server_name": "5post-gate.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "kk6t0xig_xZViUWnM-hjRGY_-P29fA6DUggL2eEkyRg",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "vless",
+      "server": "pro-ru-bridge.emrata.top",
+      "server_port": 443,
+      "uuid": "42c3337e-57f5-48d8-b7ad-46f75f5e7e8a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pro-ru-bridge.emrata.top",
+        "reality": {
+          "enabled": true,
+          "public_key": "F8tqvcuJUSVbxv_i9ZsVOef3EPwULzzDqgvmj3vWNlA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "type": "vless",
+      "server": "186.246.6.189",
+      "server_port": 443,
+      "uuid": "507e8554-4941-4297-9196-af102455f6ed",
+      "tls": {
+        "enabled": true,
+        "server_name": "optim.tildacdn.pub",
+        "reality": {
+          "enabled": true,
+          "public_key": "unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ebl"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-6",
+      "type": "vless",
+      "server": "186.246.6.189",
+      "server_port": 443,
+      "uuid": "507e8554-4941-4297-9196-af102455f6ed",
+      "tls": {
+        "enabled": true,
+        "server_name": "optim.tildacdn.pub",
+        "reality": {
+          "enabled": true,
+          "public_key": "unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
           "fingerprint": "ios"
         }
       },
@@ -238,48 +260,11 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "37.9.4.12",
-      "server_port": 443,
-      "uuid": "c01c2da7-6977-4b53-a493-cda17fa61b4f",
-      "tls": {
-        "enabled": true,
-        "server_name": "career.avito.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZGYwUN34SP8EaOhrGwqCcD1JxzhNx8CR1eh7VIsPR2Q",
-          "short_id": "2b1fb8ca1ce79287"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
-      "type": "vless",
-      "server": "spbnoda.shoptwo.xyz",
-      "server_port": 443,
-      "uuid": "b4e99731-fa4f-4cc8-a848-95963dcb15a9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "spbnoda.shoptwo.xyz",
-        "reality": {
-          "enabled": true,
-          "public_key": "lEw7Th7hb6fO4wu2Ykmq3A52Qsmesryh40YEzaRSknE",
-          "short_id": "a7183b9ea73e367f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "server": "83.217.223.103",
+      "server_port": 49055,
+      "uuid": "c37e6820-1abf-44b0-a096-bb243f1ff497"
     }
   ],
   "route": {
