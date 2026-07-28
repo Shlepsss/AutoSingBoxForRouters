@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-3",
+        "🌐 Anycast-IP | 🇧🇾 🇵🇱 [*CIDR] VK",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,49 +53,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-3",
+        "🌐 Anycast-IP | 🇧🇾 🇵🇱 [*CIDR] VK",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "ruded2.onlinestreamself.com",
-      "server_port": 443,
-      "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "77.222.35.36",
-      "server_port": 4100,
-      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "85.209.135.10",
       "server_port": 8443,
@@ -117,25 +89,23 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "176.124.222.180",
+      "server_port": 34393,
+      "uuid": "dcc6be8d-1774-4576-afa4-f708f31c213f",
       "tls": {
         "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "www.oracle.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "_oo0qTCCKKT4vF6DVV9Fr2ymLOjbOaOSO_tBqMynnCU",
+          "short_id": "3bf2ed6e"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram @WangCai2"
       }
     },
     {
@@ -160,6 +130,94 @@
       "transport": {
         "type": "grpc",
         "service_name": "/api/v1/sync"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇧🇾 🇵🇱 [*CIDR] VK",
+      "type": "vless",
+      "server": "89.208.231.82",
+      "server_port": 2053,
+      "uuid": "42d3cfb6-8a1d-11f1-9ca5-1e6febe3e1df",
+      "tls": {
+        "enabled": true,
+        "server_name": "hh.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
+          "short_id": "5b9dc5fe4ad87cc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-direct"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "46.8.220.182",
+      "server_port": 443,
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "tls": {
+        "enabled": true,
+        "server_name": "media2.tcpdoor.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
+          "short_id": "3303c7a5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "type": "trojan",
+      "server": "176.124.222.180",
+      "server_port": 15042,
+      "password": "G8KrzJfzP5",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.oracle.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "RKnPBbXng6w4qKvq0Ym0YQTH3S_OfxmawYuWGWDL6VU",
+          "short_id": "c45f464a5e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "type": "vless",
+      "server": "176.124.222.180",
+      "server_port": 17817,
+      "uuid": "2ea8103d-a7aa-4e70-b910-e7b124c564d1",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.icloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "vc6cljum-VhwR0m_PeuMON2IvTqGOHTYE67wuMFg1nc",
+          "short_id": "f5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],

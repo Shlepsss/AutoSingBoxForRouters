@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇷 France [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇨🇿 Czechia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,24 +53,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇷 France [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇨🇿 Czechia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇫🇷 France [*CIDR]",
+      "type": "vless",
+      "server": "87.242.85.201",
+      "server_port": 35412,
+      "uuid": "7a30eabc-aee8-4cd3-833a-5fc13f0015d2"
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "77.222.35.36",
-      "server_port": 4100,
-      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
+      "server": "176.124.222.180",
+      "server_port": 34393,
+      "uuid": "dcc6be8d-1774-4576-afa4-f708f31c213f",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.oracle.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "_oo0qTCCKKT4vF6DVV9Fr2ymLOjbOaOSO_tBqMynnCU",
+          "short_id": "3bf2ed6e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -112,36 +132,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
-      }
-    },
-    {
-      "tag": "🇨🇿 Czechia [*CIDR]",
-      "type": "vless",
-      "server": "5.189.223.90",
-      "server_port": 9891,
-      "uuid": "884d811f-577b-421e-aabb-608660b0ecfa",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aa"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "trojan",
+      "server": "176.124.222.180",
+      "server_port": 15042,
+      "password": "G8KrzJfzP5",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.oracle.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "RKnPBbXng6w4qKvq0Ym0YQTH3S_OfxmawYuWGWDL6VU",
+          "short_id": "c45f464a5e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "85.209.135.10",
       "server_port": 8443,
@@ -162,6 +178,26 @@
       "transport": {
         "type": "grpc",
         "service_name": "/api/v1/sync"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "type": "vless",
+      "server": "176.124.222.180",
+      "server_port": 17817,
+      "uuid": "2ea8103d-a7aa-4e70-b910-e7b124c564d1",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.icloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "vc6cljum-VhwR0m_PeuMON2IvTqGOHTYE67wuMFg1nc",
+          "short_id": "f5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
