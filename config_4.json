@@ -31,16 +31,93 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
+        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-2",
+        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru"
       ],
-      "default": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+        "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-2",
+        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
+      "type": "trojan",
+      "server": "89.169.32.250",
+      "server_port": 10446,
+      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+      "type": "trojan",
+      "server": "77.73.131.148",
+      "server_port": 10446,
+      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
+    },
+    {
+      "tag": "🇱🇹 Lithuania | 🌐 [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "159.195.12.98",
       "server_port": 16923,
@@ -55,7 +132,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
