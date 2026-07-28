@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇧🇾 🇩🇪 🇱🇻 [*CIDR] VK",
-        "🇺🇸 United States [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇸🇬 Singapore [*CIDR] YA"
+        "🌐 Anycast-IP | 🇧🇾 🇱🇻 🇵🇱 | [*CIDR] VK",
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇵🇱 Poland [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇺🇸 United States | [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇧🇾 🇩🇪 🇱🇻 [*CIDR] VK",
-        "🇺🇸 United States [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇸🇬 Singapore [*CIDR] YA"
+        "🌐 Anycast-IP | 🇧🇾 🇱🇻 🇵🇱 | [*CIDR] VK",
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇵🇱 Poland [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇺🇸 United States | [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇧🇾 🇩🇪 🇱🇻 [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇧🇾 🇱🇻 🇵🇱 | [*CIDR] VK",
       "type": "vless",
       "server": "89.208.231.82",
       "server_port": 2053,
@@ -76,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -85,10 +85,31 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [*CIDR] YA",
+      "tag": "🇩🇪 Germany | [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.153.150",
+      "server_port": 443,
+      "uuid": "cd47060e-1152-4721-9473-d3b821e66a01",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "35UKxOxlMHfHFQ-vBLUgd5IBTSmSMOG9fMtsrNRDDwM",
+          "short_id": "def012"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR] YA",
       "type": "vless",
       "server": "158.160.223.233",
-      "server_port": 29445,
+      "server_port": 29446,
       "uuid": "0d7d959f-5498-457e-aee7-fd16b1f3e77d",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -106,20 +127,19 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
       "type": "vless",
-      "server": "94.139.251.191",
-      "server_port": 443,
-      "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
+      "server": "158.160.223.233",
+      "server_port": 29444,
+      "uuid": "0d7d959f-5498-457e-aee7-fd16b1f3e77d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "apple.com",
+        "server_name": "www.twitch.tv",
         "reality": {
           "enabled": true,
-          "public_key": "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w",
-          "short_id": ""
+          "public_key": "b7L2qrpKuFSOVFNY9A-Phylorw1DuteAetgS5ipERyA",
+          "short_id": "2749d73d715730e1"
         },
         "utls": {
           "enabled": true,
@@ -128,44 +148,23 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+      "tag": "🇺🇸 United States | [*CIDR] YA",
       "type": "vless",
-      "server": "ruded3.onlinestreamself.com",
-      "server_port": 443,
-      "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
+      "server": "158.160.223.233",
+      "server_port": 29445,
+      "uuid": "0d7d959f-5498-457e-aee7-fd16b1f3e77d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "www.twitch.tv",
         "reality": {
           "enabled": true,
-          "public_key": "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY",
-          "short_id": ""
+          "public_key": "3cCVMGigEU7wpQm3SkT7EeBuR7QT9_xgAyiC5trENFY",
+          "short_id": "1297b6f0f6dc88d0"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇸🇬 Singapore [*CIDR] YA",
-      "type": "vless",
-      "server": "94.126.206.121",
-      "server_port": 443,
-      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.singaporeair.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
-          "short_id": "7a5b89ecdb01f781"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     }

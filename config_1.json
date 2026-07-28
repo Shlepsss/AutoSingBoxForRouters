@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇨🇿 Czechia | [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
+        "🇪🇪 Estonia [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+        "🇨🇿 Czechia | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,82 +51,75 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇨🇿 Czechia | [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
+        "🇪🇪 Estonia [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+        "🇨🇿 Czechia | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇷 France [*CIDR]",
+      "tag": "🇨🇿 Czechia | [*CIDR]",
       "type": "vless",
-      "server": "87.242.85.201",
-      "server_port": 35412,
-      "uuid": "7a30eabc-aee8-4cd3-833a-5fc13f0015d2"
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "176.124.222.180",
-      "server_port": 34393,
-      "uuid": "dcc6be8d-1774-4576-afa4-f708f31c213f",
+      "server": "5.189.223.90",
+      "server_port": 9891,
+      "uuid": "884d811f-577b-421e-aabb-608660b0ecfa",
       "tls": {
         "enabled": true,
-        "server_name": "www.oracle.com",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "_oo0qTCCKKT4vF6DVV9Fr2ymLOjbOaOSO_tBqMynnCU",
-          "short_id": "3bf2ed6e"
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aa"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "85.209.135.10",
-      "server_port": 8443,
-      "uuid": "8575efe8-a73f-4e02-b94c-fa215ba4a6c7",
-      "tls": {
-        "enabled": true,
-        "server_name": "m1.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Il_wxsWno5XDSTU92FWqalsH7hhGBQA_GYkxznUiBH4",
-          "short_id": "a2b213d4"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "/api/v1/sync"
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "ruded1.onlinestreamself.com",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
+      "type": "trojan",
+      "server": "45.67.215.9",
       "server_port": 443,
-      "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
+      "password": "521314",
+      "tls": {
+        "enabled": true,
+        "server_name": "tjplay.lxdxo.kdns.fr",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "tjplay.lxdxo.kdns.fr"
+        },
+        "path": "/Telegram @WangCai2"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.223.233",
+      "server_port": 29447,
+      "uuid": "0d7d959f-5498-457e-aee7-fd16b1f3e77d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "www.twitch.tv",
         "reality": {
           "enabled": true,
-          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
-          "short_id": ""
+          "public_key": "b7L2qrpKuFSOVFNY9A-Phylorw1DuteAetgS5ipERyA",
+          "short_id": "2749d73d715730e1"
         },
         "utls": {
           "enabled": true,
@@ -137,38 +128,18 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "trojan",
-      "server": "176.124.222.180",
-      "server_port": 15042,
-      "password": "G8KrzJfzP5",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.oracle.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "RKnPBbXng6w4qKvq0Ym0YQTH3S_OfxmawYuWGWDL6VU",
-          "short_id": "c45f464a5e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "85.209.135.10",
-      "server_port": 8443,
-      "uuid": "8575efe8-a73f-4e02-b94c-fa215ba4a6c7",
+      "server": "94.159.117.66",
+      "server_port": 9894,
+      "uuid": "884d811f-577b-421e-aabb-608660b0ecfa",
       "tls": {
         "enabled": true,
-        "server_name": "m1.vk.ru",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "Il_wxsWno5XDSTU92FWqalsH7hhGBQA_GYkxznUiBH4",
-          "short_id": "a2b213d4"
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
@@ -177,27 +148,31 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "/api/v1/sync"
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "tag": "🇨🇿 Czechia | [*CIDR]-2",
       "type": "vless",
-      "server": "176.124.222.180",
-      "server_port": 17817,
-      "uuid": "2ea8103d-a7aa-4e70-b910-e7b124c564d1",
+      "server": "5.189.223.90",
+      "server_port": 9891,
+      "uuid": "884d811f-577b-421e-aabb-608660b0ecfa",
       "tls": {
         "enabled": true,
-        "server_name": "www.icloud.com",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "vc6cljum-VhwR0m_PeuMON2IvTqGOHTYE67wuMFg1nc",
-          "short_id": "f5"
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aa"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     }
   ],
