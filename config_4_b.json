@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [SNI-RU] m.ok.ru",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru-2",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2"
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-3",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,110 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [SNI-RU] m.ok.ru",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru-2",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2"
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-3",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] m.ok.ru",
-      "type": "vless",
-      "server": "5.253.59.220",
-      "server_port": 443,
-      "uuid": "63f96e98-f83f-48d0-9cd0-f31e8071f67f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "m.ok.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "3NM_w-CzrSzwMPkVl2UpgwtmdZbt78d3PsQEl0wFhk4",
-          "short_id": "6e10f0b884da57d5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "152.233.43.85",
-      "server_port": 16923,
-      "uuid": "d200c8f0-070b-4c1c-bbf9-1d4663d379ca",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "159.195.12.98",
-      "server_port": 16923,
-      "uuid": "35a7fb25-7391-48c6-ac72-b35fda77e36f",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru-2",
-      "type": "vless",
-      "server": "159.195.12.98",
-      "server_port": 16923,
-      "uuid": "bc299417-b5b2-4b98-abe3-c1d9e925d167",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "152.233.43.85",
       "server_port": 16923,
@@ -170,6 +77,85 @@
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+      "type": "trojan",
+      "server": "77.73.131.148",
+      "server_port": 10446,
+      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "152.233.43.84",
+      "server_port": 16923,
+      "uuid": "d200c8f0-070b-4c1c-bbf9-1d4663d379ca",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-3",
+      "type": "vless",
+      "server": "152.233.43.84",
+      "server_port": 16923,
+      "uuid": "d200c8f0-070b-4c1c-bbf9-1d4663d379ca",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "159.195.12.98",
+      "server_port": 16923,
+      "uuid": "adc6cf56-a5f1-42e4-ae0c-124556feeab5",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       },
       "transport": {

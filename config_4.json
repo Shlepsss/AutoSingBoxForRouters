@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] m.ok.ru",
-        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru-2",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru-2",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] m.ok.ru",
-        "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru-2",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru"
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] api-maps.yandex.ru-2",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "152.233.43.85",
+      "server_port": 16923,
+      "uuid": "d200c8f0-070b-4c1c-bbf9-1d4663d379ca",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "159.195.12.98",
       "server_port": 16923,
@@ -85,28 +109,7 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] m.ok.ru",
-      "type": "vless",
-      "server": "5.253.59.220",
-      "server_port": 443,
-      "uuid": "63f96e98-f83f-48d0-9cd0-f31e8071f67f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "m.ok.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "3NM_w-CzrSzwMPkVl2UpgwtmdZbt78d3PsQEl0wFhk4",
-          "short_id": "6e10f0b884da57d5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
       "server": "159.195.12.98",
       "server_port": 16923,
@@ -130,7 +133,7 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
       "server": "152.233.43.85",
       "server_port": 16923,
@@ -154,11 +157,11 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-3",
       "type": "vless",
-      "server": "159.195.12.98",
+      "server": "152.233.43.84",
       "server_port": 16923,
-      "uuid": "753dd705-f4ae-4f76-9b78-0362a3039035",
+      "uuid": "d200c8f0-070b-4c1c-bbf9-1d4663d379ca",
       "tls": {
         "enabled": true,
         "server_name": "api-maps.yandex.ru",
@@ -169,7 +172,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       },
       "transport": {
