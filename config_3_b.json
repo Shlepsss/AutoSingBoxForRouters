@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | [*CIDR] VK",
-        "🇪🇪 Estonia [*CIDR] YA",
-        "🇵🇱 Poland | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇸🇬 Singapore | [*CIDR] YA"
+        "🇵🇱 Poland [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇱🇻 🇵🇱 | [*CIDR] VK",
+        "🇦🇪 United Arab Emirates | [*CIDR] VK",
+        "🇸🇬 Singapore | [*CIDR] YA",
+        "🇵🇱 Poland | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,101 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | [*CIDR] VK",
-        "🇪🇪 Estonia [*CIDR] YA",
-        "🇵🇱 Poland | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇸🇬 Singapore | [*CIDR] YA"
+        "🇵🇱 Poland [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇱🇻 🇵🇱 | [*CIDR] VK",
+        "🇦🇪 United Arab Emirates | [*CIDR] VK",
+        "🇸🇬 Singapore | [*CIDR] YA",
+        "🇵🇱 Poland | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR] YA",
+      "type": "vless",
+      "server": "node-tw0.omhvp.co",
+      "server_port": 443,
+      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cs10210.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
+          "short_id": "7a5b89ecdb01f781"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇱🇻 🇵🇱 | [*CIDR] VK",
+      "type": "vless",
+      "server": "89.208.231.82",
+      "server_port": 2053,
+      "uuid": "42d3cfb6-8a1d-11f1-9ca5-1e6febe3e1df",
+      "tls": {
+        "enabled": true,
+        "server_name": "hh.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
+          "short_id": "5b9dc5fe4ad87cc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-direct"
+      }
+    },
+    {
+      "tag": "🇦🇪 United Arab Emirates | [*CIDR] VK",
+      "type": "vless",
+      "server": "rude.go-bull.pro",
+      "server_port": 2096,
+      "uuid": "7f967c17-c037-4a61-b73d-404468e5add8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "proshkola.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "I1v1juarLekOXUXIO1eh3-gUntqQQgnKYAbax8OKVU0",
+          "short_id": "a1b2c3d4e5f60718"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇸🇬 Singapore | [*CIDR] YA",
+      "type": "vless",
+      "server": "node-tw0.omhvp.co",
+      "server_port": 443,
+      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.singaporeair.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
+          "short_id": "7a5b89ecdb01f781"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇵🇱 Poland | [*CIDR] VK",
@@ -78,90 +165,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.223.233",
-      "server_port": 29447,
-      "uuid": "0d7d959f-5498-457e-aee7-fd16b1f3e77d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.twitch.tv",
-        "reality": {
-          "enabled": true,
-          "public_key": "b7L2qrpKuFSOVFNY9A-Phylorw1DuteAetgS5ipERyA",
-          "short_id": "2749d73d715730e1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR] YA",
-      "type": "vless",
-      "server": "node-tw0.omhvp.co",
-      "server_port": 443,
-      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cs10210.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
-          "short_id": "7a5b89ecdb01f781"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "rude.go-bull.pro",
-      "server_port": 2095,
-      "uuid": "7f967c17-c037-4a61-b73d-404468e5add8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "proshkola.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "I1v1juarLekOXUXIO1eh3-gUntqQQgnKYAbax8OKVU0",
-          "short_id": "8f2a1c4b9d7e6053"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇸🇬 Singapore | [*CIDR] YA",
-      "type": "vless",
-      "server": "94.126.206.121",
-      "server_port": 443,
-      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.singaporeair.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
-          "short_id": "7a5b89ecdb01f781"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       }
     }
