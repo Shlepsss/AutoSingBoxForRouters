@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 Sweden | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,113 +51,118 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 Sweden | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
       "type": "vless",
-      "server": "5.42.106.202",
-      "server_port": 9878,
-      "uuid": "884d811f-577b-421e-aabb-608660b0ecfa",
+      "server": "213.219.212.14",
+      "server_port": 443,
+      "uuid": "e22418f6-8fe0-4088-9dc3-ec5e1c78b6b8",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "pro-ru-213.emrata.top",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
       "type": "vless",
-      "server": "194.67.102.65",
-      "server_port": 8880,
-      "uuid": "fd22ad82-2d89-4338-b72c-5092ae699c7d",
-      "tls": {
-        "enabled": true,
-        "server_name": "rutube.ummapeople.online"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rutube.ummapeople.online"
-        },
-        "path": "/rutube"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "194.67.102.65",
-      "server_port": 8880,
-      "uuid": "fd22ad82-2d89-4338-b72c-5092ae699c7d",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rutube.ummapeople.online"
-        },
-        "path": "/rutube"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 | [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
+      "server": "213.219.212.14",
       "server_port": 443,
-      "password": "521314",
+      "uuid": "62291f9b-0dba-4e64-956f-e79317ae50c2",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "pro-ru-213.emrata.top",
+        "reality": {
+          "enabled": true,
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram @WangCai2"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "94.126.206.41",
       "server_port": 443,
-      "password": "521314",
+      "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
+      "type": "vless",
+      "server": "213.219.212.14",
+      "server_port": 443,
+      "uuid": "e520f966-e1ec-43c4-9af6-3112c535097b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pro-ru-213.emrata.top",
+        "reality": {
+          "enabled": true,
+          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
+          "short_id": ""
         },
-        "path": "/Telegram @WangCai2"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+      "type": "vless",
+      "server": "94.139.251.9",
+      "server_port": 443,
+      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],
