@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] yandex.ru",
         "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2",
-        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-3"
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,61 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] yandex.ru",
         "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2",
-        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-3"
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇩🇪 Germany [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "152.233.31.80",
-      "server_port": 16923,
-      "uuid": "26e354ba-a3ee-45f0-bf68-422e27e12884",
+      "server": "80.253.249.197",
+      "server_port": 8545,
+      "uuid": "4c69c296-3786-40d3-b6b6-3734e69e02d3",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
+          "public_key": "8fx-S5BqsZ99GVPj5kJ-LyMF1cRUE_-NsSetAbc6ADM",
+          "short_id": "cf5bb241f8a84897"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "152.53.169.29",
-      "server_port": 16923,
-      "uuid": "26e354ba-a3ee-45f0-bf68-422e27e12884",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
       }
     },
     {
@@ -116,7 +89,14 @@
       "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
     },
     {
-      "tag": "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+      "type": "trojan",
+      "server": "77.73.131.148",
+      "server_port": 10446,
+      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "152.53.169.29",
       "server_port": 16923,
@@ -131,7 +111,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -140,7 +120,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-3",
+      "tag": "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
       "server": "152.53.169.29",
       "server_port": 16923,
