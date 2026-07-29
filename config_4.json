@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany [SNI-RU] yandex.ru",
         "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2",
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
         "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-        "🇩🇪 Germany [SNI-RU] yandex.ru"
+        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,45 +51,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany [SNI-RU] yandex.ru",
         "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2",
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
         "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-        "🇩🇪 Germany [SNI-RU] yandex.ru"
+        "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany [SNI-RU] yandex.ru",
+      "type": "vless",
+      "server": "80.253.249.197",
+      "server_port": 8545,
+      "uuid": "4c69c296-3786-40d3-b6b6-3734e69e02d3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "8fx-S5BqsZ99GVPj5kJ-LyMF1cRUE_-NsSetAbc6ADM",
+          "short_id": "cf5bb241f8a84897"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "152.53.169.29",
       "server_port": 16923,
-      "uuid": "d5e6daf4-b11c-42fa-9e2d-ae1d3f5c70d3",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2",
-      "type": "vless",
-      "server": "152.53.169.29",
-      "server_port": 16923,
-      "uuid": "26e354ba-a3ee-45f0-bf68-422e27e12884",
+      "uuid": "ecc1e369-4aaf-441a-b919-6e7455dd8354",
       "tls": {
         "enabled": true,
         "server_name": "api-maps.yandex.ru",
@@ -107,6 +104,13 @@
         "type": "grpc",
         "service_name": "neurex"
       }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+      "type": "trojan",
+      "server": "77.73.131.148",
+      "server_port": 10446,
+      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
     },
     {
       "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
@@ -133,31 +137,27 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-      "type": "trojan",
-      "server": "89.169.32.250",
-      "server_port": 10446,
-      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
-    },
-    {
-      "tag": "🇩🇪 Germany [SNI-RU] yandex.ru",
+      "tag": "🇺🇸 United States | 🌐 [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
-      "server": "80.253.249.197",
-      "server_port": 8545,
-      "uuid": "4c69c296-3786-40d3-b6b6-3734e69e02d3",
-      "flow": "xtls-rprx-vision",
+      "server": "152.53.169.29",
+      "server_port": 16923,
+      "uuid": "d5e6daf4-b11c-42fa-9e2d-ae1d3f5c70d3",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "8fx-S5BqsZ99GVPj5kJ-LyMF1cRUE_-NsSetAbc6ADM",
-          "short_id": "cf5bb241f8a84897"
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
       }
     }
   ],

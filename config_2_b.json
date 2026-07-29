@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇭 🇳🇱 [*CIDR]",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇭 🇳🇱 [*CIDR]",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -82,33 +82,9 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇭 🇳🇱 [*CIDR]",
-      "type": "vless",
-      "server": "45.151.62.156",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "dogs.abvphelp.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "aBs0x09cXtjTpsrGb21cJsEmDsaCaC1RPeutNu404V0",
-          "short_id": "6fa13cdb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "ruded2.onlinestreamself.com",
+      "server": "94.126.205.65",
       "server_port": 443,
       "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
       "flow": "xtls-rprx-vision",
@@ -127,30 +103,6 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "46.8.220.182",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
       "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
       "type": "trojan",
       "server": "45.67.215.9",
@@ -162,7 +114,7 @@
         "server_name": "tjplay.lxdxo.kdns.fr",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -171,6 +123,52 @@
           "Host": "tjplay.lxdxo.kdns.fr"
         },
         "path": "/Telegram🇨🇳+@WangCai2"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR]",
+      "type": "vless",
+      "server": "188.68.218.197",
+      "server_port": 4444,
+      "uuid": "f84401df-5064-485f-a5c5-d17fe7032ef6",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.pervye.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ns"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "45.67.215.9",
+      "server_port": 443,
+      "password": "521314",
+      "tls": {
+        "enabled": true,
+        "server_name": "tjplay.lxdxo.kdns.fr",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "tjplay.lxdxo.kdns.fr"
+        },
+        "path": "/Telegram @WangCai2"
       }
     }
   ],
