@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [SNI-RU] disk.yandex.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-        "🇺🇸 United States | [SNI-RU] disk.yandex.ru",
-        "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru",
-        "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru-2"
+        "🇫🇮 Finland | [SNI-RU] a.wb.ru",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇭🇺 Hungary [SNI-RU] mail.yandex.ru",
+        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,24 +51,44 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [SNI-RU] disk.yandex.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-        "🇺🇸 United States | [SNI-RU] disk.yandex.ru",
-        "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru",
-        "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru-2"
+        "🇫🇮 Finland | [SNI-RU] a.wb.ru",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇭🇺 Hungary [SNI-RU] mail.yandex.ru",
+        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [SNI-RU] disk.yandex.ru",
+      "tag": "🇫🇮 Finland | [SNI-RU] a.wb.ru",
       "type": "vless",
-      "server": "89.222.123.214",
-      "server_port": 16923,
-      "uuid": "52745f29-d8da-4cb7-9f95-401b946524e7",
+      "server": "31.76.50.109",
+      "server_port": 443,
+      "uuid": "6f93f3eb-8ff2-4da4-837b-8a333c281ff3",
       "tls": {
         "enabled": true,
-        "server_name": "disk.yandex.ru",
+        "server_name": "a.wb.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Ueqd3mFmtmBODNPEA2zOnS1L3FrcS0bLweBZQW5xmmw",
+          "short_id": "6069ba5ecbf75abb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "152.233.43.84",
+      "server_port": 16923,
+      "uuid": "1324e49f-18f6-4b10-bc3a-03e60785105f",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
           "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
@@ -76,7 +96,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -85,21 +105,14 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-      "type": "trojan",
-      "server": "89.169.32.250",
-      "server_port": 10446,
-      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
-    },
-    {
-      "tag": "🇺🇸 United States | [SNI-RU] disk.yandex.ru",
+      "tag": "🇭🇺 Hungary [SNI-RU] mail.yandex.ru",
       "type": "vless",
-      "server": "159.195.18.58",
+      "server": "152.233.41.31",
       "server_port": 16923,
-      "uuid": "52745f29-d8da-4cb7-9f95-401b946524e7",
+      "uuid": "b8e74de0-42c6-4b84-8889-bf348f32730c",
       "tls": {
         "enabled": true,
-        "server_name": "disk.yandex.ru",
+        "server_name": "mail.yandex.ru",
         "reality": {
           "enabled": true,
           "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
@@ -116,14 +129,14 @@
       }
     },
     {
-      "tag": "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru",
+      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "152.233.41.31",
+      "server": "152.233.43.84",
       "server_port": 16923,
-      "uuid": "b8e74de0-42c6-4b84-8889-bf348f32730c",
+      "uuid": "4b35002d-59f8-428a-8591-29bbbb56075f",
       "tls": {
         "enabled": true,
-        "server_name": "mail.yandex.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
           "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
@@ -131,7 +144,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -140,14 +153,14 @@
       }
     },
     {
-      "tag": "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru-2",
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
-      "server": "152.233.41.31",
+      "server": "152.233.43.84",
       "server_port": 16923,
-      "uuid": "b8e74de0-42c6-4b84-8889-bf348f32730c",
+      "uuid": "7a3ac632-d917-4c8d-bc8e-786cd9818747",
       "tls": {
         "enabled": true,
-        "server_name": "mail.yandex.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
           "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
