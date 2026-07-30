@@ -34,10 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-        "🇪🇸 Spain [SNI-RU] ya.ru",
-        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru"
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
+        "🇪🇸 Spain | [SNI-RU] ya.ru",
+        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2",
+        "🇪🇸 Spain | [SNI-RU] ya.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,16 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-        "🇪🇸 Spain [SNI-RU] ya.ru",
-        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru"
+        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
+        "🇪🇸 Spain | [SNI-RU] ya.ru",
+        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2",
+        "🇪🇸 Spain | [SNI-RU] ya.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
+      "type": "trojan",
+      "server": "77.73.131.148",
+      "server_port": 10446,
+      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
+    },
+    {
+      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "152.233.43.84",
       "server_port": 16923,
@@ -74,7 +83,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -83,14 +92,52 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
-      "type": "trojan",
-      "server": "89.169.32.250",
-      "server_port": 10446,
-      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
+      "tag": "🇪🇸 Spain | [SNI-RU] ya.ru",
+      "type": "vless",
+      "server": "es.odavpn.online",
+      "server_port": 18020,
+      "uuid": "cf5b6485-654c-44cc-a9a4-05c56781c52d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "o-AYIL_cXrgRRlT9QC-0--30JtnOFyk75sh-IBwGqFQ",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
     },
     {
-      "tag": "🇪🇸 Spain [SNI-RU] ya.ru",
+      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "152.233.43.84",
+      "server_port": 16923,
+      "uuid": "4b35002d-59f8-428a-8591-29bbbb56075f",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇪🇸 Spain | [SNI-RU] ya.ru-2",
       "type": "vless",
       "server": "es.odavpn.online",
       "server_port": 18020,
@@ -109,13 +156,6 @@
           "fingerprint": "chrome"
         }
       }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
-      "type": "trojan",
-      "server": "77.73.131.148",
-      "server_port": 10446,
-      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
     }
   ],
   "route": {
