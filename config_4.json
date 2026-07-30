@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany | [SNI-RU] io.ozone.ru",
+        "🇪🇸 Spain [SNI-RU] ya.ru",
+        "🇪🇸 Spain [SNI-RU] ya.ru-2",
         "🇪🇸 Spain | [SNI-RU] ya.ru",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2",
         "🇪🇸 Spain | [SNI-RU] ya.ru-2"
       ],
       "url": "https://google.com/generate_204",
@@ -51,48 +51,59 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany | [SNI-RU] io.ozone.ru",
+        "🇪🇸 Spain [SNI-RU] ya.ru",
+        "🇪🇸 Spain [SNI-RU] ya.ru-2",
         "🇪🇸 Spain | [SNI-RU] ya.ru",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2",
         "🇪🇸 Spain | [SNI-RU] ya.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇦🇹 🇬🇧 [SNI-RU] yandex.ru",
-      "type": "trojan",
-      "server": "77.73.131.148",
-      "server_port": 10446,
-      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
-    },
-    {
-      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇩🇪 Germany | [SNI-RU] io.ozone.ru",
       "type": "vless",
-      "server": "152.233.43.84",
-      "server_port": 16923,
-      "uuid": "4b35002d-59f8-428a-8591-29bbbb56075f",
+      "server": "77.90.25.94",
+      "server_port": 8443,
+      "uuid": "bfbaf8a2-b8f0-4b2b-b0f9-4c9725c41c32",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "io.ozone.ru",
         "reality": {
           "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
+          "public_key": "Mk4Q6KHcDgWm5F_P5qlqtpa7FZM25dO7yYN3t7EHvEI",
+          "short_id": "15aeee31d66e6a34"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
       }
     },
     {
-      "tag": "🇪🇸 Spain | [SNI-RU] ya.ru",
+      "tag": "🇪🇸 Spain [SNI-RU] ya.ru",
+      "type": "vless",
+      "server": "31.24.155.21",
+      "server_port": 18020,
+      "uuid": "cf5b6485-654c-44cc-a9a4-05c56781c52d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "o-AYIL_cXrgRRlT9QC-0--30JtnOFyk75sh-IBwGqFQ",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇸 Spain [SNI-RU] ya.ru-2",
       "type": "vless",
       "server": "es.odavpn.online",
       "server_port": 18020,
@@ -113,39 +124,42 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🇪🇸 Spain | [SNI-RU] ya.ru",
       "type": "vless",
-      "server": "152.233.43.84",
-      "server_port": 16923,
-      "uuid": "4b35002d-59f8-428a-8591-29bbbb56075f",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇪🇸 Spain | [SNI-RU] ya.ru-2",
-      "type": "vless",
-      "server": "es.odavpn.online",
+      "server": "31.24.155.21",
       "server_port": 18020,
       "uuid": "cf5b6485-654c-44cc-a9a4-05c56781c52d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "ya.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "o-AYIL_cXrgRRlT9QC-0--30JtnOFyk75sh-IBwGqFQ",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇸 Spain | [SNI-RU] ya.ru-2",
+      "type": "vless",
+      "server": "31.24.155.21",
+      "server_port": 18020,
+      "uuid": "cf5b6485-654c-44cc-a9a4-05c56781c52d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
           "public_key": "o-AYIL_cXrgRRlT9QC-0--30JtnOFyk75sh-IBwGqFQ",
