@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇯🇵 Japan [SNI-RU] api.ok.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
         "🇺🇸 United States [SNI-RU] disk.yandex.ru",
+        "🇯🇵 Japan | [SNI-RU] api.ok.ru",
         "🇺🇸 United States [SNI-RU] disk.yandex.ru-2",
-        "🇮🇹 Italy [SNI-RU] owa.ozon.ru"
+        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇯🇵 Japan [SNI-RU] api.ok.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
         "🇺🇸 United States [SNI-RU] disk.yandex.ru",
+        "🇯🇵 Japan | [SNI-RU] api.ok.ru",
         "🇺🇸 United States [SNI-RU] disk.yandex.ru-2",
-        "🇮🇹 Italy [SNI-RU] owa.ozon.ru"
+        "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -76,27 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "138.124.98.77",
-      "server_port": 443,
-      "uuid": "6f93f3eb-8ff2-4da4-837b-8a333c281ff3",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "agZZLk3GNH8CME1dobmtO1UwIrXYL-WrEuLREy_EqnA",
-          "short_id": "aefe467c7b22f190"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -116,12 +96,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇯🇵 Japan | [SNI-RU] api.ok.ru",
+      "type": "vless",
+      "server": "31.76.91.139",
+      "server_port": 443,
+      "uuid": "6f93f3eb-8ff2-4da4-837b-8a333c281ff3",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.ok.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "acCL8V-6UTGRuUs7CVk33xV26ZUY6wRjStNy273DmUY",
+          "short_id": "aefe467c7b22f190"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
@@ -140,7 +140,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -149,24 +149,11 @@
       }
     },
     {
-      "tag": "🇮🇹 Italy [SNI-RU] owa.ozon.ru",
-      "type": "vless",
-      "server": "31.77.154.77",
-      "server_port": 443,
-      "uuid": "6f93f3eb-8ff2-4da4-837b-8a333c281ff3",
-      "tls": {
-        "enabled": true,
-        "server_name": "owa.ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "f6lqLBe6F_9QDEn8G7v58Wxq8qqTKgEAfuyMxn6_2Qk",
-          "short_id": "dbf867415845f0ac"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇸🇪 [SNI-RU] yandex.ru",
+      "type": "trojan",
+      "server": "89.169.32.250",
+      "server_port": 10446,
+      "password": "c7d3ddf6-345e-4616-ba75-d43efc8f9a7a"
     }
   ],
   "route": {
