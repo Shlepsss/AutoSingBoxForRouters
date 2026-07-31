@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
         "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
         "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2"
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇪🇪 Estonia | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
         "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
         "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2"
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇪🇪 Estonia | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "31.177.111.70",
+      "server_port": 18443,
+      "uuid": "57284239-1ceb-439f-826e-cd25fcc1c1c5",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "TwMkcv1njZw5vFE-g5AUdpa_Y2vb_9393Nobv0Uqdi4",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
     },
     {
       "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
@@ -71,7 +91,7 @@
         "server_name": "tjplay.lxdxo.kdns.fr",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -105,69 +125,47 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-3",
-      "type": "trojan",
-      "server": "45.67.215.9",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "46.8.220.182",
       "server_port": 443,
-      "password": "521314",
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
       "tls": {
         "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
+        "server_name": "media2.tcpdoor.net",
+        "reality": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
+          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
+          "short_id": "3303c7a5"
         },
-        "path": "/Telegram+@VPNine1"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@VPNine1"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "45.9.15.56",
+      "server_port": 443,
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tradingview.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "iudzEpcjL_9hNvn7rf05GwUfV5zMpf8TSumBNo4VLTM",
+          "short_id": "b30a30f0"
         },
-        "path": "/Telegram+@VPNine1"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     }
   ],
