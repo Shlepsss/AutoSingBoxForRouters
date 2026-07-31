@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇸🇬 Singapore | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,118 +51,133 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇸🇬 Singapore | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "91.185.83.123",
-      "server_port": 2095,
-      "uuid": "866cb854-9047-4317-baae-e118ce53894e",
+      "server": "85.209.135.38",
+      "server_port": 443,
+      "uuid": "347e34f2-3211-4e01-b475-409f46788d3f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "converter.sowt.app",
+        "server_name": "family.adguard-dns.com",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
-          "public_key": "uHadMcQd2e7IsSmDHUZ_D14ArhoHHI0-k-yUlsJcy1o",
-          "short_id": "70411cb48ef87796"
+          "public_key": "RaAQd349NbMoL5WJOfT_RWvlT2s6sav0pOgEsoSm2zw",
+          "short_id": "f0131a4772b494d4"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
       "type": "vless",
-      "server": "82.202.156.43",
-      "server_port": 443,
-      "uuid": "866cb854-9047-4317-baae-e118ce53894e",
-      "flow": "xtls-rprx-vision",
+      "server": "5.188.115.69",
+      "server_port": 6443,
+      "uuid": "47c73056-1c48-4edb-85a7-3452f7d5cdb9",
       "tls": {
         "enabled": true,
-        "server_name": "converter.sowt.app",
-        "reality": {
-          "enabled": true,
-          "public_key": "uHadMcQd2e7IsSmDHUZ_D14ArhoHHI0-k-yUlsJcy1o",
-          "short_id": "70411cb48ef87796"
-        },
+        "server_name": "amogus.razkur.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-3",
-      "type": "vless",
-      "server": "82.202.156.43",
-      "server_port": 443,
-      "uuid": "866cb854-9047-4317-baae-e118ce53894e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "converter.sowt.app",
-        "reality": {
-          "enabled": true,
-          "public_key": "uHadMcQd2e7IsSmDHUZ_D14ArhoHHI0-k-yUlsJcy1o",
-          "short_id": "70411cb48ef87796"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
+          "Host": "amogus.razkur.dev"
         },
-        "path": "/Telegram+@VPNine1"
+        "path": "/ws"
       }
     },
     {
-      "tag": "🇸🇬 Singapore | [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "node-tw0.omhvp.co",
+      "server": "46.8.220.182",
       "server_port": 443,
-      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
-      "flow": "xtls-rprx-vision",
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
       "tls": {
         "enabled": true,
-        "server_name": "www.singaporeair.com",
+        "server_name": "media2.tcpdoor.net",
         "reality": {
           "enabled": true,
-          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
-          "short_id": "7a5b89ecdb01f781"
+          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
+          "short_id": "3303c7a5"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "85.209.135.38",
+      "server_port": 443,
+      "uuid": "347e34f2-3211-4e01-b475-409f46788d3f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "family.adguard-dns.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "RaAQd349NbMoL5WJOfT_RWvlT2s6sav0pOgEsoSm2zw",
+          "short_id": "f0131a4772b494d4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "85.209.135.38",
+      "server_port": 443,
+      "uuid": "347e34f2-3211-4e01-b475-409f46788d3f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "family.adguard-dns.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "RaAQd349NbMoL5WJOfT_RWvlT2s6sav0pOgEsoSm2zw",
+          "short_id": "f0131a4772b494d4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
         }
       }
     }

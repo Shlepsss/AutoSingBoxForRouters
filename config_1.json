@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇸🇬 Singapore | [*CIDR]",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2"
+        "🇸🇬 Singapore | [*CIDR] YA",
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,61 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇸🇬 Singapore | [*CIDR]",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2"
+        "🇸🇬 Singapore | [*CIDR] YA",
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]",
+      "tag": "🇸🇬 Singapore | [*CIDR] YA",
       "type": "vless",
-      "server": "45.9.15.56",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tradingview.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "iudzEpcjL_9hNvn7rf05GwUfV5zMpf8TSumBNo4VLTM",
-          "short_id": "b30a30f0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@VPNine1"
-      }
-    },
-    {
-      "tag": "🇸🇬 Singapore | [*CIDR]",
-      "type": "vless",
-      "server": "node-tw0.omhvp.co",
+      "server": "94.126.206.121",
       "server_port": 443,
       "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
       "flow": "xtls-rprx-vision",
@@ -119,50 +77,105 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "45.9.15.56",
+      "server": "85.209.135.38",
       "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "uuid": "347e34f2-3211-4e01-b475-409f46788d3f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.tradingview.com",
+        "server_name": "family.adguard-dns.com",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
-          "public_key": "iudzEpcjL_9hNvn7rf05GwUfV5zMpf8TSumBNo4VLTM",
-          "short_id": "b30a30f0"
+          "public_key": "RaAQd349NbMoL5WJOfT_RWvlT2s6sav0pOgEsoSm2zw",
+          "short_id": "f0131a4772b494d4"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+      "type": "vless",
+      "server": "5.188.115.69",
+      "server_port": 4443,
+      "uuid": "47c73056-1c48-4edb-85a7-3452f7d5cdb9",
       "tls": {
         "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "amogus.razkur.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
+          "Host": "amogus.razkur.dev"
         },
-        "path": "/Telegram+@VPNine1"
+        "path": "/ws"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "85.209.135.38",
+      "server_port": 443,
+      "uuid": "347e34f2-3211-4e01-b475-409f46788d3f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "family.adguard-dns.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "RaAQd349NbMoL5WJOfT_RWvlT2s6sav0pOgEsoSm2zw",
+          "short_id": "f0131a4772b494d4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "85.209.135.38",
+      "server_port": 443,
+      "uuid": "347e34f2-3211-4e01-b475-409f46788d3f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "family.adguard-dns.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "RaAQd349NbMoL5WJOfT_RWvlT2s6sav0pOgEsoSm2zw",
+          "short_id": "f0131a4772b494d4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     }
   ],
