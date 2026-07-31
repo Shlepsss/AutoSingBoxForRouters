@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]"
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,40 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]"
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "104.143.201.196",
-      "server_port": 443,
-      "uuid": "575739e8-6069-45c4-9581-4cc67cfd012e",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.pervye.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
-      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
@@ -104,12 +76,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "ns"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
+      "type": "vless",
+      "server": "94.126.204.143",
+      "server_port": 443,
+      "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
       }
     },
     {
@@ -128,57 +121,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "ns"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "5.188.115.69",
-      "server_port": 5443,
-      "uuid": "fb5df517-eb68-4629-8236-c999bb9f9d93",
-      "tls": {
-        "enabled": true,
-        "server_name": "amogus.razkur.dev",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "amogus.razkur.dev"
-        },
-        "path": "/ws"
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "45.9.15.56",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tradingview.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "iudzEpcjL_9hNvn7rf05GwUfV5zMpf8TSumBNo4VLTM",
-          "short_id": "b30a30f0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
       }
     },
     {
@@ -197,7 +145,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -206,27 +154,27 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "94.159.117.66",
-      "server_port": 9894,
-      "uuid": "884d811f-577b-421e-aabb-608660b0ecfa",
+      "server": "46.8.220.182",
+      "server_port": 443,
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "media2.tcpdoor.net",
         "reality": {
           "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aabb"
+          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
+          "short_id": "3303c7a5"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "grpc"
       }
     }
   ],
