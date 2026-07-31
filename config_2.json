@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇫🇮 Finland | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,95 +51,60 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇫🇮 Finland | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "5.188.115.69",
-      "server_port": 5443,
-      "uuid": "df085523-17ec-47c9-a143-71b08d211f32",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "45.67.215.9",
+      "server_port": 443,
+      "password": "521314",
       "tls": {
         "enabled": true,
-        "server_name": "amogus.razkur.dev",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "tjplay.lxdxo.kdns.fr",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "amogus.razkur.dev"
+          "Host": "tjplay.lxdxo.kdns.fr"
         },
-        "path": "/ws"
+        "path": "/Telegram+@VPNine1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "104.143.201.196",
+      "server": "ruded1.onlinestreamself.com",
       "server_port": 443,
-      "uuid": "575739e8-6069-45c4-9581-4cc67cfd012e",
+      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "id.pervye.ru",
+        "server_name": "apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
+          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "104.143.201.196",
-      "server_port": 443,
-      "uuid": "575739e8-6069-45c4-9581-4cc67cfd012e",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.pervye.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
+      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
       "type": "vless",
       "server": "95.182.120.208",
       "server_port": 2053,
@@ -154,7 +114,7 @@
         "server_name": "forfreeuse.sub-flow.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -166,125 +126,45 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "104.143.201.196",
+      "server": "94.126.204.43",
       "server_port": 443,
-      "uuid": "575739e8-6069-45c4-9581-4cc67cfd012e",
+      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "id.pervye.ru",
+        "server_name": "apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "104.143.201.196",
-      "server_port": 443,
-      "uuid": "575739e8-6069-45c4-9581-4cc67cfd012e",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.pervye.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "iran-russia-usa-ukraine.apruxdomain.xyz",
-      "server_port": 80,
-      "uuid": "84dc79c7-e443-489d-bf07-b4bb825f57d9",
-      "transport": {
-        "type": "ws"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "iran-russia-usa-ukraine.apruxdomain.xyz",
-      "server_port": 80,
-      "uuid": "84dc79c7-e443-489d-bf07-b4bb825f57d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "iran-russia-usa-ukraine.apruxdomain.xyz"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "iran-russia-usa-ukraine.apruxdomain.xyz"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
-      "type": "vless",
-      "server": "104.143.201.196",
-      "server_port": 443,
-      "uuid": "575739e8-6069-45c4-9581-4cc67cfd012e",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.pervye.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
+          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
+      "type": "vless",
+      "server": "ruded3.onlinestreamself.com",
       "server_port": 443,
-      "password": "521314",
+      "uuid": "35699c54-9188-4f43-972e-e8e42dbb104e",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
+        "server_name": "apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram🇨🇳+@WangCai2"
       }
     }
   ],
