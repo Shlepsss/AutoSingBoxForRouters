@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇮🇹 Italy [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
-        "🇩🇪 Germany | 🌐 [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🌐 Anycast-IP | 🇦🇹 🇧🇬 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇮🇹 Italy [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
-        "🇩🇪 Germany | 🌐 [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🌐 Anycast-IP | 🇦🇹 🇧🇬 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,7 +63,7 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "94.139.250.35",
+      "server": "ruded2.onlinestreamself.com",
       "server_port": 443,
       "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
       "flow": "xtls-rprx-vision",
@@ -79,23 +79,51 @@
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "77.222.46.162",
+      "server_port": 2200,
+      "uuid": "2aa7f4b1-e859-46d0-b8ac-8587811ab7b1",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "94.126.206.29",
+      "server": "ru-msk.sillyvpn.cc",
       "server_port": 443,
-      "uuid": "64b6f905-94d5-4745-8f92-cafa107b7c16",
-      "flow": "xtls-rprx-vision",
+      "uuid": "c2d71d05-dd22-4bd0-bb02-1fceaccad963",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
+        "server_name": "ru-msk.sillyvpn.cc",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
           "enabled": true,
-          "public_key": "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY",
-          "short_id": ""
-        },
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇧🇬 [*CIDR]",
+      "type": "vless",
+      "server": "russia2.ethicsdinnerpave.online",
+      "server_port": 443,
+      "uuid": "db2072f3-728b-4381-a9ec-51629decc2b8",
+      "tls": {
+        "enabled": true,
+        "server_name": "russia2.ethicsdinnerpave.online",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -103,32 +131,11 @@
       }
     },
     {
-      "tag": "🇮🇹 Italy [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "node-tw0.omhvp.co",
+      "server": "ruded1.onlinestreamself.com",
       "server_port": 443,
-      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.eni.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
-          "short_id": "7a5b89ecdb01f781"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
-      "type": "vless",
-      "server": "94.126.204.43",
-      "server_port": 443,
-      "uuid": "35699c54-9188-4f43-972e-e8e42dbb104e",
+      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -140,24 +147,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "9bae1d148edc10e6.apruxdomain.xyz",
-      "server_port": 80,
-      "uuid": "8c7752f1-c2fc-47ff-8357-3ed5150d0338",
-      "tls": {
-        "enabled": true,
-        "server_name": "9bae1d148edc10e6.apruxdomain.xyz"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "9bae1d148edc10e6.apruxdomain.xyz"
+          "fingerprint": "chrome"
         }
       }
     }
