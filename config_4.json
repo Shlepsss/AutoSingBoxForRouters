@@ -31,27 +31,12 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com",
-        "🇯🇵 Japan [SNI-RU] ads.x5.ru"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com",
-        "🇯🇵 Japan [SNI-RU] ads.x5.ru"
+        "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com"
       ],
-      "default": "auto",
+      "default": "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com",
       "interrupt_exist_connections": false
     },
     {
@@ -71,27 +56,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇯🇵 Japan [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "31.76.91.36",
-      "server_port": 443,
-      "uuid": "78c6ed8f-fa0f-4ae4-80a8-68b080c4cd90",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "26_EC0jKyFwjkVBQmCJkIwlZwiNCC3Uzl5j6ur6QUwM",
-          "short_id": "d2e7fddd2450b86a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       }
     }
