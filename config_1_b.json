@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,43 +56,89 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "46.8.220.182",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "45.67.215.9",
       "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "password": "521314",
       "tls": {
         "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
+        "server_name": "tjplay.lxdxo.kdns.fr",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "tjplay.lxdxo.kdns.fr"
+        },
+        "path": "/Telegram+@VPNine1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.43.57",
+      "server_port": 443,
+      "uuid": "fb6b3497-2026-4a86-b9a5-3e5f18e77a37",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "3v-9P94hjSE1fw6we1J4RvyIYnFhySQUAe1DUKqkaBo",
+          "short_id": "7f2e9c4b1a8d6a53"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "85.209.135.38",
+      "server_port": 443,
+      "uuid": "347e34f2-3211-4e01-b475-409f46788d3f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "family.adguard-dns.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "RaAQd349NbMoL5WJOfT_RWvlT2s6sav0pOgEsoSm2zw",
+          "short_id": "f0131a4772b494d4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "85.209.135.38",
       "server_port": 443,
@@ -113,31 +162,73 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "46.8.220.182",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "server": "77.91.92.203",
+      "server_port": 8443,
+      "uuid": "ee6950b1-5a5a-4bb6-ae54-814070840281",
       "tls": {
         "enabled": true,
-        "server_name": "media2.tcpdoor.net",
+        "server_name": "ru.tradingview.com",
         "reality": {
           "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
+          "public_key": "H-e-yE-hA1-95RFi79ybIp-Zuovemea03YQHk5o7fRI",
+          "short_id": "23a2dca5aa18c5a0"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc"
+        "service_name": "Gun"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "37.139.43.57",
+      "server_port": 443,
+      "uuid": "fb6b3497-2026-4a86-b9a5-3e5f18e77a37",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "3v-9P94hjSE1fw6we1J4RvyIYnFhySQUAe1DUKqkaBo",
+          "short_id": "7f2e9c4b1a8d6a53"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+      "type": "vless",
+      "server": "ru.pool-b.netcenter-cdn.com",
+      "server_port": 44001,
+      "uuid": "ef2aba40-bb54-468e-b782-3a991f9e83f0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pool-b.pools.netcenter-cdn.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "qXyJbGAN_0PyZFVR7vb7anVdCK2Zhxexs7dVgc3vqn0",
+          "short_id": "32e0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "77.91.92.203",
       "server_port": 8443,
@@ -161,73 +252,32 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "85.209.135.38",
-      "server_port": 443,
-      "uuid": "347e34f2-3211-4e01-b475-409f46788d3f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "family.adguard-dns.com",
-        "alpn": [
-          "http/1.1"
-        ],
-        "reality": {
-          "enabled": true,
-          "public_key": "RaAQd349NbMoL5WJOfT_RWvlT2s6sav0pOgEsoSm2zw",
-          "short_id": "f0131a4772b494d4"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "45.67.215.9",
-      "server_port": 443,
-      "password": "521314",
-      "tls": {
-        "enabled": true,
-        "server_name": "tjplay.lxdxo.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
+      "server": "77.222.35.10",
+      "server_port": 2200,
+      "uuid": "d4aad26f-70b6-4411-8517-17f7b4281886",
       "transport": {
         "type": "ws",
-        "headers": {
-          "Host": "tjplay.lxdxo.kdns.fr"
-        },
-        "path": "/Telegram+@VPNine1"
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "77.91.92.203",
-      "server_port": 8443,
-      "uuid": "ee6950b1-5a5a-4bb6-ae54-814070840281",
+      "server": "wx-deu-022.cdnphotos.org",
+      "server_port": 443,
+      "uuid": "2cca8201-c93e-40eb-bd8a-fea4170c169e",
       "tls": {
         "enabled": true,
-        "server_name": "ru.tradingview.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "H-e-yE-hA1-95RFi79ybIp-Zuovemea03YQHk5o7fRI",
-          "short_id": "23a2dca5aa18c5a0"
-        },
+        "server_name": "wx-deu-022.cdnphotos.org",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "Gun"
       }
     }
   ],
