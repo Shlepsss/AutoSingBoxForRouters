@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇨🇭 Switzerland | [*CIDR]",
-        "🌐 Anycast-IP | 🇱🇻 🇵🇱 | [*CIDR] VK"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇨🇭 Switzerland | [*CIDR]",
-        "🌐 Anycast-IP | 🇱🇻 🇵🇱 | [*CIDR] VK"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -83,7 +83,32 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "9bae1d148edc10e6.apruxdomain.xyz",
+      "server_port": 80,
+      "uuid": "8c7752f1-c2fc-47ff-8357-3ed5150d0338",
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
+      "tag": "🇦🇹 Austria | [*CIDR]",
+      "type": "vless",
+      "server": "87.228.101.30",
+      "server_port": 443,
+      "uuid": "04b3ed78-61b5-42bb-9143-eeb70e64b5aa",
+      "tls": {
+        "enabled": true,
+        "server_name": "media-ru3.lbdnetwork.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇫🇮 [*CIDR]-2",
       "type": "trojan",
       "server": "45.67.215.9",
       "server_port": 443,
@@ -106,72 +131,24 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "176.98.177.177",
-      "server_port": 2053,
-      "uuid": "62cc0042-664e-11f1-a103-aef63c7126b0",
-      "tls": {
-        "enabled": true,
-        "server_name": "cam-msk-7.videomonitor.cloud",
-        "reality": {
-          "enabled": true,
-          "public_key": "yjmr4nFrDGjHa32A9Uriq3co86CE-waGH3pmZt2_oQk",
-          "short_id": "a21dff3276b33304"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]",
       "type": "vless",
       "server": "ru.pool-b.netcenter-cdn.com",
-      "server_port": 44002,
-      "uuid": "cab0dd62-10ac-4b3d-86a1-873166e3dfd6",
+      "server_port": 44001,
+      "uuid": "ef2aba40-bb54-468e-b782-3a991f9e83f0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "pool-b.pools.netcenter-cdn.com",
         "reality": {
           "enabled": true,
-          "public_key": "sl0wx4BFdJ7SsfQ6SjkSHU_SQ_0mAhyIlT2eAxWGRyQ",
-          "short_id": "e1233ae7e56111a7"
+          "public_key": "qXyJbGAN_0PyZFVR7vb7anVdCK2Zhxexs7dVgc3vqn0",
+          "short_id": "32e0"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇱🇻 🇵🇱 | [*CIDR] VK",
-      "type": "vless",
-      "server": "89.208.229.243",
-      "server_port": 2053,
-      "uuid": "96006428-88d4-11f1-9ca5-1e6febe3e1df",
-      "tls": {
-        "enabled": true,
-        "server_name": "hh.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
-          "short_id": "7824dfd19eab1acc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
       }
     }
   ],
