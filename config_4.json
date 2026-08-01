@@ -31,28 +31,64 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇵🇱 [SNI-RU] sun6-21.userapi.com"
+        "🇯🇵 Japan | [SNI-RU] ads.x5.ru",
+        "🇯🇵 Japan | [SNI-RU] ads.x5.ru-2"
       ],
-      "default": "🌐 Anycast-IP | 🇩🇪 🇵🇱 [SNI-RU] sun6-21.userapi.com",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇵🇱 [SNI-RU] sun6-21.userapi.com",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇯🇵 Japan | [SNI-RU] ads.x5.ru",
+        "🇯🇵 Japan | [SNI-RU] ads.x5.ru-2"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇯🇵 Japan | [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "node-tw0.omhvp.co",
+      "server": "31.76.91.36",
       "server_port": 443,
-      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
+      "uuid": "78c6ed8f-fa0f-4ae4-80a8-68b080c4cd90",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sun6-21.userapi.com",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
-          "short_id": "7a5b89ecdb01f781"
+          "public_key": "26_EC0jKyFwjkVBQmCJkIwlZwiNCC3Uzl5j6ur6QUwM",
+          "short_id": "d2e7fddd2450b86a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇯🇵 Japan | [SNI-RU] ads.x5.ru-2",
+      "type": "vless",
+      "server": "31.76.91.36",
+      "server_port": 443,
+      "uuid": "78c6ed8f-fa0f-4ae4-80a8-68b080c4cd90",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "26_EC0jKyFwjkVBQmCJkIwlZwiNCC3Uzl5j6ur6QUwM",
+          "short_id": "d2e7fddd2450b86a"
         },
         "utls": {
           "enabled": true,
