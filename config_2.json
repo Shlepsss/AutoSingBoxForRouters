@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇵🇱 Poland | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇦🇹 🇩🇪 🇳🇱 | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇱🇻 🇵🇱 [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +53,51 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇵🇱 Poland | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇦🇹 🇩🇪 🇳🇱 | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇱🇻 🇵🇱 [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "77.91.92.203",
-      "server_port": 8443,
-      "uuid": "ee6950b1-5a5a-4bb6-ae54-814070840281",
+      "server": "217.198.6.90",
+      "server_port": 443,
+      "uuid": "0f240308-5771-4636-9315-f3259ff87f98",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru.tradingview.com",
+        "server_name": "sun6-21.userapi.com",
         "reality": {
           "enabled": true,
-          "public_key": "H-e-yE-hA1-95RFi79ybIp-Zuovemea03YQHk5o7fRI",
-          "short_id": "23a2dca5aa18c5a0"
+          "public_key": "KlybaLW0-grtjEATyTVFIYoWIaoW-Duxi4lcM54_t2U",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇱🇻 🇵🇱 [*CIDR] VK",
+      "type": "vless",
+      "server": "89.208.229.243",
+      "server_port": 2053,
+      "uuid": "42d3cfb6-8a1d-11f1-9ca5-1e6febe3e1df",
+      "tls": {
+        "enabled": true,
+        "server_name": "hh.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
+          "short_id": "4b685844d0b4f724"
         },
         "utls": {
           "enabled": true,
@@ -81,98 +106,109 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "Gun"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "eu-gw.videomonitor.cloud",
-      "server_port": 2053,
-      "uuid": "b1e4bfe2-2b12-11f1-92cb-12ba70109d32",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0",
-          "short_id": "f0c18fcc1d09b637"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
         "service_name": "grpc-direct"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇦🇹 🇩🇪 🇳🇱 | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "87.228.101.30",
+      "server": "94.139.251.9",
       "server_port": 443,
-      "uuid": "04b3ed78-61b5-42bb-9143-eeb70e64b5aa",
+      "uuid": "35699c54-9188-4f43-972e-e8e42dbb104e",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "media-ru3.lbdnetwork.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "81.163.23.158",
-      "server_port": 8443,
-      "uuid": "23786eb4-0bbb-43c6-940c-a3b2b5242cb6",
+      "server": "185.126.93.15",
+      "server_port": 443,
+      "uuid": "2cca8201-c93e-40eb-bd8a-fea4170c169e",
       "tls": {
         "enabled": true,
-        "server_name": "id.pervye.ru",
+        "server_name": "wx-deu-022.cdnphotos.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "185.147.26.169",
+      "server_port": 443,
+      "uuid": "a58f5798-69ef-40c7-a038-cae3a0ed031a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "K9vJ2zLFxi3VTmrguyLC1KrC920axeFSeA8x_xY4Xhw",
+          "public_key": "KlybaLW0-grtjEATyTVFIYoWIaoW-Duxi4lcM54_t2U",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
       "type": "vless",
-      "server": "77.91.92.203",
-      "server_port": 8443,
-      "uuid": "ee6950b1-5a5a-4bb6-ae54-814070840281",
+      "server": "72.56.249.226",
+      "server_port": 443,
+      "uuid": "a58f5798-69ef-40c7-a038-cae3a0ed031a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru.tradingview.com",
+        "server_name": "sun6-21.userapi.com",
         "reality": {
           "enabled": true,
-          "public_key": "H-e-yE-hA1-95RFi79ybIp-Zuovemea03YQHk5o7fRI",
-          "short_id": "23a2dca5aa18c5a0"
+          "public_key": "KlybaLW0-grtjEATyTVFIYoWIaoW-Duxi4lcM54_t2U",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "46.8.220.182",
+      "server_port": 443,
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "tls": {
+        "enabled": true,
+        "server_name": "media2.tcpdoor.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
+          "short_id": "3303c7a5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "Gun"
+        "service_name": "grpc"
       }
     }
   ],
