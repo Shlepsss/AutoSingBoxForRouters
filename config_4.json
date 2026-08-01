@@ -31,31 +31,16 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇪🇪 🇳🇱 🇺🇸 [SNI-RU] sun6-21.userapi.com",
-        "🇵🇱 Poland [SNI-RU] max.ru"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇪🇪 🇳🇱 🇺🇸 [SNI-RU] sun6-21.userapi.com",
-        "🇵🇱 Poland [SNI-RU] max.ru"
+        "🌐 Anycast-IP | 🇩🇪 🇵🇱 [SNI-RU] sun6-21.userapi.com"
       ],
-      "default": "auto",
+      "default": "🌐 Anycast-IP | 🇩🇪 🇵🇱 [SNI-RU] sun6-21.userapi.com",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇪🇪 🇳🇱 🇺🇸 [SNI-RU] sun6-21.userapi.com",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇵🇱 [SNI-RU] sun6-21.userapi.com",
       "type": "vless",
       "server": "node-tw0.omhvp.co",
       "server_port": 443,
@@ -72,26 +57,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "2.26.5.213",
-      "server_port": 18443,
-      "uuid": "fc1ee51e-72ec-4af0-ab0f-540c9e22427b",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "UnbK4twvjELS1JYF3bPotbz6Yqmr568f7NFetgt-i0I",
-          "short_id": "148cb4094a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
         }
       }
     }
