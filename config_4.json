@@ -34,8 +34,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 Japan | [SNI-RU] ads.x5.ru",
-        "🇯🇵 Japan | [SNI-RU] ads.x5.ru-2"
+        "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com",
+        "🇯🇵 Japan [SNI-RU] ads.x5.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -48,14 +48,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 Japan | [SNI-RU] ads.x5.ru",
-        "🇯🇵 Japan | [SNI-RU] ads.x5.ru-2"
+        "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com",
+        "🇯🇵 Japan [SNI-RU] ads.x5.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇯🇵 Japan | [SNI-RU] ads.x5.ru",
+      "tag": "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com",
+      "type": "vless",
+      "server": "test.firm-maple.test-cdn-kkk.com",
+      "server_port": 9443,
+      "uuid": "4a6fd519-486c-4ade-b7a0-a063e0d0132a",
+      "tls": {
+        "enabled": true,
+        "server_name": "sun6-21.userapi.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+          "short_id": "50"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇯🇵 Japan [SNI-RU] ads.x5.ru",
       "type": "vless",
       "server": "31.76.91.36",
       "server_port": 443,
@@ -72,27 +92,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇯🇵 Japan | [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "31.76.91.36",
-      "server_port": 443,
-      "uuid": "78c6ed8f-fa0f-4ae4-80a8-68b080c4cd90",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "26_EC0jKyFwjkVBQmCJkIwlZwiNCC3Uzl5j6ur6QUwM",
-          "short_id": "d2e7fddd2450b86a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
         }
       }
     }
