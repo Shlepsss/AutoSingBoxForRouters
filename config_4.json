@@ -31,31 +31,91 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com"
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇵🇱 | [SNI-RU] sun6-21.userapi.com",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇵🇱 | [SNI-RU] sun6-21.userapi.com-2",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 🇵🇱 [SNI-RU] sun6-21.userapi.com"
       ],
-      "default": "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [SNI-RU] sun6-21.userapi.com",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇵🇱 | [SNI-RU] sun6-21.userapi.com",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇵🇱 | [SNI-RU] sun6-21.userapi.com-2",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 🇵🇱 [SNI-RU] sun6-21.userapi.com"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇵🇱 | [SNI-RU] sun6-21.userapi.com",
       "type": "vless",
-      "server": "test.firm-maple.test-cdn-kkk.com",
-      "server_port": 9443,
-      "uuid": "4a6fd519-486c-4ade-b7a0-a063e0d0132a",
+      "server": "node-tw0.omhvp.co",
+      "server_port": 443,
+      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "sun6-21.userapi.com",
         "reality": {
           "enabled": true,
-          "public_key": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
-          "short_id": "50"
+          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
+          "short_id": "7a5b89ecdb01f781"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇵🇱 | [SNI-RU] sun6-21.userapi.com-2",
+      "type": "vless",
+      "server": "node-tw0.omhvp.co",
+      "server_port": 443,
+      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sun6-21.userapi.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
+          "short_id": "7a5b89ecdb01f781"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 🇵🇱 [SNI-RU] sun6-21.userapi.com",
+      "type": "vless",
+      "server": "node-tw0.omhvp.co",
+      "server_port": 443,
+      "uuid": "a8f84171-5f96-4547-b621-59758fe668c8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sun6-21.userapi.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "jWVk2Z7eFkyDcu2xgzqX8JsPbZuCVhHUWD463Vfgazw",
+          "short_id": "7a5b89ecdb01f781"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }
