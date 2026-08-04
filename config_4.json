@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru",
-        "🇺🇸 United States | 🌐 | [SNI-RU] yandex.ru",
-        "🇺🇸 United States | 🌐 | [SNI-RU] yandex.ru-2",
+        "🇺🇸 United States | 🌐 [SNI-RU] yandex.ru",
         "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru",
-        "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru-2"
+        "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru-2",
+        "🇺🇸 United States | 🌐 [SNI-RU] yandex.ru-2",
+        "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,24 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru",
-        "🇺🇸 United States | 🌐 | [SNI-RU] yandex.ru",
-        "🇺🇸 United States | 🌐 | [SNI-RU] yandex.ru-2",
+        "🇺🇸 United States | 🌐 [SNI-RU] yandex.ru",
         "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru",
-        "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru-2"
+        "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru-2",
+        "🇺🇸 United States | 🌐 [SNI-RU] yandex.ru-2",
+        "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru",
+      "tag": "🇺🇸 United States | 🌐 [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "huc.kosmosapp.ru",
+      "server": "use.kosmosapp.ru",
       "server_port": 16923,
-      "uuid": "65829ae0-497a-4482-bc59-15738d6baa73",
+      "uuid": "96f13f07-7a7e-4a06-a92c-49465499dd49",
       "tls": {
         "enabled": true,
-        "server_name": "mail.yandex.ru",
+        "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
           "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
@@ -85,7 +85,55 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | 🌐 | [SNI-RU] yandex.ru",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru",
+      "type": "vless",
+      "server": "dec.kosmosapp.ru",
+      "server_port": 16923,
+      "uuid": "96f13f07-7a7e-4a06-a92c-49465499dd49",
+      "tls": {
+        "enabled": true,
+        "server_name": "music.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru-2",
+      "type": "vless",
+      "server": "dec.kosmosapp.ru",
+      "server_port": 16923,
+      "uuid": "96f13f07-7a7e-4a06-a92c-49465499dd49",
+      "tls": {
+        "enabled": true,
+        "server_name": "music.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 [SNI-RU] yandex.ru-2",
       "type": "vless",
       "server": "use.kosmosapp.ru",
       "server_port": 16923,
@@ -109,35 +157,11 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | 🌐 | [SNI-RU] yandex.ru-2",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru-3",
       "type": "vless",
-      "server": "use.kosmosapp.ru",
+      "server": "dec.kosmosapp.ru",
       "server_port": 16923,
       "uuid": "96f13f07-7a7e-4a06-a92c-49465499dd49",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru",
-      "type": "vless",
-      "server": "152.233.78.14",
-      "server_port": 16923,
-      "uuid": "65829ae0-497a-4482-bc59-15738d6baa73",
       "tls": {
         "enabled": true,
         "server_name": "music.yandex.ru",
@@ -149,30 +173,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇭🇺 Hungary | [SNI-RU] mail.yandex.ru-2",
-      "type": "vless",
-      "server": "huc.kosmosapp.ru",
-      "server_port": 16923,
-      "uuid": "65829ae0-497a-4482-bc59-15738d6baa73",
-      "tls": {
-        "enabled": true,
-        "server_name": "mail.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
         }
       },
       "transport": {
