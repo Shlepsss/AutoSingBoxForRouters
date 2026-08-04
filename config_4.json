@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [SNI-RU] maps.yandex.ru",
-        "🇬🇧 United Kingdom | [SNI-RU] maps.yandex.ru",
-        "🇵🇱 Poland [SNI-RU] maps.yandex.ru-2",
+        "🇱🇻 Latvia | [SNI-RU] max.ru",
         "🇬🇧 United Kingdom [SNI-RU] maps.yandex.ru",
-        "🇵🇱 Poland [SNI-RU] maps.yandex.ru-3"
+        "🇬🇧 United Kingdom | [SNI-RU] maps.yandex.ru",
+        "🇬🇧 United Kingdom [SNI-RU] maps.yandex.ru-2",
+        "🇱🇻 Latvia | [SNI-RU] max.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,21 +51,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [SNI-RU] maps.yandex.ru",
-        "🇬🇧 United Kingdom | [SNI-RU] maps.yandex.ru",
-        "🇵🇱 Poland [SNI-RU] maps.yandex.ru-2",
+        "🇱🇻 Latvia | [SNI-RU] max.ru",
         "🇬🇧 United Kingdom [SNI-RU] maps.yandex.ru",
-        "🇵🇱 Poland [SNI-RU] maps.yandex.ru-3"
+        "🇬🇧 United Kingdom | [SNI-RU] maps.yandex.ru",
+        "🇬🇧 United Kingdom [SNI-RU] maps.yandex.ru-2",
+        "🇱🇻 Latvia | [SNI-RU] max.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] maps.yandex.ru",
+      "tag": "🇱🇻 Latvia | [SNI-RU] max.ru",
       "type": "vless",
-      "server": "pld.kosmosapp.ru",
+      "server": "185.220.223.61",
+      "server_port": 8443,
+      "uuid": "2181d0c8-448a-4f75-b848-1718029baef9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "-Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc",
+          "short_id": "afee962d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] maps.yandex.ru",
+      "type": "vless",
+      "server": "dea.kosmosapp.ru",
       "server_port": 16923,
-      "uuid": "f078c1ff-ca5f-4e51-89a4-49f7c0d32758",
+      "uuid": "88f16240-491c-4689-a334-936373a6913e",
       "tls": {
         "enabled": true,
         "server_name": "maps.yandex.ru",
@@ -76,7 +97,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -109,31 +130,7 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] maps.yandex.ru-2",
-      "type": "vless",
-      "server": "pld.kosmosapp.ru",
-      "server_port": 16923,
-      "uuid": "f078c1ff-ca5f-4e51-89a4-49f7c0d32758",
-      "tls": {
-        "enabled": true,
-        "server_name": "maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] maps.yandex.ru",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] maps.yandex.ru-2",
       "type": "vless",
       "server": "dea.kosmosapp.ru",
       "server_port": 16923,
@@ -157,27 +154,24 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] maps.yandex.ru-3",
+      "tag": "🇱🇻 Latvia | [SNI-RU] max.ru-2",
       "type": "vless",
-      "server": "pld.kosmosapp.ru",
-      "server_port": 16923,
-      "uuid": "f078c1ff-ca5f-4e51-89a4-49f7c0d32758",
+      "server": "185.220.223.61",
+      "server_port": 8443,
+      "uuid": "2181d0c8-448a-4f75-b848-1718029baef9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "maps.yandex.ru",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
+          "public_key": "-Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc",
+          "short_id": "afee962d"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
       }
     }
   ],
