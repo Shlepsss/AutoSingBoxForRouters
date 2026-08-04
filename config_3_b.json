@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇱🇹 🇱🇻 | [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇫🇷 🇵🇱 | [*CIDR] YA",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR] YA"
+        "🇷🇺 Russia | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +51,29 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇱🇹 🇱🇻 | [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇫🇷 🇵🇱 | [*CIDR] YA",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR] YA"
+        "🇷🇺 Russia | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇱🇹 🇱🇻 | [*CIDR] YA",
+      "tag": "🇷🇺 Russia | [*CIDR] VK",
       "type": "vless",
-      "server": "158.160.54.243",
-      "server_port": 41486,
-      "uuid": "c9cbfe43-4087-4069-8bca-225f9a26a94f",
+      "server": "37.139.43.57",
+      "server_port": 443,
+      "uuid": "ceeba701-bb9f-4f2c-8142-677d27a2acb1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "passport.yandex.ru",
+        "server_name": "eh.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "mH0cE0o4WZMwqS7BIgGYHR3y14T1OG2Ld2vkS0OH2mM",
-          "short_id": ""
+          "public_key": "3v-9P94hjSE1fw6we1J4RvyIYnFhySQUAe1DUKqkaBo",
+          "short_id": "7f2e9c4b1a8d6a53"
         },
         "utls": {
           "enabled": true,
@@ -81,7 +82,49 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
+      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "37.139.43.57",
+      "server_port": 443,
+      "uuid": "ceeba701-bb9f-4f2c-8142-677d27a2acb1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "3v-9P94hjSE1fw6we1J4RvyIYnFhySQUAe1DUKqkaBo",
+          "short_id": "7f2e9c4b1a8d6a53"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "ruded1.onlinestreamself.com",
+      "server_port": 443,
+      "uuid": "435d616b-f0e6-489d-a70d-bdde70750b43",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
       "server": "ruded2.onlinestreamself.com",
       "server_port": 443,
@@ -97,67 +140,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
-      "type": "vless",
-      "server": "37.18.15.41",
-      "server_port": 443,
-      "uuid": "5cd8fc43-878f-11f1-8c93-54db13ea7d40",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.nvidia.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "XZeD6_It9XHw6A0p6GCSJHDzLCT9AFvDaiNrpQpMRXE",
-          "short_id": "51d3e4f6"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇵🇱 | [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
       "type": "vless",
-      "server": "158.160.54.243",
-      "server_port": 40791,
-      "uuid": "c9cbfe43-4087-4069-8bca-225f9a26a94f",
+      "server": "ruded1.onlinestreamself.com",
+      "server_port": 443,
+      "uuid": "435d616b-f0e6-489d-a70d-bdde70750b43",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "passport.yandex.ru",
+        "server_name": "apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "uAeMdF2zmPggRkRIabNYrCFWsvyHvGDgQ2wKguLzTFw",
+          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.54.243",
-      "server_port": 43622,
-      "uuid": "c9cbfe43-4087-4069-8bca-225f9a26a94f",
-      "tls": {
-        "enabled": true,
-        "server_name": "passport.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "giGJSFl2azZTwItIbzTxs3rJvL0q6Z1-5gJhKc93hTM",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       }
     }
