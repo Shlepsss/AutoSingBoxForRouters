@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [SNI-RU] yandex.ru",
-        "🇭🇺 Hungary [SNI-RU] mail.yandex.ru",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇩🇪 Germany | 🌐 [SNI-RU] ya.ru",
-        "🇨🇭 Switzerland [SNI-RU] mail.yandex.ru"
+        "🇵🇱 Poland [SNI-RU] maps.yandex.ru",
+        "🇵🇱 Poland [SNI-RU] maps.yandex.ru-2",
+        "🇬🇧 United Kingdom [SNI-RU] yandex.ru",
+        "🇨🇭 Switzerland [SNI-RU] mail.yandex.ru",
+        "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,21 +51,69 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [SNI-RU] yandex.ru",
-        "🇭🇺 Hungary [SNI-RU] mail.yandex.ru",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇩🇪 Germany | 🌐 [SNI-RU] ya.ru",
-        "🇨🇭 Switzerland [SNI-RU] mail.yandex.ru"
+        "🇵🇱 Poland [SNI-RU] maps.yandex.ru",
+        "🇵🇱 Poland [SNI-RU] maps.yandex.ru-2",
+        "🇬🇧 United Kingdom [SNI-RU] yandex.ru",
+        "🇨🇭 Switzerland [SNI-RU] mail.yandex.ru",
+        "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] yandex.ru",
+      "tag": "🇵🇱 Poland [SNI-RU] maps.yandex.ru",
       "type": "vless",
-      "server": "pla.kosmosapp.ru",
+      "server": "plb.kosmosapp.ru",
       "server_port": 16923,
-      "uuid": "0f4aeb95-32ae-457c-8d71-b66bb9ff1073",
+      "uuid": "cf0310b0-2cd6-4ae1-b4c4-e029e7fb0ee3",
+      "tls": {
+        "enabled": true,
+        "server_name": "maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] maps.yandex.ru-2",
+      "type": "vless",
+      "server": "plb.kosmosapp.ru",
+      "server_port": 16923,
+      "uuid": "cf0310b0-2cd6-4ae1-b4c4-e029e7fb0ee3",
+      "tls": {
+        "enabled": true,
+        "server_name": "maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] yandex.ru",
+      "type": "vless",
+      "server": "ded.kosmosapp.ru",
+      "server_port": 16923,
+      "uuid": "cf0310b0-2cd6-4ae1-b4c4-e029e7fb0ee3",
       "tls": {
         "enabled": true,
         "server_name": "yandex.ru",
@@ -85,11 +133,11 @@
       }
     },
     {
-      "tag": "🇭🇺 Hungary [SNI-RU] mail.yandex.ru",
+      "tag": "🇨🇭 Switzerland [SNI-RU] mail.yandex.ru",
       "type": "vless",
-      "server": "hua.kosmosapp.ru",
+      "server": "chc.kosmosapp.ru",
       "server_port": 16923,
-      "uuid": "cf0310b0-2cd6-4ae1-b4c4-e029e7fb0ee3",
+      "uuid": "0f4aeb95-32ae-457c-8d71-b66bb9ff1073",
       "tls": {
         "enabled": true,
         "server_name": "mail.yandex.ru",
@@ -100,7 +148,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -109,48 +157,14 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] music.yandex.ru",
       "type": "vless",
-      "server": "201.24.118.145",
-      "server_port": 4100,
-      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] ya.ru",
-      "type": "vless",
-      "server": "mnl.savesafe.space",
-      "server_port": 443,
-      "uuid": "39c42b0a-b823-4c93-bb99-74b4183e518d",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "2P7D_IkxXWre3YziEe2tkF9L_gUbdZE_WCu9_SQq4hE",
-          "short_id": "b997e34499a919f3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland [SNI-RU] mail.yandex.ru",
-      "type": "vless",
-      "server": "chc.kosmosapp.ru",
+      "server": "152.233.78.14",
       "server_port": 16923,
-      "uuid": "0f4aeb95-32ae-457c-8d71-b66bb9ff1073",
+      "uuid": "65829ae0-497a-4482-bc59-15738d6baa73",
       "tls": {
         "enabled": true,
-        "server_name": "mail.yandex.ru",
+        "server_name": "music.yandex.ru",
         "reality": {
           "enabled": true,
           "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
