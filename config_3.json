@@ -34,10 +34,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [*CIDR] YA",
-        "🇱🇻 Latvia [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] CDN-2"
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,16 +49,15 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇦🇹 🇬🇧 [*CIDR] YA",
-        "🇱🇻 Latvia [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] CDN-2"
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] CDN",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
       "type": "vless",
       "server": "37.18.15.41",
       "server_port": 443,
@@ -79,52 +77,27 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇦🇹 🇬🇧 [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-2",
       "type": "vless",
-      "server": "178.154.192.85",
+      "server": "37.18.15.41",
       "server_port": 443,
-      "uuid": "d1e816db-0dc6-4b44-8037-c59700028214",
-      "flow": "xtls-rprx-vision",
+      "uuid": "5cd8fc43-878f-11f1-8c93-54db13ea7d40",
       "tls": {
         "enabled": true,
-        "server_name": "m.vk.com",
+        "server_name": "www.nvidia.com",
         "reality": {
           "enabled": true,
-          "public_key": "rbIDMX2v2d2GuriYPOMe6CJBrZ2dLAUm0R4g6-Pm1UA",
-          "short_id": "e2cf6fb5137ac98d"
+          "public_key": "XZeD6_It9XHw6A0p6GCSJHDzLCT9AFvDaiNrpQpMRXE",
+          "short_id": "51d3e4f6"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇱🇻 Latvia [*CIDR] VK",
-      "type": "vless",
-      "server": "89.208.229.243",
-      "server_port": 2053,
-      "uuid": "5583e3f0-8ac0-11f1-9ca5-1e6febe3e1df",
-      "tls": {
-        "enabled": true,
-        "server_name": "hh.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
-          "short_id": "5b9dc5fe4ad87cc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR] CDN-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-3",
       "type": "vless",
       "server": "37.18.15.41",
       "server_port": 443,
