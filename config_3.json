@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-        "🇷🇺 Russia [*CIDR] CDN",
-        "🇳🇱 The Netherlands [*CIDR] CDN",
-        "🇳🇱 The Netherlands [*CIDR] CDN-2",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇪 [*CIDR] CDN",
-        "🇷🇺 Russia [*CIDR] CDN-2",
-        "🇷🇺 Russia [*CIDR] YA"
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,31 +51,48 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-        "🇷🇺 Russia [*CIDR] CDN",
-        "🇳🇱 The Netherlands [*CIDR] CDN",
-        "🇳🇱 The Netherlands [*CIDR] CDN-2",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇪 [*CIDR] CDN",
-        "🇷🇺 Russia [*CIDR] CDN-2",
-        "🇷🇺 Russia [*CIDR] YA"
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
       "type": "vless",
-      "server": "37.18.14.26",
+      "server": "37.18.15.41",
       "server_port": 443,
-      "uuid": "13869ce4-83ff-4ce4-8402-29992380b72e",
-      "flow": "xtls-rprx-vision",
+      "uuid": "5cd8fc43-878f-11f1-8c93-54db13ea7d40",
       "tls": {
         "enabled": true,
-        "server_name": "sun6-21.userapi.com",
+        "server_name": "www.nvidia.com",
         "reality": {
           "enabled": true,
-          "public_key": "mkS-R_4CltAJIXexjRS0Lwp2pJ-xOhwKeL2X7CjMjhk",
-          "short_id": "a7f19254d0bd"
+          "public_key": "XZeD6_It9XHw6A0p6GCSJHDzLCT9AFvDaiNrpQpMRXE",
+          "short_id": "51d3e4f6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.101.16",
+      "server_port": 443,
+      "uuid": "c1428642-8cf6-4fce-b97a-dee5d95f0e84",
+      "tls": {
+        "enabled": true,
+        "server_name": "y-11.rita-cloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "KQwnDPI_7rJnJvmjaEg0NCFuNWnSRQ8SBHJB8iFun2A",
+          "short_id": "3fe939c78d2c1c7a"
         },
         "utls": {
           "enabled": true,
@@ -86,28 +101,27 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] CDN",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
       "type": "vless",
-      "server": "ge171301-1624.46.vkproxy.com",
-      "server_port": 8443,
-      "uuid": "8f126e1e-2733-43b2-81ad-1fc66a8a1fb0",
-      "flow": "xtls-rprx-vision",
+      "server": "51.250.101.16",
+      "server_port": 443,
+      "uuid": "c1428642-8cf6-4fce-b97a-dee5d95f0e84",
       "tls": {
         "enabled": true,
-        "server_name": "amedia-vod.cdnvideo.ru",
+        "server_name": "y-11.rita-cloud.com",
         "reality": {
           "enabled": true,
-          "public_key": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
-          "short_id": "a1b2c3d4e5f6789a"
+          "public_key": "KQwnDPI_7rJnJvmjaEg0NCFuNWnSRQ8SBHJB8iFun2A",
+          "short_id": "3fe939c78d2c1c7a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] CDN",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-2",
       "type": "vless",
       "server": "37.18.15.41",
       "server_port": 443,
@@ -122,12 +136,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] CDN-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-3",
       "type": "vless",
       "server": "37.18.15.41",
       "server_port": 443,
@@ -142,70 +156,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇪 [*CIDR] CDN",
-      "type": "vless",
-      "server": "bd-zv57f16k-141b.msk.v-tun.com",
-      "server_port": 7443,
-      "uuid": "8f126e1e-2733-43b2-81ad-1fc66a8a1fb0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "amedia-vod.cdnvideo.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
-          "short_id": "a1b2c3d4e5f6789a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "ge171301-1624.46.vkproxy.com",
-      "server_port": 7443,
-      "uuid": "8f126e1e-2733-43b2-81ad-1fc66a8a1fb0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "amedia-vod.cdnvideo.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
-          "short_id": "a1b2c3d4e5f6789a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] YA",
-      "type": "vless",
-      "server": "b3aa11az-k15gg1.ru.y-tun.com",
-      "server_port": 8443,
-      "uuid": "8f126e1e-2733-43b2-81ad-1fc66a8a1fb0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
-          "short_id": "a1b2c3d4e5f6789a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     }

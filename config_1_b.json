@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] CDN",
         "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia | 🌐 [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-5"
+        "🇷🇺 Russia | 🌐 [*CIDR]-5",
+        "🇷🇺 Russia | 🌐 [*CIDR]-6",
+        "🇷🇺 Russia | 🌐 [*CIDR]-7",
+        "🇷🇺 Russia | 🌐 [*CIDR]-8",
+        "🇷🇺 Russia | 🌐 [*CIDR]-9",
+        "🇷🇺 Russia | 🌐 [*CIDR]-10"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,69 +56,30 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] CDN",
         "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia | 🌐 [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-5"
+        "🇷🇺 Russia | 🌐 [*CIDR]-5",
+        "🇷🇺 Russia | 🌐 [*CIDR]-6",
+        "🇷🇺 Russia | 🌐 [*CIDR]-7",
+        "🇷🇺 Russia | 🌐 [*CIDR]-8",
+        "🇷🇺 Russia | 🌐 [*CIDR]-9",
+        "🇷🇺 Russia | 🌐 [*CIDR]-10"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "ru.moktana.app",
-      "server_port": 443,
-      "uuid": "696915f2-5ad4-452b-987c-d83d29d0503a",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.moktana.app",
-        "reality": {
-          "enabled": true,
-          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
-          "short_id": "9e2a6f4c3b7d1e8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "moktana.net.v1.StreamService"
-      },
-      "packet_encoding": "xudp"
-    },
-    {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "168.222.141.146",
+      "server": "194.26.229.220",
       "server_port": 2200,
-      "uuid": "bceda826-c83c-45d0-891e-15c4bfec76bc",
+      "uuid": "47947923-49ac-49f8-86ed-2912bcbf2d18",
       "transport": {
         "type": "ws",
         "headers": {
           "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "45.90.32.132",
-      "server_port": 4100,
-      "uuid": "31c2a8e8-0ab2-4f3f-8767-11f3a35d4228",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
         },
         "path": "/v1"
       }
@@ -126,44 +87,55 @@
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "109.73.196.160",
-      "server_port": 4100,
-      "uuid": "5d0206d9-fb42-4c8b-a84b-3d95ab0f42c7",
+      "server": "130.49.148.134",
+      "server_port": 8880,
+      "uuid": "b1cf484e-651f-432b-b086-f148e010669e",
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "live.ok.ru"
+          "Host": "rutube.ummapeople.online"
         },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] CDN",
-      "type": "vless",
-      "server": "ge171301-1624.46.vkproxy.com",
-      "server_port": 8443,
-      "uuid": "8f126e1e-2733-43b2-81ad-1fc66a8a1fb0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "amedia-vod.cdnvideo.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
-          "short_id": "a1b2c3d4e5f6789a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "path": "/rutube"
       }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
       "type": "vless",
-      "server": "104.171.137.109",
+      "server": "109.73.193.169",
+      "server_port": 4100,
+      "uuid": "e1e26ef7-3291-45ac-b821-a11dcdbfdb4d",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
+      "type": "vless",
+      "server": "cr-r1.astralweb.tech",
+      "server_port": 443,
+      "uuid": "cd1673b3-7cec-4fe6-bedf-b534eb54e647",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cr-r1.astralweb.tech",
+        "reality": {
+          "enabled": true,
+          "public_key": "Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q",
+          "short_id": "496ee75c2f91f51d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-5",
+      "type": "vless",
+      "server": "194.26.229.217",
       "server_port": 2200,
-      "uuid": "5502312d-b5cf-4652-8c59-4d670dd047be",
+      "uuid": "e58a0802-443e-4ba3-992b-73687bb5b9f0",
       "transport": {
         "type": "ws",
         "headers": {
@@ -173,72 +145,72 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-6",
       "type": "vless",
-      "server": "31.128.47.45",
-      "server_port": 24499,
-      "uuid": "7b6c6542-f3f2-4ca8-aa37-38428cb3bc3a",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.rutube.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "pXqtZamxC_qxublGTL8rVZqNI_tt3Ul_GHhcKJPaoQ0",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
-      "type": "vless",
-      "server": "104.171.137.109",
-      "server_port": 2200,
-      "uuid": "5502312d-b5cf-4652-8c59-4d670dd047be",
+      "server": "31.177.82.106",
+      "server_port": 4100,
+      "uuid": "5d0fbb28-3be3-4044-bc5b-e4b7ca1916c7",
       "transport": {
         "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
         "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-7",
       "type": "vless",
-      "server": "81.200.158.66",
-      "server_port": 443,
-      "uuid": "696915f2-5ad4-452b-987c-d83d29d0503a",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.moktana.app",
-        "reality": {
-          "enabled": true,
-          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
-          "short_id": "9e2a6f4c3b7d1e8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
+      "server": "77.222.35.36",
+      "server_port": 4100,
+      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
       "transport": {
-        "type": "grpc",
-        "service_name": "moktana.net.v1.StreamService"
+        "type": "ws",
+        "headers": {
+          "Host": "77.222.35.36"
+        },
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-5",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-8",
       "type": "vless",
-      "server": "201.51.0.38",
+      "server": "194.26.229.220",
       "server_port": 4100,
-      "uuid": "e7299042-7d8f-440f-8368-2516b0e69341",
+      "uuid": "aef0e934-09d7-4b8f-b3bc-de78d2eec928",
       "transport": {
         "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-9",
+      "type": "vless",
+      "server": "31.177.82.106",
+      "server_port": 2200,
+      "uuid": "5d0fbb28-3be3-4044-bc5b-e4b7ca1916c7",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-10",
+      "type": "vless",
+      "server": "194.26.229.219",
+      "server_port": 4100,
+      "uuid": "099c6e3f-e8d3-41d4-95f2-ef2eafb51cdc",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
         "path": "/v1"
       }
     }
