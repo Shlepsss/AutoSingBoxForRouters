@@ -34,10 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇻 Latvia [SNI-RU] max.ru",
-        "🇱🇻 Latvia [SNI-RU] max.ru-2",
-        "🇪🇪 Estonia [SNI-RU] max.ru",
-        "🇱🇻 Latvia [SNI-RU] max.ru-3"
+        "🇵🇱 Poland [SNI-RU] m.vk.com",
+        "🇷🇺 Russia | 🌐 [SNI-RU] sun6-21.userapi.com",
+        "🇬🇪 Georgia [SNI-RU] static.rutube.ru",
+        "🌐 Anycast-IP | 🇳🇱 🇸🇪 [SNI-RU] rutube.ru",
+        "🇵🇱 Poland [SNI-RU] ozon.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,49 +51,53 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇻 Latvia [SNI-RU] max.ru",
-        "🇱🇻 Latvia [SNI-RU] max.ru-2",
-        "🇪🇪 Estonia [SNI-RU] max.ru",
-        "🇱🇻 Latvia [SNI-RU] max.ru-3"
+        "🇵🇱 Poland [SNI-RU] m.vk.com",
+        "🇷🇺 Russia | 🌐 [SNI-RU] sun6-21.userapi.com",
+        "🇬🇪 Georgia [SNI-RU] static.rutube.ru",
+        "🌐 Anycast-IP | 🇳🇱 🇸🇪 [SNI-RU] rutube.ru",
+        "🇵🇱 Poland [SNI-RU] ozon.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇻 Latvia [SNI-RU] max.ru",
+      "tag": "🇵🇱 Poland [SNI-RU] m.vk.com",
       "type": "vless",
-      "server": "185.220.223.61",
-      "server_port": 8443,
-      "uuid": "2181d0c8-448a-4f75-b848-1718029baef9",
-      "flow": "xtls-rprx-vision",
+      "server": "104.222.177.160",
+      "server_port": 8447,
+      "uuid": "7b6c6542-f3f2-4ca8-aa37-38428cb3bc3a",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "m.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "-Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc",
-          "short_id": "afee962d"
+          "public_key": "pXqtZamxC_qxublGTL8rVZqNI_tt3Ul_GHhcKJPaoQ0",
+          "short_id": "862dcc4d"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "api"
       }
     },
     {
-      "tag": "🇱🇻 Latvia [SNI-RU] max.ru-2",
+      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] sun6-21.userapi.com",
       "type": "vless",
-      "server": "185.220.223.61",
-      "server_port": 8443,
-      "uuid": "2181d0c8-448a-4f75-b848-1718029baef9",
+      "server": "mts1.intibot.net",
+      "server_port": 443,
+      "uuid": "13869ce4-83ff-4ce4-8402-29992380b72e",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "sun6-21.userapi.com",
         "reality": {
           "enabled": true,
-          "public_key": "-Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc",
-          "short_id": "afee962d"
+          "public_key": "mkS-R_4CltAJIXexjRS0Lwp2pJ-xOhwKeL2X7CjMjhk",
+          "short_id": "a7f19254d0bd"
         },
         "utls": {
           "enabled": true,
@@ -101,19 +106,43 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia [SNI-RU] max.ru",
+      "tag": "🇬🇪 Georgia [SNI-RU] static.rutube.ru",
       "type": "vless",
-      "server": "89.125.13.67",
-      "server_port": 8443,
-      "uuid": "2181d0c8-448a-4f75-b848-1718029baef9",
+      "server": "31.77.72.142",
+      "server_port": 24499,
+      "uuid": "7b6c6542-f3f2-4ca8-aa37-38428cb3bc3a",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.rutube.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "M3KqrisYj59JaVKbhfXJGuaBbvkLjuY1CTXHOgYvsi0",
+          "short_id": "363183213d8ef8c8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇸🇪 [SNI-RU] rutube.ru",
+      "type": "vless",
+      "server": "jagger-3-ru.zrw.rutube-cdn.com",
+      "server_port": 443,
+      "uuid": "8f126e1e-2733-43b2-81ad-1fc66a8a1fb0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "rutube.ru",
         "reality": {
           "enabled": true,
-          "public_key": "-Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc",
-          "short_id": "afee962d"
+          "public_key": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+          "short_id": "a1b2c3d4e5f6789a"
         },
         "utls": {
           "enabled": true,
@@ -122,23 +151,23 @@
       }
     },
     {
-      "tag": "🇱🇻 Latvia [SNI-RU] max.ru-3",
+      "tag": "🇵🇱 Poland [SNI-RU] ozon.ru",
       "type": "vless",
-      "server": "185.220.223.61",
-      "server_port": 8443,
-      "uuid": "2181d0c8-448a-4f75-b848-1718029baef9",
+      "server": "104.222.177.160",
+      "server_port": 15959,
+      "uuid": "7b6c6542-f3f2-4ca8-aa37-38428cb3bc3a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "ozon.ru",
         "reality": {
           "enabled": true,
-          "public_key": "-Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc",
-          "short_id": "afee962d"
+          "public_key": "F6vZqvViEr1MUG3Kwwu5sQOnjzD2QtKXc9-DJakhpjY",
+          "short_id": "451485cf1faf5647"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     }
