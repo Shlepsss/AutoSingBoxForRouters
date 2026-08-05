@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-5",
-        "🇷🇺 Russia | 🌐 [*CIDR]-6",
-        "🇷🇺 Russia | 🌐 [*CIDR]-7",
-        "🇷🇺 Russia | 🌐 [*CIDR]-8",
-        "🇷🇺 Russia | 🌐 [*CIDR]-9",
-        "🇷🇺 Russia | 🌐 | [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇸🇪 Sweden [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇸🇪 Sweden [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,34 +51,39 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-5",
-        "🇷🇺 Russia | 🌐 [*CIDR]-6",
-        "🇷🇺 Russia | 🌐 [*CIDR]-7",
-        "🇷🇺 Russia | 🌐 [*CIDR]-8",
-        "🇷🇺 Russia | 🌐 [*CIDR]-9",
-        "🇷🇺 Russia | 🌐 | [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇸🇪 Sweden [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇸🇪 Sweden [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "cr-r1.astralweb.tech",
+      "server": "72.56.7.195",
+      "server_port": 2200,
+      "uuid": "31c2a8e8-0ab2-4f3f-8767-11f3a35d4228",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
+      "type": "vless",
+      "server": "37.18.15.41",
       "server_port": 443,
-      "uuid": "cd1673b3-7cec-4fe6-bedf-b534eb54e647",
-      "flow": "xtls-rprx-vision",
+      "uuid": "5cd8fc43-878f-11f1-8c93-54db13ea7d40",
       "tls": {
         "enabled": true,
-        "server_name": "cr-r1.astralweb.tech",
+        "server_name": "www.nvidia.com",
         "reality": {
           "enabled": true,
-          "public_key": "Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q",
-          "short_id": "496ee75c2f91f51d"
+          "public_key": "XZeD6_It9XHw6A0p6GCSJHDzLCT9AFvDaiNrpQpMRXE",
+          "short_id": "51d3e4f6"
         },
         "utls": {
           "enabled": true,
@@ -92,135 +92,62 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "tag": "🇸🇪 Sweden [*CIDR]",
       "type": "vless",
-      "server": "104.171.134.235",
-      "server_port": 4100,
-      "uuid": "bceda826-c83c-45d0-891e-15c4bfec76bc",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "109.73.196.160",
-      "server_port": 4100,
-      "uuid": "5d0206d9-fb42-4c8b-a84b-3d95ab0f42c7",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
-      "type": "vless",
-      "server": "194.26.229.219",
-      "server_port": 4100,
-      "uuid": "099c6e3f-e8d3-41d4-95f2-ef2eafb51cdc",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-5",
-      "type": "vless",
-      "server": "194.26.229.217",
-      "server_port": 2200,
-      "uuid": "e58a0802-443e-4ba3-992b-73687bb5b9f0",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-6",
-      "type": "vless",
-      "server": "194.26.229.220",
-      "server_port": 4100,
-      "uuid": "aef0e934-09d7-4b8f-b3bc-de78d2eec928",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-7",
-      "type": "vless",
-      "server": "194.26.229.220",
-      "server_port": 2200,
-      "uuid": "47947923-49ac-49f8-86ed-2912bcbf2d18",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-8",
-      "type": "vless",
-      "server": "31.177.82.106",
-      "server_port": 4100,
-      "uuid": "5d0fbb28-3be3-4044-bc5b-e4b7ca1916c7",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-9",
-      "type": "vless",
-      "server": "31.177.82.106",
-      "server_port": 2200,
-      "uuid": "5d0fbb28-3be3-4044-bc5b-e4b7ca1916c7",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "cr-r1.astralweb.tech",
+      "server": "84.38.187.169",
       "server_port": 443,
-      "uuid": "cd1673b3-7cec-4fe6-bedf-b534eb54e647",
-      "flow": "xtls-rprx-vision",
+      "uuid": "7aa508f3-176f-0024-add3-646af94d6288",
       "tls": {
         "enabled": true,
-        "server_name": "cr-r1.astralweb.tech",
+        "server_name": "mc.yandex.tr",
         "reality": {
           "enabled": true,
-          "public_key": "Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q",
-          "short_id": "496ee75c2f91f51d"
+          "public_key": "rJMYW6mHgjs61mHxfm8Gmm_Re23sV_xe5b0IrTpLsiQ",
+          "short_id": "94c9dbbf07366d96"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+      "type": "vless",
+      "server": "37.18.15.41",
+      "server_port": 443,
+      "uuid": "5cd8fc43-878f-11f1-8c93-54db13ea7d40",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.nvidia.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "XZeD6_It9XHw6A0p6GCSJHDzLCT9AFvDaiNrpQpMRXE",
+          "short_id": "51d3e4f6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden [*CIDR]-2",
+      "type": "vless",
+      "server": "185.137.232.194",
+      "server_port": 443,
+      "uuid": "7aa508f3-176f-0024-add3-646af94d6288",
+      "tls": {
+        "enabled": true,
+        "server_name": "aispir.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
+          "short_id": "8ba6e72ee60667f6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     }
