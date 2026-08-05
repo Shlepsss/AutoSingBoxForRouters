@@ -31,153 +31,26 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-2",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-3",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-4",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-5"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-2",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-3",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-4",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-5"
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru"
       ],
-      "default": "auto",
+      "default": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru",
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
       "type": "vless",
-      "server": "eu-gw.videomonitor.cloud",
-      "server_port": 2053,
-      "uuid": "e85915ce-90e2-11f1-83fa-daec65f704fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0",
-          "short_id": "2c60309fa586eb60"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
+      "server": "201.24.120.68",
+      "server_port": 4100,
+      "uuid": "59525c39-e731-4c27-bc9e-6d8cef67572c",
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-2",
-      "type": "vless",
-      "server": "eu-gw.videomonitor.cloud",
-      "server_port": 2053,
-      "uuid": "e85915ce-90e2-11f1-83fa-daec65f704fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0",
-          "short_id": "2c60309fa586eb60"
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-3",
-      "type": "vless",
-      "server": "eu-gw.videomonitor.cloud",
-      "server_port": 2053,
-      "uuid": "e85915ce-90e2-11f1-83fa-daec65f704fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0",
-          "short_id": "2c60309fa586eb60"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-4",
-      "type": "vless",
-      "server": "eu-gw.videomonitor.cloud",
-      "server_port": 2053,
-      "uuid": "e85915ce-90e2-11f1-83fa-daec65f704fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0",
-          "short_id": "2c60309fa586eb60"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru-5",
-      "type": "vless",
-      "server": "eu-gw.videomonitor.cloud",
-      "server_port": 2053,
-      "uuid": "e85915ce-90e2-11f1-83fa-daec65f704fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0",
-          "short_id": "2c60309fa586eb60"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
+        "path": "/v1"
       }
     }
   ],
