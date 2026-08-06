@@ -31,88 +31,13 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] max.ru",
-        "🇫🇮 Finland [SNI-RU] ya.ru"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] max.ru",
         "🇫🇮 Finland [SNI-RU] ya.ru"
       ],
-      "default": "auto",
+      "default": "🇫🇮 Finland [SNI-RU] ya.ru",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-      "type": "vless",
-      "server": "201.24.118.145",
-      "server_port": 4100,
-      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "russia.vypnet.su",
-      "server_port": 8443,
-      "uuid": "c124a209-d949-4951-8234-e2d918b3e6c0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "russia.vypnet.su",
-      "server_port": 8443,
-      "uuid": "c124a209-d949-4951-8234-e2d918b3e6c0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
     },
     {
       "tag": "🇫🇮 Finland [SNI-RU] ya.ru",
