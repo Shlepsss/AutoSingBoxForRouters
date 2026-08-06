@@ -34,11 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-5"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 [*CIDR]-5",
+        "🇷🇺 Russia | 🌐 [*CIDR]-6",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-7"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,51 +56,82 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-5"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 [*CIDR]-5",
+        "🇷🇺 Russia | 🌐 [*CIDR]-6",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-7"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "ruded2.onlinestreamself.com",
+      "server": "wx-deu-037.cdnphotos.org",
       "server_port": 443,
-      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
-      "flow": "xtls-rprx-vision",
+      "uuid": "77930005-ea92-44dc-9d94-e9192427f519",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w",
-          "short_id": ""
-        },
+        "server_name": "wx-deu-037.cdnphotos.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "94.126.204.43",
+      "server": "cr-r1.astralweb.tech",
       "server_port": 443,
-      "uuid": "35699c54-9188-4f43-972e-e8e42dbb104e",
+      "uuid": "cd1673b3-7cec-4fe6-bedf-b534eb54e647",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "cr-r1.astralweb.tech",
         "reality": {
           "enabled": true,
-          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
-          "short_id": ""
+          "public_key": "Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q",
+          "short_id": "496ee75c2f91f51d"
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "5.129.252.140",
+      "server_port": 4100,
+      "uuid": "eb135f2b-4b9e-4abb-9a89-78242613da61",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
+      "type": "vless",
+      "server": "wx-deu-022.cdnphotos.org",
+      "server_port": 443,
+      "uuid": "2cca8201-c93e-40eb-bd8a-fea4170c169e",
+      "tls": {
+        "enabled": true,
+        "server_name": "wx-deu-022.cdnphotos.org",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -103,18 +139,67 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
       "type": "vless",
-      "server": "94.139.251.189",
+      "server": "46.8.158.22",
       "server_port": 443,
-      "uuid": "35699c54-9188-4f43-972e-e8e42dbb104e",
+      "uuid": "89755337-8050-401c-86d1-c8c34fb88d89",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.icloud.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wdWQNp1lnaFZ3L_r9hRK5vpVgv9M7UBb5JZuYPcWDAE",
+          "short_id": "e96bc8c85c3836"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
+      "type": "vless",
+      "server": "138.16.152.239",
+      "server_port": 443,
+      "uuid": "26554985-427e-4dbc-907e-a8dc7b9052d2",
+      "tls": {
+        "enabled": true,
+        "server_name": "rus.node.sillyvpn.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-5",
+      "type": "vless",
+      "server": "130.49.148.134",
+      "server_port": 8880,
+      "uuid": "b1cf484e-651f-432b-b086-f148e010669e",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rutube.ummapeople.online"
+        },
+        "path": "/rutube"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-6",
+      "type": "vless",
+      "server": "188.225.33.206",
+      "server_port": 8443,
+      "uuid": "c124a209-d949-4951-8234-e2d918b3e6c0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
+          "public_key": "C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc",
           "short_id": ""
         },
         "utls": {
@@ -124,45 +209,31 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
       "type": "vless",
-      "server": "94.139.251.9",
-      "server_port": 443,
-      "uuid": "eadcacfa-ef1a-4901-a28b-8815fa1962a5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
-          "short_id": ""
+      "server": "104.171.134.235",
+      "server_port": 4100,
+      "uuid": "bceda826-c83c-45d0-891e-15c4bfec76bc",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-5",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-7",
       "type": "vless",
-      "server": "94.139.251.9",
-      "server_port": 443,
-      "uuid": "35699c54-9188-4f43-972e-e8e42dbb104e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE",
-          "short_id": ""
+      "server": "194.26.229.218",
+      "server_port": 2200,
+      "uuid": "af325624-e28d-44fd-a8a7-058a439d128f",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "path": "/v1"
       }
     }
   ],
