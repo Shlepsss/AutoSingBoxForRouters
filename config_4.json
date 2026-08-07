@@ -34,9 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] ya.ru",
+        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] ya.ru-2",
+        "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 | [SNI-RU] api-maps.yandex.ru",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom [SNI-RU] www.avito.ru"
+        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -49,26 +51,79 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] ya.ru",
+        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] ya.ru-2",
+        "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 | [SNI-RU] api-maps.yandex.ru",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom [SNI-RU] www.avito.ru"
+        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [SNI-RU] ya.ru",
       "type": "vless",
-      "server": "201.24.118.145",
-      "server_port": 4100,
-      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
+      "server": "85.158.110.123",
+      "server_port": 33190,
+      "uuid": "ed5bbbb2-5bbb-4f44-aacf-f12425c49bb7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ddSnH0_BkMRPRCvSn34_bkJ1CufC0cAveQEIOQ0MLXA",
+          "short_id": "aabbccdd"
         },
-        "path": "/v1"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 | [SNI-RU] ya.ru-2",
+      "type": "vless",
+      "server": "85.158.110.123",
+      "server_port": 33190,
+      "uuid": "ed5bbbb2-5bbb-4f44-aacf-f12425c49bb7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ddSnH0_BkMRPRCvSn34_bkJ1CufC0cAveQEIOQ0MLXA",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "78.159.245.230",
+      "server_port": 1111,
+      "uuid": "28629240-2a26-48ea-9149-5dce8bcbd5f4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "packet_encoding": "xudp"
     },
     {
       "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
@@ -92,11 +147,11 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
+      "tag": "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru",
       "type": "vless",
       "server": "194.150.166.12",
       "server_port": 443,
-      "uuid": "f1c496bf-d2ab-45be-bc13-051d60d227b7",
+      "uuid": "1e973bda-3a02-4431-9df8-83595f6f65d8",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -108,7 +163,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       }
     }
