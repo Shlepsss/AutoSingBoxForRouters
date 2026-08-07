@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] VK-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3"
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,40 +56,73 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] VK-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3"
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "ru6.ethicsdinnerpave.online",
+      "server_port": 443,
+      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru6.ethicsdinnerpave.online",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "168.222.141.146",
+      "server": "104.171.136.112",
       "server_port": 2200,
-      "uuid": "bceda826-c83c-45d0-891e-15c4bfec76bc",
+      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
       "transport": {
         "type": "ws",
         "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "135.106.140.23",
+      "server": "176.98.178.17",
+      "server_port": 4100,
+      "uuid": "87f3bc47-ee10-4418-9260-7a4e43f28e00",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "ru6.ethicsdinnerpave.online",
       "server_port": 443,
       "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
       "tls": {
         "enabled": true,
-        "server_name": "qwesd.rutendingaltos.top",
+        "server_name": "ru6.ethicsdinnerpave.online",
         "alpn": [
           "h2",
           "http/1.1"
@@ -101,28 +134,48 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
       "type": "vless",
-      "server": "37.77.106.249",
+      "server": "194.26.229.207",
+      "server_port": 2200,
+      "uuid": "f2d2907c-1d74-43eb-8fd2-fc55dfd92427",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "qwesd.rutendingaltos.top",
       "server_port": 443,
-      "uuid": "23e18cb4-9db3-4eb1-93d3-26c62095159d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
       "tls": {
         "enabled": true,
-        "server_name": "vkvideo.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "xSvlclDt9Oz7WKqoCCyuT3mEGnLwyp5ciOUClsZADH8",
-          "short_id": "d4331052"
-        },
+        "server_name": "qwesd.rutendingaltos.top",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
+      "type": "vless",
+      "server": "194.26.229.209",
+      "server_port": 2200,
+      "uuid": "894c0b5f-5ea8-41ca-96ad-1892766b74c3",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "135.106.140.23",
       "server_port": 443,
@@ -141,62 +194,18 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK",
+      "tag": "🇷🇺 Russia [*CIDR]-5",
       "type": "vless",
-      "server": "37.139.43.57",
+      "server": "ru6.ethicsdinnerpave.online",
       "server_port": 443,
-      "uuid": "ceeba701-bb9f-4f2c-8142-677d27a2acb1",
-      "flow": "xtls-rprx-vision",
+      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
       "tls": {
         "enabled": true,
-        "server_name": "eh.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3v-9P94hjSE1fw6we1J4RvyIYnFhySQUAe1DUKqkaBo",
-          "short_id": "7f2e9c4b1a8d6a53"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
-      "type": "vless",
-      "server": "37.139.43.57",
-      "server_port": 443,
-      "uuid": "ceeba701-bb9f-4f2c-8142-677d27a2acb1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3v-9P94hjSE1fw6we1J4RvyIYnFhySQUAe1DUKqkaBo",
-          "short_id": "7f2e9c4b1a8d6a53"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "37.139.43.57",
-      "server_port": 443,
-      "uuid": "ceeba701-bb9f-4f2c-8142-677d27a2acb1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3v-9P94hjSE1fw6we1J4RvyIYnFhySQUAe1DUKqkaBo",
-          "short_id": "7f2e9c4b1a8d6a53"
-        },
+        "server_name": "ru6.ethicsdinnerpave.online",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
@@ -204,61 +213,17 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK-3",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "37.139.43.57",
-      "server_port": 443,
-      "uuid": "ceeba701-bb9f-4f2c-8142-677d27a2acb1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3v-9P94hjSE1fw6we1J4RvyIYnFhySQUAe1DUKqkaBo",
-          "short_id": "7f2e9c4b1a8d6a53"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "135.106.140.23",
+      "server": "178.72.162.73",
       "server_port": 443,
       "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
       "tls": {
         "enabled": true,
-        "server_name": "qwesd.rutendingaltos.top",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "ru6.ethicsdinnerpave.online",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "135.106.140.23",
-      "server_port": 443,
-      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
-      "tls": {
-        "enabled": true,
-        "server_name": "qwesd.rutendingaltos.top",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     }
