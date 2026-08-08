@@ -31,70 +31,36 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] YA-2"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇳🇱 The Netherlands | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] YA-2"
+        "🇹🇷 Turkey [*CIDR] CDN"
       ],
-      "default": "auto",
+      "default": "🇹🇷 Turkey [*CIDR] CDN",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
+      "tag": "🇹🇷 Turkey [*CIDR] CDN",
       "type": "vless",
-      "server": "84.201.165.255",
-      "server_port": 443,
-      "uuid": "78cffcbe-e2c2-40ba-ae4e-f28481b44134",
+      "server": "37.18.14.89",
+      "server_port": 8443,
+      "uuid": "ad304eb2-5eca-0005-9983-74ae935ba10e",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "5post-gate-test.x5.ru",
+        "insecure": true,
+        "server_name": "rutube.ru",
         "reality": {
           "enabled": true,
-          "public_key": "qLFSSEWnKNXlotAx3Im0iojw-IZ8yvT4mZm5Ayc4oAQ",
-          "short_id": "12e06d91e8e6842e"
+          "public_key": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "short_id": "43dcff53849b81e6"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
-      "type": "vless",
-      "server": "84.201.165.255",
-      "server_port": 443,
-      "uuid": "78cffcbe-e2c2-40ba-ae4e-f28481b44134",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "5post-gate-test.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "qLFSSEWnKNXlotAx3Im0iojw-IZ8yvT4mZm5Ayc4oAQ",
-          "short_id": "12e06d91e8e6842e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
+      },
+      "packet_encoding": "xudp"
     }
   ],
   "route": {
