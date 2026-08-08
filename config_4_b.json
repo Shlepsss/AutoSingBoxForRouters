@@ -34,10 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru-2",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] api-maps.yandex.ru",
         "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,20 +51,44 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru-2",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] api-maps.yandex.ru",
         "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "78.159.245.230",
+      "server_port": 1111,
+      "uuid": "28629240-2a26-48ea-9149-5dce8bcbd5f4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
       "type": "vless",
       "server": "194.150.166.12",
       "server_port": 443,
-      "uuid": "1e973bda-3a02-4431-9df8-83595f6f65d8",
+      "uuid": "f1c496bf-d2ab-45be-bc13-051d60d227b7",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -75,12 +100,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru-2",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
       "type": "vless",
       "server": "194.150.166.12",
       "server_port": 443,
@@ -101,46 +126,50 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "194.150.166.12",
-      "server_port": 443,
-      "uuid": "f1c496bf-d2ab-45be-bc13-051d60d227b7",
+      "server": "78.159.245.230",
+      "server_port": 1111,
+      "uuid": "28629240-2a26-48ea-9149-5dce8bcbd5f4",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.avito.ru",
+        "insecure": true,
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "b75SrHI--As9QxOVfRIPkGmGfXjs53CGAjbws2K99Rs",
+          "public_key": "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
-      }
+      },
+      "packet_encoding": "xudp"
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
-      "server": "194.150.166.12",
-      "server_port": 443,
-      "uuid": "f1c496bf-d2ab-45be-bc13-051d60d227b7",
+      "server": "78.159.245.230",
+      "server_port": 1111,
+      "uuid": "28629240-2a26-48ea-9149-5dce8bcbd5f4",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.avito.ru",
+        "insecure": true,
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "b75SrHI--As9QxOVfRIPkGmGfXjs53CGAjbws2K99Rs",
+          "public_key": "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
+      },
+      "packet_encoding": "xudp"
     }
   ],
   "route": {
