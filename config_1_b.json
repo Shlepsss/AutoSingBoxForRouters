@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] CDN",
         "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7"
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR] CDN-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] CDN",
         "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7"
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR] CDN-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "80.93.52.44",
+      "server_port": 4100,
+      "uuid": "2216b0ee-b94a-4ea9-8780-ccc21c4b5f31",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -85,22 +99,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "178.72.162.73",
-      "server_port": 443,
-      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
-      "tls": {
-        "enabled": true,
-        "server_name": "wqeds.denverpresents.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
@@ -115,7 +114,7 @@
         "server_name": "qwesd.rutendingaltos.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -127,10 +126,46 @@
       "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
       "tls": {
         "enabled": true,
+        "server_name": "ru6.ethicsdinnerpave.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "178.72.162.73",
+      "server_port": 443,
+      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
+      "tls": {
+        "enabled": true,
         "server_name": "wqeds.denverpresents.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] CDN",
+      "type": "vless",
+      "server": "81.94.148.119",
+      "server_port": 43000,
+      "uuid": "25d25f21-7a9e-426f-8c14-0c06782585ff",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "iv.kommersant.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CH7SpnfklhoBKYhez8VhcLzr9wzFkvbKAThOU_3y9lE",
+          "short_id": "7523ef69"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
@@ -150,56 +185,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "178.72.162.73",
-      "server_port": 443,
-      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru6.ethicsdinnerpave.online",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia [*CIDR]-5",
-      "type": "vless",
-      "server": "135.106.140.23",
-      "server_port": 443,
-      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
-      "tls": {
-        "enabled": true,
-        "server_name": "qwesd.rutendingaltos.top",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "135.106.140.23",
-      "server_port": 443,
-      "uuid": "60ba3369-9a78-40fe-98c3-233a6f107043",
-      "tls": {
-        "enabled": true,
-        "server_name": "qwesd.rutendingaltos.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
       "type": "vless",
       "server": "178.72.162.73",
       "server_port": 443,
@@ -209,12 +195,12 @@
         "server_name": "wqeds.denverpresents.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-7",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
       "server": "135.106.140.23",
       "server_port": 443,
@@ -222,13 +208,30 @@
       "tls": {
         "enabled": true,
         "server_name": "qwesd.rutendingaltos.top",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-2",
+      "type": "vless",
+      "server": "81.94.148.119",
+      "server_port": 43000,
+      "uuid": "25d25f21-7a9e-426f-8c14-0c06782585ff",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "iv.kommersant.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CH7SpnfklhoBKYhez8VhcLzr9wzFkvbKAThOU_3y9lE",
+          "short_id": "7523ef69"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }

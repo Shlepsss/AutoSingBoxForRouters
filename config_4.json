@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru",
         "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-2",
+        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru",
         "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru-2",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-2"
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,34 +51,61 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru",
         "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-2",
+        "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru",
         "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru-2",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-2"
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "194.150.166.12",
-      "server_port": 443,
-      "uuid": "f1c496bf-d2ab-45be-bc13-051d60d227b7",
-      "flow": "xtls-rprx-vision",
+      "server": "85.192.41.222",
+      "server_port": 25565,
+      "uuid": "086422b2-3347-45f8-b527-d9e1be25dc56",
       "tls": {
         "enabled": true,
-        "server_name": "www.avito.ru",
+        "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "b75SrHI--As9QxOVfRIPkGmGfXjs53CGAjbws2K99Rs",
-          "short_id": ""
+          "public_key": "pBd5IOD_sCDpIDqgi6EtZ6DAAMGns9n2C3qPH0i3Tno",
+          "short_id": "0e29dc68"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "UpdateService"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-2",
+      "type": "vless",
+      "server": "85.192.41.222",
+      "server_port": 25565,
+      "uuid": "086422b2-3347-45f8-b527-d9e1be25dc56",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "pBd5IOD_sCDpIDqgi6EtZ6DAAMGns9n2C3qPH0i3Tno",
+          "short_id": "0e29dc68"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "UpdateService"
       }
     },
     {
@@ -103,30 +130,6 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru",
-      "type": "vless",
-      "server": "85.192.41.222",
-      "server_port": 25565,
-      "uuid": "086422b2-3347-45f8-b527-d9e1be25dc56",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "pBd5IOD_sCDpIDqgi6EtZ6DAAMGns9n2C3qPH0i3Tno",
-          "short_id": "0e29dc68"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "UpdateService"
-      }
-    },
-    {
       "tag": "🇬🇧 United Kingdom | [SNI-RU] www.avito.ru-2",
       "type": "vless",
       "server": "194.150.166.12",
@@ -148,7 +151,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-2",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [SNI-RU] yandex.ru-3",
       "type": "vless",
       "server": "85.192.41.222",
       "server_port": 25565,
@@ -163,7 +166,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       },
       "transport": {
