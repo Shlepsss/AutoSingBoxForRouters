@@ -34,11 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [SNI-RU] max.ru",
         "🇩🇪 Germany | [SNI-RU] max.ru",
-        "🇷🇺 Russia | [SNI-RU] max.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
-        "🇩🇪 Germany | [SNI-RU] ads.x5.ru"
+        "🇩🇪 Germany | [SNI-RU] max.ru-2",
+        "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
+        "🇳🇱 The Netherlands [SNI-RU] id.vk.com-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +50,93 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [SNI-RU] max.ru",
         "🇩🇪 Germany | [SNI-RU] max.ru",
-        "🇷🇺 Russia | [SNI-RU] max.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
-        "🇩🇪 Germany | [SNI-RU] ads.x5.ru"
+        "🇩🇪 Germany | [SNI-RU] max.ru-2",
+        "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
+        "🇳🇱 The Netherlands [SNI-RU] id.vk.com-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru",
+      "tag": "🇩🇪 Germany | [SNI-RU] max.ru",
       "type": "vless",
-      "server": "mws-fc-1.ghost-lan.com",
-      "server_port": 9441,
-      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
+      "server": "nl.n.belka.network",
+      "server_port": 443,
+      "uuid": "1b7ee703-fa08-4305-8469-ae3e30e61e44",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "xTk5dX6E0DGuQj19bWDMafx13XoUK8euqlmtwJIg8wY",
-          "short_id": "8a7137d4e9c49b9c"
+          "public_key": "U8yhhQTieIzorSj_S2ZGKlac4zfbP1d_ywFAn-7NGDs",
+          "short_id": "8f3e9c4b1a8d6e53"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [SNI-RU] max.ru-2",
+      "type": "vless",
+      "server": "nl.n.belka.network",
+      "server_port": 443,
+      "uuid": "1b7ee703-fa08-4305-8469-ae3e30e61e44",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "U8yhhQTieIzorSj_S2ZGKlac4zfbP1d_ywFAn-7NGDs",
+          "short_id": "8f3e9c4b1a8d6e53"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "ns.1tut1.click",
+      "server_port": 443,
+      "uuid": "78c407f6-3f20-426e-94ea-7227e760c180",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com-2",
+      "type": "vless",
+      "server": "ns.1tut1.click",
+      "server_port": 443,
+      "uuid": "78c407f6-3f20-426e-94ea-7227e760c180",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -81,96 +145,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tuning-stream"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "asffff.falsemirrov.com",
-      "server_port": 443,
-      "uuid": "6d5368cb-bd20-4b65-9c0b-2ad8937f11d7",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Z0Pvb9937hVW9Ch_um5DG00t6n9lXLfpcFRUT64cJRc",
-          "short_id": "27e53bbcab7593d7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru-2",
-      "type": "vless",
-      "server": "mws-fc-1.ghost-lan.com",
-      "server_port": 9441,
-      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "xTk5dX6E0DGuQj19bWDMafx13XoUK8euqlmtwJIg8wY",
-          "short_id": "8a7137d4e9c49b9c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tuning-stream"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "mws-fc-1.ghost-lan.com",
-      "server_port": 9444,
-      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "bqLr1d3mbuP10WAYxWj8OEdSuZlVvrywrKq2U6ACw2w",
-          "short_id": "12b9ecabbf3a3b88"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "ge1.frservice.xyz",
-      "server_port": 8443,
-      "uuid": "78cffcbe-e2c2-40ba-ae4e-f28481b44134",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "tq-NlyGDOG2oMoUFRYA_PGKrGnQymjdz8PRmGV6l_Sw",
-          "short_id": "879f217d974a66ba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
+        "service_name": "vless-grpc-reality"
       }
     }
   ],
