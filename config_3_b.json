@@ -31,36 +31,70 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇹🇷 Turkey [*CIDR] CDN"
+        "🇩🇪 Germany | 🌐 [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 [*CIDR] YA-2"
       ],
-      "default": "🇹🇷 Turkey [*CIDR] CDN",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇹🇷 Turkey [*CIDR] CDN",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇩🇪 Germany | 🌐 [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 [*CIDR] YA-2"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "37.18.14.89",
-      "server_port": 8443,
-      "uuid": "ad304eb2-5eca-0005-9983-74ae935ba10e",
+      "server": "84.201.131.26",
+      "server_port": 443,
+      "uuid": "9a1f9a5d-6217-0001-929c-99f74c2fd633",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "rutube.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "short_id": "43dcff53849b81e6"
+          "public_key": "UglOQ6lT0FWTb3NMsD6L_P_uCk8DDvbJqJcc2Nb4znA",
+          "short_id": "5cc8834656489bbc"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
-      },
-      "packet_encoding": "xudp"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA-2",
+      "type": "vless",
+      "server": "178.154.219.245",
+      "server_port": 443,
+      "uuid": "9a1f9a5d-6217-0001-929c-99f74c2fd633",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "UglOQ6lT0FWTb3NMsD6L_P_uCk8DDvbJqJcc2Nb4znA",
+          "short_id": "5cc8834656489bbc"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     }
   ],
   "route": {
