@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru"
+        "🇷🇺 Russia [SNI-RU] max.ru",
+        "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
+        "🇷🇺 Russia [SNI-RU] max.ru-2",
+        "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+        "🇳🇱 The Netherlands [SNI-RU] id.vk.com"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,109 +51,89 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru"
+        "🇷🇺 Russia [SNI-RU] max.ru",
+        "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
+        "🇷🇺 Russia [SNI-RU] max.ru-2",
+        "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+        "🇳🇱 The Netherlands [SNI-RU] id.vk.com"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
+      "tag": "🇷🇺 Russia [SNI-RU] max.ru",
       "type": "vless",
-      "server": "185.215.187.212",
-      "server_port": 8443,
-      "uuid": "42fef924-2cbc-4a41-9b95-0ea9b4ff850e",
+      "server": "mws-fc-1.ghost-lan.com",
+      "server_port": 9441,
+      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
       "tls": {
         "enabled": true,
         "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "9wfsGBdHj4v57u3U-YDUrqyHcBzZP_43xYXw0aT_UHE",
-          "short_id": "6ba85179e30d4fc2"
+          "public_key": "xTk5dX6E0DGuQj19bWDMafx13XoUK8euqlmtwJIg8wY",
+          "short_id": "8a7137d4e9c49b9c"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tuning-stream"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
+      "tag": "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
       "type": "vless",
-      "server": "213.193.254.59",
-      "server_port": 8443,
-      "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
+      "server": "ns.o11111o.club",
+      "server_port": 443,
+      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
       "tls": {
         "enabled": true,
-        "server_name": "avatars.mds.yandex.net",
+        "server_name": "id.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-yandex"
+        "service_name": "vless-grpc-reality"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
+      "tag": "🇷🇺 Russia [SNI-RU] max.ru-2",
       "type": "vless",
-      "server": "217.179.220.67",
-      "server_port": 8443,
-      "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
+      "server": "mws-fc-1.ghost-lan.com",
+      "server_port": 9441,
+      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
       "tls": {
         "enabled": true,
-        "server_name": "avatars.mds.yandex.net",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+          "public_key": "xTk5dX6E0DGuQj19bWDMafx13XoUK8euqlmtwJIg8wY",
+          "short_id": "8a7137d4e9c49b9c"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-yandex"
+        "service_name": "grpc-tuning-stream"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3",
-      "type": "vless",
-      "server": "uk.riotvpn.eu",
-      "server_port": 8443,
-      "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
-      "tls": {
-        "enabled": true,
-        "server_name": "avatars.mds.yandex.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+      "tag": "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "78.159.245.249",
       "server_port": 1111,
@@ -172,6 +152,31 @@
           "fingerprint": "chrome"
         }
       }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "ns.1tut1.click",
+      "server_port": 443,
+      "uuid": "78c407f6-3f20-426e-94ea-7227e760c180",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      },
+      "packet_encoding": "xudp"
     }
   ],
   "route": {
