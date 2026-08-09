@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] vk.ru",
         "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] max.ru",
         "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3"
+        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,56 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany [SNI-RU] vk.ru",
         "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] max.ru",
         "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3"
+        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "78.159.245.249",
+      "server_port": 1111,
+      "uuid": "e04a778c-4c83-4fe0-9f52-e6b7bcb59c7c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [SNI-RU] vk.ru",
+      "type": "vless",
+      "server": "193.58.122.41",
+      "server_port": 8443,
+      "uuid": "695a935b-5d8b-4468-ba7c-5f2a02e3356e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "MEwjYdJUYh3zM9Z1YiO5msx2bOu4h1wk_2TYPBCf9Ww",
+          "short_id": "9c930be003a75523"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
     },
     {
       "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
@@ -76,7 +118,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         }
       },
       "transport": {
@@ -85,32 +127,11 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "nl.n.belka.network",
-      "server_port": 443,
-      "uuid": "1b7ee703-fa08-4305-8469-ae3e30e61e44",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "U8yhhQTieIzorSj_S2ZGKlac4zfbP1d_ywFAn-7NGDs",
-          "short_id": "8f3e9c4b1a8d6e53"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
       "tag": "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
       "type": "vless",
       "server": "194.150.166.12",
       "server_port": 443,
-      "uuid": "f1c496bf-d2ab-45be-bc13-051d60d227b7",
+      "uuid": "1e973bda-3a02-4431-9df8-83595f6f65d8",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -142,32 +163,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3",
-      "type": "vless",
-      "server": "217.179.220.67",
-      "server_port": 8443,
-      "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
-      "tls": {
-        "enabled": true,
-        "server_name": "avatars.mds.yandex.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
