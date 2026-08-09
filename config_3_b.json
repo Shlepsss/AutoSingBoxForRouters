@@ -31,29 +31,12 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇫🇷 France [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇫🇷 France [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA"
+        "🇷🇺 Russia [*CIDR] VK"
       ],
-      "default": "auto",
+      "default": "🇷🇺 Russia [*CIDR] VK",
       "interrupt_exist_connections": false
     },
     {
@@ -74,48 +57,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.88.153",
-      "server_port": 443,
-      "uuid": "299705ce-707c-44e0-9dbe-002ec9517756",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.158.85",
-      "server_port": 443,
-      "uuid": "299705ce-707c-44e0-9dbe-002ec9517756",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       }
     }
