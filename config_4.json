@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
         "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2"
+        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
+        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
         "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2"
+        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
+        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
-      "type": "vless",
-      "server": "ns.1tut1.click",
-      "server_port": 443,
-      "uuid": "78c407f6-3f20-426e-94ea-7227e760c180",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
     },
     {
       "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
@@ -105,30 +81,9 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "78.159.245.249",
-      "server_port": 1111,
-      "uuid": "e04a778c-4c83-4fe0-9f52-e6b7bcb59c7c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
       "type": "vless",
-      "server": "217.179.220.67",
+      "server": "213.193.254.59",
       "server_port": 8443,
       "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
       "tls": {
@@ -141,7 +96,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -171,6 +126,51 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-yandex"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3",
+      "type": "vless",
+      "server": "uk.riotvpn.eu",
+      "server_port": 8443,
+      "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
+      "tls": {
+        "enabled": true,
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-yandex"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "78.159.245.249",
+      "server_port": 1111,
+      "uuid": "e04a778c-4c83-4fe0-9f52-e6b7bcb59c7c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
