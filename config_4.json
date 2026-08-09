@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
         "🇷🇺 Russia [SNI-RU] max.ru",
         "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
         "🇷🇺 Russia [SNI-RU] max.ru-2",
-        "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com"
+        "🇳🇱 The Netherlands [SNI-RU] max.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
         "🇷🇺 Russia [SNI-RU] max.ru",
         "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
         "🇷🇺 Russia [SNI-RU] max.ru-2",
-        "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com"
+        "🇳🇱 The Netherlands [SNI-RU] max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "ns.o11111o.club",
+      "server_port": 443,
+      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
     },
     {
       "tag": "🇷🇺 Russia [SNI-RU] max.ru",
@@ -87,7 +111,7 @@
     {
       "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
       "type": "vless",
-      "server": "uk.riotvpn.eu",
+      "server": "217.179.220.67",
       "server_port": 8443,
       "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
       "tls": {
@@ -100,7 +124,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -133,51 +157,24 @@
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 [SNI-RU] id.vk.com",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] max.ru",
       "type": "vless",
-      "server": "ns.o11111o.club",
-      "server_port": 443,
-      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
+      "server": "mws-fc-1.ghost-lan.com",
+      "server_port": 9444,
+      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
-      "type": "vless",
-      "server": "ns.1tut1.click",
-      "server_port": 443,
-      "uuid": "78c407f6-3f20-426e-94ea-7227e760c180",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+          "public_key": "bqLr1d3mbuP10WAYxWj8OEdSuZlVvrywrKq2U6ACw2w",
+          "short_id": "12b9ecabbf3a3b88"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
       }
     }
   ],
