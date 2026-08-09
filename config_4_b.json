@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [SNI-RU] vk.ru",
         "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
+        "🇩🇪 Germany [SNI-RU] vk.ru",
+        "🇩🇪 Germany [SNI-RU] max.ru",
         "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3"
+        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [SNI-RU] vk.ru",
         "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
+        "🇩🇪 Germany [SNI-RU] vk.ru",
+        "🇩🇪 Germany [SNI-RU] max.ru",
         "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
-        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3"
+        "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
+      "type": "vless",
+      "server": "217.179.220.67",
+      "server_port": 8443,
+      "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
+      "tls": {
+        "enabled": true,
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-yandex"
+      }
     },
     {
       "tag": "🇩🇪 Germany [SNI-RU] vk.ru",
@@ -82,29 +106,25 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net",
+      "tag": "🇩🇪 Germany [SNI-RU] max.ru",
       "type": "vless",
-      "server": "217.179.220.67",
-      "server_port": 8443,
-      "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
+      "server": "nl.n.belka.network",
+      "server_port": 443,
+      "uuid": "1b7ee703-fa08-4305-8469-ae3e30e61e44",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "avatars.mds.yandex.net",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+          "public_key": "U8yhhQTieIzorSj_S2ZGKlac4zfbP1d_ywFAn-7NGDs",
+          "short_id": "8f3e9c4b1a8d6e53"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      },
-      "packet_encoding": "xudp"
+      }
     },
     {
       "tag": "🇬🇧 United Kingdom [SNI-RU] www.avito.ru",
@@ -129,30 +149,6 @@
     },
     {
       "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-2",
-      "type": "vless",
-      "server": "217.179.220.67",
-      "server_port": 8443,
-      "uuid": "f885cecc-a6ea-4e9b-87da-c7dc4b745348",
-      "tls": {
-        "enabled": true,
-        "server_name": "avatars.mds.yandex.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] avatars.mds.yandex.net-3",
       "type": "vless",
       "server": "uk.riotvpn.eu",
       "server_port": 8443,
