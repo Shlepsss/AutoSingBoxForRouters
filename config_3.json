@@ -31,32 +31,68 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR] Beeline"
+        "🌐 Anycast-IP | 🇫🇮 🇫🇷 🇸🇪 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇦🇹 🇫🇷 🇸🇪 [*CIDR] YA"
       ],
-      "default": "🇷🇺 Russia [*CIDR] Beeline",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] Beeline",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🌐 Anycast-IP | 🇫🇮 🇫🇷 🇸🇪 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇦🇹 🇫🇷 🇸🇪 [*CIDR] YA"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇫🇮 🇫🇷 🇸🇪 [*CIDR] YA",
       "type": "vless",
-      "server": "beeline-4.harknmav.fun",
-      "server_port": 9443,
-      "uuid": "ab586fb5-aa64-4171-b3ad-87842ba2c359",
+      "server": "84.201.158.85",
+      "server_port": 443,
+      "uuid": "74c75735-e8f9-4967-a19f-fcfb9c870cc5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "pPzR1XhpFrEIwevI7lPPvw4faRcRQmqiNySYHkSdVBU",
-          "short_id": "2a552b0d4d15e0f7"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇫🇷 🇸🇪 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.88.153",
+      "server_port": 443,
+      "uuid": "74c75735-e8f9-4967-a19f-fcfb9c870cc5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
