@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States [SNI-RU] ads.x5.ru",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
-        "🌐 Anycast-IP | 🇨🇭 🇳🇱 [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com"
+        "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
+        "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru-2",
+        "🌐 Anycast-IP | 🇨🇭 🇳🇱 [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,83 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States [SNI-RU] ads.x5.ru",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
-        "🌐 Anycast-IP | 🇨🇭 🇳🇱 [SNI-RU] api-maps.yandex.ru",
-        "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com"
+        "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
+        "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru-2",
+        "🌐 Anycast-IP | 🇨🇭 🇳🇱 [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] ads.x5.ru",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
       "type": "vless",
-      "server": "mts-most-6.harknmav.fun",
+      "server": "194.150.166.12",
       "server_port": 443,
-      "uuid": "ab586fb5-aa64-4171-b3ad-87842ba2c359",
+      "uuid": "1e973bda-3a02-4431-9df8-83595f6f65d8",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "www.avito.ru",
         "reality": {
           "enabled": true,
-          "public_key": "pf1yJnXtDLvBO9HmmB3tKE-eK8mwmhcFezYlzubLzT4",
-          "short_id": "bd3c4c10ca44241a"
+          "public_key": "b75SrHI--As9QxOVfRIPkGmGfXjs53CGAjbws2K99Rs",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "ns.1tut1.click",
+      "server_port": 443,
+      "uuid": "78c407f6-3f20-426e-94ea-7227e760c180",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇭 🇬🇧 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "78.159.245.249",
+      "server_port": 1111,
+      "uuid": "e04a778c-4c83-4fe0-9f52-e6b7bcb59c7c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "YuhNgtj_Tf8WNLiSB2bNJKPvfwmqa6PNRpbP8TvNkzA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.avito.ru-2",
       "type": "vless",
       "server": "194.150.166.12",
       "server_port": 443,
@@ -122,52 +167,6 @@
           "fingerprint": "chrome"
         }
       }
-    },
-    {
-      "tag": "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "mts-most-6.harknmav.fun",
-      "server_port": 8443,
-      "uuid": "ab586fb5-aa64-4171-b3ad-87842ba2c359",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "pf1yJnXtDLvBO9HmmB3tKE-eK8mwmhcFezYlzubLzT4",
-          "short_id": "bd3c4c10ca44241a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
-      "type": "vless",
-      "server": "ns.1tut1.click",
-      "server_port": 443,
-      "uuid": "78c407f6-3f20-426e-94ea-7227e760c180",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      },
-      "packet_encoding": "xudp"
     }
   ],
   "route": {
