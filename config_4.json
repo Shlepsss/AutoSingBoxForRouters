@@ -34,10 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru",
-        "🇳🇱 The Netherlands [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru-2"
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-2",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-3",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-4",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,28 +51,71 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru",
-        "🇳🇱 The Netherlands [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru-2"
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-2",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-3",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-4",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] max.ru",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "mws-fc-1.ghost-lan.com",
-      "server_port": 9444,
-      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
+      "server": "46.243.142.180",
+      "server_port": 7443,
+      "uuid": "00790c59-b1ef-402f-8305-20b938bfb7ca",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bqLr1d3mbuP10WAYxWj8OEdSuZlVvrywrKq2U6ACw2w",
-          "short_id": "12b9ecabbf3a3b88"
+          "public_key": "X3ukS8lu3cNsbazVqxhD7yoRNfofmLqb0LzOKcMAyTs",
+          "short_id": "1497fe3dff69ff78"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-2",
+      "type": "vless",
+      "server": "46.243.142.180",
+      "server_port": 7443,
+      "uuid": "00790c59-b1ef-402f-8305-20b938bfb7ca",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X3ukS8lu3cNsbazVqxhD7yoRNfofmLqb0LzOKcMAyTs",
+          "short_id": "1497fe3dff69ff78"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-3",
+      "type": "vless",
+      "server": "46.243.142.180",
+      "server_port": 7443,
+      "uuid": "00790c59-b1ef-402f-8305-20b938bfb7ca",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X3ukS8lu3cNsbazVqxhD7yoRNfofmLqb0LzOKcMAyTs",
+          "short_id": "1497fe3dff69ff78"
         },
         "utls": {
           "enabled": true,
@@ -80,72 +124,45 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] max.ru",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-4",
       "type": "vless",
-      "server": "mws-fc-1.ghost-lan.com",
-      "server_port": 9441,
-      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "xTk5dX6E0DGuQj19bWDMafx13XoUK8euqlmtwJIg8wY",
-          "short_id": "8a7137d4e9c49b9c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tuning-stream"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "mws-fc-1.ghost-lan.com",
-      "server_port": 9444,
-      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
+      "server": "46.243.142.180",
+      "server_port": 7443,
+      "uuid": "00790c59-b1ef-402f-8305-20b938bfb7ca",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bqLr1d3mbuP10WAYxWj8OEdSuZlVvrywrKq2U6ACw2w",
-          "short_id": "12b9ecabbf3a3b88"
+          "public_key": "X3ukS8lu3cNsbazVqxhD7yoRNfofmLqb0LzOKcMAyTs",
+          "short_id": "1497fe3dff69ff78"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] max.ru-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [SNI-RU] ads.x5.ru-5",
       "type": "vless",
-      "server": "mws-fc-1.ghost-lan.com",
-      "server_port": 9441,
-      "uuid": "b251ec8f-47ec-4ab4-8bd2-13ac333a4100",
+      "server": "46.243.142.180",
+      "server_port": 7443,
+      "uuid": "00790c59-b1ef-402f-8305-20b938bfb7ca",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "xTk5dX6E0DGuQj19bWDMafx13XoUK8euqlmtwJIg8wY",
-          "short_id": "8a7137d4e9c49b9c"
+          "public_key": "X3ukS8lu3cNsbazVqxhD7yoRNfofmLqb0LzOKcMAyTs",
+          "short_id": "1497fe3dff69ff78"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tuning-stream"
       }
     }
   ],
