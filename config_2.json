@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇸🇪 Sweden [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇺🇸 United States | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,133 +53,156 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇸🇪 Sweden [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇺🇸 United States | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "46.253.132.240",
-      "server_port": 9894,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "45.151.101.103",
+      "server_port": 8443,
+      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
+      "tls": {
+        "enabled": true,
+        "server_name": "maps.apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aa"
+          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
+          "short_id": "2da4299da566b7"
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "your-custom-path"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "46.253.132.240",
-      "server_port": 9894,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aa"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "134.0.116.208",
-      "server_port": 9877,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "134.0.116.208",
-      "server_port": 9877,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
-        },
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇸🇪 Sweden [*CIDR]",
+      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "31.130.151.125",
-      "server_port": 9878,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
+      "server": "159.194.226.13",
+      "server_port": 2053,
+      "uuid": "b6c29ae7-4748-4049-b642-b695c0d2c776",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "server_name": "159.194.226.13"
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "type": "ws",
+        "headers": {
+          "Host": "159.194.226.13"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     }
   ],
