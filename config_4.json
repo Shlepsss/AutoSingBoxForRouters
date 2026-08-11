@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 Brazil [SNI-RU] ya.ru",
         "🇧🇷 Brazil | [SNI-RU] ya.ru",
+        "🇧🇾 Belarus | [SNI-RU] ads.x5.ru",
+        "🇪🇪 Estonia | 🌐 | [SNI-RU] www.yandex.ru",
         "🇺🇸 United States [SNI-RU] yandex.ru",
-        "🇸🇪 Sweden | [SNI-RU] api-maps.yandex.ru",
-        "🇪🇪 Estonia | 🌐 | [SNI-RU] www.yandex.ru"
+        "🇺🇸 United States | [SNI-RU] yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,35 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 Brazil [SNI-RU] ya.ru",
         "🇧🇷 Brazil | [SNI-RU] ya.ru",
+        "🇧🇾 Belarus | [SNI-RU] ads.x5.ru",
+        "🇪🇪 Estonia | 🌐 | [SNI-RU] www.yandex.ru",
         "🇺🇸 United States [SNI-RU] yandex.ru",
-        "🇸🇪 Sweden | [SNI-RU] api-maps.yandex.ru",
-        "🇪🇪 Estonia | 🌐 | [SNI-RU] www.yandex.ru"
+        "🇺🇸 United States | [SNI-RU] yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇧🇷 Brazil [SNI-RU] ya.ru",
-      "type": "vless",
-      "server": "201.34.141.83",
-      "server_port": 443,
-      "uuid": "16ab4d4a-fd81-4535-9b7b-346677226ce8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Oo6WRP0tgvO-WVZSjCf5PDrPVJ-IoYwiilK9g3__8C4",
-          "short_id": "cba0dcfd9c4f36"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
     },
     {
       "tag": "🇧🇷 Brazil | [SNI-RU] ya.ru",
@@ -95,6 +74,51 @@
           "enabled": true,
           "public_key": "Oo6WRP0tgvO-WVZSjCf5PDrPVJ-IoYwiilK9g3__8C4",
           "short_id": "cba0dcfd9c4f36"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇧🇾 Belarus | [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "134.17.16.156",
+      "server_port": 443,
+      "uuid": "8fab26eb-f2eb-4c10-a11d-f7e5202930e4",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg",
+          "short_id": "91d568bc3b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "webhook"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 | [SNI-RU] www.yandex.ru",
+      "type": "vless",
+      "server": "netherlands1.banovano.space",
+      "server_port": 24382,
+      "uuid": "c9c609d3-15d8-46fc-bdc9-abbbde5fb965",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Slau4DRZkIFgAeKGsPz5MWOp5xB1ecTNzLtbCBUGeQM",
+          "short_id": "8059df"
         },
         "utls": {
           "enabled": true,
@@ -118,49 +142,27 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇺🇸 United States | [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "sw1111.bearbeer.digital",
+      "server": "179.198.49.14",
       "server_port": 443,
-      "uuid": "2e365b72-d2ad-46f7-867f-2c1db45c3107",
-      "flow": "xtls-rprx-vision",
+      "uuid": "4cfb9456-0921-4547-a684-4614980d4a86",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SwfpVdTE6Ay33LQpgRl2Q97t7HFrGREkpE7E1A6pCD4",
-          "short_id": ""
+          "public_key": "0tsW6-mbhq0zPODM7BlymfZDYAjSB5S5doDDk8qpYXE",
+          "short_id": "8e79809e9958ae22"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 | [SNI-RU] www.yandex.ru",
-      "type": "vless",
-      "server": "netherlands1.banovano.space",
-      "server_port": 24382,
-      "uuid": "c9c609d3-15d8-46fc-bdc9-abbbde5fb965",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Slau4DRZkIFgAeKGsPz5MWOp5xB1ecTNzLtbCBUGeQM",
-          "short_id": "8059df"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     }
