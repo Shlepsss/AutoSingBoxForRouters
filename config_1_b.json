@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇹 Italy | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
         "🇸🇪 Sweden [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇸🇪 Sweden [*CIDR]-2",
-        "🇫🇷 France | 🌐 | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇺🇸 United States | 🌐 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,89 +53,79 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇹 Italy | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
         "🇸🇪 Sweden [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇸🇪 Sweden [*CIDR]-2",
-        "🇫🇷 France | 🌐 | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇺🇸 United States | 🌐 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]",
-      "type": "vless",
-      "server": "176.108.243.161",
-      "server_port": 9879,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        },
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
       }
     },
     {
       "tag": "🇸🇪 Sweden [*CIDR]",
-      "type": "vless",
-      "server": "31.130.151.125",
-      "server_port": 9878,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | [*CIDR]-2",
-      "type": "vless",
-      "server": "176.108.243.161",
-      "server_port": 9879,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden [*CIDR]-2",
       "type": "vless",
       "server": "31.130.151.125",
       "server_port": 9878,
@@ -157,10 +149,30 @@
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "134.0.116.208",
-      "server_port": 9877,
+      "server": "5.189.223.90",
+      "server_port": 9878,
       "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
       "tls": {
         "enabled": true,
@@ -168,16 +180,36 @@
         "reality": {
           "enabled": true,
           "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
+          "short_id": "aa"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "type": "trojan",
+      "server": "ru.federal-usa.com",
+      "server_port": 8443,
+      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.federal-usa.com",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
     }
   ],
