@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]",
-        "🇸🇪 Sweden [*CIDR]",
         "🇮🇹 Italy | [*CIDR]",
-        "🇺🇸 United States | 🌐 | [*CIDR]"
+        "🇸🇪 Sweden [*CIDR]",
+        "🇮🇹 Italy | [*CIDR]-2",
+        "🇸🇪 Sweden [*CIDR]-2",
+        "🇫🇷 France | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,20 +51,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]",
-        "🇸🇪 Sweden [*CIDR]",
         "🇮🇹 Italy | [*CIDR]",
-        "🇺🇸 United States | 🌐 | [*CIDR]"
+        "🇸🇪 Sweden [*CIDR]",
+        "🇮🇹 Italy | [*CIDR]-2",
+        "🇸🇪 Sweden [*CIDR]-2",
+        "🇫🇷 France | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
+      "tag": "🇮🇹 Italy | [*CIDR]",
       "type": "vless",
-      "server": "134.0.116.208",
-      "server_port": 9877,
+      "server": "176.108.243.161",
+      "server_port": 9879,
       "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
       "tls": {
         "enabled": true,
@@ -72,35 +72,11 @@
         "reality": {
           "enabled": true,
           "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
+          "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden | [*CIDR]",
-      "type": "vless",
-      "server": "31.130.151.125",
-      "server_port": 9878,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -120,11 +96,11 @@
         "reality": {
           "enabled": true,
           "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
+          "short_id": "aabbccdd"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -133,7 +109,7 @@
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]",
+      "tag": "🇮🇹 Italy | [*CIDR]-2",
       "type": "vless",
       "server": "176.108.243.161",
       "server_port": 9879,
@@ -148,7 +124,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -157,11 +133,11 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | 🌐 | [*CIDR]",
+      "tag": "🇸🇪 Sweden [*CIDR]-2",
       "type": "vless",
-      "server": "5.189.223.90",
+      "server": "31.130.151.125",
       "server_port": 9878,
-      "uuid": "553e3253-c454-431d-a7e6-42bc06ea5e14",
+      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
@@ -172,7 +148,31 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "134.0.116.208",
+      "server_port": 9877,
+      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       },
       "transport": {
