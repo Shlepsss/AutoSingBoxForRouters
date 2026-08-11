@@ -34,16 +34,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
+        "🌐 Anycast-IP | 🇬🇧 🇷🇺 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,145 +49,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
+        "🌐 Anycast-IP | 🇬🇧 🇷🇺 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "194.93.0.28",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
+      "server": "31.177.82.106",
+      "server_port": 2200,
+      "uuid": "5d0fbb28-3be3-4044-bc5b-e4b7ca1916c7",
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "91.185.83.94",
-      "server_port": 5443,
-      "uuid": "8e9e9f2a-f4ee-48a3-aa3f-d79169890ca8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "5post-gate.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "A3BZvaih9lBbMaKWjndiEdhCDZLMRbeRD1fI8CP4324",
-          "short_id": ""
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "path": "/v1"
       }
     },
     {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
       "type": "vless",
-      "server": "104.171.137.141",
+      "server": "194.26.229.214",
       "server_port": 4100,
-      "uuid": "d5d72f0a-42b0-4f43-b568-9cf7fbff073d",
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "176.108.252.240",
-      "server_port": 9443,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "io.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "im7-98zxWz_OGimQfeoN_Y5p1tAy8KoZCxOe2wOeWS4",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "176.108.252.240",
-      "server_port": 9443,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "io.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "im7-98zxWz_OGimQfeoN_Y5p1tAy8KoZCxOe2wOeWS4",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "176.108.252.240",
-      "server_port": 9443,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "io.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "im7-98zxWz_OGimQfeoN_Y5p1tAy8KoZCxOe2wOeWS4",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "201.51.5.253",
-      "server_port": 4100,
-      "uuid": "ed1cd50f-ead9-4e01-b5ae-b7d2dfb532fc",
+      "uuid": "859ca789-2c75-472c-b02b-4b7af099f512",
       "transport": {
         "type": "ws",
         "headers": {
@@ -204,46 +85,11 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇷🇺 [*CIDR]",
       "type": "vless",
-      "server": "72.56.247.70",
-      "server_port": 4100,
-      "uuid": "f6fc0eed-ec8c-4f6a-883d-421706ca6886",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "176.108.252.240",
-      "server_port": 9443,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "io.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "im7-98zxWz_OGimQfeoN_Y5p1tAy8KoZCxOe2wOeWS4",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "201.51.5.253",
+      "server": "79.137.192.188",
       "server_port": 2200,
-      "uuid": "ed1cd50f-ead9-4e01-b5ae-b7d2dfb532fc",
+      "uuid": "106b0505-da24-4ae4-b22c-302ab814f6f4",
       "transport": {
         "type": "ws",
         "path": "/v1"
