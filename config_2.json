@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇸🇪 Sweden | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]-2",
-        "🇺🇸 United States | 🌐 | [*CIDR]"
+        "🇮🇹 Italy | [*CIDR]",
+        "🇺🇸 United States | 🌐 | [*CIDR]",
+        "🇸🇪 Sweden [*CIDR]",
+        "🇸🇪 Sweden [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,42 +51,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇸🇪 Sweden | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]-2",
-        "🇺🇸 United States | 🌐 | [*CIDR]"
+        "🇮🇹 Italy | [*CIDR]",
+        "🇺🇸 United States | 🌐 | [*CIDR]",
+        "🇸🇪 Sweden [*CIDR]",
+        "🇸🇪 Sweden [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇸🇪 Sweden | [*CIDR]",
       "type": "vless",
-      "server": "201.51.0.38",
-      "server_port": 4100,
-      "uuid": "e7299042-7d8f-440f-8368-2516b0e69341",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "194.93.0.28",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "server": "31.130.151.125",
+      "server_port": 9878,
+      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
       "tls": {
         "enabled": true,
-        "server_name": "media2.tcpdoor.net",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabbccdd"
         },
         "utls": {
           "enabled": true,
@@ -95,11 +81,59 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc"
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "tag": "🇮🇹 Italy | [*CIDR]",
+      "type": "vless",
+      "server": "176.108.243.161",
+      "server_port": 9879,
+      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "5.189.223.90",
+      "server_port": 9878,
+      "uuid": "553e3253-c454-431d-a7e6-42bc06ea5e14",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden [*CIDR]",
       "type": "vless",
       "server": "31.130.151.125",
       "server_port": 9878,
@@ -114,7 +148,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -123,30 +157,9 @@
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR]-2",
+      "tag": "🇸🇪 Sweden [*CIDR]-2",
       "type": "vless",
-      "server": "valeo.shieldix.top",
-      "server_port": 443,
-      "uuid": "0dc40f96-a2d1-4382-88b7-70ee01853229",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "valeo.shieldix.top",
-        "reality": {
-          "enabled": true,
-          "public_key": "V9MHR6nhlKPenVUq1172uIHJFZYOkRVqSOUkjCS4430",
-          "short_id": "f0ba53a31b489b3e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "5.189.223.90",
+      "server": "31.130.151.125",
       "server_port": 9878,
       "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
       "tls": {
@@ -155,7 +168,7 @@
         "reality": {
           "enabled": true,
           "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
+          "short_id": "aabbccdd"
         },
         "utls": {
           "enabled": true,
