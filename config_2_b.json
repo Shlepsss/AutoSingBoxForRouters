@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇺🇸 United States | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇫🇷 France | [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🌐 Anycast-IP | 🇧🇾 🇵🇱 | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇧🇾 🇵🇱 | [*CIDR] VK-2",
+        "🇸🇪 Sweden | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,51 +51,52 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇺🇸 United States | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇫🇷 France | [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🌐 Anycast-IP | 🇧🇾 🇵🇱 | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇧🇾 🇵🇱 | [*CIDR] VK-2",
+        "🇸🇪 Sweden | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "trojan",
-      "server": "ru.federal-usa.com",
-      "server_port": 8443,
-      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.federal-usa.com",
-        "alpn": [
-          "h3",
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "104.171.137.141",
+      "server_port": 4100,
+      "uuid": "d5d72f0a-42b0-4f43-b568-9cf7fbff073d",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "trojan",
-      "server": "ru.federal-usa.com",
-      "server_port": 8443,
-      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "194.26.229.219",
+      "server_port": 4100,
+      "uuid": "099c6e3f-e8d3-41d4-95f2-ef2eafb51cdc",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇧🇾 🇵🇱 | [*CIDR] VK",
+      "type": "vless",
+      "server": "ru156.mechvpn.online",
+      "server_port": 443,
+      "uuid": "53c76647-14d1-4df5-99cb-be99ad2e6bd9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru.federal-usa.com",
-        "alpn": [
-          "h3",
-          "h2",
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -105,111 +104,39 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "trojan",
-      "server": "ru.federal-usa.com",
-      "server_port": 8443,
-      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
+      "tag": "🌐 Anycast-IP | 🇧🇾 🇵🇱 | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "ru156.mechvpn.online",
+      "server_port": 443,
+      "uuid": "53c76647-14d1-4df5-99cb-be99ad2e6bd9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru.federal-usa.com",
-        "alpn": [
-          "h3",
-          "h2",
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR]",
+      "tag": "🇸🇪 Sweden | [*CIDR]",
       "type": "vless",
-      "server": "45.151.101.103",
-      "server_port": 8443,
-      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
+      "server": "178.159.94.108",
+      "server_port": 2083,
+      "uuid": "83eda926-645c-4f88-9dbe-bf33ac18c8f4",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "maps.apple.com",
+        "server_name": "swe-one.quiet-rogue.site",
         "reality": {
           "enabled": true,
-          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
-          "short_id": "2da4299da566b7"
+          "public_key": "40eDnye2AHCQqgM2_ikKzRayZ4Vlu4rnnkHmLmNalQc",
+          "short_id": "32a37218722f0081"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "your-custom-path"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "trojan",
-      "server": "ru.federal-usa.com",
-      "server_port": 8443,
-      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.federal-usa.com",
-        "alpn": [
-          "h3",
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
-      "type": "trojan",
-      "server": "ru.federal-usa.com",
-      "server_port": 8443,
-      "password": "08QNE5JBq7kTV6b9Dd6e_w-y4WhjMLS9",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.federal-usa.com",
-        "alpn": [
-          "h3",
-          "h2",
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
-      }
-    },
-    {
-      "tag": "🇫🇷 France | [*CIDR]",
-      "type": "vless",
-      "server": "134.0.116.208",
-      "server_port": 9877,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     }
   ],
