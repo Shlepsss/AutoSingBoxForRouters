@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇺🇸 United States | [SNI-RU] yandex.ru",
         "🇵🇱 Poland | [SNI-RU] ads.x5.ru",
-        "🇫🇮 Finland | [SNI-RU] ads.x5.ru",
-        "🇫🇷 France [SNI-RU] ads.x5.ru",
-        "🇵🇱 Poland [SNI-RU] ads.x5.ru",
-        "🇵🇱 Poland [SNI-RU] ads.x5.ru-2"
+        "🇵🇱 Poland | [SNI-RU] ads.x5.ru-2",
+        "🇵🇱 Poland | [SNI-RU] ads.x5.ru-3",
+        "🇫🇮 Finland | [SNI-RU] ads.x5.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇺🇸 United States | [SNI-RU] yandex.ru",
         "🇵🇱 Poland | [SNI-RU] ads.x5.ru",
-        "🇫🇮 Finland | [SNI-RU] ads.x5.ru",
-        "🇫🇷 France [SNI-RU] ads.x5.ru",
-        "🇵🇱 Poland [SNI-RU] ads.x5.ru",
-        "🇵🇱 Poland [SNI-RU] ads.x5.ru-2"
+        "🇵🇱 Poland | [SNI-RU] ads.x5.ru-2",
+        "🇵🇱 Poland | [SNI-RU] ads.x5.ru-3",
+        "🇫🇮 Finland | [SNI-RU] ads.x5.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇺🇸 United States | [SNI-RU] yandex.ru",
+      "type": "vless",
+      "server": "179.198.49.14",
+      "server_port": 443,
+      "uuid": "4cfb9456-0921-4547-a684-4614980d4a86",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "0tsW6-mbhq0zPODM7BlymfZDYAjSB5S5doDDk8qpYXE",
+          "short_id": "8e79809e9958ae22"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇵🇱 Poland | [SNI-RU] ads.x5.ru",
@@ -76,7 +96,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -86,9 +106,9 @@
       "packet_encoding": "xudp"
     },
     {
-      "tag": "🇫🇮 Finland | [SNI-RU] ads.x5.ru",
+      "tag": "🇵🇱 Poland | [SNI-RU] ads.x5.ru-2",
       "type": "vless",
-      "server": "78.17.96.52",
+      "server": "89.125.27.212",
       "server_port": 2443,
       "uuid": "d80cd696-ec21-4afd-ad8e-cb65893535a4",
       "tls": {
@@ -111,32 +131,7 @@
       "packet_encoding": "xudp"
     },
     {
-      "tag": "🇫🇷 France [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "194.55.137.138",
-      "server_port": 2443,
-      "uuid": "d80cd696-ec21-4afd-ad8e-cb65893535a4",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "rRg3JiP2006ldJYh2TDPAn7dtlXLcSHdgHgkGI_HZTE",
-          "short_id": "ef567890"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "tag": "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+      "tag": "🇵🇱 Poland | [SNI-RU] ads.x5.ru-3",
       "type": "vless",
       "server": "89.125.27.212",
       "server_port": 2443,
@@ -161,9 +156,9 @@
       "packet_encoding": "xudp"
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] ads.x5.ru-2",
+      "tag": "🇫🇮 Finland | [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "89.125.27.212",
+      "server": "78.17.40.188",
       "server_port": 2443,
       "uuid": "d80cd696-ec21-4afd-ad8e-cb65893535a4",
       "tls": {
@@ -176,7 +171,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       },
       "transport": {

@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,50 +56,147 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "45.151.101.194",
-      "server_port": 443,
-      "uuid": "29599e53-9f62-44f2-9888-65b70ca63651",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.kaspersky.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "nmdu3rhLXUr8KzGtN_0D4Zc5JS1V8t9S4_iDXvtWk2I",
-          "short_id": "6bf03e9d7a1c8524"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
+      "server": "186.246.6.234",
+      "server_port": 2200,
+      "uuid": "2a88091e-e3f8-4478-9751-6ce0557a7f2e",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
       }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "45.151.101.194",
+      "server": "45.91.52.125",
       "server_port": 443,
-      "uuid": "29599e53-9f62-44f2-9888-65b70ca63651",
+      "uuid": "3ab2615c-689d-463b-8990-a95013894348",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.kaspersky.ru",
+        "server_name": "www.cloudflare.com",
         "reality": {
           "enabled": true,
-          "public_key": "nmdu3rhLXUr8KzGtN_0D4Zc5JS1V8t9S4_iDXvtWk2I",
-          "short_id": "6bf03e9d7a1c8524"
+          "public_key": "8bkjYMx4EXdRTHTgQ6wMaeyGl-HfskzixE0Is-kMQXU",
+          "short_id": "e3c60a1b71b462fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "104.171.134.67",
+      "server_port": 4100,
+      "uuid": "47947923-49ac-49f8-86ed-2912bcbf2d18",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "104.171.134.67",
+      "server_port": 4100,
+      "uuid": "47947923-49ac-49f8-86ed-2912bcbf2d18",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
+      "type": "vless",
+      "server": "31.177.83.201",
+      "server_port": 4100,
+      "uuid": "4cbdaf4f-ca34-4a00-9a96-49eaa6564b42",
+      "tls": {
+        "enabled": true,
+        "server_name": "live.ok.ru"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "104.171.134.67",
+      "server_port": 4100,
+      "uuid": "47947923-49ac-49f8-86ed-2912bcbf2d18",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "45.91.52.125",
+      "server_port": 443,
+      "uuid": "3ab2615c-689d-463b-8990-a95013894348",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "8bkjYMx4EXdRTHTgQ6wMaeyGl-HfskzixE0Is-kMQXU",
+          "short_id": "e3c60a1b71b462fa"
         },
         "utls": {
           "enabled": true,
@@ -105,106 +205,55 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "194.93.0.28",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
+      "server": "168.222.141.146",
+      "server_port": 2200,
+      "uuid": "bceda826-c83c-45d0-891e-15c4bfec76bc",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "104.171.134.67",
+      "server_port": 4100,
+      "uuid": "47947923-49ac-49f8-86ed-2912bcbf2d18",
       "tls": {
         "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "45.151.101.194",
-      "server_port": 443,
-      "uuid": "29599e53-9f62-44f2-9888-65b70ca63651",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.kaspersky.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "nmdu3rhLXUr8KzGtN_0D4Zc5JS1V8t9S4_iDXvtWk2I",
-          "short_id": "6bf03e9d7a1c8524"
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "45.151.101.194",
+      "server": "45.91.52.125",
       "server_port": 443,
-      "uuid": "29599e53-9f62-44f2-9888-65b70ca63651",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.kaspersky.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "nmdu3rhLXUr8KzGtN_0D4Zc5JS1V8t9S4_iDXvtWk2I",
-          "short_id": "6bf03e9d7a1c8524"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "quorvia.pulsio.cfd",
-      "server_port": 443,
-      "uuid": "b50a52ba-891f-44ff-af82-f5f0f3317024",
+      "uuid": "3ab2615c-689d-463b-8990-a95013894348",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "quorvia.pulsio.cfd",
+        "server_name": "www.cloudflare.com",
         "reality": {
           "enabled": true,
-          "public_key": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
-          "short_id": "9698d67e63bc8ee0"
+          "public_key": "8bkjYMx4EXdRTHTgQ6wMaeyGl-HfskzixE0Is-kMQXU",
+          "short_id": "e3c60a1b71b462fa"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "tag": "🇦🇹 Austria | [*CIDR]",
-      "type": "vless",
-      "server": "46.8.210.121",
-      "server_port": 27455,
-      "uuid": "16a1eeb0-8408-4592-a469-ecd33751021e",
-      "tls": {
-        "enabled": true,
-        "server_name": "mirage.flowwowdev.com",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "ios"
         }
       }
     }
