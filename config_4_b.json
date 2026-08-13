@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru",
         "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-2"
+        "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru-2",
+        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
+        "🇳🇱 The Netherlands | [SNI-RU] max.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,80 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru",
         "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-2"
+        "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru-2",
+        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
+        "🇳🇱 The Netherlands | [SNI-RU] max.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "185.141.227.178",
+      "server_port": 2055,
+      "uuid": "373baa79-106f-415c-807e-6701d26e4218",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng",
+          "short_id": "b8c9"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "146.255.188.164",
+      "server_port": 443,
+      "uuid": "792bf655-fd87-4b54-8a18-f0e0e0b95eff",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ptxofoopyTPBZYp8iC-3x4V-GfN05OzYO9YH4ItnWXo",
+          "short_id": "84"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru-2",
+      "type": "vless",
+      "server": "146.255.188.164",
+      "server_port": 443,
+      "uuid": "792bf655-fd87-4b54-8a18-f0e0e0b95eff",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ptxofoopyTPBZYp8iC-3x4V-GfN05OzYO9YH4ItnWXo",
+          "short_id": "84"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
     },
     {
       "tag": "🇳🇱 The Netherlands | [SNI-RU] max.ru",
@@ -76,7 +142,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -104,75 +170,6 @@
       },
       "transport": {
         "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "146.255.188.164",
-      "server_port": 443,
-      "uuid": "792bf655-fd87-4b54-8a18-f0e0e0b95eff",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ptxofoopyTPBZYp8iC-3x4V-GfN05OzYO9YH4ItnWXo",
-          "short_id": "84"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "185.141.227.178",
-      "server_port": 2055,
-      "uuid": "373baa79-106f-415c-807e-6701d26e4218",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng",
-          "short_id": "b8c9"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-2",
-      "type": "vless",
-      "server": "185.141.227.178",
-      "server_port": 2055,
-      "uuid": "373baa79-106f-415c-807e-6701d26e4218",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng",
-          "short_id": "b8c9"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     }
   ],
