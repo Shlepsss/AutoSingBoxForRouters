@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR] VK-2",
         "🇷🇺 Russia | [*CIDR] VK-3",
-        "🇷🇺 Russia [*CIDR]-3"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR] VK-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,33 +56,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR] VK-2",
         "🇷🇺 Russia | [*CIDR] VK-3",
-        "🇷🇺 Russia [*CIDR]-3"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR] VK-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "188.225.81.61",
-      "server_port": 4100,
-      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "%2Fv1"
-      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -105,20 +91,6 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "186.246.6.234",
-      "server_port": 2200,
-      "uuid": "82ae728b-49a7-4b86-8976-1125da20cd6b",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | [*CIDR] VK",
       "type": "vless",
       "server": "obx1.vypnet.su",
@@ -136,10 +108,30 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       },
       "packet_encoding": "none"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "217.198.169.86",
+      "server_port": 443,
+      "uuid": "fc07967d-925b-4246-a535-9527a8242a16",
+      "tls": {
+        "enabled": true,
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "h5rOWssRWMnFJ0Ka0-PwBwwg3PMPifPShXutXEoj2QM",
+          "short_id": "b8ac5fcfceca"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
@@ -162,7 +154,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "217.198.169.86",
       "server_port": 443,
@@ -177,49 +169,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "212.193.26.170",
-      "server_port": 4100,
-      "uuid": "d3984ebd-b876-4a38-be7d-90299feafc81",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
       }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "obx1.vypnet.su",
-      "server_port": 443,
-      "uuid": "8f6085da-2a5f-4969-97c8-ee3e490ec75d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "obx1.vypnet.su",
-        "reality": {
-          "enabled": true,
-          "public_key": "C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "packet_encoding": "none"
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] VK-3",
       "type": "vless",
       "server": "obx1.vypnet.su",
       "server_port": 443,
@@ -242,24 +197,78 @@
       "packet_encoding": "none"
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇷🇺 Russia | [*CIDR] VK-3",
       "type": "vless",
-      "server": "217.198.169.86",
+      "server": "obx1.vypnet.su",
       "server_port": 443,
-      "uuid": "fc07967d-925b-4246-a535-9527a8242a16",
+      "uuid": "8f6085da-2a5f-4969-97c8-ee3e490ec75d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "avatars.mds.yandex.net",
+        "insecure": true,
+        "server_name": "obx1.vypnet.su",
         "reality": {
           "enabled": true,
-          "public_key": "h5rOWssRWMnFJ0Ka0-PwBwwg3PMPifPShXutXEoj2QM",
-          "short_id": "b8ac5fcfceca"
+          "public_key": "C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
+      },
+      "packet_encoding": "none"
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "186.246.6.234",
+      "server_port": 2200,
+      "uuid": "82ae728b-49a7-4b86-8976-1125da20cd6b",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
       }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "212.193.26.170",
+      "server_port": 4100,
+      "uuid": "d3984ebd-b876-4a38-be7d-90299feafc81",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] VK-4",
+      "type": "vless",
+      "server": "obx1.vypnet.su",
+      "server_port": 443,
+      "uuid": "8f6085da-2a5f-4969-97c8-ee3e490ec75d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "obx1.vypnet.su",
+        "reality": {
+          "enabled": true,
+          "public_key": "C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "packet_encoding": "none"
     }
   ],
   "route": {
