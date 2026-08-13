@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
         "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+        "🇳🇱 The Netherlands [SNI-RU] max.ru",
         "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-2",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-3"
+        "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-3",
+        "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [SNI-RU] max.ru",
         "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+        "🇳🇱 The Netherlands [SNI-RU] max.ru",
         "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-2",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-3"
+        "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-3",
+        "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] max.ru",
+      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "185.141.227.178",
+      "server_port": 2055,
+      "uuid": "373baa79-106f-415c-807e-6701d26e4218",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng",
+          "short_id": "b8c9"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [SNI-RU] max.ru",
       "type": "vless",
       "server": "asffff.falsemirrov.com",
       "server_port": 443,
@@ -76,7 +100,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -84,7 +108,7 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru",
+      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-2",
       "type": "vless",
       "server": "185.141.227.178",
       "server_port": 2055,
@@ -108,21 +132,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
-      "type": "vless",
-      "server": "201.24.127.110",
-      "server_port": 2200,
-      "uuid": "6620ef58-9c62-43fe-9596-ff862b200958",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-2",
+      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-3",
       "type": "vless",
       "server": "185.141.227.178",
       "server_port": 2055,
@@ -137,7 +147,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -146,7 +156,7 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-3",
+      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] max.ru-4",
       "type": "vless",
       "server": "185.141.227.178",
       "server_port": 2055,
