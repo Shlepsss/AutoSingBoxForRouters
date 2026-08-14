@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
-        "🇸🇪 Sweden [SNI-RU] ya.ru",
-        "🇸🇪 Sweden [SNI-RU] ya.ru-2",
-        "🇸🇪 Sweden [SNI-RU] ya.ru-3"
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] gismeteo.ru",
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 | [SNI-RU] gismeteo.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +51,21 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
-        "🇸🇪 Sweden [SNI-RU] ya.ru",
-        "🇸🇪 Sweden [SNI-RU] ya.ru-2",
-        "🇸🇪 Sweden [SNI-RU] ya.ru-3"
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] gismeteo.ru",
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 | [SNI-RU] gismeteo.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
       "type": "vless",
       "server": "200.165.228.47",
       "server_port": 4100,
       "uuid": "6620ef58-9c62-43fe-9596-ff862b200958",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
       "transport": {
         "type": "ws",
         "headers": {
@@ -82,87 +75,18 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
+      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
       "type": "vless",
-      "server": "200.165.228.47",
-      "server_port": 4100,
-      "uuid": "6620ef58-9c62-43fe-9596-ff862b200958",
+      "server": "511.cdnconn.com",
+      "server_port": 10443,
+      "uuid": "c519c16d-e0c7-4533-93e5-23588cd47ccd",
       "tls": {
         "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden [SNI-RU] ya.ru",
-      "type": "vless",
-      "server": "87.120.196.190",
-      "server_port": 2443,
-      "uuid": "35066ccf-e303-4b0e-993b-aa2c2cef9c87",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "rRg3JiP2006ldJYh2TDPAn7dtlXLcSHdgHgkGI_HZTE",
-          "short_id": "ef567890"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden [SNI-RU] ya.ru-2",
-      "type": "vless",
-      "server": "87.120.196.190",
-      "server_port": 2443,
-      "uuid": "35066ccf-e303-4b0e-993b-aa2c2cef9c87",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "rRg3JiP2006ldJYh2TDPAn7dtlXLcSHdgHgkGI_HZTE",
-          "short_id": "ef567890"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden [SNI-RU] ya.ru-3",
-      "type": "vless",
-      "server": "87.120.196.190",
-      "server_port": 2443,
-      "uuid": "35066ccf-e303-4b0e-993b-aa2c2cef9c87",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "rRg3JiP2006ldJYh2TDPAn7dtlXLcSHdgHgkGI_HZTE",
-          "short_id": "ef567890"
+          "public_key": "qflDse4yNSmw5uo74Leu1S9lHAcP9ThsanYSkZYSPTs",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -171,7 +95,73 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc"
+        "service_name": "xyz"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] gismeteo.ru",
+      "type": "vless",
+      "server": "185.141.227.240",
+      "server_port": 13443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gismeteo.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 | [SNI-RU] gismeteo.ru",
+      "type": "vless",
+      "server": "78.159.245.130",
+      "server_port": 23443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gismeteo.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] max.ru-2",
+      "type": "vless",
+      "server": "511.cdnconn.com",
+      "server_port": 10443,
+      "uuid": "c519c16d-e0c7-4533-93e5-23588cd47ccd",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "qflDse4yNSmw5uo74Leu1S9lHAcP9ThsanYSkZYSPTs",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "xyz"
       }
     }
   ],
