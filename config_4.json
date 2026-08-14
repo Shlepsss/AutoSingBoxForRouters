@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] max.ru",
         "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
-        "🇳🇱 The Netherlands [SNI-RU] an.yandex.ru",
-        "🇳🇱 The Netherlands [SNI-RU] sun6-21.userapi.com"
+        "🇳🇱 The Netherlands [SNI-RU] strm.yandex.net",
+        "🇳🇱 The Netherlands [SNI-RU] api.vk.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,48 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] max.ru",
         "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
-        "🇳🇱 The Netherlands [SNI-RU] an.yandex.ru",
-        "🇳🇱 The Netherlands [SNI-RU] sun6-21.userapi.com"
+        "🇳🇱 The Netherlands [SNI-RU] strm.yandex.net",
+        "🇳🇱 The Netherlands [SNI-RU] api.vk.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-      "type": "vless",
-      "server": "201.24.118.145",
-      "server_port": 4100,
-      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "rutoo.h2corp.org",
-      "server_port": 4443,
-      "uuid": "994fcbac-4433-4ea3-b42b-9073037ab5fa",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "z6CzPNecp20sehGM6VjzL2C-vvKXqfiDKbfsTiUbJW0",
-          "short_id": "aaaa"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
     },
     {
       "tag": "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
@@ -119,14 +85,14 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] an.yandex.ru",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] strm.yandex.net",
       "type": "vless",
       "server": "g8qfh.guardora.pro",
       "server_port": 1443,
       "uuid": "4a334454-22f7-491b-9bec-583e1e8a2773",
       "tls": {
         "enabled": true,
-        "server_name": "an.yandex.ru",
+        "server_name": "strm.yandex.net",
         "reality": {
           "enabled": true,
           "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
@@ -143,27 +109,61 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] sun6-21.userapi.com",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] api.vk.ru",
       "type": "vless",
-      "server": "serv40.strettenvpn.com",
-      "server_port": 7771,
-      "uuid": "aa882bd3-f554-4576-a2a6-733b75337e08",
+      "server": "144.31.127.203",
+      "server_port": 8443,
+      "uuid": "40cf07b0-01d0-4898-a4cd-b6533210f087",
       "tls": {
         "enabled": true,
-        "server_name": "sun6-21.userapi.com",
+        "server_name": "api.vk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "yhUfTGgu5PYRlFqMnRZkxffH_aU05AFUToGI8_EKF28",
-          "short_id": "c4a9f1e2"
+          "public_key": "FMa1j8qQTn98uxWeoHiAWQxP_pPD2r7x3bjKjT83-yM",
+          "short_id": "144f524372a89dcd"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "type": "vless",
+      "server": "201.24.118.145",
+      "server_port": 4100,
+      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "10aw7.guardora.pro",
+      "server_port": 2026,
+      "uuid": "a597accd-8725-4768-99d9-be5aced67b4d",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "tVc65Jg20nTeP9qsSd9WIqRjLqU-PWKFYtBYHQbwtyw",
+          "short_id": "a1b2c3d4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "vless-grpc"
+        "service_name": "grpc"
       }
     }
   ],
