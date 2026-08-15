@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇧🇾 Belarus | [SNI-RU] www.vk.com",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] api.vk.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] api.vk.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru"
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
+        "🇳🇱 The Netherlands [SNI-RU] api.vk.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,16 +53,37 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇧🇾 Belarus | [SNI-RU] www.vk.com",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] api.vk.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] api.vk.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru"
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
+        "🇳🇱 The Netherlands [SNI-RU] api.vk.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇧🇾 Belarus | [SNI-RU] www.vk.com",
+      "type": "vless",
+      "server": "191.44.32.103",
+      "server_port": 5000,
+      "uuid": "ead060e5-21f9-5369-b9f9-175ab7faa20f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SLrTZEGZV42hDpfoCkqPZwwVK2V57Db3y6LxKbxexGU",
+          "short_id": "ec4a18"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
@@ -89,26 +110,6 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] api.vk.ru",
-      "type": "vless",
-      "server": "144.31.127.203",
-      "server_port": 8443,
-      "uuid": "6413aa86-6eb4-45a8-87ca-24b0227159b7",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "FMa1j8qQTn98uxWeoHiAWQxP_pPD2r7x3bjKjT83-yM",
-          "short_id": "144f524372a89dcd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "217.19.122.234",
@@ -125,6 +126,30 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "217.19.122.234",
+      "server_port": 9001,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -157,11 +182,35 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] api.vk.ru-2",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
+      "type": "vless",
+      "server": "centraleurope.koexp.ru",
+      "server_port": 4443,
+      "uuid": "de6d11a5-d833-4f18-a4f9-464b80f0f864",
+      "tls": {
+        "enabled": true,
+        "server_name": "dev.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "-yJaCCGsucUDEnTTn6VJJyF0R5ZLlJAVNeIXFJYSGn8",
+          "short_id": "361c68748712c743"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-service"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [SNI-RU] api.vk.ru",
       "type": "vless",
       "server": "144.31.127.203",
       "server_port": 8443,
-      "uuid": "6413aa86-6eb4-45a8-87ca-24b0227159b7",
+      "uuid": "40cf07b0-01d0-4898-a4cd-b6533210f087",
       "tls": {
         "enabled": true,
         "server_name": "api.vk.ru",
@@ -172,56 +221,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-      "type": "vless",
-      "server": "217.19.122.234",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] dzen.ru",
-      "type": "vless",
-      "server": "200.165.235.43",
-      "server_port": 2053,
-      "uuid": "41f33146-7eb4-11f1-855a-d60b69bb56c6",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0",
-          "short_id": "2c60309fa586eb60"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-direct"
       }
     }
   ],
