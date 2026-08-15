@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇮 Finland [*CIDR] VK",
         "🇩🇪 Germany [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN",
         "🇩🇪 Germany [*CIDR] VK-2",
-        "🇧🇬 Bulgaria [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN-2"
+        "🇫🇷 France [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇮 Finland [*CIDR] VK",
         "🇩🇪 Germany [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN",
         "🇩🇪 Germany [*CIDR] VK-2",
-        "🇧🇬 Bulgaria [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN-2"
+        "🇫🇷 France [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR] VK",
+      "type": "vless",
+      "server": "finnode3.frost-api.com",
+      "server_port": 443,
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇩🇪 Germany [*CIDR] VK",
@@ -76,58 +97,6 @@
     },
     {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-      "type": "vless",
-      "server": "37.18.14.33",
-      "server_port": 2096,
-      "uuid": "53b7fdec-4ccb-481a-8d98-83aa19509330",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR] VK-2",
-      "type": "vless",
-      "server": "serv25.strettenvpn.com",
-      "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.143",
-      "server_port": 59843,
-      "uuid": "c99e66e0-b662-4d77-9559-a1f1d9d3ff26",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "smartcaptcha.yandexcloud.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "1kpwQNJzgJg4EM1ahJrq1dDWM8briCR53o5LKJkA7UA",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN-2",
       "type": "vless",
       "server": "bs.1010101.vip",
       "server_port": 2096,
@@ -148,6 +117,34 @@
       "transport": {
         "type": "grpc",
         "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR] VK-2",
+      "type": "vless",
+      "server": "serv25.strettenvpn.com",
+      "server_port": 443,
+      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR] VK",
+      "type": "vless",
+      "server": "146.185.211.2",
+      "server_port": 443,
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],
