@@ -31,16 +31,31 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇸🇪 Sweden [*CIDR] VK"
+        "🇸🇪 Sweden | [*CIDR] VK",
+        "🇸🇪 Sweden | [*CIDR] VK-2"
       ],
-      "default": "🇸🇪 Sweden [*CIDR] VK",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇪 Sweden [*CIDR] VK",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇸🇪 Sweden | [*CIDR] VK",
+        "🇸🇪 Sweden | [*CIDR] VK-2"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR] VK",
       "type": "vless",
       "server": "90.156.218.236",
       "server_port": 443,
@@ -56,6 +71,29 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "90.156.218.236",
+      "server_port": 443,
+      "uuid": "827835b6-6f4f-4f9d-bbf3-f5d4f58e7f0a",
+      "tls": {
+        "enabled": true,
+        "server_name": "360.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       },
       "transport": {
