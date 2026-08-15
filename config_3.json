@@ -34,8 +34,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN"
+        "🇫🇮 Finland [*CIDR] VK",
+        "🇩🇪 Germany | 🌐 [*CIDR] CDN",
+        "🇫🇷 France [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -48,18 +49,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN"
+        "🇫🇮 Finland [*CIDR] VK",
+        "🇩🇪 Germany | 🌐 [*CIDR] CDN",
+        "🇫🇷 France [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] VK",
+      "tag": "🇫🇮 Finland [*CIDR] VK",
       "type": "vless",
-      "server": "serv25.strettenvpn.com",
+      "server": "finnode3.frost-api.com",
       "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
     },
     {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN",
@@ -83,6 +99,27 @@
       "transport": {
         "type": "grpc",
         "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR] VK",
+      "type": "vless",
+      "server": "frabridge1.frost-api.com",
+      "server_port": 443,
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],

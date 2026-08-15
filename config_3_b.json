@@ -35,7 +35,8 @@
       "tag": "auto",
       "outbounds": [
         "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-        "🇩🇪 Germany [*CIDR] VK"
+        "🇫🇷 France [*CIDR] VK",
+        "🇫🇮 Finland [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -49,7 +50,8 @@
       "outbounds": [
         "auto",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-        "🇩🇪 Germany [*CIDR] VK"
+        "🇫🇷 France [*CIDR] VK",
+        "🇫🇮 Finland [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -79,11 +81,46 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] VK",
+      "tag": "🇫🇷 France [*CIDR] VK",
       "type": "vless",
-      "server": "serv25.strettenvpn.com",
+      "server": "frabridge1.frost-api.com",
       "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR] VK",
+      "type": "vless",
+      "server": "finnode3.frost-api.com",
+      "server_port": 443,
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
     }
   ],
   "route": {
