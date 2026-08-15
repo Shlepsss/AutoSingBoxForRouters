@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
         "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru"
+        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +51,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
         "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru"
+        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
       "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "205.237.104.58",
+      "server_port": 4443,
+      "uuid": "de6d11a5-d833-4f18-a4f9-464b80f0f864",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "dev.max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
+          "public_key": "-yJaCCGsucUDEnTTn6VJJyF0R5ZLlJAVNeIXFJYSGn8",
+          "short_id": "361c68748712c743"
         },
         "utls": {
           "enabled": true,
@@ -81,21 +81,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-      "type": "vless",
-      "server": "201.24.118.145",
-      "server_port": 4100,
-      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "service_name": "grpc-service"
       }
     },
     {
@@ -123,27 +109,17 @@
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
       "type": "vless",
-      "server": "205.237.104.58",
-      "server_port": 4443,
-      "uuid": "de6d11a5-d833-4f18-a4f9-464b80f0f864",
-      "tls": {
-        "enabled": true,
-        "server_name": "dev.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "-yJaCCGsucUDEnTTn6VJJyF0R5ZLlJAVNeIXFJYSGn8",
-          "short_id": "361c68748712c743"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
+      "server": "201.24.118.145",
+      "server_port": 4100,
+      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-service"
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -168,6 +144,20 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+      "type": "vless",
+      "server": "201.24.118.145",
+      "server_port": 2200,
+      "uuid": "89537879-e550-45e9-ab1c-5e1a11c168f1",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
       }
     }
   ],
