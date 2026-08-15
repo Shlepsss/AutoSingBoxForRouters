@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] live.ok.ru",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] live.ok.ru-2",
+        "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] dev.max.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,21 +53,21 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] live.ok.ru",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] live.ok.ru-2",
+        "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] dev.max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "185.141.227.153",
+      "server": "217.19.122.234",
       "server_port": 9001,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
@@ -89,9 +89,9 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "217.19.122.234",
+      "server": "185.141.227.153",
       "server_port": 9001,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
@@ -122,7 +122,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -134,24 +134,27 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] live.ok.ru-2",
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "200.165.234.62",
-      "server_port": 4100,
-      "uuid": "5383fb97-1178-4709-9a25-b767b743e911",
+      "server": "217.19.122.234",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     },
     {
@@ -203,27 +206,27 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] dev.max.ru",
       "type": "vless",
-      "server": "78.159.245.75",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "centraleurope.koexp.ru",
+      "server_port": 4443,
+      "uuid": "de6d11a5-d833-4f18-a4f9-464b80f0f864",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "dev.max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+          "public_key": "-yJaCCGsucUDEnTTn6VJJyF0R5ZLlJAVNeIXFJYSGn8",
+          "short_id": "361c68748712c743"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-reality"
+        "service_name": "grpc-service"
       }
     }
   ],
