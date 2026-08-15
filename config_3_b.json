@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] VK-2",
         "🇫🇮 Finland [*CIDR] VK",
+        "🇩🇪 Germany [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN",
+        "🇩🇪 Germany [*CIDR] VK-2",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN-2"
       ],
       "url": "https://google.com/generate_204",
@@ -51,35 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] VK-2",
         "🇫🇮 Finland [*CIDR] VK",
+        "🇩🇪 Germany [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN",
+        "🇩🇪 Germany [*CIDR] VK-2",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR] VK",
-      "type": "vless",
-      "server": "serv25.strettenvpn.com",
-      "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR] VK-2",
-      "type": "vless",
-      "server": "serv25.strettenvpn.com",
-      "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
     },
     {
       "tag": "🇫🇮 Finland [*CIDR] VK",
@@ -103,6 +82,13 @@
       }
     },
     {
+      "tag": "🇩🇪 Germany [*CIDR] VK",
+      "type": "vless",
+      "server": "serv25.strettenvpn.com",
+      "server_port": 443,
+      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
+    },
+    {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN",
       "type": "vless",
       "server": "bs.1010101.vip",
@@ -118,12 +104,26 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR] VK-2",
+      "type": "vless",
+      "server": "serv25.strettenvpn.com",
+      "server_port": 443,
+      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     },
     {
@@ -142,7 +142,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
