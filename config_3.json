@@ -35,8 +35,8 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 Finland [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-        "🇫🇷 France [*CIDR] VK"
+        "🇫🇷 France [*CIDR] VK",
+        "🇩🇪 Germany | 🌐 [*CIDR] CDN"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,8 +50,8 @@
       "outbounds": [
         "auto",
         "🇫🇮 Finland [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-        "🇫🇷 France [*CIDR] VK"
+        "🇫🇷 France [*CIDR] VK",
+        "🇩🇪 Germany | 🌐 [*CIDR] CDN"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -78,6 +78,27 @@
       }
     },
     {
+      "tag": "🇫🇷 France [*CIDR] VK",
+      "type": "vless",
+      "server": "frabridge1.frost-api.com",
+      "server_port": 443,
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN",
       "type": "vless",
       "server": "bs.1010101.vip",
@@ -99,27 +120,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR] VK",
-      "type": "vless",
-      "server": "frabridge1.frost-api.com",
-      "server_port": 443,
-      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "e7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
       }
     }
   ],
