@@ -34,8 +34,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -48,18 +48,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA",
-      "type": "trojan",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
+      "type": "vless",
       "server": "yandex.techdatacloud.org",
-      "server_port": 8443,
-      "password": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
+      "server_port": 443,
+      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "yandex.com",
@@ -75,12 +76,11 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
-      "type": "vless",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA",
+      "type": "trojan",
       "server": "yandex.techdatacloud.org",
-      "server_port": 443,
-      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
-      "flow": "xtls-rprx-vision",
+      "server_port": 8443,
+      "password": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
       "tls": {
         "enabled": true,
         "server_name": "yandex.com",
