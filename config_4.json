@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
-        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru-2",
         "🇳🇱 The Netherlands [SNI-RU] dev.max.ru-2",
-        "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru-2"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,62 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
-        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
+        "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru-2",
         "🇳🇱 The Netherlands [SNI-RU] dev.max.ru-2",
-        "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru-2"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 [SNI-RU] dev.max.ru",
-      "type": "vless",
-      "server": "205.237.104.58",
-      "server_port": 4443,
-      "uuid": "62b72631-985d-4768-8b5a-7cc06753e0f0",
-      "tls": {
-        "enabled": true,
-        "server_name": "dev.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "-yJaCCGsucUDEnTTn6VJJyF0R5ZLlJAVNeIXFJYSGn8",
-          "short_id": "361c68748712c743"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-service"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
-      "type": "vless",
-      "server": "83.138.53.193",
-      "server_port": 4443,
-      "uuid": "62b72631-985d-4768-8b5a-7cc06753e0f0",
-      "tls": {
-        "enabled": true,
-        "server_name": "dev.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "-yJaCCGsucUDEnTTn6VJJyF0R5ZLlJAVNeIXFJYSGn8",
-          "short_id": "361c68748712c743"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-service"
-      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
@@ -133,9 +85,9 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] dev.max.ru-2",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
       "type": "vless",
-      "server": "centraleurope.koexp.ru",
+      "server": "83.138.53.189",
       "server_port": 4443,
       "uuid": "896002a8-3afc-49e6-8fac-5129fb717b49",
       "tls": {
@@ -148,7 +100,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -178,6 +130,44 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [SNI-RU] dev.max.ru-2",
+      "type": "vless",
+      "server": "83.138.53.193",
+      "server_port": 4443,
+      "uuid": "896002a8-3afc-49e6-8fac-5129fb717b49",
+      "tls": {
+        "enabled": true,
+        "server_name": "dev.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "-yJaCCGsucUDEnTTn6VJJyF0R5ZLlJAVNeIXFJYSGn8",
+          "short_id": "361c68748712c743"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-service"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "type": "vless",
+      "server": "200.165.228.78",
+      "server_port": 4100,
+      "uuid": "215c2b34-6371-49c7-a90d-39a4fe5191c0",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     }
   ],
