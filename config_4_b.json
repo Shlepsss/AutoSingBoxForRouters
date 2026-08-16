@@ -34,9 +34,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [SNI-RU] max.ru",
         "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
         "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru-2",
+        "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru-3",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru-2"
       ],
@@ -51,35 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands [SNI-RU] max.ru",
         "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
         "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru-2",
+        "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru-3",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "mws-fc-2.ghost-lan.com",
-      "server_port": 9444,
-      "uuid": "694fbac8-56da-4ecd-be68-59c57b700e93",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "bqLr1d3mbuP10WAYxWj8OEdSuZlVvrywrKq2U6ACw2w",
-          "short_id": "12b9ecabbf3a3b88"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
     },
     {
       "tag": "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
@@ -97,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -122,6 +101,30 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru-3",
+      "type": "vless",
+      "server": "185.141.227.153",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       },
       "transport": {
