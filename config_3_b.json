@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN-2",
-        "🇫🇮 Finland [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
         "🇫🇷 France [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK"
+        "🇫🇮 Finland [*CIDR] VK",
+        "🇫🇷 France [*CIDR] VK-2",
+        "🇫🇮 Finland [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,73 +51,25 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-        "🇩🇪 Germany | 🌐 [*CIDR] CDN-2",
-        "🇫🇮 Finland [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
         "🇫🇷 France [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK"
+        "🇫🇮 Finland [*CIDR] VK",
+        "🇫🇷 France [*CIDR] VK-2",
+        "🇫🇮 Finland [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
       "type": "vless",
-      "server": "bs.1010101.vip",
-      "server_port": 2096,
-      "uuid": "53b7fdec-4ccb-481a-8d98-83aa19509330",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "bs.1010101.vip",
-      "server_port": 2096,
-      "uuid": "53b7fdec-4ccb-481a-8d98-83aa19509330",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland [*CIDR] VK",
-      "type": "vless",
-      "server": "finnode3.frost-api.com",
+      "server": "node3.frost-api.com",
       "server_port": 443,
       "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "eh.vk.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
           "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
@@ -125,7 +77,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -151,9 +103,30 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
+      "tag": "🇫🇮 Finland [*CIDR] VK",
       "type": "vless",
-      "server": "node3.frost-api.com",
+      "server": "finnode3.frost-api.com",
+      "server_port": 443,
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR] VK-2",
+      "type": "vless",
+      "server": "frabridge1.frost-api.com",
       "server_port": 443,
       "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
       "flow": "xtls-rprx-vision",
@@ -168,6 +141,27 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR] VK-2",
+      "type": "vless",
+      "server": "finnode3.frost-api.com",
+      "server_port": 443,
+      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }
