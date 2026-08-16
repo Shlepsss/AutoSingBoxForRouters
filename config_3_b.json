@@ -31,32 +31,67 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR] Beeline"
+        "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA"
       ],
-      "default": "🇩🇪 Germany [*CIDR] Beeline",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] Beeline",
-      "type": "vless",
-      "server": "78.159.246.110",
-      "server_port": 2027,
-      "uuid": "851ed0d8-a37b-452d-8ef2-5b6c2d28a060",
-      "flow": "xtls-rprx-vision",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇵🇱 [*CIDR] YA",
+      "type": "trojan",
+      "server": "yandex.techdatacloud.org",
+      "server_port": 8443,
+      "password": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
       "tls": {
         "enabled": true,
-        "server_name": "storage.yandex.net",
+        "server_name": "yandex.com",
         "reality": {
           "enabled": true,
-          "public_key": "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo",
-          "short_id": "dc8109baf0f607ea"
+          "public_key": "dBfauqJ3BJqYC4OkMUeMbKrslbAPe-viZ3e9uS27lRs",
+          "short_id": "491c9a1907ac51ff"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] YA",
+      "type": "vless",
+      "server": "yandex.techdatacloud.org",
+      "server_port": 443,
+      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "dBfauqJ3BJqYC4OkMUeMbKrslbAPe-viZ3e9uS27lRs",
+          "short_id": "491c9a1907ac51ff"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
