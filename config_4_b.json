@@ -37,7 +37,7 @@
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
         "🇳🇱 The Netherlands [SNI-RU] dev.max.ru-2",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
@@ -54,7 +54,7 @@
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
         "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
         "🇳🇱 The Netherlands [SNI-RU] dev.max.ru-2",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
@@ -76,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -87,7 +87,7 @@
     {
       "tag": "🇳🇱 The Netherlands [SNI-RU] dev.max.ru",
       "type": "vless",
-      "server": "83.138.53.193",
+      "server": "83.138.53.189",
       "server_port": 4443,
       "uuid": "896002a8-3afc-49e6-8fac-5129fb717b49",
       "tls": {
@@ -100,7 +100,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -111,7 +111,7 @@
     {
       "tag": "🇳🇱 The Netherlands [SNI-RU] dev.max.ru-2",
       "type": "vless",
-      "server": "centraleurope.koexp.ru",
+      "server": "83.138.53.189",
       "server_port": 4443,
       "uuid": "896002a8-3afc-49e6-8fac-5129fb717b49",
       "tls": {
@@ -124,7 +124,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -133,24 +133,27 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "201.24.119.141",
-      "server_port": 4100,
-      "uuid": "3b037295-b93f-4ed1-b3ee-0efb8bc2f093",
+      "server": "185.141.227.153",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     },
     {
@@ -169,7 +172,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
