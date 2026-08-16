@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-        "🇩🇪 Germany [*CIDR] VK-2",
-        "🇫🇷 France [*CIDR] VK"
+        "🇫🇮 Finland [*CIDR] VK",
+        "🇵🇱 Poland | 🌐 [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 [*CIDR] CDN-2",
+        "🇷🇺 Russia [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] CDN",
-        "🇩🇪 Germany [*CIDR] VK-2",
-        "🇫🇷 France [*CIDR] VK"
+        "🇫🇮 Finland [*CIDR] VK",
+        "🇵🇱 Poland | 🌐 [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 [*CIDR] CDN-2",
+        "🇷🇺 Russia [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN",
+      "type": "vless",
+      "server": "37.18.14.33",
+      "server_port": 2096,
+      "uuid": "53b7fdec-4ccb-481a-8d98-83aa19509330",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
     },
     {
       "tag": "🇫🇮 Finland [*CIDR] VK",
@@ -77,26 +101,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] VK",
+      "tag": "🇵🇱 Poland | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "serv25.strettenvpn.com",
+      "server": "158.160.196.250",
       "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a",
+      "uuid": "d4ed246b-38d2-4bd5-a4d1-b5a8db14ba4d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "d3-pl.cloud-cdn.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "EkbpWkCU1pXbD7Hola6JIO_C7GlJqzWm48Yg9XGgMCw",
+          "short_id": "677b60cf0320407c"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN-2",
       "type": "vless",
       "server": "bs.1010101.vip",
       "server_port": 2096,
@@ -111,7 +142,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -120,30 +151,23 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] VK-2",
+      "tag": "🇷🇺 Russia [*CIDR] YA",
       "type": "vless",
-      "server": "serv25.strettenvpn.com",
+      "server": "158.160.196.250",
       "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR] VK",
-      "type": "vless",
-      "server": "146.185.211.2",
-      "server_port": 443,
-      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
+      "uuid": "d4ed246b-38d2-4bd5-a4d1-b5a8db14ba4d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "d3cdn9.cloud-cdn.xyz",
         "reality": {
           "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "e7"
+          "public_key": "mdb9oT5vHeItx8PzikhfKOKhsNWCLT6JqGm99vk7hzU",
+          "short_id": "5ea6eaa2c965253e"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       }
     }

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇪🇪 Estonia | 🌐 [*CIDR] YA",
         "🇫🇮 Finland [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇫🇮 Finland [*CIDR] VK-2",
-        "🇩🇪 Germany [*CIDR] VK-2",
-        "🇧🇬 Bulgaria [*CIDR] VK"
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇫🇷 France [*CIDR] VK",
+        "🇩🇪 Germany | 🌐 [*CIDR] CDN"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇪🇪 Estonia | 🌐 [*CIDR] YA",
         "🇫🇮 Finland [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇫🇮 Finland [*CIDR] VK-2",
-        "🇩🇪 Germany [*CIDR] VK-2",
-        "🇧🇬 Bulgaria [*CIDR] VK"
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇫🇷 France [*CIDR] VK",
+        "🇩🇪 Germany | 🌐 [*CIDR] CDN"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.196.250",
+      "server_port": 443,
+      "uuid": "d4ed246b-38d2-4bd5-a4d1-b5a8db14ba4d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "d3-ee1.cloud-cdn.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "JVkdVzi659vrl5D42Loy6B8gpyidxZU_8zq0zNuFXgk",
+          "short_id": "7443e1a04463cadc"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
     },
     {
       "tag": "🇫🇮 Finland [*CIDR] VK",
@@ -82,22 +103,36 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] VK",
+      "tag": "🇷🇺 Russia [*CIDR] YA",
       "type": "vless",
-      "server": "serv17.strettenvpn.com",
+      "server": "158.160.196.250",
       "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
+      "uuid": "d4ed246b-38d2-4bd5-a4d1-b5a8db14ba4d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "d3cdn9.cloud-cdn.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "mdb9oT5vHeItx8PzikhfKOKhsNWCLT6JqGm99vk7hzU",
+          "short_id": "5ea6eaa2c965253e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR] VK-2",
+      "tag": "🇫🇷 France [*CIDR] VK",
       "type": "vless",
-      "server": "finnode3.frost-api.com",
+      "server": "146.185.211.2",
       "server_port": 443,
       "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "eh.vk.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
           "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
@@ -105,36 +140,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] VK-2",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] CDN",
       "type": "vless",
-      "server": "serv25.strettenvpn.com",
-      "server_port": 443,
-      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.143",
-      "server_port": 59843,
-      "uuid": "c99e66e0-b662-4d77-9559-a1f1d9d3ff26",
-      "flow": "xtls-rprx-vision",
+      "server": "37.18.14.33",
+      "server_port": 2096,
+      "uuid": "53b7fdec-4ccb-481a-8d98-83aa19509330",
       "tls": {
         "enabled": true,
-        "server_name": "smartcaptcha.yandexcloud.net",
+        "server_name": "id.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "1kpwQNJzgJg4EM1ahJrq1dDWM8briCR53o5LKJkA7UA",
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     }
   ],
