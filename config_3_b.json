@@ -31,70 +31,20 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇩🇪 Germany [*CIDR] CDN",
-        "🇫🇮 Finland [*CIDR] VK"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇩🇪 Germany [*CIDR] CDN",
-        "🇫🇮 Finland [*CIDR] VK"
+        "🇩🇪 Germany [*CIDR] VK"
       ],
-      "default": "auto",
+      "default": "🇩🇪 Germany [*CIDR] VK",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] CDN",
+      "tag": "🇩🇪 Germany [*CIDR] VK",
       "type": "vless",
-      "server": "37.18.14.74",
-      "server_port": 2027,
-      "uuid": "851ed0d8-a37b-452d-8ef2-5b6c2d28a060",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "storage.yandex.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo",
-          "short_id": "dc8109baf0f607ea"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland [*CIDR] VK",
-      "type": "vless",
-      "server": "finnode3.frost-api.com",
+      "server": "serv25.strettenvpn.com",
       "server_port": 443,
-      "uuid": "34a38f21-310e-4da5-b549-35076e16993c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "e7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "uuid": "707db87b-9cbf-438f-b4c7-9d984c8e944a"
     }
   ],
   "route": {
