@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR] YA-3",
         "🇷🇺 Russia [*CIDR]-4",
         "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-6"
+        "🇷🇺 Russia | 🌐 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,22 +56,50 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR] YA-3",
         "🇷🇺 Russia [*CIDR]-4",
         "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-6"
+        "🇷🇺 Russia | 🌐 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "168.222.203.14",
+      "server_port": 4100,
+      "uuid": "2e79f3ca-b8db-4d4d-a96e-8f7313480696",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "31.129.96.186",
+      "server_port": 4100,
+      "uuid": "9c8fab5e-9094-4f9d-b269-df037d9c1bae",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "201.51.1.84",
       "server_port": 16923,
@@ -86,113 +114,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "139.100.197.28",
-      "server_port": 52006,
-      "uuid": "fb0f5eac-175b-07d0-b64e-19e13a6d9bd0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "search.setlisting.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "139.100.197.28",
-      "server_port": 52006,
-      "uuid": "73cffa3c-908b-07d0-a6e7-fa0a4f9f00ec",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "search.setlisting.ru",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "195.209.213.112",
-      "server_port": 444,
-      "uuid": "a7e533d4-c9b7-4575-a7e9-54a6e6e27db0",
-      "tls": {
-        "enabled": true,
-        "server_name": "ruvolt-1.kandnet.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "hdAioqf-nhHf-OFlv2QuQsCH_UfujwR_OBFbq2lESEg",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
-      "type": "vless",
-      "server": "139.100.197.28",
-      "server_port": 52006,
-      "uuid": "1983a39d-e39f-07d0-b9e1-5d2c4ae04495",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "search.setlisting.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "mws.tunnelgate.org",
-      "server_port": 14443,
-      "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
-      "tls": {
-        "enabled": true,
-        "server_name": "mws.tunnelgate.org"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "mws.tunnelgate.org"
-        },
-        "path": "/ru"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "104.171.133.53",
-      "server_port": 2200,
-      "uuid": "bee21918-0933-430c-904b-c941b92256ba",
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
       }
     },
     {
@@ -216,16 +143,36 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
+      "tag": "🇷🇺 Russia [*CIDR] YA-2",
       "type": "vless",
-      "server": "31.177.83.226",
+      "server": "217.198.169.86",
+      "server_port": 443,
+      "uuid": "fc07967d-925b-4246-a535-9527a8242a16",
+      "tls": {
+        "enabled": true,
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "h5rOWssRWMnFJ0Ka0-PwBwwg3PMPifPShXutXEoj2QM",
+          "short_id": "b8ac5fcfceca"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "77.222.32.201",
       "server_port": 2200,
-      "uuid": "3e530a2c-7fad-42b9-9fde-ea88d9f8ffb3",
+      "uuid": "c366f788-ea31-4a3a-897e-794c9f935896",
       "tls": {
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -237,7 +184,27 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "tag": "🇷🇺 Russia [*CIDR] YA-3",
+      "type": "vless",
+      "server": "217.198.169.86",
+      "server_port": 443,
+      "uuid": "fc07967d-925b-4246-a535-9527a8242a16",
+      "tls": {
+        "enabled": true,
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "h5rOWssRWMnFJ0Ka0-PwBwwg3PMPifPShXutXEoj2QM",
+          "short_id": "b8ac5fcfceca"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "201.51.1.84",
       "server_port": 16923,
@@ -252,12 +219,57 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "type": "vless",
+      "server": "195.209.213.112",
+      "server_port": 444,
+      "uuid": "a7e533d4-c9b7-4575-a7e9-54a6e6e27db0",
+      "tls": {
+        "enabled": true,
+        "server_name": "ruvolt-1.kandnet.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "hdAioqf-nhHf-OFlv2QuQsCH_UfujwR_OBFbq2lESEg",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "176.109.85.71",
+      "server_port": 14443,
+      "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
+      "tls": {
+        "enabled": true,
+        "server_name": "mws.tunnelgate.org",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "mws.tunnelgate.org"
+        },
+        "path": "/ru"
       }
     }
   ],
