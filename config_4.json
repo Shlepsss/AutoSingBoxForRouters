@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 Brazil [SNI-RU] ya.ru",
-        "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
+        "🇯🇵 Japan [SNI-RU] ads.x5.ru",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia [SNI-RU] cloud.mail.ru",
-        "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia [SNI-RU] cloud.mail.ru-2"
+        "🇷🇺 Russia [SNI-RU] cloud.mail.ru-2",
+        "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
+        "🇬🇧 United Kingdom [SNI-RU] cloud.mail.ru",
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,51 +53,30 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 Brazil [SNI-RU] ya.ru",
-        "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
+        "🇯🇵 Japan [SNI-RU] ads.x5.ru",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia [SNI-RU] cloud.mail.ru",
-        "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia [SNI-RU] cloud.mail.ru-2"
+        "🇷🇺 Russia [SNI-RU] cloud.mail.ru-2",
+        "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
+        "🇬🇧 United Kingdom [SNI-RU] cloud.mail.ru",
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇷 Brazil [SNI-RU] ya.ru",
+      "tag": "🇯🇵 Japan [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "rg.serviceoda.ru",
-      "server_port": 443,
-      "uuid": "16ab4d4a-fd81-4535-9b7b-346677226ce8",
-      "flow": "xtls-rprx-vision",
+      "server": "31.76.91.138",
+      "server_port": 2087,
+      "uuid": "309b0ce3-09a8-4883-bfe4-bd56e215be44",
       "tls": {
         "enabled": true,
-        "server_name": "ya.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "kQnmL_D7qUBBEhMt0y9m1C7FGM_rHJnf-Co5M1AryhE",
-          "short_id": "fbe37eb3d3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "78.159.245.75",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+          "public_key": "JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4",
+          "short_id": "c226283c4de5b1ad"
         },
         "utls": {
           "enabled": true,
@@ -106,7 +85,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-reality"
+        "service_name": "grpc"
       }
     },
     {
@@ -154,9 +133,29 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🇷🇺 Russia [SNI-RU] cloud.mail.ru-2",
+      "type": "trojan",
+      "server": "ru.techdatacloud.org",
+      "server_port": 8443,
+      "password": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloud.mail.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "jaZRUO7x7awSXNBlvKp3nXdm2gBEsEgmNbbYs7RRQlw",
+          "short_id": "8c3785d47c2017ec"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "185.141.227.153",
+      "server": "78.159.245.75",
       "server_port": 9002,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
@@ -165,16 +164,36 @@
         "reality": {
           "enabled": true,
           "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] cloud.mail.ru",
+      "type": "trojan",
+      "server": "gb.techdatacloud.org",
+      "server_port": 2053,
+      "password": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloud.mail.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "uiFSTSOSNKBLju8qnTOyZdM1WyTwOFVr3-RXUYk9nEM",
+          "short_id": "23572794d5ffc9fd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
@@ -199,26 +218,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] cloud.mail.ru-2",
-      "type": "trojan",
-      "server": "ru.techdatacloud.org",
-      "server_port": 8443,
-      "password": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloud.mail.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "jaZRUO7x7awSXNBlvKp3nXdm2gBEsEgmNbbYs7RRQlw",
-          "short_id": "8c3785d47c2017ec"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     }
   ],
