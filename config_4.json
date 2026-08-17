@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇿 Kazakhstan [SNI-RU] ya.ru",
         "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
-        "🇯🇵 Japan [SNI-RU] ads.x5.ru"
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇯🇵 Japan [SNI-RU] ads.x5.ru",
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇿 Kazakhstan [SNI-RU] ya.ru",
         "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
-        "🇯🇵 Japan [SNI-RU] ads.x5.ru"
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🇯🇵 Japan [SNI-RU] ads.x5.ru",
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇰🇿 Kazakhstan [SNI-RU] ya.ru",
-      "type": "vless",
-      "server": "5.180.27.159",
-      "server_port": 8445,
-      "uuid": "fd6011da-5c16-463d-8aaf-ff35c1b95a74",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "LZF1JDaVO0Mk_YHH19G5Pv1_jVKm_k_0KcJCWhMHRQo",
-          "short_id": "fe8565750f25"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
     },
     {
       "tag": "🇪🇪 Estonia [SNI-RU] api-maps.yandex.ru",
@@ -124,7 +100,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -133,27 +109,24 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
       "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "200.165.234.62",
+      "server_port": 4100,
+      "uuid": "5383fb97-1178-4709-9a25-b767b743e911",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -178,6 +151,30 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "185.141.227.153",
+      "server_port": 9001,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     }
   ],
