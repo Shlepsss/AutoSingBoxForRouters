@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
         "🇫🇮 Finland | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇫🇮 Finland | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇫🇷 France | 🌐 | [*CIDR]"
+        "🌐 Anycast-IP | 🇵🇱 🇺🇦 [*CIDR] Beeline",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,40 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
         "🇫🇮 Finland | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇫🇮 Finland | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇫🇷 France | 🌐 | [*CIDR]"
+        "🌐 Anycast-IP | 🇵🇱 🇺🇦 [*CIDR] Beeline",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "core.univesalsrv.com",
-      "server_port": 443,
-      "uuid": "e4f3c665-3bfa-4324-a8af-ddbb220e5a56",
-      "tls": {
-        "enabled": true,
-        "server_name": "core.univesalsrv.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "qC6RGWAH6tWFe2xGC9IGxpu9hQtxvOclI8yuj0AT8Eg",
-          "short_id": "f42242bed20425b5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "edge.v2.ObjectService"
-      }
     },
     {
       "tag": "🇫🇮 Finland | [*CIDR]",
@@ -113,7 +89,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
       "server": "core.univesalsrv.com",
       "server_port": 443,
@@ -137,27 +113,27 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "79.174.83.75",
+      "server": "core.univesalsrv.com",
       "server_port": 443,
-      "uuid": "bc178dce-ec30-4d16-ac03-520a842c4ea1",
+      "uuid": "e4f3c665-3bfa-4324-a8af-ddbb220e5a56",
       "tls": {
         "enabled": true,
-        "server_name": "5post-gate.x5.ru",
+        "server_name": "core.univesalsrv.com",
         "reality": {
           "enabled": true,
-          "public_key": "V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ",
-          "short_id": "abcd"
+          "public_key": "qC6RGWAH6tWFe2xGC9IGxpu9hQtxvOclI8yuj0AT8Eg",
+          "short_id": "f42242bed20425b5"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "5post.gate.v1"
+        "service_name": "edge.v2.ObjectService"
       }
     },
     {
@@ -176,12 +152,56 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "edge.v2.ObjectService"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇺🇦 [*CIDR] Beeline",
+      "type": "vless",
+      "server": "66.90.93.74",
+      "server_port": 8445,
+      "uuid": "ccad147b-06f9-43f6-81cf-a0007094b373",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway-v1.bosx.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "gateway-v1.bosx.net"
+        },
+        "path": "/api/v2/connect"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "176.109.85.142",
+      "server_port": 9445,
+      "uuid": "694fbac8-56da-4ecd-be68-59c57b700e93",
+      "tls": {
+        "enabled": true,
+        "server_name": "grmn-av2.ghost-service.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "media.playback.v1.SessionGateway"
       }
     },
     {
@@ -200,36 +220,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "edge.v2.ObjectService"
-      }
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "81.90.31.221",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "ea.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3f2qE54FhkEMnNUTVwxtSWWPJG9ZrQoxF-dyq3IQpQk",
-          "short_id": "558d5f07"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     }
   ],
