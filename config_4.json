@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom [SNI-RU] cloud.mail.ru",
-        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] api-maps.yandex.ru",
-        "🇵🇱 Poland [SNI-RU] cloud.mail.ru",
+        "🌐 Anycast-IP | 🇳🇱 [SNI-RU] api-maps.yandex.ru",
         "🌐 Anycast-IP | 🇷🇺 [SNI-RU] api-maps.yandex.ru",
-        "🌐 Anycast-IP | 🇳🇱 [SNI-RU] api-maps.yandex.ru"
+        "🇰🇿 Kazakhstan [SNI-RU] ya.ru",
+        "🇵🇱 Poland [SNI-RU] cloud.mail.ru",
+        "🌐 Anycast-IP | 🇷🇺 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,40 +51,44 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom [SNI-RU] cloud.mail.ru",
-        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] api-maps.yandex.ru",
-        "🇵🇱 Poland [SNI-RU] cloud.mail.ru",
+        "🌐 Anycast-IP | 🇳🇱 [SNI-RU] api-maps.yandex.ru",
         "🌐 Anycast-IP | 🇷🇺 [SNI-RU] api-maps.yandex.ru",
-        "🌐 Anycast-IP | 🇳🇱 [SNI-RU] api-maps.yandex.ru"
+        "🇰🇿 Kazakhstan [SNI-RU] ya.ru",
+        "🇵🇱 Poland [SNI-RU] cloud.mail.ru",
+        "🌐 Anycast-IP | 🇷🇺 [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] cloud.mail.ru",
-      "type": "vless",
-      "server": "gb.techdatacloud.org",
-      "server_port": 2087,
-      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloud.mail.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "UfqrNRXfz_KWr-NkPgJkcj1eRaq52xdNxgXV5XoRek4",
-          "short_id": "648c261a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] api-maps.yandex.ru",
+      "tag": "🌐 Anycast-IP | 🇳🇱 [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "185.141.227.153",
       "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇺 [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "185.141.227.153",
+      "server_port": 9001,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
@@ -105,18 +109,42 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] cloud.mail.ru",
+      "tag": "🇰🇿 Kazakhstan [SNI-RU] ya.ru",
       "type": "vless",
+      "server": "5.180.27.159",
+      "server_port": 8445,
+      "uuid": "fd6011da-5c16-463d-8aaf-ff35c1b95a74",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "LZF1JDaVO0Mk_YHH19G5Pv1_jVKm_k_0KcJCWhMHRQo",
+          "short_id": "fe8565750f25"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] cloud.mail.ru",
+      "type": "trojan",
       "server": "pl.techdatacloud.org",
-      "server_port": 2087,
-      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
+      "server_port": 2053,
+      "password": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
       "tls": {
         "enabled": true,
         "server_name": "cloud.mail.ru",
         "reality": {
           "enabled": true,
-          "public_key": "UfqrNRXfz_KWr-NkPgJkcj1eRaq52xdNxgXV5XoRek4",
-          "short_id": "648c261a"
+          "public_key": "uiFSTSOSNKBLju8qnTOyZdM1WyTwOFVr3-RXUYk9nEM",
+          "short_id": "23572794d5ffc9fd"
         },
         "utls": {
           "enabled": true,
@@ -125,7 +153,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇺 [SNI-RU] api-maps.yandex.ru",
+      "tag": "🌐 Anycast-IP | 🇷🇺 [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
       "server": "185.141.227.153",
       "server_port": 9001,
@@ -141,30 +169,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇳🇱 [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       },
       "transport": {
