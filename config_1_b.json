@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-6",
-        "🇷🇺 Russia | [*CIDR]-7",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-8"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-6"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,48 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-6",
-        "🇷🇺 Russia | [*CIDR]-7",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-8"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-6"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "168.222.140.236",
+      "server_port": 4100,
+      "uuid": "155e8dd4-a559-407a-9ea8-13a5e829f066",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "%2Fv1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "135.106.140.18",
+      "server_port": 443,
+      "uuid": "2c925c9c-1c1d-45d2-a4d5-b76a8fbfed9b",
+      "tls": {
+        "enabled": true,
+        "server_name": "russia1.denverpresents.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
@@ -86,50 +115,11 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "31.177.83.226",
-      "server_port": 2200,
-      "uuid": "3e530a2c-7fad-42b9-9fde-ea88d9f8ffb3",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "194.26.229.219",
-      "server_port": 4100,
-      "uuid": "099c6e3f-e8d3-41d4-95f2-ef2eafb51cdc",
-      "tls": {
-        "enabled": true,
-        "server_name": "live.ok.ru"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "135.106.140.18",
       "server_port": 443,
-      "uuid": "2c925c9c-1c1d-45d2-a4d5-b76a8fbfed9b",
+      "uuid": "d40b8a59-55dd-4f07-80ed-ca7ee40d9fa2",
       "tls": {
         "enabled": true,
         "server_name": "russia1.denverpresents.top",
@@ -140,11 +130,11 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "135.106.140.18",
       "server_port": 443,
-      "uuid": "60648bea-2b32-41e6-beb8-653d08fcec5e",
+      "uuid": "46241b75-e38e-4772-8996-e21a202c7e06",
       "tls": {
         "enabled": true,
         "server_name": "russia1.denverpresents.top",
@@ -155,89 +145,82 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "135.106.140.18",
       "server_port": 443,
-      "uuid": "c59e8787-7367-4198-bbd5-d5789493c3b4",
+      "uuid": "497442f4-af45-4b75-97b1-63fe3726e8a1",
       "tls": {
         "enabled": true,
         "server_name": "russia1.denverpresents.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-6",
-      "type": "vless",
-      "server": "135.106.140.18",
-      "server_port": 443,
-      "uuid": "8b761240-0022-42ab-b549-5714d51e8011",
-      "tls": {
-        "enabled": true,
-        "server_name": "russia1.denverpresents.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-7",
-      "type": "vless",
-      "server": "31.177.83.226",
-      "server_port": 2200,
-      "uuid": "3e530a2c-7fad-42b9-9fde-ea88d9f8ffb3",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "31.177.83.226",
-      "server_port": 2200,
-      "uuid": "3e530a2c-7fad-42b9-9fde-ea88d9f8ffb3",
-      "tls": {
-        "enabled": true,
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-8",
+      "tag": "🇷🇺 Russia | [*CIDR] YA",
+      "type": "vless",
+      "server": "217.198.169.86",
+      "server_port": 443,
+      "uuid": "fc07967d-925b-4246-a535-9527a8242a16",
+      "tls": {
+        "enabled": true,
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "h5rOWssRWMnFJ0Ka0-PwBwwg3PMPifPShXutXEoj2QM",
+          "short_id": "b8ac5fcfceca"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-5",
       "type": "vless",
       "server": "135.106.140.18",
       "server_port": 443,
-      "uuid": "b1783541-8bc5-4171-a100-394051e0a7a9",
+      "uuid": "abc2d099-3c30-45c1-a754-bc25aa95061b",
       "tls": {
         "enabled": true,
         "server_name": "russia1.denverpresents.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "135.106.140.18",
+      "server_port": 443,
+      "uuid": "c97dc89d-5058-4772-b56f-82e7ec9c2b1c",
+      "tls": {
+        "enabled": true,
+        "server_name": "russia1.denverpresents.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "type": "vless",
+      "server": "135.106.140.18",
+      "server_port": 443,
+      "uuid": "76076b51-024b-4d5e-a79c-571a232d11e6",
+      "tls": {
+        "enabled": true,
+        "server_name": "russia1.denverpresents.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
