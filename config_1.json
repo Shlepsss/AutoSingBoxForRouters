@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇫🇷 France | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇨🇿 Czechia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇨🇿 Czechia | [*CIDR]"
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,21 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇫🇷 France | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇨🇿 Czechia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇨🇿 Czechia | [*CIDR]"
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "russia.zelnora.ir",
+      "server_port": 64584,
+      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082"
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
@@ -82,29 +89,22 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇨🇿 Czechia | [*CIDR]",
       "type": "vless",
-      "server": "russia.zelnora.ir",
-      "server_port": 64584,
-      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082"
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "134.0.116.208",
-      "server_port": 9880,
-      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
+      "server": "80.78.244.33",
+      "server_port": 9890,
+      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aa"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -134,22 +134,22 @@
       }
     },
     {
-      "tag": "🇨🇿 Czechia | [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
-      "server": "80.78.244.33",
-      "server_port": 9890,
-      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
+      "server": "185.50.203.1",
+      "server_port": 9892,
+      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aa"
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
