@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇸🇪 Sweden | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,67 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇸🇪 Sweden | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]",
-      "type": "vless",
-      "server": "212.41.26.84",
-      "server_port": 443,
-      "uuid": "163dc809-7970-4ff8-a7e5-8080ad53e7bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "v1.api2.ttpservers.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "mygrpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "russia.zelnora.ir",
-      "server_port": 64584,
-      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082"
-    },
-    {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
-      "type": "vless",
-      "server": "80.78.246.205",
-      "server_port": 9882,
-      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
@@ -135,6 +82,13 @@
       }
     },
     {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "russia.zelnora.ir",
+      "server_port": 64584,
+      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082"
+    },
+    {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
       "server": "92.255.78.9",
@@ -153,6 +107,52 @@
           "enabled": true,
           "fingerprint": "android"
         }
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "type": "vless",
+      "server": "176.123.164.9",
+      "server_port": 9872,
+      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "46.182.24.112",
+      "server_port": 2096,
+      "uuid": "163dc809-7970-4ff8-a7e5-8080ad53e7bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "v1.api2.ttpservers.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mygrpc"
       }
     }
   ],

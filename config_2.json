@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇵🇱 Poland [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,30 +51,27 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇵🇱 Poland [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
-      "server": "46.182.24.112",
-      "server_port": 2096,
+      "server": "212.41.26.84",
+      "server_port": 443,
       "uuid": "163dc809-7970-4ff8-a7e5-8080ad53e7bb",
       "tls": {
         "enabled": true,
         "server_name": "v1.api2.ttpservers.ru",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -99,32 +96,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]-2",
-      "type": "vless",
-      "server": "185.50.203.1",
-      "server_port": 9892,
-      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
@@ -144,7 +117,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
       }
     },
@@ -154,6 +127,28 @@
       "server": "russia.zelnora.ir",
       "server_port": 64584,
       "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082"
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR]",
+      "type": "vless",
+      "server": "212.41.26.84",
+      "server_port": 443,
+      "uuid": "163dc809-7970-4ff8-a7e5-8080ad53e7bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "v1.api2.ttpservers.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mygrpc"
+      }
     }
   ],
   "route": {
