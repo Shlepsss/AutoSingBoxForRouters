@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]",
         "🇸🇪 Sweden [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,44 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]",
         "🇸🇪 Sweden [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]",
+      "type": "vless",
+      "server": "mlt.spbculture.org",
+      "server_port": 443,
+      "uuid": "fecd4358-c037-4ae2-bae0-c72792fd8e40",
+      "tls": {
+        "enabled": true,
+        "server_name": "mlt.spbculture.org",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "mlt.spbculture.org"
+        },
+        "path": "/api/v2/upload/2aec3a50a58a"
+      }
+    },
+    {
       "tag": "🇸🇪 Sweden [*CIDR]",
       "type": "vless",
-      "server": "194.58.95.183",
+      "server": "176.123.164.9",
       "server_port": 9872,
       "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
       "tls": {
@@ -72,7 +97,7 @@
         "reality": {
           "enabled": true,
           "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
+          "short_id": "aabbccdd"
         },
         "utls": {
           "enabled": true,
@@ -101,33 +126,16 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "185.50.203.1",
-      "server_port": 9892,
-      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
+      "server": "russia.zelnora.ir",
+      "server_port": 64584,
+      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082"
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
@@ -146,16 +154,9 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
       }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "russia.zelnora.ir",
-      "server_port": 64584,
-      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082"
     }
   ],
   "route": {
