@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia | [*CIDR] VK",
         "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇪🇪 Estonia | [*CIDR] VK",
         "🇳🇱 The Netherlands | [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | [*CIDR] YA-3",
-        "🇪🇪 Estonia | [*CIDR] VK-2"
+        "🇪🇪 Estonia | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,39 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia | [*CIDR] VK",
         "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇪🇪 Estonia | [*CIDR] VK",
         "🇳🇱 The Netherlands | [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | [*CIDR] YA-3",
-        "🇪🇪 Estonia | [*CIDR] VK-2"
+        "🇪🇪 Estonia | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
+      "type": "vless",
+      "server": "secure.covwkfjpa.top",
+      "server_port": 443,
+      "uuid": "6ed49e74-b33b-46af-9b79-ef5e1429bfdf",
+      "tls": {
+        "enabled": true,
+        "server_name": "secure.covwkfjpa.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "secure.covwkfjpa.top"
+        },
+        "path": "/jSkSOxcaWoPMMU6Mp"
+      }
     },
     {
       "tag": "🇪🇪 Estonia | [*CIDR] VK",
@@ -77,30 +102,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
-      "type": "vless",
-      "server": "secure.covwkfjpa.top",
-      "server_port": 443,
-      "uuid": "6ed49e74-b33b-46af-9b79-ef5e1429bfdf",
-      "tls": {
-        "enabled": true,
-        "server_name": "secure.covwkfjpa.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "secure.covwkfjpa.top"
-        },
-        "path": "/jSkSOxcaWoPMMU6Mp"
       }
     },
     {
@@ -115,28 +118,6 @@
         "alpn": [
           "http/1.1"
         ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "secure.covwkfjpa.top"
-        },
-        "path": "/jSkSOxcaWoPMMU6Mp"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-3",
-      "type": "vless",
-      "server": "secure.covwkfjpa.top",
-      "server_port": 443,
-      "uuid": "6ed49e74-b33b-46af-9b79-ef5e1429bfdf",
-      "tls": {
-        "enabled": true,
-        "server_name": "secure.covwkfjpa.top",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -167,8 +148,30 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "android"
         }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-3",
+      "type": "vless",
+      "server": "secure.covwkfjpa.top",
+      "server_port": 443,
+      "uuid": "6ed49e74-b33b-46af-9b79-ef5e1429bfdf",
+      "tls": {
+        "enabled": true,
+        "server_name": "secure.covwkfjpa.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "secure.covwkfjpa.top"
+        },
+        "path": "/jSkSOxcaWoPMMU6Mp"
       }
     }
   ],
