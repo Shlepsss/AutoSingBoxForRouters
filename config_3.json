@@ -34,8 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR] Beeline",
-        "🇷🇺 Russia | 🌐 [*CIDR] Beeline-2"
+        "🇪🇪 Estonia | [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | [*CIDR] YA-3",
+        "🇪🇪 Estonia | [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -48,41 +51,123 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR] Beeline",
-        "🇷🇺 Russia | 🌐 [*CIDR] Beeline-2"
+        "🇪🇪 Estonia | [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | [*CIDR] YA-3",
+        "🇪🇪 Estonia | [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] Beeline",
+      "tag": "🇪🇪 Estonia | [*CIDR] VK",
       "type": "vless",
-      "server": "78.159.250.33",
-      "server_port": 18443,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "212.233.91.170",
+      "server_port": 20032,
+      "uuid": "fca74439-d3f4-4247-8be2-d5654bb418a9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "disagreedebut.net",
+        "server_name": "dzen.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "HMa1cz_J76Q5wyrwtVaGCZpZtZQkyUhUKisKG6KsRWU",
+          "short_id": "abcd1234"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] Beeline-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
       "type": "vless",
-      "server": "78.159.250.33",
-      "server_port": 18443,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "flow": "xtls-rprx-vision",
+      "server": "secure.covwkfjpa.top",
+      "server_port": 443,
+      "uuid": "6ed49e74-b33b-46af-9b79-ef5e1429bfdf",
       "tls": {
         "enabled": true,
-        "server_name": "disagreedebut.net",
+        "server_name": "secure.covwkfjpa.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "secure.covwkfjpa.top"
+        },
+        "path": "/jSkSOxcaWoPMMU6Mp"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
+      "type": "vless",
+      "server": "secure.covwkfjpa.top",
+      "server_port": 443,
+      "uuid": "6ed49e74-b33b-46af-9b79-ef5e1429bfdf",
+      "tls": {
+        "enabled": true,
+        "server_name": "secure.covwkfjpa.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "secure.covwkfjpa.top"
+        },
+        "path": "/jSkSOxcaWoPMMU6Mp"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-3",
+      "type": "vless",
+      "server": "secure.covwkfjpa.top",
+      "server_port": 443,
+      "uuid": "6ed49e74-b33b-46af-9b79-ef5e1429bfdf",
+      "tls": {
+        "enabled": true,
+        "server_name": "secure.covwkfjpa.top",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "secure.covwkfjpa.top"
+        },
+        "path": "/jSkSOxcaWoPMMU6Mp"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "212.233.91.170",
+      "server_port": 20032,
+      "uuid": "fca74439-d3f4-4247-8be2-d5654bb418a9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "dzen.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "HMa1cz_J76Q5wyrwtVaGCZpZtZQkyUhUKisKG6KsRWU",
+          "short_id": "abcd1234"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }
