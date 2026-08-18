@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇹 Austria | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🇫🇷 France | 🌐 [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-3",
+        "🌐 Anycast-IP | 🇨🇭 🇳🇱 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇹 Austria | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🇫🇷 France | 🌐 [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-3",
+        "🌐 Anycast-IP | 🇨🇭 🇳🇱 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇦🇹 Austria | [*CIDR]",
-      "type": "vless",
-      "server": "176.109.108.83",
-      "server_port": 9830,
-      "uuid": "2a650f3b-d95b-4bd6-aadf-16ccc0717155",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
     },
     {
       "tag": "🇵🇱 Poland | [*CIDR]",
@@ -100,31 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "176.108.252.153",
-      "server_port": 9871,
-      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aabb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -134,6 +86,54 @@
     },
     {
       "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "type": "vless",
+      "server": "176.109.108.196",
+      "server_port": 9892,
+      "uuid": "2a650f3b-d95b-4bd6-aadf-16ccc0717155",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "134.0.116.208",
+      "server_port": 9880,
+      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]-3",
       "type": "vless",
       "server": "185.50.203.1",
       "server_port": 9892,
@@ -157,27 +157,27 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇨🇭 🇳🇱 | [*CIDR]",
       "type": "vless",
-      "server": "134.0.116.208",
-      "server_port": 9880,
-      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
+      "server": "45.151.62.132",
+      "server_port": 7443,
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "dogs.abvphelp.cc",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
+          "public_key": "aBs0x09cXtjTpsrGb21cJsEmDsaCaC1RPeutNu404V0",
+          "short_id": "6fa13cdb"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "grpc"
       }
     }
   ],
