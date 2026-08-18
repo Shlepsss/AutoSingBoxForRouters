@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] Beeline-2",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR] YA",
-        "🇷🇺 Russia | [*CIDR] YA-2"
+        "🇷🇺 Russia | [*CIDR] Beeline",
+        "🇷🇺 Russia | [*CIDR] YA-2",
+        "🇷🇺 Russia | [*CIDR] Beeline-2",
+        "🇷🇺 Russia | [*CIDR] Beeline-3",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,43 +56,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] Beeline-2",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR] YA",
-        "🇷🇺 Russia | [*CIDR] YA-2"
+        "🇷🇺 Russia | [*CIDR] Beeline",
+        "🇷🇺 Russia | [*CIDR] YA-2",
+        "🇷🇺 Russia | [*CIDR] Beeline-2",
+        "🇷🇺 Russia | [*CIDR] Beeline-3",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] Beeline",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "66.90.93.74",
-      "server_port": 8443,
-      "uuid": "8364e505-9c81-4d72-a66b-fde0182be26b",
+      "server": "ru.techdatacloud.org",
+      "server_port": 8080,
+      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
       "tls": {
         "enabled": true,
-        "server_name": "gateway-v1.bosx.net",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "cloud.mail.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "mFF1ffE0RcXAVIbGzWc5EXJcAIqg1n8sJ1ZqjGeunGI",
+          "short_id": "721a55c3"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "gateway-v1.bosx.net"
-        },
-        "path": "/api/connect"
       }
     },
     {
@@ -116,53 +111,8 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] Beeline-2",
-      "type": "vless",
-      "server": "66.90.93.74",
-      "server_port": 8443,
-      "uuid": "8364e505-9c81-4d72-a66b-fde0182be26b",
-      "tls": {
-        "enabled": true,
-        "server_name": "gateway-v1.bosx.net",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "gateway-v1.bosx.net"
-        },
-        "path": "/api/connect"
-      }
-    },
-    {
       "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "45.90.216.147",
-      "server_port": 8080,
-      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloud.mail.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "mFF1ffE0RcXAVIbGzWc5EXJcAIqg1n8sJ1ZqjGeunGI",
-          "short_id": "721a55c3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
       "server": "ru.techdatacloud.org",
       "server_port": 8080,
       "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
@@ -176,67 +126,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "45.90.216.147",
-      "server_port": 8080,
-      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloud.mail.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "mFF1ffE0RcXAVIbGzWc5EXJcAIqg1n8sJ1ZqjGeunGI",
-          "short_id": "721a55c3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "ru.techdatacloud.org",
-      "server_port": 8080,
-      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloud.mail.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "mFF1ffE0RcXAVIbGzWc5EXJcAIqg1n8sJ1ZqjGeunGI",
-          "short_id": "721a55c3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
-      "type": "vless",
-      "server": "ru.techdatacloud.org",
-      "server_port": 8080,
-      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloud.mail.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "mFF1ffE0RcXAVIbGzWc5EXJcAIqg1n8sJ1ZqjGeunGI",
-          "short_id": "721a55c3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       }
     },
@@ -261,6 +151,31 @@
       }
     },
     {
+      "tag": "🇷🇺 Russia | [*CIDR] Beeline",
+      "type": "vless",
+      "server": "66.90.93.74",
+      "server_port": 8443,
+      "uuid": "8364e505-9c81-4d72-a66b-fde0182be26b",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway-v1.bosx.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "gateway-v1.bosx.net"
+        },
+        "path": "/api/connect"
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | [*CIDR] YA-2",
       "type": "vless",
       "server": "217.198.169.86",
@@ -276,7 +191,97 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] Beeline-2",
+      "type": "vless",
+      "server": "66.90.93.74",
+      "server_port": 8443,
+      "uuid": "8364e505-9c81-4d72-a66b-fde0182be26b",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway-v1.bosx.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "gateway-v1.bosx.net"
+        },
+        "path": "/api/connect"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] Beeline-3",
+      "type": "vless",
+      "server": "66.90.93.74",
+      "server_port": 8443,
+      "uuid": "8364e505-9c81-4d72-a66b-fde0182be26b",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway-v1.bosx.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "gateway-v1.bosx.net"
+        },
+        "path": "/api/connect"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "ru.techdatacloud.org",
+      "server_port": 8080,
+      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloud.mail.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "mFF1ffE0RcXAVIbGzWc5EXJcAIqg1n8sJ1ZqjGeunGI",
+          "short_id": "721a55c3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "type": "vless",
+      "server": "45.90.216.147",
+      "server_port": 8080,
+      "uuid": "5e19b3c8-c1dc-4163-95e2-895319c15d6c",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloud.mail.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "mFF1ffE0RcXAVIbGzWc5EXJcAIqg1n8sJ1ZqjGeunGI",
+          "short_id": "721a55c3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }
