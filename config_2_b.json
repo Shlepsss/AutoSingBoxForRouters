@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇷 France | 🌐 | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]-2",
-        "🇨🇭 Switzerland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-3",
-        "🇨🇭 Switzerland | [*CIDR]-2"
+        "🇨🇭 Switzerland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,20 +51,68 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇷 France | 🌐 | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]-2",
-        "🇨🇭 Switzerland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-3",
-        "🇨🇭 Switzerland | [*CIDR]-2"
+        "🇨🇭 Switzerland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "134.0.116.208",
+      "server_port": 9878,
+      "uuid": "f4685d27-73e3-4588-9622-add50b84046a",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "type": "vless",
+      "server": "134.0.116.208",
+      "server_port": 9878,
+      "uuid": "2a650f3b-d95b-4bd6-aadf-16ccc0717155",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
       "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
-      "server": "46.182.24.112",
-      "server_port": 2096,
+      "server": "212.41.26.84",
+      "server_port": 443,
       "uuid": "163dc809-7970-4ff8-a7e5-8080ad53e7bb",
       "tls": {
         "enabled": true,
@@ -74,7 +122,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -85,8 +133,8 @@
     {
       "tag": "🇵🇱 Poland | [*CIDR]-2",
       "type": "vless",
-      "server": "46.182.24.112",
-      "server_port": 2096,
+      "server": "212.41.26.84",
+      "server_port": 443,
       "uuid": "163dc809-7970-4ff8-a7e5-8080ad53e7bb",
       "tls": {
         "enabled": true,
@@ -96,7 +144,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -121,54 +169,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR]-3",
-      "type": "vless",
-      "server": "185.50.203.1",
-      "server_port": 9892,
-      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland | [*CIDR]-2",
-      "type": "vless",
-      "server": "194.67.103.173",
-      "server_port": 9882,
-      "uuid": "fd94a343-cb11-45e6-9882-72352d0a2b8f",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aa"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
         }
       },
       "transport": {
