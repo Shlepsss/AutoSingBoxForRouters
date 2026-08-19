@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇷 France [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru",
+        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] eh.vk.com",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇸🇪 Sweden | [SNI-RU] ya.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru-2",
         "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru-2",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,109 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇷 France [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru",
+        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] eh.vk.com",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇸🇪 Sweden | [SNI-RU] ya.ru",
+        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru-2",
         "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru-2",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇷 France [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "185.141.227.150",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "node3.frost-api.com",
+      "server_port": 443,
+      "uuid": "cbe5611f-392b-4ec3-9d8b-5bbe59c0fa68",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "node3.frost-api.com",
+      "server_port": 443,
+      "uuid": "cbe5611f-392b-4ec3-9d8b-5bbe59c0fa68",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "78.159.245.75",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
     },
     {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
@@ -86,7 +176,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -110,7 +200,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -119,28 +209,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
-      "type": "vless",
-      "server": "201.24.49.237",
-      "server_port": 2200,
-      "uuid": "af412668-578c-4296-bc8c-8fac6a8d9003",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru",
+      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] max.ru-2",
       "type": "vless",
       "server": "node3.frost-api.com",
       "server_port": 443,
@@ -156,44 +225,20 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru-2",
       "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] eh.vk.com",
-      "type": "vless",
-      "server": "finnode3.frost-api.com",
+      "server": "node3.frost-api.com",
       "server_port": 443,
       "uuid": "cbe5611f-392b-4ec3-9d8b-5bbe59c0fa68",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "eh.vk.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
           "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
@@ -201,12 +246,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
       "type": "vless",
       "server": "185.141.227.153",
       "server_port": 9001,
@@ -230,49 +275,7 @@
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [SNI-RU] ya.ru",
-      "type": "vless",
-      "server": "200.165.234.83",
-      "server_port": 443,
-      "uuid": "bded43d3-fdad-44eb-a1fb-f3fe86d3550d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "MEf-wwgnhZG97nPrgwU2gry9o9lKn8PmaNNi6OaMEy8",
-          "short_id": "3c7ad26694142132"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] max.ru-2",
-      "type": "vless",
-      "server": "node3.frost-api.com",
-      "server_port": 443,
-      "uuid": "cbe5611f-392b-4ec3-9d8b-5bbe59c0fa68",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "e7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
       "type": "vless",
       "server": "185.141.227.153",
       "server_port": 9001,
