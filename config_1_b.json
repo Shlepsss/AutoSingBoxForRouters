@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-4"
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇮🇹 Italy | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,187 +51,124 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-4"
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇮🇹 Italy | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "188.225.47.234",
-      "server_port": 4100,
-      "uuid": "7b2ce6b0-6d2b-4926-b7bf-6247eb1a0050",
+      "server": "94.232.40.162",
+      "server_port": 8456,
+      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
+          "short_id": "6ba85179e30d4fc2"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | [*CIDR]",
+      "type": "vless",
+      "server": "37.252.20.166",
+      "server_port": 443,
+      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Vs7_XFo1cg224HiMYNRTJij_O4uyUIFtxMGGtBs_E3Q",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇮🇹 Italy | [*CIDR]",
       "type": "vless",
-      "server": "vless.fresedvpn.site",
-      "server_port": 22443,
-      "uuid": "8b581f67-f02c-4373-bd9f-7c7f6328b0ca",
+      "server": "72.56.5.183",
+      "server_port": 443,
+      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "2_W3YdDic4IWl2-ODbRp0k5e4H0VJbyVrk0PmBdVfnc",
-          "short_id": "0cbd41789d9ef710"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "vless.fresedvpn.site",
-      "server_port": 26443,
-      "uuid": "8b581f67-f02c-4373-bd9f-7c7f6328b0ca",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "2_W3YdDic4IWl2-ODbRp0k5e4H0VJbyVrk0PmBdVfnc",
-          "short_id": "2cbd524f0e3acdd0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "russia.zelnora.ir",
-      "server_port": 64584,
-      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082"
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "russia.zelnora.ir",
-      "server_port": 64584,
-      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "193.233.91.40",
-      "server_port": 64584,
-      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "vless.fresedvpn.site",
-      "server_port": 62740,
-      "uuid": "8b581f67-f02c-4373-bd9f-7c7f6328b0ca",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Nznj30TKgdig81SCTekuMg8DD8jO_NYTC9bdnTxT_w0",
-          "short_id": "b04052caa9e972e4"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "vless.fresedvpn.site",
-      "server_port": 24443,
-      "uuid": "8b581f67-f02c-4373-bd9f-7c7f6328b0ca",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "2_W3YdDic4IWl2-ODbRp0k5e4H0VJbyVrk0PmBdVfnc",
-          "short_id": "1615ca860be18acd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
-      "type": "vless",
-      "server": "vless.fresedvpn.site",
-      "server_port": 25080,
-      "uuid": "8b581f67-f02c-4373-bd9f-7c7f6328b0ca",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Nznj30TKgdig81SCTekuMg8DD8jO_NYTC9bdnTxT_w0",
-          "short_id": "3ea1ca7301b61545"
+          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
+          "short_id": "bc5e0c082adcd6be"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
       "type": "vless",
-      "server": "193.233.91.40",
-      "server_port": 64584,
-      "uuid": "a8307b5d-2d9e-4d34-912d-5b5dd8340082",
+      "server": "81.94.148.66",
+      "server_port": 443,
+      "uuid": "19bf9ed0-9ca4-446b-bd5a-ead2a135ca03",
       "tls": {
         "enabled": true,
+        "server_name": "exit-nl-2.rog-self.co.uk",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "exit-nl-2.rog-self.co.uk"
+        },
+        "path": "/ws/"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
+      "type": "vless",
+      "server": "5.42.103.35",
+      "server_port": 443,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "a3f8d21c4b907e56"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
         }
       }
     }
