@@ -31,16 +31,69 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR] Beeline"
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-4",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-5"
       ],
-      "default": "🇷🇺 Russia | 🌐 [*CIDR] Beeline",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] Beeline",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-4",
+        "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-5"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] Beeline",
+      "type": "vless",
+      "server": "78.159.250.33",
+      "server_port": 18443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "disagreedebut.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-2",
+      "type": "vless",
+      "server": "78.159.250.33",
+      "server_port": 18443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "disagreedebut.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-3",
       "type": "vless",
       "server": "78.159.250.33",
       "server_port": 18443,
@@ -52,6 +105,38 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-4",
+      "type": "vless",
+      "server": "78.159.250.33",
+      "server_port": 18443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "disagreedebut.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] Beeline-5",
+      "type": "vless",
+      "server": "78.159.250.33",
+      "server_port": 18443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "disagreedebut.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }
