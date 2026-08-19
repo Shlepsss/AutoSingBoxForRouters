@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]"
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]"
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "5.42.103.35",
+      "server_port": 444,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "7c1e5a9f2d348b0a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇳🇱 The Netherlands | [*CIDR]",
@@ -77,56 +98,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | [*CIDR]",
-      "type": "vless",
-      "server": "37.252.20.166",
-      "server_port": 443,
-      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Vs7_XFo1cg224HiMYNRTJij_O4uyUIFtxMGGtBs_E3Q",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | [*CIDR]",
-      "type": "vless",
-      "server": "72.56.5.183",
-      "server_port": 443,
-      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": "bc5e0c082adcd6be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
@@ -140,7 +113,7 @@
         "server_name": "exit-nl-2.rog-self.co.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -152,24 +125,47 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-2",
       "type": "vless",
-      "server": "5.42.103.35",
+      "server": "81.94.148.66",
       "server_port": 443,
-      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
-      "flow": "xtls-rprx-vision",
+      "uuid": "19bf9ed0-9ca4-446b-bd5a-ead2a135ca03",
       "tls": {
         "enabled": true,
-        "server_name": "www.kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "a3f8d21c4b907e56"
-        },
+        "server_name": "exit-nl-2.rog-self.co.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "exit-nl-2.rog-self.co.uk"
+        },
+        "path": "/ws/"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-3",
+      "type": "vless",
+      "server": "81.94.148.66",
+      "server_port": 443,
+      "uuid": "19bf9ed0-9ca4-446b-bd5a-ead2a135ca03",
+      "tls": {
+        "enabled": true,
+        "server_name": "exit-nl-2.rog-self.co.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "exit-nl-2.rog-self.co.uk"
+        },
+        "path": "/ws/"
       }
     }
   ],

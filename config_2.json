@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
-        "🇬🇧 United Kingdom [*CIDR]"
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,33 +51,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
-        "🇬🇧 United Kingdom [*CIDR]"
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇺🇸 United States | [*CIDR]",
       "type": "vless",
-      "server": "5.42.103.35",
-      "server_port": 444,
-      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "server": "94.232.40.162",
+      "server_port": 8454,
+      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.ozon.ru",
+        "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "7c1e5a9f2d348b0a"
+          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
+          "short_id": "6ba85179e30d4fc2"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
       }
     },
@@ -103,27 +103,6 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
-      "type": "vless",
-      "server": "94.232.40.162",
-      "server_port": 8456,
-      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
       "type": "vless",
       "server": "5.42.103.35",
@@ -140,32 +119,50 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "37.252.20.166",
-      "server_port": 443,
-      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
+      "server": "5.42.103.35",
+      "server_port": 444,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "www.ozon.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Vs7_XFo1cg224HiMYNRTJij_O4uyUIFtxMGGtBs_E3Q",
-          "short_id": ""
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "7c1e5a9f2d348b0a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]-2",
+      "type": "vless",
+      "server": "5.42.103.35",
+      "server_port": 443,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "a3f8d21c4b907e56"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     }
   ],

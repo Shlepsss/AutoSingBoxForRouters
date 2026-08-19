@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇺🇸 United States | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]"
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
+        "🇮🇹 Italy | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,33 +51,98 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇺🇸 United States | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]"
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
+        "🇮🇹 Italy | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
       "type": "vless",
-      "server": "94.232.40.162",
-      "server_port": 8456,
-      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
-      "flow": "xtls-rprx-vision",
+      "server": "81.94.148.66",
+      "server_port": 443,
+      "uuid": "19bf9ed0-9ca4-446b-bd5a-ead2a135ca03",
       "tls": {
         "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
-          "short_id": "6ba85179e30d4fc2"
-        },
+        "server_name": "exit-nl-2.rog-self.co.uk",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "exit-nl-2.rog-self.co.uk"
+        },
+        "path": "/ws/"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-2",
+      "type": "vless",
+      "server": "81.94.148.66",
+      "server_port": 443,
+      "uuid": "19bf9ed0-9ca4-446b-bd5a-ead2a135ca03",
+      "tls": {
+        "enabled": true,
+        "server_name": "exit-nl-2.rog-self.co.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "exit-nl-2.rog-self.co.uk"
+        },
+        "path": "/ws/"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "5.42.103.35",
+      "server_port": 444,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "7c1e5a9f2d348b0a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
+      "type": "vless",
+      "server": "5.42.103.35",
+      "server_port": 443,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "a3f8d21c4b907e56"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
         }
       }
     },
@@ -103,72 +168,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | [*CIDR]-2",
-      "type": "vless",
-      "server": "72.56.5.183",
-      "server_port": 443,
-      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": "bc5e0c082adcd6be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [*CIDR]",
-      "type": "vless",
-      "server": "94.232.40.162",
-      "server_port": 8454,
-      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
-      "type": "vless",
-      "server": "5.42.103.35",
-      "server_port": 443,
-      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "a3f8d21c4b907e56"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
       }
     }
   ],
