@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
+        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2"
+        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,27 +51,61 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
+        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2"
+        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "201.24.49.237",
-      "server_port": 2200,
-      "uuid": "af412668-578c-4296-bc8c-8fac6a8d9003",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
+      "server": "185.141.227.153",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
         },
-        "path": "/v1"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "185.141.227.153",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     },
     {
@@ -123,7 +157,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-3",
       "type": "vless",
       "server": "185.141.227.153",
       "server_port": 9002,
@@ -138,31 +172,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2",
-      "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
