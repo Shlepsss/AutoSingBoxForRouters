@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] CDN",
-        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
         "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]"
+        "🇺🇸 United States | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,58 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] CDN",
-        "🇳🇱 The Netherlands | [*CIDR] CDN-2",
         "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇫🇮 🇳🇱 🇺🇸 | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]"
+        "🇺🇸 United States | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
-      "type": "vless",
-      "server": "81.94.148.66",
-      "server_port": 443,
-      "uuid": "19bf9ed0-9ca4-446b-bd5a-ead2a135ca03",
-      "tls": {
-        "enabled": true,
-        "server_name": "exit-nl-2.rog-self.co.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "exit-nl-2.rog-self.co.uk"
-        },
-        "path": "/ws/"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "81.94.148.66",
-      "server_port": 443,
-      "uuid": "19bf9ed0-9ca4-446b-bd5a-ead2a135ca03",
-      "tls": {
-        "enabled": true,
-        "server_name": "exit-nl-2.rog-self.co.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "exit-nl-2.rog-self.co.uk"
-        },
-        "path": "/ws/"
-      }
     },
     {
       "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
@@ -121,8 +77,56 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | [*CIDR]",
+      "type": "vless",
+      "server": "37.252.20.166",
+      "server_port": 443,
+      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Vs7_XFo1cg224HiMYNRTJij_O4uyUIFtxMGGtBs_E3Q",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | [*CIDR]-2",
+      "type": "vless",
+      "server": "37.252.20.166",
+      "server_port": 443,
+      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Vs7_XFo1cg224HiMYNRTJij_O4uyUIFtxMGGtBs_E3Q",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     },
     {
@@ -142,32 +146,29 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]",
+      "tag": "🇺🇸 United States | [*CIDR]",
       "type": "vless",
-      "server": "72.56.5.183",
-      "server_port": 443,
-      "uuid": "f6da8274-44be-4599-a8d8-66929c980677",
+      "server": "94.232.40.162",
+      "server_port": 8454,
+      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": "bc5e0c082adcd6be"
+          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
+          "short_id": "6ba85179e30d4fc2"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     }
   ],
