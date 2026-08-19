@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇹🇷 Turkey [*CIDR] VK",
+        "🇳🇴 Norway [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR] VK-2"
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇹🇷 Turkey | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇹🇷 Turkey [*CIDR] VK",
+        "🇳🇴 Norway [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR] VK-2"
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇹🇷 Turkey | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -64,28 +64,31 @@
       "tag": "🇳🇱 The Netherlands [*CIDR] VK",
       "type": "vless",
       "server": "212.233.99.132",
-      "server_port": 6443,
+      "server_port": 6444,
       "uuid": "fe0138b5-ca60-4a67-91aa-b5a49266eeb5",
-      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.oracle.com",
+        "server_name": "www.sony.com",
         "reality": {
           "enabled": true,
-          "public_key": "aFbCyrLOre-V3ORpBjqenGfDt62Ng_i1sSq-DmZHVgc",
-          "short_id": "89e0494514ec"
+          "public_key": "D_6yJhDg-rnm_4y3onQwlfpTjCfoJvSeihN7D4pHnCA",
+          "short_id": "7e4aa03904fefb"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "NekoService"
       }
     },
     {
-      "tag": "🇹🇷 Turkey [*CIDR] VK",
+      "tag": "🇳🇴 Norway [*CIDR] VK",
       "type": "vless",
       "server": "212.233.99.132",
-      "server_port": 6448,
+      "server_port": 6447,
       "uuid": "fe0138b5-ca60-4a67-91aa-b5a49266eeb5",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -119,32 +122,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
-      "type": "vless",
-      "server": "212.233.99.132",
-      "server_port": 6444,
-      "uuid": "fe0138b5-ca60-4a67-91aa-b5a49266eeb5",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.sony.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "D_6yJhDg-rnm_4y3onQwlfpTjCfoJvSeihN7D4pHnCA",
-          "short_id": "7e4aa03904fefb"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "NekoService"
       }
     },
     {
@@ -164,7 +143,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇹🇷 Turkey | [*CIDR] VK",
+      "type": "vless",
+      "server": "212.233.99.132",
+      "server_port": 6448,
+      "uuid": "fe0138b5-ca60-4a67-91aa-b5a49266eeb5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.oracle.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "aFbCyrLOre-V3ORpBjqenGfDt62Ng_i1sSq-DmZHVgc",
+          "short_id": "89e0494514ec"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     }
