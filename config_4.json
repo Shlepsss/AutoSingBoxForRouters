@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-3",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-4",
-        "🇫🇷 France [SNI-RU] api-maps.yandex.ru"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru-2",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,20 +53,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-3",
-        "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-4",
-        "🇫🇷 France [SNI-RU] api-maps.yandex.ru"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru-2",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "185.141.227.153",
-      "server_port": 9002,
+      "server_port": 9001,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
@@ -85,34 +89,31 @@
       }
     },
     {
-      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
       "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "200.165.234.119",
+      "server_port": 2200,
+      "uuid": "936b7663-a841-4b42-b639-6e3fab1dbf45",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-3",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
       "server": "185.141.227.153",
-      "server_port": 9002,
+      "server_port": 9001,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
@@ -133,10 +134,79 @@
       }
     },
     {
-      "tag": "🇫🇷 France | [SNI-RU] api-maps.yandex.ru-4",
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru-2",
+      "type": "vless",
+      "server": "200.165.234.119",
+      "server_port": 2200,
+      "uuid": "936b7663-a841-4b42-b639-6e3fab1dbf45",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
       "type": "vless",
       "server": "185.141.227.153",
-      "server_port": 9002,
+      "server_port": 9001,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
+      "type": "vless",
+      "server": "185.141.227.153",
+      "server_port": 9001,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5",
+      "type": "vless",
+      "server": "185.141.227.153",
+      "server_port": 9001,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
@@ -149,30 +219,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇫🇷 France [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
         }
       },
       "transport": {
