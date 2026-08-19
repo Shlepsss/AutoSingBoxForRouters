@@ -34,16 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia [SNI-RU] vk.com",
-        "🇷🇺 Russia | [SNI-RU] vk.com",
-        "🇷🇺 Russia | [SNI-RU] vk.com-2",
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] vk.com-3",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia | [SNI-RU] vk.com-4"
+        "🇫🇷 France | [SNI-RU] vk.com"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +53,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia [SNI-RU] vk.com",
-        "🇷🇺 Russia | [SNI-RU] vk.com",
-        "🇷🇺 Russia | [SNI-RU] vk.com-2",
+        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] vk.com-3",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia | [SNI-RU] vk.com-4"
+        "🇫🇷 France | [SNI-RU] vk.com"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "185.141.227.153",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
     },
     {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
@@ -86,7 +104,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -110,7 +128,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -119,70 +137,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] vk.com",
-      "type": "vless",
-      "server": "ruh.omvpn.info",
-      "server_port": 8443,
-      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] vk.com",
-      "type": "vless",
-      "server": "ruh.omvpn.info",
-      "server_port": 8443,
-      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] vk.com-2",
-      "type": "vless",
-      "server": "ruh.omvpn.info",
-      "server_port": 8443,
-      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "185.141.227.153",
       "server_port": 9001,
@@ -197,7 +152,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -206,28 +161,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] vk.com-3",
-      "type": "vless",
-      "server": "ruh.omvpn.info",
-      "server_port": 8443,
-      "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
       "type": "vless",
       "server": "185.141.227.153",
       "server_port": 9001,
@@ -251,7 +185,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
       "type": "vless",
       "server": "185.141.227.153",
       "server_port": 9001,
@@ -266,7 +200,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -275,9 +209,9 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] vk.com-4",
+      "tag": "🇫🇷 France | [SNI-RU] vk.com",
       "type": "vless",
-      "server": "ruh.omvpn.info",
+      "server": "31.59.103.129",
       "server_port": 8443,
       "uuid": "0f85a64b-55f4-4166-b217-7563d221cd4a",
       "flow": "xtls-rprx-vision",
@@ -291,7 +225,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       }
     }
