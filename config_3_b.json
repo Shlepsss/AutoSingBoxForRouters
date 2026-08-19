@@ -31,68 +31,27 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🌐 Anycast-IP | 🇧🇬 🇳🇱 | [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇧🇬 🇳🇱 | [*CIDR] Beeline-2"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🌐 Anycast-IP | 🇧🇬 🇳🇱 | [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇧🇬 🇳🇱 | [*CIDR] Beeline-2"
+        "🇷🇺 Russia | 🌐 [*CIDR] Beeline"
       ],
-      "default": "auto",
+      "default": "🇷🇺 Russia | 🌐 [*CIDR] Beeline",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇧🇬 🇳🇱 | [*CIDR] Beeline",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] Beeline",
       "type": "vless",
-      "server": "78.159.246.112",
-      "server_port": 7447,
-      "uuid": "16cbfce2-6559-4f5a-b948-54c1445c5953",
+      "server": "78.159.250.33",
+      "server_port": 18443,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "hd.kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "1kpwQNJzgJg4EM1ahJrq1dDWM8briCR53o5LKJkA7UA",
-          "short_id": ""
-        },
+        "server_name": "disagreedebut.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇧🇬 🇳🇱 | [*CIDR] Beeline-2",
-      "type": "vless",
-      "server": "78.159.246.112",
-      "server_port": 7447,
-      "uuid": "16cbfce2-6559-4f5a-b948-54c1445c5953",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "hd.kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "1kpwQNJzgJg4EM1ahJrq1dDWM8briCR53o5LKJkA7UA",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       }
     }
