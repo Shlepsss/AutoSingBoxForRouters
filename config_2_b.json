@@ -34,16 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
+        "🌐 Anycast-IP | 🇨🇦 🇷🇺 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR]-8"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,31 +53,108 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
+        "🌐 Anycast-IP | 🇨🇦 🇷🇺 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR]-8"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "135.106.140.24",
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "trojan",
+      "server": "46.8.209.223",
       "server_port": 443,
-      "uuid": "ee711b81-088c-4d30-8b33-d191a192e1e4",
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
+        "server_name": "zz.tgnn.live",
         "alpn": [
-          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇷🇺 | [*CIDR]",
+      "type": "vless",
+      "server": "msk-5.self-kvn.org",
+      "server_port": 443,
+      "uuid": "b9fa61b2-2049-4e17-bc96-e99c07871afd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fomin-clinic.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Y7iH7q2MbNJyGAdTUfX4wFnxgh0dbuyFDI9Z20ABPjE",
+          "short_id": "79fdde3912083809"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "trojan",
+      "server": "46.8.209.223",
+      "server_port": 443,
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
+      "tls": {
+        "enabled": true,
+        "server_name": "zz.tgnn.live",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "176.109.85.88",
+      "server_port": 10443,
+      "uuid": "2911867e-dba4-4d9a-a17e-b150b15fa683",
+      "tls": {
+        "enabled": true,
+        "server_name": "5post-gate.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk",
+          "short_id": "5c766813929a1fdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "trojan",
+      "server": "46.8.209.223",
+      "server_port": 443,
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
+      "tls": {
+        "enabled": true,
+        "server_name": "zz.tgnn.live",
+        "alpn": [
           "http/1.1"
         ],
         "utls": {
@@ -90,35 +164,15 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "135.106.140.24",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "trojan",
+      "server": "46.8.209.223",
       "server_port": 443,
-      "uuid": "e0067e4e-8310-4e9f-9efd-3a16fdd616ba",
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
+        "server_name": "zz.tgnn.live",
         "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "f70c53ec-1e8a-4885-86ab-6f65387b203b",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
@@ -128,131 +182,20 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "135.106.140.24",
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "type": "trojan",
+      "server": "46.8.209.223",
       "server_port": 443,
-      "uuid": "f70c53ec-1e8a-4885-86ab-6f65387b203b",
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
+        "server_name": "zz.tgnn.live",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "f70c53ec-1e8a-4885-86ab-6f65387b203b",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "3eef4320-9158-4d2b-aee7-ac119d018e93",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "f70c53ec-1e8a-4885-86ab-6f65387b203b",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "ee711b81-088c-4d30-8b33-d191a192e1e4",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-7",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "59caf46a-0e99-4fe3-968e-c9fa7b5db8dd",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-8",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "e0067e4e-8310-4e9f-9efd-3a16fdd616ba",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     }

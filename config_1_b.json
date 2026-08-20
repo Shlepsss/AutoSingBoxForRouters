@@ -34,16 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-8"
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,31 +53,48 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-8"
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
+      "type": "vless",
+      "server": "80.68.156.43",
+      "server_port": 4100,
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "135.106.140.24",
+      "type": "trojan",
+      "server": "46.8.209.223",
       "server_port": 443,
-      "uuid": "f70c53ec-1e8a-4885-86ab-6f65387b203b",
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
+        "server_name": "zz.tgnn.live",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
@@ -90,130 +104,33 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "135.106.140.24",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "trojan",
+      "server": "46.8.209.223",
       "server_port": 443,
-      "uuid": "ee711b81-088c-4d30-8b33-d191a192e1e4",
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
+        "server_name": "zz.tgnn.live",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "135.106.140.24",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "trojan",
+      "server": "46.8.209.223",
       "server_port": 443,
-      "uuid": "b81b4cce-db37-4263-b39d-cd218624ed8e",
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
+        "server_name": "zz.tgnn.live",
         "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "f1f3e353-fc86-44db-8430-2ac42eb7cd4d",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "887f4032-bb9b-4854-9207-adfb0e54eae5",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "efbcf6d8-cad5-49a1-aef9-4d3800c39075",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "f1f3e353-fc86-44db-8430-2ac42eb7cd4d",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-7",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "c2a3c663-848e-4c8c-b4ad-b915a5f6cd45",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
@@ -223,36 +140,59 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "135.106.140.24",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "trojan",
+      "server": "46.8.209.223",
       "server_port": 443,
-      "uuid": "f70c53ec-1e8a-4885-86ab-6f65387b203b",
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-8",
-      "type": "vless",
-      "server": "135.106.140.24",
-      "server_port": 443,
-      "uuid": "d16d0620-3e8a-49e9-b73b-e0e92f8e6148",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.gracefultun.xyz",
+        "server_name": "zz.tgnn.live",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]-2",
+      "type": "vless",
+      "server": "80.68.156.43",
+      "server_port": 4100,
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "type": "trojan",
+      "server": "46.8.209.223",
+      "server_port": 443,
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
+      "tls": {
+        "enabled": true,
+        "server_name": "zz.tgnn.live",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }
