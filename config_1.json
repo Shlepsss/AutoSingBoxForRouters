@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇩🇪 Germany | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
+        "🇪🇪 Estonia | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇪🇪 Estonia | 🌐 [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,42 +56,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇩🇪 Germany | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
+        "🇪🇪 Estonia | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇪🇪 Estonia | 🌐 [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "178.176.128.128",
-      "server_port": 443,
-      "uuid": "be3960db-f339-479a-be7b-c1a130601141",
-      "tls": {
-        "enabled": true,
-        "server_name": "test-cdn-vk-d.cdn.cachefleet.com",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "httpupgrade",
-        "path": "/assets/v4/f37d0a1c9e6b4f28a5d3027bc918e64a/data",
-        "host": "test-cdn-vk-d.cdn.cachefleet.com"
-      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -99,20 +76,6 @@
       "server": "89.19.223.136",
       "server_port": 443,
       "uuid": "22419260-5475-49d8-a29c-01905c54d1b8"
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "89.19.223.136",
-      "server_port": 443,
-      "uuid": "22419260-5475-49d8-a29c-01905c54d1b8",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
     },
     {
       "tag": "🇩🇪 Germany | [*CIDR]",
@@ -131,7 +94,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
       }
     },
@@ -150,37 +113,9 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "89.19.223.136",
-      "server_port": 443,
-      "uuid": "22419260-5475-49d8-a29c-01905c54d1b8",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "89.19.223.136",
-      "server_port": 443,
-      "uuid": "22419260-5475-49d8-a29c-01905c54d1b8",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "test-cdn-vk-d.cdn.cachefleet.com",
+      "server": "178.176.128.128",
       "server_port": 443,
       "uuid": "be3960db-f339-479a-be7b-c1a130601141",
       "tls": {
@@ -191,7 +126,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -215,9 +150,58 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "test-cdn-vk-d.cdn.cachefleet.com",
+      "server": "89.19.223.136",
+      "server_port": 443,
+      "uuid": "22419260-5475-49d8-a29c-01905c54d1b8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "89.19.223.136",
+      "server_port": 443,
+      "uuid": "22419260-5475-49d8-a29c-01905c54d1b8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
+      "type": "vless",
+      "server": "31.76.34.146",
+      "server_port": 443,
+      "uuid": "f4f2229e-ca2a-40b1-b4ae-24248c21b645",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn3-85.cdn-vkvideo.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "QC03TEA8YdxpkQyJ8duwrqaP1dWAIlCjONzicWlWDjs",
+          "short_id": "b0d8f964b7ac8ac0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "178.176.128.128",
       "server_port": 443,
       "uuid": "be3960db-f339-479a-be7b-c1a130601141",
       "tls": {
@@ -228,13 +212,27 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "httpupgrade",
         "path": "/assets/v4/f37d0a1c9e6b4f28a5d3027bc918e64a/data",
         "host": "test-cdn-vk-d.cdn.cachefleet.com"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "89.19.223.136",
+      "server_port": 443,
+      "uuid": "22419260-5475-49d8-a29c-01905c54d1b8",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
       }
     }
   ],
