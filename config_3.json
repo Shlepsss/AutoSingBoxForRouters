@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [*CIDR] CDN",
-        "🇳🇱 The Netherlands [*CIDR] CDN-2",
         "🇳🇱 The Netherlands | [*CIDR] VK",
         "🇳🇱 The Netherlands | [*CIDR] VK-2",
-        "🇳🇱 The Netherlands | [*CIDR] VK-3"
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇳🇱 The Netherlands [*CIDR] CDN",
+        "🇳🇱 The Netherlands [*CIDR] CDN-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,75 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands [*CIDR] CDN",
-        "🇳🇱 The Netherlands [*CIDR] CDN-2",
         "🇳🇱 The Netherlands | [*CIDR] VK",
         "🇳🇱 The Netherlands | [*CIDR] VK-2",
-        "🇳🇱 The Netherlands | [*CIDR] VK-3"
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🇳🇱 The Netherlands [*CIDR] CDN",
+        "🇳🇱 The Netherlands [*CIDR] CDN-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "type": "vless",
+      "server": "90.156.218.229",
+      "server_port": 443,
+      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "skys3.greatecloud.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "90.156.218.229",
+      "server_port": 443,
+      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "skys3.greatecloud.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
+      "type": "vless",
+      "server": "46.243.232.122",
+      "server_port": 443,
+      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yastatic.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "NMEX862Hl5C5RIv-SbSc76pkKbKdB_3nnkiaSNVOTG0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇳🇱 The Netherlands [*CIDR] CDN",
@@ -99,66 +160,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.229",
-      "server_port": 443,
-      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "skys3.greatecloud.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "90.156.218.229",
-      "server_port": 443,
-      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "skys3.greatecloud.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-3",
-      "type": "vless",
-      "server": "90.156.218.229",
-      "server_port": 443,
-      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "skys3.greatecloud.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
         }
       }
     }
