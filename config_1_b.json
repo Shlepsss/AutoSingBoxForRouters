@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇷🇺 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5"
+        "🇫🇮 Finland | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇫🇮 Finland | 🌐 | [*CIDR]-2",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇫🇮 Finland [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,86 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇷🇺 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5"
+        "🇫🇮 Finland | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇫🇮 Finland | 🌐 | [*CIDR]-2",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇫🇮 Finland [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "trojan",
-      "server": "46.8.209.223",
-      "server_port": 443,
-      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
-      "tls": {
-        "enabled": true,
-        "server_name": "zz.tgnn.live",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "trojan",
-      "server": "46.8.209.223",
-      "server_port": 443,
-      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
-      "tls": {
-        "enabled": true,
-        "server_name": "zz.tgnn.live",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "176.109.85.88",
-      "server_port": 10443,
-      "uuid": "2911867e-dba4-4d9a-a17e-b150b15fa683",
-      "tls": {
-        "enabled": true,
-        "server_name": "5post-gate.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk",
-          "short_id": "5c766813929a1fdd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "trojan",
-      "server": "46.8.209.223",
+      "server": "85.193.84.49",
       "server_port": 443,
-      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
+      "uuid": "b8c5ebf4-6561-4d27-a1e9-3cc11d7a7711",
       "tls": {
         "enabled": true,
-        "server_name": "zz.tgnn.live",
+        "server_name": "files-x.bosx.net",
         "alpn": [
           "http/1.1"
         ],
@@ -140,38 +76,49 @@
           "enabled": true,
           "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files-x.bosx.net"
+        },
+        "path": "/api/v2/connect"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇷🇺 | [*CIDR]",
+      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "msk-5.self-kvn.org",
+      "server": "85.193.84.49",
       "server_port": 443,
-      "uuid": "b9fa61b2-2049-4e17-bc96-e99c07871afd",
-      "flow": "xtls-rprx-vision",
+      "uuid": "03617697-bdf9-4e60-be63-65e0df332da2",
       "tls": {
         "enabled": true,
-        "server_name": "fomin-clinic.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Y7iH7q2MbNJyGAdTUfX4wFnxgh0dbuyFDI9Z20ABPjE",
-          "short_id": "79fdde3912083809"
-        },
+        "server_name": "files-x.bosx.net",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files-x.bosx.net"
+        },
+        "path": "/api/v2/connect"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "trojan",
-      "server": "46.8.209.223",
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "85.193.84.49",
       "server_port": 443,
-      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
+      "uuid": "b8c5ebf4-6561-4d27-a1e9-3cc11d7a7711",
       "tls": {
         "enabled": true,
-        "server_name": "zz.tgnn.live",
+        "server_name": "files-x.bosx.net",
         "alpn": [
           "http/1.1"
         ],
@@ -179,17 +126,49 @@
           "enabled": true,
           "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files-x.bosx.net"
+        },
+        "path": "/api/v2/connect"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
-      "type": "trojan",
-      "server": "46.8.209.223",
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "85.193.84.49",
       "server_port": 443,
-      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
+      "uuid": "03617697-bdf9-4e60-be63-65e0df332da2",
       "tls": {
         "enabled": true,
-        "server_name": "zz.tgnn.live",
+        "server_name": "files-x.bosx.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files-x.bosx.net"
+        },
+        "path": "/api/v2/connect"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "85.193.84.49",
+      "server_port": 443,
+      "uuid": "03617697-bdf9-4e60-be63-65e0df332da2",
+      "tls": {
+        "enabled": true,
+        "server_name": "files-x.bosx.net",
         "alpn": [
           "http/1.1"
         ],
@@ -197,6 +176,13 @@
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files-x.bosx.net"
+        },
+        "path": "/api/v2/connect"
       }
     }
   ],
