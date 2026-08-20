@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,79 +53,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "trojan",
-      "server": "46.8.209.223",
-      "server_port": 443,
-      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
-      "tls": {
-        "enabled": true,
-        "server_name": "zz.tgnn.live",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "trojan",
-      "server": "46.8.209.223",
-      "server_port": 443,
-      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
-      "tls": {
-        "enabled": true,
-        "server_name": "zz.tgnn.live",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
       "type": "vless",
-      "server": "176.109.85.88",
-      "server_port": 10443,
-      "uuid": "2911867e-dba4-4d9a-a17e-b150b15fa683",
+      "server": "80.68.156.43",
+      "server_port": 4100,
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
       "tls": {
         "enabled": true,
-        "server_name": "5post-gate.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk",
-          "short_id": "5c766813929a1fdd"
-        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "trojan",
       "server": "46.8.209.223",
       "server_port": 443,
@@ -143,7 +104,46 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "trojan",
+      "server": "46.8.209.223",
+      "server_port": 443,
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
+      "tls": {
+        "enabled": true,
+        "server_name": "zz.tgnn.live",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
+      "type": "vless",
+      "server": "80.68.156.43",
+      "server_port": 4100,
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "trojan",
       "server": "46.8.209.223",
       "server_port": 443,
@@ -161,7 +161,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
       "type": "trojan",
       "server": "46.8.209.223",
       "server_port": 443,
@@ -179,17 +179,21 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
-      "type": "vless",
-      "server": "80.68.156.43",
-      "server_port": 4100,
-      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "type": "trojan",
+      "server": "46.8.209.223",
+      "server_port": 443,
+      "password": "Ej0z16jeEyVpTTnXUCkoGR7mr6B59fae",
+      "tls": {
+        "enabled": true,
+        "server_name": "zz.tgnn.live",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     }
   ],
