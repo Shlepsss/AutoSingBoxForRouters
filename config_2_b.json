@@ -34,12 +34,12 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
@@ -53,16 +53,36 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "2.26.104.206",
+      "server_port": 443,
+      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
+      "tls": {
+        "enabled": true,
+        "server_name": "russianum1.tcpshield.fun",
+        "reality": {
+          "enabled": true,
+          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
+          "short_id": "f4e0550a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
@@ -85,27 +105,24 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
       "type": "vless",
       "server": "85.193.80.164",
-      "server_port": 2087,
+      "server_port": 443,
       "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vk.com",
+        "server_name": "www.kinopoisk.ru",
         "reality": {
           "enabled": true,
           "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "f2a4c6e8"
+          "short_id": "a3f8d21c4b907e56"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
@@ -125,26 +142,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "2.26.104.206",
-      "server_port": 443,
-      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
-      "tls": {
-        "enabled": true,
-        "server_name": "russianum1.tcpshield.fun",
-        "reality": {
-          "enabled": true,
-          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
-          "short_id": "f4e0550a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
         }
       }
     },
@@ -173,7 +170,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
       "server": "2.26.104.206",
       "server_port": 443,
@@ -188,7 +185,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
       }
     },
@@ -208,7 +205,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "qq"
         }
       }
     }
