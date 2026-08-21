@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
-        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3"
       ],
@@ -53,16 +53,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
-        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "217.19.122.88",
+      "server_port": 9001,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
     },
     {
       "tag": "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
@@ -81,29 +105,29 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
       "type": "vless",
-      "server": "stats-vk.ruvps.pro",
-      "server_port": 443,
-      "uuid": "20df893e-dcf4-491d-8261-6dbb24f9566b",
-      "flow": "xtls-rprx-vision",
+      "server": "201.24.49.79",
+      "server_port": 2200,
+      "uuid": "3b4274c1-4744-452e-9903-e11ccc0c9900",
       "tls": {
         "enabled": true,
-        "server_name": "stats.vk-portal.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "LdZS1Mn61kQKXxDwf5wAEt8jFqkM4IjVQYXD_FkoKA8",
-          "short_id": ""
-        },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -128,28 +152,28 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+      "tag": "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
       "type": "vless",
-      "server": "201.24.49.79",
-      "server_port": 2200,
-      "uuid": "3b4274c1-4744-452e-9903-e11ccc0c9900",
+      "server": "stats-vk.ruvps.pro",
+      "server_port": 443,
+      "uuid": "20df893e-dcf4-491d-8261-6dbb24f9566b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "LdZS1Mn61kQKXxDwf5wAEt8jFqkM4IjVQYXD_FkoKA8",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
       "server": "217.19.122.88",
       "server_port": 9001,
@@ -173,30 +197,6 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-      "type": "vless",
-      "server": "217.19.122.88",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
       "type": "vless",
       "server": "217.19.122.88",
@@ -212,7 +212,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       },
       "transport": {
