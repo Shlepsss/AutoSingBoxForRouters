@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4"
@@ -56,19 +56,43 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "2.26.104.206",
+      "server_port": 8443,
+      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
+      "tls": {
+        "enabled": true,
+        "server_name": "russianum1.tcpshield.fun",
+        "reality": {
+          "enabled": true,
+          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
+          "short_id": "f4e0550a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Windows.Update"
+      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
@@ -80,7 +104,28 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "5.42.121.52",
+      "server_port": 2200,
+      "uuid": "64bd5231-8c49-44f4-8bc0-998eef787d05",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -108,51 +153,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "Windows.Update"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "5.42.121.52",
-      "server_port": 2200,
-      "uuid": "64bd5231-8c49-44f4-8bc0-998eef787d05",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "2.26.104.206",
-      "server_port": 8443,
-      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
-      "tls": {
-        "enabled": true,
-        "server_name": "russianum1.tcpshield.fun",
-        "reality": {
-          "enabled": true,
-          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
-          "short_id": "f4e0550a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -191,7 +191,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -203,7 +203,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
       "server": "2.26.104.206",
       "server_port": 8443,
@@ -218,7 +218,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       },
       "transport": {

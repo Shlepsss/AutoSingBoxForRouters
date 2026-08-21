@@ -35,12 +35,12 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany | [SNI-RU] vk.com",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5",
-        "🇩🇪 Germany | [SNI-RU] vk.com"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 [SNI-RU] www.kinopoisk.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,12 +54,12 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] api-maps.yandex.ru",
+        "🇩🇪 Germany | [SNI-RU] vk.com",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5",
-        "🇩🇪 Germany | [SNI-RU] vk.com"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 [SNI-RU] www.kinopoisk.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -80,7 +80,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -89,27 +89,27 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇩🇪 Germany | [SNI-RU] vk.com",
       "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "ru.lobbytech.ru",
+      "server_port": 2087,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "f2a4c6e8"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-reality"
+        "service_name": "grpc"
       }
     },
     {
@@ -176,12 +176,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 [SNI-RU] www.kinopoisk.ru",
+      "type": "vless",
+      "server": "200.165.230.19",
+      "server_port": 443,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "a3f8d21c4b907e56"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     },
     {
@@ -200,36 +221,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] vk.com",
-      "type": "vless",
-      "server": "ru.lobbytech.ru",
-      "server_port": 2087,
-      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "f2a4c6e8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     }
   ],
