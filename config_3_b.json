@@ -34,10 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] VK",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK-2",
-        "🇳🇱 The Netherlands [*CIDR] VK-3"
+        "🇵🇱 Poland | [*CIDR] CDN",
+        "🇫🇷 France | [*CIDR] VK",
+        "🇫🇷 France | [*CIDR] VK-2",
+        "🇫🇷 France | [*CIDR] VK-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,33 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK-2",
-        "🇳🇱 The Netherlands [*CIDR] VK-3"
+        "🇵🇱 Poland | [*CIDR] CDN",
+        "🇫🇷 France | [*CIDR] VK",
+        "🇫🇷 France | [*CIDR] VK-2",
+        "🇫🇷 France | [*CIDR] VK-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.229",
-      "server_port": 443,
-      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "skys3.greatecloud.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "🇳🇱 The Netherlands [*CIDR] VK",
@@ -94,24 +76,69 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
+      "tag": "🇵🇱 Poland | [*CIDR] CDN",
       "type": "vless",
-      "server": "90.156.218.229",
-      "server_port": 443,
-      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
+      "server": "46.243.235.177",
+      "server_port": 5443,
+      "uuid": "3a1ccc1e-e0f6-4836-94b8-8405b36e03be",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "skys3.greatecloud.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "w42qluNCHvJAkqCCjg_BHu7eTr2qRQYn93OKUSfmHEI",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [*CIDR] VK",
+      "type": "vless",
+      "server": "89.208.230.198",
+      "server_port": 443,
+      "uuid": "f6283a49-de84-441a-9d42-72d9624b98f1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "7vkOYHwf5gfnnjQPIZMvtEJVgPksUh8wL9MN62sVJQo",
+          "short_id": "d5e365ae"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "89.208.230.198",
+      "server_port": 443,
+      "uuid": "f6283a49-de84-441a-9d42-72d9624b98f1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "7vkOYHwf5gfnnjQPIZMvtEJVgPksUh8wL9MN62sVJQo",
+          "short_id": "d5e365ae"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -119,22 +146,24 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK-3",
+      "tag": "🇫🇷 France | [*CIDR] VK-3",
       "type": "vless",
-      "server": "90.156.218.229",
+      "server": "89.208.230.198",
       "server_port": 443,
-      "uuid": "8e85752d-c04f-427d-9d70-b10d144c8492",
+      "uuid": "f6283a49-de84-441a-9d42-72d9624b98f1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "skys3.greatecloud.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "insecure": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "7vkOYHwf5gfnnjQPIZMvtEJVgPksUh8wL9MN62sVJQo",
+          "short_id": "b819d02c86"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     }
