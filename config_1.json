@@ -34,11 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +56,210 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "rus.deall.icu",
-      "server_port": 443,
-      "uuid": "a261baf0-8e37-4ff0-b9d1-7180c570073a",
+      "server": "5.42.121.52",
+      "server_port": 2200,
+      "uuid": "64bd5231-8c49-44f4-8bc0-998eef787d05",
       "tls": {
         "enabled": true,
-        "server_name": "rus.deall.icu",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "2.26.104.206",
+      "server_port": 8443,
+      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
+      "tls": {
+        "enabled": true,
+        "server_name": "russianum1.tcpshield.fun",
         "reality": {
           "enabled": true,
-          "public_key": "Zo3OftHANSWinV-kajh98gqzcjWnkB_q7JPaG87SMGA",
-          "short_id": ""
+          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
+          "short_id": "f4e0550a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Windows.Update"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "5.42.121.52",
+      "server_port": 2200,
+      "uuid": "64bd5231-8c49-44f4-8bc0-998eef787d05",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "5.42.121.52",
+      "server_port": 2200,
+      "uuid": "64bd5231-8c49-44f4-8bc0-998eef787d05",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "2.26.104.206",
+      "server_port": 8443,
+      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
+      "tls": {
+        "enabled": true,
+        "server_name": "russianum1.tcpshield.fun",
+        "reality": {
+          "enabled": true,
+          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
+          "short_id": "f4e0550a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Windows.Update"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "5.42.121.52",
+      "server_port": 2200,
+      "uuid": "64bd5231-8c49-44f4-8bc0-998eef787d05",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "2.26.104.206",
+      "server_port": 8443,
+      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
+      "tls": {
+        "enabled": true,
+        "server_name": "russianum1.tcpshield.fun",
+        "reality": {
+          "enabled": true,
+          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
+          "short_id": "f4e0550a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Windows.Update"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "type": "vless",
+      "server": "5.42.121.52",
+      "server_port": 2200,
+      "uuid": "64bd5231-8c49-44f4-8bc0-998eef787d05",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "2.26.104.206",
+      "server_port": 8443,
+      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
+      "tls": {
+        "enabled": true,
+        "server_name": "russianum1.tcpshield.fun",
+        "reality": {
+          "enabled": true,
+          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
+          "short_id": "f4e0550a"
         },
         "utls": {
           "enabled": true,
@@ -80,84 +267,32 @@
         }
       },
       "transport": {
-        "type": "grpc"
+        "type": "grpc",
+        "service_name": "Windows.Update"
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
       "type": "vless",
-      "server": "35xkx2q3tm.philips.kweps.ru",
-      "server_port": 443,
-      "uuid": "20df893e-dcf4-491d-8261-6dbb24f9566b",
-      "flow": "xtls-rprx-vision",
+      "server": "2.26.104.206",
+      "server_port": 8443,
+      "uuid": "1b7dcb6a-4915-4741-92bf-bc1e7b531140",
       "tls": {
         "enabled": true,
-        "server_name": "www.philips.com",
+        "server_name": "russianum1.tcpshield.fun",
         "reality": {
           "enabled": true,
-          "public_key": "lrcvhYPvMfH_MpHC_PFYNb_bsw6vy2VR0yZxv3Pv8C4",
-          "short_id": ""
+          "public_key": "nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk",
+          "short_id": "f4e0550a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-      "type": "vless",
-      "server": "85.193.80.164",
-      "server_port": 443,
-      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "a3f8d21c4b907e56"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
-      "type": "vless",
-      "server": "mg.vertiex.ru",
-      "server_port": 443,
-      "uuid": "20df893e-dcf4-491d-8261-6dbb24f9566b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.philips.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bBTka5j8aqNSD5hl8X0YUhwYH04IrPIaeKUFkijUllg",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "104.171.134.87",
-      "server_port": 4100,
-      "uuid": "84d0ff7b-9760-415f-a974-b3e1fe92264f",
+      },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "type": "grpc",
+        "service_name": "Windows.Update"
       }
     }
   ],
