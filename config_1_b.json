@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-3",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-3",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]",
       "type": "vless",
       "server": "85.193.80.164",
       "server_port": 2087,
@@ -76,12 +76,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]-2",
+      "type": "vless",
+      "server": "85.193.80.164",
+      "server_port": 8443,
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "sR2q1hwe2nEMePajxh7xDTb0-nDA0LUZyCrxfgo373Y",
+          "short_id": "1a2b3c4d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -100,72 +120,39 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2",
-      "type": "vless",
-      "server": "85.193.80.164",
-      "server_port": 8443,
-      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "sR2q1hwe2nEMePajxh7xDTb0-nDA0LUZyCrxfgo373Y",
-          "short_id": "1a2b3c4d"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-3",
-      "type": "vless",
-      "server": "85.193.80.164",
-      "server_port": 8443,
-      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "sR2q1hwe2nEMePajxh7xDTb0-nDA0LUZyCrxfgo373Y",
-          "short_id": "1a2b3c4d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
         }
       }
     },
     {
       "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
       "type": "vless",
+      "server": "178.72.147.249",
+      "server_port": 4100,
+      "uuid": "7ee53e03-96ed-4121-9da2-62f3d3374506",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]-3",
+      "type": "vless",
       "server": "85.193.80.164",
-      "server_port": 2087,
+      "server_port": 8443,
       "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
       "tls": {
         "enabled": true,
         "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "f2a4c6e8"
+          "public_key": "sR2q1hwe2nEMePajxh7xDTb0-nDA0LUZyCrxfgo373Y",
+          "short_id": "1a2b3c4d"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     }
   ],
