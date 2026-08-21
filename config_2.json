@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 | [*CIDR]",
-        "🇵🇱 Poland | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2"
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 | [*CIDR]",
-        "🇵🇱 Poland | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2"
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇺🇸 | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]",
       "type": "vless",
-      "server": "85.193.80.164",
+      "server": "83.217.201.244",
       "server_port": 8443,
       "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
       "tls": {
@@ -76,16 +76,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "89.19.223.241",
-      "server_port": 8443,
-      "uuid": "ad3353cc-d795-4b49-b5d1-e929b8024a49"
+      "server": "rus.deall.icu",
+      "server_port": 443,
+      "uuid": "a261baf0-8e37-4ff0-b9d1-7180c570073a",
+      "tls": {
+        "enabled": true,
+        "server_name": "rus.deall.icu",
+        "reality": {
+          "enabled": true,
+          "public_key": "Zo3OftHANSWinV-kajh98gqzcjWnkB_q7JPaG87SMGA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
@@ -102,19 +118,19 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
       "type": "vless",
-      "server": "ru.lobbytech.ru",
+      "server": "mg.vertiex.ru",
       "server_port": 443,
-      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
+      "uuid": "20df893e-dcf4-491d-8261-6dbb24f9566b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.kinopoisk.ru",
+        "server_name": "www.philips.com",
         "reality": {
           "enabled": true,
-          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "a3f8d21c4b907e56"
+          "public_key": "bBTka5j8aqNSD5hl8X0YUhwYH04IrPIaeKUFkijUllg",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -123,7 +139,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
       "type": "vless",
       "server": "85.193.80.164",
       "server_port": 443,
@@ -139,7 +155,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
       }
     }

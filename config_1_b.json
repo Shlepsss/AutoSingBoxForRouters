@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]-2"
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,34 +51,57 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇩🇪 🇺🇸 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]-2"
+        "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
       "type": "vless",
-      "server": "mg.vertiex.ru",
+      "server": "ru.lobbytech.ru",
       "server_port": 443,
-      "uuid": "20df893e-dcf4-491d-8261-6dbb24f9566b",
+      "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.philips.com",
+        "server_name": "www.kinopoisk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bBTka5j8aqNSD5hl8X0YUhwYH04IrPIaeKUFkijUllg",
+          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
+          "short_id": "a3f8d21c4b907e56"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "rus.deall.icu",
+      "server_port": 443,
+      "uuid": "a261baf0-8e37-4ff0-b9d1-7180c570073a",
+      "tls": {
+        "enabled": true,
+        "server_name": "rus.deall.icu",
+        "reality": {
+          "enabled": true,
+          "public_key": "Zo3OftHANSWinV-kajh98gqzcjWnkB_q7JPaG87SMGA",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
+      },
+      "transport": {
+        "type": "grpc"
       }
     },
     {
@@ -111,49 +134,27 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇺🇸 | [*CIDR]-2",
       "type": "vless",
-      "server": "85.193.80.164",
-      "server_port": 443,
+      "server": "ru.lobbytech.ru",
+      "server_port": 8443,
       "uuid": "d01d5a74-09fb-4e9e-b0d9-38b5fd77ad70",
-      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.kinopoisk.ru",
+        "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q",
-          "short_id": "a3f8d21c4b907e56"
+          "public_key": "sR2q1hwe2nEMePajxh7xDTb0-nDA0LUZyCrxfgo373Y",
+          "short_id": "1a2b3c4d"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 | [*CIDR]-2",
-      "type": "vless",
-      "server": "mg.vertiex.ru",
-      "server_port": 443,
-      "uuid": "20df893e-dcf4-491d-8261-6dbb24f9566b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.philips.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bBTka5j8aqNSD5hl8X0YUhwYH04IrPIaeKUFkijUllg",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     }
