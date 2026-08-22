@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia | 🌐 [*CIDR]-3",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia | 🌐 [*CIDR]-3",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
+      "type": "vless",
+      "server": "109.196.101.18",
+      "server_port": 2200,
+      "uuid": "020530ec-acf3-41a3-b93e-838e6860bd74",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
@@ -80,49 +94,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "147.45.99.16",
-      "server_port": 4100,
-      "uuid": "3637fb28-8c92-4518-a5d3-95524aef6e90",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "147.45.99.16",
-      "server_port": 4100,
-      "uuid": "3637fb28-8c92-4518-a5d3-95524aef6e90",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -148,6 +120,41 @@
       }
     },
     {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "147.45.99.16",
+      "server_port": 4100,
+      "uuid": "3637fb28-8c92-4518-a5d3-95524aef6e90",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "89.223.66.145",
+      "server_port": 2200,
+      "uuid": "92e20947-b564-4f08-8c1a-c6f3c66f763b",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
       "type": "vless",
       "server": "147.45.99.16",
@@ -155,20 +162,6 @@
       "uuid": "3637fb28-8c92-4518-a5d3-95524aef6e90",
       "transport": {
         "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR]",
-      "type": "vless",
-      "server": "109.196.101.18",
-      "server_port": 2200,
-      "uuid": "020530ec-acf3-41a3-b93e-838e6860bd74",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
         "path": "/v1"
       }
     },
@@ -196,27 +189,13 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
           "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
-      "type": "vless",
-      "server": "89.223.66.145",
-      "server_port": 2200,
-      "uuid": "92e20947-b564-4f08-8c1a-c6f3c66f763b",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
         },
         "path": "/v1"
       }
@@ -231,7 +210,28 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
+      "type": "vless",
+      "server": "147.45.99.16",
+      "server_port": 4100,
+      "uuid": "3637fb28-8c92-4518-a5d3-95524aef6e90",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       },
       "transport": {
