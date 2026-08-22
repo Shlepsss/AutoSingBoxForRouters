@@ -36,9 +36,9 @@
       "outbounds": [
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇺🇸 United States | [SNI-RU] ya.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇺🇸 United States | 🌐 [SNI-RU] ya.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
@@ -55,9 +55,9 @@
         "auto",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇺🇸 United States | [SNI-RU] ya.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇺🇸 United States | 🌐 [SNI-RU] ya.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
@@ -104,32 +104,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [SNI-RU] ya.ru",
-      "type": "vless",
-      "server": "200.165.229.169",
-      "server_port": 443,
-      "uuid": "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "2P7D_IkxXWre3YziEe2tkF9L_gUbdZE_WCu9_SQq4hE",
-          "short_id": "2b5b1ffa8a6a1a68"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
       }
     },
     {
@@ -148,7 +128,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -157,23 +137,43 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | 🌐 [SNI-RU] ya.ru",
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
       "type": "vless",
-      "server": "200.165.229.169",
-      "server_port": 443,
-      "uuid": "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb",
+      "server": "200.165.234.119",
+      "server_port": 2200,
+      "uuid": "936b7663-a841-4b42-b639-6e3fab1dbf45",
       "tls": {
         "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "2P7D_IkxXWre3YziEe2tkF9L_gUbdZE_WCu9_SQq4hE",
-          "short_id": "2b5b1ffa8a6a1a68"
-        },
+        "server_name": "rzd.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+      "type": "vless",
+      "server": "200.165.234.119",
+      "server_port": 2200,
+      "uuid": "936b7663-a841-4b42-b639-6e3fab1dbf45",
+      "tls": {
+        "enabled": true,
+        "server_name": "rzd.ru"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -192,7 +192,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -216,7 +216,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       },
       "transport": {
