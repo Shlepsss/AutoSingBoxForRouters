@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru",
         "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+        "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,35 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru",
         "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+        "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru",
-      "type": "vless",
-      "server": "45.144.51.101",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "rgVwK1tNuKMOuTY2ZLXoV511cXPO-L8mXTq0jhG5_WU",
-          "short_id": "3476d0c6139ad353"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
     },
     {
       "tag": "🇳🇱 The Netherlands | [SNI-RU] api-maps.yandex.ru",
@@ -97,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -121,7 +100,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -145,7 +124,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -169,12 +148,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru",
+      "type": "vless",
+      "server": "45.144.51.101",
+      "server_port": 443,
+      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "st.ozone.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "rgVwK1tNuKMOuTY2ZLXoV511cXPO-L8mXTq0jhG5_WU",
+          "short_id": "3476d0c6139ad353"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],
