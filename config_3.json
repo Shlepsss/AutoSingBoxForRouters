@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] Beeline",
+        "🇳🇱 The Netherlands [*CIDR] Beeline",
         "🇭🇳 Honduras | 🌐 | [*CIDR] YA",
         "🇭🇳 Honduras | 🌐 | [*CIDR] YA-2",
-        "🇭🇳 Honduras | 🌐 | [*CIDR] YA-3",
-        "🇭🇳 Honduras | 🌐 [*CIDR] YA"
+        "🇭🇳 Honduras | 🌐 [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] Beeline"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] Beeline",
+        "🇳🇱 The Netherlands [*CIDR] Beeline",
         "🇭🇳 Honduras | 🌐 | [*CIDR] YA",
         "🇭🇳 Honduras | 🌐 | [*CIDR] YA-2",
-        "🇭🇳 Honduras | 🌐 | [*CIDR] YA-3",
-        "🇭🇳 Honduras | 🌐 [*CIDR] YA"
+        "🇭🇳 Honduras | 🌐 [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] Beeline"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] Beeline",
+      "tag": "🇳🇱 The Netherlands [*CIDR] Beeline",
       "type": "vless",
       "server": "78.159.250.33",
       "server_port": 9002,
@@ -76,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -127,27 +127,6 @@
       }
     },
     {
-      "tag": "🇭🇳 Honduras | 🌐 | [*CIDR] YA-3",
-      "type": "vless",
-      "server": "ru2.ttsvpn.com",
-      "server_port": 443,
-      "uuid": "a5166605-55bc-4ba7-bbc9-c010039e147e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.ttsvpn.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "N0Gc1kNb2Xfz94P6jMqYni0sbVYhAWllsLDGoxDVXX8",
-          "short_id": "1ec128f7a30ad8be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
       "tag": "🇭🇳 Honduras | 🌐 [*CIDR] YA",
       "type": "vless",
       "server": "ru2.ttsvpn.com",
@@ -166,6 +145,30 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] Beeline",
+      "type": "vless",
+      "server": "78.159.250.33",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     }
   ],
