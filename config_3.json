@@ -34,12 +34,12 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇵🇱 Poland | 🌐 | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] YA-2",
-        "🇵🇱 Poland | 🌐 | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] YA-3",
         "🇷🇺 Russia | [*CIDR] YA-4",
-        "🇵🇱 Poland | 🌐 | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | [*CIDR] Beeline",
         "🇷🇺 Russia | [*CIDR] YA-5"
       ],
       "url": "https://google.com/generate_204",
@@ -53,16 +53,37 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇵🇱 Poland | 🌐 | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] YA-2",
-        "🇵🇱 Poland | 🌐 | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] YA-3",
         "🇷🇺 Russia | [*CIDR] YA-4",
-        "🇵🇱 Poland | 🌐 | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | [*CIDR] Beeline",
         "🇷🇺 Russia | [*CIDR] YA-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 | [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.196.250",
+      "server_port": 443,
+      "uuid": "384e5ac1-5667-4c7b-8fec-4999a5daa3f5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "d3-pl.cloud-cdn.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "EkbpWkCU1pXbD7Hola6JIO_C7GlJqzWm48Yg9XGgMCw",
+          "short_id": "677b60cf0320407c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR] YA",
@@ -81,7 +102,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       }
     },
@@ -102,28 +123,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 | [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.196.250",
-      "server_port": 443,
-      "uuid": "384e5ac1-5667-4c7b-8fec-4999a5daa3f5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "d3-pl.cloud-cdn.xyz",
-        "reality": {
-          "enabled": true,
-          "public_key": "EkbpWkCU1pXbD7Hola6JIO_C7GlJqzWm48Yg9XGgMCw",
-          "short_id": "677b60cf0320407c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
       }
     },
@@ -165,29 +165,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 | [*CIDR] YA-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] Beeline",
       "type": "vless",
-      "server": "158.160.196.250",
-      "server_port": 443,
-      "uuid": "384e5ac1-5667-4c7b-8fec-4999a5daa3f5",
-      "flow": "xtls-rprx-vision",
+      "server": "78.159.250.33",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
-        "server_name": "d3-pl.cloud-cdn.xyz",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "EkbpWkCU1pXbD7Hola6JIO_C7GlJqzWm48Yg9XGgMCw",
-          "short_id": "677b60cf0320407c"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     },
     {
@@ -207,7 +210,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       }
     }
