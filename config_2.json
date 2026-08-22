@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇳🇱 The Netherlands [*CIDR] Beeline",
         "🇫🇷 France | [*CIDR] Beeline",
-        "🇮🇹 Italy | [*CIDR]",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇫🇷 France | [*CIDR] Beeline-2"
+        "🇫🇷 France | [*CIDR] Beeline-2",
+        "🇮🇹 Italy [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇳🇱 The Netherlands [*CIDR] Beeline",
         "🇫🇷 France | [*CIDR] Beeline",
-        "🇮🇹 Italy | [*CIDR]",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇫🇷 France | [*CIDR] Beeline-2"
+        "🇫🇷 France | [*CIDR] Beeline-2",
+        "🇮🇹 Italy [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] Beeline",
+      "type": "vless",
+      "server": "78.159.250.33",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
     },
     {
       "tag": "🇫🇷 France | [*CIDR] Beeline",
@@ -85,30 +109,6 @@
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]",
-      "type": "vless",
-      "server": "185.207.66.243",
-      "server_port": 443,
-      "uuid": "75079a7f-75b5-418b-8a65-f7b2f438cd4a",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
       "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
       "type": "vless",
       "server": "185.43.5.104",
@@ -125,32 +125,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | [*CIDR]-2",
-      "type": "vless",
-      "server": "185.207.66.243",
-      "server_port": 443,
-      "uuid": "d900a139-8b5f-4758-8a32-389c6f36fc86",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
@@ -175,6 +151,30 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇮🇹 Italy [*CIDR]",
+      "type": "vless",
+      "server": "185.207.66.243",
+      "server_port": 443,
+      "uuid": "80d02a71-54a5-4c5b-976d-5ee573c502af",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     }
   ],
