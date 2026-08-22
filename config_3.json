@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK-2",
         "🇷🇺 Russia | [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇫🇷 France | [*CIDR] Beeline",
+        "🇷🇺 Russia [*CIDR] VK-2",
         "🇷🇺 Russia [*CIDR] VK-3",
         "🇷🇺 Russia [*CIDR] VK-4",
-        "🇫🇷 France | [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR] VK-5",
+        "🇳🇴 Norway | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] VK-3",
-        "🇫🇷 France [*CIDR] Beeline"
+        "🇷🇺 Russia [*CIDR] VK-5",
+        "🇷🇺 Russia | [*CIDR] VK-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,61 +56,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK-2",
         "🇷🇺 Russia | [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇫🇷 France | [*CIDR] Beeline",
+        "🇷🇺 Russia [*CIDR] VK-2",
         "🇷🇺 Russia [*CIDR] VK-3",
         "🇷🇺 Russia [*CIDR] VK-4",
-        "🇫🇷 France | [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR] VK-5",
+        "🇳🇴 Norway | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] VK-3",
-        "🇫🇷 France [*CIDR] Beeline"
+        "🇷🇺 Russia [*CIDR] VK-5",
+        "🇷🇺 Russia | [*CIDR] VK-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
-      "type": "vless",
-      "server": "212.233.99.132",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "res.chick-team.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk",
-          "short_id": "ab532d3308daa67b"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK-2",
-      "type": "vless",
-      "server": "212.233.99.132",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "res.chick-team.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk",
-          "short_id": "ab532d3308daa67b"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR] VK",
@@ -134,9 +92,75 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK-3",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "212.233.99.132",
+      "server_port": 443,
+      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "res.chick-team.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk",
+          "short_id": "ab532d3308daa67b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [*CIDR] Beeline",
+      "type": "vless",
+      "server": "78.159.250.33",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "ru.chick-team.ru",
+      "server_port": 443,
+      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "res.chick-team.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk",
+          "short_id": "ab532d3308daa67b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-3",
+      "type": "vless",
+      "server": "212.233.99.132",
       "server_port": 443,
       "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
       "flow": "xtls-rprx-vision",
@@ -171,52 +195,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇫🇷 France | [*CIDR] Beeline",
-      "type": "vless",
-      "server": "78.159.250.33",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK-5",
+      "tag": "🇳🇴 Norway | [*CIDR] VK",
       "type": "vless",
       "server": "212.233.99.132",
-      "server_port": 443,
+      "server_port": 6447,
       "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "res.chick-team.ru",
+        "server_name": "www.oracle.com",
         "reality": {
           "enabled": true,
-          "public_key": "NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk",
-          "short_id": "ab532d3308daa67b"
+          "public_key": "aFbCyrLOre-V3ORpBjqenGfDt62Ng_i1sSq-DmZHVgc",
+          "short_id": "89e0494514ec"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
       }
     },
@@ -242,6 +242,27 @@
       }
     },
     {
+      "tag": "🇷🇺 Russia [*CIDR] VK-5",
+      "type": "vless",
+      "server": "212.233.99.132",
+      "server_port": 443,
+      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "res.chick-team.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk",
+          "short_id": "ab532d3308daa67b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | [*CIDR] VK-3",
       "type": "vless",
       "server": "ru.chick-team.ru",
@@ -260,30 +281,6 @@
           "enabled": true,
           "fingerprint": "android"
         }
-      }
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR] Beeline",
-      "type": "vless",
-      "server": "78.159.250.33",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
       }
     }
   ],
