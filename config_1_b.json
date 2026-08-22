@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
@@ -53,11 +53,11 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
@@ -65,22 +65,24 @@
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "213.178.155.239",
-      "server_port": 443,
-      "uuid": "4a78bf06-9129-4fc0-8960-05a9294d366e",
+      "server": "194.26.229.176",
+      "server_port": 4100,
+      "uuid": "b671573f-6303-4cdf-ad50-0401d07e85bf",
       "tls": {
         "enabled": true,
-        "server_name": "api.ipsgame.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-7f4c91d2"
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -114,7 +116,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -126,40 +128,33 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]",
       "type": "vless",
-      "server": "194.26.229.176",
-      "server_port": 4100,
-      "uuid": "b671573f-6303-4cdf-ad50-0401d07e85bf",
+      "server": "213.178.155.239",
+      "server_port": 443,
+      "uuid": "2b390ed0-84fe-439c-933e-23260bb2cb45",
       "tls": {
         "enabled": true,
+        "server_name": "api.ipsgame.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "type": "grpc",
+        "service_name": "grpc-7f4c91d2"
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇬 | [*CIDR]-2",
       "type": "vless",
-      "server": "185.207.66.243",
+      "server": "213.178.155.239",
       "server_port": 443,
-      "uuid": "25d18f6f-f701-4da1-93d8-ec712f05963b",
+      "uuid": "03e627a4-f7f4-41f9-84a8-bcd2449e5a56",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": ""
-        },
+        "server_name": "api.ipsgame.uk",
         "utls": {
           "enabled": true,
           "fingerprint": "android"
@@ -167,7 +162,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "grpc-7f4c91d2"
       }
     },
     {
@@ -180,7 +175,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -201,7 +196,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
