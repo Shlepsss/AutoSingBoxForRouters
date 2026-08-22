@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-2",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+        "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-3",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-4",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-5",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,45 +51,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-2",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
+        "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-3",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-4",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-5",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] rzd.ru",
       "type": "vless",
-      "server": "yt.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
+      "server": "201.24.49.74",
+      "server_port": 2200,
+      "uuid": "f0528a17-863f-4160-a5a0-0d9ad03f2ee7",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "path": "/v1"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-2",
+      "tag": "🇵🇱 Poland | 🌐 | [SNI-RU] st.ozone.ru",
       "type": "vless",
-      "server": "yt.chick-team.ru",
+      "server": "45.144.51.101",
       "server_port": 443,
       "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
       "flow": "xtls-rprx-vision",
@@ -103,12 +86,12 @@
         "server_name": "st.ozone.ru",
         "reality": {
           "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
+          "public_key": "rgVwK1tNuKMOuTY2ZLXoV511cXPO-L8mXTq0jhG5_WU",
+          "short_id": "3476d0c6139ad353"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       }
     },
@@ -128,75 +111,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-3",
-      "type": "vless",
-      "server": "yt.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-4",
-      "type": "vless",
-      "server": "yt.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] st.ozone.ru-5",
-      "type": "vless",
-      "server": "yt.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
       }
     },
     {
@@ -215,7 +135,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -239,55 +159,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-      "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5",
-      "type": "vless",
-      "server": "185.141.227.153",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       },
       "transport": {
