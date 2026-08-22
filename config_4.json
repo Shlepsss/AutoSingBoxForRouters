@@ -34,12 +34,12 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇺🇸 United States | 🌐 [SNI-RU] ya.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇺🇸 United States | [SNI-RU] vk.com",
+        "🇺🇸 United States [SNI-RU] vk.com",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "url": "https://google.com/generate_204",
@@ -53,16 +53,36 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇺🇸 United States | 🌐 [SNI-RU] ya.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🇺🇸 United States | [SNI-RU] vk.com",
+        "🇺🇸 United States [SNI-RU] vk.com",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 [SNI-RU] ya.ru",
+      "type": "vless",
+      "server": "200.165.229.169",
+      "server_port": 443,
+      "uuid": "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "2P7D_IkxXWre3YziEe2tkF9L_gUbdZE_WCu9_SQq4hE",
+          "short_id": "2b5b1ffa8a6a1a68"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
@@ -80,7 +100,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -104,7 +124,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -137,28 +157,6 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
-      "type": "vless",
-      "server": "200.165.234.119",
-      "server_port": 2200,
-      "uuid": "936b7663-a841-4b42-b639-6e3fab1dbf45",
-      "tls": {
-        "enabled": true,
-        "server_name": "rzd.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
       "type": "vless",
       "server": "185.141.227.153",
@@ -174,7 +172,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -183,7 +181,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | [SNI-RU] vk.com",
+      "tag": "🇺🇸 United States [SNI-RU] vk.com",
       "type": "vless",
       "server": "srv-a04472.21freedom.net",
       "server_port": 443,
@@ -198,7 +196,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       }
     },
@@ -218,7 +216,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
       },
       "transport": {
