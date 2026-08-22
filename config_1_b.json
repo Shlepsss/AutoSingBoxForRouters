@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
         "🇮🇹 Italy | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇮🇹 Italy | [*CIDR]-3",
-        "🇮🇹 Italy | [*CIDR]-4",
-        "🇮🇹 Italy [*CIDR]"
+        "🇮🇹 Italy [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,29 +53,25 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
         "🇮🇹 Italy | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇮🇹 Italy | [*CIDR]-3",
-        "🇮🇹 Italy | [*CIDR]-4",
-        "🇮🇹 Italy [*CIDR]"
+        "🇮🇹 Italy [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]",
-      "type": "vless",
-      "server": "185.207.66.243",
-      "server_port": 443,
-      "uuid": "75079a7f-75b5-418b-8a65-f7b2f438cd4a",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "trojan",
+      "server": "rub01.nwncd.com",
+      "server_port": 489,
+      "password": "654df5c6-73ac-3b11-8269-6b21fb8d9dad",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": ""
-        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -81,15 +79,69 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "mygrpc"
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "trojan",
+      "server": "rub01.nwncd.com",
+      "server_port": 489,
+      "password": "654df5c6-73ac-3b11-8269-6b21fb8d9dad",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mygrpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "trojan",
+      "server": "rub01.nwncd.com",
+      "server_port": 489,
+      "password": "654df5c6-73ac-3b11-8269-6b21fb8d9dad",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mygrpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "type": "trojan",
+      "server": "rub01.nwncd.com",
+      "server_port": 489,
+      "password": "654df5c6-73ac-3b11-8269-6b21fb8d9dad",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mygrpc"
+      }
+    },
+    {
+      "tag": "🇮🇹 Italy | [*CIDR]",
       "type": "vless",
       "server": "185.207.66.243",
       "server_port": 443,
-      "uuid": "80d02a71-54a5-4c5b-976d-5ee573c502af",
+      "uuid": "0a2988ed-9f42-499e-b4a8-3ed4cbda5457",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
@@ -109,59 +161,11 @@
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]-3",
-      "type": "vless",
-      "server": "185.207.66.243",
-      "server_port": 443,
-      "uuid": "75079a7f-75b5-418b-8a65-f7b2f438cd4a",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | [*CIDR]-4",
-      "type": "vless",
-      "server": "185.207.66.243",
-      "server_port": 443,
-      "uuid": "75079a7f-75b5-418b-8a65-f7b2f438cd4a",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
       "tag": "🇮🇹 Italy [*CIDR]",
       "type": "vless",
       "server": "185.207.66.243",
       "server_port": 443,
-      "uuid": "d900a139-8b5f-4758-8a32-389c6f36fc86",
+      "uuid": "82d145c1-d691-4eef-9de1-9c316db4859a",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
@@ -178,6 +182,24 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-5",
+      "type": "trojan",
+      "server": "rub01.nwncd.com",
+      "server_port": 489,
+      "password": "654df5c6-73ac-3b11-8269-6b21fb8d9dad",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mygrpc"
       }
     }
   ],
