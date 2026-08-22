@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇸🇪 Sweden | [*CIDR]",
         "🇮🇹 Italy | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
         "🇮🇹 Italy [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-3"
+        "🇮🇹 Italy | [*CIDR]-2",
+        "🇸🇪 Sweden | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇸🇪 Sweden | [*CIDR]",
         "🇮🇹 Italy | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
         "🇮🇹 Italy [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-3"
+        "🇮🇹 Italy | [*CIDR]-2",
+        "🇸🇪 Sweden | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "type": "vless",
+      "server": "194.58.95.183",
+      "server_port": 9871,
+      "uuid": "130e6aab-9eba-441e-9021-22cbccc72832",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
     },
     {
       "tag": "🇮🇹 Italy | [*CIDR]",
@@ -66,54 +90,6 @@
       "server": "185.207.66.243",
       "server_port": 443,
       "uuid": "0e75f6ee-9a4d-4019-8276-cacf388d2ec6",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | [*CIDR]-2",
-      "type": "vless",
-      "server": "185.207.66.243",
-      "server_port": 443,
-      "uuid": "75079a7f-75b5-418b-8a65-f7b2f438cd4a",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "eNvO4-6_VFngHHC6D5AhcCpCpOdi5gY7-Srimhh-6Xw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "185.207.66.243",
-      "server_port": 8443,
-      "uuid": "25d18f6f-f701-4da1-93d8-ec712f05963b",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
@@ -137,7 +113,7 @@
       "type": "vless",
       "server": "185.207.66.243",
       "server_port": 443,
-      "uuid": "626c0789-16d1-4815-be8b-bd03959d7d12",
+      "uuid": "0a2988ed-9f42-499e-b4a8-3ed4cbda5457",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
@@ -148,7 +124,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -157,11 +133,11 @@
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]-3",
+      "tag": "🇮🇹 Italy | [*CIDR]-2",
       "type": "vless",
       "server": "185.207.66.243",
       "server_port": 443,
-      "uuid": "82d145c1-d691-4eef-9de1-9c316db4859a",
+      "uuid": "75079a7f-75b5-418b-8a65-f7b2f438cd4a",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
@@ -172,7 +148,31 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR]-2",
+      "type": "vless",
+      "server": "194.58.95.183",
+      "server_port": 9871,
+      "uuid": "2a650f3b-d95b-4bd6-aadf-16ccc0717155",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
         }
       },
       "transport": {
