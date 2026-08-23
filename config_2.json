@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France | [*CIDR] Beeline",
         "🇪🇪 Estonia [*CIDR]",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
-        "🇫🇷 France | [*CIDR] Beeline-2",
-        "🇧🇬 Bulgaria | [*CIDR]"
+        "🌐 Anycast-IP | 🇬🇧 🇺🇦 | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]-2",
+        "🇫🇷 France | [*CIDR] Beeline"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France | [*CIDR] Beeline",
         "🇪🇪 Estonia [*CIDR]",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
-        "🇫🇷 France | [*CIDR] Beeline-2",
-        "🇧🇬 Bulgaria | [*CIDR]"
+        "🌐 Anycast-IP | 🇬🇧 🇺🇦 | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]-2",
+        "🇫🇷 France | [*CIDR] Beeline"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇫🇷 France | [*CIDR] Beeline",
-      "type": "vless",
-      "server": "78.159.250.33",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
     },
     {
       "tag": "🇪🇪 Estonia [*CIDR]",
@@ -106,18 +82,61 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇺🇦 | [*CIDR]",
       "type": "vless",
-      "server": "84.23.54.213",
+      "server": "193.233.88.48",
       "server_port": 443,
-      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "uuid": "dfd586fd-f329-46c4-ba9a-b6c3cf8e06ba",
+      "tls": {
+        "enabled": true,
+        "server_name": "de-pautina.unlimited-access.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | [*CIDR]",
+      "type": "vless",
+      "server": "72.56.34.223",
+      "server_port": 15204,
+      "uuid": "2b3e8750-b944-42fc-b36e-ec2c64b48a98",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.ray-balance.space",
+        "server_name": "ee.horizonless.pro",
         "reality": {
           "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "public_key": "gwf1Iku4TUicRXPLblL6m4OZs3L26G8xfNPd0KwzFHc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | [*CIDR]-2",
+      "type": "vless",
+      "server": "72.56.34.223",
+      "server_port": 15204,
+      "uuid": "2b3e8750-b944-42fc-b36e-ec2c64b48a98",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ee.horizonless.pro",
+        "reality": {
+          "enabled": true,
+          "public_key": "gwf1Iku4TUicRXPLblL6m4OZs3L26G8xfNPd0KwzFHc",
           "short_id": ""
         },
         "utls": {
@@ -127,7 +146,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France | [*CIDR] Beeline-2",
+      "tag": "🇫🇷 France | [*CIDR] Beeline",
       "type": "vless",
       "server": "78.159.250.33",
       "server_port": 9002,
@@ -142,33 +161,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [*CIDR]",
-      "type": "vless",
-      "server": "72.56.34.223",
-      "server_port": 15205,
-      "uuid": "2b3e8750-b944-42fc-b36e-ec2c64b48a98",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "bunny.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
       }
     }
   ],
