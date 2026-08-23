@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇩🇪 Germany | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2",
         "🇩🇪 Germany | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]-3"
+        "🇩🇪 Germany | [*CIDR]-3",
+        "🇩🇪 Germany | [*CIDR]-4",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇩🇪 Germany | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2",
         "🇩🇪 Germany | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]-3"
+        "🇩🇪 Germany | [*CIDR]-3",
+        "🇩🇪 Germany | [*CIDR]-4",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -86,6 +86,80 @@
       }
     },
     {
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
+      "type": "vless",
+      "server": "185.178.208.176",
+      "server_port": 443,
+      "uuid": "4e99bd6b-7174-4f3d-b0c3-f404cd3ec2f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "chat.cloud.v1.telemetryapi.uk",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "chat.cloud.v1.telemetryapi.uk"
+        },
+        "path": "/api/v2/client/session/connect"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]-3",
+      "type": "vless",
+      "server": "185.178.208.176",
+      "server_port": 443,
+      "uuid": "4e99bd6b-7174-4f3d-b0c3-f404cd3ec2f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "chat.cloud.v1.telemetryapi.uk",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "chat.cloud.v1.telemetryapi.uk"
+        },
+        "path": "/api/v2/client/session/connect"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]-4",
+      "type": "vless",
+      "server": "77.221.151.51",
+      "server_port": 6443,
+      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
+      "tls": {
+        "enabled": true,
+        "server_name": "maps.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
+          "short_id": "2da4299da566b7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "your-custom-path"
+      }
+    },
+    {
       "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
       "server": "77.221.151.51",
@@ -102,80 +176,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "your-custom-path"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]-2",
-      "type": "vless",
-      "server": "185.178.208.176",
-      "server_port": 443,
-      "uuid": "4e99bd6b-7174-4f3d-b0c3-f404cd3ec2f0",
-      "tls": {
-        "enabled": true,
-        "server_name": "chat.cloud.v1.telemetryapi.uk",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "chat.cloud.v1.telemetryapi.uk"
-        },
-        "path": "/api/v2/client/session/connect"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]-2",
-      "type": "vless",
-      "server": "185.178.208.176",
-      "server_port": 443,
-      "uuid": "4e99bd6b-7174-4f3d-b0c3-f404cd3ec2f0",
-      "tls": {
-        "enabled": true,
-        "server_name": "chat.cloud.v1.telemetryapi.uk",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "chat.cloud.v1.telemetryapi.uk"
-        },
-        "path": "/api/v2/client/session/connect"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]-3",
-      "type": "vless",
-      "server": "77.221.151.51",
-      "server_port": 6443,
-      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
-      "tls": {
-        "enabled": true,
-        "server_name": "maps.apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
-          "short_id": "2da4299da566b7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
         }
       },
       "transport": {
