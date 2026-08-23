@@ -34,16 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2"
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,34 +53,94 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2"
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "212.233.99.132",
+      "server": "185.207.66.30",
       "server_port": 443,
       "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "res.chick-team.ru",
+        "server_name": "st.ozone.ru",
         "reality": {
           "enabled": true,
-          "public_key": "NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk",
-          "short_id": "ab532d3308daa67b"
+          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
+          "short_id": "d484643ca8396614"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "185.207.66.30",
+      "server_port": 443,
+      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "st.ozone.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
+          "short_id": "d484643ca8396614"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 | [*CIDR]",
+      "type": "vless",
+      "server": "91.222.237.55",
+      "server_port": 2200,
+      "uuid": "714e1212-6707-471e-9f40-2fbd3d8d3b4b",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "185.207.66.30",
+      "server_port": 443,
+      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "st.ozone.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
+          "short_id": "d484643ca8396614"
         },
         "utls": {
           "enabled": true,
@@ -92,70 +149,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK-2",
-      "type": "vless",
-      "server": "ru.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "res.chick-team.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk",
-          "short_id": "ab532d3308daa67b"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "147.45.213.156",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "109.71.247.41",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
       "type": "vless",
       "server": "185.207.66.30",
       "server_port": 443,
@@ -176,30 +170,9 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "147.45.213.156",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
       "type": "vless",
-      "server": "147.45.108.169",
+      "server": "185.207.66.30",
       "server_port": 443,
       "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
       "flow": "xtls-rprx-vision",
@@ -218,65 +191,23 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
       "type": "vless",
-      "server": "62.113.37.127",
+      "server": "84.23.54.213",
       "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
+      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "st.ozone.ru",
+        "server_name": "www.ray-balance.space",
         "reality": {
           "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "45.139.27.242",
-      "server_port": 443,
-      "uuid": "1b627e4d-4ea4-4dce-8bd8-fc2d3ffbeaba",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.srv.anti-zapret.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY",
-          "short_id": "cbb0a5c1dc905505"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "147.45.108.169",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "st.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI",
-          "short_id": "d484643ca8396614"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     }
