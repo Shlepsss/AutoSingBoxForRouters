@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇫🇷 France | 🌐 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇬🇧 United Kingdom | [*CIDR]"
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,37 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇫🇷 France | 🌐 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇬🇧 United Kingdom | [*CIDR]"
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "94.241.139.164",
-      "server_port": 4100,
-      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
@@ -95,7 +74,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -128,7 +107,28 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]",
+      "type": "vless",
+      "server": "193.187.95.21",
+      "server_port": 20040,
+      "uuid": "82719790-ff61-4284-8668-ba140a4d6cbd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "O4ymaaoTi3woCs3MWktyrXKhlU5RCK1Wo0G_T0u_Vi4",
+          "short_id": "5db60b1f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
       "server": "94.241.139.164",
       "server_port": 4100,
@@ -137,7 +137,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -149,24 +149,24 @@
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "dunlix.norvexa.online",
-      "server_port": 443,
-      "uuid": "0f6a3565-44e6-46ec-a562-a6c73bf6b685",
-      "flow": "xtls-rprx-vision",
+      "server": "94.241.139.164",
+      "server_port": 4100,
+      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
       "tls": {
         "enabled": true,
-        "server_name": "dunlix.norvexa.online",
-        "reality": {
-          "enabled": true,
-          "public_key": "pObQ7F063LsHc_lDuUfzPnx83C-goIPyyffMZs1CG0U",
-          "short_id": "c9e5505275320b51"
-        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -191,22 +191,27 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "medicine.repaironline.biz",
+      "server": "85.192.56.243",
       "server_port": 443,
-      "uuid": "f463819c-5e64-458a-808b-6693afb47aa4",
-      "flow": "xtls-rprx-vision",
+      "uuid": "59954126-633d-4ed2-9af5-8801e85ec7d5",
       "tls": {
         "enabled": true,
-        "server_name": "medicine.repaironline.biz",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "hEyhCVfwVjIWoXIkG_VfqJ0DsgXbhjap5Waqwq-NqGE",
+          "short_id": "3e"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "google.android.location.SyncService"
       }
     }
   ],

@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,40 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "85.192.56.243",
-      "server_port": 443,
-      "uuid": "59954126-633d-4ed2-9af5-8801e85ec7d5",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "hEyhCVfwVjIWoXIkG_VfqJ0DsgXbhjap5Waqwq-NqGE",
-          "short_id": "3e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "google.android.location.SyncService"
-      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
@@ -110,18 +86,20 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]",
       "type": "vless",
-      "server": "medicine.repaironline.biz",
-      "server_port": 443,
-      "uuid": "f463819c-5e64-458a-808b-6693afb47aa4",
+      "server": "193.187.95.21",
+      "server_port": 20040,
+      "uuid": "82719790-ff61-4284-8668-ba140a4d6cbd",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "medicine.repaironline.biz",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "O4ymaaoTi3woCs3MWktyrXKhlU5RCK1Wo0G_T0u_Vi4",
+          "short_id": "5db60b1f"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -138,28 +116,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "94.241.139.164",
-      "server_port": 4100,
-      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -180,7 +137,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -201,7 +158,49 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇿 🇩🇪 🇪🇪 🇳🇱 | [*CIDR]-2",
+      "type": "vless",
+      "server": "193.187.95.21",
+      "server_port": 20040,
+      "uuid": "82719790-ff61-4284-8668-ba140a4d6cbd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "O4ymaaoTi3woCs3MWktyrXKhlU5RCK1Wo0G_T0u_Vi4",
+          "short_id": "5db60b1f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "94.241.139.164",
+      "server_port": 4100,
+      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       },
       "transport": {
