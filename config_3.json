@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇪🇸 [*CIDR] VK",
         "🇪🇸 Spain | [*CIDR] VK",
-        "🇪🇸 Spain | [*CIDR] VK-2",
-        "🇪🇸 Spain | [*CIDR] VK-3",
-        "🇵🇱 Poland | [*CIDR] CDN-2"
+        "🇪🇸 Spain | [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇪🇸 [*CIDR] VK",
         "🇪🇸 Spain | [*CIDR] VK",
-        "🇪🇸 Spain | [*CIDR] VK-2",
-        "🇪🇸 Spain | [*CIDR] VK-3",
-        "🇵🇱 Poland | [*CIDR] CDN-2"
+        "🇪🇸 Spain | [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR] CDN",
-      "type": "vless",
-      "server": "46.243.232.131",
-      "server_port": 7449,
-      "uuid": "76f6b7fe-5de8-4637-87a0-6ddd33d67b3e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl1.cdnvideo.app",
-        "reality": {
-          "enabled": true,
-          "public_key": "-IBlhBn8rn8BwgG60YXaz3-o6mR_wvn6WlXLDYvVLkU",
-          "short_id": "b9f8f9772217538f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇸 Spain | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
       "type": "vless",
       "server": "84.23.54.213",
       "server_port": 443,
@@ -103,7 +82,7 @@
       }
     },
     {
-      "tag": "🇪🇸 Spain | [*CIDR] VK-2",
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2",
       "type": "vless",
       "server": "84.23.54.213",
       "server_port": 443,
@@ -119,14 +98,56 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇪🇸 Spain | [*CIDR] VK-3",
+      "tag": "🌐 Anycast-IP | 🇪🇸 [*CIDR] VK",
       "type": "vless",
       "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇸 Spain | [*CIDR] VK",
+      "type": "vless",
+      "server": "in-ru-vk-01.ray-balance.space",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇸 Spain | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "in-ru-vk-01.ray-balance.space",
       "server_port": 443,
       "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
       "flow": "xtls-rprx-vision",
@@ -141,27 +162,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "46.243.232.131",
-      "server_port": 7449,
-      "uuid": "76f6b7fe-5de8-4637-87a0-6ddd33d67b3e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl1.cdnvideo.app",
-        "reality": {
-          "enabled": true,
-          "public_key": "-IBlhBn8rn8BwgG60YXaz3-o6mR_wvn6WlXLDYvVLkU",
-          "short_id": "b9f8f9772217538f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
         }
       }
     }
