@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇵🇱 Poland | [*CIDR] CDN"
+        "🇺🇸 United States | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇪🇸 Spain | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,88 +51,99 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇵🇱 Poland | [*CIDR] CDN"
+        "🇺🇸 United States | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇪🇸 Spain | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇺🇸 United States | [*CIDR]",
       "type": "vless",
-      "server": "94.241.139.164",
-      "server_port": 4100,
-      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
+      "server": "77.221.151.51",
+      "server_port": 8443,
+      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
       "tls": {
         "enabled": true,
+        "server_name": "maps.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
+          "short_id": "2da4299da566b7"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "type": "grpc",
+        "service_name": "your-custom-path"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇺🇸 United States | [*CIDR]-2",
       "type": "vless",
-      "server": "94.241.139.164",
-      "server_port": 4100,
-      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
+      "server": "77.221.151.51",
+      "server_port": 8443,
+      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
       "tls": {
         "enabled": true,
+        "server_name": "maps.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
+          "short_id": "2da4299da566b7"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "type": "grpc",
+        "service_name": "your-custom-path"
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "178.250.157.206",
-      "server_port": 443,
-      "uuid": "0f6a3565-44e6-46ec-a562-a6c73bf6b685",
-      "flow": "xtls-rprx-vision",
+      "server": "77.221.151.51",
+      "server_port": 6443,
+      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
       "tls": {
         "enabled": true,
-        "server_name": "dunlix.norvexa.online",
+        "server_name": "maps.apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "pObQ7F063LsHc_lDuUfzPnx83C-goIPyyffMZs1CG0U",
-          "short_id": "c9e5505275320b51"
+          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
+          "short_id": "2da4299da566b7"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "your-custom-path"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
       "type": "vless",
-      "server": "94.241.139.164",
-      "server_port": 4100,
-      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
+      "server": "185.178.208.176",
+      "server_port": 443,
+      "uuid": "4e99bd6b-7174-4f3d-b0c3-f404cd3ec2f0",
       "tls": {
         "enabled": true,
+        "server_name": "chat.cloud.v1.telemetryapi.uk",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -143,67 +152,25 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "live.ok.ru"
+          "Host": "chat.cloud.v1.telemetryapi.uk"
         },
-        "path": "/v1"
+        "path": "/api/v2/client/session/connect"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇪🇸 Spain | [*CIDR] VK",
       "type": "vless",
-      "server": "94.241.139.164",
-      "server_port": 4100,
-      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "94.241.139.164",
-      "server_port": 4100,
-      "uuid": "dc988ed2-3fa8-415c-9378-11f3a5421e20",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR] CDN",
-      "type": "vless",
-      "server": "46.243.232.131",
-      "server_port": 7449,
-      "uuid": "76f6b7fe-5de8-4637-87a0-6ddd33d67b3e",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl1.cdnvideo.app",
+        "server_name": "www.ray-balance.space",
         "reality": {
           "enabled": true,
-          "public_key": "-IBlhBn8rn8BwgG60YXaz3-o6mR_wvn6WlXLDYvVLkU",
-          "short_id": "b9f8f9772217538f"
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
