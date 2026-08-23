@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
-        "🇱🇻 Latvia | 🌐 | [*CIDR]",
-        "🇱🇻 Latvia | 🌐 | [*CIDR]-2",
+        "🇪🇪 Estonia | [*CIDR]",
         "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
-        "🇪🇪 Estonia | [*CIDR]"
+        "🌐 Anycast-IP | 🇱🇻 [*CIDR]",
+        "🇫🇷 France | [*CIDR] Beeline"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
-        "🇱🇻 Latvia | 🌐 | [*CIDR]",
-        "🇱🇻 Latvia | 🌐 | [*CIDR]-2",
+        "🇪🇪 Estonia | [*CIDR]",
         "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
-        "🇪🇪 Estonia | [*CIDR]"
+        "🌐 Anycast-IP | 🇱🇻 [*CIDR]",
+        "🇫🇷 France | [*CIDR] Beeline"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -82,47 +82,24 @@
       }
     },
     {
-      "tag": "🇱🇻 Latvia | 🌐 | [*CIDR]",
+      "tag": "🇪🇪 Estonia | [*CIDR]",
       "type": "vless",
-      "server": "193.233.88.48",
-      "server_port": 443,
-      "uuid": "dfd586fd-f329-46c4-ba9a-b6c3cf8e06ba",
+      "server": "72.56.34.223",
+      "server_port": 15204,
+      "uuid": "2b3e8750-b944-42fc-b36e-ec2c64b48a98",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "lv2-pautina.unlimited-access.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
+        "server_name": "ee.horizonless.pro",
+        "reality": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
-    },
-    {
-      "tag": "🇱🇻 Latvia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "193.233.88.48",
-      "server_port": 443,
-      "uuid": "dfd586fd-f329-46c4-ba9a-b6c3cf8e06ba",
-      "tls": {
-        "enabled": true,
-        "server_name": "lv2-pautina.unlimited-access.ru",
-        "alpn": [
-          "h2"
-        ],
+          "public_key": "gwf1Iku4TUicRXPLblL6m4OZs3L26G8xfNPd0KwzFHc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
       }
     },
     {
@@ -142,29 +119,54 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇱🇻 [*CIDR]",
       "type": "vless",
-      "server": "72.56.34.223",
-      "server_port": 15204,
-      "uuid": "2b3e8750-b944-42fc-b36e-ec2c64b48a98",
-      "flow": "xtls-rprx-vision",
+      "server": "193.233.88.48",
+      "server_port": 443,
+      "uuid": "dfd586fd-f329-46c4-ba9a-b6c3cf8e06ba",
       "tls": {
         "enabled": true,
-        "server_name": "ee.horizonless.pro",
-        "reality": {
-          "enabled": true,
-          "public_key": "gwf1Iku4TUicRXPLblL6m4OZs3L26G8xfNPd0KwzFHc",
-          "short_id": ""
-        },
+        "server_name": "lv2-pautina.unlimited-access.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [*CIDR] Beeline",
+      "type": "vless",
+      "server": "78.159.250.33",
+      "server_port": 9002,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     }
   ],
