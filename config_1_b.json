@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇸🇪 Sweden [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-6",
-        "🇷🇺 Russia | [*CIDR]-7",
-        "🇷🇺 Russia | [*CIDR]-8"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,43 +56,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇸🇪 Sweden [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-6",
-        "🇷🇺 Russia | [*CIDR]-7",
-        "🇷🇺 Russia | [*CIDR]-8"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
-      "type": "vless",
-      "server": "in-ru-vk-01.ray-balance.space",
-      "server_port": 443,
-      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ray-balance.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
       "server": "111.88.223.82",
       "server_port": 443,
@@ -116,6 +95,46 @@
       }
     },
     {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "185.137.232.194",
+      "server_port": 443,
+      "uuid": "2b092ee6-5e4b-0032-8236-a46bec9393fd",
+      "tls": {
+        "enabled": true,
+        "server_name": "aispir.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
+          "short_id": "8ba6e72ee60667f6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "185.137.232.194",
+      "server_port": 443,
+      "uuid": "2b092ee6-5e4b-0032-8236-a46bec9393fd",
+      "tls": {
+        "enabled": true,
+        "server_name": "aispir.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
+          "short_id": "8ba6e72ee60667f6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
       "server": "185.137.232.194",
@@ -131,7 +150,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+      "type": "vless",
+      "server": "in-ru-vk-01.ray-balance.space",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     },
@@ -160,46 +200,28 @@
       }
     },
     {
-      "tag": "🇸🇪 Sweden [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "45.91.54.73",
-      "server_port": 443,
-      "uuid": "f463819c-5e64-458a-808b-6693afb47aa4",
+      "server": "81.163.23.187",
+      "server_port": 7444,
+      "uuid": "a42939a4-c61c-4ecc-886b-3a317bdf4452",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "line.repaironline.biz",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "185.137.232.194",
-      "server_port": 443,
-      "uuid": "2b092ee6-5e4b-0032-8236-a46bec9393fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "aispir.ru",
+        "server_name": "google.com",
         "reality": {
           "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
+          "public_key": "vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "185.137.232.194",
       "server_port": 443,
@@ -219,7 +241,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-6",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "111.88.223.82",
       "server_port": 443,
@@ -243,27 +265,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-7",
-      "type": "vless",
-      "server": "185.137.232.194",
-      "server_port": 443,
-      "uuid": "2b092ee6-5e4b-0032-8236-a46bec9393fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "aispir.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-8",
+      "tag": "🇷🇺 Russia [*CIDR]-5",
       "type": "vless",
       "server": "111.88.223.82",
       "server_port": 443,
