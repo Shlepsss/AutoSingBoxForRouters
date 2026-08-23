@@ -34,14 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia | [SNI-RU] max.ru",
-        "🇷🇺 Russia | [SNI-RU] max.ru-2",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] max.ru-3",
-        "🇷🇺 Russia | [SNI-RU] max.ru-4",
-        "🇷🇺 Russia | [SNI-RU] max.ru-5",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
@@ -56,19 +53,37 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇷🇺 Russia | [SNI-RU] max.ru",
-        "🇷🇺 Russia | [SNI-RU] max.ru-2",
+        "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] max.ru-3",
-        "🇷🇺 Russia | [SNI-RU] max.ru-4",
-        "🇷🇺 Russia | [SNI-RU] max.ru-5",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru",
+      "type": "vless",
+      "server": "200.165.234.119",
+      "server_port": 2200,
+      "uuid": "936b7663-a841-4b42-b639-6e3fab1dbf45",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
     },
     {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
@@ -86,7 +101,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -110,7 +125,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -119,51 +134,24 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru",
+      "tag": "🌐 Anycast-IP | 🇷🇺 🇸🇨 | [SNI-RU] rzd.ru-2",
       "type": "vless",
-      "server": "mari.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
+      "server": "200.165.234.119",
+      "server_port": 2200,
+      "uuid": "936b7663-a841-4b42-b639-6e3fab1dbf45",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0l9F45iCvVqrBMMHjB3yGJGP-v4-jnB-qWFVPtthE1g",
-          "short_id": "fff221"
-        },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "NekoService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru-2",
-      "type": "vless",
-      "server": "mari.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0l9F45iCvVqrBMMHjB3yGJGP-v4-jnB-qWFVPtthE1g",
-          "short_id": "fff221"
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "NekoService"
+        "path": "/v1"
       }
     },
     {
@@ -182,84 +170,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru-3",
-      "type": "vless",
-      "server": "mari.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0l9F45iCvVqrBMMHjB3yGJGP-v4-jnB-qWFVPtthE1g",
-          "short_id": "fff221"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "NekoService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru-4",
-      "type": "vless",
-      "server": "mari.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0l9F45iCvVqrBMMHjB3yGJGP-v4-jnB-qWFVPtthE1g",
-          "short_id": "fff221"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "NekoService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru-5",
-      "type": "vless",
-      "server": "mari.chick-team.ru",
-      "server_port": 443,
-      "uuid": "663836b2-f676-43fb-977f-47c495b1b383",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0l9F45iCvVqrBMMHjB3yGJGP-v4-jnB-qWFVPtthE1g",
-          "short_id": "fff221"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "NekoService"
       }
     },
     {
@@ -278,7 +194,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -302,7 +218,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       },
       "transport": {
