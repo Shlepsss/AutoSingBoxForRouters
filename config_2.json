@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia | [*CIDR]-2"
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,54 +51,53 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia | [*CIDR]-2"
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "81.163.23.187",
-      "server_port": 7444,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
-      "flow": "xtls-rprx-vision",
+      "server": "185.178.208.176",
+      "server_port": 443,
+      "uuid": "4e99bd6b-7174-4f3d-b0c3-f404cd3ec2f0",
       "tls": {
         "enabled": true,
-        "server_name": "google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0",
-          "short_id": ""
-        },
+        "server_name": "chat.cloud.v1.telemetryapi.uk",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "chat.cloud.v1.telemetryapi.uk"
+        },
+        "path": "/api/v2/client/session/connect"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "111.88.223.82",
-      "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
+      "server": "77.221.151.51",
+      "server_port": 6443,
+      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "maps.apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
+          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
+          "short_id": "2da4299da566b7"
         },
         "utls": {
           "enabled": true,
@@ -112,166 +106,72 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "your-custom-path"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]-2",
       "type": "vless",
-      "server": "92.42.15.243",
+      "server": "185.178.208.176",
       "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
+      "uuid": "4e99bd6b-7174-4f3d-b0c3-f404cd3ec2f0",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
-        },
+        "server_name": "chat.cloud.v1.telemetryapi.uk",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "type": "ws",
+        "headers": {
+          "Host": "chat.cloud.v1.telemetryapi.uk"
+        },
+        "path": "/api/v2/client/session/connect"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
       "type": "vless",
-      "server": "111.88.223.82",
+      "server": "185.178.208.176",
       "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
+      "uuid": "4e99bd6b-7174-4f3d-b0c3-f404cd3ec2f0",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "92.42.15.243",
-      "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
-        },
+        "server_name": "chat.cloud.v1.telemetryapi.uk",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "92.42.15.243",
-      "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
+        "type": "ws",
+        "headers": {
+          "Host": "chat.cloud.v1.telemetryapi.uk"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "path": "/api/v2/client/session/connect"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "tag": "🇩🇪 Germany | [*CIDR]-3",
       "type": "vless",
-      "server": "92.42.15.243",
-      "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
+      "server": "77.221.151.51",
+      "server_port": 6443,
+      "uuid": "95e8532b-cc69-42d4-9553-e3c23292b15b",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "maps.apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
-      "type": "vless",
-      "server": "111.88.223.82",
-      "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-7",
-      "type": "vless",
-      "server": "111.88.223.82",
-      "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
+          "public_key": "OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY",
+          "short_id": "2da4299da566b7"
         },
         "utls": {
           "enabled": true,
@@ -280,31 +180,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "111.88.223.82",
-      "server_port": 443,
-      "uuid": "8d44a812-229a-4c54-a461-8109b29621a7",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "your-custom-path"
       }
     }
   ],
