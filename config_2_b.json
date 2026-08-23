@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
+        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,58 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
+        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "dunlix.norvexa.online",
-      "server_port": 443,
-      "uuid": "0f6a3565-44e6-46ec-a562-a6c73bf6b685",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dunlix.norvexa.online",
-        "reality": {
-          "enabled": true,
-          "public_key": "pObQ7F063LsHc_lDuUfzPnx83C-goIPyyffMZs1CG0U",
-          "short_id": "c9e5505275320b51"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
-      "type": "vless",
-      "server": "186.246.8.84",
-      "server_port": 44001,
-      "uuid": "01dc3eeb-fd69-43e0-83dd-2b4e3979a1d2",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pool-b.pools.netcenter-cdn.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "qXyJbGAN_0PyZFVR7vb7anVdCK2Zhxexs7dVgc3vqn0",
-          "short_id": "175236a1893d863e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
@@ -116,7 +74,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -125,6 +83,27 @@
           "Host": "rzd.ru"
         },
         "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "201.51.4.52",
+      "server_port": 44003,
+      "uuid": "4c282138-0775-4a05-b734-941fb765f424",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pool-b.pools.netcenter-cdn.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "mCtDwMr9u9MdztUGzCGADj-nfHv6CQpAf_ywbyKl8ww",
+          "short_id": "5dd3388b52296b89"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -150,6 +129,27 @@
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "109.73.206.166",
+      "server_port": 2200,
+      "uuid": "fc72e947-b8dd-4de0-9ec7-2b0050c9f83a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
       "type": "vless",
       "server": "109.73.206.166",
       "server_port": 2200,
@@ -191,24 +191,24 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "109.73.206.166",
-      "server_port": 2200,
-      "uuid": "fc72e947-b8dd-4de0-9ec7-2b0050c9f83a",
+      "server": "201.51.4.52",
+      "server_port": 44003,
+      "uuid": "4c282138-0775-4a05-b734-941fb765f424",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "pool-b.pools.netcenter-cdn.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "mCtDwMr9u9MdztUGzCGADj-nfHv6CQpAf_ywbyKl8ww",
+          "short_id": "5dd3388b52296b89"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
       }
     }
   ],
