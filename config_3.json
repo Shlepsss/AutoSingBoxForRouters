@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] Beeline-2",
         "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2"
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] Beeline",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] Beeline-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,56 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] Beeline",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] Beeline-2",
         "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2"
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] Beeline",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] Beeline-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
+      "type": "vless",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+      "type": "vless",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇳🇱 The Netherlands | [*CIDR] Beeline",
@@ -85,7 +127,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
       "type": "vless",
       "server": "84.23.54.213",
       "server_port": 443,
@@ -101,7 +143,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
@@ -121,54 +163,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
-      "type": "vless",
-      "server": "84.23.54.213",
-      "server_port": 443,
-      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ray-balance.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2",
-      "type": "vless",
-      "server": "84.23.54.213",
-      "server_port": 443,
-      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ray-balance.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
       }
     }
   ],
