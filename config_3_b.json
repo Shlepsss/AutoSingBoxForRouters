@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
         "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-3",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-4"
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
         "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-3",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-4"
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
       "type": "vless",
-      "server": "in-ru-vk-01.ray-balance.space",
+      "server": "84.23.54.213",
       "server_port": 443,
       "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
       "flow": "xtls-rprx-vision",
@@ -77,16 +77,16 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
       "type": "vless",
       "server": "in-ru-vk-01.ray-balance.space",
       "server_port": 443,
-      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -99,6 +99,38 @@
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR] YA",
+      "type": "vless",
+      "server": "bs12.whitehost.org",
+      "server_port": 443,
+      "uuid": "0f498174-7852-4167-9b48-baade4b7a8cc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "wde56.whitedeu.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "62.84.114.7",
+      "server_port": 443,
+      "uuid": "0f498174-7852-4167-9b48-baade4b7a8cc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "wde56.whitedeu.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
@@ -120,48 +152,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-3",
-      "type": "vless",
-      "server": "84.23.54.213",
-      "server_port": 443,
-      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ray-balance.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-4",
-      "type": "vless",
-      "server": "84.23.54.213",
-      "server_port": 443,
-      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ray-balance.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     }
