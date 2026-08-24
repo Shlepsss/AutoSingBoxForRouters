@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
-        "🇫🇷 France | [*CIDR] Beeline",
-        "🇫🇷 France | [*CIDR] Beeline-2",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
-        "🇫🇷 France [*CIDR] Beeline"
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
+        "🇻🇮 U.S. Virgin Islands | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇪🇸 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
-        "🇫🇷 France | [*CIDR] Beeline",
-        "🇫🇷 France | [*CIDR] Beeline-2",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
-        "🇫🇷 France [*CIDR] Beeline"
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
+        "🇻🇮 U.S. Virgin Islands | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇪🇸 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
       "type": "vless",
-      "server": "in-ru-vk-01.ray-balance.space",
+      "server": "84.23.54.213",
       "server_port": 443,
       "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
       "flow": "xtls-rprx-vision",
@@ -82,57 +82,30 @@
       }
     },
     {
-      "tag": "🇫🇷 France | [*CIDR] Beeline",
+      "tag": "🇻🇮 U.S. Virgin Islands | [*CIDR] VK",
       "type": "vless",
-      "server": "78.159.250.33",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "in-ru-vk-01.ray-balance.space",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "www.ray-balance.space",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇫🇷 France | [*CIDR] Beeline-2",
-      "type": "vless",
-      "server": "78.159.250.33",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇪🇸 [*CIDR] VK",
       "type": "vless",
-      "server": "84.23.54.213",
+      "server": "in-ru-vk-01.ray-balance.space",
       "server_port": 443,
       "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
       "flow": "xtls-rprx-vision",
@@ -151,27 +124,45 @@
       }
     },
     {
-      "tag": "🇫🇷 France [*CIDR] Beeline",
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2",
       "type": "vless",
-      "server": "78.159.250.33",
-      "server_port": 9002,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "www.ray-balance.space",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-3",
+      "type": "vless",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
