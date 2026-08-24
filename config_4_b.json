@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
         "🇸🇪 Sweden [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇸🇪 Sweden | [SNI-RU] api-maps.yandex.ru"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
         "🇸🇪 Sweden [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-        "🇸🇪 Sweden | [SNI-RU] api-maps.yandex.ru"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -82,6 +82,27 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "type": "vless",
+      "server": "201.24.49.69",
+      "server_port": 4100,
+      "uuid": "2cd5f052-6455-4153-b7d3-0545184dc64c",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -130,7 +151,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
       "type": "vless",
       "server": "201.24.49.69",
       "server_port": 4100,
@@ -139,7 +160,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -148,27 +169,6 @@
           "Host": "live.ok.ru"
         },
         "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden | [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "sw1111.bearbeer.digital",
-      "server_port": 443,
-      "uuid": "c6fdfa4b-742c-4225-986b-b0e3bd3146a4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SwfpVdTE6Ay33LQpgRl2Q97t7HFrGREkpE7E1A6pCD4",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
       }
     }
   ],
