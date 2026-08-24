@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇵🇱 Poland | [*CIDR]",
         "🇵🇱 Poland [*CIDR]",
-        "🇪🇸 Spain | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇻🇮 [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 [*CIDR]"
+        "🇸🇪 Sweden [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇬🇧 United Kingdom [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇵🇱 Poland | [*CIDR]",
         "🇵🇱 Poland [*CIDR]",
-        "🇪🇸 Spain | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇻🇮 [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 [*CIDR]"
+        "🇸🇪 Sweden [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇬🇧 United Kingdom [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "185.50.203.1",
+      "server_port": 9892,
+      "uuid": "14777bd9-56a5-46f6-a94f-826b4800dc05",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
     },
     {
       "tag": "🇵🇱 Poland [*CIDR]",
@@ -76,7 +100,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -85,63 +109,31 @@
       }
     },
     {
-      "tag": "🇪🇸 Spain | [*CIDR] VK",
+      "tag": "🇸🇪 Sweden [*CIDR]",
       "type": "vless",
-      "server": "in-ru-vk-01.ray-balance.space",
-      "server_port": 443,
-      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
-      "flow": "xtls-rprx-vision",
+      "server": "194.58.95.183",
+      "server_port": 9872,
+      "uuid": "14777bd9-56a5-46f6-a94f-826b4800dc05",
       "tls": {
         "enabled": true,
-        "server_name": "www.ray-balance.space",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabbccdd"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇻🇮 [*CIDR] VK",
-      "type": "vless",
-      "server": "in-ru-vk-01.ray-balance.space",
-      "server_port": 443,
-      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ray-balance.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "188.225.47.234",
-      "server_port": 4100,
-      "uuid": "7b2ce6b0-6d2b-4926-b7bf-6247eb1a0050",
+      },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | [*CIDR]",
       "type": "vless",
       "server": "mnl.savesafe.space",
       "server_port": 443,
@@ -156,7 +148,27 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [*CIDR]",
+      "type": "vless",
+      "server": "mnl.savesafe.space",
+      "server_port": 443,
+      "uuid": "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "2P7D_IkxXWre3YziEe2tkF9L_gUbdZE_WCu9_SQq4hE",
+          "short_id": "2b5b1ffa8a6a1a68"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }
