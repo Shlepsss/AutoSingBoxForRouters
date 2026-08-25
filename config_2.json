@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇬🇧 🇷🇺 [*CIDR]"
+        "🇸🇪 Sweden [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,37 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇬🇧 🇷🇺 [*CIDR]"
+        "🇸🇪 Sweden [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
-      "type": "vless",
-      "server": "in-ru-vk-01.ray-balance.space",
-      "server_port": 443,
-      "uuid": "bc6a863f-f482-03f2-a950-3dc3d3b17249",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ray-balance.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -106,29 +85,9 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "135.106.142.209",
-      "server_port": 443,
-      "uuid": "079063ef-6a85-0032-bc81-f23bc074115b",
-      "tls": {
-        "enabled": true,
-        "server_name": "alfastat.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I",
-          "short_id": "0066a7326f06d426"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "ns.1oran1.click",
+      "server": "157.22.188.207",
       "server_port": 443,
       "uuid": "0e20d1db-b300-477e-96fe-867698c7cf6e",
       "tls": {
@@ -141,12 +100,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
+      "type": "vless",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -190,11 +170,48 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇷🇺 [*CIDR]",
+      "tag": "🇸🇪 Sweden [*CIDR]",
       "type": "vless",
-      "server": "193.106.173.146",
-      "server_port": 140,
-      "uuid": "9bcbbaf1-d1e2-4a5d-bd43-fad50b0e6cd8"
+      "server": "194.58.95.183",
+      "server_port": 9872,
+      "uuid": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "135.106.142.209",
+      "server_port": 443,
+      "uuid": "079063ef-6a85-0032-bc81-f23bc074115b",
+      "tls": {
+        "enabled": true,
+        "server_name": "alfastat.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I",
+          "short_id": "0066a7326f06d426"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
     }
   ],
   "route": {
