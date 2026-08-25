@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇮 Finland [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇮🇹 Italy | [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇫🇮 Finland [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2"
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,48 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇮 Finland [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇮🇹 Italy | [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇫🇮 Finland [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2"
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "107.150.93.4",
+      "server_port": 443,
+      "uuid": "3a90bf69-1ffe-4ebb-b9a7-ad9ba8e9f66f",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-v2-6a8d949a.alpheratzz.org",
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "168.222.141.187",
+      "server_port": 4100,
+      "uuid": "2e228435-33a0-47d1-a1d8-9a34b5a03c45",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]",
@@ -85,7 +114,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       }
     },
@@ -110,53 +139,23 @@
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
       "type": "vless",
-      "server": "90.156.218.20",
-      "server_port": 6443,
-      "uuid": "a8834ef9-7f56-4f37-b30a-6d0fd9036a2f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "local.rkn.life",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "168.222.141.187",
-      "server_port": 4100,
-      "uuid": "2e228435-33a0-47d1-a1d8-9a34b5a03c45",
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
-      "type": "vless",
-      "server": "in-ru-vk-01.ray-balance.space",
+      "server": "51.250.101.16",
       "server_port": 443,
-      "uuid": "bc6a863f-f482-03f2-a950-3dc3d3b17249",
+      "uuid": "4b0cd84f-65d4-492e-88ee-e755c65c6365",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.ray-balance.space",
+        "server_name": "y-12.rita-cloud.com",
         "reality": {
           "enabled": true,
-          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
-          "short_id": ""
+          "public_key": "KQwnDPI_7rJnJvmjaEg0NCFuNWnSRQ8SBHJB8iFun2A",
+          "short_id": "3fe939c78d2c1c7a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
@@ -181,23 +180,14 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "135.106.142.209",
-      "server_port": 443,
-      "uuid": "079063ef-6a85-0032-bc81-f23bc074115b",
-      "tls": {
-        "enabled": true,
-        "server_name": "alfastat.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I",
-          "short_id": "0066a7326f06d426"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
+      "server": "194.26.229.61",
+      "server_port": 2200,
+      "uuid": "c07eee0c-8a67-4e71-9c39-23f0a7b142c2",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
       }
     },
     {
@@ -215,37 +205,49 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 | [*CIDR] VK",
       "type": "vless",
-      "server": "107.150.93.4",
+      "server": "84.23.54.213",
       "server_port": 443,
-      "uuid": "3a90bf69-1ffe-4ebb-b9a7-ad9ba8e9f66f",
+      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-v2-6a8d949a.alpheratzz.org",
-        "alpn": [
-          "h3"
-        ],
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "194.26.229.61",
-      "server_port": 2200,
-      "uuid": "c07eee0c-8a67-4e71-9c39-23f0a7b142c2",
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
+      "server": "135.106.142.209",
+      "server_port": 443,
+      "uuid": "079063ef-6a85-0032-bc81-f23bc074115b",
+      "tls": {
+        "enabled": true,
+        "server_name": "alfastat.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I",
+          "short_id": "0066a7326f06d426"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       }
     }
   ],
