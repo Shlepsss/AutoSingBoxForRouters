@@ -34,12 +34,12 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2"
       ],
       "url": "https://google.com/generate_204",
@@ -53,37 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
         "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
-      "type": "vless",
-      "server": "201.24.49.240",
-      "server_port": 4100,
-      "uuid": "aa7d939b-feaa-4ad3-9615-74216f490807",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
     },
     {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
@@ -131,6 +110,27 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "type": "vless",
+      "server": "201.24.49.240",
+      "server_port": 4100,
+      "uuid": "aa7d939b-feaa-4ad3-9615-74216f490807",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -182,7 +182,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
       "type": "vless",
       "server": "201.24.49.240",
       "server_port": 4100,
@@ -191,7 +191,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -212,7 +212,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       },
       "transport": {

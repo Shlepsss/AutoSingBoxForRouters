@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-3",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,37 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
         "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
-        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru"
+        "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-3",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
-      "type": "vless",
-      "server": "201.24.49.240",
-      "server_port": 4100,
-      "uuid": "aa7d939b-feaa-4ad3-9615-74216f490807",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
     },
     {
       "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
@@ -107,6 +86,48 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru",
+      "type": "vless",
+      "server": "201.24.49.240",
+      "server_port": 4100,
+      "uuid": "aa7d939b-feaa-4ad3-9615-74216f490807",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
+      "type": "vless",
+      "server": "201.24.49.240",
+      "server_port": 4100,
+      "uuid": "aa7d939b-feaa-4ad3-9615-74216f490807",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -149,12 +170,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-3",
+      "type": "vless",
+      "server": "201.24.49.240",
+      "server_port": 4100,
+      "uuid": "aa7d939b-feaa-4ad3-9615-74216f490807",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
       }
     },
     {
@@ -173,54 +215,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 | [SNI-RU] live.ok.ru-2",
-      "type": "vless",
-      "server": "201.24.49.240",
-      "server_port": 4100,
-      "uuid": "aa7d939b-feaa-4ad3-9615-74216f490807",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇷🇺 🇸🇨 [SNI-RU] live.ok.ru",
-      "type": "vless",
-      "server": "201.24.49.240",
-      "server_port": 4100,
-      "uuid": "aa7d939b-feaa-4ad3-9615-74216f490807",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
       }
     }
   ],
