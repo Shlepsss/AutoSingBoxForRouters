@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] www.kinopoisk.ru",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇧🇬 Bulgaria | [SNI-RU] yandex.net",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4"
+        "🇧🇾 Belarus | [SNI-RU] static.beeline.ru",
+        "🇧🇾 Belarus | [SNI-RU] static.beeline.ru-2",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-3",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-4",
+        "🇧🇾 Belarus | [SNI-RU] static.beeline.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,43 +53,64 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] www.kinopoisk.ru",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
-        "🇧🇬 Bulgaria | [SNI-RU] yandex.net",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4"
+        "🇧🇾 Belarus | [SNI-RU] static.beeline.ru",
+        "🇧🇾 Belarus | [SNI-RU] static.beeline.ru-2",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-3",
+        "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-4",
+        "🇧🇾 Belarus | [SNI-RU] static.beeline.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇧🇾 Belarus | [SNI-RU] static.beeline.ru",
       "type": "vless",
-      "server": "185.141.227.150",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "server": "78.140.252.20",
+      "server_port": 443,
+      "uuid": "b8006e78-0f7e-4216-9fa3-f1e5c3d93e4f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "static.beeline.ru",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
+          "public_key": "0Z6f6RFk_mPgcqXi1pryuTLMz_phlAgBu1hWmVXIkVA",
+          "short_id": "5cdef06e2f"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇧🇾 Belarus | [SNI-RU] static.beeline.ru-2",
+      "type": "vless",
+      "server": "78.140.252.20",
+      "server_port": 443,
+      "uuid": "b8006e78-0f7e-4216-9fa3-f1e5c3d93e4f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.beeline.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "0Z6f6RFk_mPgcqXi1pryuTLMz_phlAgBu1hWmVXIkVA",
+          "short_id": "5cdef06e2f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "185.141.227.150",
       "server_port": 9001,
@@ -113,28 +134,55 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] www.kinopoisk.ru",
+      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
       "type": "vless",
-      "server": "node-nl1.pepen.pro",
-      "server_port": 889,
-      "uuid": "1e77a4ba-1d92-42c2-941f-aa9d0bee9c2f",
-      "flow": "xtls-rprx-vision",
+      "server": "185.141.227.150",
+      "server_port": 9001,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
-        "server_name": "www.kinopoisk.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "9zgY8x80LFe_NepRkPYeq_Ci5seknMnWfAMmQAYvOFY",
-          "short_id": "ec7894e07714b18c"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-3",
+      "type": "vless",
+      "server": "185.141.227.150",
+      "server_port": 9001,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] api-maps.yandex.ru-4",
       "type": "vless",
       "server": "185.141.227.150",
       "server_port": 9001,
@@ -158,72 +206,24 @@
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] yandex.net",
+      "tag": "🇧🇾 Belarus | [SNI-RU] static.beeline.ru-3",
       "type": "vless",
-      "server": "162.252.199.118",
-      "server_port": 10007,
-      "uuid": "ded8422c-9b4d-4237-9cf0-a1a4e0d121db",
+      "server": "78.140.252.20",
+      "server_port": 443,
+      "uuid": "b8006e78-0f7e-4216-9fa3-f1e5c3d93e4f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.net",
+        "server_name": "static.beeline.ru",
         "reality": {
           "enabled": true,
-          "public_key": "xpTZcHyqbQWZt0Yy43x1ZJBZELAZN904VzH9Dq1aIG4",
-          "short_id": "6ba85179e30d4fc2"
+          "public_key": "0Z6f6RFk_mPgcqXi1pryuTLMz_phlAgBu1hWmVXIkVA",
+          "short_id": "5cdef06e2f"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
-      "type": "vless",
-      "server": "185.141.227.150",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
-      "type": "vless",
-      "server": "185.141.227.150",
-      "server_port": 9001,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": "6ba85179e30d4fc2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
       }
     }
   ],
