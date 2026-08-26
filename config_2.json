@@ -35,15 +35,15 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 | [*CIDR]-5",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-6",
+        "🇷🇸 Serbia | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-7"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -57,21 +57,67 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 | [*CIDR]-5",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-6",
+        "🇷🇸 Serbia | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-7"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "176.109.85.71",
+      "server_port": 14443,
+      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
+      "tls": {
+        "enabled": true,
+        "server_name": "176-109-85-71.sslip.io",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "176-109-85-71.sslip.io"
+        },
+        "path": "/ru"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+      "type": "vless",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "bc6a863f-f482-03f5-a950-3dc3d3b17249",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
       "server": "mws.tunnelgate.org",
       "server_port": 14443,
@@ -98,166 +144,175 @@
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "5.42.122.16",
-      "server_port": 443,
-      "uuid": "33c150b7-c0ca-4133-9a52-6f1207da9b8b",
+      "server": "176.109.85.71",
+      "server_port": 14443,
+      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
       "tls": {
         "enabled": true,
-        "server_name": "deepl.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8",
-          "short_id": "15affa0af66dfc79"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "45.9.16.168",
-      "server_port": 6443,
-      "uuid": "440f3c08-7599-406e-8ba3-7dbc6324c5ed",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.vkimages.io",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "ru.riotvpn.eu",
-      "server_port": 6443,
-      "uuid": "440f3c08-7599-406e-8ba3-7dbc6324c5ed",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.vkimages.io",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "45.9.16.166",
-      "server_port": 6443,
-      "uuid": "440f3c08-7599-406e-8ba3-7dbc6324c5ed",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.vkimages.io",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
+        "server_name": "176-109-85-71.sslip.io",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "168.222.141.187",
-      "server_port": 4100,
-      "uuid": "2e228435-33a0-47d1-a1d8-9a34b5a03c45",
+      },
       "transport": {
         "type": "ws",
-        "path": "/v1"
+        "headers": {
+          "Host": "176-109-85-71.sslip.io"
+        },
+        "path": "/ru"
       }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "104.171.138.4",
-      "server_port": 443,
-      "uuid": "33c150b7-c0ca-4133-9a52-6f1207da9b8b",
+      "server": "176.109.85.71",
+      "server_port": 14443,
+      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
       "tls": {
         "enabled": true,
-        "server_name": "deepl.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8",
-          "short_id": "15affa0af66dfc79"
-        },
+        "server_name": "176-109-85-71.sslip.io",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "45.9.16.165",
-      "server_port": 6443,
-      "uuid": "440f3c08-7599-406e-8ba3-7dbc6324c5ed",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.vkimages.io",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "176-109-85-71.sslip.io"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "path": "/ru"
       }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
       "type": "vless",
-      "server": "xhttpru.enotvpn.net",
-      "server_port": 443,
-      "uuid": "33c150b7-c0ca-4133-9a52-6f1207da9b8b",
+      "server": "mws.tunnelgate.org",
+      "server_port": 14443,
+      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
       "tls": {
         "enabled": true,
-        "server_name": "deepl.com",
-        "reality": {
+        "server_name": "176-109-85-71.sslip.io",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
           "enabled": true,
-          "public_key": "vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8",
-          "short_id": "15affa0af66dfc79"
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "176-109-85-71.sslip.io"
         },
+        "path": "/ru"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-5",
+      "type": "vless",
+      "server": "mws.tunnelgate.org",
+      "server_port": 14443,
+      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
+      "tls": {
+        "enabled": true,
+        "server_name": "176-109-85-71.sslip.io",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "176-109-85-71.sslip.io"
+        },
+        "path": "/ru"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-6",
+      "type": "vless",
+      "server": "176.109.85.71",
+      "server_port": 14443,
+      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
+      "tls": {
+        "enabled": true,
+        "server_name": "176-109-85-71.sslip.io",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "168.222.141.187",
-      "server_port": 4100,
-      "uuid": "2e228435-33a0-47d1-a1d8-9a34b5a03c45",
+      },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "168.222.141.187"
+          "Host": "176-109-85-71.sslip.io"
         },
-        "path": "%2Fv1"
+        "path": "/ru"
+      }
+    },
+    {
+      "tag": "🇷🇸 Serbia | [*CIDR]",
+      "type": "vless",
+      "server": "212.41.9.137",
+      "server_port": 9889,
+      "uuid": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-7",
+      "type": "vless",
+      "server": "mws.tunnelgate.org",
+      "server_port": 14443,
+      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
+      "tls": {
+        "enabled": true,
+        "server_name": "176-109-85-71.sslip.io",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "176-109-85-71.sslip.io"
+        },
+        "path": "/ru"
       }
     }
   ],
