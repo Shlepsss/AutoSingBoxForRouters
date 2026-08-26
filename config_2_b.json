@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇦🇹 🇩🇪 | [*CIDR]",
-        "🇧🇻 Bouvet Island | [*CIDR]",
-        "🇧🇻 Bouvet Island | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia [*CIDR]-7",
+        "🇷🇺 Russia | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,31 +56,82 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇦🇹 🇩🇪 | [*CIDR]",
-        "🇧🇻 Bouvet Island | [*CIDR]",
-        "🇧🇻 Bouvet Island | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia [*CIDR]-7",
+        "🇷🇺 Russia | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "open.self-kvn.org",
-      "server_port": 22109,
-      "uuid": "1ba59989-225e-4f1c-ab62-9bd7366009cb",
+      "server": "139.100.227.176",
+      "server_port": 443,
+      "uuid": "d7ff1a6d-529e-4260-aa46-3c8a7fd681f4",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "ya.ru",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
-          "public_key": "LKjl_OublHl2Y8DbIhVgkz7jwnJmzsHrjbes39cmdyQ",
-          "short_id": "748d7aa53e2be16b"
+          "public_key": "Sm9bhIqBASg1A0frr4ogMq47_QfufVAkaY4bp5HhyE8",
+          "short_id": "5726b22c209c49"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "139.100.227.176",
+      "server_port": 443,
+      "uuid": "d7ff1a6d-529e-4260-aa46-3c8a7fd681f4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "Sm9bhIqBASg1A0frr4ogMq47_QfufVAkaY4bp5HhyE8",
+          "short_id": "5726b22c209c49"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "ru-bridge.monkeyvillage.pro",
+      "server_port": 443,
+      "uuid": "a954d810-f9af-4950-9a96-d95a759b12d7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-bridge.monkeyvillage.pro",
+        "reality": {
+          "enabled": true,
+          "public_key": "H0bAU_r0uJoCA-yq9TXr54tZZ13jON20h8oGPkvWuS0",
+          "short_id": "be2ee1fd01f17f0e"
         },
         "utls": {
           "enabled": true,
@@ -88,38 +142,104 @@
     {
       "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "open.self-kvn.org",
-      "server_port": 22109,
-      "uuid": "1ba59989-225e-4f1c-ab62-9bd7366009cb",
+      "server": "139.100.227.176",
+      "server_port": 443,
+      "uuid": "d7ff1a6d-529e-4260-aa46-3c8a7fd681f4",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "ya.ru",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
-          "public_key": "LKjl_OublHl2Y8DbIhVgkz7jwnJmzsHrjbes39cmdyQ",
-          "short_id": "748d7aa53e2be16b"
+          "public_key": "Sm9bhIqBASg1A0frr4ogMq47_QfufVAkaY4bp5HhyE8",
+          "short_id": "5726b22c209c49"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
-      "server": "open.self-kvn.org",
-      "server_port": 22109,
-      "uuid": "1ba59989-225e-4f1c-ab62-9bd7366009cb",
+      "server": "139.100.227.176",
+      "server_port": 443,
+      "uuid": "d7ff1a6d-529e-4260-aa46-3c8a7fd681f4",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "ya.ru",
         "reality": {
           "enabled": true,
-          "public_key": "LKjl_OublHl2Y8DbIhVgkz7jwnJmzsHrjbes39cmdyQ",
-          "short_id": "748d7aa53e2be16b"
+          "public_key": "Sm9bhIqBASg1A0frr4ogMq47_QfufVAkaY4bp5HhyE8",
+          "short_id": "5726b22c209c49"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "type": "vless",
+      "server": "139.100.227.176",
+      "server_port": 443,
+      "uuid": "d7ff1a6d-529e-4260-aa46-3c8a7fd681f4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Sm9bhIqBASg1A0frr4ogMq47_QfufVAkaY4bp5HhyE8",
+          "short_id": "5726b22c209c49"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "type": "vless",
+      "server": "node_rulv_one.pepen.pro",
+      "server_port": 443,
+      "uuid": "1e77a4ba-1d92-42c2-941f-aa9d0bee9c2f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "yLYyh0xg5ztgfXbGhkMUfMJcoQypJBfxHZ2vMiIThGY",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "type": "vless",
+      "server": "139.100.227.176",
+      "server_port": 443,
+      "uuid": "d7ff1a6d-529e-4260-aa46-3c8a7fd681f4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Sm9bhIqBASg1A0frr4ogMq47_QfufVAkaY4bp5HhyE8",
+          "short_id": "5726b22c209c49"
         },
         "utls": {
           "enabled": true,
@@ -128,92 +248,35 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇦🇹 🇩🇪 | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-7",
       "type": "vless",
-      "server": "ru-at.techdatacloud.org",
-      "server_port": 8080,
-      "uuid": "2e5502fe-a951-4b2f-90fb-3570c8e18b98",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloud.mail.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "gi3kQqVpq3ZMOI6iKS4GMu25eIJH0ZT6xKheel7LVVU",
-          "short_id": "6e643d2d54ab470d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇻 Bouvet Island | [*CIDR]",
-      "type": "vless",
-      "server": "77.232.132.195",
-      "server_port": 60443,
-      "uuid": "0dc3bd77-cf72-428e-bb56-5649a156b278",
-      "tls": {
-        "enabled": true,
-        "server_name": "5post-gate.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "5BtG-6xnXEH_RC13TGj76k94qmJmPpMiYSjRqp6KWBw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇧🇻 Bouvet Island | [*CIDR]-2",
-      "type": "vless",
-      "server": "77.232.132.195",
-      "server_port": 60443,
-      "uuid": "0dc3bd77-cf72-428e-bb56-5649a156b278",
-      "tls": {
-        "enabled": true,
-        "server_name": "5post-gate.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "5BtG-6xnXEH_RC13TGj76k94qmJmPpMiYSjRqp6KWBw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "open.self-kvn.org",
-      "server_port": 22109,
-      "uuid": "1ba59989-225e-4f1c-ab62-9bd7366009cb",
+      "server": "139.100.227.176",
+      "server_port": 443,
+      "uuid": "d7ff1a6d-529e-4260-aa46-3c8a7fd681f4",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "ya.ru",
         "reality": {
           "enabled": true,
-          "public_key": "LKjl_OublHl2Y8DbIhVgkz7jwnJmzsHrjbes39cmdyQ",
-          "short_id": "748d7aa53e2be16b"
+          "public_key": "Sm9bhIqBASg1A0frr4ogMq47_QfufVAkaY4bp5HhyE8",
+          "short_id": "5726b22c209c49"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "194.26.229.170",
+      "server_port": 4100,
+      "uuid": "fab39305-3019-4ea3-b807-912cec95b449",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
       }
     }
   ],
