@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇸 Serbia | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-5",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-6",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-7",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK"
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,248 +51,82 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇸 Serbia | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-5",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-6",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-7",
-        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK"
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "176.109.85.71",
-      "server_port": 14443,
-      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
-      "tls": {
-        "enabled": true,
-        "server_name": "176-109-85-71.sslip.io",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "176-109-85-71.sslip.io"
-        },
-        "path": "/ru"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "mws.tunnelgate.org",
-      "server_port": 14443,
-      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
-      "tls": {
-        "enabled": true,
-        "server_name": "176-109-85-71.sslip.io",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "176-109-85-71.sslip.io"
-        },
-        "path": "/ru"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "mws.tunnelgate.org",
-      "server_port": 14443,
-      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
-      "tls": {
-        "enabled": true,
-        "server_name": "176-109-85-71.sslip.io",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "176-109-85-71.sslip.io"
-        },
-        "path": "/ru"
-      }
-    },
-    {
-      "tag": "🇷🇸 Serbia | [*CIDR]",
-      "type": "vless",
-      "server": "212.41.9.137",
-      "server_port": 9889,
-      "uuid": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aa"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-      "type": "vless",
-      "server": "mws.tunnelgate.org",
-      "server_port": 14443,
-      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
-      "tls": {
-        "enabled": true,
-        "server_name": "176-109-85-71.sslip.io",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "176-109-85-71.sslip.io"
-        },
-        "path": "/ru"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-5",
-      "type": "vless",
-      "server": "176.109.85.71",
-      "server_port": 14443,
-      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
-      "tls": {
-        "enabled": true,
-        "server_name": "176-109-85-71.sslip.io",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "176-109-85-71.sslip.io"
-        },
-        "path": "/ru"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "mws.tunnelgate.org",
-      "server_port": 14443,
-      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
-      "tls": {
-        "enabled": true,
-        "server_name": "176-109-85-71.sslip.io",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "176-109-85-71.sslip.io"
-        },
-        "path": "/ru"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-6",
-      "type": "vless",
-      "server": "176.109.85.71",
-      "server_port": 14443,
-      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
-      "tls": {
-        "enabled": true,
-        "server_name": "176-109-85-71.sslip.io",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "176-109-85-71.sslip.io"
-        },
-        "path": "/ru"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-7",
-      "type": "vless",
-      "server": "176.109.85.71",
-      "server_port": 14443,
-      "uuid": "b80b392c-0cf4-42f9-ae54-9f862e3ba276",
-      "tls": {
-        "enabled": true,
-        "server_name": "176-109-85-71.sslip.io",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "176-109-85-71.sslip.io"
-        },
-        "path": "/ru"
-      }
-    },
-    {
       "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 | [*CIDR] VK",
       "type": "vless",
       "server": "in-ru-vk-01.ray-balance.space",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03f6-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK",
+      "type": "vless",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇻🇮 [*CIDR] VK-2",
+      "type": "vless",
+      "server": "in-ru-vk-01.ray-balance.space",
+      "server_port": 443,
+      "uuid": "710fc22f-06b2-03ef-bb3e-f57c17b670a6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK",
+      "type": "vless",
+      "server": "84.23.54.213",
       "server_port": 443,
       "uuid": "bc6a863f-f482-03f2-a950-3dc3d3b17249",
       "flow": "xtls-rprx-vision",
@@ -312,6 +141,27 @@
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇸 🇵🇱 [*CIDR] VK-2",
+      "type": "vless",
+      "server": "84.23.54.213",
+      "server_port": 443,
+      "uuid": "bc6a863f-f482-03f2-a950-3dc3d3b17249",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }
