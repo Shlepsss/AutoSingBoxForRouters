@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR] CDN",
         "🇪🇪 Estonia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇫🇮 Finland | [*CIDR]",
+        "🇪🇪 Estonia [*CIDR]-2",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,89 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR] CDN",
         "🇪🇪 Estonia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇫🇮 Finland | [*CIDR]",
+        "🇪🇪 Estonia [*CIDR]-2",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR] CDN",
       "type": "vless",
-      "server": "141.8.199.212",
-      "server_port": 4100,
-      "uuid": "fc72e947-b8dd-4de0-9ec7-2b0050c9f83a",
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "159.194.214.13",
-      "server_port": 8443,
-      "uuid": "758f49d3-5f5f-47e7-bfa4-4ce96faf800d",
+      "server": "46.243.233.22",
+      "server_port": 443,
+      "uuid": "8c64cae9-a513-4e37-a68c-980bcaf2c591",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdn.shopify.com",
+        "server_name": "smartcaptcha.yandexcloud.net",
         "reality": {
           "enabled": true,
-          "public_key": "NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU",
-          "short_id": "f747a7a5793b5714"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "77.222.53.158",
-      "server_port": 2200,
-      "uuid": "6bd3e20b-4be0-41df-a1e0-5c147cc8fbfc",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rzd.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "159.194.214.13",
-      "server_port": 8443,
-      "uuid": "758f49d3-5f5f-47e7-bfa4-4ce96faf800d",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.shopify.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU",
-          "short_id": "f747a7a5793b5714"
+          "public_key": "9UCdLY6MS0x8fuEGBWJaFq-lLXNr1WWE9CAs07w5aD0",
+          "short_id": "253c73f6984236c9"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
@@ -150,9 +90,6 @@
       "tls": {
         "enabled": true,
         "server_name": "www.aviasales.com",
-        "alpn": [
-          "http/1.1"
-        ],
         "reality": {
           "enabled": true,
           "public_key": "PE9mzsnJ_wNPPxxPb-s2rD7qNQuyrFarLkB4aGiAc0Y",
@@ -165,53 +102,28 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
-      "server": "159.194.214.13",
-      "server_port": 8443,
-      "uuid": "758f49d3-5f5f-47e7-bfa4-4ce96faf800d",
+      "server": "ru77.overseashost.ru",
+      "server_port": 443,
+      "uuid": "f23f641d-b83b-0002-8046-c513696f7fe5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdn.shopify.com",
+        "server_name": "ru39.overseashost.ru",
         "reality": {
           "enabled": true,
-          "public_key": "NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU",
-          "short_id": "f747a7a5793b5714"
+          "public_key": "5daY68T2-jYVVQ__Raq1a4ggV2d1kAdrR53YkRutZF0",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "159.194.214.13",
-      "server_port": 8443,
-      "uuid": "758f49d3-5f5f-47e7-bfa4-4ce96faf800d",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.shopify.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU",
-          "short_id": "f747a7a5793b5714"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
+      "tag": "🇪🇪 Estonia [*CIDR]-2",
       "type": "vless",
       "server": "81.90.31.208",
       "server_port": 443,
@@ -219,9 +131,6 @@
       "tls": {
         "enabled": true,
         "server_name": "www.aviasales.com",
-        "alpn": [
-          "http/1.1"
-        ],
         "reality": {
           "enabled": true,
           "public_key": "PE9mzsnJ_wNPPxxPb-s2rD7qNQuyrFarLkB4aGiAc0Y",
@@ -229,45 +138,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "77.222.53.158",
-      "server_port": 4100,
-      "uuid": "6bd3e20b-4be0-41df-a1e0-5c147cc8fbfc",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "159.194.214.13",
-      "server_port": 8443,
-      "uuid": "758f49d3-5f5f-47e7-bfa4-4ce96faf800d",
+      "server": "5.42.110.24",
+      "server_port": 9892,
+      "uuid": "064a967e-0862-4cea-bdbd-9458cb7b6070",
       "tls": {
         "enabled": true,
-        "server_name": "cdn.shopify.com",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU",
-          "short_id": "f747a7a5793b5714"
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       },
       "transport": {
-        "type": "grpc"
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     }
   ],
