@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇮 Finland | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]",
-        "ð©ðª Germany | [*CIDR]"
+        "🇫🇮 Finland | [*CIDR]-2",
+        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,76 +51,62 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇮 Finland | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]",
-        "ð©ðª Germany | [*CIDR]"
+        "🇫🇮 Finland | [*CIDR]-2",
+        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "91.185.83.113",
+      "server_port": 443,
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
+      "tls": {
+        "enabled": true,
+        "server_name": "fl.cloud-s3.xyz",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vlgrpc"
+      }
+    },
+    {
       "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "89.169.90.10",
+      "server": "46.8.208.55",
       "server_port": 443,
-      "uuid": "3069559b-3446-415e-8db0-633907b17871",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2127770947.mwscdn.ru",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2127770947.mwscdn.ru"
-        },
-        "path": "/v1/data/sync"
-      }
+      "uuid": "d0dc4548-3dad-451d-91e2-935097099f13"
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.137",
+      "server": "176.119.159.185",
       "server_port": 443,
-      "uuid": "20872452-b4be-4823-a25f-37dbe1db22f1",
-      "tls": {
-        "enabled": true,
-        "server_name": "games22.fun",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "games22.fun"
-        },
-        "path": "/v1/data/sync"
-      }
+      "uuid": "0129534e-6fb9-456a-bf63-e099dc141b15"
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
+      "tag": "🇫🇮 Finland | [*CIDR]-2",
       "type": "vless",
-      "server": "89.169.90.11",
+      "server": "91.185.83.113",
       "server_port": 443,
-      "uuid": "20872452-b4be-4823-a25f-37dbe1db22f1",
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
       "tls": {
         "enabled": true,
-        "server_name": "top2127770947.mwscdn.ru",
+        "server_name": "fl.cloud-s3.xyz",
         "alpn": [
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
@@ -128,47 +114,26 @@
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2127770947.mwscdn.ru"
-        },
-        "path": "/v1/data/sync"
+        "type": "grpc",
+        "service_name": "vlgrpc"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "ru05.abvpn.ru",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru05.abvpn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ru05.abvpn.ru"
-        },
-        "path": "/websocket"
-      }
-    },
-    {
-      "tag": "ð©ðª Germany | [*CIDR]",
+      "tag": ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
       "type": "vmess",
       "server": "renderer-stream-2-62.mirra.now",
       "server_port": 443,
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
       "security": "auto",
       "tls": {
-        "enabled": true
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now"
       },
       "transport": {
         "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
         "path": "/api/v1/gpu-stream/socket"
       }
     }

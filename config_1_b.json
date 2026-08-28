@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
+        "🇫🇮 Finland | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-4"
+        "🇫🇮 Finland | [*CIDR]-2",
+        "🇫🇮 Finland | [*CIDR]-3",
+        "🇫🇮 Finland | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,76 +51,26 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
+        "🇫🇮 Finland | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-4"
+        "🇫🇮 Finland | [*CIDR]-2",
+        "🇫🇮 Finland | [*CIDR]-3",
+        "🇫🇮 Finland | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.137",
+      "server": "91.185.83.113",
       "server_port": 443,
-      "uuid": "20872452-b4be-4823-a25f-37dbe1db22f1",
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
       "tls": {
         "enabled": true,
-        "server_name": "games22.fun",
+        "server_name": "fl.cloud-s3.xyz",
         "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "games22.fun"
-        },
-        "path": "/v1/data/sync"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
-      "type": "vless",
-      "server": "89.169.90.10",
-      "server_port": 443,
-      "uuid": "20872452-b4be-4823-a25f-37dbe1db22f1",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2127770947.mwscdn.ru",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2127770947.mwscdn.ru"
-        },
-        "path": "/v1/data/sync"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
-      "type": "vless",
-      "server": "89.169.90.11",
-      "server_port": 443,
-      "uuid": "20872452-b4be-4823-a25f-37dbe1db22f1",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2127770947.mwscdn.ru",
-        "alpn": [
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
@@ -128,58 +78,81 @@
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2127770947.mwscdn.ru"
-        },
-        "path": "/v1/data/sync"
+        "type": "grpc",
+        "service_name": "vlgrpc"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "ru05.abvpn.ru",
+      "server": "176.119.159.185",
       "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
+      "uuid": "0129534e-6fb9-456a-bf63-e099dc141b15"
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]-2",
+      "type": "vless",
+      "server": "91.185.83.113",
+      "server_port": 443,
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
       "tls": {
         "enabled": true,
-        "server_name": "ru05.abvpn.ru",
+        "server_name": "fl.cloud-s3.xyz",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ru05.abvpn.ru"
-        },
-        "path": "/websocket"
+        "type": "grpc",
+        "service_name": "vlgrpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-4",
+      "tag": "🇫🇮 Finland | [*CIDR]-3",
       "type": "vless",
-      "server": "185.178.208.137",
+      "server": "91.185.83.113",
       "server_port": 443,
-      "uuid": "3069559b-3446-415e-8db0-633907b17871",
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
       "tls": {
         "enabled": true,
-        "server_name": "games22.fun",
+        "server_name": "fl.cloud-s3.xyz",
         "alpn": [
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "games22.fun"
-        },
-        "path": "/v1/data/sync"
+        "type": "grpc",
+        "service_name": "vlgrpc"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]-4",
+      "type": "vless",
+      "server": "91.185.83.113",
+      "server_port": 443,
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
+      "tls": {
+        "enabled": true,
+        "server_name": "fl.cloud-s3.xyz",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vlgrpc"
       }
     }
   ],

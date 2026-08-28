@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
-        "🇳🇱 The Netherlands [*CIDR]-4"
+        "🇫🇮 Finland | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,73 +51,26 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
-        "🇳🇱 The Netherlands [*CIDR]-4"
+        "🇫🇮 Finland | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
-      "server": "ru05.abvpn.ru",
+      "server": "91.185.83.113",
       "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
       "tls": {
         "enabled": true,
-        "server_name": "ru05.abvpn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ru05.abvpn.ru"
-        },
-        "path": "/websocket"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "89.169.90.10",
-      "server_port": 443,
-      "uuid": "3069559b-3446-415e-8db0-633907b17871",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2127770947.mwscdn.ru",
+        "server_name": "fl.cloud-s3.xyz",
         "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2127770947.mwscdn.ru"
-        },
-        "path": "/v1/data/sync"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
-      "type": "vless",
-      "server": "89.169.90.10",
-      "server_port": 443,
-      "uuid": "3069559b-3446-415e-8db0-633907b17871",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2127770947.mwscdn.ru",
-        "alpn": [
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
@@ -125,24 +78,28 @@
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2127770947.mwscdn.ru"
-        },
-        "path": "/v1/data/sync"
+        "type": "grpc",
+        "service_name": "vlgrpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "89.169.90.11",
+      "server": "46.8.208.55",
       "server_port": 443,
-      "uuid": "3069559b-3446-415e-8db0-633907b17871",
+      "uuid": "d0dc4548-3dad-451d-91e2-935097099f13"
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]-2",
+      "type": "vless",
+      "server": "91.185.83.113",
+      "server_port": 443,
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
       "tls": {
         "enabled": true,
-        "server_name": "top2127770947.mwscdn.ru",
+        "server_name": "fl.cloud-s3.xyz",
         "alpn": [
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
@@ -150,36 +107,37 @@
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2127770947.mwscdn.ru"
-        },
-        "path": "/v1/data/sync"
+        "type": "grpc",
+        "service_name": "vlgrpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-4",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "89.169.90.11",
+      "server": "176.119.159.185",
       "server_port": 443,
-      "uuid": "20872452-b4be-4823-a25f-37dbe1db22f1",
+      "uuid": "0129534e-6fb9-456a-bf63-e099dc141b15"
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]-3",
+      "type": "vless",
+      "server": "91.185.83.113",
+      "server_port": 443,
+      "uuid": "9b5d2c22-b904-47cd-8a04-100e60d5d81b",
       "tls": {
         "enabled": true,
-        "server_name": "top2127770947.mwscdn.ru",
+        "server_name": "fl.cloud-s3.xyz",
         "alpn": [
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2127770947.mwscdn.ru"
-        },
-        "path": "/v1/data/sync"
+        "type": "grpc",
+        "service_name": "vlgrpc"
       }
     }
   ],
