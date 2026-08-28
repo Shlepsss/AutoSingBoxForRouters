@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇪🇪 Estonia [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇪🇪 Estonia [*CIDR]-2",
-        "🇩🇪 Germany [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇳🇱 The Netherlands [*CIDR]-3",
+        "🇳🇱 The Netherlands [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,119 +51,135 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇪🇪 Estonia [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇪🇪 Estonia [*CIDR]-2",
-        "🇩🇪 Germany [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇳🇱 The Netherlands [*CIDR]-3",
+        "🇳🇱 The Netherlands [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "46.243.233.22",
-      "server_port": 443,
-      "uuid": "8c64cae9-a513-4e37-a68c-980bcaf2c591",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "smartcaptcha.yandexcloud.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "9UCdLY6MS0x8fuEGBWJaFq-lLXNr1WWE9CAs07w5aD0",
-          "short_id": "253c73f6984236c9"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia [*CIDR]",
-      "type": "vless",
-      "server": "81.90.31.208",
+      "server": "ru05.abvpn.ru",
       "server_port": 443,
       "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
       "tls": {
         "enabled": true,
-        "server_name": "www.aviasales.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "PE9mzsnJ_wNPPxxPb-s2rD7qNQuyrFarLkB4aGiAc0Y",
-          "short_id": "047a2a40"
-        },
+        "server_name": "ru05.abvpn.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR]",
-      "type": "vless",
-      "server": "ru77.overseashost.ru",
-      "server_port": 443,
-      "uuid": "f23f641d-b83b-0002-8046-c513696f7fe5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru39.overseashost.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "5daY68T2-jYVVQ__Raq1a4ggV2d1kAdrR53YkRutZF0",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia [*CIDR]-2",
-      "type": "vless",
-      "server": "81.90.31.208",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.aviasales.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "PE9mzsnJ_wNPPxxPb-s2rD7qNQuyrFarLkB4aGiAc0Y",
-          "short_id": "047a2a40"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "5.42.110.24",
-      "server_port": 9892,
-      "uuid": "064a967e-0862-4cea-bdbd-9458cb7b6070",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "type": "ws",
+        "headers": {
+          "Host": "ru05.abvpn.ru"
+        },
+        "path": "/websocket"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "89.169.90.10",
+      "server_port": 443,
+      "uuid": "3069559b-3446-415e-8db0-633907b17871",
+      "tls": {
+        "enabled": true,
+        "server_name": "top2127770947.mwscdn.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "top2127770947.mwscdn.ru"
+        },
+        "path": "/v1/data/sync"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
+      "type": "vless",
+      "server": "89.169.90.10",
+      "server_port": 443,
+      "uuid": "3069559b-3446-415e-8db0-633907b17871",
+      "tls": {
+        "enabled": true,
+        "server_name": "top2127770947.mwscdn.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "top2127770947.mwscdn.ru"
+        },
+        "path": "/v1/data/sync"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
+      "type": "vless",
+      "server": "89.169.90.11",
+      "server_port": 443,
+      "uuid": "3069559b-3446-415e-8db0-633907b17871",
+      "tls": {
+        "enabled": true,
+        "server_name": "top2127770947.mwscdn.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "top2127770947.mwscdn.ru"
+        },
+        "path": "/v1/data/sync"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]-4",
+      "type": "vless",
+      "server": "89.169.90.11",
+      "server_port": 443,
+      "uuid": "20872452-b4be-4823-a25f-37dbe1db22f1",
+      "tls": {
+        "enabled": true,
+        "server_name": "top2127770947.mwscdn.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "top2127770947.mwscdn.ru"
+        },
+        "path": "/v1/data/sync"
       }
     }
   ],

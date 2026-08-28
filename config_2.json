@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇨🇿 Czechia [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-3",
+        "🇸🇪 Sweden | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,122 +51,134 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇨🇿 Czechia [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-3",
+        "🇸🇪 Sweden | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "81.90.31.208",
+      "server": "185.178.208.137",
+      "server_port": 443,
+      "uuid": "3069559b-3446-415e-8db0-633907b17871",
+      "tls": {
+        "enabled": true,
+        "server_name": "games22.fun",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "games22.fun"
+        },
+        "path": "/v1/data/sync"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
+      "type": "vless",
+      "server": "89.169.90.10",
+      "server_port": 443,
+      "uuid": "3069559b-3446-415e-8db0-633907b17871",
+      "tls": {
+        "enabled": true,
+        "server_name": "top2127770947.mwscdn.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "top2127770947.mwscdn.ru"
+        },
+        "path": "/v1/data/sync"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "ru05.abvpn.ru",
       "server_port": 443,
       "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
       "tls": {
         "enabled": true,
-        "server_name": "www.aviasales.com",
+        "server_name": "ru05.abvpn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ru05.abvpn.ru"
+        },
+        "path": "/websocket"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
+      "type": "vless",
+      "server": "89.169.90.10",
+      "server_port": 443,
+      "uuid": "0a63c7fa-1cfd-4f54-8275-4cd50422c127",
+      "tls": {
+        "enabled": true,
+        "server_name": "top2127770947.mwscdn.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "top2127770947.mwscdn.ru"
+        },
+        "path": "/v1/data/sync"
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "type": "vless",
+      "server": "217.168.244.178",
+      "server_port": 9872,
+      "uuid": "064a967e-0862-4cea-bdbd-9458cb7b6070",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "PE9mzsnJ_wNPPxxPb-s2rD7qNQuyrFarLkB4aGiAc0Y",
-          "short_id": "047a2a40"
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "5.42.110.24",
-      "server_port": 9892,
-      "uuid": "064a967e-0862-4cea-bdbd-9458cb7b6070",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN",
-      "type": "vless",
-      "server": "46.243.233.22",
-      "server_port": 443,
-      "uuid": "8c64cae9-a513-4e37-a68c-980bcaf2c591",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "smartcaptcha.yandexcloud.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "9UCdLY6MS0x8fuEGBWJaFq-lLXNr1WWE9CAs07w5aD0",
-          "short_id": "253c73f6984236c9"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇿 Czechia [*CIDR]",
-      "type": "vless",
-      "server": "45.152.113.177",
-      "server_port": 9891,
-      "uuid": "064a967e-0862-4cea-bdbd-9458cb7b6070",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aabb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "185.244.181.50",
-      "server_port": 443,
-      "uuid": "b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "2P7D_IkxXWre3YziEe2tkF9L_gUbdZE_WCu9_SQq4hE",
-          "short_id": "2b5b1ffa8a6a1a68"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
       }
     }
   ],
