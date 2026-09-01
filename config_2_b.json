@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇩🇪 Germany | [*CIDR] CDN-2",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR] CDN",
         "🇩🇪 Germany [*CIDR] CDN",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR] CDN-2",
         "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
         "🇩🇪 Germany | [*CIDR] CDN-3",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]"
+        "🇷🇺 Russia [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,61 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇩🇪 Germany | [*CIDR] CDN-2",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR] CDN",
         "🇩🇪 Germany [*CIDR] CDN",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR] CDN-2",
         "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
         "🇩🇪 Germany | [*CIDR] CDN-3",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]"
+        "🇷🇺 Russia [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "ru.opngtr.nl",
+      "server_port": 443,
+      "uuid": "39c42b0a-b823-4c93-bb99-74b4183e518d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.savesafe.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "X5QCQAU6PhQ0ZYdMfsOD8SzK2tAcKqGbqHcGKOCkHg0",
+          "short_id": "3e70d4cbb01bddfd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "ru.opngtr.nl",
+      "server_port": 443,
+      "uuid": "39c42b0a-b823-4c93-bb99-74b4183e518d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.savesafe.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "X5QCQAU6PhQ0ZYdMfsOD8SzK2tAcKqGbqHcGKOCkHg0",
+          "short_id": "3e70d4cbb01bddfd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
     },
     {
       "tag": "🇩🇪 Germany | [*CIDR] CDN",
@@ -95,7 +137,7 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN-2",
+      "tag": "🇩🇪 Germany [*CIDR] CDN",
       "type": "vless",
       "server": "46.243.234.72",
       "server_port": 2053,
@@ -110,33 +152,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-wl"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "ru.opngtr.nl",
-      "server_port": 443,
-      "uuid": "39c42b0a-b823-4c93-bb99-74b4183e518d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.savesafe.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "X5QCQAU6PhQ0ZYdMfsOD8SzK2tAcKqGbqHcGKOCkHg0",
-          "short_id": "3e70d4cbb01bddfd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
       }
     },
     {
@@ -156,12 +177,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] CDN",
+      "tag": "🇩🇪 Germany | [*CIDR] CDN-2",
       "type": "vless",
       "server": "46.243.234.72",
       "server_port": 2053,
@@ -176,7 +197,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -222,7 +243,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
@@ -242,7 +263,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -267,28 +288,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "ru.opngtr.nl",
-      "server_port": 443,
-      "uuid": "39c42b0a-b823-4c93-bb99-74b4183e518d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.savesafe.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "X5QCQAU6PhQ0ZYdMfsOD8SzK2tAcKqGbqHcGKOCkHg0",
-          "short_id": "3e70d4cbb01bddfd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     }
