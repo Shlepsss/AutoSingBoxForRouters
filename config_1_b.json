@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-4"
+        "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,67 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-3",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-4"
+        "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
       "type": "vless",
-      "server": "90.156.218.143",
-      "server_port": 443,
-      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
-      "tls": {
-        "enabled": true,
-        "server_name": "mint.ubuntuhosting.host",
-        "reality": {
-          "enabled": true,
-          "public_key": "QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng",
-          "short_id": "3fa234ea9feaa048"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "gun"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-      "type": "vless",
-      "server": "217.199.254.215",
-      "server_port": 443,
-      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
-      "tls": {
-        "enabled": true,
-        "server_name": "endeavouros.ubuntuhosting.host",
-        "reality": {
-          "enabled": true,
-          "public_key": "nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E",
-          "short_id": "707c8615b9"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "gun"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2",
-      "type": "vless",
-      "server": "217.199.254.215",
+      "server": "85.198.83.81",
       "server_port": 443,
       "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
@@ -133,9 +85,34 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-3",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "217.199.254.215",
+      "server": "201.24.49.117",
+      "server_port": 2200,
+      "uuid": "2e228435-33a0-47d1-a1d8-9a34b5a03c45",
+      "transport": {
+        "type": "ws",
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "85.193.85.93",
+      "server_port": 4100,
+      "uuid": "45712903-92af-48b5-8f2f-5482d33e9385",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "live.ok.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
+      "type": "vless",
+      "server": "85.198.83.81",
       "server_port": 443,
       "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
@@ -148,7 +125,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -157,22 +134,22 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-4",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
       "type": "vless",
-      "server": "217.199.254.215",
+      "server": "90.156.218.143",
       "server_port": 443,
       "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
         "enabled": true,
-        "server_name": "endeavouros.ubuntuhosting.host",
+        "server_name": "mint.ubuntuhosting.host",
         "reality": {
           "enabled": true,
-          "public_key": "nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E",
-          "short_id": "707c8615b9"
+          "public_key": "QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng",
+          "short_id": "3fa234ea9feaa048"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
