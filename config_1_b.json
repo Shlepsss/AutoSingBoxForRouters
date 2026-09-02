@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇧🇬 🇨🇿 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "ð©ðª Germany [*CIDR]",
         "🇩🇪 Germany | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇧🇬 🇨🇿 🇱🇹 [*CIDR]",
-        "🇩🇪 Germany | [*CIDR] CDN-2",
-        "🇩🇪 Germany | [*CIDR] CDN-3"
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,83 +53,103 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇧🇬 🇨🇿 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "ð©ðª Germany [*CIDR]",
         "🇩🇪 Germany | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇧🇬 🇨🇿 🇱🇹 [*CIDR]",
-        "🇩🇪 Germany | [*CIDR] CDN-2",
-        "🇩🇪 Germany | [*CIDR] CDN-3"
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇧🇬 🇨🇿 | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "958fbe5d.site",
+      "server": "5.42.123.245",
       "server_port": 443,
-      "uuid": "efbfea27-dfb8-4414-878c-a2c2b87ff9fc",
-      "flow": "xtls-rprx-vision",
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "lkM6TUAgqgOYUcsnl6rycqfaL-GNYZyyEI3Zfu9-21s",
-          "short_id": "f2a54777ec76a14c"
-        },
+        "server_name": "cf11.rumedia-cdn.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cf11.rumedia-cdn.com"
+        },
+        "path": "/cdn/v3/live"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "5.42.123.245",
+      "server_port": 443,
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf11.rumedia-cdn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cf11.rumedia-cdn.com"
+        },
+        "path": "/cdn/v3/live"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "5.42.123.245",
+      "server_port": 443,
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf11.rumedia-cdn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cf11.rumedia-cdn.com"
+        },
+        "path": "/cdn/v3/live"
+      }
+    },
+    {
+      "tag": "ð©ðª Germany [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
       "tag": "🇩🇪 Germany | [*CIDR] CDN",
-      "type": "vless",
-      "server": "46.243.234.72",
-      "server_port": 2053,
-      "uuid": "24708d62-a508-4c63-a860-7d4e04e440b1",
-      "tls": {
-        "enabled": true,
-        "server_name": "5post-gate.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "IDjWshY2nmbQJzUme5TMymI-RI99Zku45lO9k1HKyTA",
-          "short_id": "20a080af5636a681"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-wl"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇧🇬 🇨🇿 🇱🇹 [*CIDR]",
-      "type": "vless",
-      "server": "958fbe5d.site",
-      "server_port": 443,
-      "uuid": "efbfea27-dfb8-4414-878c-a2c2b87ff9fc",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "lkM6TUAgqgOYUcsnl6rycqfaL-GNYZyyEI3Zfu9-21s",
-          "short_id": "f2a54777ec76a14c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN-2",
       "type": "vless",
       "server": "46.243.234.72",
       "server_port": 2053,
@@ -151,27 +173,47 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN-3",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
       "type": "vless",
-      "server": "46.243.234.72",
-      "server_port": 2053,
-      "uuid": "24708d62-a508-4c63-a860-7d4e04e440b1",
+      "server": "5.42.123.245",
+      "server_port": 443,
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
       "tls": {
         "enabled": true,
-        "server_name": "5post-gate.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "IDjWshY2nmbQJzUme5TMymI-RI99Zku45lO9k1HKyTA",
-          "short_id": "20a080af5636a681"
-        },
+        "server_name": "cf11.rumedia-cdn.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-wl"
+        "type": "ws",
+        "headers": {
+          "Host": "cf11.rumedia-cdn.com"
+        },
+        "path": "/cdn/v3/live"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "5.42.123.245",
+      "server_port": 443,
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf11.rumedia-cdn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cf11.rumedia-cdn.com"
+        },
+        "path": "/cdn/v3/live"
       }
     }
   ],
