@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "ð©ðª Germany [*CIDR]",
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]"
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
+        "🇰🇿 Kazakhstan [*CIDR]",
+        "🇰🇿 Kazakhstan | [*CIDR]",
+        "🇰🇿 Kazakhstan [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,114 +51,52 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "ð©ðª Germany [*CIDR]",
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]"
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
+        "🇰🇿 Kazakhstan [*CIDR]",
+        "🇰🇿 Kazakhstan | [*CIDR]",
+        "🇰🇿 Kazakhstan [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
       "type": "vless",
-      "server": "5.42.123.245",
+      "server": "147.45.163.134",
       "server_port": 443,
-      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
         "enabled": true,
-        "server_name": "cf11.rumedia-cdn.com",
+        "server_name": "endeavouros.ubuntuhosting.host",
+        "reality": {
+          "enabled": true,
+          "public_key": "nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E",
+          "short_id": "3a2c"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cf11.rumedia-cdn.com"
-        },
-        "path": "/cdn/v3/live"
+        "type": "grpc",
+        "service_name": "gun"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "tag": "🇰🇿 Kazakhstan [*CIDR]",
       "type": "vless",
-      "server": "5.42.123.245",
-      "server_port": 443,
-      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "server": "46.16.36.222",
+      "server_port": 11448,
+      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
         "enabled": true,
-        "server_name": "cf11.rumedia-cdn.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cf11.rumedia-cdn.com"
-        },
-        "path": "/cdn/v3/live"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "5.42.123.245",
-      "server_port": 443,
-      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
-      "tls": {
-        "enabled": true,
-        "server_name": "cf11.rumedia-cdn.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cf11.rumedia-cdn.com"
-        },
-        "path": "/cdn/v3/live"
-      }
-    },
-    {
-      "tag": "ð©ðª Germany [*CIDR]",
-      "type": "vmess",
-      "server": "renderer-stream-2-62.mirra.now",
-      "server_port": 443,
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
-      "security": "auto",
-      "tls": {
-        "enabled": true
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN",
-      "type": "vless",
-      "server": "46.243.234.72",
-      "server_port": 2053,
-      "uuid": "24708d62-a508-4c63-a860-7d4e04e440b1",
-      "tls": {
-        "enabled": true,
-        "server_name": "5post-gate.x5.ru",
+        "server_name": "mageia.ubuntuhosting.host",
         "reality": {
           "enabled": true,
-          "public_key": "IDjWshY2nmbQJzUme5TMymI-RI99Zku45lO9k1HKyTA",
-          "short_id": "20a080af5636a681"
+          "public_key": "gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs",
+          "short_id": "b34f41089f1e"
         },
         "utls": {
           "enabled": true,
@@ -169,51 +105,79 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-wl"
+        "service_name": "gun"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "tag": "🇰🇿 Kazakhstan | [*CIDR]",
       "type": "vless",
-      "server": "5.42.123.245",
-      "server_port": 443,
-      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "server": "46.16.36.222",
+      "server_port": 11448,
+      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
         "enabled": true,
-        "server_name": "cf11.rumedia-cdn.com",
+        "server_name": "mageia.ubuntuhosting.host",
+        "reality": {
+          "enabled": true,
+          "public_key": "gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs",
+          "short_id": "b34f41089f1e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "gun"
+      }
+    },
+    {
+      "tag": "🇰🇿 Kazakhstan [*CIDR]-2",
+      "type": "vless",
+      "server": "46.16.36.222",
+      "server_port": 11448,
+      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
+      "tls": {
+        "enabled": true,
+        "server_name": "mageia.ubuntuhosting.host",
+        "reality": {
+          "enabled": true,
+          "public_key": "gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs",
+          "short_id": "b34f41089f1e"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cf11.rumedia-cdn.com"
-        },
-        "path": "/cdn/v3/live"
+        "type": "grpc",
+        "service_name": "gun"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2",
       "type": "vless",
-      "server": "5.42.123.245",
+      "server": "85.198.83.81",
       "server_port": 443,
-      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
         "enabled": true,
-        "server_name": "cf11.rumedia-cdn.com",
+        "server_name": "endeavouros.ubuntuhosting.host",
+        "reality": {
+          "enabled": true,
+          "public_key": "nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E",
+          "short_id": "707c8615b9"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cf11.rumedia-cdn.com"
-        },
-        "path": "/cdn/v3/live"
+        "type": "grpc",
+        "service_name": "gun"
       }
     }
   ],
