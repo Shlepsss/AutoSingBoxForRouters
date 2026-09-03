@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇨🇭 Switzerland | 🌐 [*CIDR] VK",
         "🇩🇪 Germany [*CIDR] CDN",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK-2",
-        "🇩🇪 Germany | [*CIDR] YA",
-        "🇩🇪 Germany | [*CIDR] YA-2"
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇩🇪 Germany [*CIDR] CDN-2",
+        "🇨🇭 Switzerland | 🌐 [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇨🇭 Switzerland | 🌐 [*CIDR] VK",
         "🇩🇪 Germany [*CIDR] CDN",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK-2",
-        "🇩🇪 Germany | [*CIDR] YA",
-        "🇩🇪 Germany | [*CIDR] YA-2"
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇩🇪 Germany [*CIDR] CDN-2",
+        "🇨🇭 Switzerland | 🌐 [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇨🇭 Switzerland | 🌐 [*CIDR] VK",
+      "type": "trojan",
+      "server": "90.156.218.126",
+      "server_port": 2223,
+      "password": "DQMH0rnu-nQ2FL7fddCA306ApdzGuvFA",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "vkc7.secured-by-tenzo.sbs",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
     },
     {
       "tag": "🇩🇪 Germany [*CIDR] CDN",
@@ -76,7 +96,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -85,7 +105,7 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
       "type": "vless",
       "server": "90.156.218.143",
       "server_port": 443,
@@ -109,71 +129,47 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
+      "tag": "🇩🇪 Germany [*CIDR] CDN-2",
       "type": "vless",
-      "server": "90.156.218.143",
-      "server_port": 443,
-      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
+      "server": "46.243.234.143",
+      "server_port": 2053,
+      "uuid": "9d635464-57dc-4bac-a1be-dd731d74ed06",
       "tls": {
         "enabled": true,
-        "server_name": "mint.ubuntuhosting.host",
+        "server_name": "5post-gate.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng",
-          "short_id": "3fa234ea9feaa048"
+          "public_key": "EtfCxtqZmJ_cNs8Q02ZLuiHFoH7o7DogIcMSQjuuAiI",
+          "short_id": "346951f93706f6ec"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "gun"
+        "service_name": "grpc-wl"
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.170.69",
-      "server_port": 443,
-      "uuid": "1cf3c15c-16ce-46cc-8a96-b33c33b8a20f",
+      "tag": "🇨🇭 Switzerland | 🌐 [*CIDR] VK-2",
+      "type": "trojan",
+      "server": "90.156.218.126",
+      "server_port": 2223,
+      "password": "DQMH0rnu-nQ2FL7fddCA306ApdzGuvFA",
       "tls": {
         "enabled": true,
-        "server_name": "cloudflare.fwqfw783rg2dad.website",
+        "insecure": true,
+        "server_name": "vkc7.secured-by-tenzo.sbs",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cloudflare.fwqfw783rg2dad.website"
-        },
-        "path": "/websocket"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.170.69",
-      "server_port": 443,
-      "uuid": "1cf3c15c-16ce-46cc-8a96-b33c33b8a20f",
-      "tls": {
-        "enabled": true,
-        "server_name": "cloudflare.fwqfw783rg2dad.website",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cloudflare.fwqfw783rg2dad.website"
-        },
-        "path": "/websocket"
       }
     }
   ],
