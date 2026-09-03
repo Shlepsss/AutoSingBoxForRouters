@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
+        "🇰🇿 Kazakhstan [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
@@ -51,70 +51,32 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
+        "🇰🇿 Kazakhstan [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
         "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇭 Switzerland | 🌐 | [*CIDR]",
+      "tag": "🇰🇿 Kazakhstan [*CIDR]",
       "type": "vless",
-      "server": "193.124.125.79",
-      "server_port": 161,
-      "uuid": "3affc7d9-547b-4bd3-97ef-7633dbd72767",
-      "tls": {
-        "enabled": true,
-        "server_name": "avito.st",
-        "reality": {
-          "enabled": true,
-          "public_key": "D5ttWzeUeEo0oKchjhHGY7Z8jFrAB-BOz6kdQpCrZg0",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "lv3grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "85.193.85.93",
-      "server_port": 4100,
-      "uuid": "45712903-92af-48b5-8f2f-5482d33e9385",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
-      "type": "vless",
-      "server": "217.199.254.215",
-      "server_port": 443,
+      "server": "46.16.36.222",
+      "server_port": 11448,
       "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
         "enabled": true,
-        "server_name": "endeavouros.ubuntuhosting.host",
+        "server_name": "mageia.ubuntuhosting.host",
         "reality": {
           "enabled": true,
-          "public_key": "nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E",
-          "short_id": "707c8615b9"
+          "public_key": "gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs",
+          "short_id": "b34f41089f1e"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -123,13 +85,65 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "201.24.49.117",
+      "server": "201.24.49.77",
       "server_port": 2200,
-      "uuid": "2e228435-33a0-47d1-a1d8-9a34b5a03c45",
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
       "transport": {
         "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "201.24.49.77",
+      "server_port": 2200,
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "201.24.49.77",
+      "server_port": 2200,
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
         "path": "/v1"
       }
     },
@@ -149,7 +163,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       },
       "transport": {

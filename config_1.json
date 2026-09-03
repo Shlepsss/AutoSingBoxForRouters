@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇿 Kazakhstan [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇫🇷 France | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,20 +51,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇿 Kazakhstan [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇫🇷 France | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇰🇿 Kazakhstan [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "201.24.49.77",
+      "server_port": 2200,
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [*CIDR]",
       "type": "vless",
       "server": "46.16.36.222",
-      "server_port": 11448,
+      "server_port": 11443,
       "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
         "enabled": true,
@@ -72,11 +93,11 @@
         "reality": {
           "enabled": true,
           "public_key": "gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs",
-          "short_id": "b34f41089f1e"
+          "short_id": "3b149d533a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -87,65 +108,58 @@
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "201.24.49.117",
+      "server": "201.24.49.77",
       "server_port": 2200,
-      "uuid": "2e228435-33a0-47d1-a1d8-9a34b5a03c45",
-      "transport": {
-        "type": "ws",
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "85.193.85.93",
-      "server_port": 4100,
-      "uuid": "45712903-92af-48b5-8f2f-5482d33e9385",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "live.ok.ru"
-        },
-        "path": "/v1"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-      "type": "vless",
-      "server": "85.198.83.81",
-      "server_port": 443,
-      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
       "tls": {
         "enabled": true,
-        "server_name": "endeavouros.ubuntuhosting.host",
-        "reality": {
-          "enabled": true,
-          "public_key": "nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E",
-          "short_id": "707c8615b9"
-        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "gun"
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "85.198.83.81",
-      "server_port": 443,
+      "server": "201.24.49.77",
+      "server_port": 2200,
+      "uuid": "af60d475-3c13-41cf-af0e-18353d08877a",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rzd.ru"
+        },
+        "path": "/v1"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "46.16.36.222",
+      "server_port": 11445,
       "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
       "tls": {
         "enabled": true,
-        "server_name": "endeavouros.ubuntuhosting.host",
+        "server_name": "mageia.ubuntuhosting.host",
         "reality": {
           "enabled": true,
-          "public_key": "nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E",
-          "short_id": "707c8615b9"
+          "public_key": "gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs",
+          "short_id": "61"
         },
         "utls": {
           "enabled": true,
