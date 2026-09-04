@@ -31,145 +31,30 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
+        "ð©ðª Germany [*CIDR]"
       ],
-      "default": "auto",
+      "default": "ð©ðª Germany [*CIDR]",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "217.199.254.215",
+      "tag": "ð©ðª Germany [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
       "server_port": 443,
-      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
-        "enabled": true,
-        "server_name": "kaos.ubuntuhosting.host",
-        "reality": {
-          "enabled": true,
-          "public_key": "HHbMyxLRgywVoS_G5d35HW0bToENF0ihXHJ20iLAYRM",
-          "short_id": "b6549e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "enabled": true
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "gun"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR]",
-      "type": "vless",
-      "server": "45.92.177.10",
-      "server_port": 9895,
-      "uuid": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "217.199.254.215",
-      "server_port": 443,
-      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
-      "tls": {
-        "enabled": true,
-        "server_name": "kaos.ubuntuhosting.host",
-        "reality": {
-          "enabled": true,
-          "public_key": "HHbMyxLRgywVoS_G5d35HW0bToENF0ihXHJ20iLAYRM",
-          "short_id": "b6549e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "gun"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR] YA",
-      "type": "vless",
-      "server": "bs1.whitehost.org",
-      "server_port": 443,
-      "uuid": "2eb1e3e2-34b9-4ca8-864f-9fada68d6c81",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "wde5.whitedeu.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "217.199.254.215",
-      "server_port": 443,
-      "uuid": "d7430ae7-320c-4658-808b-3006d0627d82",
-      "tls": {
-        "enabled": true,
-        "server_name": "kaos.ubuntuhosting.host",
-        "reality": {
-          "enabled": true,
-          "public_key": "HHbMyxLRgywVoS_G5d35HW0bToENF0ihXHJ20iLAYRM",
-          "short_id": "b6549e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "gun"
+        "path": "/api/v1/gpu-stream/socket"
       }
     }
   ],
