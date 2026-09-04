@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]-2",
-        "🇦🇹 Austria | [*CIDR]-3",
-        "🇵🇱 Poland | [*CIDR]-2"
+        "🇵🇱 Poland [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇦🇹 Austria [*CIDR]",
+        "ð©ðª Germany | [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]-2",
-        "🇦🇹 Austria | [*CIDR]-3",
-        "🇵🇱 Poland | [*CIDR]-2"
+        "🇵🇱 Poland [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇦🇹 Austria [*CIDR]",
+        "ð©ðª Germany | [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
       "server": "95.143.190.125",
       "server_port": 9895,
@@ -72,31 +72,7 @@
         "reality": {
           "enabled": true,
           "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇦🇹 Austria | [*CIDR]",
-      "type": "vless",
-      "server": "82.202.143.37",
-      "server_port": 9830,
-      "uuid": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aa"
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -109,22 +85,22 @@
       }
     },
     {
-      "tag": "🇦🇹 Austria | [*CIDR]-2",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "82.202.143.37",
-      "server_port": 9830,
+      "server": "94.241.143.161",
+      "server_port": 9871,
       "uuid": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -133,7 +109,7 @@
       }
     },
     {
-      "tag": "🇦🇹 Austria | [*CIDR]-3",
+      "tag": "🇦🇹 Austria [*CIDR]",
       "type": "vless",
       "server": "82.202.143.37",
       "server_port": 9830,
@@ -148,7 +124,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -157,22 +133,45 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "tag": "ð©ðª Germany | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "95.143.190.125",
-      "server_port": 9895,
+      "server": "94.241.143.161",
+      "server_port": 9871,
       "uuid": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aabbccdd"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       },
       "transport": {
