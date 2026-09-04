@@ -34,9 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom [SNI-RU] vk.com",
-        "🇬🇧 United Kingdom | [SNI-RU] vk.com",
-        "🇬🇧 United Kingdom | [SNI-RU] vk.com-2"
+        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com",
+        "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com",
+        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-2",
+        "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com-2",
+        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -49,68 +51,133 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom [SNI-RU] vk.com",
-        "🇬🇧 United Kingdom | [SNI-RU] vk.com",
-        "🇬🇧 United Kingdom | [SNI-RU] vk.com-2"
+        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com",
+        "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com",
+        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-2",
+        "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com-2",
+        "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] vk.com",
-      "type": "trojan",
-      "server": "45.85.88.194",
-      "server_port": 2234,
-      "password": "tripitropa994825",
+      "tag": "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "78.159.240.41",
+      "server_port": 443,
+      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "vk.com",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [SNI-RU] vk.com",
-      "type": "trojan",
-      "server": "45.85.88.194",
-      "server_port": 2234,
-      "password": "tripitropa994825",
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com",
+      "type": "vless",
+      "server": "78.159.240.41",
+      "server_port": 443,
+      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "vk.com",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-2",
+      "type": "vless",
+      "server": "78.159.240.41",
+      "server_port": 443,
+      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] id.vk.com-2",
+      "type": "vless",
+      "server": "78.159.240.41",
+      "server_port": 443,
+      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [SNI-RU] vk.com-2",
-      "type": "trojan",
-      "server": "45.85.88.194",
-      "server_port": 2234,
-      "password": "tripitropa994825",
+      "tag": "🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com-3",
+      "type": "vless",
+      "server": "78.159.240.41",
+      "server_port": 443,
+      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "vk.com",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     }
   ],
