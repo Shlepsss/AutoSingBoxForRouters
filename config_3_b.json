@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 | [*CIDR] YA",
         "🇩🇪 Germany | 🌐 [*CIDR] YA",
         "🇩🇪 Germany | 🌐 [*CIDR] YA-2",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA-3",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA-4",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA-5"
+        "🇩🇪 Germany | [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,46 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 | [*CIDR] YA",
         "🇩🇪 Germany | 🌐 [*CIDR] YA",
         "🇩🇪 Germany | 🌐 [*CIDR] YA-2",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA-3",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA-4",
-        "🇩🇪 Germany | 🌐 [*CIDR] YA-5"
+        "🇩🇪 Germany | [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR] YA",
+      "type": "vless",
+      "server": "93.77.188.102",
+      "server_port": 443,
+      "uuid": "2eb1e3e2-34b9-4ca8-864f-9fada68d6c81",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "wde5.whitedeu.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR] YA",
+      "type": "vless",
+      "server": "bs1.whitehost.org",
+      "server_port": 443,
+      "uuid": "2eb1e3e2-34b9-4ca8-864f-9fada68d6c81",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "wde5.whitedeu.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
     },
     {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA",
@@ -72,7 +104,7 @@
         "server_name": "wde5.whitedeu.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     },
@@ -93,43 +125,9 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA-3",
+      "tag": "🇩🇪 Germany | [*CIDR] YA-2",
       "type": "vless",
       "server": "93.77.188.102",
-      "server_port": 443,
-      "uuid": "2eb1e3e2-34b9-4ca8-864f-9fada68d6c81",
-      "tls": {
-        "enabled": true,
-        "server_name": "wde5.whitedeu.org",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA-4",
-      "type": "vless",
-      "server": "93.77.188.102",
-      "server_port": 443,
-      "uuid": "2eb1e3e2-34b9-4ca8-864f-9fada68d6c81",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "wde5.whitedeu.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] YA-5",
-      "type": "vless",
-      "server": "bs1.whitehost.org",
       "server_port": 443,
       "uuid": "2eb1e3e2-34b9-4ca8-864f-9fada68d6c81",
       "flow": "xtls-rprx-vision",
