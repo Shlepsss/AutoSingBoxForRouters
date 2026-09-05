@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+        "ð©ðª Germany [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3"
+        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+        "ð©ðª Germany [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+        "ð©ðª Germany [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3"
+        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+        "ð©ðª Germany [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,7 +63,7 @@
     {
       "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "ns.o11111o.club",
+      "server": "82.146.59.128",
       "server_port": 443,
       "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
       "tls": {
@@ -85,51 +85,22 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "ns.o11111o.club",
+      "tag": "ð©ðª Germany [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
       "server_port": 443,
-      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "server_name": "renderer-stream-2-62.mirra.now"
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "ns.o11111o.club",
-      "server_port": 443,
-      "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
@@ -148,9 +119,9 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-3",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "ns.o11111o.club",
+      "server": "82.146.59.128",
       "server_port": 443,
       "uuid": "39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6",
       "tls": {
@@ -163,12 +134,30 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "ð©ðª Germany [*CIDR]-2",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     }
   ],
