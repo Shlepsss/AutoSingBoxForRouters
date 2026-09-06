@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇪 Belgium | 🌐 | [*CIDR]",
-        "🇧🇪 Belgium | 🌐 [*CIDR]",
-        "ð©ðª Germany [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "ð©ðª Germany | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,47 +51,61 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇪 Belgium | 🌐 | [*CIDR]",
-        "🇧🇪 Belgium | 🌐 [*CIDR]",
-        "ð©ðª Germany [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "ð©ðª Germany | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇪 Belgium | 🌐 | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "91.218.230.240",
-      "server_port": 20443,
-      "uuid": "d4719d52-c3fc-4651-98e1-535dbd77dbcf",
+      "server": "game-booster.sowt.app",
+      "server_port": 443,
+      "uuid": "ecf728d9-1555-4e12-b178-1d8bd98465e4",
       "tls": {
         "enabled": true,
+        "server_name": "game-booster.sowt.app",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       },
-      "packet_encoding": "xudp"
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "game-booster.sowt.app"
+        },
+        "path": "/gateway/v1/ws/6d50d81f0b49c137b1564bce4760eaee"
+      }
     },
     {
-      "tag": "🇧🇪 Belgium | 🌐 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
       "type": "vless",
-      "server": "91.218.230.240",
-      "server_port": 20443,
-      "uuid": "d4719d52-c3fc-4651-98e1-535dbd77dbcf",
+      "server": "game-booster.sowt.app",
+      "server_port": 443,
+      "uuid": "ecf728d9-1555-4e12-b178-1d8bd98465e4",
       "tls": {
         "enabled": true,
+        "server_name": "game-booster.sowt.app",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
-      "packet_encoding": "xudp"
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "game-booster.sowt.app"
+        },
+        "path": "/gateway/v1/ws/6d50d81f0b49c137b1564bce4760eaee"
+      }
     },
     {
-      "tag": "ð©ðª Germany [*CIDR]",
+      "tag": "ð©ðª Germany | [*CIDR]",
       "type": "vmess",
       "server": "renderer-stream-2-62.mirra.now",
       "server_port": 443,
@@ -110,45 +124,49 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "flarora.ferreo.sbs",
+      "server": "46.8.208.29",
       "server_port": 443,
-      "uuid": "3db8407b-1f96-4b82-bfeb-55258c1e57b4",
-      "flow": "xtls-rprx-vision",
+      "uuid": "5f922903-69b5-4d99-924d-52ca6337741e",
       "tls": {
         "enabled": true,
-        "server_name": "flarora.ferreo.sbs",
+        "server_name": "cdn.okko.tv",
         "reality": {
           "enabled": true,
-          "public_key": "HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU",
-          "short_id": "1067b23f928e7618"
+          "public_key": "HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis",
+          "short_id": "7765b2a4cef1033e"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "UpdateService"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
       "type": "vless",
-      "server": "flarora.ferreo.sbs",
+      "server": "game-booster.sowt.app",
       "server_port": 443,
-      "uuid": "3db8407b-1f96-4b82-bfeb-55258c1e57b4",
-      "flow": "xtls-rprx-vision",
+      "uuid": "ecf728d9-1555-4e12-b178-1d8bd98465e4",
       "tls": {
         "enabled": true,
-        "server_name": "flarora.ferreo.sbs",
-        "reality": {
-          "enabled": true,
-          "public_key": "HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU",
-          "short_id": "1067b23f928e7618"
-        },
+        "server_name": "game-booster.sowt.app",
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "game-booster.sowt.app"
+        },
+        "path": "/gateway/v1/ws/6d50d81f0b49c137b1564bce4760eaee"
       }
     }
   ],
