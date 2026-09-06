@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4"
+        "🇵🇱 Poland | [*CIDR] YA",
+        "🇵🇱 Poland | [*CIDR] YA-2",
+        "🇵🇱 Poland | [*CIDR] YA-3",
+        "🇵🇱 Poland | [*CIDR] YA-4",
+        "🇵🇱 Poland [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,30 +51,109 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4"
+        "🇵🇱 Poland | [*CIDR] YA",
+        "🇵🇱 Poland | [*CIDR] YA-2",
+        "🇵🇱 Poland | [*CIDR] YA-3",
+        "🇵🇱 Poland | [*CIDR] YA-4",
+        "🇵🇱 Poland [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
+      "tag": "🇵🇱 Poland | [*CIDR] YA",
       "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
+      "server": "84.201.142.221",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
       "tls": {
         "enabled": true,
-        "server_name": "9micenasralnakover.net",
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR] YA-2",
+      "type": "vless",
+      "server": "84.201.142.221",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR] YA-3",
+      "type": "vless",
+      "server": "84.201.142.221",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR] YA-4",
+      "type": "vless",
+      "server": "84.201.142.221",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
       }
     },
     {
@@ -101,90 +178,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "TunService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-      "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-      "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA-2",
-      "type": "vless",
-      "server": "84.201.142.221",
-      "server_port": 33743,
-      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
-      "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     }
   ],

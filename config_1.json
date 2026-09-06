@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇵🇱 Poland | [*CIDR] YA",
+        "🇩🇪 Germany | [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-        "🇩🇪 Germany [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4"
+        "🇫🇮 Finland | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,138 +51,129 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇵🇱 Poland | [*CIDR] YA",
+        "🇩🇪 Germany | [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-        "🇩🇪 Germany [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4"
+        "🇫🇮 Finland | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
+      "server": "79.174.92.85",
+      "server_port": 6443,
+      "uuid": "b7797db2-27fa-4127-a9f7-18ae181a1cb7",
       "tls": {
         "enabled": true,
-        "server_name": "9micenasralnakover.net",
+        "insecure": true,
+        "server_name": "iv.kommersant.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lU1yF2A1b0lM9DZbXWPpLfoU7_KQpXOYX0NFrPEIJy8",
+          "short_id": "bad5722c72a0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.142.221",
+      "server_port": 33743,
+      "uuid": "b3a11068-1a7e-4643-85de-7c82cce46943",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "87.242.95.198",
+      "server_port": 5443,
+      "uuid": "c4854b1a-ec0f-4c5e-940b-f23c8fd39253",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZOhyzm2BZ0OsSTfS_zizRo8TlkXopKsyL48KiR76tj0",
+          "short_id": "6f5648b1673b8042"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     },
     {
       "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "46.8.208.29",
-      "server_port": 443,
-      "uuid": "5f922903-69b5-4d99-924d-52ca6337741e",
+      "server": "87.242.95.198",
+      "server_port": 5443,
+      "uuid": "c4854b1a-ec0f-4c5e-940b-f23c8fd39253",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdn.okko.tv",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis",
-          "short_id": "7765b2a4cef1033e"
+          "public_key": "ZOhyzm2BZ0OsSTfS_zizRo8TlkXopKsyL48KiR76tj0",
+          "short_id": "6f5648b1673b8042"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "UpdateService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-      "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]-2",
-      "type": "vless",
-      "server": "46.8.208.29",
-      "server_port": 443,
-      "uuid": "5f922903-69b5-4d99-924d-52ca6337741e",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.okko.tv",
-        "reality": {
-          "enabled": true,
-          "public_key": "HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis",
-          "short_id": "7765b2a4cef1033e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "UpdateService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
-      "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
-      "type": "vless",
-      "server": "37.18.14.168",
-      "server_port": 2053,
-      "uuid": "1291195a-ec3b-45bf-9381-9e2fce710813",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "79.174.92.85",
+      "server_port": 6443,
+      "uuid": "b7797db2-27fa-4127-a9f7-18ae181a1cb7",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "iv.kommersant.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lU1yF2A1b0lM9DZbXWPpLfoU7_KQpXOYX0NFrPEIJy8",
+          "short_id": "bad5722c72a0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     }
   ],
