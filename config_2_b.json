@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland | 🌐 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR] VK-2",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
         "🇷🇺 Russia | [*CIDR] VK-3",
         "🇷🇺 Russia | [*CIDR] VK-4",
-        "🇷🇺 Russia | [*CIDR] VK-5",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR] VK-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,40 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland | 🌐 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR] VK-2",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
         "🇷🇺 Russia | [*CIDR] VK-3",
         "🇷🇺 Russia | [*CIDR] VK-4",
-        "🇷🇺 Russia | [*CIDR] VK-5",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR] VK-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "79.174.92.85",
-      "server_port": 6443,
-      "uuid": "b7797db2-27fa-4127-a9f7-18ae181a1cb7",
-      "tls": {
-        "enabled": true,
-        "server_name": "iv.kommersant.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "lU1yF2A1b0lM9DZbXWPpLfoU7_KQpXOYX0NFrPEIJy8",
-          "short_id": "bad5722c72a0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR] VK",
@@ -124,7 +100,47 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "46.8.208.29",
+      "server_port": 443,
+      "uuid": "5f922903-69b5-4d99-924d-52ca6337741e",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.okko.tv",
+        "reality": {
+          "enabled": true,
+          "public_key": "HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis",
+          "short_id": "7765b2a4cef1033e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "UpdateService"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "193.233.219.101",
+      "server_port": 443,
+      "uuid": "ba1df575-79a9-4159-ba6e-c9233595c753",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fast_s96.screw.page",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
@@ -144,7 +160,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -164,7 +180,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -185,27 +201,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "robaprik-vafloril.thicketpond.dev",
-      "server_port": 443,
-      "uuid": "6d94a576-3eb3-4f1d-bf88-1ed29b09e9e4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "robaprik-vafloril.thicketpond.dev",
-        "reality": {
-          "enabled": true,
-          "public_key": "f_bFaksQOoVyhloR3wrRvk5tTg10DasjJyyFSkXwMj0",
-          "short_id": "ed48dbbed3cd8468"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     }

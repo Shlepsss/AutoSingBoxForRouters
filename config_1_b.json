@@ -34,12 +34,12 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | [*CIDR]",
         "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR] VK-2",
         "🇷🇺 Russia | [*CIDR] VK-3",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR] VK-4",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR] VK-5"
       ],
       "url": "https://google.com/generate_204",
@@ -53,16 +53,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | [*CIDR]",
         "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR] VK-2",
         "🇷🇺 Russia | [*CIDR] VK-3",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR] VK-4",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR] VK-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "46.8.208.29",
+      "server_port": 443,
+      "uuid": "5f922903-69b5-4d99-924d-52ca6337741e",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.okko.tv",
+        "reality": {
+          "enabled": true,
+          "public_key": "HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis",
+          "short_id": "7765b2a4cef1033e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "UpdateService"
+      }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR] VK",
@@ -100,7 +124,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -120,29 +144,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
       "type": "vless",
-      "server": "robaprik-vafloril.thicketpond.dev",
+      "server": "46.8.208.29",
       "server_port": 443,
-      "uuid": "6d94a576-3eb3-4f1d-bf88-1ed29b09e9e4",
-      "flow": "xtls-rprx-vision",
+      "uuid": "5f922903-69b5-4d99-924d-52ca6337741e",
       "tls": {
         "enabled": true,
-        "server_name": "robaprik-vafloril.thicketpond.dev",
+        "server_name": "cdn.okko.tv",
         "reality": {
           "enabled": true,
-          "public_key": "f_bFaksQOoVyhloR3wrRvk5tTg10DasjJyyFSkXwMj0",
-          "short_id": "ed48dbbed3cd8468"
+          "public_key": "HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis",
+          "short_id": "7765b2a4cef1033e"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "UpdateService"
       }
     },
     {
@@ -161,28 +188,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
-      "type": "vless",
-      "server": "robaprik-vafloril.thicketpond.dev",
-      "server_port": 443,
-      "uuid": "6d94a576-3eb3-4f1d-bf88-1ed29b09e9e4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "robaprik-vafloril.thicketpond.dev",
-        "reality": {
-          "enabled": true,
-          "public_key": "f_bFaksQOoVyhloR3wrRvk5tTg10DasjJyyFSkXwMj0",
-          "short_id": "ed48dbbed3cd8468"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
@@ -202,7 +208,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     }
