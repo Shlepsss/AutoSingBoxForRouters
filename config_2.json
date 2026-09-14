@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]-3",
-        "🇳🇱 The Netherlands | [*CIDR]-4",
-        "🇳🇱 The Netherlands | [*CIDR]-5"
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 🇸🇪 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,76 +51,50 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]-3",
-        "🇳🇱 The Netherlands | [*CIDR]-4",
-        "🇳🇱 The Netherlands | [*CIDR]-5"
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 🇸🇪 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "89.127.197.75",
-      "server_port": 443,
-      "uuid": "3b17070b-6a05-42ae-b584-73b05781aad0",
+      "server": "200.165.234.58",
+      "server_port": 33443,
+      "uuid": "5edbcb44-8d04-4fa7-a587-bc5d60c24ca1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
+        "server_name": "www.cloudflare.com",
         "reality": {
           "enabled": true,
-          "public_key": "K-wTvAPoWqLXkMU1mOIwFxdOgZfiloib93AZKBIoUnQ",
-          "short_id": "6b"
+          "public_key": "n-50yq3nCUyAUZkJw-UEnTaSRjeHUcW0MgOCt5mfAEo",
+          "short_id": "49c5541548d6fb72"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
+      "tag": "🌐 Anycast-IP | 🇫🇷 🇸🇪 | [*CIDR]",
       "type": "vless",
-      "server": "89.127.197.75",
-      "server_port": 443,
-      "uuid": "22723345-4e67-4ac9-a4e6-4435b9a533b7",
+      "server": "212.92.101.117",
+      "server_port": 9894,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
+        "insecure": true,
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "K-wTvAPoWqLXkMU1mOIwFxdOgZfiloib93AZKBIoUnQ",
-          "short_id": "6b"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-3",
-      "type": "vless",
-      "server": "89.127.197.75",
-      "server_port": 443,
-      "uuid": "22723345-4e67-4ac9-a4e6-4435b9a533b7",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "K-wTvAPoWqLXkMU1mOIwFxdOgZfiloib93AZKBIoUnQ",
-          "short_id": "6b"
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
         },
         "utls": {
           "enabled": true,
@@ -129,55 +103,62 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc"
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-4",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]",
       "type": "vless",
-      "server": "89.127.209.89",
+      "server": "31.129.42.37",
       "server_port": 443,
-      "uuid": "3e561346-4319-4c4a-9fc1-1c951c70e02c",
+      "uuid": "d700f864-ab78-4106-b125-d08987556d34",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
+        "server_name": "forward-change.datapull.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇦🇹 Austria | [*CIDR]",
+      "type": "vless",
+      "server": "api.mediakanal.cc",
+      "server_port": 443,
+      "uuid": "d6ec7b6b-6dd8-4868-bdd7-33f821e7d4ba",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.mediakanal.cc",
         "reality": {
           "enabled": true,
-          "public_key": "hbOfuUJeZUi3UfNd9PEasFw9R0aRCt0F5NT5rdNDoTA",
-          "short_id": "00000000"
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-5",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇷 | [*CIDR]-2",
       "type": "vless",
-      "server": "89.127.209.89",
+      "server": "31.129.42.37",
       "server_port": 443,
-      "uuid": "3e561346-4319-4c4a-9fc1-1c951c70e02c",
+      "uuid": "d700f864-ab78-4106-b125-d08987556d34",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "hbOfuUJeZUi3UfNd9PEasFw9R0aRCt0F5NT5rdNDoTA",
-          "short_id": "00000000"
-        },
+        "server_name": "forward-change.datapull.cc",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     }
   ],
