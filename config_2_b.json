@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2"
+        "ð©ðª Germany | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +53,46 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2"
+        "ð©ðª Germany | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇱🇹 Lithuania | [*CIDR]",
       "type": "vless",
-      "server": "46.254.18.27",
+      "server": "78.24.92.27",
       "server_port": 443,
-      "uuid": "d0f0a880-0df1-0002-bdf1-5669fb9483ce",
+      "uuid": "e8002f83-f46a-40d8-9b36-ff982f029488",
+      "tls": {
+        "enabled": true,
+        "server_name": "lt26.cdnfern.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "46.149.68.140",
+      "server_port": 443,
+      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "video.flyflyfly.uk",
         "reality": {
           "enabled": true,
-          "public_key": "Sx6bJWPbDlwuMfKjcz-sUyJxZkuks4uLqqLa-1uyjH4",
-          "short_id": ""
+          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
+          "short_id": "92ba94c503e65638"
         },
         "utls": {
           "enabled": true,
@@ -88,12 +108,7 @@
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
       "security": "auto",
       "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-2-62.mirra.now",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "enabled": true
       },
       "transport": {
         "type": "ws",
@@ -104,36 +119,38 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "vless",
-      "server": "lt26.cdnfern.org",
+      "tag": "ð©ðª Germany | [*CIDR]-2",
+      "type": "vmess",
+      "server": "2.27.54.132",
       "server_port": 443,
-      "uuid": "e8002f83-f46a-40d8-9b36-ff982f029488",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "lt26.cdnfern.org",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "46.254.18.27",
+      "server": "46.149.68.140",
       "server_port": 443,
-      "uuid": "d0f0a880-0df1-0003-bdf1-5669fb9483ce",
+      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "video.flyflyfly.uk",
         "reality": {
           "enabled": true,
-          "public_key": "Sx6bJWPbDlwuMfKjcz-sUyJxZkuks4uLqqLa-1uyjH4",
-          "short_id": ""
+          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
+          "short_id": "92ba94c503e65638"
         },
         "utls": {
           "enabled": true,
@@ -142,22 +159,44 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "46.254.18.27",
+      "server": "46.149.68.140",
       "server_port": 443,
-      "uuid": "d0f0a880-0df1-0003-bdf1-5669fb9483ce",
+      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "video.flyflyfly.uk",
         "reality": {
           "enabled": true,
-          "public_key": "Sx6bJWPbDlwuMfKjcz-sUyJxZkuks4uLqqLa-1uyjH4",
-          "short_id": ""
+          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
+          "short_id": "92ba94c503e65638"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "vless",
+      "server": "46.149.68.140",
+      "server_port": 443,
+      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "video.flyflyfly.uk",
+        "reality": {
+          "enabled": true,
+          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
+          "short_id": "92ba94c503e65638"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }
