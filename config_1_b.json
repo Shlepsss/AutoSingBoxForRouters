@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
+        "ð©ðª Germany | [*CIDR]-2",
+        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-3",
+        "ð©ðª Germany | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,61 +51,50 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
+        "ð©ðª Germany | [*CIDR]-2",
+        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-3",
+        "ð©ðª Germany | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "188.120.244.51",
+      "tag": "ð©ðª Germany | [*CIDR]",
+      "type": "vmess",
+      "server": "5.188.26.85",
       "server_port": 443,
-      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "server_name": "renderer-stream-2-62.mirra.now"
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "188.120.244.51",
+      "tag": "ð©ðª Germany | [*CIDR]-2",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
       "server_port": 443,
-      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "enabled": true
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
@@ -124,9 +113,9 @@
       }
     },
     {
-      "tag": "ð©ðª Germany | [*CIDR]",
+      "tag": "ð©ðª Germany | [*CIDR]-3",
       "type": "vmess",
-      "server": "2.27.54.132",
+      "server": "5.188.26.85",
       "server_port": 443,
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
       "security": "auto",
@@ -143,27 +132,22 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "188.120.244.57",
+      "tag": "ð©ðª Germany | [*CIDR]-4",
+      "type": "vmess",
+      "server": "5.188.26.85",
       "server_port": 443,
-      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "server_name": "renderer-stream-2-62.mirra.now"
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     }
   ],
