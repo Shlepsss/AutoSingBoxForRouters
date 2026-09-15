@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇱🇹 Lithuania | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,31 +51,56 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇱🇹 Lithuania | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania | [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "lt26.cdnfern.org",
+      "server": "46.254.18.27",
       "server_port": 443,
-      "uuid": "e8002f83-f46a-40d8-9b36-ff982f029488",
+      "uuid": "d0f0a880-0df1-0002-bdf1-5669fb9483ce",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "lt26.cdnfern.org",
-        "alpn": [
-          "h2"
-        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "Sx6bJWPbDlwuMfKjcz-sUyJxZkuks4uLqqLa-1uyjH4",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
+      }
+    },
+    {
+      "tag": "ð©ðª Germany | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
@@ -97,65 +122,42 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania | [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "lt26.cdnfern.org",
+      "server": "46.254.18.27",
       "server_port": 443,
-      "uuid": "e8002f83-f46a-40d8-9b36-ff982f029488",
+      "uuid": "d0f0a880-0df1-0003-bdf1-5669fb9483ce",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "lt26.cdnfern.org",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
+        "reality": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "ð©ðª Germany | [*CIDR]",
-      "type": "vmess",
-      "server": "renderer-stream-2-62.mirra.now",
-      "server_port": 443,
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-2-62.mirra.now",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
+          "public_key": "Sx6bJWPbDlwuMfKjcz-sUyJxZkuks4uLqqLa-1uyjH4",
+          "short_id": ""
         },
-        "path": "/api/v1/gpu-stream/socket"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
       "type": "vless",
-      "server": "lt26.cdnfern.org",
+      "server": "46.254.18.27",
       "server_port": 443,
-      "uuid": "e8002f83-f46a-40d8-9b36-ff982f029488",
+      "uuid": "d0f0a880-0df1-0003-bdf1-5669fb9483ce",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "lt26.cdnfern.org",
-        "alpn": [
-          "h2"
-        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "Sx6bJWPbDlwuMfKjcz-sUyJxZkuks4uLqqLa-1uyjH4",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       }
     }
