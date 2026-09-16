@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-5",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-6",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-7"
+        "ð©ðª Germany | [*CIDR]",
+        "🇨🇭 Switzerland | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-2",
+        "ð©ðª Germany | [*CIDR]-3",
+        "🇸🇪 Sweden | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,235 +51,118 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-5",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-6",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-7"
+        "ð©ðª Germany | [*CIDR]",
+        "🇨🇭 Switzerland | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-2",
+        "ð©ðª Germany | [*CIDR]-3",
+        "🇸🇪 Sweden | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "trojan",
-      "server": "193.233.221.96",
-      "server_port": 448,
-      "password": "6fY77UmuJ6BEK7n0qv433JrPNjCMeZQV",
+      "tag": "ð©ðª Germany | [*CIDR]",
+      "type": "vmess",
+      "server": "5.188.26.85",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "idinah1.ookcdn.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "server_name": "renderer-stream-2-62.mirra.now"
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "TrojanGRPC"
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "tag": "🇨🇭 Switzerland | [*CIDR]",
       "type": "vless",
-      "server": "193.233.216.110",
-      "server_port": 443,
-      "uuid": "66533c62-42a2-4507-8c55-2f87d49672f9",
+      "server": "185.151.240.3",
+      "server_port": 9882,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "fuckyourmather.ookcdn.ru",
+        "insecure": true,
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "4ltYIatUJFFjrW8ZBDGLJaun0BnYIgxn-jmpmTEDGyc",
-          "short_id": ""
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "193.17.92.57",
-      "server_port": 2053,
-      "uuid": "1cbb3702-b434-45cf-8520-3e32d860fd83",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "G7VlRXdpKKaZ_33pA0Zsii70uiYkeoBiVYgAD_tL_28",
-          "short_id": "76f9d74c385ae618"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-fd03cd54"
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "trojan",
-      "server": "193.233.221.96",
-      "server_port": 448,
-      "password": "6fY77UmuJ6BEK7n0qv433JrPNjCMeZQV",
+      "tag": "ð©ðª Germany | [*CIDR]-2",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "idinah1.ookcdn.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TrojanGRPC"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "193.17.92.57",
-      "server_port": 2053,
-      "uuid": "1cbb3702-b434-45cf-8520-3e32d860fd83",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "G7VlRXdpKKaZ_33pA0Zsii70uiYkeoBiVYgAD_tL_28",
-          "short_id": "76f9d74c385ae618"
-        },
+        "server_name": "renderer-stream-2-62.mirra.now",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-fd03cd54"
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-      "type": "vless",
-      "server": "193.17.92.57",
-      "server_port": 2053,
-      "uuid": "1cbb3702-b434-45cf-8520-3e32d860fd83",
+      "tag": "ð©ðª Germany | [*CIDR]-3",
+      "type": "vmess",
+      "server": "194.226.142.120",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "vk.com",
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "type": "vless",
+      "server": "5.129.198.223",
+      "server_port": 443,
+      "uuid": "57ae2ef6-2aef-0002-b0c1-b8c9d4dfc233",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn-tw-msk-mishka.attention-game.ru",
         "reality": {
           "enabled": true,
-          "public_key": "G7VlRXdpKKaZ_33pA0Zsii70uiYkeoBiVYgAD_tL_28",
-          "short_id": "76f9d74c385ae618"
+          "public_key": "MiyOBOmkjV9uSx-oM1Aoq9JgIXKjAgvXceTNgSeBvRk",
+          "short_id": "d8c870848236fa69"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-fd03cd54"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
-      "type": "trojan",
-      "server": "193.233.221.96",
-      "server_port": 448,
-      "password": "6fY77UmuJ6BEK7n0qv433JrPNjCMeZQV",
-      "tls": {
-        "enabled": true,
-        "server_name": "idinah1.ookcdn.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TrojanGRPC"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-5",
-      "type": "vless",
-      "server": "193.233.216.110",
-      "server_port": 443,
-      "uuid": "66533c62-42a2-4507-8c55-2f87d49672f9",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuckyourmather.ookcdn.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "4ltYIatUJFFjrW8ZBDGLJaun0BnYIgxn-jmpmTEDGyc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-6",
-      "type": "vless",
-      "server": "193.233.216.110",
-      "server_port": 443,
-      "uuid": "66533c62-42a2-4507-8c55-2f87d49672f9",
-      "tls": {
-        "enabled": true,
-        "server_name": "fuckyourmather.ookcdn.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "4ltYIatUJFFjrW8ZBDGLJaun0BnYIgxn-jmpmTEDGyc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-7",
-      "type": "vless",
-      "server": "193.233.221.96",
-      "server_port": 443,
-      "uuid": "66533c62-42a2-4507-8c55-2f87d49672f9",
-      "tls": {
-        "enabled": true,
-        "server_name": "idinah1.ookcdn.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "4ltYIatUJFFjrW8ZBDGLJaun0BnYIgxn-jmpmTEDGyc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       }
     }
