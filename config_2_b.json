@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "ð©ðª Germany | [*CIDR]",
-        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
-        "🇮🇹 Italy | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 🇸🇪 | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]"
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
+        "ð©ðª Germany [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,42 +51,52 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "ð©ðª Germany | [*CIDR]",
-        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
-        "🇮🇹 Italy | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 🇸🇪 | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]"
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
+        "ð©ðª Germany [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "ð©ðª Germany | [*CIDR]",
-      "type": "vmess",
-      "server": "renderer-stream-2-62.mirra.now",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "89.23.113.175",
       "server_port": 443,
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
-      "security": "auto",
+      "uuid": "33a1a0e1-7dd1-414b-9751-901aeb44ae7d",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-2-62.mirra.now",
+        "server_name": "ru4.lebedvpn.cc",
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania | [*CIDR]",
+      "type": "vless",
+      "server": "78.24.92.27",
+      "server_port": 443,
+      "uuid": "e8002f83-f46a-40d8-9b36-ff982f029488",
+      "tls": {
+        "enabled": true,
+        "server_name": "lt26.cdnfern.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
-      "tag": "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
+      "tag": "ð©ðª Germany [*CIDR]",
       "type": "vmess",
-      "server": "renderer-stream-2-62.mirra.now",
+      "server": "5.188.26.85",
       "server_port": 443,
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
       "security": "auto",
@@ -103,65 +113,46 @@
       }
     },
     {
-      "tag": "🇮🇹 Italy | 🌐 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
       "type": "vless",
-      "server": "45.8.228.167",
-      "server_port": 443,
-      "uuid": "953358cb-82ba-4296-960d-6d2ec3468f4c",
+      "server": "147.45.99.167",
+      "server_port": 8443,
+      "uuid": "2cbf425a-aed6-4c8f-937f-6265ed13a7fa",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "bl3fk52.sysopnova.art",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "n7Eivi9aG8PMxvaP5flLiukPADZIDVuzyOsOWDG43kQ",
-          "short_id": "5eca"
+          "public_key": "lTTnrnB1lIjBGQX0JbAxzAumoNsqt33EXhIrOQl8eno",
+          "short_id": "1a2b6a1b5c0e"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇸🇪 | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇺 | [*CIDR]",
       "type": "vless",
-      "server": "in4.linestring.ru",
+      "server": "186.246.10.40",
       "server_port": 443,
-      "uuid": "901cb0b0-0185-4983-b42a-67c431fa2f10",
-      "flow": "xtls-rprx-vision",
+      "uuid": "86ea1e85-b95d-4afd-b28f-b41831d56665",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "eWZTT3b4Xa0dYUdW52WtF1n8w3-AS4EHcaettRRa_0Q",
-          "short_id": "5f96c103e5734528"
-        },
+        "server_name": "cdn.dachniy-vopros.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "drippyhalfended.quarrybindery.live",
-      "server_port": 443,
-      "uuid": "2b3e2665-881a-437b-9f8f-0d043d3c5804",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "drippyhalfended.quarrybindery.live",
-        "reality": {
-          "enabled": true,
-          "public_key": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
-          "short_id": "9698d67e63bc8ee0"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cdn.dachniy-vopros.org"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "path": "/home"
       }
     }
   ],
