@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🌐 Anycast-IP | 🇳🇱 🇸🇪 [*CIDR]",
-        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
-        "ð©ðª Germany | [*CIDR]"
+        "ð©ðª Germany | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🌐 Anycast-IP | 🇳🇱 🇸🇪 [*CIDR]",
-        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
-        "ð©ðª Germany | [*CIDR]"
+        "ð©ðª Germany | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "78.24.217.216",
-      "server_port": 443,
-      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
     },
     {
       "tag": "🌐 Anycast-IP | 🇳🇱 🇸🇪 [*CIDR]",
@@ -98,14 +74,37 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
+      "tag": "ð©ðª Germany | [*CIDR]",
       "type": "vmess",
-      "server": "2.27.54.132",
+      "server": "renderer-stream-2-62.mirra.now",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "ð©ðª Germany | [*CIDR]-2",
+      "type": "vmess",
+      "server": "194.226.142.120",
       "server_port": 443,
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
       "security": "auto",
@@ -122,19 +121,18 @@
       }
     },
     {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
       "type": "vless",
-      "server": "185.151.240.3",
-      "server_port": 9882,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "188.124.36.63",
+      "server_port": 443,
+      "uuid": "208a5dda-5f5e-47e8-8f22-8db77e00ab1b",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "dl.google.com",
+        "server_name": "ultimate.warriorofblacksun.run",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
+          "public_key": "Ww_HS9_n7ob3uESSXtbU23EPM-BOJ5ZYLp-RFB0L0SY",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -143,26 +141,31 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "xyz"
       }
     },
     {
-      "tag": "ð©ðª Germany | [*CIDR]",
-      "type": "vmess",
-      "server": "195.19.20.80",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "ns.o11111o.club",
       "server_port": 443,
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
-      "security": "auto",
+      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-2-62.mirra.now"
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     }
   ],
