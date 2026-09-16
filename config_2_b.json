@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "ð©ðª Germany | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
+        "🇮🇹 Italy | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇬🇧 🇸🇪 | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,52 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "ð©ðª Germany | [*CIDR]",
-        "ð©ðª Germany | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
+        "🇮🇹 Italy | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇬🇧 🇸🇪 | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇱🇹 Lithuania | [*CIDR]",
-      "type": "vless",
-      "server": "78.24.92.27",
-      "server_port": 443,
-      "uuid": "e8002f83-f46a-40d8-9b36-ff982f029488",
-      "tls": {
-        "enabled": true,
-        "server_name": "lt26.cdnfern.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "46.149.68.140",
-      "server_port": 443,
-      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "video.flyflyfly.uk",
-        "reality": {
-          "enabled": true,
-          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
-          "short_id": "92ba94c503e65638"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
     },
     {
       "tag": "ð©ðª Germany | [*CIDR]",
@@ -108,7 +68,12 @@
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
       "security": "auto",
       "tls": {
-        "enabled": true
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
@@ -119,9 +84,9 @@
       }
     },
     {
-      "tag": "ð©ðª Germany | [*CIDR]-2",
+      "tag": "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
       "type": "vmess",
-      "server": "2.27.54.132",
+      "server": "renderer-stream-2-62.mirra.now",
       "server_port": 443,
       "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
       "security": "auto",
@@ -138,65 +103,64 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇮🇹 Italy | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "46.149.68.140",
+      "server": "45.8.228.167",
       "server_port": 443,
-      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
-      "flow": "xtls-rprx-vision",
+      "uuid": "953358cb-82ba-4296-960d-6d2ec3468f4c",
       "tls": {
         "enabled": true,
-        "server_name": "video.flyflyfly.uk",
+        "server_name": "bl3fk52.sysopnova.art",
         "reality": {
           "enabled": true,
-          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
-          "short_id": "92ba94c503e65638"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "46.149.68.140",
-      "server_port": 443,
-      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "video.flyflyfly.uk",
-        "reality": {
-          "enabled": true,
-          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
-          "short_id": "92ba94c503e65638"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "46.149.68.140",
-      "server_port": 443,
-      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "video.flyflyfly.uk",
-        "reality": {
-          "enabled": true,
-          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
-          "short_id": "92ba94c503e65638"
+          "public_key": "n7Eivi9aG8PMxvaP5flLiukPADZIDVuzyOsOWDG43kQ",
+          "short_id": "5eca"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇸🇪 | [*CIDR]",
+      "type": "vless",
+      "server": "in4.linestring.ru",
+      "server_port": 443,
+      "uuid": "901cb0b0-0185-4983-b42a-67c431fa2f10",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "eWZTT3b4Xa0dYUdW52WtF1n8w3-AS4EHcaettRRa_0Q",
+          "short_id": "5f96c103e5734528"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "drippyhalfended.quarrybindery.live",
+      "server_port": 443,
+      "uuid": "2b3e2665-881a-437b-9f8f-0d043d3c5804",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "drippyhalfended.quarrybindery.live",
+        "reality": {
+          "enabled": true,
+          "public_key": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
+          "short_id": "9698d67e63bc8ee0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

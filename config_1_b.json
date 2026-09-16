@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3"
+        "ð©ðª Germany | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇳🇱 🇸🇪 | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-3",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,29 +51,67 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3"
+        "ð©ðª Germany | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇳🇱 🇸🇪 | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]-3",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "46.149.68.140",
+      "tag": "ð©ðª Germany | [*CIDR]",
+      "type": "vmess",
+      "server": "5.188.26.85",
       "server_port": 443,
-      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "ð©ðª Germany | [*CIDR]-2",
+      "type": "vmess",
+      "server": "195.19.20.80",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇸🇪 | [*CIDR]",
+      "type": "vless",
+      "server": "msk.linestring.ru",
+      "server_port": 443,
+      "uuid": "901cb0b0-0185-4983-b42a-67c431fa2f10",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "video.flyflyfly.uk",
+        "server_name": "storage.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
-          "short_id": "92ba94c503e65638"
+          "public_key": "XNRqBVhMN7DRE0OnISDpLpIr2x7V6reBNg1BdBPP8jk",
+          "short_id": "29680d77"
         },
         "utls": {
           "enabled": true,
@@ -82,80 +120,42 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "89.23.113.175",
+      "tag": "ð©ðª Germany | [*CIDR]-3",
+      "type": "vmess",
+      "server": "194.226.142.120",
       "server_port": 443,
-      "uuid": "33a1a0e1-7dd1-414b-9751-901aeb44ae7d",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "ru4.lebedvpn.cc",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "46.149.68.140",
-      "server_port": 443,
-      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "video.flyflyfly.uk",
-        "reality": {
-          "enabled": true,
-          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
-          "short_id": "92ba94c503e65638"
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
       "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "89.23.113.175",
+      "server": "drippyhalfended.quarrybindery.live",
       "server_port": 443,
-      "uuid": "33a1a0e1-7dd1-414b-9751-901aeb44ae7d",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru4.lebedvpn.cc",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "46.149.68.140",
-      "server_port": 443,
-      "uuid": "6042aecb-c19b-4ebc-a3c7-0bad5fbfe01a",
+      "uuid": "2b3e2665-881a-437b-9f8f-0d043d3c5804",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "video.flyflyfly.uk",
+        "server_name": "drippyhalfended.quarrybindery.live",
         "reality": {
           "enabled": true,
-          "public_key": "hJAFs0uE6ALPK_hCctGQo1DbV6OYt2Yc40Mz_Y8VNVc",
-          "short_id": "92ba94c503e65638"
+          "public_key": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
+          "short_id": "9698d67e63bc8ee0"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     }
