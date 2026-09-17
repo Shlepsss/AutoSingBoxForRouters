@@ -35,10 +35,13 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]",
+        "🌐 Anycast-IP | 🇳🇱 [*CIDR] YA",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
@@ -54,10 +57,13 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]",
+        "🌐 Anycast-IP | 🇳🇱 [*CIDR] YA",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
@@ -67,17 +73,37 @@
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "ru.datanode-internal.net",
+      "server": "ru1-edge.safe-connect.info",
       "server_port": 443,
-      "uuid": "212fe317-771e-458e-af13-7dd2ef11c1d8",
+      "uuid": "24f8cbc6-6bf6-4109-8909-930d484ee9e0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "openwrt.lan",
+        "server_name": "ru1-edge.safe-connect.info",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "212.22.82.161",
+      "server_port": 443,
+      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "4pda.to",
         "reality": {
           "enabled": true,
-          "public_key": "r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic",
-          "short_id": "abbcd128"
+          "public_key": "Xc95lL4UwhmjfzVYVhjI6vsggebLevdc2KN1LpGfYl4",
+          "short_id": "6ba85179e30d4fc2"
         },
         "utls": {
           "enabled": true,
@@ -86,108 +112,104 @@
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR]",
-      "type": "vless",
-      "server": "5.129.198.223",
-      "server_port": 443,
-      "uuid": "57ae2ef6-2aef-0002-b0c1-b8c9d4dfc233",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn-tw-msk-mishka.attention-game.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "MiyOBOmkjV9uSx-oM1Aoq9JgIXKjAgvXceTNgSeBvRk",
-          "short_id": "d8c870848236fa69"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "ru.datanode-internal.net",
+      "server": "ru1-edge.safe-connect.info",
       "server_port": 443,
-      "uuid": "212fe317-771e-458e-af13-7dd2ef11c1d8",
+      "uuid": "24f8cbc6-6bf6-4109-8909-930d484ee9e0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "openwrt.lan",
-        "reality": {
-          "enabled": true,
-          "public_key": "r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic",
-          "short_id": "abbcd128"
-        },
+        "server_name": "ru1-edge.safe-connect.info",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "104.171.133.61",
-      "server_port": 24443,
+      "server": "212.22.82.161",
+      "server_port": 443,
+      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "4pda.to",
+        "reality": {
+          "enabled": true,
+          "public_key": "Xc95lL4UwhmjfzVYVhjI6vsggebLevdc2KN1LpGfYl4",
+          "short_id": "6ba85179e30d4fc2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "94.198.217.201",
+      "server_port": 22443,
       "uuid": "66ac188b-bd8d-4218-b9ba-0bad0e152cd0",
       "tls": {
         "enabled": true,
         "server_name": "www.cloudflare.com",
         "reality": {
           "enabled": true,
-          "public_key": "s2uiu3GQA2SlZzsr86Z5Dav97eAFTPf7Nvr-zqzzRgg",
-          "short_id": "72ccd4a7563c2953"
+          "public_key": "V8llhEcbGI7Zqf52Ec0kryrdRv7lvLcKCjHe1Di23yw",
+          "short_id": "fdf9d63fcdd6be6a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "9d30d49278"
+        "service_name": "f234981844"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇮 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "82.146.56.149",
+      "server": "51.250.106.197",
       "server_port": 443,
-      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
+      "uuid": "06ec3898-f952-52a5-8547-51ae1e6f0a62",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "public_key": "LGSiGIQDFwB3IgQw8IBEsI5qfQoPQRSeUZWofnEu00U",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "ru.datanode-internal.net",
+      "server": "212.22.82.161",
       "server_port": 443,
-      "uuid": "212fe317-771e-458e-af13-7dd2ef11c1d8",
+      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "openwrt.lan",
+        "server_name": "4pda.to",
         "reality": {
           "enabled": true,
-          "public_key": "r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic",
-          "short_id": "abbcd128"
+          "public_key": "Xc95lL4UwhmjfzVYVhjI6vsggebLevdc2KN1LpGfYl4",
+          "short_id": "6ba85179e30d4fc2"
         },
         "utls": {
           "enabled": true,
@@ -196,20 +218,60 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
       "type": "vless",
-      "server": "ru.datanode-internal.net",
+      "server": "212.22.82.161",
       "server_port": 443,
-      "uuid": "212fe317-771e-458e-af13-7dd2ef11c1d8",
+      "uuid": "57e2a48b-0cc2-4b60-aacd-b36358fcba96",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "openwrt.lan",
+        "server_name": "4pda.to",
         "reality": {
           "enabled": true,
-          "public_key": "r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic",
-          "short_id": "abbcd128"
+          "public_key": "Xc95lL4UwhmjfzVYVhjI6vsggebLevdc2KN1LpGfYl4",
+          "short_id": "6ba85179e30d4fc2"
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "ru1-edge.safe-connect.info",
+      "server_port": 443,
+      "uuid": "24f8cbc6-6bf6-4109-8909-930d484ee9e0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1-edge.safe-connect.info",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "type": "vless",
+      "server": "ru1-edge.safe-connect.info",
+      "server_port": 443,
+      "uuid": "24f8cbc6-6bf6-4109-8909-930d484ee9e0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1-edge.safe-connect.info",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
