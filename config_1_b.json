@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇳🇱 🇸🇪 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [*CIDR]",
+        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,55 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇳🇱 🇸🇪 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [*CIDR]",
+        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇳🇱 🇸🇪 [*CIDR]",
-      "type": "vless",
-      "server": "31.76.34.100",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "type": "trojan",
+      "server": "194.55.239.108",
       "server_port": 443,
-      "uuid": "3d53970b-419b-4a27-87b5-e9c99bb02eca",
-      "flow": "xtls-rprx-vision",
+      "password": "eZwp12tXna8-s_ysszXnXq25rv1c8w",
       "tls": {
         "enabled": true,
-        "server_name": "cdn3.ndprotected.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "nY7HQ2YzzXRZd2PJgWS7mPKG-5iXuIBIEl_V-OXmg0c",
-          "short_id": ""
-        },
+        "server_name": "api-v2.captaingold.app",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
+      "type": "vmess",
+      "server": "194.226.142.120",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
       "type": "trojan",
       "server": "37.9.4.182",
       "server_port": 8443,
@@ -96,73 +113,47 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇷🇺 | [*CIDR]",
       "type": "vless",
-      "server": "n2.fiprotected.com",
+      "server": "runode.protectednetwork.shop",
       "server_port": 443,
       "uuid": "3d53970b-419b-4a27-87b5-e9c99bb02eca",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdn2.fiprotected.com",
+        "server_name": "rucdn.protectednetwork.shop",
         "reality": {
           "enabled": true,
-          "public_key": "XBx1PANE_LKfrCRVCsu1LDwd2kywg7iDHW9tYEf2SQ0",
+          "public_key": "qQ5v62tCMmdAXvcrfWj9e4pm732FGnWnjTomgwBYXwU",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
-      "type": "trojan",
-      "server": "194.55.239.121",
-      "server_port": 8443,
-      "password": "eZwp12tXna8-s_ysszXnXq25rv1c8w",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-v2.captaingold.app",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | [*CIDR]",
-      "type": "vless",
-      "server": "oblako2.thewalkingded.life",
+      "tag": "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]-2",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
       "server_port": 443,
-      "uuid": "fcbc0571-7b14-4699-830e-11cf3aa0ad6b",
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
-        "enabled": true,
-        "server_name": "oblako2.thewalkingded.life",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "enabled": true
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "oblako2.thewalkingded.life"
+          "Host": "renderer-stream-2-62.mirra.now"
         },
-        "path": "/wsline"
+        "path": "/api/v1/gpu-stream/socket"
       }
     }
   ],
