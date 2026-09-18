@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 Sweden | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇬🇧 [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇳🇱 The Netherlands | [*CIDR] YA"
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,115 +53,85 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 Sweden | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
+        "ð©ðª Germany | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇬🇧 [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇳🇱 The Netherlands | [*CIDR] YA"
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "31.184.219.147",
-      "server_port": 9872,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "lesotorg-kirov.ru",
+      "server_port": 443,
+      "uuid": "d8fb1abe-20b1-46ce-9b5b-f9bf12c74631",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc",
-          "short_id": ""
-        },
+        "server_name": "lesotorg-kirov.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "type": "ws",
+        "headers": {
+          "Host": "lesotorg-kirov.ru"
+        },
+        "path": "/lkws"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "201.24.63.129",
-      "server_port": 8443,
-      "uuid": "f6bc1dde-140f-4314-addd-15d2782247b9",
+      "tag": "ð©ðª Germany | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-2-62.mirra.now",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
       "tls": {
-        "enabled": true,
-        "server_name": "play-apps-features.googleusercontent.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "gNJZix6GHGuB246_yD6n0EQQY-6Vb1zXg3ipjnubawE",
-          "short_id": "4aeb24f2a87c8f8f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "201.24.63.129",
-      "server_port": 8443,
-      "uuid": "f6bc1dde-140f-4314-addd-15d2782247b9",
+      "server": "lesotorg-kirov.ru",
+      "server_port": 443,
+      "uuid": "d8fb1abe-20b1-46ce-9b5b-f9bf12c74631",
       "tls": {
         "enabled": true,
-        "server_name": "play-apps-features.googleusercontent.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "gNJZix6GHGuB246_yD6n0EQQY-6Vb1zXg3ipjnubawE",
-          "short_id": "4aeb24f2a87c8f8f"
-        },
+        "server_name": "lesotorg-kirov.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lesotorg-kirov.ru"
+        },
+        "path": "/lkws"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🌐 Anycast-IP | 🇬🇧 [*CIDR] YA",
       "type": "vless",
-      "server": "201.24.63.129",
-      "server_port": 8443,
-      "uuid": "f6bc1dde-140f-4314-addd-15d2782247b9",
+      "server": "relay.funtime.best",
+      "server_port": 2096,
+      "uuid": "63502f61-5e8b-4100-8826-868856e78c53",
       "tls": {
         "enabled": true,
-        "server_name": "play-apps-features.googleusercontent.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "gNJZix6GHGuB246_yD6n0EQQY-6Vb1zXg3ipjnubawE",
-          "short_id": "4aeb24f2a87c8f8f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "201.24.63.129",
-      "server_port": 8443,
-      "uuid": "f6bc1dde-140f-4314-addd-15d2782247b9",
-      "tls": {
-        "enabled": true,
-        "server_name": "play-apps-features.googleusercontent.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "gNJZix6GHGuB246_yD6n0EQQY-6Vb1zXg3ipjnubawE",
-          "short_id": "4aeb24f2a87c8f8f"
-        },
+        "server_name": "relay.funtime.best",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -169,46 +139,69 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "201.24.63.129",
-      "server_port": 8443,
-      "uuid": "f6bc1dde-140f-4314-addd-15d2782247b9",
+      "server": "lesotorg-kirov.ru",
+      "server_port": 443,
+      "uuid": "d8fb1abe-20b1-46ce-9b5b-f9bf12c74631",
       "tls": {
         "enabled": true,
-        "server_name": "play-apps-features.googleusercontent.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "gNJZix6GHGuB246_yD6n0EQQY-6Vb1zXg3ipjnubawE",
-          "short_id": "4aeb24f2a87c8f8f"
-        },
+        "server_name": "lesotorg-kirov.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lesotorg-kirov.ru"
+        },
+        "path": "/lkws"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
       "type": "vless",
-      "server": "51.250.106.197",
+      "server": "lesotorg-kirov.ru",
       "server_port": 443,
-      "uuid": "Fluffy_VPN-Oth8rOq3",
+      "uuid": "d8fb1abe-20b1-46ce-9b5b-f9bf12c74631",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "alpn": [
-          "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
-        ],
-        "reality": {
-          "enabled": true,
-          "public_key": "LGSiGIQDFwB3IgQw8IBEsI5qfQoPQRSeUZWofnEu00U",
-          "short_id": ""
-        },
+        "server_name": "lesotorg-kirov.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lesotorg-kirov.ru"
+        },
+        "path": "/lkws"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "type": "vless",
+      "server": "lesotorg-kirov.ru",
+      "server_port": 443,
+      "uuid": "d8fb1abe-20b1-46ce-9b5b-f9bf12c74631",
+      "tls": {
+        "enabled": true,
+        "server_name": "lesotorg-kirov.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lesotorg-kirov.ru"
+        },
+        "path": "/lkws"
       }
     }
   ],
