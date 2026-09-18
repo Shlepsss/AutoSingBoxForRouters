@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇳🇱 [*CIDR] YA",
-        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
-        "🇰🇿 Kazakhstan | [*CIDR]"
+        "ð©ðª Germany | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,60 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇳🇱 [*CIDR] YA",
-        "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
-        "🇰🇿 Kazakhstan | [*CIDR]"
+        "ð©ðª Germany | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
+      "tag": "ð©ðª Germany | [*CIDR]",
+      "type": "vmess",
+      "server": "194.226.142.120",
+      "server_port": 443,
+      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-2-62.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-2-62.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "82.146.56.45",
+      "server": "193.233.91.200",
+      "server_port": 443,
+      "uuid": "17f6daad-7238-4c23-99f6-c01e09c83dde",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "cdn.callibri.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "yCKV2xr725jI0sFhm4KbttKl8b9UZrnQTXxZLN2S4BM",
+          "short_id": "f267"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇪 [*CIDR]",
+      "type": "vless",
+      "server": "82.146.57.228",
       "server_port": 443,
       "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
       "tls": {
@@ -85,86 +126,42 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "82.146.56.45",
+      "server": "193.233.91.200",
       "server_port": 443,
-      "uuid": "b1b3e430-ff52-44b8-b95d-27fa580fbc4f",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇳🇱 [*CIDR] YA",
-      "type": "vless",
-      "server": "relay.funtime.best",
-      "server_port": 2015,
-      "uuid": "0a0667bd-1bdb-4555-a4a6-6903623fc804",
+      "uuid": "0cd84588-2ad1-4c69-ab82-1d3f93d5faa8",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "insecure": true,
+        "server_name": "cdn.callibri.ru",
         "reality": {
           "enabled": true,
-          "public_key": "HnO7i6WBCj_5_km3TtotQJa76TbOVq1HuFhhqKVtr3U",
-          "short_id": "e787c66988b14914"
+          "public_key": "yCKV2xr725jI0sFhm4KbttKl8b9UZrnQTXxZLN2S4BM",
+          "short_id": "2f86"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "ð Anycast-IP | ð©ðª ð¸ðª | [*CIDR]",
-      "type": "vmess",
-      "server": "renderer-stream-2-62.mirra.now",
-      "server_port": 443,
-      "uuid": "db50a20e-7ff5-4e70-948f-17cc9ca7c154",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-2-62.mirra.now",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-2-62.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇰🇿 Kazakhstan | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "62.233.39.9",
+      "server": "193.233.91.200",
       "server_port": 443,
-      "uuid": "b2141c97-76af-ff6f-839b-70a53e23aad9",
+      "uuid": "0cd84588-2ad1-4c69-ab82-1d3f93d5faa8",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.dell.com",
+        "insecure": true,
+        "server_name": "cdn.callibri.ru",
         "reality": {
           "enabled": true,
-          "public_key": "oHaUPZiESTQQ89DMd4uIcPWgsyeFFy58iZYX_8mbvWk",
-          "short_id": ""
+          "public_key": "yCKV2xr725jI0sFhm4KbttKl8b9UZrnQTXxZLN2S4BM",
+          "short_id": "2f86"
         },
         "utls": {
           "enabled": true,
