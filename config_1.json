@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 Sweden | [*CIDR]",
+        "🇳🇴 Norway | 🌐 | [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇫🇮 Finland [*CIDR]-2",
         "🇫🇮 Finland | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇫🇮 [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]-2"
+        "🌐 Anycast-IP | 🇫🇮 🇸🇪 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,41 +51,43 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 Sweden | [*CIDR]",
+        "🇳🇴 Norway | 🌐 | [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇫🇮 Finland [*CIDR]-2",
         "🇫🇮 Finland | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]-2",
-        "🌐 Anycast-IP | 🇫🇮 [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]-2"
+        "🌐 Anycast-IP | 🇫🇮 🇸🇪 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "tag": "🇳🇴 Norway | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "95.129.236.239",
+      "server": "185.186.143.76",
       "server_port": 443,
-      "uuid": "ca04a2bf-97de-4cd5-bdba-537b0d73bb3f",
+      "uuid": "528c9248-7b50-45fb-9188-e46d889dafe6",
       "tls": {
         "enabled": true,
-        "server_name": "wiki.solarinfra.net",
+        "server_name": "ru-kitchen.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "6vDdlh4aAipoRQ-IXDjzTUtKpZS09xtNXIisCa__2CM",
+          "short_id": "f74c6a18133e2e72"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "wiki.solarinfra.net"
-        },
-        "path": "/stream/615428/socket"
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]",
+      "tag": "🇫🇮 Finland [*CIDR]",
       "type": "vless",
-      "server": "107.150.93.51",
+      "server": "107.150.93.2",
       "server_port": 443,
       "uuid": "6a32736d-4b7f-4c35-a1cf-4489d49f2cfb",
       "tls": {
@@ -93,12 +95,27 @@
         "server_name": "6a32736d.ferrin.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]-2",
+      "tag": "🇫🇮 Finland [*CIDR]-2",
+      "type": "vless",
+      "server": "107.150.93.2",
+      "server_port": 443,
+      "uuid": "6a32736d-4b7f-4c35-a1cf-4489d49f2cfb",
+      "tls": {
+        "enabled": true,
+        "server_name": "6a32736d.ferrin.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
       "server": "107.150.93.2",
       "server_port": 443,
@@ -113,9 +130,9 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇮 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇫🇮 🇸🇪 [*CIDR]",
       "type": "vless",
-      "server": "107.150.93.51",
+      "server": "fi.alpheratzz.org",
       "server_port": 443,
       "uuid": "6a32736d-4b7f-4c35-a1cf-4489d49f2cfb",
       "tls": {
@@ -123,30 +140,8 @@
         "server_name": "6a32736d.ferrin.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden | [*CIDR]-2",
-      "type": "vless",
-      "server": "95.129.236.239",
-      "server_port": 443,
-      "uuid": "ca04a2bf-97de-4cd5-bdba-537b0d73bb3f",
-      "tls": {
-        "enabled": true,
-        "server_name": "wiki.solarinfra.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "wiki.solarinfra.net"
-        },
-        "path": "/stream/615428/socket"
       }
     }
   ],
