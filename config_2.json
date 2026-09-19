@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 Sweden | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]-2",
-        "🇸🇪 Sweden | [*CIDR]-3",
-        "🇸🇪 Sweden | [*CIDR]-4",
-        "🇸🇪 Sweden | [*CIDR]-5"
+        "🇫🇮 Finland | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇺 [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        "🇸🇪 Sweden | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,124 +51,114 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 Sweden | [*CIDR]",
-        "🇸🇪 Sweden | [*CIDR]-2",
-        "🇸🇪 Sweden | [*CIDR]-3",
-        "🇸🇪 Sweden | [*CIDR]-4",
-        "🇸🇪 Sweden | [*CIDR]-5"
+        "🇫🇮 Finland | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇺 [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        "🇸🇪 Sweden | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "178.130.54.169",
+      "server_port": 443,
+      "uuid": "1fa3ded2-4946-45ac-9f39-2a0e501e3d1f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "telatviast.link",
+        "reality": {
+          "enabled": true,
+          "public_key": "mk-fkkWvUHz2ubIOkr8kfDeglXowdCI3Z4OssjWIIwg",
+          "short_id": "2b145d99dc39e2cc"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "113.30.154.3",
+      "server_port": 443,
+      "uuid": "950beaff-a665-4b36-baad-2251ba6bbd6a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lstu.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "e0RV9wRJdsQbQ0ugn5QUhJcTgWsSTVsKQTXMKweMDUg",
+          "short_id": "848b53fea10a561e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR]",
+      "type": "vless",
+      "server": "113.30.154.3",
+      "server_port": 443,
+      "uuid": "950beaff-a665-4b36-baad-2251ba6bbd6a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lstu.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "e0RV9wRJdsQbQ0ugn5QUhJcTgWsSTVsKQTXMKweMDUg",
+          "short_id": "848b53fea10a561e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇦🇹 Austria | [*CIDR]",
+      "type": "vless",
+      "server": "porkstream.com",
+      "server_port": 443,
+      "uuid": "1fa3ded2-4946-45ac-9f39-2a0e501e3d1f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "porkstream.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "mk-fkkWvUHz2ubIOkr8kfDeglXowdCI3Z4OssjWIIwg",
+          "short_id": "2b145d99dc39e2cc"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
     },
     {
       "tag": "🇸🇪 Sweden | [*CIDR]",
       "type": "vless",
       "server": "95.129.236.239",
       "server_port": 443,
-      "uuid": "21dc5ef3-66f3-4c8b-82e4-c5b1cbbb84a3",
+      "uuid": "3d135933-6c44-4bdc-baed-08ad7ccec070",
       "tls": {
         "enabled": true,
         "server_name": "wiki.solarinfra.net",
         "alpn": [
           "http/1.1"
         ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "wiki.solarinfra.net"
-        },
-        "path": "/stream/615428/socket"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden | [*CIDR]-2",
-      "type": "vless",
-      "server": "95.129.236.239",
-      "server_port": 443,
-      "uuid": "21dc5ef3-66f3-4c8b-82e4-c5b1cbbb84a3",
-      "tls": {
-        "enabled": true,
-        "server_name": "wiki.solarinfra.net",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "wiki.solarinfra.net"
-        },
-        "path": "/stream/615428/socket"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden | [*CIDR]-3",
-      "type": "vless",
-      "server": "95.129.236.239",
-      "server_port": 443,
-      "uuid": "21dc5ef3-66f3-4c8b-82e4-c5b1cbbb84a3",
-      "tls": {
-        "enabled": true,
-        "server_name": "wiki.solarinfra.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "wiki.solarinfra.net"
-        },
-        "path": "/stream/615428/socket"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden | [*CIDR]-4",
-      "type": "vless",
-      "server": "95.129.236.239",
-      "server_port": 443,
-      "uuid": "21dc5ef3-66f3-4c8b-82e4-c5b1cbbb84a3",
-      "tls": {
-        "enabled": true,
-        "server_name": "wiki.solarinfra.net",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "wiki.solarinfra.net"
-        },
-        "path": "/stream/615428/socket"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden | [*CIDR]-5",
-      "type": "vless",
-      "server": "95.129.236.239",
-      "server_port": 443,
-      "uuid": "21dc5ef3-66f3-4c8b-82e4-c5b1cbbb84a3",
-      "tls": {
-        "enabled": true,
-        "server_name": "wiki.solarinfra.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
         }
       },
       "transport": {
