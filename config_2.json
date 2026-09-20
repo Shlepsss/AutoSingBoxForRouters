@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇫🇮 Finland [*CIDR]"
+        "🇫🇮 Finland | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | 🌐 | [*CIDR]-2",
+        "🇫🇮 Finland | 🌐 | [*CIDR]-3",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,43 +51,53 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇫🇮 Finland [*CIDR]"
+        "🇫🇮 Finland | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | 🌐 | [*CIDR]-2",
+        "🇫🇮 Finland | 🌐 | [*CIDR]-3",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "188.225.33.173",
-      "server_port": 5001,
-      "uuid": "e121b564-fade-44aa-ba15-aa46538efaca",
+      "server": "tt.sonyabibboop.com",
+      "server_port": 2055,
+      "uuid": "884b5fb5-13b5-433a-92cc-0ff4e5773375",
       "tls": {
         "enabled": true,
-        "server_name": "rus.centermass.net",
+        "server_name": "tt.sonyabibboop.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "2C-oK3mN8pZ8jeTAVhgt6ubT-xqL7cklq9QmwtBY9mE",
+          "short_id": "7b86a01d952e8df4"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "media.playback.v1.SessionGateway"
+        "service_name": "sonya-grpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "201.34.128.128",
-      "server_port": 6443,
-      "uuid": "e121b564-fade-44aa-ba15-aa46538efaca",
+      "server": "tt.sonyabibboop.com",
+      "server_port": 2055,
+      "uuid": "884b5fb5-13b5-433a-92cc-0ff4e5773375",
       "tls": {
         "enabled": true,
-        "server_name": "nld.centermass.net",
+        "server_name": "tt.sonyabibboop.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "2C-oK3mN8pZ8jeTAVhgt6ubT-xqL7cklq9QmwtBY9mE",
+          "short_id": "7b86a01d952e8df4"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -95,40 +105,45 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "media.playback.v1.SessionGateway"
+        "service_name": "sonya-grpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "201.34.128.128",
-      "server_port": 6443,
-      "uuid": "e121b564-fade-44aa-ba15-aa46538efaca",
+      "server": "tt.sonyabibboop.com",
+      "server_port": 443,
+      "uuid": "884b5fb5-13b5-433a-92cc-0ff4e5773375",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "nld.centermass.net",
+        "server_name": "tt.sonyabibboop.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "2C-oK3mN8pZ8jeTAVhgt6ubT-xqL7cklq9QmwtBY9mE",
+          "short_id": "7b86a01d952e8df4"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "media.playback.v1.SessionGateway"
       }
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "188.225.33.173",
-      "server_port": 6001,
+      "server": "186.246.2.254",
+      "server_port": 6443,
       "uuid": "ae8e2b94-5d44-437b-9002-80c2015f0e23",
       "tls": {
         "enabled": true,
-        "server_name": "fin.centermass.net",
+        "server_name": "nld.centermass.net",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -137,17 +152,20 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
       "type": "vless",
-      "server": "188.225.33.173",
-      "server_port": 6001,
-      "uuid": "e121b564-fade-44aa-ba15-aa46538efaca",
+      "server": "186.246.2.254",
+      "server_port": 6443,
+      "uuid": "ae8e2b94-5d44-437b-9002-80c2015f0e23",
       "tls": {
         "enabled": true,
-        "server_name": "fin.centermass.net",
+        "server_name": "nld.centermass.net",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
       },
       "transport": {
