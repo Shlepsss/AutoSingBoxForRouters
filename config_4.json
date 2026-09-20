@@ -34,11 +34,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [SNI-RU] dzen.ru",
-        "🇩🇪 Germany | [SNI-RU] dzen.ru",
-        "🇳🇱 The Netherlands [SNI-RU] dzen.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] dzen.ru-2",
-        "🇩🇪 Germany | [SNI-RU] dzen.ru-2"
+        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] yandex.ru",
+        "🌐 Anycast-IP | 🇳🇱 🇸🇪 [SNI-RU] yandex.ru",
+        "🌐 Anycast-IP | 🇳🇱 [SNI-RU] yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,118 +49,83 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [SNI-RU] dzen.ru",
-        "🇩🇪 Germany | [SNI-RU] dzen.ru",
-        "🇳🇱 The Netherlands [SNI-RU] dzen.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] dzen.ru-2",
-        "🇩🇪 Germany | [SNI-RU] dzen.ru-2"
+        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] yandex.ru",
+        "🌐 Anycast-IP | 🇳🇱 🇸🇪 [SNI-RU] yandex.ru",
+        "🌐 Anycast-IP | 🇳🇱 [SNI-RU] yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] dzen.ru",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "94.183.224.45",
-      "server_port": 443,
-      "uuid": "d72f05b0-b182-4783-a6f2-21cecc7d841a",
-      "flow": "xtls-rprx-vision",
+      "server": "144.31.57.48",
+      "server_port": 4143,
+      "uuid": "37cec958-22ac-4d99-aee2-48facd8d84d7",
       "tls": {
         "enabled": true,
-        "server_name": "dzen.ru",
+        "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js",
-          "short_id": "a1b2c3d4e5f67890"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] dzen.ru",
-      "type": "vless",
-      "server": "31.76.100.41",
-      "server_port": 443,
-      "uuid": "d72f05b0-b182-4783-a6f2-21cecc7d841a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js",
-          "short_id": "a1b2c3d4e5f67890"
+          "public_key": "EB4Ay55d7wUDYVTfDNXg2sX2PxWqNqsyivR4fGcELDo",
+          "short_id": "ad63"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "google.android.location.SyncService"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] dzen.ru",
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇸🇪 [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "94.183.224.45",
-      "server_port": 443,
-      "uuid": "d72f05b0-b182-4783-a6f2-21cecc7d841a",
-      "flow": "xtls-rprx-vision",
+      "server": "144.31.57.48",
+      "server_port": 4143,
+      "uuid": "37cec958-22ac-4d99-aee2-48facd8d84d7",
       "tls": {
         "enabled": true,
-        "server_name": "dzen.ru",
+        "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js",
-          "short_id": "a1b2c3d4e5f67890"
+          "public_key": "EB4Ay55d7wUDYVTfDNXg2sX2PxWqNqsyivR4fGcELDo",
+          "short_id": "ad63"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "google.android.location.SyncService"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] dzen.ru-2",
+      "tag": "🌐 Anycast-IP | 🇳🇱 [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "94.183.224.45",
-      "server_port": 443,
-      "uuid": "d72f05b0-b182-4783-a6f2-21cecc7d841a",
-      "flow": "xtls-rprx-vision",
+      "server": "144.31.57.48",
+      "server_port": 4143,
+      "uuid": "37cec958-22ac-4d99-aee2-48facd8d84d7",
       "tls": {
         "enabled": true,
-        "server_name": "dzen.ru",
+        "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js",
-          "short_id": "a1b2c3d4e5f67890"
+          "public_key": "EB4Ay55d7wUDYVTfDNXg2sX2PxWqNqsyivR4fGcELDo",
+          "short_id": "ad63"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] dzen.ru-2",
-      "type": "vless",
-      "server": "31.76.100.41",
-      "server_port": 443,
-      "uuid": "d72f05b0-b182-4783-a6f2-21cecc7d841a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dzen.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js",
-          "short_id": "a1b2c3d4e5f67890"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "google.android.location.SyncService"
       }
     }
   ],
