@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR] Beeline",
-        "🇷🇺 Russia | [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR] Beeline-2",
-        "🇷🇺 Russia [*CIDR] Beeline-3",
-        "🇷🇺 Russia | [*CIDR] Beeline-2",
-        "🇷🇺 Russia | [*CIDR] Beeline-3",
-        "🇷🇺 Russia | [*CIDR] Beeline-4",
-        "🇷🇺 Russia [*CIDR] Beeline-4",
-        "🇷🇺 Russia [*CIDR] Beeline-5",
-        "🇷🇺 Russia [*CIDR] Beeline-6"
+        "🇫🇮 Finland [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,193 +51,132 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR] Beeline",
-        "🇷🇺 Russia | [*CIDR] Beeline",
-        "🇷🇺 Russia [*CIDR] Beeline-2",
-        "🇷🇺 Russia [*CIDR] Beeline-3",
-        "🇷🇺 Russia | [*CIDR] Beeline-2",
-        "🇷🇺 Russia | [*CIDR] Beeline-3",
-        "🇷🇺 Russia | [*CIDR] Beeline-4",
-        "🇷🇺 Russia [*CIDR] Beeline-4",
-        "🇷🇺 Russia [*CIDR] Beeline-5",
-        "🇷🇺 Russia [*CIDR] Beeline-6"
+        "🇫🇮 Finland [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] Beeline",
+      "tag": "🇫🇮 Finland [*CIDR]",
       "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
+      "server": "188.225.33.173",
+      "server_port": 6001,
+      "uuid": "ae8e2b94-5d44-437b-9002-80c2015f0e23",
       "tls": {
         "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
+        "server_name": "fin.centermass.net",
         "alpn": [
           "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "media.playback.v1.SessionGateway"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] Beeline",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
+      "server": "201.34.128.128",
+      "server_port": 6443,
+      "uuid": "ae8e2b94-5d44-437b-9002-80c2015f0e23",
       "tls": {
         "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
+        "server_name": "nld.centermass.net",
         "alpn": [
           "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "media.playback.v1.SessionGateway"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] Beeline-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]",
       "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
+      "server": "95.129.236.239",
+      "server_port": 443,
+      "uuid": "5d224cf0-4c4e-46e2-a89c-9b804c5d3999",
       "tls": {
         "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
+        "server_name": "wiki.solarinfra.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "wiki.solarinfra.net"
+        },
+        "path": "/stream/615428/socket"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-2",
+      "type": "vless",
+      "server": "95.129.236.239",
+      "server_port": 443,
+      "uuid": "5d224cf0-4c4e-46e2-a89c-9b804c5d3999",
+      "tls": {
+        "enabled": true,
+        "server_name": "wiki.solarinfra.net",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "wiki.solarinfra.net"
+        },
+        "path": "/stream/615428/socket"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] Beeline-3",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇸🇪 | [*CIDR]-3",
       "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
+      "server": "95.129.236.239",
+      "server_port": 443,
+      "uuid": "5d224cf0-4c4e-46e2-a89c-9b804c5d3999",
       "tls": {
         "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
+        "server_name": "wiki.solarinfra.net",
         "alpn": [
-          "h2"
+          "http/1.1"
         ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] Beeline-2",
-      "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] Beeline-3",
-      "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] Beeline-4",
-      "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] Beeline-4",
-      "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] Beeline-5",
-      "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] Beeline-6",
-      "type": "vless",
-      "server": "66.90.90.13",
-      "server_port": 8443,
-      "uuid": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dsapi-v2-6aaeee8a.adhil.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "wiki.solarinfra.net"
+        },
+        "path": "/stream/615428/socket"
       }
     }
   ],
