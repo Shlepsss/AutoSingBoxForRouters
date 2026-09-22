@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] CDN-2",
+        "🇷🇺 Russia | [*CIDR] CDN-3",
+        "🇷🇺 Russia | [*CIDR] CDN-4",
+        "🌐 Anycast-IP | 🇩🇪 🇰🇷 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] CDN-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,54 +53,32 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] CDN-2",
+        "🇷🇺 Russia | [*CIDR] CDN-3",
+        "🇷🇺 Russia | [*CIDR] CDN-4",
+        "🌐 Anycast-IP | 🇩🇪 🇰🇷 | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] CDN-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR] CDN",
       "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "de58.abvpn.net",
-        "utls": {
+        "server_name": "unpkg.com",
+        "reality": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
-      "tls": {
-        "enabled": true,
-        "server_name": "de58.abvpn.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
-      "tls": {
-        "enabled": true,
-        "server_name": "de58.abvpn.net",
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -106,32 +86,132 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-3",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
+      "server": "vdss.lavivas.org",
+      "server_port": 8080,
+      "uuid": "44e1105d-b46e-402f-933b-eaa136fcbb24",
       "tls": {
         "enabled": true,
-        "server_name": "de58.abvpn.net",
+        "server_name": "vdss.lavivas.org",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-2",
+      "type": "vless",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "unpkg.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-4",
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-3",
       "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "de58.abvpn.net",
+        "server_name": "unpkg.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-4",
+      "type": "vless",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "unpkg.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇰🇷 | [*CIDR]",
+      "type": "vless",
+      "server": "186.246.13.160",
+      "server_port": 443,
+      "uuid": "f778d2eb-1bec-4d19-b0bf-0a5e39feed4f",
+      "tls": {
+        "enabled": true,
+        "server_name": "my.hexagonicfield.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "3f8e2d1c9b4a7e6f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-5",
+      "type": "vless",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "unpkg.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

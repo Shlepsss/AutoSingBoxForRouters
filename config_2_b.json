@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR] CDN",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] CDN-2",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR] CDN-3",
+        "🇷🇺 Russia | [*CIDR] CDN-4",
+        "🇷🇺 Russia | [*CIDR] CDN-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,69 +53,78 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-4"
+        "🇷🇺 Russia | [*CIDR] CDN",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR] CDN-2",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR] CDN-3",
+        "🇷🇺 Russia | [*CIDR] CDN-4",
+        "🇷🇺 Russia | [*CIDR] CDN-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR] CDN",
       "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "de58.abvpn.net",
+        "server_name": "unpkg.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "176.124.214.116",
+      "server_port": 8443,
+      "uuid": "b71637c2-94a5-49bd-8233-b4ed5e3170c3",
+      "tls": {
+        "enabled": true,
+        "server_name": "free-ger1.wooden-table.org",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "free-ger1.wooden-table.org"
+        },
+        "path": "/images"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-2",
       "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "de58.abvpn.net",
-        "utls": {
+        "server_name": "unpkg.com",
+        "reality": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
-      "tls": {
-        "enabled": true,
-        "server_name": "de58.abvpn.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
-      "tls": {
-        "enabled": true,
-        "server_name": "de58.abvpn.net",
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -121,17 +132,90 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-4",
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
       "type": "vless",
-      "server": "45.151.62.146",
-      "server_port": 443,
-      "uuid": "a289a3d3-5833-4b28-8809-ae72898a98d0",
+      "server": "176.124.214.116",
+      "server_port": 8443,
+      "uuid": "b71637c2-94a5-49bd-8233-b4ed5e3170c3",
       "tls": {
         "enabled": true,
-        "server_name": "de58.abvpn.net",
+        "server_name": "free-ger1.wooden-table.org",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "free-ger1.wooden-table.org"
+        },
+        "path": "/images"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-3",
+      "type": "vless",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "unpkg.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-4",
+      "type": "vless",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "unpkg.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] CDN-5",
+      "type": "vless",
+      "server": "46.243.232.77",
+      "server_port": 2085,
+      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "unpkg.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
+          "short_id": "b0d8c9a285c70f6f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }
