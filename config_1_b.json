@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇧🇷 🇸🇪 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] CDN-2",
-        "🇷🇺 Russia | [*CIDR] CDN-3",
-        "🇷🇺 Russia | [*CIDR] CDN-4",
-        "🇷🇺 Russia | [*CIDR] CDN-5"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]-5",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,73 +56,129 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇧🇷 🇸🇪 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] CDN-2",
-        "🇷🇺 Russia | [*CIDR] CDN-3",
-        "🇷🇺 Russia | [*CIDR] CDN-4",
-        "🇷🇺 Russia | [*CIDR] CDN-5"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]-5",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "vdss.lavivas.org",
-      "server_port": 2096,
-      "uuid": "44e1105d-b46e-402f-933b-eaa136fcbb24",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
       "tls": {
         "enabled": true,
-        "server_name": "vdss.lavivas.org",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "www.siemens.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684c10127374d"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc"
+        "service_name": "Popka"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] CDN",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "46.243.232.77",
-      "server_port": 2085,
-      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
-      "flow": "xtls-rprx-vision",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
       "tls": {
         "enabled": true,
-        "server_name": "unpkg.com",
+        "server_name": "www.siemens.com",
         "reality": {
           "enabled": true,
-          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "short_id": "b0d8c9a285c70f6f"
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684C10127374D"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Popka"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.siemens.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684C10127374D"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Popka"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇧🇷 🇸🇪 | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
       "type": "vless",
-      "server": "185.207.66.8",
+      "server": "72.56.1.5",
       "server_port": 443,
-      "uuid": "f778d2eb-1bec-4d19-b0bf-0a5e39feed4f",
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
       "tls": {
         "enabled": true,
-        "server_name": "upload.hexagonicfield.com",
+        "server_name": "www.siemens.com",
         "reality": {
           "enabled": true,
-          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
-          "short_id": "5d1e8b3f6c2a9d4e"
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684C10127374D"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Popka"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-4",
+      "type": "vless",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.siemens.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684C10127374D"
         },
         "utls": {
           "enabled": true,
@@ -128,91 +187,127 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "moktana.net.v1.StreamService"
+        "service_name": "Popka"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] CDN-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "46.243.232.77",
-      "server_port": 2085,
-      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
-      "flow": "xtls-rprx-vision",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
       "tls": {
         "enabled": true,
-        "server_name": "unpkg.com",
+        "server_name": "www.siemens.com",
         "reality": {
           "enabled": true,
-          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "short_id": "b0d8c9a285c70f6f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] CDN-3",
-      "type": "vless",
-      "server": "46.243.232.77",
-      "server_port": 2085,
-      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "unpkg.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "short_id": "b0d8c9a285c70f6f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] CDN-4",
-      "type": "vless",
-      "server": "46.243.232.77",
-      "server_port": 2085,
-      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "unpkg.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "short_id": "b0d8c9a285c70f6f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] CDN-5",
-      "type": "vless",
-      "server": "46.243.232.77",
-      "server_port": 2085,
-      "uuid": "38eb3e71-4349-4bd6-9baf-9740e1896495",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "unpkg.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "short_id": "b0d8c9a285c70f6f"
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684C10127374D"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Popka"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.siemens.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684c10127374d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Popka"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-5",
+      "type": "vless",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.siemens.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684C10127374D"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Popka"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "type": "vless",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.siemens.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684c10127374d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Popka"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-5",
+      "type": "vless",
+      "server": "72.56.1.5",
+      "server_port": 443,
+      "uuid": "8057eabc-921d-4ef5-9acb-80ccc6b48379",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.siemens.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "0FeZt3p4idHrFpZRIjn69W_zUFiVBKmoGhkqSqbAvRw",
+          "short_id": "271684C10127374D"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "Popka"
       }
     }
   ],
