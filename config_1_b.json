@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR] VK",
+        "🇫🇷 France [*CIDR]",
         "🇫🇮 Finland | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇨🇦 Canada | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,55 +53,65 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR] VK",
+        "🇫🇷 France [*CIDR]",
         "🇫🇮 Finland | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇨🇦 Canada | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "193.233.245.21",
-      "server_port": 9443,
-      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
+      "server": "46.173.17.19",
+      "server_port": 443,
+      "uuid": "fc47db0c-c6f2-4665-bdb2-8f717822ce9d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "hub-de-01.hanvpn.cc",
+        "server_name": "9f8hqeju.datahubfiles.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Hhp-DQNkUYOkbWR64BHWc7gGYfeqU8yYAwX6sTsqf3A",
+          "short_id": "4d5163ec7a1bf048"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "de01-grpc-8e47a"
-      }
-    },
-    {
-      "tag": "🇦🇹 Austria | [*CIDR]",
-      "type": "vless",
-      "server": "82.117.87.129",
-      "server_port": 9443,
-      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
-      "tls": {
-        "enabled": true,
-        "server_name": "hub-vie-01.hanvpn.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
+      "tag": "🇫🇮 Finland | [*CIDR] VK",
+      "type": "vless",
+      "server": "89.208.208.172",
+      "server_port": 2107,
+      "uuid": "a76f6959-7d88-40c5-8984-4d888aa42389",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "957a14.relay-edge.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "4YFpLhV9HbwlCXzvCL8EfvYe-V-VCuXZIaOWS11lKXI",
+          "short_id": "11f303a9ff001d7c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]",
       "type": "vless",
       "server": "201.24.50.94",
       "server_port": 443,
-      "uuid": "8057eabc-921d-0001-9acb-80ccc6b48379",
+      "uuid": "8057eabc-921d-0003-9acb-80ccc6b48379",
       "tls": {
         "enabled": true,
         "server_name": "kerbal.mafioznik.xyz",
@@ -110,7 +122,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -119,39 +131,87 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "193.233.245.21",
+      "server": "82.117.87.129",
       "server_port": 9443,
       "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
       "tls": {
         "enabled": true,
-        "server_name": "hub-de-01.hanvpn.cc",
+        "server_name": "hub-fi-03.hanvpn.cc",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "hub-de-01.hanvpn.cc"
-        },
-        "path": "/de01-ws-8e47a"
+        "type": "grpc",
+        "service_name": "fi03-grpc-8e47a"
       }
     },
     {
-      "tag": "🇨🇦 Canada | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "193.233.245.21",
-      "server_port": 9443,
-      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
+      "server": "46.173.17.19",
+      "server_port": 443,
+      "uuid": "fc47db0c-c6f2-4665-bdb2-8f717822ce9d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "hub-lv-01.hanvpn.cc",
+        "server_name": "9f8hqeju.datahubfiles.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Hhp-DQNkUYOkbWR64BHWc7gGYfeqU8yYAwX6sTsqf3A",
+          "short_id": "4d5163ec7a1bf048"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "46.173.17.19",
+      "server_port": 443,
+      "uuid": "fc47db0c-c6f2-4665-bdb2-8f717822ce9d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "9f8hqeju.datahubfiles.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Hhp-DQNkUYOkbWR64BHWc7gGYfeqU8yYAwX6sTsqf3A",
+          "short_id": "4d5163ec7a1bf048"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "vless",
+      "server": "46.173.17.19",
+      "server_port": 443,
+      "uuid": "fc47db0c-c6f2-4665-bdb2-8f717822ce9d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "9f8hqeju.datahubfiles.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Hhp-DQNkUYOkbWR64BHWc7gGYfeqU8yYAwX6sTsqf3A",
+          "short_id": "4d5163ec7a1bf048"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }
