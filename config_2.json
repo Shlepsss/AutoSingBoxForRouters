@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | 🌐 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇸🇪 Sweden | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,16 +53,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | 🌐 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3"
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇸🇪 Sweden | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] VK",
+      "type": "vless",
+      "server": "dostavitos.stroymatdv.cc",
+      "server_port": 443,
+      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
+      "tls": {
+        "enabled": true,
+        "server_name": "dostavitos.stroymatdv.cc",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dostavitos.stroymatdv.cc"
+        },
+        "path": "/e9ws"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -85,42 +110,18 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "213.171.30.97",
-      "server_port": 443,
-      "uuid": "0101cf76-c6ed-4f44-bb73-7c4063d6b56d",
+      "server": "176.123.167.90",
+      "server_port": 9881,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "gp.x5.ru",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "oRpD-G1qeIyRehwSKMHbJSHlt9_lVFK5ZbqBEnnzT2o",
-          "short_id": "8e41afb9b006f04c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "213.171.30.97",
-      "server_port": 443,
-      "uuid": "0101cf76-c6ed-4f44-bb73-7c4063d6b56d",
-      "tls": {
-        "enabled": true,
-        "server_name": "gp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "oRpD-G1qeIyRehwSKMHbJSHlt9_lVFK5ZbqBEnnzT2o",
-          "short_id": "8e41afb9b006f04c"
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
@@ -129,47 +130,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
+        "service_name": "grpc-tunnel"
       }
     },
     {
@@ -188,12 +149,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "161.104.38.98",
       "server_port": 443,
@@ -208,7 +169,47 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "type": "vless",
+      "server": "161.104.38.98",
+      "server_port": 443,
+      "uuid": "256c5e3e-431d-002f-bed4-bfcf1334f64b",
+      "tls": {
+        "enabled": true,
+        "server_name": "donatov.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
+          "short_id": "8ba6e72ee60667f6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "type": "vless",
+      "server": "161.104.38.98",
+      "server_port": 443,
+      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
+      "tls": {
+        "enabled": true,
+        "server_name": "donatov.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
+          "short_id": "8ba6e72ee60667f6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

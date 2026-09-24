@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇳🇱 The Netherlands [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,19 +53,63 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇳🇱 The Netherlands [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "176.123.167.90",
+      "server_port": 9881,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "161.104.38.98",
+      "server_port": 443,
+      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
+      "tls": {
+        "enabled": true,
+        "server_name": "donatov.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
+          "short_id": "8ba6e72ee60667f6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "161.104.38.98",
       "server_port": 443,
@@ -85,7 +129,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "161.104.38.98",
       "server_port": 443,
@@ -105,92 +149,29 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "161.104.38.98",
+      "server": "45.144.222.250",
       "server_port": 443,
-      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "213.171.30.97",
-      "server_port": 25565,
-      "uuid": "0101cf76-c6ed-4f44-bb73-7c4063d6b56d",
+      "uuid": "57a437c4-7eed-041a-bf50-5e4e35f71deb",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "iv.kommersant.ru",
+        "insecure": true,
+        "server_name": "travel.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "oRpD-G1qeIyRehwSKMHbJSHlt9_lVFK5ZbqBEnnzT2o",
-          "short_id": "07ac3cb8d96b2b5a"
+          "public_key": "XiB5ulLWLPO1VWI6RsDsTYj_8qM8KMkNMR1pKy9vhDM",
+          "short_id": "840e66c1743e80bf"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "213.171.30.97",
-      "server_port": 443,
-      "uuid": "0101cf76-c6ed-4f44-bb73-7c4063d6b56d",
-      "tls": {
-        "enabled": true,
-        "server_name": "gp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "oRpD-G1qeIyRehwSKMHbJSHlt9_lVFK5ZbqBEnnzT2o",
-          "short_id": "8e41afb9b006f04c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "161.104.38.98",
       "server_port": 443,
@@ -206,6 +187,25 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "196.240.125.254",
+      "server_port": 8443,
+      "uuid": "8e63952d-c1ba-41db-a244-254404e12186",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "file-6ab4cec0.adhil.uk",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }
