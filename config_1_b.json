@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] VK",
-        "🇬🇧 United Kingdom | [*CIDR]",
-        "🇫🇷 France | [*CIDR]-2"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,61 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] VK",
-        "🇬🇧 United Kingdom | [*CIDR]",
-        "🇫🇷 France | [*CIDR]-2"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇷 France | [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR] VK",
       "type": "vless",
-      "server": "201.24.50.94",
+      "server": "dostavitos.stroymatdv.cc",
       "server_port": 443,
-      "uuid": "8057eabc-921d-0003-9acb-80ccc6b48379",
+      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
       "tls": {
         "enabled": true,
-        "server_name": "download.amd.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "wG3BS0H2EKpY2tpv9bWipTmafwIdXuUXPAZCpr1eZ0M",
-          "short_id": ""
-        },
+        "server_name": "dostavitos.stroymatdv.cc",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "random"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "Sosat"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "104.171.138.229",
-      "server_port": 443,
-      "uuid": "8057eabc-921d-0001-9acb-80ccc6b48379",
-      "tls": {
-        "enabled": true,
-        "server_name": "download.amd.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "aK5um9qlbrjpXgpI4H9n05FBmWAvKUbmLm7iAj9K9mw",
-          "short_id": ""
+        "type": "ws",
+        "headers": {
+          "Host": "dostavitos.stroymatdv.cc"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "Piska"
+        "path": "/e9ws"
       }
     },
     {
@@ -122,7 +99,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -134,51 +111,68 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [*CIDR]",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
       "type": "vless",
-      "server": "176.123.167.90",
-      "server_port": 9881,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "200.165.236.184",
+      "server_port": 8443,
+      "uuid": "82e57623-bf39-454c-8b35-218085c536f3",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "insecure": true,
+        "server_name": "api.bitrix24.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aabb"
+          "public_key": "uWffyYV5PSa38qThOfFUG_9aHyV4ZbKJ0xc1UK79NUg",
+          "short_id": "44"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
+      "type": "vless",
+      "server": "200.165.236.184",
+      "server_port": 8443,
+      "uuid": "82e57623-bf39-454c-8b35-218085c536f3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "api.bitrix24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "uWffyYV5PSa38qThOfFUG_9aHyV4ZbKJ0xc1UK79NUg",
+          "short_id": "44"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇫🇷 France | [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "201.24.50.94",
+      "server": "zodiacgrapedefiant.berylcord.net",
       "server_port": 443,
-      "uuid": "8057eabc-921d-0003-9acb-80ccc6b48379",
+      "uuid": "3db8407b-1f96-4b82-bfeb-55258c1e57b4",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "download.amd.com",
+        "server_name": "zodiacgrapedefiant.berylcord.net",
         "reality": {
           "enabled": true,
-          "public_key": "wG3BS0H2EKpY2tpv9bWipTmafwIdXuUXPAZCpr1eZ0M",
-          "short_id": ""
+          "public_key": "QPfM5knVgOkIykx2AC8S1MvkO_x-T9xMRYJdkF9aEng",
+          "short_id": "fda83f2787e6016d"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "Sosat"
       }
     }
   ],
