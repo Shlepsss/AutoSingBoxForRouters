@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany [*CIDR] VK",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 | [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,16 +51,36 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany [*CIDR] VK",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 | [*CIDR] VK",
         "🇩🇪 Germany | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.42.138",
+      "server_port": 443,
+      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
+      "tls": {
+        "enabled": true,
+        "server_name": "dostavitos.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dostavitos.stroymatdv.cc"
+        },
+        "path": "/e9ws"
+      }
     },
     {
       "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
@@ -87,76 +105,20 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR] VK",
       "type": "vless",
-      "server": "196.240.125.254",
-      "server_port": 8443,
-      "uuid": "8e63952d-c1ba-41db-a244-254404e12186",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "file-6ab4cec0.adhil.uk",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "37.139.42.138",
+      "server": "dostavitos.stroymatdv.cc",
       "server_port": 443,
       "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
       "tls": {
         "enabled": true,
         "server_name": "dostavitos.stroymatdv.cc",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -168,42 +130,49 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR] VK",
       "type": "vless",
-      "server": "161.104.38.98",
+      "server": "dostavitos.stroymatdv.cc",
       "server_port": 443,
-      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
+      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
       "tls": {
         "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
+        "server_name": "dostavitos.stroymatdv.cc",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dostavitos.stroymatdv.cc"
+        },
+        "path": "/e9ws"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
       "type": "vless",
-      "server": "161.104.38.98",
+      "server": "200.169.179.84",
       "server_port": 443,
-      "uuid": "256c5e3e-431d-0032-bed4-bfcf1334f64b",
+      "uuid": "57a437c4-7eed-03f2-bf50-5e4e35f71deb",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "donatov.net",
+        "insecure": true,
+        "server_name": "travel.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
+          "public_key": "XiB5ulLWLPO1VWI6RsDsTYj_8qM8KMkNMR1pKy9vhDM",
+          "short_id": "840e66c1743e80bf"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     }
