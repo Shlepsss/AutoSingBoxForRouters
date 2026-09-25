@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK-2",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇰🇷 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,131 +51,124 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK-2",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇰🇷 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "176.123.167.90",
-      "server_port": 9881,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "72.56.234.45",
+      "server_port": 443,
+      "uuid": "77da6e30-ad4e-11f1-94d5-525400d1d4f7",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aabb"
+          "public_key": "2IAFC23dkBm2ZRPTcxSWZ5YkpVxJufIIZn3-aSPRH10",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇰🇷 | [*CIDR]",
+      "type": "vless",
+      "server": "193.160.208.137",
+      "server_port": 443,
+      "uuid": "a08b9c24-3252-4f7f-afa9-4a37040950fd",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.hexagonicfield.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "a1b2c3d4e5f6a7b8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "moktana.net.v1.StreamService"
       }
     },
     {
-      "tag": "🇨🇭 Switzerland | 🌐 | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]",
       "type": "vless",
-      "server": "72.56.35.81",
+      "server": "186.246.13.160",
       "server_port": 443,
-      "uuid": "13ef8e97-815a-000b-8688-0154d85d26bf",
+      "uuid": "f778d2eb-1bec-4d19-b0bf-0a5e39feed4f",
       "tls": {
         "enabled": true,
-        "server_name": "ru19.aimodelhub.top",
+        "server_name": "my.hexagonicfield.com",
         "reality": {
           "enabled": true,
-          "public_key": "Fe5PnOaERhhHbBXhGBEsQaRUBpSM8hCc03zOEpHz218",
-          "short_id": "51b784e13468"
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "3f8e2d1c9b4a7e6f"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "dostavitos.stroymatdv.cc",
-      "server_port": 443,
-      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
-      "tls": {
-        "enabled": true,
-        "server_name": "dostavitos.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dostavitos.stroymatdv.cc"
-        },
-        "path": "/e9ws"
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] VK-2",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "dostavitos.stroymatdv.cc",
+      "server": "72.56.234.45",
       "server_port": 443,
-      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
+      "uuid": "77da6e30-ad4e-11f1-94d5-525400d1d4f7",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dostavitos.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dostavitos.stroymatdv.cc"
-        },
-        "path": "/e9ws"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "176.123.167.90",
-      "server_port": 9881,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aabb"
+          "public_key": "2IAFC23dkBm2ZRPTcxSWZ5YkpVxJufIIZn3-aSPRH10",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "72.56.234.45",
+      "server_port": 443,
+      "uuid": "77da6e30-ad4e-11f1-94d5-525400d1d4f7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "2IAFC23dkBm2ZRPTcxSWZ5YkpVxJufIIZn3-aSPRH10",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     }
   ],
