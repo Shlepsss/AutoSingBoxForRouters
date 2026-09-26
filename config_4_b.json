@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [SNI-RU] ads.x5.ru",
-        "🇳🇱 The Netherlands [SNI-RU] x5.ru",
-        "🇩🇪 Germany | [SNI-RU] ads.x5.ru-2",
         "🇫🇮 Finland [SNI-RU] ads.x5.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] x5.ru"
+        "🇳🇱 The Netherlands | [SNI-RU] x5.ru",
+        "🇩🇪 Germany | [SNI-RU] ads.x5.ru",
+        "🇩🇪 Germany | [SNI-RU] ads.x5.ru-2",
+        "🇳🇱 The Netherlands [SNI-RU] x5.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,58 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [SNI-RU] ads.x5.ru",
-        "🇳🇱 The Netherlands [SNI-RU] x5.ru",
-        "🇩🇪 Germany | [SNI-RU] ads.x5.ru-2",
         "🇫🇮 Finland [SNI-RU] ads.x5.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] x5.ru"
+        "🇳🇱 The Netherlands | [SNI-RU] x5.ru",
+        "🇩🇪 Germany | [SNI-RU] ads.x5.ru",
+        "🇩🇪 Germany | [SNI-RU] ads.x5.ru-2",
+        "🇳🇱 The Netherlands [SNI-RU] x5.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇮 Finland [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "2.26.133.99",
+      "server_port": 443,
+      "uuid": "cb9bc521-77a2-4c23-9bbf-b8d5318e717d",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "--pxBStu9Lk1PFAsYbzTg5vBZKXtzdcOlmrpw9pen1s",
+          "short_id": "0812e28665a36091"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] x5.ru",
+      "type": "vless",
+      "server": "185.4.113.161",
+      "server_port": 443,
+      "uuid": "c40ec629-cd50-4569-8ea7-ea7c498423fd",
+      "tls": {
+        "enabled": true,
+        "server_name": "x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "rWCtIIMsnh-bXbgPsxJrM5xAvH6PgywDeVZXhycEJk0",
+          "short_id": "4fe211a1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
     },
     {
       "tag": "🇩🇪 Germany | [SNI-RU] ads.x5.ru",
@@ -84,29 +128,6 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] x5.ru",
-      "type": "vless",
-      "server": "185.4.113.161",
-      "server_port": 443,
-      "uuid": "c40ec629-cd50-4569-8ea7-ea7c498423fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "rWCtIIMsnh-bXbgPsxJrM5xAvH6PgywDeVZXhycEJk0",
-          "short_id": "4fe211a1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
       "tag": "🇩🇪 Germany | [SNI-RU] ads.x5.ru-2",
       "type": "vless",
       "server": "95.133.236.241",
@@ -122,7 +143,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         }
       },
       "transport": {
@@ -130,28 +151,7 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "2.26.133.99",
-      "server_port": 443,
-      "uuid": "cb9bc521-77a2-4c23-9bbf-b8d5318e717d",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "--pxBStu9Lk1PFAsYbzTg5vBZKXtzdcOlmrpw9pen1s",
-          "short_id": "0812e28665a36091"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] x5.ru",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] x5.ru",
       "type": "vless",
       "server": "185.4.113.161",
       "server_port": 443,
