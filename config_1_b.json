@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇮🇹 Italy | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5"
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,159 +53,157 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 | [*CIDR] VK",
         "🇷🇺 Russia | [*CIDR]-2",
-        "🇮🇹 Italy | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5"
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "5.129.250.171",
-      "server_port": 8443,
-      "uuid": "c40ec629-cd50-4569-8ea7-ea7c498423fd",
+      "server": "assets-de2.pleiades.codes",
+      "server_port": 443,
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
       "tls": {
         "enabled": true,
-        "server_name": "litenergy.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "v41IUbHVhIcTm8StqBKOiuSH00wWo_NTxe6HQjgWiHU",
-          "short_id": "02ad0d462864"
-        },
+        "server_name": "assets-de2.pleiades.codes",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [*CIDR]",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
       "type": "vless",
-      "server": "176.123.167.90",
-      "server_port": 9881,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "82.97.253.254",
+      "server_port": 443,
+      "uuid": "cb9bc521-77a2-4c23-9bbf-b8d5318e717d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "insecure": true,
+        "server_name": "duckduckgo.com",
         "reality": {
           "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": "aa"
+          "public_key": "IxFbqmfuwejYSKYu69qBnzG9yWSuf7UjHujXWOO_w34",
+          "short_id": "9137d914cd770b54"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "assets-de2.pleiades.codes",
+      "server_port": 443,
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets-de2.pleiades.codes",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "cdn.v1.AssetService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "assets-de2.pleiades.codes",
+      "server_port": 443,
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets-de2.pleiades.codes",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR] VK",
+      "type": "vless",
+      "server": "dostavitos.stroymatdv.cc",
+      "server_port": 443,
+      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
+      "tls": {
+        "enabled": true,
+        "server_name": "dostavitos.stroymatdv.cc",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dostavitos.stroymatdv.cc"
+        },
+        "path": "/e9ws"
       }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "5.129.250.171",
-      "server_port": 8443,
-      "uuid": "c40ec629-cd50-4569-8ea7-ea7c498423fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "litenergy.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "v41IUbHVhIcTm8StqBKOiuSH00wWo_NTxe6HQjgWiHU",
-          "short_id": "02ad0d462864"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | [*CIDR]",
-      "type": "vless",
-      "server": "45.8.228.167",
+      "server": "assets-de2.pleiades.codes",
       "server_port": 443,
-      "uuid": "953358cb-82ba-4296-960d-6d2ec3468f4c",
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
       "tls": {
         "enabled": true,
-        "server_name": "pl314j2.sysopnova.art",
-        "reality": {
-          "enabled": true,
-          "public_key": "n7Eivi9aG8PMxvaP5flLiukPADZIDVuzyOsOWDG43kQ",
-          "short_id": "5eca"
-        },
+        "server_name": "assets-de2.pleiades.codes",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
       }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "5.129.250.171",
-      "server_port": 8443,
-      "uuid": "c40ec629-cd50-4569-8ea7-ea7c498423fd",
+      "server": "assets-de2.pleiades.codes",
+      "server_port": 443,
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
       "tls": {
         "enabled": true,
-        "server_name": "litenergy.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "v41IUbHVhIcTm8StqBKOiuSH00wWo_NTxe6HQjgWiHU",
-          "short_id": "02ad0d462864"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "5.129.250.171",
-      "server_port": 8443,
-      "uuid": "c40ec629-cd50-4569-8ea7-ea7c498423fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "litenergy.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "v41IUbHVhIcTm8StqBKOiuSH00wWo_NTxe6HQjgWiHU",
-          "short_id": "02ad0d462864"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
-      "type": "vless",
-      "server": "5.129.250.171",
-      "server_port": 8443,
-      "uuid": "c40ec629-cd50-4569-8ea7-ea7c498423fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "litenergy.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "v41IUbHVhIcTm8StqBKOiuSH00wWo_NTxe6HQjgWiHU",
-          "short_id": "02ad0d462864"
-        },
+        "server_name": "assets-de2.pleiades.codes",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
       }
     }
   ],
