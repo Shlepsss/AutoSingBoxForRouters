@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-6",
-        "🇷🇺 Russia | [*CIDR]-7"
+        "🇷🇺 Russia | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,24 +56,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-6",
-        "🇷🇺 Russia | [*CIDR]-7"
+        "🇷🇺 Russia | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "72.4.65.116",
+      "server": "assets-de2.pleiades.codes",
       "server_port": 443,
       "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
       "tls": {
@@ -81,7 +81,7 @@
         "server_name": "assets-de2.pleiades.codes",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -90,58 +90,31 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "31.76.65.234",
+      "server": "45.93.201.119",
       "server_port": 443,
-      "uuid": "cc39844c-d9ba-4394-9cae-395933f4e353",
+      "uuid": "f778d2eb-1bec-4d19-b0bf-0a5e39feed4f",
       "tls": {
         "enabled": true,
-        "server_name": "31.76.65.234.fwqfw783rg2dad.website",
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "7c4b9a2e8d5f3c1b"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "qq"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "31.76.65.234.fwqfw783rg2dad.website"
-        },
-        "path": "/websocket",
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "31.76.65.234.fwqfw783rg2dad.website",
-      "server_port": 443,
-      "uuid": "cc39844c-d9ba-4394-9cae-395933f4e353",
-      "tls": {
-        "enabled": true,
-        "server_name": "31.76.65.234.fwqfw783rg2dad.website",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "31.76.65.234.fwqfw783rg2dad.website"
-        },
-        "path": "/websocket",
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
       "server": "72.4.65.116",
       "server_port": 443,
@@ -152,25 +125,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "cdn.v1.AssetService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "assets-de2.pleiades.codes",
-      "server_port": 443,
-      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets-de2.pleiades.codes",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
         }
       },
       "transport": {
@@ -181,32 +135,24 @@
     {
       "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
-      "server": "31.76.65.234.fwqfw783rg2dad.website",
+      "server": "assets-de2.pleiades.codes",
       "server_port": 443,
-      "uuid": "cc39844c-d9ba-4394-9cae-395933f4e353",
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
       "tls": {
         "enabled": true,
-        "server_name": "31.76.65.234.fwqfw783rg2dad.website",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "assets-de2.pleiades.codes",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "31.76.65.234.fwqfw783rg2dad.website"
-        },
-        "path": "/websocket",
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "assets-de2.pleiades.codes",
       "server_port": 443,
@@ -214,84 +160,126 @@
       "tls": {
         "enabled": true,
         "server_name": "assets-de2.pleiades.codes",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "cdn.v1.AssetService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
-      "type": "vless",
-      "server": "assets-de2.pleiades.codes",
-      "server_port": 443,
-      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets-de2.pleiades.codes",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "cdn.v1.AssetService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-6",
-      "type": "vless",
-      "server": "31.76.65.234",
-      "server_port": 443,
-      "uuid": "cc39844c-d9ba-4394-9cae-395933f4e353",
-      "tls": {
-        "enabled": true,
-        "server_name": "31.76.65.234.fwqfw783rg2dad.website",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "31.76.65.234.fwqfw783rg2dad.website"
-        },
-        "path": "/websocket",
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-7",
-      "type": "vless",
-      "server": "31.76.65.234.fwqfw783rg2dad.website",
-      "server_port": 443,
-      "uuid": "cc39844c-d9ba-4394-9cae-395933f4e353",
-      "tls": {
-        "enabled": true,
-        "server_name": "31.76.65.234.fwqfw783rg2dad.website",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "31.76.65.234.fwqfw783rg2dad.website"
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "45.93.201.119",
+      "server_port": 443,
+      "uuid": "f778d2eb-1bec-4d19-b0bf-0a5e39feed4f",
+      "tls": {
+        "enabled": true,
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "7c4b9a2e8d5f3c1b"
         },
-        "path": "/websocket",
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "type": "vless",
+      "server": "72.4.65.116",
+      "server_port": 443,
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets-de2.pleiades.codes",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "45.93.201.119",
+      "server_port": 443,
+      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
+      "tls": {
+        "enabled": true,
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "6f3c1b8e5d2a4f7c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "vless",
+      "server": "45.93.201.119",
+      "server_port": 443,
+      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
+      "tls": {
+        "enabled": true,
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "6f3c1b8e5d2a4f7c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "201.51.12.29",
+      "server_port": 443,
+      "uuid": "a72ca3b6-1a26-47f5-aca3-039bb5539eb4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "s3-m.perecmusic.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Jg7t1GwxpS4fhsYzqgz37zlQRSd8YAHECtgdGFDrnDc",
+          "short_id": "5f6a7b8c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     }
   ],
