@@ -31,152 +31,31 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK-2",
-        "🇵🇱 Poland [*CIDR] VK",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK-3",
-        "🇵🇱 Poland | [*CIDR] VK"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK-2",
-        "🇵🇱 Poland [*CIDR] VK",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK-3",
-        "🇵🇱 Poland | [*CIDR] VK"
+        "ð·ðº Russia | [*CIDR] YA"
       ],
-      "default": "auto",
+      "default": "ð·ðº Russia | [*CIDR] YA",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK",
-      "type": "vless",
-      "server": "37.139.42.235",
-      "server_port": 443,
-      "uuid": "99e5e361-9226-4c43-be77-10c12dd253bc",
+      "tag": "ð·ðº Russia | [*CIDR] YA",
+      "type": "vmess",
+      "server": "158.160.211.200",
+      "server_port": 11556,
+      "uuid": "e2733dbc-1bc6-4835-b90a-447806f9efcd",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "katering.coteite.pro",
         "alpn": [
+          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "katering.coteite.pro"
-        },
-        "path": "/euws"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "37.139.42.235",
-      "server_port": 443,
-      "uuid": "99e5e361-9226-4c43-be77-10c12dd253bc",
-      "tls": {
-        "enabled": true,
-        "server_name": "katering.coteite.pro",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "katering.coteite.pro"
-        },
-        "path": "/euws"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] VK",
-      "type": "vless",
-      "server": "212.233.98.14",
-      "server_port": 443,
-      "uuid": "9e4f675b-d6bf-42d1-be55-389f622783af",
-      "tls": {
-        "enabled": true,
-        "server_name": "chaurma.sowt.app",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "chaurma.sowt.app"
-        },
-        "path": "/gateway/v1/ws/4ce5d6fbd2426f525eb0a536c35f9407"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK-3",
-      "type": "vless",
-      "server": "37.139.42.235",
-      "server_port": 443,
-      "uuid": "99e5e361-9226-4c43-be77-10c12dd253bc",
-      "tls": {
-        "enabled": true,
-        "server_name": "katering.coteite.pro",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "katering.coteite.pro"
-        },
-        "path": "/euws"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR] VK",
-      "type": "vless",
-      "server": "212.233.98.14",
-      "server_port": 443,
-      "uuid": "9e4f675b-d6bf-42d1-be55-389f622783af",
-      "tls": {
-        "enabled": true,
-        "server_name": "chaurma.sowt.app",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "chaurma.sowt.app"
-        },
-        "path": "/gateway/v1/ws/4ce5d6fbd2426f525eb0a536c35f9407"
       }
     }
   ],
