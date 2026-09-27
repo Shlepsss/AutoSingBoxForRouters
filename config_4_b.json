@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | [SNI-RU] hh.ru",
+        "🇩🇪 Germany | [SNI-RU] hh.ru-2",
         "🇳🇱 The Netherlands | [SNI-RU] hh.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] hh.ru-2",
-        "🇬🇧 United Kingdom | [SNI-RU] hh.ru",
-        "🇬🇧 United Kingdom | [SNI-RU] hh.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] hh.ru-3"
+        "🇳🇱 The Netherlands [SNI-RU] hh.ru",
+        "🇩🇪 Germany | [SNI-RU] hh.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,20 +51,44 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | [SNI-RU] hh.ru",
+        "🇩🇪 Germany | [SNI-RU] hh.ru-2",
         "🇳🇱 The Netherlands | [SNI-RU] hh.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] hh.ru-2",
-        "🇬🇧 United Kingdom | [SNI-RU] hh.ru",
-        "🇬🇧 United Kingdom | [SNI-RU] hh.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] hh.ru-3"
+        "🇳🇱 The Netherlands [SNI-RU] hh.ru",
+        "🇩🇪 Germany | [SNI-RU] hh.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] hh.ru",
+      "tag": "🇩🇪 Germany | [SNI-RU] hh.ru",
       "type": "vless",
-      "server": "secret-test-nl1.minetis.net",
+      "server": "secret-test-de1.minetis.net",
       "server_port": 2087,
+      "uuid": "ac9a573b-67ff-4953-9e13-4cf43576f8f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "hh.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "8w1MyEJV4l9QeNWbYMXny5tTLNTw_9nsQ7jOuiQhix4",
+          "short_id": "0123456789abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "game-grpc"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [SNI-RU] hh.ru-2",
+      "type": "vless",
+      "server": "31.76.111.79",
+      "server_port": 443,
       "uuid": "ac9a573b-67ff-4953-9e13-4cf43576f8f0",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -73,16 +97,16 @@
         "reality": {
           "enabled": true,
           "public_key": "8w1MyEJV4l9QeNWbYMXny5tTLNTw_9nsQ7jOuiQhix4",
-          "short_id": "9f8e7d6c5b4a3210"
+          "short_id": "0123456789abcdef"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] hh.ru-2",
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] hh.ru",
       "type": "vless",
       "server": "2.27.7.237",
       "server_port": 2087,
@@ -98,54 +122,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [SNI-RU] hh.ru",
-      "type": "vless",
-      "server": "uk1.avalonvpn.me",
-      "server_port": 443,
-      "uuid": "ac9a573b-67ff-4953-9e13-4cf43576f8f0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "hh.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "8w1MyEJV4l9QeNWbYMXny5tTLNTw_9nsQ7jOuiQhix4",
-          "short_id": "9f8e7d6c5b4a3210"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | [SNI-RU] hh.ru-2",
-      "type": "vless",
-      "server": "uk1.avalonvpn.me",
-      "server_port": 443,
-      "uuid": "ac9a573b-67ff-4953-9e13-4cf43576f8f0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "hh.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "8w1MyEJV4l9QeNWbYMXny5tTLNTw_9nsQ7jOuiQhix4",
-          "short_id": "9f8e7d6c5b4a3210"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] hh.ru-3",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] hh.ru",
       "type": "vless",
       "server": "secret-test-nl1.minetis.net",
       "server_port": 2087,
@@ -161,7 +143,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [SNI-RU] hh.ru-3",
+      "type": "vless",
+      "server": "secret-test-de1.minetis.net",
+      "server_port": 443,
+      "uuid": "ac9a573b-67ff-4953-9e13-4cf43576f8f0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "hh.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "8w1MyEJV4l9QeNWbYMXny5tTLNTw_9nsQ7jOuiQhix4",
+          "short_id": "0123456789abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     }

@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,44 +56,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "entry3.sparxiecn.com",
-      "server_port": 28447,
-      "uuid": "68d89911-b92d-46fe-9007-3645c3b285f0",
+      "server": "161.104.38.98",
+      "server_port": 443,
+      "uuid": "553d8193-d897-0032-bb46-f075b670f22a",
       "tls": {
         "enabled": true,
-        "server_name": "pl.sparxiecn.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "donatov.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
+          "short_id": "8ba6e72ee60667f6"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "pl.sparxiecn.com"
-        },
-        "path": "/lovelive"
       }
     },
     {
@@ -117,22 +111,65 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "161.104.38.98",
+      "server": "185.147.27.120",
       "server_port": 443,
-      "uuid": "553d8193-d897-0032-bb46-f075b670f22a",
+      "uuid": "68d89911-b92d-46fe-9007-3645c3b285f0",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "donatov.net",
+        "server_name": "youtube.sparxiecn.com",
         "reality": {
           "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
+          "public_key": "boyoshgS6sNQ7xgi36ggKQzv_YtAoiFPxMZj-R6XB38",
+          "short_id": "3acbb7d765702da3"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "194.55.235.176",
+      "server_port": 443,
+      "uuid": "68d89911-b92d-46fe-9007-3645c3b285f0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "youtube.sparxiecn.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "boyoshgS6sNQ7xgi36ggKQzv_YtAoiFPxMZj-R6XB38",
+          "short_id": "3acbb7d765702da3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "185.147.27.120",
+      "server_port": 443,
+      "uuid": "68d89911-b92d-46fe-9007-3645c3b285f0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "youtube.sparxiecn.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "boyoshgS6sNQ7xgi36ggKQzv_YtAoiFPxMZj-R6XB38",
+          "short_id": "3acbb7d765702da3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     },
@@ -152,7 +189,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -172,7 +209,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "random"
         }
       }
     },
@@ -192,27 +229,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "553d8193-d897-0032-bb46-f075b670f22a",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       }
     },
@@ -232,47 +249,27 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "553d8193-d897-0032-bb46-f075b670f22a",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "553d8193-d897-0032-bb46-f075b670f22a",
+      "server": "85.209.135.90",
+      "server_port": 8443,
+      "uuid": "4e94bbd3-e785-480a-a945-59d8243e6867",
       "tls": {
         "enabled": true,
-        "server_name": "donatov.net",
+        "server_name": "gw-fe72.strixedge.cc",
         "reality": {
           "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
+          "public_key": "ssTK2ZGSzOApCNRmshpuOprEnZ49PEO3aEZrnFnucms",
+          "short_id": "a2fbd78225b1d008"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     }
