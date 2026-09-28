@@ -31,31 +31,158 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "ð·ðº Russia | [*CIDR] YA"
+        "🇵🇱 Poland | 🌐 [*CIDR] VK",
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK",
+        "🇵🇱 Poland | 🌐 [*CIDR] VK-2",
+        "🇵🇱 Poland | 🌐 [*CIDR] VK-3",
+        "🇵🇱 Poland | 🌐 | [*CIDR] VK"
       ],
-      "default": "ð·ðº Russia | [*CIDR] YA",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA",
-      "type": "vmess",
-      "server": "158.160.211.200",
-      "server_port": 11556,
-      "uuid": "e2733dbc-1bc6-4835-b90a-447806f9efcd",
-      "security": "auto",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇵🇱 Poland | 🌐 [*CIDR] VK",
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK",
+        "🇵🇱 Poland | 🌐 [*CIDR] VK-2",
+        "🇵🇱 Poland | 🌐 [*CIDR] VK-3",
+        "🇵🇱 Poland | 🌐 | [*CIDR] VK"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 [*CIDR] VK",
+      "type": "vless",
+      "server": "entry3.sparxiecn.com",
+      "server_port": 28447,
+      "uuid": "68d89911-b92d-46fe-9007-3645c3b285f0",
       "tls": {
         "enabled": true,
+        "server_name": "pl.sparxiecn.com",
         "alpn": [
           "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pl.sparxiecn.com"
+        },
+        "path": "/lovelive"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.42.235",
+      "server_port": 443,
+      "uuid": "4fbcd67a-1af6-4b82-b8f6-73d0a61c554e",
+      "tls": {
+        "enabled": true,
+        "server_name": "katering.coteite.pro",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "katering.coteite.pro"
+        },
+        "path": "/euws"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 [*CIDR] VK-2",
+      "type": "vless",
+      "server": "entry3.sparxiecn.com",
+      "server_port": 28447,
+      "uuid": "68d89911-b92d-46fe-9007-3645c3b285f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.sparxiecn.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pl.sparxiecn.com"
+        },
+        "path": "/lovelive"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 [*CIDR] VK-3",
+      "type": "vless",
+      "server": "entry3.sparxiecn.com",
+      "server_port": 28447,
+      "uuid": "68d89911-b92d-46fe-9007-3645c3b285f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.sparxiecn.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pl.sparxiecn.com"
+        },
+        "path": "/lovelive"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 | [*CIDR] VK",
+      "type": "vless",
+      "server": "87.239.106.24",
+      "server_port": 28447,
+      "uuid": "68d89911-b92d-46fe-9007-3645c3b285f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.sparxiecn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pl.sparxiecn.com"
+        },
+        "path": "/lovelive"
       }
     }
   ],
