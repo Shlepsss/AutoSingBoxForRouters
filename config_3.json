@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "ð·ðº Russia | [*CIDR] YA",
-        "🇺🇸 United States | [*CIDR] VK",
-        "🇺🇸 United States | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
         "🇺🇸 United States [*CIDR] VK",
-        "🇺🇸 United States | [*CIDR] VK-3"
+        "🇺🇸 United States [*CIDR] VK-2",
+        "🇺🇸 United States | [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,32 +51,79 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "ð·ðº Russia | [*CIDR] YA",
-        "🇺🇸 United States | [*CIDR] VK",
-        "🇺🇸 United States | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
         "🇺🇸 United States [*CIDR] VK",
-        "🇺🇸 United States | [*CIDR] VK-3"
+        "🇺🇸 United States [*CIDR] VK-2",
+        "🇺🇸 United States | [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA",
-      "type": "vmess",
-      "server": "158.160.211.200",
-      "server_port": 11556,
-      "uuid": "e2733dbc-1bc6-4835-b90a-447806f9efcd",
-      "security": "auto",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.42.235",
+      "server_port": 14443,
+      "uuid": "8d2341a3-13b8-4e5e-84e1-da1c4923149a",
       "tls": {
         "enabled": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "katering.coteite.pro",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "katering.coteite.pro"
+        },
+        "path": "/n2ws"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.42.138",
+      "server_port": 443,
+      "uuid": "c16fd1ee-7581-4fe9-aac7-ef7c89a1ddad",
+      "tls": {
+        "enabled": true,
+        "server_name": "dostavitos.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dostavitos.stroymatdv.cc"
+        },
+        "path": "/e5ws"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR] VK-2",
+      "type": "vless",
+      "server": "37.139.42.138",
+      "server_port": 443,
+      "uuid": "c16fd1ee-7581-4fe9-aac7-ef7c89a1ddad",
+      "tls": {
+        "enabled": true,
+        "server_name": "dostavitos.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dostavitos.stroymatdv.cc"
+        },
+        "path": "/e5ws"
       }
     },
     {
@@ -93,7 +140,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "random"
         }
       },
       "transport": {
@@ -105,78 +152,25 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR] VK-2",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK-2",
       "type": "vless",
-      "server": "37.139.42.138",
-      "server_port": 443,
-      "uuid": "c16fd1ee-7581-4fe9-aac7-ef7c89a1ddad",
+      "server": "katering.coteite.pro",
+      "server_port": 14443,
+      "uuid": "8d2341a3-13b8-4e5e-84e1-da1c4923149a",
       "tls": {
         "enabled": true,
-        "server_name": "dostavitos.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "katering.coteite.pro",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "dostavitos.stroymatdv.cc"
+          "Host": "katering.coteite.pro"
         },
-        "path": "/e5ws"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [*CIDR] VK",
-      "type": "vless",
-      "server": "37.139.42.138",
-      "server_port": 443,
-      "uuid": "c16fd1ee-7581-4fe9-aac7-ef7c89a1ddad",
-      "tls": {
-        "enabled": true,
-        "server_name": "dostavitos.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dostavitos.stroymatdv.cc"
-        },
-        "path": "/e5ws"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [*CIDR] VK-3",
-      "type": "vless",
-      "server": "37.139.42.138",
-      "server_port": 443,
-      "uuid": "c16fd1ee-7581-4fe9-aac7-ef7c89a1ddad",
-      "tls": {
-        "enabled": true,
-        "server_name": "dostavitos.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dostavitos.stroymatdv.cc"
-        },
-        "path": "/e5ws"
+        "path": "/n2ws"
       }
     }
   ],
