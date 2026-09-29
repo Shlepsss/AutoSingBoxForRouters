@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3"
+        "🌐 Anycast-IP | 🇮🇷 🇷🇺 [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,101 +51,75 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3"
+        "🌐 Anycast-IP | 🇮🇷 🇷🇺 [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇮🇷 🇷🇺 [*CIDR]",
       "type": "vless",
-      "server": "katering.coteite.pro",
-      "server_port": 14443,
-      "uuid": "8d2341a3-13b8-4e5e-84e1-da1c4923149a",
+      "server": "193.233.247.60",
+      "server_port": 443,
+      "uuid": "5413edfb-08d6-4fba-b51c-809c04feb127",
       "tls": {
         "enabled": true,
-        "server_name": "katering.coteite.pro",
+        "server_name": "www.chitai-gorod.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "c5VEuaQj6ClJwRZvXbXwb2vMBxdye2O-0jHi2Q3NEGU",
+          "short_id": "7e93843097e0c549"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "astracat"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.176",
+      "server_port": 443,
+      "uuid": "3e628fe4-2cbf-4740-9e49-d8b5d9b61916",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn1.pandaonline.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "katering.coteite.pro"
+          "Host": "cdn1.pandaonline.org"
         },
-        "path": "/n2ws"
+        "path": "/stream/119857546/chat"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
       "type": "vless",
-      "server": "86v99n-06.p.portshaper.com",
-      "server_port": 8443,
-      "uuid": "8d2341a3-13b8-4e5e-84e1-da1c4923149a",
-      "tls": {
-        "enabled": true,
-        "server_name": "86v99n-06.p.portshaper.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "PwTWopKMpDawru-Y7AllJMSAORInNOBKuA28h0r9DXE",
-          "short_id": "ba35e449b9e0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "media.ingest.v2.ChunkUploadService"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "45.9.24.199",
-      "server_port": 8443,
-      "uuid": "8d2341a3-13b8-4e5e-84e1-da1c4923149a",
-      "tls": {
-        "enabled": true,
-        "server_name": "shprcdn.homes",
-        "reality": {
-          "enabled": true,
-          "public_key": "PwTWopKMpDawru-Y7AllJMSAORInNOBKuA28h0r9DXE",
-          "short_id": "ba35e449b9e0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "media.ingest.v2.ChunkUploadService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "ru59.mech-pro.online",
-      "server_port": 443,
-      "uuid": "5dff1842-c02f-4dd4-b1ad-2e597b99dc31",
+      "server": "46.17.248.207",
+      "server_port": 52443,
+      "uuid": "a1705606-715d-485d-b311-43538f2b11a6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru59.mech-pro.online",
+        "server_name": "21.stepanofff.ru",
         "reality": {
           "enabled": true,
-          "public_key": "CkA-mj6UVyllbl5b8xaSLFfrB7lCot86GZx2tcMbKn4",
-          "short_id": "c42e96a6"
+          "public_key": "8yvZcJaBbi42WLDx4Tyj5zR1F0kYoD6K4Z92AGX_q3U",
+          "short_id": "96ef80"
         },
         "utls": {
           "enabled": true,
@@ -156,66 +128,49 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]-2",
       "type": "vless",
-      "server": "ru59.mech-pro.online",
-      "server_port": 443,
-      "uuid": "5dff1842-c02f-4dd4-b1ad-2e597b99dc31",
+      "server": "46.17.248.207",
+      "server_port": 52443,
+      "uuid": "a1705606-715d-485d-b311-43538f2b11a6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru59.mech-pro.online",
+        "server_name": "21.stepanofff.ru",
         "reality": {
           "enabled": true,
-          "public_key": "CkA-mj6UVyllbl5b8xaSLFfrB7lCot86GZx2tcMbKn4",
-          "short_id": "c42e96a6"
+          "public_key": "8yvZcJaBbi42WLDx4Tyj5zR1F0kYoD6K4Z92AGX_q3U",
+          "short_id": "96ef80"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇵🇱 Poland | [*CIDR]-2",
       "type": "vless",
-      "server": "ru59.mech-pro.online",
+      "server": "cdn1.pandaonline.org",
       "server_port": 443,
-      "uuid": "5dff1842-c02f-4dd4-b1ad-2e597b99dc31",
-      "flow": "xtls-rprx-vision",
+      "uuid": "3e628fe4-2cbf-4740-9e49-d8b5d9b61916",
       "tls": {
         "enabled": true,
-        "server_name": "ru59.mech-pro.online",
-        "reality": {
-          "enabled": true,
-          "public_key": "CkA-mj6UVyllbl5b8xaSLFfrB7lCot86GZx2tcMbKn4",
-          "short_id": "c42e96a6"
-        },
+        "server_name": "cdn1.pandaonline.org",
+        "alpn": [
+          "h3"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "ru59.mech-pro.online",
-      "server_port": 443,
-      "uuid": "5dff1842-c02f-4dd4-b1ad-2e597b99dc31",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru59.mech-pro.online",
-        "reality": {
-          "enabled": true,
-          "public_key": "CkA-mj6UVyllbl5b8xaSLFfrB7lCot86GZx2tcMbKn4",
-          "short_id": "c42e96a6"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cdn1.pandaonline.org"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
+        "path": "/stream/119857546/chat"
       }
     }
   ],
