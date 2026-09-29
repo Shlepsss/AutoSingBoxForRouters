@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK-3",
-        "🇳🇱 The Netherlands | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇩🇰 Denmark | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇮🇹 Italy | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,125 +51,127 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR] VK-3",
-        "🇳🇱 The Netherlands | [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇩🇰 Denmark | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇮🇹 Italy | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] VK",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "37.139.42.179",
+      "server": "45.9.118.90",
       "server_port": 443,
-      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
+      "uuid": "ff2936d3-caa4-4b79-bb96-1475bd39ceda",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vyvoz-musora.cc",
-        "utls": {
+        "server_name": "sellflow.org",
+        "reality": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "vyvoz-musora.cc"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
-        "path": "/e8ws"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] VK-2",
-      "type": "vless",
-      "server": "vyvoz-musora.cc",
-      "server_port": 443,
-      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
-      "tls": {
-        "enabled": true,
-        "server_name": "vyvoz-musora.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "vyvoz-musora.cc"
-        },
-        "path": "/e8ws"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR] VK",
-      "type": "vless",
-      "server": "37.139.42.179",
-      "server_port": 443,
-      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
-      "tls": {
-        "enabled": true,
-        "server_name": "vyvoz-musora.cc",
         "utls": {
           "enabled": true,
           "fingerprint": "random"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "vyvoz-musora.cc"
-        },
-        "path": "/e8ws"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR] VK-3",
+      "tag": "🇩🇰 Denmark | [*CIDR]",
       "type": "vless",
-      "server": "37.139.42.179",
-      "server_port": 443,
-      "uuid": "365de9e9-ba29-4819-af2d-766f9638e3be",
+      "server": "176.108.244.38",
+      "server_port": 9881,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "vyvoz-musora.cc",
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aabb"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "qq"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "vyvoz-musora.cc"
-        },
-        "path": "/e8ws"
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇱🇹 Lithuania | [*CIDR]",
       "type": "vless",
-      "server": "195.209.219.176",
+      "server": "176.123.165.180",
+      "server_port": 9881,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "45.9.118.90",
       "server_port": 443,
-      "uuid": "Fluffy_VPN-8d7GxL0p",
+      "uuid": "ff2936d3-caa4-4b79-bb96-1475bd39ceda",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "absolute-disaster.org",
+        "server_name": "sellflow.org",
         "reality": {
           "enabled": true,
-          "public_key": "AzPJmJdRCwGXucsY1R-YPZk5xdxRo5IZPAWsA3JWOUI",
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
           "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇮🇹 Italy | [*CIDR]",
+      "type": "vless",
+      "server": "176.108.244.178",
+      "server_port": 9881,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU",
+          "short_id": "aa"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     }
   ],
