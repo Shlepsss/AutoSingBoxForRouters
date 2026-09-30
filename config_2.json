@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇨🇿 Czechia [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-5"
+        "🇫🇷 France | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,85 +53,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇨🇿 Czechia [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-5"
+        "🇫🇷 France | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "hub-main.pleiades.codes",
-      "server_port": 443,
-      "uuid": "e0b9fb0f-1bbd-478b-9580-c2294778338b",
-      "tls": {
-        "enabled": true,
-        "server_name": "hub-main.pleiades.codes",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "cdn.v1.DeService"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.163",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "46.17.41.178",
-      "server_port": 12180,
-      "uuid": "e1f3079a-06e9-4282-a7f0-123378539e7c",
-      "tls": {
-        "enabled": true,
-        "server_name": "it.nvidia.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3j3n6pV48Pe20lNbV3oZwl8Edg0cpD_ayz8Vp3GcfUk",
-          "short_id": "b060d8ad6e2f6dc7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
       "server": "46.17.41.178",
       "server_port": 12180,
@@ -154,6 +88,50 @@
       }
     },
     {
+      "tag": "🇫🇮 Finland | [*CIDR] VK",
+      "type": "vless",
+      "server": "185.241.195.151",
+      "server_port": 9445,
+      "uuid": "2690c11f-7258-43fe-aeb9-d90f93a3c317",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "passport.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "knpcHp05qToF_I4orA_VHFtdv7qGQo9UuzL5wzgXqwI",
+          "short_id": "297866e605155cab"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "46.17.41.178",
+      "server_port": 12180,
+      "uuid": "e1f3079a-06e9-4282-a7f0-123378539e7c",
+      "tls": {
+        "enabled": true,
+        "server_name": "it.nvidia.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "3j3n6pV48Pe20lNbV3oZwl8Edg0cpD_ayz8Vp3GcfUk",
+          "short_id": "b060d8ad6e2f6dc7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
       "type": "vless",
       "server": "46.17.41.178",
@@ -169,11 +147,35 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       },
       "transport": {
         "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia [*CIDR]",
+      "type": "vless",
+      "server": "45.132.176.161",
+      "server_port": 9891,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     },
     {
@@ -200,26 +202,24 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-5",
+      "tag": "🇫🇷 France | [*CIDR]",
       "type": "vless",
-      "server": "46.17.41.178",
-      "server_port": 12180,
-      "uuid": "e1f3079a-06e9-4282-a7f0-123378539e7c",
+      "server": "87.242.94.28",
+      "server_port": 2443,
+      "uuid": "5da95c12-3fb6-4846-bb7e-2be2441267b1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "it.nvidia.com",
+        "server_name": "cloudcdn-m9-9.cdn.yandex.net",
         "reality": {
           "enabled": true,
-          "public_key": "3j3n6pV48Pe20lNbV3oZwl8Edg0cpD_ayz8Vp3GcfUk",
-          "short_id": "b060d8ad6e2f6dc7"
+          "public_key": "uVBnwRHxC00G__KwRjBul-KLyS2F0PNwGQZJy5hwxEw",
+          "short_id": "744283eabd1dade6"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     }
   ],
