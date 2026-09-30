@@ -31,67 +31,26 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK-2"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK-2"
+        "🇷🇺 Russia [*CIDR] VK"
       ],
-      "default": "auto",
+      "default": "🇷🇺 Russia [*CIDR] VK",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "37.139.42.187",
-      "server_port": 8088,
-      "uuid": "64017d58-1297-4cd0-9a9b-4ec325f411f8",
+      "server": "185.241.195.218",
+      "server_port": 443,
+      "uuid": "f9f5a72c-c299-4d98-b2ad-d04aba3c7b1f",
       "tls": {
         "enabled": true,
-        "server_name": "pic.rutubelist.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "PAP10NLpy_4J_vf1CEtDuLJtce3pLSNhHLbuuAUXqBU",
-          "short_id": "a1b2c3d4"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "media.ingest.v2.ChunkUploadService"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "37.139.42.187",
-      "server_port": 8088,
-      "uuid": "64017d58-1297-4cd0-9a9b-4ec325f411f8",
-      "tls": {
-        "enabled": true,
-        "server_name": "pic.rutubelist.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "PAP10NLpy_4J_vf1CEtDuLJtce3pLSNhHLbuuAUXqBU",
-          "short_id": "a1b2c3d4"
-        },
+        "server_name": "cdn0.s3-rus.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -99,7 +58,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "media.ingest.v2.ChunkUploadService"
+        "service_name": "vlgrpc"
       }
     }
   ],
