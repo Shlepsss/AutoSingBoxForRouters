@@ -31,34 +31,133 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR] VK"
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | [*CIDR] YA-3",
+        "🇳🇱 The Netherlands | [*CIDR] YA-4",
+        "🇳🇱 The Netherlands | [*CIDR] YA-5"
       ],
-      "default": "🇷🇺 Russia [*CIDR] VK",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | [*CIDR] YA-3",
+        "🇳🇱 The Netherlands | [*CIDR] YA-4",
+        "🇳🇱 The Netherlands | [*CIDR] YA-5"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
       "type": "vless",
-      "server": "185.241.195.218",
+      "server": "84.201.180.13",
       "server_port": 443,
-      "uuid": "f9f5a72c-c299-4d98-b2ad-d04aba3c7b1f",
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
       "tls": {
         "enabled": true,
-        "server_name": "cdn0.s3-rus.ru",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vlgrpc"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
+      "type": "vless",
+      "server": "84.201.180.13",
+      "server_port": 443,
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-3",
+      "type": "vless",
+      "server": "84.201.180.13",
+      "server_port": 443,
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-4",
+      "type": "vless",
+      "server": "84.201.180.13",
+      "server_port": 443,
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-5",
+      "type": "vless",
+      "server": "84.201.180.13",
+      "server_port": 443,
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     }
   ],

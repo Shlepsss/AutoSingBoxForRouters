@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-3"
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,43 +51,59 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-3"
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
       "type": "vless",
-      "server": "ru.karzino-connected.com",
+      "server": "84.201.180.13",
       "server_port": 443,
-      "uuid": "c47d9a64-5237-4386-bb5b-a5d0d312cab9",
-      "flow": "xtls-rprx-vision",
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
       "tls": {
         "enabled": true,
-        "server_name": "ru.karzino-connected.com",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "v78yAb9eo19LuR0e08mB_cnAS-QLlvqRkEZoKs7q2mU",
-          "short_id": "30e530274c0c72cc"
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 | [*CIDR]",
+      "type": "vless",
+      "server": "ru4.pleiades.codes",
+      "server_port": 443,
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru4.pleiades.codes",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.NlService"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
       "server": "176.108.247.31",
       "server_port": 9844,
@@ -107,7 +118,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "type": "vless",
+      "server": "176.108.247.31",
+      "server_port": 9844,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -116,162 +152,22 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
       "type": "vless",
-      "server": "ru.karzino-connected.com",
+      "server": "84.201.180.13",
       "server_port": 443,
-      "uuid": "c47d9a64-5237-4386-bb5b-a5d0d312cab9",
-      "flow": "xtls-rprx-vision",
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
       "tls": {
         "enabled": true,
-        "server_name": "ru.karzino-connected.com",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "v78yAb9eo19LuR0e08mB_cnAS-QLlvqRkEZoKs7q2mU",
-          "short_id": "30e530274c0c72cc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "ru.karzino-connected.com",
-      "server_port": 443,
-      "uuid": "c47d9a64-5237-4386-bb5b-a5d0d312cab9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.karzino-connected.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "v78yAb9eo19LuR0e08mB_cnAS-QLlvqRkEZoKs7q2mU",
-          "short_id": "30e530274c0c72cc"
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "assets-us.pleiades.codes",
-      "server_port": 443,
-      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets-us.pleiades.codes",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "cdn.v1.NlService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "46.8.208.70",
-      "server_port": 8445,
-      "uuid": "7c86240f-ac0c-4cfe-87c8-fa0dd69b2d25",
-      "tls": {
-        "enabled": true,
-        "server_name": "m-vrutw-e.mvpstr.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "46.8.208.70",
-      "server_port": 8445,
-      "uuid": "7c86240f-ac0c-4cfe-87c8-fa0dd69b2d25",
-      "tls": {
-        "enabled": true,
-        "server_name": "m-vrutw-e.mvpstr.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "ru.karzino-connected.com",
-      "server_port": 443,
-      "uuid": "c47d9a64-5237-4386-bb5b-a5d0d312cab9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "v78yAb9eo19LuR0e08mB_cnAS-QLlvqRkEZoKs7q2mU",
-          "short_id": "30e530274c0c72cc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "ru.karzino-connected.com",
-      "server_port": 443,
-      "uuid": "c47d9a64-5237-4386-bb5b-a5d0d312cab9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.karzino-connected.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "v78yAb9eo19LuR0e08mB_cnAS-QLlvqRkEZoKs7q2mU",
-          "short_id": "30e530274c0c72cc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "ru.karzino-connected.com",
-      "server_port": 443,
-      "uuid": "c47d9a64-5237-4386-bb5b-a5d0d312cab9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "v78yAb9eo19LuR0e08mB_cnAS-QLlvqRkEZoKs7q2mU",
-          "short_id": "30e530274c0c72cc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     }
