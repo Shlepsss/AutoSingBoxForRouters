@@ -34,13 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇷🇸 Serbia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
+        "🇦🇹 Austria [*CIDR]",
+        "🇫🇷 France | 🌐 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,90 +51,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇷🇸 Serbia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
+        "🇦🇹 Austria [*CIDR]",
+        "🇫🇷 France | 🌐 | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "62.109.19.28",
-      "server_port": 443,
-      "uuid": "e6261601-0ba9-465d-9c70-6c8b4e47c7e4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "duckduckgo.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "IxFbqmfuwejYSKYu69qBnzG9yWSuf7UjHujXWOO_w34",
-          "short_id": "9137d914cd770b54"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇸 Serbia | [*CIDR]",
-      "type": "vless",
-      "server": "45.132.177.96",
-      "server_port": 9889,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "46.17.41.178",
-      "server_port": 12180,
-      "uuid": "e1f3079a-06e9-4282-a7f0-123378539e7c",
+      "server": "burnblue.duckdns.org",
+      "server_port": 8443,
+      "uuid": "6eb642a2-f8ee-47cc-9c13-fabb0a50350d",
       "tls": {
         "enabled": true,
-        "server_name": "it.nvidia.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3j3n6pV48Pe20lNbV3oZwl8Edg0cpD_ayz8Vp3GcfUk",
-          "short_id": "b060d8ad6e2f6dc7"
-        },
+        "server_name": "burnblue.duckdns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       },
       "transport": {
-        "type": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "burnblue.duckdns.org"
+        },
+        "path": "/vless"
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇦🇹 Austria [*CIDR]",
       "type": "vless",
-      "server": "176.108.241.126",
-      "server_port": 9892,
+      "server": "176.109.109.105",
+      "server_port": 9830,
       "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
@@ -157,72 +107,74 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "46.17.41.178",
-      "server_port": 12180,
-      "uuid": "e1f3079a-06e9-4282-a7f0-123378539e7c",
+      "server": "176.109.108.244",
+      "server_port": 9880,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "it.nvidia.com",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "3j3n6pV48Pe20lNbV3oZwl8Edg0cpD_ayz8Vp3GcfUk",
-          "short_id": "b060d8ad6e2f6dc7"
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabb"
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "burnblue.duckdns.org",
+      "server_port": 8443,
+      "uuid": "6eb642a2-f8ee-47cc-9c13-fabb0a50350d",
+      "tls": {
+        "enabled": true,
+        "server_name": "burnblue.duckdns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "burnblue.duckdns.org"
+        },
+        "path": "/vless"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "cdn14.pandaonline.org",
+      "server_port": 443,
+      "uuid": "26c0e78b-9d55-409a-9b40-b0ed7b187825",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn14.pandaonline.org",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "46.17.41.178",
-      "server_port": 12180,
-      "uuid": "e1f3079a-06e9-4282-a7f0-123378539e7c",
-      "tls": {
-        "enabled": true,
-        "server_name": "it.nvidia.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3j3n6pV48Pe20lNbV3oZwl8Edg0cpD_ayz8Vp3GcfUk",
-          "short_id": "b060d8ad6e2f6dc7"
+        "type": "ws",
+        "headers": {
+          "Host": "cdn14.pandaonline.org"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-      "type": "vless",
-      "server": "46.17.41.178",
-      "server_port": 12180,
-      "uuid": "e1f3079a-06e9-4282-a7f0-123378539e7c",
-      "tls": {
-        "enabled": true,
-        "server_name": "it.nvidia.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3j3n6pV48Pe20lNbV3oZwl8Edg0cpD_ayz8Vp3GcfUk",
-          "short_id": "b060d8ad6e2f6dc7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc"
+        "path": "/stream/119857546/chat"
       }
     }
   ],
