@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2",
-        "🇦🇹 Austria [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇧🇻 Bouvet Island | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,36 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2",
-        "🇦🇹 Austria [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇧🇻 Bouvet Island | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "burnblue.duckdns.org",
-      "server_port": 8443,
-      "uuid": "6eb642a2-f8ee-47cc-9c13-fabb0a50350d",
-      "tls": {
-        "enabled": true,
-        "server_name": "burnblue.duckdns.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "burnblue.duckdns.org"
-        },
-        "path": "/vless"
-      }
     },
     {
       "tag": "🇵🇱 Poland | [*CIDR]",
@@ -98,7 +80,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -107,73 +89,122 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "176.108.241.126",
-      "server_port": 9892,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "159.194.244.132",
+      "server_port": 47160,
+      "uuid": "bfa9f30d-357a-480d-9ff9-ef4dbc891343",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "admin.intand.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
+          "public_key": "DRxBiZFrywyVJE3HruA1StzL1UpXUy5QDJzFx1CCiQQ",
+          "short_id": "dc634eee960b39"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇦🇹 Austria [*CIDR]",
+      "tag": "🇧🇻 Bouvet Island | [*CIDR]",
       "type": "vless",
-      "server": "176.109.109.105",
-      "server_port": 9830,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "188.68.218.37",
+      "server_port": 8443,
+      "uuid": "d13baced-948a-40d7-be31-7b44fa768552",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "rumulti.federal-usa.com",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
+          "public_key": "J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs",
+          "short_id": "6b2f4e6ac9b1d2f0"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "201.34.136.200",
+      "server_port": 443,
+      "uuid": "8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-bridge-1-832.mirra.now",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "VideoRenderer"
       }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "burnblue.duckdns.org",
-      "server_port": 8443,
-      "uuid": "6eb642a2-f8ee-47cc-9c13-fabb0a50350d",
+      "server": "159.194.244.132",
+      "server_port": 47160,
+      "uuid": "bfa9f30d-357a-480d-9ff9-ef4dbc891343",
       "tls": {
         "enabled": true,
-        "server_name": "burnblue.duckdns.org",
+        "server_name": "admin.intand.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DRxBiZFrywyVJE3HruA1StzL1UpXUy5QDJzFx1CCiQQ",
+          "short_id": "dc634eee960b39"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "burnblue.duckdns.org"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "159.194.244.132",
+      "server_port": 47160,
+      "uuid": "bfa9f30d-357a-480d-9ff9-ef4dbc891343",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.intand.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DRxBiZFrywyVJE3HruA1StzL1UpXUy5QDJzFx1CCiQQ",
+          "short_id": "dc634eee960b39"
         },
-        "path": "/vless"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "type": "vless",
+      "server": "159.194.244.132",
+      "server_port": 47160,
+      "uuid": "bfa9f30d-357a-480d-9ff9-ef4dbc891343",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.intand.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DRxBiZFrywyVJE3HruA1StzL1UpXUy5QDJzFx1CCiQQ",
+          "short_id": "dc634eee960b39"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],

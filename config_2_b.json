@@ -35,10 +35,12 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇳🇴 Norway | [*CIDR]",
-        "🇦🇹 Austria [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇨🇭 Switzerland | [*CIDR]"
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇨🇭 Switzerland | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇧🇻 Bouvet Island | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +54,12 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇳🇴 Norway | [*CIDR]",
-        "🇦🇹 Austria [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇨🇭 Switzerland | [*CIDR]"
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇨🇭 Switzerland | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇧🇻 Bouvet Island | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,54 +67,69 @@
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "burnblue.duckdns.org",
-      "server_port": 8443,
-      "uuid": "6eb642a2-f8ee-47cc-9c13-fabb0a50350d",
+      "server": "159.194.244.132",
+      "server_port": 47160,
+      "uuid": "bfa9f30d-357a-480d-9ff9-ef4dbc891343",
       "tls": {
         "enabled": true,
-        "server_name": "burnblue.duckdns.org",
+        "server_name": "admin.intand.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DRxBiZFrywyVJE3HruA1StzL1UpXUy5QDJzFx1CCiQQ",
+          "short_id": "dc634eee960b39"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "burnblue.duckdns.org"
-        },
-        "path": "/vless"
       }
     },
     {
-      "tag": "🇳🇴 Norway | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "176.108.247.76",
-      "server_port": 9881,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "159.194.244.132",
+      "server_port": 47160,
+      "uuid": "bfa9f30d-357a-480d-9ff9-ef4dbc891343",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "admin.intand.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
-          "short_id": ""
+          "public_key": "DRxBiZFrywyVJE3HruA1StzL1UpXUy5QDJzFx1CCiQQ",
+          "short_id": "dc634eee960b39"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR] VK",
+      "type": "vless",
+      "server": "90.156.218.163",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇦🇹 Austria [*CIDR]",
+      "tag": "🇨🇭 Switzerland | [*CIDR]",
       "type": "vless",
-      "server": "176.109.109.105",
-      "server_port": 9830,
+      "server": "45.132.177.83",
+      "server_port": 9882,
       "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
@@ -118,11 +137,11 @@
         "reality": {
           "enabled": true,
           "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aa"
+          "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -131,50 +150,63 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "burnblue.duckdns.org",
-      "server_port": 8443,
-      "uuid": "6eb642a2-f8ee-47cc-9c13-fabb0a50350d",
+      "server": "159.194.244.132",
+      "server_port": 47160,
+      "uuid": "bfa9f30d-357a-480d-9ff9-ef4dbc891343",
       "tls": {
         "enabled": true,
-        "server_name": "burnblue.duckdns.org",
-        "utls": {
+        "server_name": "admin.intand.ru",
+        "reality": {
           "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "burnblue.duckdns.org"
+          "public_key": "DRxBiZFrywyVJE3HruA1StzL1UpXUy5QDJzFx1CCiQQ",
+          "short_id": "dc634eee960b39"
         },
-        "path": "/vless"
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland | [*CIDR]",
-      "type": "vless",
-      "server": "shop.covwkfjpa.top",
-      "server_port": 443,
-      "uuid": "86583e54-ee9a-4747-9470-cf756c469ab0",
-      "tls": {
-        "enabled": true,
-        "server_name": "shop.covwkfjpa.top",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "shop.covwkfjpa.top"
+      }
+    },
+    {
+      "tag": "🇧🇻 Bouvet Island | [*CIDR]",
+      "type": "vless",
+      "server": "rumultt.federal-usa.com",
+      "server_port": 8443,
+      "uuid": "d13baced-948a-40d7-be31-7b44fa768552",
+      "tls": {
+        "enabled": true,
+        "server_name": "rumulti.federal-usa.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs",
+          "short_id": "6b2f4e6ac9b1d2f0"
         },
-        "path": "/t3zrxM9pTZfnSYV87Ls0cAWEX"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "type": "vless",
+      "server": "159.194.244.132",
+      "server_port": 47160,
+      "uuid": "bfa9f30d-357a-480d-9ff9-ef4dbc891343",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.intand.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DRxBiZFrywyVJE3HruA1StzL1UpXUy5QDJzFx1CCiQQ",
+          "short_id": "dc634eee960b39"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
     }
   ],
