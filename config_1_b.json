@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia [*CIDR]-7",
+        "🇷🇺 Russia [*CIDR] Beeline",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,28 +56,32 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia [*CIDR]-7",
+        "🇷🇺 Russia [*CIDR] Beeline",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
       "type": "vless",
-      "server": "ru-svo-1.blook.network",
-      "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
+      "server": "9micenasralnakover.net",
+      "server_port": 2053,
+      "uuid": "90222ccf-7b15-49ed-9d1a-6b536df844ab",
       "tls": {
         "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
+        "server_name": "9micenasralnakover.net",
         "alpn": [
-          "h3"
+          "h2",
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
@@ -83,97 +90,165 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "176.114.86.163",
-      "server_port": 8081,
-      "uuid": "b4090350-b91f-4920-b5c0-c3ffd2798534",
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "189.74.106.52",
-      "server_port": 443,
-      "uuid": "08203b91-9e5e-4072-adea-ee2b8afc0498",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.setevoyprostor.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "ru-svo-1.blook.network",
-      "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "ru-svo-1.blook.network",
-      "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "176.114.86.222",
-      "server_port": 8081,
-      "uuid": "b4090350-b91f-4920-b5c0-c3ffd2798534",
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
-      "type": "vless",
-      "server": "ru-svo-1.blook.network",
+      "server": "91.215.40.198",
       "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
+      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
       "tls": {
         "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
+        "server_name": "ya-gaming-guard-1.harknmav.fun",
         "alpn": [
-          "h3"
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "91.215.40.114",
+      "server_port": 443,
+      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya-gaming-guard-9.harknmav.fun",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "91.215.40.118",
+      "server_port": 443,
+      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya-gaming-guard-3.harknmav.fun",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "type": "vless",
+      "server": "91.215.40.74",
+      "server_port": 443,
+      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya-gaming-guard-6.harknmav.fun",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "type": "vless",
+      "server": "91.215.40.134",
+      "server_port": 443,
+      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya-gaming-guard-7.harknmav.fun",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "type": "vless",
+      "server": "91.215.40.122",
+      "server_port": 443,
+      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya-gaming-guard-8.harknmav.fun",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-7",
+      "type": "vless",
+      "server": "91.215.40.194",
+      "server_port": 443,
+      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya-gaming-guard-4.harknmav.fun",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] Beeline",
+      "type": "vless",
+      "server": "66.90.92.150",
+      "server_port": 443,
+      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "tls": {
+        "enabled": true,
+        "server_name": "fdc-1.harknmav.fun",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
+      "type": "vless",
+      "server": "birthdaysale.net",
+      "server_port": 443,
+      "uuid": "90222ccf-7b15-49ed-9d1a-6b536df844ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "birthdaysale.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
