@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru-2",
-        "🇫🇮 Finland [SNI-RU] start.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru-3"
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com",
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-2",
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-3",
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,27 +50,49 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru-2",
-        "🇫🇮 Finland [SNI-RU] start.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru-3"
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com",
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-2",
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-3",
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com",
       "type": "vless",
-      "server": "150.241.101.41",
-      "server_port": 8448,
-      "uuid": "e147ea33-7a27-4073-b33c-dfb91c5c7063",
+      "server": "198.55.102.59",
+      "server_port": 4443,
+      "uuid": "7f86f371-5a85-48be-babc-7af1ae7ffb75",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "5a7gJ2ukZ5NPECAks1GHvsg-lVDXVp0W6mCHQ00_cVw",
-          "short_id": "e02b44b0419d931c"
+          "public_key": "9gYnZLxZAPxIKzu9e-cOLBpbCn9p9og9gBodOCh5HB8",
+          "short_id": "ce6767c3f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-2",
+      "type": "vless",
+      "server": "198.55.102.59",
+      "server_port": 4443,
+      "uuid": "7f86f371-5a85-48be-babc-7af1ae7ffb75",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "9gYnZLxZAPxIKzu9e-cOLBpbCn9p9og9gBodOCh5HB8",
+          "short_id": "ce6767c3f1"
         },
         "utls": {
           "enabled": true,
@@ -79,18 +101,19 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-3",
       "type": "vless",
-      "server": "150.241.101.41",
-      "server_port": 8448,
-      "uuid": "e147ea33-7a27-4073-b33c-dfb91c5c7063",
+      "server": "198.55.102.59",
+      "server_port": 4443,
+      "uuid": "7f86f371-5a85-48be-babc-7af1ae7ffb75",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "5a7gJ2ukZ5NPECAks1GHvsg-lVDXVp0W6mCHQ00_cVw",
-          "short_id": "e02b44b0419d931c"
+          "public_key": "9gYnZLxZAPxIKzu9e-cOLBpbCn9p9og9gBodOCh5HB8",
+          "short_id": "ce6767c3f1"
         },
         "utls": {
           "enabled": true,
@@ -99,43 +122,23 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] start.ru",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇮🇪 | [SNI-RU] vk.com-4",
       "type": "vless",
-      "server": "144.31.150.185",
-      "server_port": 443,
-      "uuid": "49c8e76e-7e52-426a-8669-51d93c7a6d12",
+      "server": "198.55.102.59",
+      "server_port": 4443,
+      "uuid": "7f86f371-5a85-48be-babc-7af1ae7ffb75",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "start.ru",
+        "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "Z1_596gzjw7TiPAhowugetKeotIJzLGHA41Fu5Re3WE",
-          "short_id": "410a04029b24"
+          "public_key": "9gYnZLxZAPxIKzu9e-cOLBpbCn9p9og9gBodOCh5HB8",
+          "short_id": "ce6767c3f1"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] api-maps.yandex.ru-3",
-      "type": "vless",
-      "server": "150.241.101.41",
-      "server_port": 8448,
-      "uuid": "e147ea33-7a27-4073-b33c-dfb91c5c7063",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "5a7gJ2ukZ5NPECAks1GHvsg-lVDXVp0W6mCHQ00_cVw",
-          "short_id": "e02b44b0419d931c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       }
     }

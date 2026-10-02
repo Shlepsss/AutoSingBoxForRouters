@@ -35,10 +35,12 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 Poland | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇫🇷 France | 🌐 | [*CIDR]-2",
-        "🇸🇪 Sweden | [*CIDR]"
+        "🇦🇲 Armenia | [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇦🇹 Austria [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +54,12 @@
       "outbounds": [
         "auto",
         "🇵🇱 Poland | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇫🇷 France | 🌐 | [*CIDR]-2",
-        "🇸🇪 Sweden | [*CIDR]"
+        "🇦🇲 Armenia | [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇦🇹 Austria [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,17 +67,60 @@
     {
       "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
-      "server": "185.91.52.191",
-      "server_port": 443,
-      "uuid": "d01e89b1-e260-4d30-a363-4a46ff3f9627",
+      "server": "176.108.241.126",
+      "server_port": 9892,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aabb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇦🇲 Armenia | [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.42.225",
+      "server_port": 7448,
+      "uuid": "4643976f-85fa-40cf-9e58-ea28b50f253b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "QkLK7zt-xvRvN9Dysl2eiN9Z5_8uRDS2r9LRcKG-H28",
-          "short_id": "27e53bbcab7593d7"
+          "public_key": "V-wRiXvhBx01utmXJbrThJ_DE4tNJfK6mnzo9EB3fVA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "188.225.25.22",
+      "server_port": 443,
+      "uuid": "4643976f-85fa-40cf-9e58-ea28b50f253b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "EGtADikSkaFxgD3pnzm2qqM299GfxMV7ZJs1_NewK30",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -82,17 +129,30 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "135.106.223.241",
-      "server_port": 563,
-      "uuid": "1b719dea-8174-4c27-ae5b-d0d41e227da0"
+      "server": "188.225.25.22",
+      "server_port": 443,
+      "uuid": "4643976f-85fa-40cf-9e58-ea28b50f253b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "EGtADikSkaFxgD3pnzm2qqM299GfxMV7ZJs1_NewK30",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
+      "tag": "🇦🇹 Austria [*CIDR]",
       "type": "vless",
-      "server": "176.109.108.244",
-      "server_port": 9880,
+      "server": "176.109.109.105",
+      "server_port": 9830,
       "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
@@ -113,51 +173,43 @@
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "176.109.108.244",
-      "server_port": 9880,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "188.225.25.22",
+      "server_port": 443,
+      "uuid": "4643976f-85fa-40cf-9e58-ea28b50f253b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
+          "public_key": "EGtADikSkaFxgD3pnzm2qqM299GfxMV7ZJs1_NewK30",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
       "type": "vless",
-      "server": "45.132.176.157",
-      "server_port": 9872,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "188.225.25.22",
+      "server_port": 443,
+      "uuid": "4643976f-85fa-40cf-9e58-ea28b50f253b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc",
-          "short_id": "aa"
+          "public_key": "EGtADikSkaFxgD3pnzm2qqM299GfxMV7ZJs1_NewK30",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     }
   ],
