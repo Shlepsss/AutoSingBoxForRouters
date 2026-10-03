@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "🇧🇾 Belarus [*CIDR]",
+        "🇨🇭 Switzerland [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR] Beeline",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK"
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,200 +51,123 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "🇧🇾 Belarus [*CIDR]",
+        "🇨🇭 Switzerland [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR] Beeline",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK"
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+      "tag": "🇧🇾 Belarus [*CIDR]",
       "type": "vless",
-      "server": "9micenasralnakover.net",
-      "server_port": 2053,
-      "uuid": "90222ccf-7b15-49ed-9d1a-6b536df844ab",
+      "server": "by-msq-2.blook.network",
+      "server_port": 443,
+      "uuid": "f9a2e475-0c03-4eb4-8680-0c69f90af8ae",
       "tls": {
         "enabled": true,
-        "server_name": "9micenasralnakover.net",
+        "server_name": "by-msq-2.blook.network",
         "alpn": [
-          "h2",
-          "http/1.1"
+          "h3"
         ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "type": "vless",
+      "server": "45.132.176.161",
+      "server_port": 9882,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "91.218.230.180",
+      "server_port": 443,
+      "uuid": "3f2e96a9-f1c5-42ad-bccc-24c5a10e5afe",
+      "tls": {
+        "enabled": true,
+        "server_name": "ihk.astmatik.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "WpELepEh3W_oM6vcGaiSpVYJ021GRwihXXouYDQVW0k",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
         }
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "91.215.40.198",
+      "server": "45.93.201.119",
       "server_port": 443,
-      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
       "tls": {
         "enabled": true,
-        "server_name": "ya-gaming-guard-1.harknmav.fun",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "6f3c1b8e5d2a4f7c"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "91.215.40.114",
+      "server": "45.93.201.119",
       "server_port": 443,
-      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
+      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
       "tls": {
         "enabled": true,
-        "server_name": "ya-gaming-guard-9.harknmav.fun",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "6f3c1b8e5d2a4f7c"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "91.215.40.118",
-      "server_port": 443,
-      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya-gaming-guard-3.harknmav.fun",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "91.215.40.74",
-      "server_port": 443,
-      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya-gaming-guard-6.harknmav.fun",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
-      "type": "vless",
-      "server": "91.215.40.134",
-      "server_port": 443,
-      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya-gaming-guard-7.harknmav.fun",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
-      "type": "vless",
-      "server": "91.215.40.122",
-      "server_port": 443,
-      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya-gaming-guard-8.harknmav.fun",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-7",
-      "type": "vless",
-      "server": "91.215.40.194",
-      "server_port": 443,
-      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya-gaming-guard-4.harknmav.fun",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] Beeline",
-      "type": "vless",
-      "server": "66.90.92.150",
-      "server_port": 443,
-      "uuid": "1e73cbd1-82b0-4df2-90da-552e62368f07",
-      "tls": {
-        "enabled": true,
-        "server_name": "fdc-1.harknmav.fun",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "birthdaysale.net",
-      "server_port": 443,
-      "uuid": "90222ccf-7b15-49ed-9d1a-6b536df844ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "birthdaysale.net",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
       }
     }
   ],

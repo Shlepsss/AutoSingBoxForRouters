@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇺 Luxembourg [SNI-RU] vk.com",
+        "🇫🇮 Finland | 🌐 [SNI-RU] ya.ru",
         "🇱🇺 Luxembourg [SNI-RU] vk.com-2",
         "🇱🇺 Luxembourg [SNI-RU] vk.com-3",
-        "🇱🇺 Luxembourg [SNI-RU] vk.com-4",
-        "🇱🇺 Luxembourg [SNI-RU] vk.com-5"
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [SNI-RU] ya.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇱🇺 Luxembourg [SNI-RU] vk.com",
+        "🇫🇮 Finland | 🌐 [SNI-RU] ya.ru",
         "🇱🇺 Luxembourg [SNI-RU] vk.com-2",
         "🇱🇺 Luxembourg [SNI-RU] vk.com-3",
-        "🇱🇺 Luxembourg [SNI-RU] vk.com-4",
-        "🇱🇺 Luxembourg [SNI-RU] vk.com-5"
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [SNI-RU] ya.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -76,12 +76,33 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "haknewhpjmv"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | 🌐 [SNI-RU] ya.ru",
+      "type": "vless",
+      "server": "fistulinainocybes.mycel.su",
+      "server_port": 1443,
+      "uuid": "612ace20-eddd-4756-a99f-fe4d96c22d06",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wFv8qnlmYqtxpo8m9Hp-ldEGhCNDHAdFF4Ku-S6Wr0Y",
+          "short_id": "75d0b3b084a919f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
@@ -124,60 +145,32 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "haknewhpjmv"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 [SNI-RU] ya.ru",
+      "type": "vless",
+      "server": "135.136.178.36",
+      "server_port": 443,
+      "uuid": "88c5cf5c-2910-4e57-91ff-6dd1ad6ecc44",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "J0wsOjbRgcuh0_Btlci3kQoXM9LBGL8lvD5IPftExS8",
+          "short_id": "5563d518"
+        },
+        "utls": {
+          "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "haknewhpjmv"
-      }
-    },
-    {
-      "tag": "🇱🇺 Luxembourg [SNI-RU] vk.com-4",
-      "type": "vless",
-      "server": "lbeiggdz.smart-cats.ru",
-      "server_port": 443,
-      "uuid": "8325bd97-b77c-4917-acaa-2446e9e8cc03",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY",
-          "short_id": "79651ae525860543"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "haknewhpjmv"
-      }
-    },
-    {
-      "tag": "🇱🇺 Luxembourg [SNI-RU] vk.com-5",
-      "type": "vless",
-      "server": "193.57.88.7",
-      "server_port": 443,
-      "uuid": "8325bd97-b77c-4917-acaa-2446e9e8cc03",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY",
-          "short_id": "79651ae525860543"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "haknewhpjmv"
       }
     }
   ],

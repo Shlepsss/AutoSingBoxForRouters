@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 Poland [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇫🇮 Finland [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN"
+        "🇵🇱 Poland [*CIDR] VK-2",
+        "🇵🇱 Poland [*CIDR] VK-3",
+        "🇦🇲 Armenia [*CIDR] VK",
+        "🇫🇮 Finland [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇵🇱 Poland [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇫🇮 Finland [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN"
+        "🇵🇱 Poland [*CIDR] VK-2",
+        "🇵🇱 Poland [*CIDR] VK-3",
+        "🇦🇲 Armenia [*CIDR] VK",
+        "🇫🇮 Finland [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -77,23 +77,66 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
+      "tag": "🇵🇱 Poland [*CIDR] VK-2",
       "type": "vless",
-      "server": "birthdaysale.net",
+      "server": "90.156.218.163",
       "server_port": 443,
-      "uuid": "90222ccf-7b15-49ed-9d1a-6b536df844ab",
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "birthdaysale.net",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR] VK-3",
+      "type": "vless",
+      "server": "90.156.218.163",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇦🇲 Armenia [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.42.225",
+      "server_port": 7448,
+      "uuid": "4643976f-85fa-40cf-9e58-ea28b50f253b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "V-wRiXvhBx01utmXJbrThJ_DE4tNJfK6mnzo9EB3fVA",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -109,12 +152,9 @@
       "tls": {
         "enabled": true,
         "server_name": "fin1.centermass.net",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -123,50 +163,6 @@
           "Host": "fin1.centermass.net"
         },
         "path": "media.playback.v1.SessionGateway"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
-      "type": "vless",
-      "server": "apis.stroymatdv.cc",
-      "server_port": 443,
-      "uuid": "696c3dae-26ac-46d2-b4a3-81324824ecf3",
-      "tls": {
-        "enabled": true,
-        "server_name": "apis.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "apis.stroymatdv.cc"
-        },
-        "path": "/amsws"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-      "type": "vless",
-      "server": "9micenasralnakover.net",
-      "server_port": 2053,
-      "uuid": "90222ccf-7b15-49ed-9d1a-6b536df844ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "9micenasralnakover.net",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     }
   ],
