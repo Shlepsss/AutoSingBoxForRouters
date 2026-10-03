@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇪🇸 Spain | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇺🇸 United States [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇸🇪 Sweden | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,42 +53,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇪🇸 Spain | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇺🇸 United States [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇸🇪 Sweden | [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "ytnoads.applepie-recipe.ru",
+      "server": "ru-svo-1.blook.network",
       "server_port": 443,
-      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
-      "flow": "xtls-rprx-vision",
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
       "tls": {
         "enabled": true,
-        "server_name": "kings.applepie-recipe.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇸 Spain | [*CIDR]",
-      "type": "vless",
-      "server": "es-01.avroraservice.online",
-      "server_port": 443,
-      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
-      "tls": {
-        "enabled": true,
-        "server_name": "es-01.avroraservice.online",
+        "server_name": "ru-svo-1.blook.network",
         "alpn": [
-          "h2"
+          "h3"
         ],
         "utls": {
           "enabled": true,
@@ -95,31 +83,96 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "ytnoads.applepie-recipe.ru",
+      "server": "ru-svo-1.blook.network",
       "server_port": 443,
-      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
-      "flow": "xtls-rprx-vision",
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
       "tls": {
         "enabled": true,
-        "server_name": "kings.applepie-recipe.ru",
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇬🇧 United Kingdom | [*CIDR]",
       "type": "vless",
-      "server": "ytnoads.applepie-recipe.ru",
+      "server": "84.38.181.249",
       "server_port": 443,
-      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
-      "flow": "xtls-rprx-vision",
+      "uuid": "9737cc16-7266-45ce-94d9-6e05a45e0b9c",
       "tls": {
         "enabled": true,
-        "server_name": "kings.applepie-recipe.ru",
+        "server_name": "open.spotify.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "pyZ0M0nE3aGx2UtCXNhajcneyCF4E8J3zpxhIKkQw0w",
+          "short_id": "6bc02f1c474260c3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "ru-svo-1.blook.network",
+      "server_port": 443,
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden | [*CIDR]",
+      "type": "vless",
+      "server": "185.147.26.218",
+      "server_port": 443,
+      "uuid": "195c005f-ec14-5d06-885c-02fb42575608",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "jgFG50Yuw5A-La-S54Sge3vnkF3N0GVH6ZDXg15CbHg",
+          "short_id": "58a148ca1ae650b1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "ru-svo-1.blook.network",
+      "server_port": 443,
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "android"
@@ -127,25 +180,21 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "213.171.31.34",
-      "server_port": 5002,
-      "uuid": "8e8ea5d2-6941-40fb-9efe-f9062b11b2b9",
+      "server": "ru-svo-1.blook.network",
+      "server_port": 443,
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
       "tls": {
         "enabled": true,
-        "server_name": "us.centermass.net",
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "us.centermass.net"
-        },
-        "path": "media.playback.v1.SessionGateway"
       }
     }
   ],
