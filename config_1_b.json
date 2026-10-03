@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🌐 Anycast-IP | 🇪🇪 🇫🇮 [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇸🇪 Sweden [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,98 +53,124 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🌐 Anycast-IP | 🇪🇪 🇫🇮 [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇸🇪 Sweden [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "185.147.26.218",
+      "server": "ru-svo-1.blook.network",
       "server_port": 443,
-      "uuid": "195c005f-ec14-5d06-885c-02fb42575608",
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "ru-svo-1.blook.network",
+      "server_port": 443,
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR] VK",
+      "type": "vless",
+      "server": "90.156.218.163",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "jgFG50Yuw5A-La-S54Sge3vnkF3N0GVH6ZDXg15CbHg",
-          "short_id": "58a148ca1ae650b1"
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇸🇪 Sweden [*CIDR]",
       "type": "vless",
-      "server": "62.152.58.90",
+      "server": "161.104.38.98",
       "server_port": 443,
-      "uuid": "1bb2af63-4472-44ed-9c70-8f316258b68b",
+      "uuid": "bcd297ab-f064-0031-a659-5d7f90075fa8",
       "tls": {
         "enabled": true,
-        "server_name": "360.yandex.ru",
+        "server_name": "donatov.net",
         "reality": {
           "enabled": true,
-          "public_key": "JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k",
-          "short_id": "27e53bbcab7593d7"
+          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
+          "short_id": "8ba6e72ee60667f6"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇪🇪 🇫🇮 [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "185.147.26.218",
+      "server": "ru-svo-1.blook.network",
       "server_port": 443,
-      "uuid": "195c005f-ec14-5d06-885c-02fb42575608",
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "jgFG50Yuw5A-La-S54Sge3vnkF3N0GVH6ZDXg15CbHg",
-          "short_id": "58a148ca1ae650b1"
-        },
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "android"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
       "type": "vless",
-      "server": "84.38.181.249",
+      "server": "ru-svo-1.blook.network",
       "server_port": 443,
-      "uuid": "9737cc16-7266-45ce-94d9-6e05a45e0b9c",
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
       "tls": {
         "enabled": true,
-        "server_name": "open.spotify.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "pyZ0M0nE3aGx2UtCXNhajcneyCF4E8J3zpxhIKkQw0w",
-          "short_id": "6bc02f1c474260c3"
-        },
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
@@ -150,26 +178,21 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "62.152.58.90",
+      "server": "ru-svo-1.blook.network",
       "server_port": 443,
-      "uuid": "1bb2af63-4472-44ed-9c70-8f316258b68b",
+      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
       "tls": {
         "enabled": true,
-        "server_name": "360.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k",
-          "short_id": "27e53bbcab7593d7"
-        },
+        "server_name": "ru-svo-1.blook.network",
+        "alpn": [
+          "h3"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     }
   ],
