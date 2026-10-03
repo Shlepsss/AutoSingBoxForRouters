@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇾 Belarus [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇪🇸 Spain | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇺🇸 United States [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,123 +51,101 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇾 Belarus [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇪🇸 Spain | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇺🇸 United States [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇾 Belarus [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "by-msq-2.blook.network",
+      "server": "ytnoads.applepie-recipe.ru",
       "server_port": 443,
-      "uuid": "f9a2e475-0c03-4eb4-8680-0c69f90af8ae",
+      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "by-msq-2.blook.network",
+        "server_name": "kings.applepie-recipe.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇸 Spain | [*CIDR]",
+      "type": "vless",
+      "server": "es-01.avroraservice.online",
+      "server_port": 443,
+      "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
+      "tls": {
+        "enabled": true,
+        "server_name": "es-01.avroraservice.online",
         "alpn": [
-          "h3"
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "45.132.176.161",
-      "server_port": 9882,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "ytnoads.applepie-recipe.ru",
+      "server_port": 443,
+      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
-        },
+        "server_name": "kings.applepie-recipe.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "ytnoads.applepie-recipe.ru",
+      "server_port": 443,
+      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "kings.applepie-recipe.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]",
+      "type": "vless",
+      "server": "213.171.31.34",
+      "server_port": 5002,
+      "uuid": "8e8ea5d2-6941-40fb-9efe-f9062b11b2b9",
+      "tls": {
+        "enabled": true,
+        "server_name": "us.centermass.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "91.218.230.180",
-      "server_port": 443,
-      "uuid": "3f2e96a9-f1c5-42ad-bccc-24c5a10e5afe",
-      "tls": {
-        "enabled": true,
-        "server_name": "ihk.astmatik.xyz",
-        "reality": {
-          "enabled": true,
-          "public_key": "WpELepEh3W_oM6vcGaiSpVYJ021GRwihXXouYDQVW0k",
-          "short_id": ""
+        "type": "ws",
+        "headers": {
+          "Host": "us.centermass.net"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "45.93.201.119",
-      "server_port": 443,
-      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
-      "tls": {
-        "enabled": true,
-        "server_name": "vir2albridge.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
-          "short_id": "6f3c1b8e5d2a4f7c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "moktana.net.v1.StreamService"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "45.93.201.119",
-      "server_port": 443,
-      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
-      "tls": {
-        "enabled": true,
-        "server_name": "vir2albridge.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
-          "short_id": "6f3c1b8e5d2a4f7c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "moktana.net.v1.StreamService"
+        "path": "media.playback.v1.SessionGateway"
       }
     }
   ],

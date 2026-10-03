@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇺 Luxembourg [*CIDR]",
         "🇺🇸 United States [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇺🇸 United States [*CIDR]-2"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,39 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇺 Luxembourg [*CIDR]",
         "🇺🇸 United States [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇺🇸 United States [*CIDR]-2"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇱🇺 Luxembourg [*CIDR]",
-      "type": "vless",
-      "server": "176.108.242.55",
-      "server_port": 5002,
-      "uuid": "8e8ea5d2-6941-40fb-9efe-f9062b11b2b9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lm.centermass.net",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lm.centermass.net"
-        },
-        "path": "media.playback.v1.SessionGateway"
-      }
     },
     {
       "tag": "🇺🇸 United States [*CIDR]",
@@ -99,7 +74,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -111,73 +86,58 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "45.93.201.119",
+      "server": "ytnoads.applepie-recipe.ru",
       "server_port": 443,
-      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
+      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vir2albridge.com",
-        "reality": {
+        "server_name": "kings.applepie-recipe.ru",
+        "utls": {
           "enabled": true,
-          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
-          "short_id": "6f3c1b8e5d2a4f7c"
-        },
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "136.234.6.45",
+      "server_port": 66,
+      "uuid": "fd50d2ef-da2e-48ed-9f75-707b520240a7"
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "ytnoads.applepie-recipe.ru",
+      "server_port": 443,
+      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "kings.applepie-recipe.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "moktana.net.v1.StreamService"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "45.93.201.119",
+      "server": "ytnoads.applepie-recipe.ru",
       "server_port": 443,
-      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
+      "uuid": "27fca5d5-e918-437b-9955-cb96bd544e34",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vir2albridge.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
-          "short_id": "6f3c1b8e5d2a4f7c"
-        },
+        "server_name": "kings.applepie-recipe.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "moktana.net.v1.StreamService"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [*CIDR]-2",
-      "type": "vless",
-      "server": "213.171.31.34",
-      "server_port": 5002,
-      "uuid": "8e8ea5d2-6941-40fb-9efe-f9062b11b2b9",
-      "tls": {
-        "enabled": true,
-        "server_name": "us.centermass.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "us.centermass.net"
-        },
-        "path": "media.playback.v1.SessionGateway"
       }
     }
   ],
