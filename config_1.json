@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇸🇪 Sweden [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+        "🇵🇱 Poland [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,30 +53,78 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR]",
-        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-        "🇸🇪 Sweden [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+        "🇵🇱 Poland [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "62.152.58.90",
+      "server": "45.93.201.119",
       "server_port": 443,
-      "uuid": "1bb2af63-4472-44ed-9c70-8f316258b68b",
+      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
       "tls": {
         "enabled": true,
-        "server_name": "360.yandex.ru",
+        "server_name": "vir2albridge.com",
         "reality": {
           "enabled": true,
-          "public_key": "JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k",
-          "short_id": "27e53bbcab7593d7"
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "6f3c1b8e5d2a4f7c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "45.93.201.119",
+      "server_port": 443,
+      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
+      "tls": {
+        "enabled": true,
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "6f3c1b8e5d2a4f7c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "45.93.201.119",
+      "server_port": 443,
+      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
+      "tls": {
+        "enabled": true,
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "6f3c1b8e5d2a4f7c"
         },
         "utls": {
           "enabled": true,
@@ -84,93 +132,25 @@
         }
       },
       "transport": {
-        "type": "grpc"
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "ru-svo-1.blook.network",
+      "server": "api.mediapriboy.cc",
       "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
+      "uuid": "b0a05ac4-eade-4f26-a514-bdae074bd63b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
+        "server_name": "api.mediapriboy.cc",
+        "reality": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "ru-svo-1.blook.network",
-      "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "ru-svo-1.blook.network",
-      "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "ru-svo-1.blook.network",
-      "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "ru-svo-1.blook.network",
-      "server_port": 443,
-      "uuid": "1c1baccf-91e0-4ba0-8965-9c8d022c9a98",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-svo-1.blook.network",
-        "alpn": [
-          "h3"
-        ],
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -178,23 +158,69 @@
       }
     },
     {
-      "tag": "🇸🇪 Sweden [*CIDR]",
+      "tag": "🇵🇱 Poland [*CIDR] VK",
       "type": "vless",
-      "server": "161.104.38.98",
+      "server": "90.156.218.163",
       "server_port": 443,
-      "uuid": "bcd297ab-f064-0031-a659-5d7f90075fa8",
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "donatov.net",
+        "server_name": "eh.vk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "189.74.114.117",
+      "server_port": 443,
+      "uuid": "b0a05ac4-eade-4f26-a514-bdae074bd63b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.mediapriboy.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "vless",
+      "server": "45.93.201.119",
+      "server_port": 443,
+      "uuid": "10394279-283c-4ab8-8529-f1e0a4c61bc8",
+      "tls": {
+        "enabled": true,
+        "server_name": "vir2albridge.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
+          "short_id": "6f3c1b8e5d2a4f7c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
       }
     }
   ],
