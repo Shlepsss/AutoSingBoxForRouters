@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
-        "🇸🇪 Sweden [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
-        "🇸🇪 Sweden [*CIDR]-2"
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]-3",
+        "🇬🇧 United Kingdom [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,57 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
-        "🇸🇪 Sweden [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
-        "🇸🇪 Sweden [*CIDR]-2"
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]-3",
+        "🇬🇧 United Kingdom [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "185.147.26.218",
-      "server_port": 443,
-      "uuid": "195c005f-ec14-5d06-885c-02fb42575608",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "jgFG50Yuw5A-La-S54Sge3vnkF3N0GVH6ZDXg15CbHg",
-          "short_id": "58a148ca1ae650b1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden [*CIDR]",
-      "type": "vless",
-      "server": "161.104.38.98",
-      "server_port": 443,
-      "uuid": "bcd297ab-f064-0031-a659-5d7f90075fa8",
-      "tls": {
-        "enabled": true,
-        "server_name": "donatov.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
     },
     {
       "tag": "🇵🇱 Poland | [*CIDR]",
@@ -119,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "random"
         }
       },
       "transport": {
@@ -127,18 +84,39 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]-2",
+      "tag": "🇬🇧 United Kingdom [*CIDR]",
       "type": "vless",
-      "server": "185.147.26.218",
+      "server": "84.38.181.249",
       "server_port": 443,
-      "uuid": "195c005f-ec14-5d06-885c-02fb42575608",
+      "uuid": "9737cc16-7266-45ce-94d9-6e05a45e0b9c",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
+        "insecure": true,
+        "server_name": "open.spotify.com",
         "reality": {
           "enabled": true,
-          "public_key": "jgFG50Yuw5A-La-S54Sge3vnkF3N0GVH6ZDXg15CbHg",
-          "short_id": "58a148ca1ae650b1"
+          "public_key": "pyZ0M0nE3aGx2UtCXNhajcneyCF4E8J3zpxhIKkQw0w",
+          "short_id": "6bc02f1c474260c3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "type": "vless",
+      "server": "62.152.58.90",
+      "server_port": 443,
+      "uuid": "1bb2af63-4472-44ed-9c70-8f316258b68b",
+      "tls": {
+        "enabled": true,
+        "server_name": "360.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k",
+          "short_id": "27e53bbcab7593d7"
         },
         "utls": {
           "enabled": true,
@@ -150,18 +128,42 @@
       }
     },
     {
-      "tag": "🇸🇪 Sweden [*CIDR]-2",
+      "tag": "🇵🇱 Poland | [*CIDR]-3",
       "type": "vless",
-      "server": "161.104.38.98",
+      "server": "62.152.58.90",
       "server_port": 443,
-      "uuid": "bcd297ab-f064-0031-a659-5d7f90075fa8",
+      "uuid": "1bb2af63-4472-44ed-9c70-8f316258b68b",
       "tls": {
         "enabled": true,
-        "server_name": "donatov.net",
+        "server_name": "360.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "kYwdZueXQt_DEKPrWTw8yoj6G4AWqupg8UrWjAgWbkE",
-          "short_id": "8ba6e72ee60667f6"
+          "public_key": "JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k",
+          "short_id": "27e53bbcab7593d7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [*CIDR]-2",
+      "type": "vless",
+      "server": "84.38.181.249",
+      "server_port": 443,
+      "uuid": "9737cc16-7266-45ce-94d9-6e05a45e0b9c",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "open.spotify.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "pyZ0M0nE3aGx2UtCXNhajcneyCF4E8J3zpxhIKkQw0w",
+          "short_id": "6bc02f1c474260c3"
         },
         "utls": {
           "enabled": true,
