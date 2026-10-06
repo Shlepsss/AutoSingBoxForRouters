@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇺🇸 United States | 🌐 [*CIDR]"
+        "🇨🇿 Czechia [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇨🇭 Switzerland [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,121 +51,124 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇺🇸 United States | 🌐 [*CIDR]"
+        "🇨🇿 Czechia [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇨🇭 Switzerland [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇨🇿 Czechia [*CIDR]",
       "type": "vless",
-      "server": "de12.h1cloud.net",
-      "server_port": 25089,
-      "uuid": "95003356-20f9-4c84-a21f-2f9c1fc285eb",
+      "server": "45.132.176.169",
+      "server_port": 9892,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "www.chip.de",
+        "server_name": "amd.com",
         "reality": {
           "enabled": true,
-          "public_key": "3ZxTHjZ8XHP2aYzLEKUPI3xQ5jYQYrSrIEXlUlULUEA",
-          "short_id": "56d9d9fba348e5e6"
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "de12.h1cloud.net",
-      "server_port": 25095,
-      "uuid": "95003356-20f9-4c84-a21f-2f9c1fc285eb",
+      "server": "84.38.183.237",
+      "server_port": 443,
+      "uuid": "9737cc16-7266-45ce-94d9-6e05a45e0b9c",
       "tls": {
         "enabled": true,
-        "server_name": "www.chip.de",
+        "server_name": "ws.nightproducts.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ws.nightproducts.ru"
+        },
+        "path": "/vless"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "fi.alpheratzz.org",
+      "server_port": 443,
+      "uuid": "20ef7310-0b50-4943-98a6-3d0856b383b1",
+      "tls": {
+        "enabled": true,
+        "server_name": "20ef7310.ferrin.uk",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "type": "vless",
+      "server": "45.132.176.169",
+      "server_port": 9882,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "amd.com",
         "reality": {
           "enabled": true,
-          "public_key": "pvXuNe35fkSbA-CVmh6_b3ADAXLY8tBONjnwE8HM8yY",
-          "short_id": "397c81bed08f3f78"
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "f3d967fe8981"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "nl.alpheratzz.org",
-      "server_port": 8443,
-      "uuid": "20ef7310-0b50-4943-98a6-3d0856b383b1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vusr-6ac431f4.adhil.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
+        "service_name": "grpc-tunnel"
       }
     },
     {
       "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
-      "server": "45.132.176.12",
-      "server_port": 9892,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "62.152.58.90",
+      "server_port": 443,
+      "uuid": "1bb2af63-4472-44ed-9c70-8f316258b68b",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "360.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
+          "public_key": "JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k",
+          "short_id": "27e53bbcab7593d7"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "qq"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "45.132.176.125",
-      "server_port": 9873,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "type": "grpc"
       }
     }
   ],

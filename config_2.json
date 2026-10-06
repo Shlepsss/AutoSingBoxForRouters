@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇿 Kazakhstan | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇮🇹 Italy [*CIDR]",
+        "🇵🇱 Poland | [*CIDR] VK-2",
         "🇩🇪 Germany | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇰🇿 Kazakhstan [*CIDR]"
+        "🇨🇭 Switzerland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,37 +51,79 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇿 Kazakhstan | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇮🇹 Italy [*CIDR]",
+        "🇵🇱 Poland | [*CIDR] VK-2",
         "🇩🇪 Germany | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇰🇿 Kazakhstan [*CIDR]"
+        "🇨🇭 Switzerland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇰🇿 Kazakhstan | [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR] VK",
       "type": "vless",
-      "server": "45.132.176.125",
-      "server_port": 9882,
+      "server": "90.156.218.163",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇮🇹 Italy [*CIDR]",
+      "type": "vless",
+      "server": "45.132.176.225",
+      "server_port": 9881,
       "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
         "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "public_key": "ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU",
           "short_id": "aabb"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "90.156.218.163",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -109,62 +151,22 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇨🇭 Switzerland | [*CIDR]",
       "type": "vless",
-      "server": "45.132.176.125",
+      "server": "45.132.176.169",
       "server_port": 9882,
       "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "amd.com",
         "reality": {
           "enabled": true,
           "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
+          "short_id": "aa"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "196.240.125.253",
-      "server_port": 8443,
-      "uuid": "20ef7310-0b50-4943-98a6-3d0856b383b1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vusr-6ac431f4.adhil.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇰🇿 Kazakhstan [*CIDR]",
-      "type": "vless",
-      "server": "45.132.176.125",
-      "server_port": 9882,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       },
       "transport": {
