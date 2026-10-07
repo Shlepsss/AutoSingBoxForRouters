@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK-2",
-        "🇵🇱 Poland [*CIDR] VK",
-        "🇵🇱 Poland | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK-3"
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK-2",
-        "🇵🇱 Poland [*CIDR] VK",
-        "🇵🇱 Poland | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK-3"
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA-2",
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,115 +63,110 @@
     {
       "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
       "type": "vless",
-      "server": "212.233.96.51",
-      "server_port": 8443,
-      "uuid": "ea673263-b469-4e69-9bbe-9becd6045ac9",
+      "server": "37.139.42.221",
+      "server_port": 443,
+      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
       "tls": {
         "enabled": true,
-        "server_name": "chain.files-converter.sbs",
+        "server_name": "apis.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "apis.stroymatdv.cc"
+        },
+        "path": "/amsws"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.135.77",
+      "server_port": 443,
+      "uuid": "57a6de33-cb7e-4ac3-96b3-8ed01915c354",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "yTjn1uZ7oX30mlZSDQvNEMlvNI-MdP5O2k1B9G4gsGw",
-          "short_id": "57e424"
+          "public_key": "z4ZddzhbeCYDng09RnRL7lEqFGdc-Sb5mQJNHn-2USA",
+          "short_id": ""
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA-2",
+      "type": "vless",
+      "server": "84.201.135.77",
+      "server_port": 443,
+      "uuid": "57a6de33-cb7e-4ac3-96b3-8ed01915c354",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "z4ZddzhbeCYDng09RnRL7lEqFGdc-Sb5mQJNHn-2USA",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "type": "vless",
+      "server": "apis.stroymatdv.cc",
+      "server_port": 443,
+      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "apis.stroymatdv.cc",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "apis.stroymatdv.cc"
+        },
+        "path": "/amsws"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
+      "type": "vless",
+      "server": "37.139.42.221",
+      "server_port": 443,
+      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "apis.stroymatdv.cc",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "GunService"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "212.233.96.51",
-      "server_port": 8443,
-      "uuid": "ea673263-b469-4e69-9bbe-9becd6045ac9",
-      "tls": {
-        "enabled": true,
-        "server_name": "chain.files-converter.sbs",
-        "reality": {
-          "enabled": true,
-          "public_key": "yTjn1uZ7oX30mlZSDQvNEMlvNI-MdP5O2k1B9G4gsGw",
-          "short_id": "57e424"
+        "type": "ws",
+        "headers": {
+          "Host": "apis.stroymatdv.cc"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "GunService"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.163",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.163",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-3",
-      "type": "vless",
-      "server": "212.233.96.51",
-      "server_port": 8443,
-      "uuid": "ea673263-b469-4e69-9bbe-9becd6045ac9",
-      "tls": {
-        "enabled": true,
-        "server_name": "chain.files-converter.sbs",
-        "reality": {
-          "enabled": true,
-          "public_key": "yTjn1uZ7oX30mlZSDQvNEMlvNI-MdP5O2k1B9G4gsGw",
-          "short_id": "57e424"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "GunService"
+        "path": "/amsws"
       }
     }
   ],
