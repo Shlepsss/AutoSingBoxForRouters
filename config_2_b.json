@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland [*CIDR]",
-        "🇮🇹 Italy | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
         "🇵🇱 Poland | [*CIDR] VK",
-        "🇩🇪 Germany | [*CIDR]-2"
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇨🇭 Switzerland [*CIDR]",
+        "🇫🇮 Finland [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,77 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland [*CIDR]",
-        "🇮🇹 Italy | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
         "🇵🇱 Poland | [*CIDR] VK",
-        "🇩🇪 Germany | [*CIDR]-2"
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇨🇭 Switzerland [*CIDR]",
+        "🇫🇮 Finland [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇫🇮 Finland [*CIDR]",
-      "type": "vless",
-      "server": "fi.alpheratzz.org",
-      "server_port": 443,
-      "uuid": "20ef7310-0b50-4943-98a6-3d0856b383b1",
-      "tls": {
-        "enabled": true,
-        "server_name": "20ef7310.ferrin.uk",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "185.147.26.57",
-      "server_port": 443,
-      "uuid": "2b781b4a-5942-0017-a7f3-5a07b7b488c1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "pro-br-gen.sworkingvpn.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "qB4kX0ku3vRfvd4Ftwedbsj7m2bUmKdXFqKA0Ks-gmM",
-          "short_id": "15bcc0a77c3cacdf"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "de12.h1cloud.net",
-      "server_port": 25095,
-      "uuid": "95003356-20f9-4c84-a21f-2f9c1fc285eb",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.chip.de",
-        "reality": {
-          "enabled": true,
-          "public_key": "pvXuNe35fkSbA-CVmh6_b3ADAXLY8tBONjnwE8HM8yY",
-          "short_id": "397c81bed08f3f78"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "f3d967fe8981"
-      }
     },
     {
       "tag": "🇵🇱 Poland | [*CIDR] VK",
@@ -140,30 +77,77 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]-2",
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "nl-2a972c8052.shamanapp.online",
+      "server_port": 33736,
+      "uuid": "1281acca-f21d-475c-bf04-eccbee7f8df2",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ws"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
-      "server": "84.38.183.237",
+      "server": "107.150.93.54",
       "server_port": 443,
-      "uuid": "9737cc16-7266-45ce-94d9-6e05a45e0b9c",
+      "uuid": "20ef7310-0b50-4943-98a6-3d0856b383b1",
       "tls": {
         "enabled": true,
-        "server_name": "ws.nightproducts.ru",
+        "server_name": "20ef7310.ferrin.uk",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "type": "vless",
+      "server": "45.132.176.169",
+      "server_port": 9882,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ws.nightproducts.ru"
-        },
-        "path": "/vless"
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "107.150.93.54",
+      "server_port": 443,
+      "uuid": "20ef7310-0b50-4943-98a6-3d0856b383b1",
+      "tls": {
+        "enabled": true,
+        "server_name": "20ef7310.ferrin.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     }
   ],
