@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇰🇿 Kazakhstan | 🌐 | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇫🇷 France | 🌐 [*CIDR]"
+        "🇧🇪 Belgium | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,77 +51,53 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]",
-        "🇮🇹 Italy | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇰🇿 Kazakhstan | 🌐 | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇫🇷 France | 🌐 [*CIDR]"
+        "🇧🇪 Belgium | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR] VK",
       "type": "vless",
-      "server": "31.131.251.17",
+      "server": "90.156.218.163",
       "server_port": 443,
-      "uuid": "9ea8b000-58ce-0050-b108-989dd4f248f1",
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "quatro.lmstream.org",
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇮🇹 Italy | [*CIDR]",
+      "tag": "🇰🇿 Kazakhstan | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "45.132.176.225",
-      "server_port": 9881,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "82.97.207.21",
+      "server_port": 443,
+      "uuid": "52b82846-8428-40a6-b6ea-56c48e59b8e4",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU",
-          "short_id": "aabb"
-        },
+        "server_name": "cdn-nsk-01.uiu.fyi",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "random"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇮🇹 Italy | [*CIDR]-2",
-      "type": "vless",
-      "server": "45.132.176.225",
-      "server_port": 9881,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU",
-          "short_id": "aa"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
@@ -135,7 +111,7 @@
         "server_name": "apis.stroymatdv.cc",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -147,25 +123,46 @@
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]",
+      "tag": "🇧🇪 Belgium | [*CIDR]",
       "type": "vless",
-      "server": "80.68.156.187",
+      "server": "fru01.tunnely.space",
       "server_port": 443,
-      "uuid": "b585dc5e-55bf-4a8b-913a-27c9ccac05c3",
+      "uuid": "7a15879c-383f-44ea-a9c1-904b95ae529b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "bab-6.site",
+        "server_name": "free01.tunnely.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "mChFHtaRmeuO2aDuDPqZvBFaCz6f34sVJIKuJcAR130",
+          "short_id": "d1694c220d4b13e7"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.42.221",
+      "server_port": 443,
+      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "apis.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "bab-6.site"
+          "Host": "apis.stroymatdv.cc"
         },
-        "path": "/vws/"
+        "path": "/amsws"
       }
     }
   ],
