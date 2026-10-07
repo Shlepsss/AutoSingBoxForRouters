@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇧🇻 Bouvet Island | [*CIDR] YA",
         "🇳🇱 The Netherlands [*CIDR] VK",
         "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] VK-2",
-        "🇳🇱 The Netherlands [*CIDR] VK-2"
+        "🇳🇱 The Netherlands [*CIDR] VK-2",
+        "🇳🇱 The Netherlands [*CIDR] VK-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,30 +51,48 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇧🇻 Bouvet Island | [*CIDR] YA",
         "🇳🇱 The Netherlands [*CIDR] VK",
         "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] VK-2",
-        "🇳🇱 The Netherlands [*CIDR] VK-2"
+        "🇳🇱 The Netherlands [*CIDR] VK-2",
+        "🇳🇱 The Netherlands [*CIDR] VK-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇧🇻 Bouvet Island | [*CIDR] YA",
+      "type": "vless",
+      "server": "84.252.132.76",
+      "server_port": 443,
+      "uuid": "961a77fd-fe35-4037-b541-e5dd056702bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ioNALPZqERtuEf-HOZHM_N58HT-fjufOAdavUyPwiXA",
+          "short_id": "499660fadb16a200"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "tag": "🇳🇱 The Netherlands [*CIDR] VK",
       "type": "vless",
-      "server": "apis.stroymatdv.cc",
+      "server": "37.139.42.221",
       "server_port": 443,
       "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
       "tls": {
         "enabled": true,
         "server_name": "apis.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -88,54 +106,15 @@
     {
       "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
       "type": "vless",
-      "server": "37.139.42.221",
+      "server": "apis.stroymatdv.cc",
       "server_port": 443,
       "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
       "tls": {
         "enabled": true,
         "server_name": "apis.stroymatdv.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "apis.stroymatdv.cc"
-        },
-        "path": "/amsws"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.135.77",
-      "server_port": 443,
-      "uuid": "57a6de33-cb7e-4ac3-96b3-8ed01915c354",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "z4ZddzhbeCYDng09RnRL7lEqFGdc-Sb5mQJNHn-2USA",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "37.139.42.221",
-      "server_port": 443,
-      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
-      "tls": {
-        "enabled": true,
-        "server_name": "apis.stroymatdv.cc",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
@@ -152,6 +131,28 @@
     {
       "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
       "type": "vless",
+      "server": "37.139.42.221",
+      "server_port": 443,
+      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "apis.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "apis.stroymatdv.cc"
+        },
+        "path": "/amsws"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK-3",
+      "type": "vless",
       "server": "apis.stroymatdv.cc",
       "server_port": 443,
       "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
@@ -163,7 +164,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       },
       "transport": {
