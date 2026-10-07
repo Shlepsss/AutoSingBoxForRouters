@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland [*CIDR]",
-        "🇵🇱 Poland [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR]",
-        "🇵🇱 Poland [*CIDR] VK-2",
-        "🇨🇭 Switzerland [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,99 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland [*CIDR]",
-        "🇵🇱 Poland [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR]",
-        "🇵🇱 Poland [*CIDR] VK-2",
-        "🇨🇭 Switzerland [*CIDR]"
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "31.128.38.55",
+      "server_port": 443,
+      "uuid": "b332511e-f90b-4435-a867-2227eacf1e8a",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-trace.palm-network.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ru-trace.palm-network.ru"
+        },
+        "path": "/ws"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "31.128.38.55",
+      "server_port": 443,
+      "uuid": "b332511e-f90b-4435-a867-2227eacf1e8a",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-trace.palm-network.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ru-trace.palm-network.ru"
+        },
+        "path": "/ws"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "31.128.38.55",
+      "server_port": 443,
+      "uuid": "b332511e-f90b-4435-a867-2227eacf1e8a",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-trace.palm-network.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ru-trace.palm-network.ru"
+        },
+        "path": "/ws"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "nl.alpheratzz.org",
+      "server_port": 8443,
+      "uuid": "20ef7310-0b50-4943-98a6-3d0856b383b1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vusr-6ac431f4.adhil.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
       "server": "fi.alpheratzz.org",
       "server_port": 443,
@@ -74,95 +156,8 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.163",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "189.74.106.55",
-      "server_port": 443,
-      "uuid": "b0eed7cb-72e2-4bf5-8668-b803deb5dd47",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.setevoyprostor.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] VK-2",
-      "type": "vless",
-      "server": "90.156.218.163",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
-      "type": "vless",
-      "server": "45.132.176.169",
-      "server_port": 9882,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "amd.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aa"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     }
   ],
