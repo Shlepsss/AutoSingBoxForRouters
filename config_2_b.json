@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | [*CIDR] VK",
         "🇮🇹 Italy [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇵🇱 Poland [*CIDR]"
+        "🇵🇱 Poland | [*CIDR]",
+        "🇧🇪 Belgium | [*CIDR]",
+        "🇫🇷 France | [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,35 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | [*CIDR] VK",
         "🇮🇹 Italy [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇵🇱 Poland [*CIDR]"
+        "🇵🇱 Poland | [*CIDR]",
+        "🇧🇪 Belgium | [*CIDR]",
+        "🇫🇷 France | [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR] VK",
-      "type": "vless",
-      "server": "90.156.218.163",
-      "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
     },
     {
       "tag": "🇮🇹 Italy [*CIDR]",
@@ -106,48 +85,7 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "31.131.251.17",
-      "server_port": 443,
-      "uuid": "9ea8b000-58ce-001e-b108-989dd4f248f1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "quatro.lmstream.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
-      "type": "vless",
-      "server": "apis.stroymatdv.cc",
-      "server_port": 443,
-      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
-      "tls": {
-        "enabled": true,
-        "server_name": "apis.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "apis.stroymatdv.cc"
-        },
-        "path": "/amsws"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
       "server": "45.132.176.190",
       "server_port": 9892,
@@ -162,12 +100,65 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇧🇪 Belgium | [*CIDR]",
+      "type": "vless",
+      "server": "193.233.48.10",
+      "server_port": 443,
+      "uuid": "9d1ec776-9fca-4f8b-ac76-c6e26cf8bbe7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "free07.tunnely.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "mChFHtaRmeuO2aDuDPqZvBFaCz6f34sVJIKuJcAR130",
+          "short_id": "d1694c220d4b13e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [*CIDR]",
+      "type": "vless",
+      "server": "31.131.251.17",
+      "server_port": 443,
+      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "quatro.lmstream.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
+      "type": "vless",
+      "server": "31.131.251.17",
+      "server_port": 443,
+      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "quatro.lmstream.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
     }
   ],
