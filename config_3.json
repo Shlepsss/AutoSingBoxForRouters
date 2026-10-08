@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | [*CIDR] VK",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK-2",
         "🇳🇱 The Netherlands [*CIDR] VK-2",
-        "🇳🇱 The Netherlands [*CIDR] VK-3"
+        "🇳🇱 The Netherlands [*CIDR] VK-3",
+        "🇳🇱 The Netherlands [*CIDR] VK-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,36 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | [*CIDR] VK",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK-2",
         "🇳🇱 The Netherlands [*CIDR] VK-2",
-        "🇳🇱 The Netherlands [*CIDR] VK-3"
+        "🇳🇱 The Netherlands [*CIDR] VK-3",
+        "🇳🇱 The Netherlands [*CIDR] VK-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR] VK",
+      "type": "vless",
+      "server": "212.233.96.28",
+      "server_port": 443,
+      "uuid": "9e9b0c09-dc28-4888-9b21-888a93541987",
+      "tls": {
+        "enabled": true,
+        "server_name": "beryi.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "beryi.pro"
+        },
+        "path": "/de7ws"
+      }
     },
     {
       "tag": "🇳🇱 The Netherlands [*CIDR] VK",
@@ -71,51 +93,7 @@
         "server_name": "apis.stroymatdv.cc",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "apis.stroymatdv.cc"
-        },
-        "path": "/amsws"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "37.139.42.221",
-      "server_port": 443,
-      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
-      "tls": {
-        "enabled": true,
-        "server_name": "apis.stroymatdv.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "apis.stroymatdv.cc"
-        },
-        "path": "/amsws"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "37.139.42.221",
-      "server_port": 443,
-      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
-      "tls": {
-        "enabled": true,
-        "server_name": "apis.stroymatdv.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -140,7 +118,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -154,6 +132,28 @@
     {
       "tag": "🇳🇱 The Netherlands [*CIDR] VK-3",
       "type": "vless",
+      "server": "37.139.42.221",
+      "server_port": 443,
+      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "apis.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "apis.stroymatdv.cc"
+        },
+        "path": "/amsws"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK-4",
+      "type": "vless",
       "server": "apis.stroymatdv.cc",
       "server_port": 443,
       "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
@@ -165,7 +165,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
       },
       "transport": {

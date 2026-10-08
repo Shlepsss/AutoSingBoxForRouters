@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇷🇺 [*CIDR]",
-        "🇫🇷 France | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK"
+        "🇺🇸 United States [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇫🇷 France [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,110 +51,111 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇷🇺 [*CIDR]",
-        "🇫🇷 France | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK"
+        "🇺🇸 United States [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇫🇷 France [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "45.132.176.190",
-      "server_port": 9892,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "188.130.209.197",
+      "server_port": 443,
+      "uuid": "80666844-6abe-46b8-8d30-3e94fbe0902f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "insecure": true,
+        "server_name": "send.mycdn-io.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
+          "public_key": "G4fqCmAVU43HdijV43q-USF8wRgPt8Ld3L7_msJyfTo",
+          "short_id": "fc1b2a12a84ea61b"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
       "server": "31.131.251.17",
       "server_port": 443,
-      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
+      "uuid": "9ea8b000-58ce-0050-b108-989dd4f248f1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "quatro.lmstream.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]",
+      "type": "vless",
+      "server": "45.9.13.99",
+      "server_port": 443,
+      "uuid": "489f1717-d3c7-4940-ad68-bdbdbab857f4",
+      "tls": {
+        "enabled": true,
+        "server_name": "x.m-90.xyz",
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇷🇺 [*CIDR]",
-      "type": "vless",
-      "server": "31.131.251.17",
-      "server_port": 443,
-      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "quatro.lmstream.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France | [*CIDR]",
-      "type": "vless",
-      "server": "31.131.251.17",
-      "server_port": 443,
-      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "quatro.lmstream.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "apis.stroymatdv.cc",
-      "server_port": 443,
-      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
-      "tls": {
-        "enabled": true,
-        "server_name": "apis.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "apis.stroymatdv.cc"
+          "Host": "x.m-90.xyz"
         },
-        "path": "/amsws"
+        "path": "t.me/TEAMNETGRATISCOL"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "45.9.13.99",
+      "server_port": 443,
+      "uuid": "489f1717-d3c7-4940-ad68-bdbdbab857f4",
+      "tls": {
+        "enabled": true,
+        "server_name": "x.m-90.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "x.m-90.xyz"
+        },
+        "path": "t.me/TEAMNETGRATISCOL"
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]",
+      "type": "vless",
+      "server": "31.131.251.17",
+      "server_port": 443,
+      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "quatro.lmstream.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     }
   ],

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇹 Italy [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇧🇪 Belgium | [*CIDR]",
-        "🇫🇷 France | [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]"
+        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR] VK",
+        "🇺🇸 United States | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]-2",
+        "🇮🇩 Indonesia | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,113 +51,123 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇹 Italy [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇧🇪 Belgium | [*CIDR]",
-        "🇫🇷 France | [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR]"
+        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR] VK",
+        "🇺🇸 United States | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]-2",
+        "🇮🇩 Indonesia | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇮🇹 Italy [*CIDR]",
+      "tag": "🇨🇭 Switzerland | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "45.132.176.225",
-      "server_port": 9881,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "ns.l90909l.vip",
+      "server_port": 2096,
+      "uuid": "4f4ba283-2dd7-4eda-9211-63ae357373cf",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "id.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU",
-          "short_id": "aa"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "vless-grpc-reality"
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR] VK",
       "type": "vless",
-      "server": "45.132.176.190",
-      "server_port": 9892,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "212.233.96.28",
+      "server_port": 443,
+      "uuid": "9e9b0c09-dc28-4888-9b21-888a93541987",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
-        },
+        "server_name": "beryi.pro",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇧🇪 Belgium | [*CIDR]",
-      "type": "vless",
-      "server": "193.233.48.10",
-      "server_port": 443,
-      "uuid": "9d1ec776-9fca-4f8b-ac76-c6e26cf8bbe7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "free07.tunnely.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "mChFHtaRmeuO2aDuDPqZvBFaCz6f34sVJIKuJcAR130",
-          "short_id": "d1694c220d4b13e7"
+        "type": "ws",
+        "headers": {
+          "Host": "beryi.pro"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "path": "/de7ws"
       }
     },
     {
-      "tag": "🇫🇷 France | [*CIDR]",
+      "tag": "🇺🇸 United States | [*CIDR]",
       "type": "vless",
-      "server": "31.131.251.17",
+      "server": "45.9.13.99",
       "server_port": 443,
-      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
-      "flow": "xtls-rprx-vision",
+      "uuid": "489f1717-d3c7-4940-ad68-bdbdbab857f4",
       "tls": {
         "enabled": true,
-        "server_name": "quatro.lmstream.org",
+        "server_name": "x.m-90.xyz",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "x.m-90.xyz"
+        },
+        "path": "t.me/TEAMNETGRATISCOL"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
+      "tag": "🇺🇸 United States | [*CIDR]-2",
       "type": "vless",
-      "server": "31.131.251.17",
+      "server": "45.9.13.99",
       "server_port": 443,
-      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
+      "uuid": "489f1717-d3c7-4940-ad68-bdbdbab857f4",
+      "tls": {
+        "enabled": true,
+        "server_name": "x.m-90.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "x.m-90.xyz"
+        },
+        "path": "t.me/TEAMNETGRATISCOL"
+      }
+    },
+    {
+      "tag": "🇮🇩 Indonesia | [*CIDR]",
+      "type": "vless",
+      "server": "46.254.19.103",
+      "server_port": 1443,
+      "uuid": "b44f98e8-a37f-4929-ac5d-81322e6bce14",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "quatro.lmstream.org",
+        "server_name": "settings.dev-yandex.sbs",
+        "reality": {
+          "enabled": true,
+          "public_key": "eIwe5pSZs414JJDSuBA3R4-ikllq0oITezzVIdUkACI",
+          "short_id": "ad7dab462a323acb"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     }
