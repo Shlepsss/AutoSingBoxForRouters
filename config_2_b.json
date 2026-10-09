@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇳🇱 The Netherlands [*CIDR] VK",
         "🇵🇱 Poland | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,77 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
+        "🇳🇱 The Netherlands [*CIDR] VK",
         "🇵🇱 Poland | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
       "type": "vless",
-      "server": "apis.stroymatdv.cc",
+      "server": "185.86.145.183",
       "server_port": 443,
-      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
+      "uuid": "5d1f603d-34dc-4a38-9d4e-9d55bea241db",
       "tls": {
         "enabled": true,
-        "server_name": "apis.stroymatdv.cc",
+        "server_name": "begemotov.cc",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "apis.stroymatdv.cc"
+          "Host": "begemotov.cc"
         },
-        "path": "/amsws"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "85.209.135.119",
-      "server_port": 443,
-      "uuid": "8ee5246a-3995-4676-a77e-c16d208a4f2d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "srv-1d3e4e.vless.monster",
-        "reality": {
-          "enabled": true,
-          "public_key": "a62QCCV2nLMEq9Z3Y5IqW4r0EijtioUrbYavzWg901E",
-          "short_id": "52409c59e2a1167d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "85.209.135.119",
-      "server_port": 443,
-      "uuid": "8ee5246a-3995-4676-a77e-c16d208a4f2d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "srv-1d3e4e.vless.monster",
-        "reality": {
-          "enabled": true,
-          "public_key": "a62QCCV2nLMEq9Z3Y5IqW4r0EijtioUrbYavzWg901E",
-          "short_id": "52409c59e2a1167d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "path": "/nl7ws"
       }
     },
     {
@@ -147,28 +105,67 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "apis.stroymatdv.cc",
+      "server": "api.mediaparus.cc",
       "server_port": 443,
-      "uuid": "3a8b464f-3701-40ed-b6b6-b612019e34c1",
+      "uuid": "60052427-8d57-4003-bb93-0b05d7e64351",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "apis.stroymatdv.cc",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "api.mediaparus.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "217.26.30.125",
+      "server_port": 3443,
+      "uuid": "4f466863-b6c5-4fdc-955e-7a601c18d89a",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "EuRD8QK-uL3uQqnQ_IC2Ybj7v8feXRxCiEaXYjhHx3c",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "apis.stroymatdv.cc"
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania | [*CIDR]",
+      "type": "vless",
+      "server": "5.42.120.243",
+      "server_port": 2087,
+      "uuid": "fce27c3a-629e-411b-92cc-8822d655ff91",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.nvidia.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "CxjnGHCI3HXN2RAXwytela7jXyOGDCBqzMAqTfm60D0",
+          "short_id": "766ef89e321597e5"
         },
-        "path": "/amsws"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
       }
     }
   ],

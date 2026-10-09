@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
-        "🇵🇱 Poland | [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2"
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇫🇷 France | [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] VK-2",
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,48 +51,52 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
-        "🇵🇱 Poland | [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2"
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇫🇷 France | [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] VK-2",
+        "🇵🇱 Poland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇭 Switzerland | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "188.120.236.224",
-      "server_port": 2096,
-      "uuid": "4f4ba283-2dd7-4eda-9211-63ae357373cf",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "nl-2a972c8052.shamanapp.online",
+      "server_port": 33736,
+      "uuid": "1281acca-f21d-475c-bf04-eccbee7f8df2",
+      "security": "auto",
       "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
+        "type": "ws",
+        "path": "/vmess-ws"
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇫🇷 France | [*CIDR]",
       "type": "vless",
-      "server": "91.215.43.248",
+      "server": "31.131.251.17",
       "server_port": 443,
-      "uuid": "a5893c8b-28a2-4947-9a1c-708db25506c3",
+      "uuid": "9ea8b000-58ce-005a-b108-989dd4f248f1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "my.kempekl.online",
+        "server_name": "quatro.lmstream.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.145.183",
+      "server_port": 443,
+      "uuid": "5d1f603d-34dc-4a38-9d4e-9d55bea241db",
+      "tls": {
+        "enabled": true,
+        "server_name": "begemotov.cc",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -101,71 +105,46 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "my.kempekl.online"
+          "Host": "begemotov.cc"
         },
-        "path": "/gateway/v1/ws/a64eb463966ba9c4bfd628f1de0362ae"
+        "path": "/nl7ws"
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
       "type": "vless",
-      "server": "90.156.218.163",
+      "server": "185.86.145.183",
       "server_port": 443,
-      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-      "flow": "xtls-rprx-vision",
+      "uuid": "5d1f603d-34dc-4a38-9d4e-9d55bea241db",
       "tls": {
         "enabled": true,
-        "server_name": "eh.vk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "short_id": "db04ce8bdb8900f1"
-        },
+        "server_name": "begemotov.cc",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "begemotov.cc"
+        },
+        "path": "/nl7ws"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
-      "server": "85.209.135.119",
+      "server": "31.131.251.17",
       "server_port": 443,
-      "uuid": "8ee5246a-3995-4676-a77e-c16d208a4f2d",
+      "uuid": "9ea8b000-58ce-0050-b108-989dd4f248f1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "srv-1d3e4e.vless.monster",
-        "reality": {
-          "enabled": true,
-          "public_key": "a62QCCV2nLMEq9Z3Y5IqW4r0EijtioUrbYavzWg901E",
-          "short_id": "52409c59e2a1167d"
-        },
+        "server_name": "quatro.lmstream.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "85.209.135.119",
-      "server_port": 443,
-      "uuid": "8ee5246a-3995-4676-a77e-c16d208a4f2d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "srv-1d3e4e.vless.monster",
-        "reality": {
-          "enabled": true,
-          "public_key": "a62QCCV2nLMEq9Z3Y5IqW4r0EijtioUrbYavzWg901E",
-          "short_id": "52409c59e2a1167d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     }
