@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇫🇷 France | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK-2",
-        "🇵🇱 Poland | [*CIDR]"
+        "🇺🇸 United States | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇫🇷 France [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,29 +51,60 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇫🇷 France | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK-2",
-        "🇵🇱 Poland | [*CIDR]"
+        "🇺🇸 United States | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇫🇷 France [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "ð³ð± The Netherlands | [*CIDR]",
-      "type": "vmess",
-      "server": "nl-2a972c8052.shamanapp.online",
-      "server_port": 33736,
-      "uuid": "1281acca-f21d-475c-bf04-eccbee7f8df2",
-      "security": "auto",
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "185.209.85.248",
+      "server_port": 443,
+      "uuid": "489f1717-d3c7-4940-ad68-bdbdbab857f4",
+      "tls": {
+        "enabled": true,
+        "server_name": "x.m-90.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/vmess-ws"
+        "headers": {
+          "Host": "x.m-90.xyz"
+        },
+        "path": "t.me/TEAMNETGRATISCOL"
       }
     },
     {
-      "tag": "🇫🇷 France | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "185.254.189.85",
+      "server_port": 8443,
+      "uuid": "6418a3f1-40bf-4fc5-bbce-48df24e68283",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.jagavps.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WZgAbXvSq_jsxEAK-h7JnqwHQxB1TNEslpojgPsBCV8",
+          "short_id": "143619e8486b8d0f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]",
       "type": "vless",
       "server": "31.131.251.17",
       "server_port": 443,
@@ -84,67 +115,49 @@
         "server_name": "quatro.lmstream.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "185.86.145.183",
-      "server_port": 443,
-      "uuid": "5d1f603d-34dc-4a38-9d4e-9d55bea241db",
+      "server": "185.254.189.85",
+      "server_port": 8443,
+      "uuid": "6418a3f1-40bf-4fc5-bbce-48df24e68283",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "begemotov.cc",
-        "utls": {
+        "server_name": "assets.jagavps.ru",
+        "reality": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "begemotov.cc"
+          "public_key": "WZgAbXvSq_jsxEAK-h7JnqwHQxB1TNEslpojgPsBCV8",
+          "short_id": "143619e8486b8d0f"
         },
-        "path": "/nl7ws"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
-      "type": "vless",
-      "server": "185.86.145.183",
-      "server_port": 443,
-      "uuid": "5d1f603d-34dc-4a38-9d4e-9d55bea241db",
-      "tls": {
-        "enabled": true,
-        "server_name": "begemotov.cc",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "begemotov.cc"
-        },
-        "path": "/nl7ws"
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "31.131.251.17",
-      "server_port": 443,
-      "uuid": "9ea8b000-58ce-0050-b108-989dd4f248f1",
+      "server": "185.254.189.85",
+      "server_port": 8443,
+      "uuid": "6418a3f1-40bf-4fc5-bbce-48df24e68283",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "quatro.lmstream.org",
+        "server_name": "assets.jagavps.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WZgAbXvSq_jsxEAK-h7JnqwHQxB1TNEslpojgPsBCV8",
+          "short_id": "143619e8486b8d0f"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     }
