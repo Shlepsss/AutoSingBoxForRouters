@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru",
-        "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru-2",
-        "🇮🇷 Iran | [SNI-RU] www.yandex.ru",
-        "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com",
-        "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com"
+        "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com",
+        "🌐 Anycast-IP | 🇮🇷 [SNI-RU] www.yandex.ru",
+        "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com-2",
+        "🌐 Anycast-IP | 🇮🇷 [SNI-RU] www.yandex.ru-2",
+        "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru",
-        "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru-2",
-        "🇮🇷 Iran | [SNI-RU] www.yandex.ru",
-        "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com",
-        "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com"
+        "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com",
+        "🌐 Anycast-IP | 🇮🇷 [SNI-RU] www.yandex.ru",
+        "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com-2",
+        "🌐 Anycast-IP | 🇮🇷 [SNI-RU] www.yandex.ru-2",
+        "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru",
+      "tag": "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com",
+      "type": "vless",
+      "server": "206.223.249.90",
+      "server_port": 33891,
+      "uuid": "9977ba41-b6aa-4033-9492-2f6abfcade31",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "browser.yandex.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "fj5f0rWTOAgd2gqCCWgag3oAGwb6MCef3OFNdnQLWW8",
+          "short_id": "f5bc6788"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇮🇷 [SNI-RU] www.yandex.ru",
       "type": "vless",
       "server": "31.59.210.32",
       "server_port": 443,
@@ -76,7 +97,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         }
       },
       "transport": {
@@ -85,55 +106,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru-2",
-      "type": "vless",
-      "server": "31.59.210.32",
-      "server_port": 443,
-      "uuid": "5413edfb-08d6-4fba-b51c-809c04feb127",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA",
-          "short_id": "7ec4374ffc6308fd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "astracat"
-      }
-    },
-    {
-      "tag": "🇮🇷 Iran | [SNI-RU] www.yandex.ru",
-      "type": "vless",
-      "server": "31.59.210.32",
-      "server_port": 443,
-      "uuid": "5413edfb-08d6-4fba-b51c-809c04feb127",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA",
-          "short_id": "7ec4374ffc6308fd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "astracat"
-      }
-    },
-    {
-      "tag": "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com",
+      "tag": "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com-2",
       "type": "vless",
       "server": "206.223.249.90",
       "server_port": 33891,
@@ -154,7 +127,31 @@
       }
     },
     {
-      "tag": "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com",
+      "tag": "🌐 Anycast-IP | 🇮🇷 [SNI-RU] www.yandex.ru-2",
+      "type": "vless",
+      "server": "31.59.210.32",
+      "server_port": 443,
+      "uuid": "5413edfb-08d6-4fba-b51c-809c04feb127",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA",
+          "short_id": "7ec4374ffc6308fd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "astracat"
+      }
+    },
+    {
+      "tag": "🇰🇿 Kazakhstan [SNI-RU] browser.yandex.com-3",
       "type": "vless",
       "server": "206.223.249.90",
       "server_port": 33891,
@@ -170,7 +167,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       }
     }
