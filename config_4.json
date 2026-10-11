@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 Sweden | [SNI-RU] sun6-21.userapi.com",
+        "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru",
+        "🇮🇷 Iran | [SNI-RU] www.yandex.ru",
         "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com",
-        "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com-2",
-        "🇸🇪 Sweden | [SNI-RU] sun6-21.userapi.com-2",
-        "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru"
+        "🇮🇷 Iran | [SNI-RU] www.yandex.ru-2",
+        "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,34 +51,61 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 Sweden | [SNI-RU] sun6-21.userapi.com",
+        "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru",
+        "🇮🇷 Iran | [SNI-RU] www.yandex.ru",
         "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com",
-        "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com-2",
-        "🇸🇪 Sweden | [SNI-RU] sun6-21.userapi.com-2",
-        "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru"
+        "🇮🇷 Iran | [SNI-RU] www.yandex.ru-2",
+        "🇰🇿 Kazakhstan | [SNI-RU] browser.yandex.com-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇪 Sweden | [SNI-RU] sun6-21.userapi.com",
+      "tag": "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru",
       "type": "vless",
-      "server": "se3.h1cloud.net",
-      "server_port": 25642,
-      "uuid": "83383473-0d62-4089-ac4d-d7ecb413504a",
-      "flow": "xtls-rprx-vision",
+      "server": "31.59.210.32",
+      "server_port": 443,
+      "uuid": "5413edfb-08d6-4fba-b51c-809c04feb127",
       "tls": {
         "enabled": true,
-        "server_name": "sun6-21.userapi.com",
+        "server_name": "www.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "0PdoBW4uTOpf4zUR1Jc_5WHy1QKHp-W81emZAQKL93s",
-          "short_id": "225dc9f736dc9058"
+          "public_key": "qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA",
+          "short_id": "7ec4374ffc6308fd"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "astracat"
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran | [SNI-RU] www.yandex.ru",
+      "type": "vless",
+      "server": "31.59.210.32",
+      "server_port": 443,
+      "uuid": "5413edfb-08d6-4fba-b51c-809c04feb127",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA",
+          "short_id": "7ec4374ffc6308fd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "astracat"
       }
     },
     {
@@ -98,8 +125,32 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran | [SNI-RU] www.yandex.ru-2",
+      "type": "vless",
+      "server": "31.59.210.32",
+      "server_port": 443,
+      "uuid": "5413edfb-08d6-4fba-b51c-809c04feb127",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA",
+          "short_id": "7ec4374ffc6308fd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "astracat"
       }
     },
     {
@@ -119,53 +170,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden | [SNI-RU] sun6-21.userapi.com-2",
-      "type": "vless",
-      "server": "se3.h1cloud.net",
-      "server_port": 25642,
-      "uuid": "83383473-0d62-4089-ac4d-d7ecb413504a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "sun6-21.userapi.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "0PdoBW4uTOpf4zUR1Jc_5WHy1QKHp-W81emZAQKL93s",
-          "short_id": "225dc9f736dc9058"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇮🇩 🇮🇷 [SNI-RU] www.yandex.ru",
-      "type": "vless",
-      "server": "31.59.210.32",
-      "server_port": 443,
-      "uuid": "5413edfb-08d6-4fba-b51c-809c04feb127",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA",
-          "short_id": "7ec4374ffc6308fd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "astracat"
       }
     }
   ],
