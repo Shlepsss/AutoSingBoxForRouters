@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇰🇿 Kazakhstan [*CIDR]",
-        "🇺🇸 United States | [*CIDR]"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,53 +51,49 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇰🇿 Kazakhstan [*CIDR]",
-        "🇺🇸 United States | [*CIDR]"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "5.129.199.28",
+      "server": "api.mediaplav.cc",
       "server_port": 443,
-      "uuid": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
+      "uuid": "37e0fe94-02b7-4d08-9555-c8cd9dcde11c",
       "tls": {
         "enabled": true,
-        "server_name": "ru-1-6.unturned-rust-dead.lol",
-        "reality": {
-          "enabled": true,
-          "public_key": "aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk",
-          "short_id": ""
-        },
+        "server_name": "api.mediaplav.cc",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "ru-api"
+        "service_name": "3e99d50d5740985d"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "5.129.199.28",
+      "server": "api.mediaplav.cc",
       "server_port": 443,
-      "uuid": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
+      "uuid": "37e0fe94-02b7-4d08-9555-c8cd9dcde11c",
       "tls": {
         "enabled": true,
-        "server_name": "ru-1-6.unturned-rust-dead.lol",
-        "reality": {
-          "enabled": true,
-          "public_key": "aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk",
-          "short_id": ""
-        },
+        "server_name": "api.mediaplav.cc",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -105,22 +101,46 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "ru-api"
+        "service_name": "3e99d50d5740985d"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "5.129.199.28",
-      "server_port": 443,
-      "uuid": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
+      "server": "185.229.9.31",
+      "server_port": 49922,
+      "uuid": "624bfb9d-df06-4fe6-8d9e-35287ffb95ad",
       "tls": {
         "enabled": true,
-        "server_name": "ru-1-6.unturned-rust-dead.lol",
+        "server_name": "lk.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk",
-          "short_id": ""
+          "public_key": "1VyJ_wt8NjUBMGHR_jId8919MvPscyNHqFL1kNUDfCk",
+          "short_id": "ff0d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "185.229.9.31",
+      "server_port": 49922,
+      "uuid": "624bfb9d-df06-4fe6-8d9e-35287ffb95ad",
+      "tls": {
+        "enabled": true,
+        "server_name": "lk.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "1VyJ_wt8NjUBMGHR_jId8919MvPscyNHqFL1kNUDfCk",
+          "short_id": "ff0d"
         },
         "utls": {
           "enabled": true,
@@ -129,57 +149,32 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "ru-api"
+        "service_name": "grpc"
       }
     },
     {
-      "tag": "🇰🇿 Kazakhstan [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "82.202.139.79",
-      "server_port": 9882,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "server": "185.229.9.31",
+      "server_port": 49922,
+      "uuid": "624bfb9d-df06-4fe6-8d9e-35287ffb95ad",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "lk.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
+          "public_key": "1VyJ_wt8NjUBMGHR_jId8919MvPscyNHqFL1kNUDfCk",
+          "short_id": "ff0d"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "grpc"
       }
-    },
-    {
-      "tag": "🇺🇸 United States | [*CIDR]",
-      "type": "vless",
-      "server": "82.202.139.79",
-      "server_port": 9873,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabbccdd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      },
-      "packet_encoding": "xudp"
     }
   ],
   "route": {
