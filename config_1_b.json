@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-2"
+        "🇩🇪 Germany | [*CIDR] CDN",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,127 +53,133 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-2"
+        "🇩🇪 Germany | [*CIDR] CDN",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR] CDN",
       "type": "vless",
-      "server": "api.mediaplav.cc",
-      "server_port": 443,
-      "uuid": "37e0fe94-02b7-4d08-9555-c8cd9dcde11c",
+      "server": "46.243.232.167",
+      "server_port": 20010,
+      "uuid": "c720cb74-4c84-4fce-b8ae-637dbaa16199",
       "tls": {
         "enabled": true,
-        "server_name": "api.mediaplav.cc",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "185.229.9.31",
-      "server_port": 49922,
-      "uuid": "624bfb9d-df06-4fe6-8d9e-35287ffb95ad",
-      "tls": {
-        "enabled": true,
-        "server_name": "lk.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "1VyJ_wt8NjUBMGHR_jId8919MvPscyNHqFL1kNUDfCk",
-          "short_id": "ff0d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "api.mediaplav.cc",
-      "server_port": 443,
-      "uuid": "37e0fe94-02b7-4d08-9555-c8cd9dcde11c",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.mediaplav.cc",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "185.229.9.31",
-      "server_port": 49922,
-      "uuid": "624bfb9d-df06-4fe6-8d9e-35287ffb95ad",
-      "tls": {
-        "enabled": true,
-        "server_name": "lk.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "1VyJ_wt8NjUBMGHR_jId8919MvPscyNHqFL1kNUDfCk",
-          "short_id": "ff0d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
-      "type": "vless",
-      "server": "api.mediaplav.cc",
-      "server_port": 443,
-      "uuid": "37e0fe94-02b7-4d08-9555-c8cd9dcde11c",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.mediaplav.cc",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "vod3.rucdncomp.pro",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
+        "type": "ws",
+        "headers": {
+          "Host": "vod3.rucdncomp.pro"
+        },
+        "path": "/service/events/e296aaa797ab/"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "storage.fatcutecat.net",
+      "server_port": 443,
+      "uuid": "81ee7b74-7ccd-4ccb-8f4b-f1bd02f0491e",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.fatcutecat.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "storage.fatcutecat.net",
+      "server_port": 443,
+      "uuid": "81ee7b74-7ccd-4ccb-8f4b-f1bd02f0491e",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.fatcutecat.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "storage.fatcutecat.net",
+      "server_port": 443,
+      "uuid": "81ee7b74-7ccd-4ccb-8f4b-f1bd02f0491e",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.fatcutecat.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "storage.fatcutecat.net",
+      "server_port": 443,
+      "uuid": "81ee7b74-7ccd-4ccb-8f4b-f1bd02f0491e",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.fatcutecat.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR] VK",
+      "type": "vless",
+      "server": "90.156.218.163",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "storage.fatcutecat.net",
+      "server_port": 443,
+      "uuid": "81ee7b74-7ccd-4ccb-8f4b-f1bd02f0491e",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.fatcutecat.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
