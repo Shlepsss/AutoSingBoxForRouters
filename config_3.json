@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇩🇪 Germany | [*CIDR] CDN-2",
-        "🇩🇪 Germany | [*CIDR] CDN-3",
-        "🇩🇪 Germany | [*CIDR] CDN-4",
-        "🇩🇪 Germany | [*CIDR] CDN-5"
+        "🇨🇭 Switzerland | 🌐 | [*CIDR] VK",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇨🇭 Switzerland | 🌐 | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,90 +51,75 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR] CDN",
-        "🇩🇪 Germany | [*CIDR] CDN-2",
-        "🇩🇪 Germany | [*CIDR] CDN-3",
-        "🇩🇪 Germany | [*CIDR] CDN-4",
-        "🇩🇪 Germany | [*CIDR] CDN-5"
+        "🇨🇭 Switzerland | 🌐 | [*CIDR] VK",
+        "🇵🇱 Poland | [*CIDR] VK",
+        "🇨🇭 Switzerland | 🌐 | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | [*CIDR] VK",
+        "🇳🇱 The Netherlands | [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN",
-      "type": "vless",
-      "server": "46.243.232.167",
-      "server_port": 20010,
-      "uuid": "a443d7bf-f506-46ce-b64d-cf8891c0a9f7",
+      "tag": "🇨🇭 Switzerland | 🌐 | [*CIDR] VK",
+      "type": "trojan",
+      "server": "mts3.secured-by-tenzo.sbs",
+      "server_port": 2222,
+      "password": "-XQ6u4GG-Zs21HU7kya66G0kn3nF40u9",
       "tls": {
         "enabled": true,
-        "server_name": "vod3.rucdncomp.pro",
+        "server_name": "vkc.secured-by-tenzo.sbs",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "vod3.rucdncomp.pro"
-        },
-        "path": "/service/events/e296aaa797ab/"
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN-2",
+      "tag": "🇵🇱 Poland | [*CIDR] VK",
       "type": "vless",
-      "server": "46.243.232.167",
-      "server_port": 20010,
-      "uuid": "c720cb74-4c84-4fce-b8ae-637dbaa16199",
+      "server": "90.156.218.163",
+      "server_port": 443,
+      "uuid": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vod3.rucdncomp.pro",
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
+          "short_id": "db04ce8bdb8900f1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland | 🌐 | [*CIDR] VK-2",
+      "type": "trojan",
+      "server": "mts3.secured-by-tenzo.sbs",
+      "server_port": 2222,
+      "password": "-XQ6u4GG-Zs21HU7kya66G0kn3nF40u9",
+      "tls": {
+        "enabled": true,
+        "server_name": "vkc.secured-by-tenzo.sbs",
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "vod3.rucdncomp.pro"
-        },
-        "path": "/service/events/e296aaa797ab/"
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN-3",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
       "type": "vless",
-      "server": "46.243.232.167",
-      "server_port": 20010,
-      "uuid": "c720cb74-4c84-4fce-b8ae-637dbaa16199",
+      "server": "heoleti.pro",
+      "server_port": 14443,
+      "uuid": "a7bee730-ec9f-45fe-a23c-5568af0b202a",
       "tls": {
         "enabled": true,
-        "server_name": "vod3.rucdncomp.pro",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "vod3.rucdncomp.pro"
-        },
-        "path": "/service/events/e296aaa797ab/"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN-4",
-      "type": "vless",
-      "server": "46.243.232.167",
-      "server_port": 20010,
-      "uuid": "c720cb74-4c84-4fce-b8ae-637dbaa16199",
-      "tls": {
-        "enabled": true,
-        "server_name": "vod3.rucdncomp.pro",
+        "server_name": "heoleti.pro",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -143,31 +128,31 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "vod3.rucdncomp.pro"
+          "Host": "heoleti.pro"
         },
-        "path": "/service/events/e296aaa797ab/"
+        "path": "/n3ws"
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] CDN-5",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
       "type": "vless",
-      "server": "46.243.232.167",
-      "server_port": 20010,
-      "uuid": "a443d7bf-f506-46ce-b64d-cf8891c0a9f7",
+      "server": "heoleti.pro",
+      "server_port": 14443,
+      "uuid": "a7bee730-ec9f-45fe-a23c-5568af0b202a",
       "tls": {
         "enabled": true,
-        "server_name": "vod3.rucdncomp.pro",
+        "server_name": "heoleti.pro",
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "vod3.rucdncomp.pro"
+          "Host": "heoleti.pro"
         },
-        "path": "/service/events/e296aaa797ab/"
+        "path": "/n3ws"
       }
     }
   ],
