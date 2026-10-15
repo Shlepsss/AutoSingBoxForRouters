@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇩 Moldova | 🌐 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇲🇩 Moldova | 🌐 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5"
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-6",
+        "🇷🇺 Russia | [*CIDR]-7"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,53 +56,69 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇩 Moldova | 🌐 [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇲🇩 Moldova | 🌐 | [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5"
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-6",
+        "🇷🇺 Russia | [*CIDR]-7"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
-      "server": "87.228.71.198",
+      "server": "201.24.57.35",
       "server_port": 443,
-      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "uuid": "eb67d304-f40d-4114-a896-0c6483321de6",
       "tls": {
         "enabled": true,
-        "server_name": "ap2.directly.chat",
+        "server_name": "hub.1.nemnogogo.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ap2.directly.chat"
-        },
-        "path": "/md/1"
+        "type": "grpc",
+        "service_name": "home.v2.RelayService"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "72.56.246.80",
-      "server_port": 443,
-      "uuid": "2b173b69-8045-4fb8-b713-6db630337970",
+      "server": "93.183.106.180",
+      "server_port": 10444,
+      "uuid": "9f837d05-6d7a-488b-a896-ea2b2ccf5413",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dl.google.com",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "ohYKVa5uVRwqzZndETnytrSXE63zaUFVNN1_T4eTHnc",
-          "short_id": ""
+          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
+          "short_id": "8debcf36f1cc69ff"
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "201.24.56.36",
+      "server_port": 443,
+      "uuid": "eb67d304-f40d-4114-a896-0c6483321de6",
+      "tls": {
+        "enabled": true,
+        "server_name": "data.1.nemnogogo.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -107,33 +126,11 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc-tunnel"
+        "service_name": "app.v1.MetricsService"
       }
     },
     {
-      "tag": "🇲🇩 Moldova | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "87.228.71.197",
-      "server_port": 443,
-      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
-      "tls": {
-        "enabled": true,
-        "server_name": "ap2.directly.chat",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ap2.directly.chat"
-        },
-        "path": "/md/1"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
       "server": "72.56.246.80",
       "server_port": 443,
@@ -148,31 +145,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "72.56.246.80",
-      "server_port": 443,
-      "uuid": "2b173b69-8045-4fb8-b713-6db630337970",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ohYKVa5uVRwqzZndETnytrSXE63zaUFVNN1_T4eTHnc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -182,6 +155,44 @@
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "vless",
+      "server": "201.24.56.36",
+      "server_port": 443,
+      "uuid": "eb67d304-f40d-4114-a896-0c6483321de6",
+      "tls": {
+        "enabled": true,
+        "server_name": "data.1.nemnogogo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "app.v1.MetricsService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "type": "vless",
+      "server": "201.24.56.68",
+      "server_port": 443,
+      "uuid": "eb67d304-f40d-4114-a896-0c6483321de6",
+      "tls": {
+        "enabled": true,
+        "server_name": "media.1.nemnogogo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "node.v2.FeedService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "72.56.246.80",
       "server_port": 443,
@@ -205,7 +216,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-5",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "72.56.246.80",
       "server_port": 443,
@@ -220,12 +231,50 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "random"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-6",
+      "type": "vless",
+      "server": "201.24.57.197",
+      "server_port": 443,
+      "uuid": "eb67d304-f40d-4114-a896-0c6483321de6",
+      "tls": {
+        "enabled": true,
+        "server_name": "net.1.nemnogogo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "gw.v2.StreamService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-7",
+      "type": "vless",
+      "server": "201.24.57.35",
+      "server_port": 443,
+      "uuid": "eb67d304-f40d-4114-a896-0c6483321de6",
+      "tls": {
+        "enabled": true,
+        "server_name": "hub.1.nemnogogo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "home.v2.RelayService"
       }
     }
   ],
