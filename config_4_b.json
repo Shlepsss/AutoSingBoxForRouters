@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
-        "🇩🇪 Germany | 🌐 [SNI-RU] travel.yandex.ru",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-2",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3",
-        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com"
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com-2",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com-2",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,71 +51,29 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
-        "🇩🇪 Germany | 🌐 [SNI-RU] travel.yandex.ru",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-2",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3",
-        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com"
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com-2",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com-2",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com",
       "type": "vless",
-      "server": "178.172.227.124",
-      "server_port": 10444,
-      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7",
+      "server": "node1.yandexdns.ru",
+      "server_port": 443,
+      "uuid": "db7ce055-e69f-47d1-9cdc-42757a2a442a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "www.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
-          "short_id": "8debcf36f1cc69ff"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] travel.yandex.ru",
-      "type": "vless",
-      "server": "157.173.27.138",
-      "server_port": 5443,
-      "uuid": "f6dadd84-7d7b-4e67-9577-7ede6300368a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "travel.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "7pr2qWG1_3TjBDCidQWJ2lnbEf72lOcse4Gca8anwEo",
-          "short_id": "57f0eca7ae6be8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "178.172.227.124",
-      "server_port": 10444,
-      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
-          "short_id": "8debcf36f1cc69ff"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -124,31 +82,10 @@
       }
     },
     {
-      "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com",
       "type": "vless",
-      "server": "178.172.227.228",
-      "server_port": 10444,
-      "uuid": "b6e5dc56-836f-48c1-9163-b0b0b43b647d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
-          "short_id": "8debcf36f1cc69ff"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com",
-      "type": "vless",
-      "server": "193.223.107.87",
-      "server_port": 1932,
+      "server": "node1.yandexdns.ru",
+      "server_port": 443,
       "uuid": "db7ce055-e69f-47d1-9cdc-42757a2a442a",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -162,6 +99,69 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com-2",
+      "type": "vless",
+      "server": "193.223.107.89",
+      "server_port": 443,
+      "uuid": "db7ce055-e69f-47d1-9cdc-42757a2a442a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com-2",
+      "type": "vless",
+      "server": "193.223.107.89",
+      "server_port": 443,
+      "uuid": "db7ce055-e69f-47d1-9cdc-42757a2a442a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇹🇷 | [SNI-RU] www.vk.com-3",
+      "type": "vless",
+      "server": "193.223.107.89",
+      "server_port": 443,
+      "uuid": "db7ce055-e69f-47d1-9cdc-42757a2a442a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
