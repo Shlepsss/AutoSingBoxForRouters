@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇾 Belarus | [SNI-RU] ads.x5.ru",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
-        "🇧🇾 Belarus | [SNI-RU] ads.x5.ru-2",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru-2",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3"
+        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3",
+        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-4",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,42 +51,21 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇾 Belarus | [SNI-RU] ads.x5.ru",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
-        "🇧🇾 Belarus | [SNI-RU] ads.x5.ru-2",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru-2",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3"
+        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3",
+        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-4",
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇾 Belarus | [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "178.172.227.228",
-      "server_port": 10444,
-      "uuid": "b6e5dc56-836f-48c1-9163-b0b0b43b647d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
-          "short_id": "8debcf36f1cc69ff"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
       "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "178.172.227.228",
+      "server": "178.172.227.124",
       "server_port": 10444,
-      "uuid": "b6e5dc56-836f-48c1-9163-b0b0b43b647d",
+      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -98,37 +77,16 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇾 Belarus | [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "178.172.227.228",
-      "server_port": 10444,
-      "uuid": "b6e5dc56-836f-48c1-9163-b0b0b43b647d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
-          "short_id": "8debcf36f1cc69ff"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       }
     },
     {
       "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru-2",
       "type": "vless",
-      "server": "178.172.227.228",
+      "server": "178.172.227.124",
       "server_port": 10444,
-      "uuid": "b6e5dc56-836f-48c1-9163-b0b0b43b647d",
+      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -140,7 +98,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "random"
         }
       }
     },
@@ -162,6 +120,48 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru-4",
+      "type": "vless",
+      "server": "178.172.227.124",
+      "server_port": 10444,
+      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
+          "short_id": "8debcf36f1cc69ff"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com",
+      "type": "vless",
+      "server": "node1.yandexdns.ru",
+      "server_port": 443,
+      "uuid": "db7ce055-e69f-47d1-9cdc-42757a2a442a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
         }
       }
     }
