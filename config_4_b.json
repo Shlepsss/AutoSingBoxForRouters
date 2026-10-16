@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
+        "🇩🇪 Germany | 🌐 [SNI-RU] travel.yandex.ru",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru-2",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-4",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-5"
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
+        "🇩🇪 Germany | 🌐 [SNI-RU] travel.yandex.ru",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru-2",
         "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-4",
-        "🇧🇾 Belarus [SNI-RU] ads.x5.ru-5"
+        "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,9 +63,9 @@
     {
       "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "178.172.227.228",
+      "server": "178.172.227.124",
       "server_port": 10444,
-      "uuid": "b6e5dc56-836f-48c1-9163-b0b0b43b647d",
+      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -74,6 +74,27 @@
           "enabled": true,
           "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
           "short_id": "8debcf36f1cc69ff"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] travel.yandex.ru",
+      "type": "vless",
+      "server": "157.173.27.138",
+      "server_port": 5443,
+      "uuid": "f6dadd84-7d7b-4e67-9577-7ede6300368a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "travel.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "7pr2qWG1_3TjBDCidQWJ2lnbEf72lOcse4Gca8anwEo",
+          "short_id": "57f0eca7ae6be8"
         },
         "utls": {
           "enabled": true,
@@ -98,54 +119,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
       "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru-3",
-      "type": "vless",
-      "server": "95.128.71.79",
-      "server_port": 10444,
-      "uuid": "8cef7621-c6f0-486e-b51d-59c30c5b0b25",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
-          "short_id": "8debcf36f1cc69ff"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru-4",
-      "type": "vless",
-      "server": "178.172.227.124",
-      "server_port": 10444,
-      "uuid": "1af36694-b548-4b18-89a0-bc076eab4ed7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
-          "short_id": "8debcf36f1cc69ff"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇾 Belarus [SNI-RU] ads.x5.ru-5",
       "type": "vless",
       "server": "178.172.227.228",
       "server_port": 10444,
@@ -161,7 +140,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇹🇷 [SNI-RU] www.vk.com",
+      "type": "vless",
+      "server": "193.223.107.87",
+      "server_port": 1932,
+      "uuid": "db7ce055-e69f-47d1-9cdc-42757a2a442a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
         }
       }
     }
