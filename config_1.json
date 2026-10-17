@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇬 Singapore | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇨🇿 Czechia [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
         "🇨🇿 Czechia | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
@@ -51,50 +51,67 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇬 Singapore | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇨🇿 Czechia [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
         "🇨🇿 Czechia | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇬 Singapore | 🌐 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "121.127.37.211",
+      "server": "45.91.55.86",
       "server_port": 443,
-      "uuid": "b8d8a5b0-867f-4491-b4e4-30edc04bb10e",
+      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
       "tls": {
         "enabled": true,
-        "server_name": "u.srilankangrill.online",
+        "server_name": "ru-auto-02.10media.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "u.srilankangrill.online"
-        },
-        "path": "/"
+        "type": "grpc",
+        "service_name": "northfeed"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
+      "tag": "🇨🇿 Czechia [*CIDR]",
       "type": "vless",
-      "server": "84.201.146.8",
+      "server": "api.mediavolna.cc",
       "server_port": 443,
-      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "uuid": "082f5694-9019-4110-b67b-8125dbb9bab8",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "api.mediavolna.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "r7Kp4mN9tQ2v"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "api.mediapolyana.cc",
+      "server_port": 443,
+      "uuid": "082f5694-9019-4110-b67b-8125dbb9bab8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.mediapolyana.cc",
         "reality": {
           "enabled": true,
-          "public_key": "biyXF3Egpu0ul4Jyf04Vh1Zl6u3JGXJ2k5y5y7pDjgo",
-          "short_id": ""
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
         },
         "utls": {
           "enabled": true,
@@ -122,28 +139,6 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
-      "type": "vless",
-      "server": "ru-auto-02.10media.top",
-      "server_port": 443,
-      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-auto-02.10media.top",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "northfeed"
-      }
-    },
-    {
       "tag": "🇨🇿 Czechia | [*CIDR]",
       "type": "vless",
       "server": "api.mediavolna.cc",
@@ -152,6 +147,9 @@
       "tls": {
         "enabled": true,
         "server_name": "api.mediavolna.cc",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"

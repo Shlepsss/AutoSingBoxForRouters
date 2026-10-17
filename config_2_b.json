@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇦🇹 Austria [*CIDR]",
         "🇨🇿 Czechia | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
@@ -51,44 +51,55 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇦🇹 Austria [*CIDR]",
         "🇨🇿 Czechia | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
-      "type": "vmess",
-      "server": "168.113.215.6",
-      "server_port": 33736,
-      "uuid": "1281acca-f21d-475c-bf04-eccbee7f8df2",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/vmess-ws"
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "api.mediapolyana.cc",
+      "server_port": 443,
+      "uuid": "082f5694-9019-4110-b67b-8125dbb9bab8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.mediapolyana.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇦🇹 Austria | [*CIDR]",
       "type": "vless",
-      "server": "ru-auto-02.10media.top",
+      "server": "api.mediakaskad.cc",
       "server_port": 443,
-      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
+      "uuid": "082f5694-9019-4110-b67b-8125dbb9bab8",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru-auto-02.10media.top",
+        "server_name": "api.mediakaskad.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "northfeed"
       }
     },
     {
@@ -100,12 +111,9 @@
       "tls": {
         "enabled": true,
         "server_name": "ru-auto-02.10media.top",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -114,22 +122,24 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
+      "tag": "🇦🇹 Austria [*CIDR]",
       "type": "vless",
-      "server": "ru-auto-02.10media.top",
+      "server": "api.mediakaskad.cc",
       "server_port": 443,
-      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
+      "uuid": "082f5694-9019-4110-b67b-8125dbb9bab8",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru-auto-02.10media.top",
+        "server_name": "api.mediakaskad.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "northfeed"
       }
     },
     {
@@ -141,12 +151,9 @@
       "tls": {
         "enabled": true,
         "server_name": "api.mediavolna.cc",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
