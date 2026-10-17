@@ -34,11 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR] VK"
+        "🇳🇱 The Netherlands | [*CIDR]-2",
+        "🇳🇱 The Netherlands | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +53,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR] VK"
+        "🇳🇱 The Netherlands | [*CIDR]-2",
+        "🇳🇱 The Netherlands | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "ru8.my-cdn.org",
+      "server_port": 443,
+      "uuid": "c19ecc7f-8312-4d9d-90c9-1a997d82d3c5",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru8.my-cdn.org",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "x5.lk.v1.AccountService"
+      }
     },
     {
       "tag": "🇳🇱 The Netherlands | [*CIDR]",
@@ -74,7 +100,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -84,39 +110,77 @@
       "packet_encoding": "xudp"
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
       "type": "vless",
-      "server": "185.186.143.147",
+      "server": "ru-auto-02.10media.top",
       "server_port": 443,
-      "uuid": "a6b9650d-0922-4275-a569-0cd8c0851b5b",
+      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
       "tls": {
         "enabled": true,
-        "server_name": "ded-fi-b.file-rkat.online",
-        "reality": {
-          "enabled": true,
-          "public_key": "gQ77kXT_HW87HDpD0u95L7gAPBNuV8e4kFgUdKH56l8",
-          "short_id": "803c4bb737a161c0"
-        },
+        "server_name": "ru-auto-02.10media.top",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "northfeed"
       }
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]-3",
       "type": "vless",
-      "server": "45.133.151.167",
-      "server_port": 25481,
-      "uuid": "68c3d665-b2b5-4ffb-9f37-9f3d8c47324d",
+      "server": "ru-auto-02.10media.top",
+      "server_port": 443,
+      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
-        "reality": {
+        "server_name": "ru-auto-02.10media.top",
+        "utls": {
           "enabled": true,
-          "public_key": "mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E",
-          "short_id": "3b84fc70657725af"
-        },
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "northfeed"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "ru8.my-cdn.org",
+      "server_port": 443,
+      "uuid": "c19ecc7f-8312-4d9d-90c9-1a997d82d3c5",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru8.my-cdn.org",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "x5.lk.v1.AccountService"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "ru8.my-cdn.org",
+      "server_port": 443,
+      "uuid": "c19ecc7f-8312-4d9d-90c9-1a997d82d3c5",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru8.my-cdn.org",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "android"
@@ -124,50 +188,29 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "8cb5baa18cd7"
+        "service_name": "x5.lk.v1.AccountService"
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
       "type": "vless",
-      "server": "79.174.92.233",
+      "server": "ru8.my-cdn.org",
       "server_port": 443,
-      "uuid": "9b07c977-08f8-4f4c-b0dd-298a59dd073f",
+      "uuid": "c19ecc7f-8312-4d9d-90c9-1a997d82d3c5",
       "tls": {
         "enabled": true,
-        "server_name": "zeta.sockapi.rest",
+        "server_name": "ru8.my-cdn.org",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "zeta.sockapi.rest"
-        },
-        "path": "/upgrade/v2"
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.147.170",
-      "server_port": 20004,
-      "uuid": "aa4d850f-3a0e-4939-a35f-8801e57f5354",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "s3.storage.selcloud.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "MAQju7q8wIeEznBQoDXP9l4SpuAkEs8CGDKaNNpKlHI",
-          "short_id": "4326"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "type": "grpc",
+        "service_name": "x5.lk.v1.AccountService"
       }
     }
   ],
