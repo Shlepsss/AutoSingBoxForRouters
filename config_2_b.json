@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]-3"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,24 +51,81 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]-3"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "ru-auto-02.10media.top",
+      "server": "ru1.radiolumens.uk",
+      "server_port": 8444,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.radiolumens.uk",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "beru-uk"
+      }
+    },
+    {
+      "tag": ".ð¥ Ý ËÖ´ð¸à¼ËÂ°. | [*CIDR]",
+      "type": "vmess",
+      "server": "168.113.215.6",
+      "server_port": 33736,
+      "uuid": "1281acca-f21d-475c-bf04-eccbee7f8df2",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess-ws"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "94.228.175.199",
       "server_port": 443,
       "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
       "tls": {
         "enabled": true,
-        "server_name": "ru-auto-02.10media.top",
+        "server_name": "kilnledger.10media.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "studiofeed"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "45.91.55.86",
+      "server_port": 443,
+      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
+      "tls": {
+        "enabled": true,
+        "server_name": "stillroom.10media.top",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -80,33 +137,14 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "ru3.radiolumens.uk",
+      "server": "ru1.radiolumens.uk",
       "server_port": 8444,
       "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.radiolumens.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-uk"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "ru3.radiolumens.uk",
-      "server_port": 8444,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.radiolumens.uk",
+        "server_name": "ru1.radiolumens.uk",
         "alpn": [
           "h2",
           "http/1.1"
@@ -114,51 +152,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-uk"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "kilnledger.10media.top",
-      "server_port": 443,
-      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
-      "tls": {
-        "enabled": true,
-        "server_name": "kilnledger.10media.top",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "studiofeed"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "ru3.radiolumens.uk",
-      "server_port": 8444,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.radiolumens.uk",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       },
       "transport": {

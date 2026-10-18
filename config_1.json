@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇺🇸 United States | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇵🇱 | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]"
+        "🇳🇱 The Netherlands [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,80 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇺🇸 United States | 🌐 | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇵🇱 | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]"
+        "🇳🇱 The Netherlands [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "78.24.218.88",
+      "server_port": 2096,
+      "uuid": "e667f5c7-6b38-48ef-ab89-40519713afb0",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "fi-p1.h1cloud.net",
+      "server_port": 25481,
+      "uuid": "68c3d665-b2b5-4ffb-9f37-9f3d8c47324d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E",
+          "short_id": "3b84fc70657725af"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "8cb5baa18cd7"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania | [*CIDR]",
+      "type": "vless",
+      "server": "lt69.cdnfern.org",
+      "server_port": 443,
+      "uuid": "cb5d9bb5-c2f9-46cf-9555-9ead6b30c7b7",
+      "tls": {
+        "enabled": true,
+        "server_name": "lt69.cdnfern.org",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇳🇱 The Netherlands [*CIDR]",
@@ -71,92 +137,27 @@
         "server_name": "ru-auto-02.10media.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "northfeed"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "77.232.135.122",
-      "server_port": 8444,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.radiolumens.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-uk"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇵🇱 | [*CIDR]",
-      "type": "vless",
-      "server": "ru1.radiolumens.uk",
-      "server_port": 8445,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.radiolumens.uk",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
           "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "beru-pl"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
-      "type": "vless",
-      "server": "45.91.55.86",
-      "server_port": 443,
-      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
-      "tls": {
-        "enabled": true,
-        "server_name": "stillroom.10media.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
         "service_name": "northfeed"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
       "type": "vless",
-      "server": "77.232.135.122",
-      "server_port": 8444,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "server": "185.86.145.142",
+      "server_port": 2096,
+      "uuid": "c1eabfbe-62ef-46a2-9857-9ad3d69e174a",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.radiolumens.uk",
+        "server_name": "apis.heoleti.pro",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-uk"
       }
     }
   ],
