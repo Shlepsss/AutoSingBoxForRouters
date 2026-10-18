@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States | 🌐 | [*CIDR]",
         "🇫🇮 Finland | [*CIDR]",
-        "🇱🇹 Lithuania | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK"
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States | 🌐 | [*CIDR]",
         "🇫🇮 Finland | [*CIDR]",
-        "🇱🇹 Lithuania | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK"
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇺🇸 United States | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "78.24.218.88",
-      "server_port": 2096,
-      "uuid": "e667f5c7-6b38-48ef-ab89-40519713afb0",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
-      }
     },
     {
       "tag": "🇫🇮 Finland | [*CIDR]",
@@ -100,30 +76,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "8cb5baa18cd7"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania | [*CIDR]",
-      "type": "vless",
-      "server": "lt69.cdnfern.org",
-      "server_port": 443,
-      "uuid": "cb5d9bb5-c2f9-46cf-9555-9ead6b30c7b7",
-      "tls": {
-        "enabled": true,
-        "server_name": "lt69.cdnfern.org",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     },
     {
@@ -137,7 +95,7 @@
         "server_name": "ru-auto-02.10media.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -146,18 +104,64 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
       "type": "vless",
-      "server": "185.86.145.142",
-      "server_port": 2096,
-      "uuid": "c1eabfbe-62ef-46a2-9857-9ad3d69e174a",
+      "server": "45.91.55.86",
+      "server_port": 443,
+      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
       "tls": {
         "enabled": true,
-        "server_name": "apis.heoleti.pro",
+        "server_name": "stillroom.10media.top",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "northfeed"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "ru3.radiolumens.uk",
+      "server_port": 8444,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru3.radiolumens.uk",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "beru-uk"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "ru-auto-02.10media.top",
+      "server_port": 443,
+      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-auto-02.10media.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "northfeed"
       }
     }
   ],
