@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇨🇿 Czechia | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,108 +51,131 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France | [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇬🇧 United Kingdom | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇨🇿 Czechia | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇷 France | [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "188.225.57.92",
-      "server_port": 443,
-      "uuid": "aca886aa-9b51-4eb2-8d7a-12d6b89caf4d",
+      "server": "94.103.2.232",
+      "server_port": 8462,
+      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
       "tls": {
         "enabled": true,
-        "server_name": "cdn-01.funvideos.video",
+        "server_name": "github.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia | [*CIDR]",
+      "type": "vless",
+      "server": "81.90.31.111",
+      "server_port": 443,
+      "uuid": "d78d6815-5f00-4fe3-8aae-3344aeb7783f",
+      "tls": {
+        "enabled": true,
+        "server_name": "1f0c1c7297521d51.wgse.info",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "cdn-01.funvideos.video"
+          "Host": "1f0c1c7297521d51.wgse.info"
         },
-        "path": "/api/53d53ac3/a7fa61/096357bebc62"
+        "path": "/ws"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇪🇪 Estonia | [*CIDR]",
       "type": "vless",
-      "server": "213.171.30.206",
-      "server_port": 443,
-      "uuid": "d86e6fda-e519-46ab-98eb-9ff9a9da5984",
+      "server": "185.76.241.130",
+      "server_port": 8449,
+      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
       "tls": {
         "enabled": true,
-        "server_name": "trust-engage-876.cdn.cachefleet.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | [*CIDR]",
-      "type": "vless",
-      "server": "ru3.radiolumens.uk",
-      "server_port": 8444,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru3.radiolumens.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-uk"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "213.171.30.206",
-      "server_port": 443,
-      "uuid": "d86e6fda-e519-46ab-98eb-9ff9a9da5984",
-      "tls": {
-        "enabled": true,
-        "server_name": "trust-engage-876.cdn.cachefleet.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR]",
-      "type": "vless",
-      "server": "45.133.151.167",
-      "server_port": 25481,
-      "uuid": "68c3d665-b2b5-4ffb-9f37-9f3d8c47324d",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "github.com",
         "reality": {
           "enabled": true,
-          "public_key": "mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E",
-          "short_id": "3b84fc70657725af"
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "8cb5baa18cd7"
+        "service_name": "GunService"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
+      "type": "vless",
+      "server": "94.103.2.109",
+      "server_port": 8459,
+      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]-3",
+      "type": "vless",
+      "server": "89.221.203.206",
+      "server_port": 8461,
+      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
       }
     }
   ],
