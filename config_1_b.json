@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States | 🌐 | [*CIDR]",
-        "🇺🇸 United States | 🌐 | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2"
+        "🇲🇩 Moldova | 🌐 [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇲🇩 Moldova | 🌐 | [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,119 +51,127 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States | 🌐 | [*CIDR]",
-        "🇺🇸 United States | 🌐 | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]-2"
+        "🇲🇩 Moldova | 🌐 [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇲🇩 Moldova | 🌐 | [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States | 🌐 | [*CIDR]",
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "78.24.218.228",
-      "server_port": 2096,
-      "uuid": "e667f5c7-6b38-48ef-ab89-40519713afb0",
+      "server": "87.228.71.196",
+      "server_port": 443,
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
+        "server_name": "ap2.directly.chat",
+        "utls": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ap2.directly.chat"
         },
+        "path": "/md/1"
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "185.147.27.100",
+      "server_port": 443,
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "tls": {
+        "enabled": true,
+        "server_name": "ap2.directly.chat",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
+        "type": "ws",
+        "headers": {
+          "Host": "ap2.directly.chat"
+        },
+        "path": "/md/1"
       }
     },
     {
-      "tag": "🇺🇸 United States | 🌐 | [*CIDR]-2",
+      "tag": "🇬🇧 United Kingdom | [*CIDR]",
       "type": "vless",
-      "server": "78.24.218.228",
-      "server_port": 2096,
-      "uuid": "e667f5c7-6b38-48ef-ab89-40519713afb0",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "09b3f968-a8a4-48ec-a707-e1dac8e9eb6d",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
+        "server_name": "www.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "ap2.directly.chat",
+      "server_port": 443,
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "tls": {
+        "enabled": true,
+        "server_name": "ap2.directly.chat",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
+        "type": "ws",
+        "headers": {
+          "Host": "ap2.directly.chat"
+        },
+        "path": "/md/1"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]-3",
       "type": "vless",
-      "server": "45.91.55.86",
+      "server": "87.228.71.196",
       "server_port": 443,
-      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
       "tls": {
         "enabled": true,
-        "server_name": "ru-auto-02.10media.top",
+        "server_name": "ap2.directly.chat",
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "northfeed"
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
-      "type": "vless",
-      "server": "ee.h1cloud.net",
-      "server_port": 25895,
-      "uuid": "f90b7d43-69e2-4b46-a672-8029bc6796a2",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k",
-          "short_id": "a73f0410d728c823"
+        "type": "ws",
+        "headers": {
+          "Host": "ap2.directly.chat"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
-      "type": "vless",
-      "server": "45.91.55.86",
-      "server_port": 443,
-      "uuid": "9cb8d71c-fe06-4402-a591-eaa1f173b890",
-      "tls": {
-        "enabled": true,
-        "server_name": "stillroom.10media.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "northfeed"
+        "path": "/md/1"
       }
     }
   ],
