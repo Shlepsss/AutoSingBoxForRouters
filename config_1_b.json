@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]"
+        "🇲🇩 Moldova | 🌐 [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,89 +51,82 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]"
+        "🇲🇩 Moldova | 🌐 [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "ru2.radiolumens.uk",
-      "server_port": 9444,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "server": "87.228.71.198",
+      "server_port": 443,
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
       "tls": {
         "enabled": true,
-        "server_name": "ru2.radiolumens.uk",
+        "server_name": "ap2.directly.chat",
         "alpn": [
           "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "72.56.235.75",
-      "server_port": 443,
-      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-bridge-2-121.mirra.now",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "VideoRenderer"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]-2",
-      "type": "vless",
-      "server": "72.56.235.75",
-      "server_port": 443,
-      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-bridge-2-121.mirra.now",
-        "utls": {
-          "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "VideoRenderer"
+        "type": "ws",
+        "headers": {
+          "Host": "ap2.directly.chat"
+        },
+        "path": "/md/1"
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
       "type": "vless",
-      "server": "72.56.235.75",
+      "server": "89.23.113.11",
       "server_port": 443,
-      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
+      "uuid": "9ab9291e-fd72-4af9-b227-93419e90ff2e",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-bridge-2-121.mirra.now",
+        "server_name": "ru-in-lt-4vp.movietop24.site",
+        "reality": {
+          "enabled": true,
+          "public_key": "DP_8vX-l2ugAHn828ZGa4wHp4Y7YOZrhGKiTMaFoCDc",
+          "short_id": "4ea43db267b5fd8b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "87.228.71.196",
+      "server_port": 443,
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "tls": {
+        "enabled": true,
+        "server_name": "ap2.directly.chat",
         "utls": {
           "enabled": true,
           "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "VideoRenderer"
+        "type": "ws",
+        "headers": {
+          "Host": "ap2.directly.chat"
+        },
+        "path": "/md/1"
       }
     },
     {
@@ -153,6 +146,28 @@
           "enabled": true,
           "fingerprint": "ios"
         }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]-3",
+      "type": "vless",
+      "server": "ap2.directly.chat",
+      "server_port": 443,
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "tls": {
+        "enabled": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/md/1"
       }
     }
   ],
