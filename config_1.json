@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]"
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇧🇬 Bulgaria [*CIDR] CDN",
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,29 +51,29 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]"
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇧🇬 Bulgaria [*CIDR] CDN",
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "213.171.24.54",
-      "server_port": 8643,
-      "uuid": "0d55ea1d-5587-4c17-9e85-3ee9b279aa8f",
+      "server": "186.246.51.226",
+      "server_port": 8443,
+      "uuid": "deba253c-fceb-4efb-b1b8-f7295ef2ec36",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "travel.yandex.ru",
+        "server_name": "assets.blogspot.com",
         "reality": {
           "enabled": true,
-          "public_key": "kmLlM6u12bptp7icPOL3fkUJucwvYTRVMkXz2AGAN2A",
-          "short_id": "ca6703afd42cadcd"
+          "public_key": "1ZjjxRjaJlzXQOupvNZ5pyK5xbaZGskjC6HkXGzMjys",
+          "short_id": "1ec515b87b68eab9"
         },
         "utls": {
           "enabled": true,
@@ -82,7 +82,67 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
+      "type": "vless",
+      "server": "37.18.14.43",
+      "server_port": 8443,
+      "uuid": "6a2aff19-ff1f-4a13-96c8-a4d8986a9699",
+      "tls": {
+        "enabled": true,
+        "server_name": "summerculture.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.180.13",
+      "server_port": 443,
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "edge1.mskedge.ru",
+      "server_port": 443,
+      "uuid": "34a39a68-e7bf-4aa7-8340-a1a3126be65b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eh.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "N8FJu1pfVv7wRY1AqkCUT_XOcaxFaH4oXh1tzuVNcB0",
+          "short_id": "a77377d70de13390"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
       "server": "263651t.fi3.h1clayd.click",
       "server_port": 443,
@@ -97,72 +157,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "78.17.98.89",
-      "server_port": 443,
-      "uuid": "0bf8538b-6299-46b0-9775-8b00939dccb5",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "ImJawrRNz9AgH6VoBw3xI9UxEtRmeb5SxXiw5rmyeCk",
-          "short_id": "18c454e44487e556"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR]",
-      "type": "vless",
-      "server": "8fc752g.fi3.h1clayd.click",
-      "server_port": 443,
-      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
-      "tls": {
-        "enabled": true,
-        "server_name": "8fc752g.fi3.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18",
-          "short_id": "09d0a94a1c6fc9d5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "f345a414c040"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "213.171.24.54",
-      "server_port": 8643,
-      "uuid": "0d55ea1d-5587-4c17-9e85-3ee9b279aa8f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "travel.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "kmLlM6u12bptp7icPOL3fkUJucwvYTRVMkXz2AGAN2A",
-          "short_id": "ca6703afd42cadcd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       }
     }
