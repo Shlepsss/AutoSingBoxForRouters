@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇦🇪 United Arab Emirates [*CIDR]",
         "🇦🇪 United Arab Emirates | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇪🇸 Spain [*CIDR]"
+        "🇦🇪 United Arab Emirates | [*CIDR]-2",
+        "🇫🇮 Finland [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,56 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇦🇪 United Arab Emirates [*CIDR]",
         "🇦🇪 United Arab Emirates | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇪🇸 Spain [*CIDR]"
+        "🇦🇪 United Arab Emirates | [*CIDR]-2",
+        "🇫🇮 Finland [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "213.171.24.54",
-      "server_port": 8643,
-      "uuid": "0d55ea1d-5587-4c17-9e85-3ee9b279aa8f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "travel.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "kmLlM6u12bptp7icPOL3fkUJucwvYTRVMkXz2AGAN2A",
-          "short_id": "ca6703afd42cadcd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇦🇪 United Arab Emirates [*CIDR]",
-      "type": "vless",
-      "server": "213.165.60.99",
-      "server_port": 443,
-      "uuid": "5c8950a3-2142-42c9-b414-fa34526ff25f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-in-uk-4vp.movietop24.site",
-        "reality": {
-          "enabled": true,
-          "public_key": "Nu5Tn3Qf0iC8tog-mxqNjl9ckjHgwU0xSOSET605tw0",
-          "short_id": "17e8f4e38e421c68"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
     },
     {
       "tag": "🇦🇪 United Arab Emirates | [*CIDR]",
@@ -119,7 +77,27 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "78.17.98.89",
+      "server_port": 443,
+      "uuid": "0bf8538b-6299-46b0-9775-8b00939dccb5",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ImJawrRNz9AgH6VoBw3xI9UxEtRmeb5SxXiw5rmyeCk",
+          "short_id": "18c454e44487e556"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
         }
       }
     },
@@ -143,24 +121,48 @@
       }
     },
     {
-      "tag": "🇪🇸 Spain [*CIDR]",
+      "tag": "🇦🇪 United Arab Emirates | [*CIDR]-2",
       "type": "vless",
-      "server": "185.76.241.87",
+      "server": "213.165.60.99",
       "server_port": 443,
       "uuid": "5c8950a3-2142-42c9-b414-fa34526ff25f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru-in-es-4vp.movietop24.site",
+        "server_name": "ru-in-uk-4vp.movietop24.site",
         "reality": {
           "enabled": true,
-          "public_key": "DcdLu5TEodox9cSq7WLfV-47vURmKkRc1BO19KJvgkM",
-          "short_id": "861215e33e8dba4f"
+          "public_key": "Nu5Tn3Qf0iC8tog-mxqNjl9ckjHgwU0xSOSET605tw0",
+          "short_id": "17e8f4e38e421c68"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "8fc752g.fi3.h1clayd.click",
+      "server_port": 443,
+      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
+      "tls": {
+        "enabled": true,
+        "server_name": "8fc752g.fi3.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18",
+          "short_id": "09d0a94a1c6fc9d5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "f345a414c040"
       }
     }
   ],
