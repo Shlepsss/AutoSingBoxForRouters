@@ -31,32 +31,123 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.vk.com"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-2",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-3",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-4"
       ],
-      "default": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.vk.com",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.vk.com",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-2",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-3",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-4"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru",
       "type": "vless",
-      "server": "92.118.9.166",
-      "server_port": 27439,
-      "uuid": "3679bafc-b71b-4129-a196-33dfc92898a6",
+      "server": "45.144.52.65",
+      "server_port": 8443,
+      "uuid": "9c794bb7-54fe-4acd-844a-a26209af36c3",
       "tls": {
         "enabled": true,
-        "server_name": "www.vk.com",
+        "server_name": "vk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Re0aWbYgk775QZ2eiIzh9fwPANq8HfLlrp9vbTC8vXQ",
-          "short_id": "60e64f9f8724c0"
+          "public_key": "zdUSjR5iPKcmOOUbSFQQ0pCYjGGVJMRBMD6_F3_wBEs",
+          "short_id": "4d2cf3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-2",
+      "type": "vless",
+      "server": "45.144.52.65",
+      "server_port": 8443,
+      "uuid": "9c794bb7-54fe-4acd-844a-a26209af36c3",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "zdUSjR5iPKcmOOUbSFQQ0pCYjGGVJMRBMD6_F3_wBEs",
+          "short_id": "4d2cf3"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-3",
+      "type": "vless",
+      "server": "45.144.52.65",
+      "server_port": 8443,
+      "uuid": "9c794bb7-54fe-4acd-844a-a26209af36c3",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "zdUSjR5iPKcmOOUbSFQQ0pCYjGGVJMRBMD6_F3_wBEs",
+          "short_id": "4d2cf3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 | [SNI-RU] vk.ru-4",
+      "type": "vless",
+      "server": "45.144.52.65",
+      "server_port": 8443,
+      "uuid": "9c794bb7-54fe-4acd-844a-a26209af36c3",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "zdUSjR5iPKcmOOUbSFQQ0pCYjGGVJMRBMD6_F3_wBEs",
+          "short_id": "4d2cf3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc"
       }
     }
   ],
