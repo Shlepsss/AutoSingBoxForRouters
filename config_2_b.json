@@ -34,16 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR]",
+        "🇳🇴 Norway [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
         "🇷🇺 Russia | 🌐 [*CIDR] VK-4",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia | 🌐 [*CIDR] VK-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,32 +53,50 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR]",
+        "🇳🇴 Norway [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
         "🇷🇺 Russia | 🌐 [*CIDR] VK-4",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia | 🌐 [*CIDR] VK-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "trojan",
-      "server": "91.240.87.108",
-      "server_port": 443,
-      "password": "rCCYAjMm8e8vYSAT9z2ohsLS-AJToVge",
+      "tag": "🇳🇴 Norway [*CIDR]",
+      "type": "vless",
+      "server": "pl1.h1cloud.net",
+      "server_port": 27591,
+      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
       "tls": {
         "enabled": true,
-        "server_name": "z40.tgnn.live",
+        "server_name": "www.samsung.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM",
+          "short_id": "6c5c7900406a1ae7"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "fast80.slopllex.app",
+      "server_port": 443,
+      "uuid": "f85af535-d0ff-437f-ad79-4be0e7c1f350",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fast80.slopllex.app",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     },
@@ -100,7 +115,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -119,56 +134,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "trojan",
-      "server": "91.240.87.108",
-      "server_port": 443,
-      "password": "rCCYAjMm8e8vYSAT9z2ohsLS-AJToVge",
-      "tls": {
-        "enabled": true,
-        "server_name": "z40.tgnn.live",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "trojan",
-      "server": "91.240.87.108",
-      "server_port": 443,
-      "password": "rCCYAjMm8e8vYSAT9z2ohsLS-AJToVge",
-      "tls": {
-        "enabled": true,
-        "server_name": "z40.tgnn.live",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK",
-      "type": "vless",
-      "server": "terraavenue.net",
-      "server_port": 443,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "terraavenue.net",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     },
@@ -187,7 +153,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     },
@@ -206,41 +172,26 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-5",
       "type": "vless",
-      "server": "lalibobi.online",
+      "server": "terraavenue.net",
       "server_port": 443,
-      "uuid": "21ffcccd-8fbe-43fb-9dd1-24452fdfa8ad",
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
-        "server_name": "lalibobi.online",
+        "server_name": "terraavenue.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "lalibobi.orbit.v3.Connect"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
-      "type": "trojan",
-      "server": "91.240.87.108",
-      "server_port": 443,
-      "password": "rCCYAjMm8e8vYSAT9z2ohsLS-AJToVge",
-      "tls": {
-        "enabled": true,
-        "server_name": "z40.tgnn.live",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       }
     }

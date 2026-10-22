@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇺🇸 United States [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇳🇴 Norway | [*CIDR]"
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇴 Norway | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,61 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇺🇸 United States [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇳🇴 Norway | [*CIDR]"
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇴 Norway | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇪🇪 Estonia | [*CIDR]",
+      "type": "vless",
+      "server": "cdn2.rucdncomp.pro",
+      "server_port": 443,
+      "uuid": "21ffcccd-8fbe-43fb-9dd1-24452fdfa8ad",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn2.rucdncomp.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "cdn2.rucdncomp.pro"
+        },
+        "path": "/static/events/27f78b054c54/"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "168.113.171.57",
+      "server_port": 443,
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "moscow.eosapp.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
       "server": "78.17.98.140",
       "server_port": 443,
@@ -81,72 +125,6 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [*CIDR]",
-      "type": "vless",
-      "server": "a0688bt.us4.h1clayd.click",
-      "server_port": 443,
-      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
-      "tls": {
-        "enabled": true,
-        "server_name": "a0688bt.us4.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E",
-          "short_id": "257420d9d430152a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "77.95.206.236",
-      "server_port": 64563,
-      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.starlink.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "wtTHheIAfyG6Sis8_GC5aHW06QPs9K-LwTqZ15NHX2M",
-          "short_id": "04bc4a55875f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR]",
-      "type": "vless",
-      "server": "62.152.58.90",
-      "server_port": 443,
-      "uuid": "1bb2af63-4472-44ed-9c70-8f316258b68b",
-      "tls": {
-        "enabled": true,
-        "server_name": "360.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k",
-          "short_id": "27e53bbcab7593d7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
       "tag": "🇳🇴 Norway | [*CIDR]",
       "type": "vless",
       "server": "pl1.h1cloud.net",
@@ -162,8 +140,27 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | [*CIDR]-2",
+      "type": "vless",
+      "server": "188.225.38.216",
+      "server_port": 443,
+      "uuid": "21ffcccd-8fbe-43fb-9dd1-24452fdfa8ad",
+      "tls": {
+        "enabled": true,
+        "server_name": "lalibobi.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "lalibobi.orbit.v3.Connect"
       }
     }
   ],
