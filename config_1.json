@@ -35,10 +35,12 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 Finland [*CIDR]",
-        "🇺🇸 United States [*CIDR]",
-        "🌐 Anycast-IP | 🇧🇷 🇸🇪 [*CIDR]",
-        "🇪🇪 Estonia | 🌐 [*CIDR]",
-        "🇫🇮 Finland [*CIDR]-2"
+        "🇫🇮 Finland [*CIDR]-2",
+        "🇰🇿 Kazakhstan [*CIDR]",
+        "🇫🇮 Finland [*CIDR]-3",
+        "🇫🇮 Finland [*CIDR]-4",
+        "🇫🇮 Finland [*CIDR]-5",
+        "🇳🇱 The Netherlands [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,16 +54,38 @@
       "outbounds": [
         "auto",
         "🇫🇮 Finland [*CIDR]",
-        "🇺🇸 United States [*CIDR]",
-        "🌐 Anycast-IP | 🇧🇷 🇸🇪 [*CIDR]",
-        "🇪🇪 Estonia | 🌐 [*CIDR]",
-        "🇫🇮 Finland [*CIDR]-2"
+        "🇫🇮 Finland [*CIDR]-2",
+        "🇰🇿 Kazakhstan [*CIDR]",
+        "🇫🇮 Finland [*CIDR]-3",
+        "🇫🇮 Finland [*CIDR]-4",
+        "🇫🇮 Finland [*CIDR]-5",
+        "🇳🇱 The Netherlands [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
       "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "263651t.fi3.h1clayd.click",
+      "server_port": 443,
+      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
+      "tls": {
+        "enabled": true,
+        "server_name": "263651t.fi3.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "nNe5Y8_G7L0_VO5lqlee3h5UmRH4RXjaRYGCDUkbQz4",
+          "short_id": "2892e611785bafd1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]-2",
       "type": "vless",
       "server": "45.9.12.7",
       "server_port": 443,
@@ -82,39 +106,18 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [*CIDR]",
+      "tag": "🇰🇿 Kazakhstan [*CIDR]",
       "type": "vless",
-      "server": "45.144.30.138",
-      "server_port": 443,
-      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
-      "flow": "xtls-rprx-vision",
+      "server": "168.113.254.253",
+      "server_port": 9882,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
       "tls": {
         "enabled": true,
-        "server_name": "siri.russiaai.space",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
           "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇧🇷 🇸🇪 [*CIDR]",
-      "type": "vless",
-      "server": "toggle.skelmoridianservice.com",
-      "server_port": 443,
-      "uuid": "26dd886d-3eae-4eda-a92d-dc5d5e7e036e",
-      "tls": {
-        "enabled": true,
-        "server_name": "my.hexagonicfield.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4",
-          "short_id": "a1b2c3d4e5f6a7b8"
         },
         "utls": {
           "enabled": true,
@@ -123,40 +126,20 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "moktana.net.v1.StreamService"
-      }
+        "service_name": "grpc-tunnel"
+      },
+      "packet_encoding": "xudp"
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [*CIDR]",
+      "tag": "🇫🇮 Finland [*CIDR]-3",
       "type": "vless",
-      "server": "45.139.27.9",
-      "server_port": 443,
-      "uuid": "6eca8bc3-c4e1-48d1-bf15-1eb016dd6272",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.spbu.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "2LWgemfg0df7tGt4icLbRG-Cz7QNPVr3g7xIdwbTTHQ",
-          "short_id": "caa05b44ba5b7b3d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland [*CIDR]-2",
-      "type": "vless",
-      "server": "45.144.30.113",
+      "server": "45.9.12.7",
       "server_port": 443,
       "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "syberia.russiavibory.online",
+        "server_name": "peskov.russiavibory.online",
         "reality": {
           "enabled": true,
           "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
@@ -164,7 +147,69 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]-4",
+      "type": "vless",
+      "server": "45.9.12.7",
+      "server_port": 443,
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "peskov.russiavibory.online",
+        "reality": {
+          "enabled": true,
+          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]-5",
+      "type": "vless",
+      "server": "45.9.12.7",
+      "server_port": 443,
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "peskov.russiavibory.online",
+        "reality": {
+          "enabled": true,
+          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.180.13",
+      "server_port": 443,
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
         }
       }
     }

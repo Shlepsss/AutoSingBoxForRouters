@@ -36,14 +36,14 @@
       "outbounds": [
         "🇷🇺 Russia | 🌐 [*CIDR] CDN",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+        "🇫🇮 Finland [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-6",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-8",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-9",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-10"
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-8"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -58,14 +58,14 @@
         "auto",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+        "🇫🇮 Finland [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-6",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-8",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-9",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-10"
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-8"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -81,7 +81,7 @@
         "server_name": "summerculture.net",
         "alpn": [
           "h2",
-          "http/1.1"
+          "+http/1.1"
         ],
         "utls": {
           "enabled": true,
@@ -92,12 +92,33 @@
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
       "type": "vless",
-      "server": "summerculture.net",
+      "server": "37.18.14.43",
       "server_port": 2053,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
         "server_name": "summerculture.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "45.9.12.7",
+      "server_port": 443,
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "peskov.russiavibory.online",
+        "reality": {
+          "enabled": true,
+          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
@@ -107,16 +128,43 @@
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
       "type": "vless",
-      "server": "summerculture.net",
+      "server": "37.18.14.43",
       "server_port": 2053,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
         "server_name": "summerculture.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "185.179.190.170",
+      "server_port": 59222,
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "tls": {
+        "enabled": true,
+        "server_name": "tbank.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "riOqDvO6CI06_GP7aJEtDH27zPWu6BiFwGrUESatk1I",
+          "short_id": "e03d3096bebd"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc"
       }
     },
     {
@@ -130,19 +178,23 @@
         "server_name": "summerculture.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
       "type": "vless",
-      "server": "37.18.14.43",
+      "server": "summerculture.net",
       "server_port": 2053,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
         "server_name": "summerculture.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -163,15 +215,19 @@
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
       "type": "vless",
-      "server": "37.18.14.43",
+      "server": "summerculture.net",
       "server_port": 2053,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
         "server_name": "summerculture.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       }
     },
@@ -183,40 +239,14 @@
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
-        "server_name": "summerculture.net"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-9",
-      "type": "vless",
-      "server": "37.18.14.43",
-      "server_port": 2053,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
         "server_name": "summerculture.net",
         "alpn": [
           "h2",
-          "+http/1.1"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-10",
-      "type": "vless",
-      "server": "37.18.14.43",
-      "server_port": 2053,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
-      "tls": {
-        "enabled": true,
-        "server_name": "summerculture.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     }
