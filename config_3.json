@@ -36,7 +36,9 @@
       "outbounds": [
         "ð·ðº Russia | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3"
+        "🇺🇸 United States | [*CIDR] VK",
+        "ð·ðº Russia | [*CIDR] YA-3",
+        "🇺🇸 United States | [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,7 +53,9 @@
         "auto",
         "ð·ðº Russia | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3"
+        "🇺🇸 United States | [*CIDR] VK",
+        "ð·ðº Russia | [*CIDR] YA-3",
+        "🇺🇸 United States | [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -65,6 +69,7 @@
       "security": "auto",
       "tls": {
         "enabled": true,
+        "server_name": "158.160.180.165",
         "alpn": [
           "h2",
           "http/1.1"
@@ -83,6 +88,28 @@
       }
     },
     {
+      "tag": "🇺🇸 United States | [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.145.142",
+      "server_port": 443,
+      "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
+      "tls": {
+        "enabled": true,
+        "server_name": "deliverya.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "deliverya.online"
+        },
+        "path": "/adrws"
+      }
+    },
+    {
       "tag": "ð·ðº Russia | [*CIDR] YA-3",
       "type": "vmess",
       "server": "158.160.180.165",
@@ -90,12 +117,32 @@
       "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
       "security": "auto",
       "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "deliverya.online",
+      "server_port": 443,
+      "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
+      "tls": {
         "enabled": true,
-        "server_name": "158.160.180.165",
+        "server_name": "deliverya.online",
         "alpn": [
-          "h2",
           "http/1.1"
-        ]
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "deliverya.online"
+        },
+        "path": "/adrws"
       }
     }
   ],
