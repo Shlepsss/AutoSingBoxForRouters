@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR]",
-        "🇺🇸 United States [*CIDR] VK",
+        "🇩🇪 Germany | [*CIDR]",
         "🇫🇮 Finland | [*CIDR]",
-        "🇺🇸 United States | [*CIDR] VK",
-        "🇰🇿 Kazakhstan | [*CIDR]"
+        "🇺🇸 United States | [*CIDR]",
+        "🇨🇾 Cyprus [*CIDR] VK",
+        "🇺🇸 United States [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,57 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR]",
-        "🇺🇸 United States [*CIDR] VK",
+        "🇩🇪 Germany | [*CIDR]",
         "🇫🇮 Finland | [*CIDR]",
-        "🇺🇸 United States | [*CIDR] VK",
-        "🇰🇿 Kazakhstan | [*CIDR]"
+        "🇺🇸 United States | [*CIDR]",
+        "🇨🇾 Cyprus [*CIDR] VK",
+        "🇺🇸 United States [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "31.177.111.121",
+      "server": "201.51.8.163",
       "server_port": 443,
-      "uuid": "22d6aeac-771d-4a02-8237-3004d947e91e",
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api.cdnrt.net",
+        "server_name": "atk.vkusnews.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "api.cdnrt.net"
-        },
-        "path": "/static/metrics/7c9b509840ad/"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.145.142",
-      "server_port": 443,
-      "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
-      "tls": {
-        "enabled": true,
-        "server_name": "deliverya.online",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "deliverya.online"
-        },
-        "path": "/adrws"
       }
     },
     {
@@ -120,7 +97,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -129,7 +106,47 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR] VK",
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "159.194.248.11",
+      "server_port": 443,
+      "uuid": "d40fdcdb-8d6f-406d-a050-12e196fe8804",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "yQfhPYAXsz1EqKpOglHh72NzJsf9YoPuD1bjMC-DDiM",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇾 Cyprus [*CIDR] VK",
+      "type": "vless",
+      "server": "router.hermit.pw",
+      "server_port": 19133,
+      "uuid": "69158986-cfae-4567-8391-0f96d9d985bd",
+      "tls": {
+        "enabled": true,
+        "server_name": "music.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ud15DX-emDBS7QsLMabJ7CjgIteK61jxwSp1v0Fewxc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR] VK",
       "type": "vless",
       "server": "185.86.145.142",
       "server_port": 443,
@@ -142,7 +159,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -151,27 +168,6 @@
           "Host": "deliverya.online"
         },
         "path": "/adrws"
-      }
-    },
-    {
-      "tag": "🇰🇿 Kazakhstan | [*CIDR]",
-      "type": "vless",
-      "server": "109.73.192.248",
-      "server_port": 443,
-      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "almata.vkusnews.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     }
   ],

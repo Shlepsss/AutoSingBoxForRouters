@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States | [*CIDR] VK",
         "🇺🇸 United States [*CIDR] VK",
+        "🇺🇸 United States | [*CIDR] VK",
         "🇨🇾 Cyprus | [*CIDR] VK",
-        "🇨🇾 Cyprus | [*CIDR] VK-2",
-        "🇺🇸 United States | [*CIDR] VK-2"
+        "🇺🇸 United States | [*CIDR] VK-2",
+        "🇨🇾 Cyprus | [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States | [*CIDR] VK",
         "🇺🇸 United States [*CIDR] VK",
+        "🇺🇸 United States | [*CIDR] VK",
         "🇨🇾 Cyprus | [*CIDR] VK",
-        "🇨🇾 Cyprus | [*CIDR] VK-2",
-        "🇺🇸 United States | [*CIDR] VK-2"
+        "🇺🇸 United States | [*CIDR] VK-2",
+        "🇨🇾 Cyprus | [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR] VK",
+      "tag": "🇺🇸 United States [*CIDR] VK",
       "type": "vless",
-      "server": "deliverya.online",
+      "server": "185.86.145.142",
       "server_port": 443,
       "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
       "tls": {
@@ -74,7 +74,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -86,7 +86,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [*CIDR] VK",
+      "tag": "🇺🇸 United States | [*CIDR] VK",
       "type": "vless",
       "server": "185.86.145.142",
       "server_port": 443,
@@ -96,7 +96,7 @@
         "server_name": "deliverya.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -110,7 +110,7 @@
     {
       "tag": "🇨🇾 Cyprus | [*CIDR] VK",
       "type": "vless",
-      "server": "router.hermit.pw",
+      "server": "89.208.210.53",
       "server_port": 19133,
       "uuid": "69158986-cfae-4567-8391-0f96d9d985bd",
       "tls": {
@@ -125,6 +125,28 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "deliverya.online",
+      "server_port": 443,
+      "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
+      "tls": {
+        "enabled": true,
+        "server_name": "deliverya.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "deliverya.online"
+        },
+        "path": "/adrws"
       }
     },
     {
@@ -143,33 +165,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [*CIDR] VK-2",
-      "type": "vless",
-      "server": "185.86.145.142",
-      "server_port": 443,
-      "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
-      "tls": {
-        "enabled": true,
-        "server_name": "deliverya.online",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "deliverya.online"
-        },
-        "path": "/adrws"
       }
     }
   ],
