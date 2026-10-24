@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇨🇾 Cyprus | [*CIDR] VK",
         "ð·ðº Russia | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA-2",
         "🇺🇸 United States | [*CIDR] VK",
-        "ð·ðº Russia | [*CIDR] YA-3",
+        "🇺🇸 United States [*CIDR] VK",
         "🇺🇸 United States | [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
@@ -51,14 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇨🇾 Cyprus | [*CIDR] VK",
         "ð·ðº Russia | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA-2",
         "🇺🇸 United States | [*CIDR] VK",
-        "ð·ðº Russia | [*CIDR] YA-3",
+        "🇺🇸 United States [*CIDR] VK",
         "🇺🇸 United States | [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇨🇾 Cyprus | [*CIDR] VK",
+      "type": "vless",
+      "server": "router.hermit.pw",
+      "server_port": 19133,
+      "uuid": "69158986-cfae-4567-8391-0f96d9d985bd",
+      "tls": {
+        "enabled": true,
+        "server_name": "music.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ud15DX-emDBS7QsLMabJ7CjgIteK61jxwSp1v0Fewxc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "ð·ðº Russia | [*CIDR] YA",
@@ -77,17 +97,6 @@
       }
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA-2",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
       "tag": "🇺🇸 United States | [*CIDR] VK",
       "type": "vless",
       "server": "185.86.145.142",
@@ -98,7 +107,7 @@
         "server_name": "deliverya.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -110,20 +119,9 @@
       }
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA-3",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [*CIDR] VK-2",
+      "tag": "🇺🇸 United States [*CIDR] VK",
       "type": "vless",
-      "server": "deliverya.online",
+      "server": "185.86.145.142",
       "server_port": 443,
       "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
       "tls": {
@@ -134,7 +132,29 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "deliverya.online"
+        },
+        "path": "/adrws"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "185.86.145.142",
+      "server_port": 443,
+      "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
+      "tls": {
+        "enabled": true,
+        "server_name": "deliverya.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
         }
       },
       "transport": {
