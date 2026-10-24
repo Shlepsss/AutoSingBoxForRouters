@@ -34,11 +34,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] YA-2"
+        "ð·ðº Russia | [*CIDR] YA-2",
+        "ð·ðº Russia | [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,79 +49,12 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] YA-2"
+        "ð·ðº Russia | [*CIDR] YA-2",
+        "ð·ðº Russia | [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.180.13",
-      "server_port": 443,
-      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.145.183",
-      "server_port": 443,
-      "uuid": "80f7b6c7-2b3c-4937-af9e-49404d926e7c",
-      "tls": {
-        "enabled": true,
-        "server_name": "online.wyre-file.ru",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "online.wyre-file.ru"
-        },
-        "path": "/nl7ws"
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.180.13",
-      "server_port": 443,
-      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "ð·ðº Russia | [*CIDR] YA",
@@ -142,23 +73,29 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
-      "type": "vless",
-      "server": "84.201.180.13",
-      "server_port": 443,
-      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "tag": "ð·ðº Russia | [*CIDR] YA-2",
+      "type": "vmess",
+      "server": "158.160.180.165",
+      "server_port": 24212,
+      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "tag": "ð·ðº Russia | [*CIDR] YA-3",
+      "type": "vmess",
+      "server": "158.160.180.165",
+      "server_port": 24212,
+      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
+      "security": "auto",
+      "tls": {
+        "enabled": true
       }
     }
   ],
