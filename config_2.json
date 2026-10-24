@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-6",
-        "🇷🇺 Russia | [*CIDR]-7"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,84 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia | [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-6",
-        "🇷🇺 Russia | [*CIDR]-7"
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "193.223.104.120",
+      "server_port": 443,
+      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "201.24.121.243",
+      "server_port": 443,
+      "uuid": "32b5ca9b-3f81-4031-965d-e8b074216e8d",
+      "tls": {
+        "enabled": true,
+        "server_name": "kk-ru24a1.testkknegr.online",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vlgrpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "201.24.121.243",
+      "server_port": 443,
+      "uuid": "32b5ca9b-3f81-4031-965d-e8b074216e8d",
+      "tls": {
+        "enabled": true,
+        "server_name": "kk-ru24a1.testkknegr.online",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vlgrpc"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -87,100 +152,38 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "113.30.154.246",
+      "server": "201.24.121.243",
       "server_port": 443,
-      "uuid": "0b6a937e-5b0e-49ca-b31e-f03f290e97cf",
-      "flow": "xtls-rprx-vision",
+      "uuid": "32b5ca9b-3f81-4031-965d-e8b074216e8d",
       "tls": {
         "enabled": true,
-        "server_name": "ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
+        "server_name": "kk-ru24a1.testkknegr.online",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vlgrpc"
       }
     },
     {
       "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
-      "server": "147.45.47.83",
+      "server": "45.9.118.207",
       "server_port": 443,
-      "uuid": "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "147.45.47.83",
-      "server_port": 443,
-      "uuid": "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "113.30.154.226",
-      "server_port": 443,
-      "uuid": "0b6a937e-5b0e-49ca-b31e-f03f290e97cf",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "abuse.ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
-      "type": "vless",
-      "server": "147.45.47.83",
-      "server_port": 443,
-      "uuid": "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b",
+      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -197,11 +200,53 @@
       }
     },
     {
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "147.45.47.104",
+      "server_port": 443,
+      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | [*CIDR]-4",
       "type": "vless",
-      "server": "193.223.104.137",
+      "server": "113.30.154.246",
       "server_port": 443,
       "uuid": "0b6a937e-5b0e-49ca-b31e-f03f290e97cf",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "45.9.118.207",
+      "server_port": 443,
+      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -220,7 +265,7 @@
     {
       "tag": "🇷🇺 Russia | [*CIDR]-5",
       "type": "vless",
-      "server": "45.9.118.182",
+      "server": "147.45.47.104",
       "server_port": 443,
       "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
       "flow": "xtls-rprx-vision",
@@ -234,49 +279,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-6",
-      "type": "vless",
-      "server": "45.9.118.207",
-      "server_port": 443,
-      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-7",
-      "type": "vless",
-      "server": "147.45.47.95",
-      "server_port": 8443,
-      "uuid": "df549242-dc8e-482c-9dd5-eb3518583099",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
       }
     }
