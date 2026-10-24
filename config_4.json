@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇫🇷 France [SNI-RU] ozon.ru",
         "🇸🇪 Sweden | [SNI-RU] www.vk.ru",
         "🇩🇪 Germany [SNI-RU] ozon.ru",
-        "🇸🇪 Sweden | [SNI-RU] www.vk.ru-2",
-        "🇫🇷 France [SNI-RU] ozon.ru",
-        "🇫🇷 France [SNI-RU] ozon.ru-2"
+        "🇩🇪 Germany [SNI-RU] ozon.ru-2",
+        "🇸🇪 Sweden [SNI-RU] www.vk.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇫🇷 France [SNI-RU] ozon.ru",
         "🇸🇪 Sweden | [SNI-RU] www.vk.ru",
         "🇩🇪 Germany [SNI-RU] ozon.ru",
-        "🇸🇪 Sweden | [SNI-RU] www.vk.ru-2",
-        "🇫🇷 France [SNI-RU] ozon.ru",
-        "🇫🇷 France [SNI-RU] ozon.ru-2"
+        "🇩🇪 Germany [SNI-RU] ozon.ru-2",
+        "🇸🇪 Sweden [SNI-RU] www.vk.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇫🇷 France [SNI-RU] ozon.ru",
+      "type": "vless",
+      "server": "103.91.147.235",
+      "server_port": 443,
+      "uuid": "fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇸🇪 Sweden | [SNI-RU] www.vk.ru",
@@ -84,7 +105,7 @@
     {
       "tag": "🇩🇪 Germany [SNI-RU] ozon.ru",
       "type": "vless",
-      "server": "45.128.78.176",
+      "server": "45.128.78.180",
       "server_port": 443,
       "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
       "flow": "xtls-rprx-vision",
@@ -103,7 +124,28 @@
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [SNI-RU] www.vk.ru-2",
+      "tag": "🇩🇪 Germany [SNI-RU] ozon.ru-2",
+      "type": "vless",
+      "server": "45.128.78.176",
+      "server_port": 443,
+      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇸🇪 Sweden [SNI-RU] www.vk.ru",
       "type": "vless",
       "server": "45.12.63.81",
       "server_port": 443,
@@ -120,48 +162,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France [SNI-RU] ozon.ru",
-      "type": "vless",
-      "server": "103.91.147.239",
-      "server_port": 443,
-      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France [SNI-RU] ozon.ru-2",
-      "type": "vless",
-      "server": "103.91.147.239",
-      "server_port": 443,
-      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
         }
       }
     }

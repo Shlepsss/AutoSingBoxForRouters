@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
+        "🇺🇸 United States [*CIDR] VK",
+        "🇫🇮 Finland | [*CIDR]",
         "🇺🇸 United States | [*CIDR] VK",
-        "🇰🇿 Kazakhstan | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR]"
+        "🇰🇿 Kazakhstan | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,33 +51,81 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
+        "🇺🇸 United States [*CIDR] VK",
+        "🇫🇮 Finland | [*CIDR]",
         "🇺🇸 United States | [*CIDR] VK",
-        "🇰🇿 Kazakhstan | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR]"
+        "🇰🇿 Kazakhstan | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "mirror.nuv.cx",
-      "server_port": 2053,
-      "uuid": "18a1e914-dc23-4bc7-b0a7-5fd0fb565cc6",
+      "server": "31.177.111.121",
+      "server_port": 443,
+      "uuid": "22d6aeac-771d-4a02-8237-3004d947e91e",
       "tls": {
         "enabled": true,
-        "server_name": "mirror.nuv.cx",
+        "server_name": "api.cdnrt.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "api.cdnrt.net"
+        },
+        "path": "/static/metrics/7c9b509840ad/"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.145.142",
+      "server_port": 443,
+      "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
+      "tls": {
+        "enabled": true,
+        "server_name": "deliverya.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "deliverya.online"
+        },
+        "path": "/adrws"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]",
+      "type": "vless",
+      "server": "36a466g.fi1.h1clayd.click",
+      "server_port": 443,
+      "uuid": "9a0e84f8-4b58-477f-99da-5fac5a2e58e8",
+      "tls": {
+        "enabled": true,
+        "server_name": "36a466g.fi1.h1clayd.click",
         "reality": {
           "enabled": true,
-          "public_key": "iKYXOJoOvOk71UnjIzyEj502_nBalSNLJRWjKTf1fQc",
-          "short_id": "8096b8ec0b504d8f"
+          "public_key": "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg",
+          "short_id": "b3c9d0c6bdd114a6"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "random"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "0adb9638509b"
       }
     },
     {
@@ -119,48 +167,6 @@
           "enabled": true,
           "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
           "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "37.235.250.6",
-      "server_port": 443,
-      "uuid": "680e92ac-1688-49e0-af96-7327fbc30ce8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "gb.ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
-      "type": "vless",
-      "server": "213.165.60.100",
-      "server_port": 443,
-      "uuid": "c5cf36f5-50e9-405b-adb4-b40fdf0d4619",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-in-est-4vp.fast-cdn24.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "-vbYsY2UQcGl7Z6eTc5KDhxOfo_OhsqFlI_SyeL4TSE",
-          "short_id": "b927c029ece94e02"
         },
         "utls": {
           "enabled": true,
