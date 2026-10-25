@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇫🇮 Finland [*CIDR]"
+        "🇩🇪 Germany [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇫🇮 Finland [*CIDR]-2",
+        "🇫🇮 Finland | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,68 +51,110 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇫🇮 Finland [*CIDR]"
+        "🇩🇪 Germany [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇫🇮 Finland [*CIDR]-2",
+        "🇫🇮 Finland | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "ru.dostupnety.website",
+      "server": "201.51.8.163",
       "server_port": 443,
-      "uuid": "2c5e1028-528f-4017-8832-addcb6797ddf",
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ru.dostupnety.website",
+        "server_name": "atk.vkusnews.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "faf318x.fi3.h1clayd.click",
+      "server_port": 443,
+      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
+      "tls": {
+        "enabled": true,
+        "server_name": "faf318x.fi3.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "iZD9niaCQZpjG_ndVq8N2pY4hLNg0n7_oT7qJUMkDEI",
+          "short_id": "248965340b604f9c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]-2",
+      "type": "vless",
+      "server": "201.51.8.163",
+      "server_port": 443,
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "atk.vkusnews.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]-2",
+      "type": "vless",
+      "server": "8fc752g.fi3.h1clayd.click",
+      "server_port": 443,
+      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
+      "tls": {
+        "enabled": true,
+        "server_name": "8fc752g.fi3.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18",
+          "short_id": "09d0a94a1c6fc9d5"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ru.dostupnety.website"
-        },
-        "path": "/ws-hidden"
+        "type": "grpc",
+        "service_name": "f345a414c040"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "vd2.outlinevpn.cc",
-      "server_port": 12213,
-      "uuid": "7c464358-6c89-4623-bd20-7c7bcd51bc55",
-      "flow": "xtls-rprx-vision",
+      "server": "ss.90909.club",
+      "server_port": 2096,
+      "uuid": "eeb96fef-4476-4ab0-915e-32e8f014c3b2",
       "tls": {
         "enabled": true,
-        "server_name": "music.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "kTKM-s7XF0s878Ydmq1KeZFiGT6k1Bw_rLE79s1l1jI",
-          "short_id": "6a29a03b21"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "147.45.47.78",
-      "server_port": 443,
-      "uuid": "fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ai.ozon.ru",
+        "server_name": "id.vk.com",
         "reality": {
           "enabled": true,
           "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
@@ -120,50 +162,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "xnodtwx.artemida.live",
-      "server_port": 443,
-      "uuid": "4c346148-ece9-487a-bffb-ba5a399b2d71",
-      "tls": {
-        "enabled": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "JqmkP6Fys7jN2Fu1iDJuWKVNPhlgHfy_pj1DHFVKVhw",
-          "short_id": "a1b2c3d4e5f6a7b8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       },
       "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland [*CIDR]",
-      "type": "vless",
-      "server": "263651t.fi3.h1clayd.click",
-      "server_port": 443,
-      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
-      "tls": {
-        "enabled": true,
-        "server_name": "263651t.fi3.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "nNe5Y8_G7L0_VO5lqlee3h5UmRH4RXjaRYGCDUkbQz4",
-          "short_id": "2892e611785bafd1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
       }
     }
   ],
