@@ -35,8 +35,8 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇷 France [SNI-RU] ozon.ru",
-        "🇵🇱 Poland [SNI-RU] smotrim.ru",
-        "🇫🇷 France [SNI-RU] ozon.ru-2"
+        "🇫🇷 France [SNI-RU] ozon.ru-2",
+        "🇵🇱 Poland [SNI-RU] smotrim.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,14 +50,35 @@
       "outbounds": [
         "auto",
         "🇫🇷 France [SNI-RU] ozon.ru",
-        "🇵🇱 Poland [SNI-RU] smotrim.ru",
-        "🇫🇷 France [SNI-RU] ozon.ru-2"
+        "🇫🇷 France [SNI-RU] ozon.ru-2",
+        "🇵🇱 Poland [SNI-RU] smotrim.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
       "tag": "🇫🇷 France [SNI-RU] ozon.ru",
+      "type": "vless",
+      "server": "103.91.147.207",
+      "server_port": 443,
+      "uuid": "04edf721-b2b7-4a80-9fbd-c949438c58c9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ozon.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France [SNI-RU] ozon.ru-2",
       "type": "vless",
       "server": "103.91.147.207",
       "server_port": 443,
@@ -96,27 +117,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France [SNI-RU] ozon.ru-2",
-      "type": "vless",
-      "server": "103.91.147.207",
-      "server_port": 443,
-      "uuid": "04edf721-b2b7-4a80-9fbd-c949438c58c9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       }
     }
