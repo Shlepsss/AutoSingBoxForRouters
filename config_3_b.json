@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland | [*CIDR] YA",
+        "🇨🇾 Cyprus [*CIDR] VK",
+        "🇫🇮 Finland [*CIDR] YA",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
         "ð·ðº Russia | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA-2",
-        "🇫🇮 Finland | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3"
+        "🇨🇾 Cyprus [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,37 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland | [*CIDR] YA",
+        "🇨🇾 Cyprus [*CIDR] VK",
+        "🇫🇮 Finland [*CIDR] YA",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
         "ð·ðº Russia | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA-2",
-        "🇫🇮 Finland | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3"
+        "🇨🇾 Cyprus [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR] YA",
+      "tag": "🇨🇾 Cyprus [*CIDR] VK",
+      "type": "vless",
+      "server": "router.hermit.pw",
+      "server_port": 19133,
+      "uuid": "69158986-cfae-4567-8391-0f96d9d985bd",
+      "tls": {
+        "enabled": true,
+        "server_name": "music.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ud15DX-emDBS7QsLMabJ7CjgIteK61jxwSp1v0Fewxc",
+          "short_id": "10a59b0a94367ac2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR] YA",
       "type": "vless",
       "server": "158.160.243.46",
       "server_port": 443,
@@ -77,7 +97,27 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+      "type": "vless",
+      "server": "flatcrest.net",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     },
@@ -90,62 +130,27 @@
       "security": "auto",
       "tls": {
         "enabled": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "raw"
+        "server_name": "158.160.180.165"
       }
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA-2",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.180.165",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR] YA-2",
+      "tag": "🇨🇾 Cyprus [*CIDR] VK-2",
       "type": "vless",
-      "server": "158.160.243.46",
-      "server_port": 443,
-      "uuid": "0477e879-f2a7-4b76-aa29-28f36b45d4b6",
-      "flow": "xtls-rprx-vision",
+      "server": "router.hermit.pw",
+      "server_port": 19133,
+      "uuid": "69158986-cfae-4567-8391-0f96d9d985bd",
       "tls": {
         "enabled": true,
-        "server_name": "rutube.ru",
+        "server_name": "music.apple.com",
         "reality": {
           "enabled": true,
-          "public_key": "y3dqCRYQO7GM7DIdQRG1uDjBNRK2vyXd8RJL160WZz4",
-          "short_id": "8a1f9479"
+          "public_key": "ud15DX-emDBS7QsLMabJ7CjgIteK61jxwSp1v0Fewxc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA-3",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.180.165"
       }
     }
   ],
