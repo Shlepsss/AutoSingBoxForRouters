@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
-        "🇨🇾 Cyprus [*CIDR] VK",
-        "🇺🇸 United States [*CIDR] VK"
+        "🇺🇿 Uzbekistan [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 [*CIDR]",
+        "🌐 Anycast-IP | 🇮🇳 🇳🇱 [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,28 +51,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
-        "🇨🇾 Cyprus [*CIDR] VK",
-        "🇺🇸 United States [*CIDR] VK"
+        "🇺🇿 Uzbekistan [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 [*CIDR]",
+        "🌐 Anycast-IP | 🇮🇳 🇳🇱 [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇺🇿 Uzbekistan [*CIDR]",
       "type": "vless",
-      "server": "201.51.8.163",
-      "server_port": 443,
-      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "server": "103.24.207.43",
+      "server_port": 8443,
+      "uuid": "968c71ab-c205-409b-9b2d-3b44f758adf2",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "atk.vkusnews.com",
+        "server_name": "edge-uk2.mystatic-cdn.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU",
+          "public_key": "65d6SIYIqiX-SN4vx_BnNiQJ8Lnr0HAgUKoT7WgWRgI",
           "short_id": ""
         },
         "utls": {
@@ -82,81 +82,76 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 [*CIDR]",
       "type": "vless",
-      "server": "36a466g.fi1.h1clayd.click",
+      "server": "194.87.71.141",
       "server_port": 443,
-      "uuid": "9a0e84f8-4b58-477f-99da-5fac5a2e58e8",
+      "uuid": "5e610f80-fc6a-479d-8621-b672355b96a1",
       "tls": {
         "enabled": true,
-        "server_name": "36a466g.fi1.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg",
-          "short_id": "b3c9d0c6bdd114a6"
-        },
+        "server_name": "cf-1rm.pages.dev",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "0adb9638509b"
+        "type": "ws",
+        "headers": {
+          "Host": "cf-1rm.pages.dev"
+        },
+        "path": "/"
       }
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇮🇳 🇳🇱 [*CIDR]",
       "type": "vless",
-      "server": "159.194.248.11",
+      "server": "178.176.128.128",
       "server_port": 443,
-      "uuid": "d40fdcdb-8d6f-406d-a050-12e196fe8804",
+      "uuid": "6eca8bc3-c4e1-48d1-bf15-1eb016dd6272",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "yQfhPYAXsz1EqKpOglHh72NzJsf9YoPuD1bjMC-DDiM",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇾 Cyprus [*CIDR] VK",
-      "type": "vless",
-      "server": "router.hermit.pw",
-      "server_port": 19133,
-      "uuid": "69158986-cfae-4567-8391-0f96d9d985bd",
-      "tls": {
-        "enabled": true,
-        "server_name": "music.apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ud15DX-emDBS7QsLMabJ7CjgIteK61jxwSp1v0Fewxc",
-          "short_id": ""
-        },
+        "server_name": "edge3.statiqedge.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/assets/v1",
+        "host": "edge3.statiqedge.com"
       }
     },
     {
-      "tag": "🇺🇸 United States [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR]",
       "type": "vless",
-      "server": "185.86.145.142",
+      "server": "178.176.128.128",
       "server_port": 443,
-      "uuid": "c8b3c1d7-4294-4f30-9e5b-e4693b64d518",
+      "uuid": "6eca8bc3-c4e1-48d1-bf15-1eb016dd6272",
       "tls": {
         "enabled": true,
-        "server_name": "deliverya.online",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "edge3.statiqedge.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/assets/v1",
+        "host": "edge3.statiqedge.com"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 [*CIDR]-2",
+      "type": "vless",
+      "server": "194.87.71.141",
+      "server_port": 443,
+      "uuid": "5e610f80-fc6a-479d-8621-b672355b96a1",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf-1rm.pages.dev",
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
@@ -165,9 +160,9 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "deliverya.online"
+          "Host": "cf-1rm.pages.dev"
         },
-        "path": "/adrws"
+        "path": "/"
       }
     }
   ],
