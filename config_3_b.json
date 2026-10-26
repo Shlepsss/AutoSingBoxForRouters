@@ -35,12 +35,12 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
         "ð·ðº Russia | [*CIDR] YA",
         "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN"
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+        "ð·ðº Russia | [*CIDR] YA-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,12 +54,12 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
         "ð·ðº Russia | [*CIDR] YA",
         "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN"
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+        "ð·ðº Russia | [*CIDR] YA-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -67,8 +67,34 @@
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
       "type": "vless",
-      "server": "37.18.14.43",
+      "server": "flatcrest.net",
       "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "ð·ðº Russia | [*CIDR] YA",
+      "type": "vmess",
+      "server": "158.160.180.165",
+      "server_port": 24212,
+      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
+      "security": "auto",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
+      "type": "vless",
+      "server": "flatcrest.net",
+      "server_port": 8443,
       "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
@@ -92,6 +118,10 @@
       "tls": {
         "enabled": true,
         "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -101,16 +131,12 @@
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
       "type": "vless",
-      "server": "flatcrest.net",
+      "server": "37.18.14.43",
       "server_port": 2053,
       "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
         "server_name": "flatcrest.net",
-        "alpn": [
-          "http/1.1",
-          "h2"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -118,33 +144,21 @@
       }
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA",
+      "tag": "ð·ðº Russia | [*CIDR] YA-2",
       "type": "vmess",
       "server": "158.160.180.165",
       "server_port": 24212,
       "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
       "security": "auto",
       "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
-      "type": "vless",
-      "server": "37.18.14.43",
-      "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
         "enabled": true,
-        "server_name": "flatcrest.net",
         "alpn": [
-          "http/1.1",
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "raw"
       }
     },
     {
@@ -156,21 +170,10 @@
       "tls": {
         "enabled": true,
         "server_name": "flatcrest.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-      "type": "vless",
-      "server": "37.18.14.43",
-      "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
-        "enabled": true,
-        "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
