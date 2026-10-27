@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇪🇪 Estonia [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR]",
         "🇪🇪 Estonia [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]"
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇪🇪 Estonia [*CIDR]-3",
+        "🇪🇪 Estonia [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,59 +52,16 @@
       "outbounds": [
         "auto",
         "🇪🇪 Estonia [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR]",
         "🇪🇪 Estonia [*CIDR]-2",
-        "🇩🇪 Germany | [*CIDR]"
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇪🇪 Estonia [*CIDR]-3",
+        "🇪🇪 Estonia [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
       "tag": "🇪🇪 Estonia [*CIDR]",
-      "type": "vless",
-      "server": "185.178.208.167",
-      "server_port": 443,
-      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
-      "tls": {
-        "enabled": true,
-        "server_name": "dropstyle.lol",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dropstyle.lol"
-        },
-        "path": "/player/metrics/97662863db53/"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR]",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.bakarova-top.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
       "type": "vless",
       "server": "dropstyle.lol",
       "server_port": 443,
@@ -125,7 +82,7 @@
         "headers": {
           "Host": "dropstyle.lol"
         },
-        "path": "/player/metrics/97662863db53/"
+        "path": "/service/metrics/51dec2df3071/"
       }
     },
     {
@@ -154,23 +111,72 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇪🇪 Estonia | [*CIDR]",
       "type": "vless",
-      "server": "de12b.h1cloud.net",
-      "server_port": 25172,
-      "uuid": "5a519754-a673-4462-83f6-5eb25d2af141",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "Xr55Hig_JTeUluiGfSnma6zMHG2Uv5Xu30ZODGF5xGA",
-          "short_id": "f09ac427e1abd14b"
-        },
+        "server_name": "dropstyle.lol",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dropstyle.lol"
+        },
+        "path": "/player/metrics/97662863db53/"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia [*CIDR]-3",
+      "type": "vless",
+      "server": "dropstyle.lol",
+      "server_port": 443,
+      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
+      "tls": {
+        "enabled": true,
+        "server_name": "dropstyle.lol",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dropstyle.lol"
+        },
+        "path": "/service/metrics/51dec2df3071/"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia [*CIDR]-4",
+      "type": "vless",
+      "server": "dropstyle.lol",
+      "server_port": 443,
+      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
+      "tls": {
+        "enabled": true,
+        "server_name": "dropstyle.lol",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dropstyle.lol"
+        },
+        "path": "/player/metrics/97662863db53/"
       }
     }
   ],
