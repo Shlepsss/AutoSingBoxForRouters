@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇲🇩 Moldova | 🌐 [*CIDR]",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
-        "🇧🇬 Bulgaria [*CIDR] CDN-2"
+        "🇫🇮 Finland | 🌐 | [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,113 +51,112 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇲🇩 Moldova | 🌐 [*CIDR]",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
-        "🇧🇬 Bulgaria [*CIDR] CDN-2"
+        "🇫🇮 Finland | 🌐 | [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
+      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "flatcrest.net",
-      "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
-        "enabled": true,
-        "server_name": "flatcrest.net",
-        "alpn": [
-          "http/1.1",
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "87.228.71.197",
+      "server": "45.139.27.221",
       "server_port": 443,
-      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "uuid": "2c7462d2-127f-4887-bf06-4b30ea6d9832",
       "tls": {
         "enabled": true,
-        "server_name": "ap2.directly.chat",
+        "server_name": "fi1.cdnconnect.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "ap2.directly.chat"
+          "Host": "fi1.cdnconnect.org"
         },
-        "path": "/md/1"
+        "path": "/"
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "37.18.14.43",
-      "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "server": "ru2.radiolumens.uk",
+      "server_port": 9444,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
         "enabled": true,
-        "server_name": "flatcrest.net",
+        "server_name": "ru2.radiolumens.uk",
         "alpn": [
-          "http/1.1",
-          "h2"
+          "h2",
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
       "type": "vless",
-      "server": "87.228.71.197",
+      "server": "telatviast.link",
       "server_port": 443,
-      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "uuid": "5f09ffe7-fbff-411f-b68f-2a0677626a44",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ap2.directly.chat",
+        "server_name": "telatviast.link",
+        "reality": {
+          "enabled": true,
+          "public_key": "mk-fkkWvUHz2ubIOkr8kfDeglXowdCI3Z4OssjWIIwg",
+          "short_id": "2b145d99dc39e2cc"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ap2.directly.chat"
-        },
-        "path": "/md/1"
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria [*CIDR] CDN-2",
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
-      "server": "37.18.14.43",
+      "server": "vip.minecraftkrim.ru",
       "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "uuid": "cadb0528-e6fb-4896-8973-bb83f3d8eec5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "flatcrest.net",
+        "server_name": "vip.minecraftkrim.ru",
         "alpn": [
-          "http/1.1",
-          "h2"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | [*CIDR]-2",
+      "type": "vless",
+      "server": "vip.minecraftkrim.ru",
+      "server_port": 8443,
+      "uuid": "cadb0528-e6fb-4896-8973-bb83f3d8eec5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vip.minecraftkrim.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

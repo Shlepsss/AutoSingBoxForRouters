@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [*CIDR]",
-        "🇲🇩 Moldova | 🌐 [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-2",
-        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
-        "🇧🇬 Bulgaria [*CIDR] CDN"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2",
+        "🇧🇬 Bulgaria | 🌐 | [*CIDR] CDN",
+        "🇺🇸 United States | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,64 +51,48 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [*CIDR]",
-        "🇲🇩 Moldova | 🌐 [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-2",
-        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
-        "🇧🇬 Bulgaria [*CIDR] CDN"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] YA",
+        "🇳🇱 The Netherlands | [*CIDR] YA-2",
+        "🇧🇬 Bulgaria | 🌐 | [*CIDR] CDN",
+        "🇺🇸 United States | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "server": "ru2.radiolumens.uk",
+      "server_port": 9444,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
+        "server_name": "ru2.radiolumens.uk",
         "alpn": [
-          "h2"
+          "h2",
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
       "type": "vless",
-      "server": "87.228.71.197",
+      "server": "84.201.180.13",
       "server_port": 443,
-      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
       "tls": {
         "enabled": true,
-        "server_name": "ap2.directly.chat",
-        "utls": {
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
           "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ap2.directly.chat"
+          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
+          "short_id": ""
         },
-        "path": "/md/1"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]-2",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -116,29 +100,27 @@
       }
     },
     {
-      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
       "type": "vless",
-      "server": "ap2.directly.chat",
+      "server": "84.201.146.8",
       "server_port": 443,
-      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
       "tls": {
         "enabled": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "biyXF3Egpu0ul4Jyf04Vh1Zl6u3JGXJ2k5y5y7pDjgo",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/md/1"
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
+      "tag": "🇧🇬 Bulgaria | 🌐 | [*CIDR] CDN",
       "type": "vless",
       "server": "37.18.14.43",
       "server_port": 8443,
@@ -148,7 +130,28 @@
         "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "d0dc94t.fi7.h1clayd.click",
+      "server_port": 443,
+      "uuid": "fafc7c16-f890-45ee-a856-02df225172dd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "d0dc94t.fi7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "x9MHoriLB8T-vHaoM5LQTbSzaaWlNpZg6rEdM75QgRg",
+          "short_id": "3688e172d5b59457"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
