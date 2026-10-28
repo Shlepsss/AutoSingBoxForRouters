@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "ð·ðº Russia | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] YA-2",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3"
+        "ð·ðº Russia | [*CIDR] YA-3",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "ð·ðº Russia | [*CIDR] YA-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "ð·ðº Russia | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] YA",
-        "🇳🇱 The Netherlands | [*CIDR] YA-2",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3"
+        "ð·ðº Russia | [*CIDR] YA-3",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "ð·ðº Russia | [*CIDR] YA-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -69,49 +69,11 @@
       "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "158.160.180.165"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.162.185",
-      "server_port": 443,
-      "uuid": "Fluffy_VPN-zKZUa4Ie",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "xLN7q9XBRYSrIAc10TyEGupgDbCqSuZRQILMw5nqrns",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.162.185",
-      "server_port": 443,
-      "uuid": "Fluffy_VPN-zKZUa4Ie",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "xLN7q9XBRYSrIAc10TyEGupgDbCqSuZRQILMw5nqrns",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "server_name": "158.160.180.165",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
       }
     },
     {
@@ -123,11 +85,40 @@
       "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "158.160.180.165"
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "raw"
       }
     },
     {
       "tag": "ð·ðº Russia | [*CIDR] YA-3",
+      "type": "vmess",
+      "server": "158.160.180.165",
+      "server_port": 24212,
+      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "158.160.180.165"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+      "type": "vless",
+      "server": "flatcrest.net",
+      "server_port": 2053,
+      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net"
+      }
+    },
+    {
+      "tag": "ð·ðº Russia | [*CIDR] YA-4",
       "type": "vmess",
       "server": "158.160.180.165",
       "server_port": 24212,
