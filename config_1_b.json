@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇪🇪 Estonia [*CIDR]",
-        "🇩🇰 Denmark [*CIDR]",
-        "🇸🇪 Sweden [*CIDR]",
-        "🇪🇪 Estonia [*CIDR]-2",
-        "🌐 Anycast-IP | 🇫🇷 🇵🇱 [*CIDR]"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]-2",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇪🇪 Estonia [*CIDR]",
-        "🇩🇰 Denmark [*CIDR]",
-        "🇸🇪 Sweden [*CIDR]",
-        "🇪🇪 Estonia [*CIDR]-2",
-        "🌐 Anycast-IP | 🇫🇷 🇵🇱 [*CIDR]"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]-2",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,15 +63,12 @@
     {
       "tag": "🇪🇪 Estonia [*CIDR]",
       "type": "vless",
-      "server": "dropstyle.lol",
+      "server": "185.178.208.167",
       "server_port": 443,
       "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
       "tls": {
         "enabled": true,
         "server_name": "dropstyle.lol",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -86,51 +83,25 @@
       }
     },
     {
-      "tag": "🇩🇰 Denmark [*CIDR]",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
       "type": "vless",
-      "server": "185.76.241.117",
-      "server_port": 8458,
-      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "github.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": "457fab2ac885dbe0"
-        },
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "GunService"
-      }
-    },
-    {
-      "tag": "🇸🇪 Sweden [*CIDR]",
-      "type": "vless",
-      "server": "se3.h1cloud.net",
-      "server_port": 25387,
-      "uuid": "5a519754-a673-4462-83f6-5eb25d2af141",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "_nrnGiJUdyeLv2afSwe6P4j02AMayY34WFMjUJp5Kwc",
-          "short_id": "9608a9c65d315d52"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR]-2",
+      "tag": "🇪🇪 Estonia | [*CIDR]",
       "type": "vless",
       "server": "dropstyle.lol",
       "server_port": 443,
@@ -152,26 +123,43 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇵🇱 [*CIDR]",
+      "tag": "🇪🇪 Estonia | [*CIDR]-2",
       "type": "vless",
-      "server": "ru1.radiolumens.uk",
-      "server_port": 8445,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
       "tls": {
         "enabled": true,
-        "server_name": "ru1.radiolumens.uk",
+        "server_name": "dropstyle.lol",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dropstyle.lol"
+        },
+        "path": "/service/metrics/51dec2df3071/"
+      }
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.bakarova-top.ru",
         "alpn": [
-          "h2",
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-pl"
       }
     }
   ],
