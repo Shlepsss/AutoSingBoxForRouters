@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland | 🌐 | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]-2"
+        "🇵🇱 Poland | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇺🇸 United States [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,90 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland | 🌐 | [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]-2"
+        "🇵🇱 Poland | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇺🇸 United States [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland | 🌐 | [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
-      "server": "45.139.27.221",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "2c7462d2-127f-4887-bf06-4b30ea6d9832",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "fi1.cdnconnect.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "fi1.cdnconnect.org"
-        },
-        "path": "/"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "ru2.radiolumens.uk",
-      "server_port": 9444,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru2.radiolumens.uk",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 | [*CIDR]",
-      "type": "vless",
-      "server": "telatviast.link",
-      "server_port": 443,
-      "uuid": "5f09ffe7-fbff-411f-b68f-2a0677626a44",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "telatviast.link",
-        "reality": {
-          "enabled": true,
-          "public_key": "mk-fkkWvUHz2ubIOkr8kfDeglXowdCI3Z4OssjWIIwg",
-          "short_id": "2b145d99dc39e2cc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR]",
-      "type": "vless",
-      "server": "vip.minecraftkrim.ru",
-      "server_port": 8443,
-      "uuid": "cadb0528-e6fb-4896-8973-bb83f3d8eec5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vip.minecraftkrim.ru",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
@@ -142,21 +76,87 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]-2",
+      "tag": "🇺🇸 United States | [*CIDR]",
       "type": "vless",
-      "server": "vip.minecraftkrim.ru",
-      "server_port": 8443,
-      "uuid": "cadb0528-e6fb-4896-8973-bb83f3d8eec5",
-      "flow": "xtls-rprx-vision",
+      "server": "b6a968g.fi7.h1clayd.click",
+      "server_port": 443,
+      "uuid": "fafc7c16-f890-45ee-a856-02df225172dd",
       "tls": {
         "enabled": true,
-        "server_name": "vip.minecraftkrim.ru",
+        "server_name": "b6a968g.fi7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "cO9GB66W4U7X6WR5LWL-mtwktwr2sOJ_RgTN7vYQojM",
+          "short_id": "52970fb14e7248e6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "1d9692c21e23"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | [*CIDR]",
+      "type": "vless",
+      "server": "194.55.239.89",
+      "server_port": 443,
+      "uuid": "073b7df7-5527-45a2-ba29-183b85c39071",
+      "tls": {
+        "enabled": true,
+        "server_name": "broadcast.liveflow.space",
         "alpn": [
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "broadcast.liveflow.space"
+        },
+        "path": "/live.stream.v1.Broadcast/"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]",
+      "type": "vless",
+      "server": "d0dc94t.fi7.h1clayd.click",
+      "server_port": 443,
+      "uuid": "fafc7c16-f890-45ee-a856-02df225172dd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "d0dc94t.fi7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "x9MHoriLB8T-vHaoM5LQTbSzaaWlNpZg6rEdM75QgRg",
+          "short_id": "3688e172d5b59457"
+        },
+        "utls": {
+          "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania | [*CIDR]",
+      "type": "trojan",
+      "server": "176.114.95.242",
+      "server_port": 443,
+      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
+      "tls": {
+        "enabled": true,
+        "server_name": "lt-1.1984.love",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
