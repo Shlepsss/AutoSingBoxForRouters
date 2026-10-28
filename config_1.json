@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 Estonia [*CIDR]",
-        "🇪🇪 Estonia [*CIDR]-2",
-        "🇪🇪 Estonia [*CIDR]-3",
-        "🇪🇪 Estonia [*CIDR]-4",
-        "🇱🇻 Latvia | [*CIDR]"
+        "🇵🇱 Poland [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]-2",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+        "🇧🇬 Bulgaria [*CIDR] CDN"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,49 +51,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 Estonia [*CIDR]",
-        "🇪🇪 Estonia [*CIDR]-2",
-        "🇪🇪 Estonia [*CIDR]-3",
-        "🇪🇪 Estonia [*CIDR]-4",
-        "🇱🇻 Latvia | [*CIDR]"
+        "🇵🇱 Poland [*CIDR]",
+        "🇲🇩 Moldova | 🌐 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]-2",
+        "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+        "🇧🇬 Bulgaria [*CIDR] CDN"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR]",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.167",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "dropstyle.lol",
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dropstyle.lol"
-        },
-        "path": "/player/metrics/97662863db53/"
       }
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR]-2",
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "dropstyle.lol",
+      "server": "87.228.71.197",
       "server_port": 443,
-      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
       "tls": {
         "enabled": true,
-        "server_name": "dropstyle.lol",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "ap2.directly.chat",
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
@@ -102,20 +95,38 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "dropstyle.lol"
+          "Host": "ap2.directly.chat"
         },
-        "path": "/service/metrics/51dec2df3071/"
+        "path": "/md/1"
       }
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR]-3",
+      "tag": "🇵🇱 Poland [*CIDR]-2",
       "type": "vless",
-      "server": "dropstyle.lol",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "dropstyle.lol",
+        "server_name": "static.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "ap2.directly.chat",
+      "server_port": 443,
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "tls": {
+        "enabled": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -123,52 +134,21 @@
       },
       "transport": {
         "type": "ws",
-        "headers": {
-          "Host": "dropstyle.lol"
-        },
-        "path": "/player/metrics/97662863db53/"
+        "path": "/md/1"
       }
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR]-4",
+      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
       "type": "vless",
-      "server": "185.178.208.167",
-      "server_port": 443,
-      "uuid": "d49f7cc7-0c15-4a49-9644-ef72e00d8e56",
-      "tls": {
-        "enabled": true,
-        "server_name": "dropstyle.lol",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dropstyle.lol"
-        },
-        "path": "/player/metrics/97662863db53/"
-      }
-    },
-    {
-      "tag": "🇱🇻 Latvia | [*CIDR]",
-      "type": "vless",
-      "server": "91.197.98.94",
+      "server": "37.18.14.43",
       "server_port": 8443,
-      "uuid": "5940086d-3158-464a-9abd-95ade1482140",
-      "flow": "xtls-rprx-vision",
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "uEAZ8LNf1nlIhGncag8NmLxbxmJamQx2eiX3SKTnxWs",
-          "short_id": "12934b0bcd48eee6"
-        },
+        "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       }
     }

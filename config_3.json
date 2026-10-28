@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "ð·ðº Russia | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN-4"
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-6",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-8",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-9"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,75 +56,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "ð·ðº Russia | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN-2",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR] CDN-4"
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-6",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-8",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-9"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "raw"
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA-2",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA-3",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.180.165"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] CDN",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
       "type": "vless",
       "server": "37.18.14.43",
       "server_port": 2053,
-      "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
         "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] CDN-2",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
       "type": "vless",
       "server": "flatcrest.net",
       "server_port": 2053,
@@ -131,12 +100,46 @@
         "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] CDN-3",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+      "type": "vless",
+      "server": "37.18.14.43",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
+      "type": "vless",
+      "server": "flatcrest.net",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
       "type": "vless",
       "server": "37.18.14.43",
       "server_port": 2053,
@@ -151,14 +154,91 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] CDN-4",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-6",
       "type": "vless",
-      "server": "flatcrest.net",
+      "server": "37.18.14.43",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "83.166.251.25",
+      "server_port": 43000,
+      "uuid": "a2200b5e-bed4-4d5f-8b05-1daf12f4322d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "ux8nnKsidZNSIvm54EQf2RdXVawMCwto2DZiUNU1UQg",
+          "short_id": "2ab73e0b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
+      "type": "vless",
+      "server": "37.18.14.43",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-8",
+      "type": "vless",
+      "server": "37.18.14.43",
       "server_port": 2053,
       "uuid": "2c634977-584e-4e1f-b501-1b70c77a6743",
       "tls": {
         "enabled": true,
         "server_name": "flatcrest.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-9",
+      "type": "vless",
+      "server": "flatcrest.net",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
