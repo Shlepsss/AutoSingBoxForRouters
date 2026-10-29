@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States [*CIDR]",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        "🇱🇹 Lithuania [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🇵🇱 Poland | [*CIDR]-2",
+        "🇧🇬 Bulgaria [*CIDR] CDN",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇺🇸 United States [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,24 +51,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States [*CIDR]",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        "🇱🇹 Lithuania [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🇵🇱 Poland | [*CIDR]-2",
+        "🇧🇬 Bulgaria [*CIDR] CDN",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇺🇸 United States [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States [*CIDR]",
-      "type": "trojan",
-      "server": "176.114.95.242",
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "us-1.1984.love",
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -76,7 +94,7 @@
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
       "type": "vless",
       "server": "37.18.14.43",
       "server_port": 8443,
@@ -95,37 +113,7 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "trojan",
-      "server": "176.114.95.242",
-      "server_port": 443,
-      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
-      "tls": {
-        "enabled": true,
-        "server_name": "lt-1.1984.love",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR]",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.bakarova-top.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇪🇪 Estonia | [*CIDR]",
       "type": "vless",
       "server": "ee.h1cloud.net",
       "server_port": 25895,
@@ -141,6 +129,21 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]",
+      "type": "trojan",
+      "server": "176.114.95.242",
+      "server_port": 443,
+      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
+      "tls": {
+        "enabled": true,
+        "server_name": "us-1.1984.love",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
         }
       }
     }
