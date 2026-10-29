@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania [*CIDR]",
-        "🌐 Anycast-IP | 🇦🇷 🇨🇦 🇩🇪 🇮🇶 | [*CIDR]",
+        "🇧🇬 Bulgaria | [*CIDR] CDN",
+        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+        "🇵🇱 Poland | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇧🇬 Bulgaria | [*CIDR] CDN-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,24 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🌐 Anycast-IP | 🇦🇷 🇨🇦 🇩🇪 🇮🇶 | [*CIDR]",
+        "🇧🇬 Bulgaria | [*CIDR] CDN",
+        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+        "🇵🇱 Poland | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇧🇬 Bulgaria | [*CIDR] CDN-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "trojan",
-      "server": "176.114.95.242",
-      "server_port": 443,
-      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
+      "tag": "🇧🇬 Bulgaria | [*CIDR] CDN",
+      "type": "vless",
+      "server": "37.18.14.43",
+      "server_port": 8443,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "server_name": "lt-1.1984.love",
+        "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -76,54 +76,17 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇦🇷 🇨🇦 🇩🇪 🇮🇶 | [*CIDR]",
+      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
       "type": "vless",
-      "server": "194.87.71.141",
-      "server_port": 443,
-      "uuid": "5e610f80-fc6a-479d-8621-b672355b96a1",
+      "server": "37.18.14.43",
+      "server_port": 8443,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "server_name": "cf-1rm.pages.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cf-1rm.pages.dev"
-        },
-        "path": "/"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.145.142",
-      "server_port": 2096,
-      "uuid": "9b560e60-0e08-4ee7-af43-1cb0f02e6cef",
-      "tls": {
-        "enabled": true,
-        "server_name": "apis.heoleti.pro",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "ru2.radiolumens.uk",
-      "server_port": 9444,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru2.radiolumens.uk",
+        "server_name": "flatcrest.net",
         "alpn": [
-          "h2",
-          "http/1.1"
+          "http/1.1",
+          "h2"
         ],
         "utls": {
           "enabled": true,
@@ -132,17 +95,58 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
-      "type": "trojan",
-      "server": "176.114.95.242",
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "lt-1.1984.love",
+        "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "type": "vless",
+      "server": "pulse-resume.pro",
+      "server_port": 443,
+      "uuid": "34ec30ca-c499-46c5-a0b9-20638e5197e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "pulse-resume.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pulse-resume.pro"
+        },
+        "path": "/amws"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria | [*CIDR] CDN-2",
+      "type": "vless",
+      "server": "37.18.14.43",
+      "server_port": 8443,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "alpn": [
+          "http/1.1",
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
