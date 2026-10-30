@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2"
+        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR] YA",
+        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN-2",
+        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,61 +51,64 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2"
+        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR] YA",
+        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN-2",
+        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
       "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "server": "37.18.14.43",
+      "server_port": 8443,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
+        "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "api.mediaklenov.cc",
+      "server": "158.160.247.68",
       "server_port": 443,
-      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
+      "uuid": "ab619396-5d3d-4486-904c-ca1344f59933",
       "tls": {
         "enabled": true,
-        "server_name": "api.mediaklenov.cc",
+        "server_name": "lenovo-112.zahar.top",
         "alpn": [
-          "h2"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
+        "type": "ws",
+        "headers": {
+          "Host": "lenovo-112.zahar.top"
+        },
+        "path": "/websocket"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN-2",
       "type": "vless",
-      "server": "185.86.145.142",
-      "server_port": 2096,
-      "uuid": "f95ad5b8-32b0-48bc-a639-c229d8c4a684",
+      "server": "flatcrest.net",
+      "server_port": 8443,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "server_name": "apis.repotraffic.org",
+        "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -113,29 +116,7 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "api.mediaklenov.cc",
-      "server_port": 443,
-      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.mediaklenov.cc",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -143,10 +124,38 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR] YA-2",
+      "type": "vless",
+      "server": "158.160.250.50",
+      "server_port": 8443,
+      "uuid": "ab619396-5d3d-4486-904c-ca1344f59933",
+      "tls": {
+        "enabled": true,
+        "server_name": "lenovo-112.zahar.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lenovo-112.zahar.top"
+        },
+        "path": "/websocket"
       }
     }
   ],
