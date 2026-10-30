@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 Poland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2",
-        "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇺🇸 United States [*CIDR]"
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇵🇱 Poland | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇵🇱 Poland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2",
-        "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇺🇸 United States [*CIDR]"
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇵🇱 Poland | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -69,13 +69,69 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "trojan",
+      "server": "176.114.95.242",
+      "server_port": 443,
+      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
+      "tls": {
+        "enabled": true,
+        "server_name": "lt-1.1984.love",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "type": "vless",
+      "server": "ararat.rtkdvbr.cc",
+      "server_port": 443,
+      "uuid": "04b7c62b-762e-4a8c-ba37-8328d25c8d74",
+      "tls": {
+        "enabled": true,
+        "server_name": "ararat.rtkdvbr.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ararat.rtkdvbr.cc"
+        },
+        "path": "/amws"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "type": "vless",
+      "server": "ararat.rtkdvbr.cc",
+      "server_port": 443,
+      "uuid": "04b7c62b-762e-4a8c-ba37-8328d25c8d74",
+      "tls": {
+        "enabled": true,
+        "server_name": "ararat.rtkdvbr.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ararat.rtkdvbr.cc"
+        },
+        "path": "/amws"
       }
     },
     {
@@ -87,63 +143,12 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
-      "type": "vless",
-      "server": "37.18.14.43",
-      "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
-        "enabled": true,
-        "server_name": "flatcrest.net",
         "alpn": [
-          "http/1.1",
           "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
-      "type": "vless",
-      "server": "ee.h1cloud.net",
-      "server_port": 25895,
-      "uuid": "f90b7d43-69e2-4b46-a672-8029bc6796a2",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k",
-          "short_id": "a73f0410d728c823"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [*CIDR]",
-      "type": "trojan",
-      "server": "176.114.95.242",
-      "server_port": 443,
-      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
-      "tls": {
-        "enabled": true,
-        "server_name": "us-1.1984.love",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
         }
       }
     }
