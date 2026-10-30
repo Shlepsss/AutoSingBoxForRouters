@@ -35,9 +35,9 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 Poland | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🇵🇱 Poland | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
@@ -52,9 +52,9 @@
       "outbounds": [
         "auto",
         "🇵🇱 Poland | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🇵🇱 Poland | [*CIDR]-2"
       ],
       "default": "auto",
@@ -71,67 +71,67 @@
         "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "trojan",
-      "server": "176.114.95.242",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "api.mediaklenov.cc",
       "server_port": 443,
-      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
+      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
       "tls": {
         "enabled": true,
-        "server_name": "lt-1.1984.love",
+        "server_name": "api.mediaklenov.cc",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "3e99d50d5740985d"
       }
     },
     {
       "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
       "type": "vless",
-      "server": "ararat.rtkdvbr.cc",
-      "server_port": 443,
-      "uuid": "04b7c62b-762e-4a8c-ba37-8328d25c8d74",
+      "server": "185.86.145.142",
+      "server_port": 2096,
+      "uuid": "f95ad5b8-32b0-48bc-a639-c229d8c4a684",
       "tls": {
         "enabled": true,
-        "server_name": "ararat.rtkdvbr.cc",
+        "server_name": "apis.repotraffic.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ararat.rtkdvbr.cc"
-        },
-        "path": "/amws"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "ararat.rtkdvbr.cc",
+      "server": "api.mediaklenov.cc",
       "server_port": 443,
-      "uuid": "04b7c62b-762e-4a8c-ba37-8328d25c8d74",
+      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
       "tls": {
         "enabled": true,
-        "server_name": "ararat.rtkdvbr.cc",
+        "server_name": "api.mediaklenov.cc",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "ararat.rtkdvbr.cc"
-        },
-        "path": "/amws"
+        "type": "grpc",
+        "service_name": "3e99d50d5740985d"
       }
     },
     {
@@ -143,9 +143,6 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
