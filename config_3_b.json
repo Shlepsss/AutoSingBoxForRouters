@@ -37,8 +37,8 @@
         "🇳🇱 The Netherlands | [*CIDR] VK",
         "ð·ðº Russia | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3",
-        "ð·ðº Russia | [*CIDR] YA-4"
+        "🇳🇱 The Netherlands | [*CIDR] VK-2",
+        "ð·ðº Russia | [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,8 +54,8 @@
         "🇳🇱 The Netherlands | [*CIDR] VK",
         "ð·ðº Russia | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3",
-        "ð·ðº Russia | [*CIDR] YA-4"
+        "🇳🇱 The Netherlands | [*CIDR] VK-2",
+        "ð·ðº Russia | [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -74,7 +74,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -105,14 +105,29 @@
       "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "158.160.180.165",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
+        "server_name": "158.160.180.165"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "185.86.145.37",
+      "server_port": 443,
+      "uuid": "e37ebf3b-ac32-48a8-8f56-d113967eaf29",
+      "tls": {
+        "enabled": true,
+        "server_name": "ara.rtkdvbr.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "transport": {
-        "type": "raw"
+        "type": "ws",
+        "headers": {
+          "Host": "ara.rtkdvbr.cc"
+        },
+        "path": "/amws"
       }
     },
     {
@@ -123,19 +138,14 @@
       "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
       "security": "auto",
       "tls": {
-        "enabled": true
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA-4",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
         "enabled": true,
-        "server_name": "158.160.180.165"
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "raw"
       }
     }
   ],
