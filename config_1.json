@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇲🇩 Moldova | 🌐 [*CIDR]",
         "🇵🇱 Poland [*CIDR]",
         "🇵🇱 Poland [*CIDR]-2",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-3",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🇺🇸 United States [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
@@ -51,14 +51,36 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇲🇩 Moldova | 🌐 [*CIDR]",
         "🇵🇱 Poland [*CIDR]",
         "🇵🇱 Poland [*CIDR]-2",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-3",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🇺🇸 United States [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇲🇩 Moldova | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "87.228.71.195",
+      "server_port": 443,
+      "uuid": "2f9107cb-9af0-4c94-a89d-50437218e5fa",
+      "tls": {
+        "enabled": true,
+        "server_name": "ap2.directly.chat",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ap2.directly.chat"
+        },
+        "path": "/md/1"
+      }
     },
     {
       "tag": "🇵🇱 Poland [*CIDR]",
@@ -71,7 +93,7 @@
         "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -84,53 +106,32 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
-      "type": "vless",
-      "server": "87.242.94.84",
-      "server_port": 443,
-      "uuid": "706bce83-91db-4260-b175-cba29145cd56",
-      "tls": {
-        "enabled": true,
-        "server_name": "lingvaburo.cc",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lingvaburo.cc"
-        },
-        "path": "/checkout/step/gplirAP9szjx"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]-3",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.bakarova-top.ru",
         "alpn": [
           "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "api.mediaklenov.cc",
+      "server_port": 443,
+      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.mediaklenov.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "3e99d50d5740985d"
       }
     },
     {
@@ -144,7 +145,7 @@
         "server_name": "us-1.1984.love",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       }
     }

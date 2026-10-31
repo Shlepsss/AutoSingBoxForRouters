@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 🇺🇸 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-4"
+        "🇵🇱 Poland [*CIDR]",
+        "🇵🇱 Poland [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
-        "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 🇺🇸 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-4"
+        "🇵🇱 Poland [*CIDR]",
+        "🇵🇱 Poland [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "189.74.106.74",
+      "server_port": 443,
+      "uuid": "6788563f-df4b-4363-aa71-cd50c4b03cd8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.setevoypriliv.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
       "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "189.74.114.119",
+      "server": "189.74.114.93",
       "server_port": 443,
       "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
       "tls": {
@@ -74,7 +95,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -84,21 +105,6 @@
     },
     {
       "tag": "🇳🇱 The Netherlands [*CIDR]-2",
-      "type": "vless",
-      "server": "api.mediaklenov.cc",
-      "server_port": 443,
-      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.mediaklenov.cc"
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
       "type": "vless",
       "server": "189.74.114.119",
       "server_port": 443,
@@ -117,43 +123,36 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 🇺🇸 [*CIDR]",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
-      "server": "194.87.71.141",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "5e610f80-fc6a-479d-8621-b672355b96a1",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "cf-1rm.pages.dev",
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cf-1rm.pages.dev"
-        },
-        "path": "/"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-4",
+      "tag": "🇵🇱 Poland [*CIDR]-2",
       "type": "vless",
-      "server": "api.mediaklenov.cc",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "api.mediaklenov.cc",
-        "alpn": [
-          "h2"
-        ]
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
+        "server_name": "static.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       }
     }
   ],
