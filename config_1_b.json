@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇺🇸 United States [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2"
+        "🇳🇴 Norway | 🌐 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]-2",
+        "🇵🇱 Poland [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,32 +51,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇺🇸 United States [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2"
+        "🇳🇴 Norway | 🌐 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]-2",
+        "🇵🇱 Poland [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "trojan",
-      "server": "176.114.95.242",
+      "tag": "🇳🇴 Norway | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "185.186.143.76",
       "server_port": 443,
-      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
+      "uuid": "2c0a296d-3b2a-4529-9ba6-8484aecbc14b",
       "tls": {
         "enabled": true,
-        "server_name": "lt-1.1984.love",
+        "server_name": "ru-kitchen.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "6vDdlh4aAipoRQ-IXDjzTUtKpZS09xtNXIisCa__2CM",
+          "short_id": "f74c6a18133e2e72"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -84,21 +93,9 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [*CIDR]",
-      "type": "trojan",
-      "server": "176.114.95.242",
-      "server_port": 443,
-      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
-      "tls": {
-        "enabled": true,
-        "server_name": "us-1.1984.love",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -106,7 +103,18 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+      "type": "vless",
+      "server": "87.242.119.253",
+      "server_port": 443,
+      "uuid": "aba9cdd4-026c-0001-87a9-9b3e5f24dd82",
+      "tls": {
+        "enabled": true,
+        "server_name": "hvtlr-ru-47sb.fade.mom"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR]-2",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -121,7 +129,7 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "tag": "🇵🇱 Poland [*CIDR]-3",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -129,9 +137,12 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
       }
     }
