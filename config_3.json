@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "ð·ðº Russia | [*CIDR] YA",
-        "🇪🇪 Estonia [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] CDN",
+        "🇳🇱 The Netherlands [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "ð·ðº Russia | [*CIDR] YA",
-        "🇪🇪 Estonia [*CIDR] VK",
-        "🇳🇱 The Netherlands [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] CDN",
+        "🇳🇱 The Netherlands [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -69,37 +69,65 @@
       "security": "auto",
       "tls": {
         "enabled": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "raw"
+        "server_name": "158.160.180.165"
       }
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR] VK",
-      "type": "vless",
-      "server": "sub-edge-12-1g.xrent.cloud",
-      "server_port": 11451,
-      "uuid": "f7e9aed5-74eb-4436-ad3d-10b64f3bb187",
+      "tag": "ð·ðº Russia | [*CIDR] YA-2",
+      "type": "vmess",
+      "server": "158.160.180.165",
+      "server_port": 24212,
+      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
+      "security": "auto",
       "tls": {
-        "enabled": true,
-        "server_name": "ligastavok.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "kDEc42JBZxig3BrLD3V1ofs3oJZk15-ANWN-rM0JW10",
-          "short_id": "f28145401b4f633a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "enabled": true
       }
     },
     {
       "tag": "🇳🇱 The Netherlands [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.158.195",
+      "server_port": 443,
+      "uuid": "06ec3898-f952-52a5-8547-51ae1e6f0a62",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "W4k2NnQJBHQciIPcm5TdpPOv_rqKhoUUyU3nGewoCjg",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] CDN",
+      "type": "vless",
+      "server": "46.243.233.228",
+      "server_port": 8443,
+      "uuid": "fc3a9f6e-4b97-4b26-b9ce-2d58a307e7b5",
+      "tls": {
+        "enabled": true,
+        "server_name": "watch.cs2-major.online",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc.health.v1.Health"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA-2",
       "type": "vless",
       "server": "84.201.146.8",
       "server_port": 443,
@@ -116,29 +144,6 @@
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA-2",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.180.165"
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA-3",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true
       }
     }
   ],
