@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇵🇱 Poland [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-2"
+        "🇵🇱 Poland | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-2",
+        "🇵🇱 Poland | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,79 +51,74 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇵🇱 Poland [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-2"
+        "🇵🇱 Poland | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-2",
+        "🇵🇱 Poland | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
       "type": "vless",
-      "server": "189.74.106.74",
+      "server": "ru9.aimodelhub.top",
       "server_port": 443,
-      "uuid": "6788563f-df4b-4363-aa71-cd50c4b03cd8",
+      "uuid": "ba895ce4-8c24-0003-9f22-81ee227c89d0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api.setevoypriliv.cc",
+        "server_name": "ru9.aimodelhub.top",
         "reality": {
           "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
+          "public_key": "jwT3lcIzJQMjzBKRNsmyRGrgaa1qNfE7pQF_nAKu0GA",
+          "short_id": "a73cf719b624"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "189.74.114.93",
-      "server_port": 443,
-      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.mediaklenov.cc",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
-      "type": "vless",
-      "server": "189.74.114.119",
-      "server_port": 443,
-      "uuid": "abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.mediaklenov.cc",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
-      "transport": {
-        "type": "grpc",
-        "service_name": "3e99d50d5740985d"
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "de15.h1cloud.net",
+      "server_port": 25362,
+      "uuid": "36fb6650-8a50-42b5-9f66-06538806f32c",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.chip.de",
+        "reality": {
+          "enabled": true,
+          "public_key": "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA",
+          "short_id": "23732d14a527990d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]-2",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -141,17 +136,17 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]-2",
+      "tag": "🇵🇱 Poland | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.140",
+      "server": "87.242.119.253",
       "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "uuid": "aba9cdd4-026c-0001-87a9-9b3e5f24dd82",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
+        "server_name": "hvtlr-ru-47sb.fade.mom",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       }
     }
