@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
-        "🇫🇮 Finland [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇨🇦 Canada | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇧🇬 Bulgaria [*CIDR] CDN"
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,52 +51,59 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
-        "🇫🇮 Finland [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇨🇦 Canada | 🌐 [*CIDR]",
         "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇧🇬 Bulgaria [*CIDR] CDN"
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇺🇸 [*CIDR]",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
-      "server": "ru9.aimodelhub.top",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "ba895ce4-8c24-0003-9f22-81ee227c89d0",
-      "flow": "xtls-rprx-vision",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "ru9.aimodelhub.top",
-        "reality": {
-          "enabled": true,
-          "public_key": "jwT3lcIzJQMjzBKRNsmyRGrgaa1qNfE7pQF_nAKu0GA",
-          "short_id": "a73cf719b624"
-        },
+        "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR]",
-      "type": "vless",
-      "server": "87.242.94.1",
-      "server_port": 6003,
-      "uuid": "4f4e8129-56ae-4b6e-baeb-ebdd07d8b2c5",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "trojan",
+      "server": "176.114.95.242",
+      "server_port": 443,
+      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
       "tls": {
         "enabled": true,
-        "server_name": "finn.centermass.net",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "lt-1.1984.love"
+      }
+    },
+    {
+      "tag": "🇨🇦 Canada | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "176.108.242.45",
+      "server_port": 443,
+      "uuid": "902e7be9-d0a8-42a6-994f-8320916a9d9e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lake.gaznw.my",
+        "reality": {
+          "enabled": true,
+          "public_key": "o-r78pJoatRHP5RGYhjxbhm-33lQWuf2jjlEs1L8sjQ",
+          "short_id": "9987250e5611c0d2"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -110,43 +117,26 @@
         "enabled": true,
         "server_name": "hvtlr-ru-47sb.fade.mom",
         "alpn": [
-          "%5Bhttp%2F1.1"
-        ]
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "189.74.106.74",
-      "server_port": 443,
-      "uuid": "df7b592d-89c4-4693-86b3-c9ce76bf1d10",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.setevoypriliv.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
+          "[http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
-      "type": "vless",
-      "server": "flatcrest.net",
-      "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tag": "🇱🇹 Lithuania [*CIDR]-2",
+      "type": "trojan",
+      "server": "176.114.95.242",
+      "server_port": 443,
+      "password": "UAKWGor-h0woFsxKSWK92HptcM0g2k2h",
       "tls": {
         "enabled": true,
-        "server_name": "flatcrest.net",
+        "server_name": "lt-1.1984.love",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       }
     }
