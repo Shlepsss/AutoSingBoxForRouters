@@ -35,9 +35,9 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 Poland [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-2",
-        "🇵🇱 Poland [*CIDR]-3",
-        "🇵🇱 Poland [*CIDR]-4",
+        "ð·ðº Russia | [*CIDR] YA",
+        "🇪🇪 Estonia | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
@@ -52,9 +52,9 @@
       "outbounds": [
         "auto",
         "🇵🇱 Poland [*CIDR]",
-        "🇵🇱 Poland [*CIDR]-2",
-        "🇵🇱 Poland [*CIDR]-3",
-        "🇵🇱 Poland [*CIDR]-4",
+        "ð·ðº Russia | [*CIDR] YA",
+        "🇪🇪 Estonia | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR] VK"
       ],
       "default": "auto",
@@ -63,12 +63,18 @@
     {
       "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.140",
+      "server": "185.50.202.4",
       "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "uuid": "902e7be9-d0a8-42a6-994f-8320916a9d9e",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
+        "server_name": "media2.usicloid.my",
+        "reality": {
+          "enabled": true,
+          "public_key": "UW2KCNPSvGsHK2UXmcFveOY17nWWo3CoCk8ydVT7A3s",
+          "short_id": "953e2426ac9a7c0e"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -76,32 +82,37 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]-2",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tag": "ð·ðº Russia | [*CIDR] YA",
+      "type": "vmess",
+      "server": "158.160.180.165",
+      "server_port": 24212,
+      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
+        "server_name": "158.160.180.165",
         "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "raw"
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]-3",
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "server": "91.185.83.113",
+      "server_port": 5443,
+      "uuid": "0b25cbd7-30e3-4659-92be-05b33b53c9d1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
+        "server_name": "de.core-multiplayer.com",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -109,17 +120,17 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR]-4",
+      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.140",
+      "server": "87.242.119.253",
       "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "uuid": "aba9cdd4-026c-0001-87a9-9b3e5f24dd82",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
+        "server_name": "hvtlr-ru-47sb.fade.mom",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
@@ -134,7 +145,7 @@
         "server_name": "ara.rtkdvbr.cc",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       },
       "transport": {
