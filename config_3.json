@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇳🇱 The Netherlands [*CIDR] VK",
         "ð·ðº Russia | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
         "ð·ðº Russia | [*CIDR] YA-3",
-        "ð·ðº Russia | [*CIDR] YA-4",
-        "ð·ðº Russia | [*CIDR] YA-5"
+        "🇳🇱 The Netherlands [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,29 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇳🇱 The Netherlands [*CIDR] VK",
         "ð·ðº Russia | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
         "ð·ðº Russia | [*CIDR] YA-3",
-        "ð·ðº Russia | [*CIDR] YA-4",
-        "ð·ðº Russia | [*CIDR] YA-5"
+        "🇳🇱 The Netherlands [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.145.142",
+      "server_port": 2096,
+      "uuid": "b877b58f-5995-4b25-abec-3213a2f95512",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.freetato-converting.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "ð·ðº Russia | [*CIDR] YA",
@@ -69,13 +84,11 @@
       "security": "auto",
       "tls": {
         "enabled": true,
+        "server_name": "158.160.180.165",
         "alpn": [
           "h2",
           "http/1.1"
         ]
-      },
-      "transport": {
-        "type": "raw"
       }
     },
     {
@@ -92,9 +105,6 @@
           "h2",
           "http/1.1"
         ]
-      },
-      "transport": {
-        "type": "raw"
       }
     },
     {
@@ -106,7 +116,6 @@
       "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "158.160.180.165",
         "alpn": [
           "h2",
           "http/1.1"
@@ -117,31 +126,14 @@
       }
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA-4",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
+      "type": "vless",
+      "server": "cdn.freetato-converting.ru",
+      "server_port": 2096,
+      "uuid": "b877b58f-5995-4b25-abec-3213a2f95512",
       "tls": {
         "enabled": true,
-        "server_name": "158.160.180.165",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA-5",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.180.165"
+        "server_name": "cdn.freetato-converting.ru"
       }
     }
   ],
