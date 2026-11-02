@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇹🇷 Turkey [*CIDR]",
-        "🇺🇸 United States [*CIDR]",
-        "ð·ðº Russia | [*CIDR] YA"
+        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+        "🇧🇬 Bulgaria [*CIDR] CDN",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,84 +51,66 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇹🇷 Turkey [*CIDR]",
-        "🇺🇸 United States [*CIDR]",
-        "ð·ðº Russia | [*CIDR] YA"
+        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
+        "🇧🇬 Bulgaria [*CIDR] CDN",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
       "type": "vless",
-      "server": "185.178.208.167",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "server": "37.18.14.43",
+      "server_port": 8443,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "server_name": "lorettmay.top",
+        "server_name": "flatcrest.net",
         "alpn": [
-          "http/1.1"
+          "http/1.1",
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
       "type": "vless",
-      "server": "200.169.184.168",
+      "server": "87.242.119.253",
       "server_port": 443,
-      "uuid": "6036c28a-8db2-432e-8118-ff0c16641ad0",
-      "flow": "xtls-rprx-vision",
+      "uuid": "aba9cdd4-026c-0001-87a9-9b3e5f24dd82",
       "tls": {
         "enabled": true,
-        "server_name": "net.formatgo.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "QnaizqXrXA0e4XihP_5Nf1z1aOOf0obBoyJ8QY_03kw",
-          "short_id": "9d0e1b6bf9c5eddb"
-        },
+        "server_name": "hvtlr-ru-47sb.fade.mom",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇹🇷 Turkey [*CIDR]",
+      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
       "type": "vless",
-      "server": "tr2.h1cloud.net",
-      "server_port": 25021,
-      "uuid": "2446e2e2-1ce3-4502-9050-1dd32bacc68c",
-      "flow": "xtls-rprx-vision",
+      "server": "flatcrest.net",
+      "server_port": 8443,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "od79bUkYtqQtsGrrTdhmkDflx5c9al4vqxwWApvc-Dg",
-          "short_id": "17fa3af0924c88b3"
-        },
+        "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇺🇸 United States [*CIDR]",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
       "type": "vless",
       "server": "178.236.242.254",
       "server_port": 8443,
@@ -149,22 +131,28 @@
       }
     },
     {
-      "tag": "ð·ðº Russia | [*CIDR] YA",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "158.160.180.165",
+        "server_name": "lorettmay.top",
         "alpn": [
-          "h2",
           "http/1.1"
-        ]
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       },
       "transport": {
-        "type": "raw"
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
       }
     }
   ],
