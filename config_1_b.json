@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇬🇧 United Kingdom | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]-2",
         "🇵🇱 Poland | [*CIDR]-2",
-        "🇵🇱 Poland | [*CIDR]-3",
-        "🇳🇱 The Netherlands | [*CIDR] YA"
+        "🇵🇱 Poland [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,53 +51,39 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇬🇧 United Kingdom | [*CIDR]",
         "🇵🇱 Poland | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]-2",
         "🇵🇱 Poland | [*CIDR]-2",
-        "🇵🇱 Poland | [*CIDR]-3",
-        "🇳🇱 The Netherlands | [*CIDR] YA"
+        "🇵🇱 Poland [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.140",
+      "server": "95.182.121.140",
       "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "uuid": "8dd437e1-5f3f-446e-98fe-aa29b80057fb",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
+        "server_name": "crt.onecloudstream.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "5.129.202.74",
-      "server_port": 443,
-      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "patch-25.topp-con.xyz",
-        "reality": {
-          "enabled": true,
-          "public_key": "LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU",
-          "short_id": "b9120cd53ffd7bba"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "crt.onecloudstream.com"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "path": "/vless-ws"
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -112,7 +98,29 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-3",
+      "tag": "🇬🇧 United Kingdom | [*CIDR]-2",
+      "type": "vless",
+      "server": "95.182.121.140",
+      "server_port": 443,
+      "uuid": "8dd437e1-5f3f-446e-98fe-aa29b80057fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "crt.onecloudstream.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "crt.onecloudstream.com"
+        },
+        "path": "/vless-ws"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]-2",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -127,17 +135,20 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
-      "server": "158.160.195.193",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "4777d90d-265b-4927-a0d1-63f36ed1421c",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "158.160.195.193",
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     }
