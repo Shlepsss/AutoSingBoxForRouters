@@ -37,8 +37,8 @@
         "🇳🇱 The Netherlands [*CIDR] VK",
         "ð·ðº Russia | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3",
-        "🇳🇱 The Netherlands [*CIDR] VK-2"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] VK",
+        "ð·ðº Russia | [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,8 +54,8 @@
         "🇳🇱 The Netherlands [*CIDR] VK",
         "ð·ðº Russia | [*CIDR] YA",
         "ð·ðº Russia | [*CIDR] YA-2",
-        "ð·ðº Russia | [*CIDR] YA-3",
-        "🇳🇱 The Netherlands [*CIDR] VK-2"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] VK",
+        "ð·ðº Russia | [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,12 +63,16 @@
     {
       "tag": "🇳🇱 The Netherlands [*CIDR] VK",
       "type": "vless",
-      "server": "185.86.145.142",
-      "server_port": 2096,
-      "uuid": "b877b58f-5995-4b25-abec-3213a2f95512",
+      "server": "87.239.106.24",
+      "server_port": 53571,
+      "uuid": "553929aa-ae34-46ce-9045-054133776b62",
       "tls": {
         "enabled": true,
-        "server_name": "cdn.freetato-converting.ru",
+        "server_name": "xnl.chick-team.ru",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -89,6 +93,9 @@
           "h2",
           "http/1.1"
         ]
+      },
+      "transport": {
+        "type": "raw"
       }
     },
     {
@@ -105,6 +112,34 @@
           "h2",
           "http/1.1"
         ]
+      },
+      "transport": {
+        "type": "raw"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.145.207",
+      "server_port": 443,
+      "uuid": "553929aa-ae34-46ce-9045-054133776b62",
+      "tls": {
+        "enabled": true,
+        "server_name": "mama.beryi.pro",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "mama.beryi.pro"
+        },
+        "path": "/pcws"
       }
     },
     {
@@ -116,24 +151,11 @@
       "security": "auto",
       "tls": {
         "enabled": true,
+        "server_name": "158.160.180.165",
         "alpn": [
           "h2",
           "http/1.1"
         ]
-      },
-      "transport": {
-        "type": "raw"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
-      "type": "vless",
-      "server": "cdn.freetato-converting.ru",
-      "server_port": 2096,
-      "uuid": "b877b58f-5995-4b25-abec-3213a2f95512",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.freetato-converting.ru"
       }
     }
   ],
