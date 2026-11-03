@@ -34,11 +34,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | [*CIDR] YA-3"
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,93 +48,60 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA",
-        "ð·ðº Russia | [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | [*CIDR] YA-3"
+        "🇳🇱 The Netherlands [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
       "type": "vless",
-      "server": "158.160.195.193",
+      "server": "185.86.145.37",
       "server_port": 443,
-      "uuid": "4777d90d-265b-4927-a0d1-63f36ed1421c",
+      "uuid": "135aa7e5-87af-4df2-a9f0-0c4eaea0c492",
       "tls": {
         "enabled": true,
-        "server_name": "158.160.195.193",
+        "server_name": "rar.rtkdvbr.cc",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rar.rtkdvbr.cc"
+        },
+        "path": "/amws"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
+      "type": "vless",
+      "server": "185.86.145.37",
+      "server_port": 443,
+      "uuid": "135aa7e5-87af-4df2-a9f0-0c4eaea0c492",
+      "tls": {
+        "enabled": true,
+        "server_name": "rar.rtkdvbr.cc",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
         }
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.180.165",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "tag": "ð·ðº Russia | [*CIDR] YA-2",
-      "type": "vmess",
-      "server": "158.160.180.165",
-      "server_port": 24212,
-      "uuid": "c58c1205-b308-416f-8503-c04557abf93d",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.180.165",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
       },
       "transport": {
-        "type": "raw"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.195.193",
-      "server_port": 443,
-      "uuid": "4777d90d-265b-4927-a0d1-63f36ed1421c",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.195.193",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] YA-3",
-      "type": "vless",
-      "server": "158.160.195.193",
-      "server_port": 443,
-      "uuid": "4777d90d-265b-4927-a0d1-63f36ed1421c",
-      "tls": {
-        "enabled": true,
-        "server_name": "158.160.195.193",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "type": "ws",
+        "headers": {
+          "Host": "rar.rtkdvbr.cc"
+        },
+        "path": "/amws"
       }
     }
   ],
