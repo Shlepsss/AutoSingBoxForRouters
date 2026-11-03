@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "ð©ðª Germany | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇨🇭 Switzerland | [*CIDR]",
-        "ð©ðª Germany | [*CIDR]-2"
+        "🇵🇱 Poland | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]-3",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,36 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "ð©ðª Germany | [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇨🇭 Switzerland | [*CIDR]",
-        "ð©ðª Germany | [*CIDR]-2"
+        "🇵🇱 Poland | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-2",
+        "🇵🇱 Poland | [*CIDR]-3",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "ð©ðª Germany | [*CIDR]",
-      "type": "vmess",
-      "server": "37.220.161.249",
-      "server_port": 443,
-      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-2-129.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-2-129.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -98,20 +79,17 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]-2",
       "type": "vless",
-      "server": "77.221.151.106",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "5c32201a-6c0e-451b-8f0a-24b4bd40df59",
-      "flow": "xtls-rprx-vision",
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "images.porsche.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk",
-          "short_id": "1a2b3c4d"
-        },
+        "server_name": "api.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
@@ -119,42 +97,61 @@
       }
     },
     {
-      "tag": "🇨🇭 Switzerland | [*CIDR]",
+      "tag": "🇵🇱 Poland | [*CIDR]-3",
       "type": "vless",
-      "server": "ch2.h1cloud.net",
-      "server_port": 25879,
-      "uuid": "241306b3-9f27-4ed3-9524-6c0792c55856",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "XuI492LMe1OPIwQH5TQlIo33JRqMM3kfnto62tbx5FU",
-          "short_id": "f1a7a14461a3f389"
-        },
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "ð©ðª Germany | [*CIDR]-2",
-      "type": "vmess",
-      "server": "37.220.161.249",
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
       "server_port": 443,
-      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
-      "security": "auto",
+      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
       "tls": {
         "enabled": true,
-        "server_name": "renderer-stream-2-129.mirra.now"
+        "server_name": "gran-game.pro",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "renderer-stream-2-129.mirra.now"
+          "Host": "gran-game.pro"
         },
-        "path": "/api/v1/gpu-stream/socket"
+        "path": "/static/events/900598fa7500/"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]-4",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       }
     }
   ],
