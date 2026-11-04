@@ -31,32 +31,91 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [SNI-RU] sun6-21.userapi.com"
+        "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru",
+        "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru-2",
+        "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru-3"
       ],
-      "default": "🇳🇱 The Netherlands [SNI-RU] sun6-21.userapi.com",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] sun6-21.userapi.com",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru",
+        "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru-2",
+        "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru-3"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru",
       "type": "vless",
-      "server": "87.199.207.72",
-      "server_port": 8443,
-      "uuid": "Podval_385284",
+      "server": "2.26.139.69",
+      "server_port": 443,
+      "uuid": "1d7427ab-8a5d-4317-9335-2e48d50be4fc",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sun6-21.userapi.com",
+        "server_name": "cdn.tbank.ru",
         "reality": {
           "enabled": true,
-          "public_key": "tQXEXTiJVRoqPcgyXWegEQbUUFzWQVFZhBY6Sak0aC0",
-          "short_id": "ffffffffff"
+          "public_key": "HmnsKa6Mmm34gALomXBKB7d8UMIM33hhItp2z43VCkQ",
+          "short_id": "a1d8f3b6c2e59407"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru-2",
+      "type": "vless",
+      "server": "2.26.139.69",
+      "server_port": 443,
+      "uuid": "1d7427ab-8a5d-4317-9335-2e48d50be4fc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.tbank.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "HmnsKa6Mmm34gALomXBKB7d8UMIM33hhItp2z43VCkQ",
+          "short_id": "a1d8f3b6c2e59407"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇺 Hungary | [SNI-RU] cdn.tbank.ru-3",
+      "type": "vless",
+      "server": "2.26.139.69",
+      "server_port": 443,
+      "uuid": "1d7427ab-8a5d-4317-9335-2e48d50be4fc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.tbank.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "HmnsKa6Mmm34gALomXBKB7d8UMIM33hhItp2z43VCkQ",
+          "short_id": "a1d8f3b6c2e59407"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
