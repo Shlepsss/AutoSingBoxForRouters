@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇩🇪 Germany [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]"
+        "🇵🇱 Poland | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,43 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        "🇧🇬 Bulgaria [*CIDR] CDN",
-        "🇩🇪 Germany [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]"
+        "🇵🇱 Poland | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
+      "tag": "🇵🇱 Poland | [*CIDR]",
       "type": "vless",
-      "server": "37.18.14.43",
-      "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "flatcrest.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [*CIDR] CDN",
-      "type": "vless",
-      "server": "37.18.14.43",
-      "server_port": 8443,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
-        "enabled": true,
-        "server_name": "flatcrest.net",
-        "alpn": [
-          "http/1.1",
-          "h2"
-        ],
+        "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -95,27 +76,7 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "de15.h1cloud.net",
-      "server_port": 25362,
-      "uuid": "36fb6650-8a50-42b5-9f66-06538806f32c",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.chip.de",
-        "reality": {
-          "enabled": true,
-          "public_key": "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA",
-          "short_id": "23732d14a527990d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -125,11 +86,61 @@
         "server_name": "static.bakarova-top.ru",
         "alpn": [
           "h2"
-        ]
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     },
     {
       "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "fb37d713-0ed3-4146-b085-a5c879a9aafa",
+      "tls": {
+        "enabled": true,
+        "server_name": "marshalltmp.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "marshalltmp.top"
+        },
+        "path": "/shop/catalog"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "201.51.29.153",
+      "server_port": 443,
+      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "db-23.topp-con.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "Elmq7GhYEGaiujWnLYeK3HidTkZV6JYH-aYJXBG9iwc",
+          "short_id": "20b37477b1d93f7e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]-2",
       "type": "vless",
       "server": "lorettmay.top",
       "server_port": 443,
