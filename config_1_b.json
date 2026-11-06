@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇹 Lithuania [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇵🇱 Poland | [*CIDR]-3"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+        "🇷🇴 Romania | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇵🇱 Poland | [*CIDR]-3"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
+        "🇷🇴 Romania | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -70,11 +70,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252F1.1"
+          "http%2F1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -86,7 +86,22 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "ru2.radiolumens.uk",
+      "server_port": 9444,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru2.radiolumens.uk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -99,52 +114,31 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "tag": "🇬🇧 United Kingdom | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "server": "ru2.radiolumens.uk",
+      "server_port": 9444,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
+        "server_name": "ru2.radiolumens.uk",
         "alpn": [
-          "http%252F1.1"
+          "h2",
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-3",
+      "tag": "🇷🇴 Romania | [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -154,7 +148,7 @@
         "server_name": "static.bakarova-top.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     }
