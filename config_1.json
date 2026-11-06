@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇹 Lithuania [*CIDR]",
-        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇳🇴 Norway [*CIDR]"
+        "🇨🇭 Switzerland | [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇴 🇺🇸 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇱🇹 Lithuania [*CIDR]",
-        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
-        "🇵🇱 Poland [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇳🇴 Norway [*CIDR]"
+        "🇨🇭 Switzerland | [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇴 🇺🇸 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -69,9 +69,10 @@
       "tls": {
         "enabled": true,
         "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252525252F1.1"
-        ]
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "transport": {
         "type": "ws",
@@ -82,40 +83,24 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "185.178.208.140",
+      "server": "ru.galacticworld.online",
       "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "uuid": "8850dcb3-3978-488e-899c-18def71e1ad9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api.bakarova-top.ru",
-        "utls": {
+        "server_name": "ru.galacticworld.online",
+        "reality": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR]",
-      "type": "vless",
-      "server": "72.56.233.10",
-      "server_port": 8443,
-      "uuid": "981c7ccc-2b17-473c-8358-7fd1d6eec1b4",
-      "tls": {
-        "enabled": true,
-        "server_name": "lte-v2-ws.gacvpn.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lte-v2-ws.gacvpn.site"
+          "public_key": "RAfUjx8zBhp0gpSALr09Myq_lpqqjE3hBVXlUUodVAs",
+          "short_id": ""
         },
-        "path": "/static/js/runtime.9d03c7.js"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
       }
     },
     {
@@ -132,7 +117,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -144,23 +129,37 @@
       }
     },
     {
-      "tag": "🇳🇴 Norway [*CIDR]",
+      "tag": "🇨🇭 Switzerland | [*CIDR]",
       "type": "vless",
-      "server": "connect2.accessgate.link",
-      "server_port": 2086,
-      "uuid": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-      "flow": "xtls-rprx-vision",
+      "server": "d0f7fax.ch4.h1clayd.click",
+      "server_port": 443,
+      "uuid": "1bbcd15c-aa70-4a09-9266-56951742c401",
       "tls": {
         "enabled": true,
-        "server_name": "unpkg.com",
+        "server_name": "d0f7fax.ch4.h1clayd.click",
         "reality": {
           "enabled": true,
-          "public_key": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "short_id": "b0d8c9a285c70f6f"
+          "public_key": "xei6NUuES9dJDfhU05zlUOnxFjbXANV6iKtxObEC7iA",
+          "short_id": "bc633b43a002e06a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇴 🇺🇸 | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     }

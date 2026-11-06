@@ -34,16 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-6",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK"
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇴 Romania | [*CIDR]",
+        "🇧🇬 Bulgaria | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,127 +51,89 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-6",
-        "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK"
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇴 Romania | [*CIDR]",
+        "🇧🇬 Bulgaria | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
       "type": "vless",
-      "server": "flatcrest.net",
-      "server_port": 2053,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "flatcrest.net",
+        "server_name": "lorettmay.top",
         "alpn": [
-          "http/1.1",
+          "http%2F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "ru.galacticworld.online",
+      "server_port": 443,
+      "uuid": "8850dcb3-3978-488e-899c-18def71e1ad9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.galacticworld.online",
+        "reality": {
+          "enabled": true,
+          "public_key": "RAfUjx8zBhp0gpSALr09Myq_lpqqjE3hBVXlUUodVAs",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇴 Romania | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
           "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇧🇬 Bulgaria | [*CIDR]",
       "type": "vless",
-      "server": "147.45.104.86",
-      "server_port": 7443,
-      "uuid": "5d978525-bfa5-4b1e-b807-c4e2ac2db56d",
+      "server": "168.113.128.70",
+      "server_port": 20105,
+      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho",
-          "short_id": "a7eb8a4e"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "flatcrest.net",
-      "server_port": 2053,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
-        "enabled": true,
-        "server_name": "flatcrest.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "5.42.105.63",
-      "server_port": 25443,
-      "uuid": "3d78373f-bdbd-428a-9b83-aea64264bf4e",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdvid.gamescloud.uk",
-        "reality": {
-          "enabled": true,
-          "public_key": "ohYKVa5uVRwqzZndETnytrSXE63zaUFVNN1_T4eTHnc",
-          "short_id": "568dfd0846c2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
-      "type": "vless",
-      "server": "ironlever.net",
-      "server_port": 2053,
-      "uuid": "13718497-ab31-4144-b2dc-3d9315366376",
-      "tls": {
-        "enabled": true,
-        "server_name": "ironlever.net",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
-      "type": "vless",
-      "server": "flatcrest.net",
-      "server_port": 2053,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
-        "enabled": true,
-        "server_name": "flatcrest.net",
+        "server_name": "ripelever.net",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -184,71 +141,28 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-5",
+      "tag": "🇱🇹 Lithuania [*CIDR]-2",
       "type": "vless",
-      "server": "flatcrest.net",
-      "server_port": 2053,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
-        "enabled": true,
-        "server_name": "flatcrest.net",
-        "alpn": [
-          "http/1.1",
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-6",
-      "type": "vless",
-      "server": "flatcrest.net",
-      "server_port": 2053,
-      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
-      "tls": {
-        "enabled": true,
-        "server_name": "flatcrest.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-7",
-      "type": "vless",
-      "server": "ironlever.net",
-      "server_port": 2053,
-      "uuid": "13718497-ab31-4144-b2dc-3d9315366376",
-      "tls": {
-        "enabled": true,
-        "server_name": "ironlever.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.145.173",
+      "server": "lorettmay.top",
       "server_port": 443,
-      "uuid": "13718497-ab31-4144-b2dc-3d9315366376",
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "megawasp.net",
+        "server_name": "lorettmay.top",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
       }
     }
   ],
