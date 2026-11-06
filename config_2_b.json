@@ -34,13 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,49 +56,29 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-4"
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
+        "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "trojan",
-      "server": "de-bots4.h1cloud.net",
-      "server_port": 25267,
-      "password": "happybirthdaydaniel",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN",
+      "type": "vless",
+      "server": "flatcrest.net",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "t.me/FuckTheWall",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]-2",
-      "type": "trojan",
-      "server": "de-bots4.h1cloud.net",
-      "server_port": 25267,
-      "password": "happybirthdaydaniel",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "t.me/FuckTheWall",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -103,95 +86,138 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "147.45.104.86",
-      "server_port": 7443,
-      "uuid": "5d978525-bfa5-4b1e-b807-c4e2ac2db56d",
-      "flow": "xtls-rprx-vision",
+      "server": "155.212.161.144",
+      "server_port": 8445,
+      "uuid": "27c8be8c-878d-4541-bf5f-3d8cffcf5c18",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "360.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho",
-          "short_id": "a7eb8a4e"
+          "public_key": "R45Yzi8VdbJi7qT-o5NYUpYCDfG7SSpFfSJGEQXAgWA",
+          "short_id": "06d22eb12a38a8a6"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
+        "type": "grpc",
+        "service_name": "grpc-reality"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "147.45.104.86",
-      "server_port": 7443,
-      "uuid": "5d978525-bfa5-4b1e-b807-c4e2ac2db56d",
-      "flow": "xtls-rprx-vision",
+      "server": "5.42.105.63",
+      "server_port": 25443,
+      "uuid": "3d78373f-bdbd-428a-9b83-aea64264bf4e",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "cdvid.gamescloud.uk",
         "reality": {
           "enabled": true,
-          "public_key": "KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho",
-          "short_id": "a7eb8a4e"
+          "public_key": "ohYKVa5uVRwqzZndETnytrSXE63zaUFVNN1_T4eTHnc",
+          "short_id": "568dfd0846c2"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-2",
+      "type": "vless",
+      "server": "46.243.233.170",
+      "server_port": 2053,
+      "uuid": "13718497-ab31-4144-b2dc-3d9315366376",
+      "tls": {
+        "enabled": true,
+        "server_name": "ironlever.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-3",
       "type": "vless",
-      "server": "147.45.104.86",
-      "server_port": 7443,
-      "uuid": "af185070-7170-46a8-b1e9-d61a035f4691",
-      "flow": "xtls-rprx-vision",
+      "server": "flatcrest.net",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho",
-          "short_id": "a7eb8a4e"
-        },
+        "server_name": "flatcrest.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] CDN-4",
+      "type": "vless",
+      "server": "flatcrest.net",
+      "server_port": 2053,
+      "uuid": "7dd69047-047e-422e-a2ba-ed773c34fd1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "flatcrest.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
+      "type": "vless",
+      "server": "megawasp.net",
+      "server_port": 443,
+      "uuid": "13718497-ab31-4144-b2dc-3d9315366376",
+      "tls": {
+        "enabled": true,
+        "server_name": "megawasp.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
+      "type": "vless",
+      "server": "185.86.145.173",
+      "server_port": 443,
+      "uuid": "13718497-ab31-4144-b2dc-3d9315366376",
+      "tls": {
+        "enabled": true,
+        "server_name": "megawasp.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "147.45.104.86",
       "server_port": 7443,
@@ -209,6 +235,30 @@
           "enabled": true,
           "fingerprint": "qq"
         }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "type": "vless",
+      "server": "5.42.105.63",
+      "server_port": 25443,
+      "uuid": "3d78373f-bdbd-428a-9b83-aea64264bf4e",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdvid.gamescloud.uk",
+        "reality": {
+          "enabled": true,
+          "public_key": "ohYKVa5uVRwqzZndETnytrSXE63zaUFVNN1_T4eTHnc",
+          "short_id": "568dfd0846c2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
       }
     }
   ],
