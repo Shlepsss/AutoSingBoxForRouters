@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇧🇬 Bulgaria | [*CIDR]"
+        "🇺🇸 United States | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 🇺🇸 | [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 🇺🇸 | [*CIDR]-2",
+        "🇨🇭 Switzerland | [*CIDR]",
+        "🇨🇦 Canada [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,47 +51,73 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇧🇬 Bulgaria | [*CIDR]"
+        "🇺🇸 United States | 🌐 | [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 🇺🇸 | [*CIDR]",
+        "🌐 Anycast-IP | 🇵🇱 🇺🇸 | [*CIDR]-2",
+        "🇨🇭 Switzerland | [*CIDR]",
+        "🇨🇦 Canada [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "tag": "🇺🇸 United States | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "185.86.147.175",
-      "server_port": 443,
-      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
+      "server": "45.143.94.91",
+      "server_port": 8443,
+      "uuid": "3837e7a5-d40e-4b85-8700-5f9725a5a2cb",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "bhjolq0d0l.flowersgood.top",
-        "alpn": [
-          "http/1.1"
-        ],
+        "insecure": true,
+        "server_name": "us1.cloudvienta.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "3Kgy_0tHtOzEn9_mEylNsBVlAHNngT6S4AuYy5wEOSU",
+          "short_id": "0c37b64d1935ebc1"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "bhjolq0d0l.flowersgood.top"
-        },
-        "path": "/service/telemetry/045d381f1166/"
       }
     },
     {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇺🇸 | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇺🇸 | [*CIDR]-2",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland | [*CIDR]",
       "type": "vless",
       "server": "87.242.87.165",
-      "server_port": 8443,
+      "server_port": 443,
       "uuid": "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6",
-      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "codifyr.ru",
@@ -107,70 +133,11 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "tag": "🇨🇦 Canada [*CIDR]",
       "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%25252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [*CIDR]",
-      "type": "vless",
-      "server": "168.113.128.70",
-      "server_port": 20105,
-      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ripelever.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "server": "5.53.124.191",
+      "server_port": 8008,
+      "uuid": "b48e1596-e835-4547-bdae-31daadf9ea17"
     }
   ],
   "route": {

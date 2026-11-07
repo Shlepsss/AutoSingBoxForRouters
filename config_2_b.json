@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania [*CIDR]",
-        "🌐 Anycast-IP | 🇰🇼 🇺🇸 | [*CIDR]",
-        "🇨🇦 Canada [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇰🇼 Kuwait | [*CIDR]"
+        "🇷🇴 Romania | [*CIDR]",
+        "🇰🇼 Kuwait | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
+        "🇨🇭 Switzerland | [*CIDR]",
+        "🇰🇼 Kuwait | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,39 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🌐 Anycast-IP | 🇰🇼 🇺🇸 | [*CIDR]",
-        "🇨🇦 Canada [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇰🇼 Kuwait | [*CIDR]"
+        "🇷🇴 Romania | [*CIDR]",
+        "🇰🇼 Kuwait | [*CIDR]",
+        "🇵🇱 Poland | [*CIDR]",
+        "🇨🇭 Switzerland | [*CIDR]",
+        "🇰🇼 Kuwait | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇰🇼 🇺🇸 | [*CIDR]",
+      "tag": "🇷🇴 Romania | [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -96,40 +74,8 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇨🇦 Canada [*CIDR]",
-      "type": "vless",
-      "server": "5.53.124.191",
-      "server_port": 8008,
-      "uuid": "b48e1596-e835-4547-bdae-31daadf9ea17"
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
       }
     },
     {
@@ -141,6 +87,66 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland | [*CIDR]",
+      "type": "vless",
+      "server": "87.242.87.165",
+      "server_port": 8445,
+      "uuid": "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6",
+      "tls": {
+        "enabled": true,
+        "server_name": "codifyr.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WCGVWrqI3t-c5ZIbUEmwjN3wiFFT7xV09PIio-OQGHU",
+          "short_id": "d16860c57700c886"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-reality"
+      }
+    },
+    {
+      "tag": "🇰🇼 Kuwait | [*CIDR]-2",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
