@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇸🇰 Slovakia | [*CIDR]",
-        "🌐 Anycast-IP | 🇷🇴 🇺🇸 | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇷🇴 Romania | [*CIDR]"
+        "🇧🇬 Bulgaria [*CIDR]",
+        "🇧🇬 Bulgaria [*CIDR]-2",
+        "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,29 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇸🇰 Slovakia | [*CIDR]",
-        "🌐 Anycast-IP | 🇷🇴 🇺🇸 | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇷🇴 Romania | [*CIDR]"
+        "🇧🇬 Bulgaria [*CIDR]",
+        "🇧🇬 Bulgaria [*CIDR]-2",
+        "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     },
     {
       "tag": "🇱🇹 Lithuania [*CIDR]",
@@ -69,78 +84,10 @@
       "tls": {
         "enabled": true,
         "server_name": "lorettmay.top",
-        "alpn": [
-          "http%25252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇸🇰 Slovakia | [*CIDR]",
-      "type": "vless",
-      "server": "62.113.42.147",
-      "server_port": 995,
-      "uuid": "981c7ccc-2b17-473c-8358-7fd1d6eec1b4",
-      "tls": {
-        "enabled": true,
-        "server_name": "fi.gacvpn.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "fi.gacvpn.site"
-        },
-        "path": "/static/js/runtime.6dc28486.js"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇷🇴 🇺🇸 | [*CIDR]",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.bakarova-top.ru",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
       },
       "transport": {
         "type": "ws",
@@ -151,7 +98,46 @@
       }
     },
     {
-      "tag": "🇷🇴 Romania | [*CIDR]",
+      "tag": "🇧🇬 Bulgaria [*CIDR]",
+      "type": "vless",
+      "server": "168.113.128.70",
+      "server_port": 20105,
+      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ripelever.net",
+        "alpn": [
+          "[h2,http/1.1]"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [*CIDR]-2",
+      "type": "vless",
+      "server": "168.113.128.70",
+      "server_port": 20105,
+      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ripelever.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]-2",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
