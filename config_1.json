@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK",
+        "🇨🇭 Switzerland [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "ð©ðª Germany | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇱🇹 Lithuania [*CIDR]-2",
+        "🇧🇬 Bulgaria | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,50 +51,59 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK",
+        "🇨🇭 Switzerland [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "ð©ðª Germany | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇱🇹 Lithuania [*CIDR]-2",
+        "🇧🇬 Bulgaria | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
       "type": "vless",
-      "server": "185.178.208.140",
+      "server": "185.86.147.175",
       "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
+      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
       "tls": {
         "enabled": true,
-        "server_name": "static.bakarova-top.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "147.45.153.134",
-      "server_port": 443,
-      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-bridge-2-133.mirra.now",
+        "server_name": "bhjolq0d0l.flowersgood.top",
         "alpn": [
-          "h2"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "VideoRenderer"
+        "type": "ws",
+        "headers": {
+          "Host": "bhjolq0d0l.flowersgood.top"
+        },
+        "path": "/service/telemetry/045d381f1166/"
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "type": "vless",
+      "server": "87.242.87.165",
+      "server_port": 8443,
+      "uuid": "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "codifyr.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WCGVWrqI3t-c5ZIbUEmwjN3wiFFT7xV09PIio-OQGHU",
+          "short_id": "d16860c57700c886"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
@@ -105,7 +114,14 @@
       "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "lorettmay.top"
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%25252F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       },
       "transport": {
         "type": "ws",
@@ -113,32 +129,6 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "ð©ðª Germany | [*CIDR]",
-      "type": "vmess",
-      "server": "93.93.89.118",
-      "server_port": 443,
-      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-871.mirra.now",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-871.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/o36ecpsebqjq/socket"
       }
     },
     {
@@ -151,11 +141,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252525252525252F1.1"
+          "http%252525252F1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -164,6 +154,22 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria | [*CIDR]",
+      "type": "vless",
+      "server": "168.113.128.70",
+      "server_port": 20105,
+      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ripelever.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
