@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇹 Lithuania [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🌐 Anycast-IP | 🇰🇼 [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇨🇭 Switzerland [*CIDR]-2"
+        "🌐 Anycast-IP | 🇵🇱 🇺🇸 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇧🇬 Bulgaria [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🌐 Anycast-IP | 🇰🇼 [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇨🇭 Switzerland [*CIDR]-2"
+        "🌐 Anycast-IP | 🇵🇱 🇺🇸 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇧🇬 Bulgaria [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -70,11 +70,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%2F1.1"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -86,27 +86,7 @@
       }
     },
     {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
-      "type": "vless",
-      "server": "87.242.87.165",
-      "server_port": 443,
-      "uuid": "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6",
-      "tls": {
-        "enabled": true,
-        "server_name": "codifyr.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "WCGVWrqI3t-c5ZIbUEmwjN3wiFFT7xV09PIio-OQGHU",
-          "short_id": "d16860c57700c886"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇰🇼 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇵🇱 🇺🇸 [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -114,13 +94,43 @@
       "tls": {
         "enabled": true,
         "server_name": "static.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "ru1.cdn-space.org",
+      "server_port": 443,
+      "uuid": "f219ffe2-bc36-495f-a83d-8f9ac4af05fd",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.cdn-space.org",
         "alpn": [
           "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [*CIDR]",
+      "type": "vless",
+      "server": "168.113.128.70",
+      "server_port": 20105,
+      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ripelever.net",
+        "alpn": [
+          "h2,http/1.1"
+        ]
       }
     },
     {
@@ -146,26 +156,6 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇨🇭 Switzerland [*CIDR]-2",
-      "type": "vless",
-      "server": "87.242.87.165",
-      "server_port": 443,
-      "uuid": "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6",
-      "tls": {
-        "enabled": true,
-        "server_name": "codifyr.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "WCGVWrqI3t-c5ZIbUEmwjN3wiFFT7xV09PIio-OQGHU",
-          "short_id": "d16860c57700c886"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     }
   ],

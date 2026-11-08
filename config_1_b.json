@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇵🇱 🇷🇴 🇺🇸 [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🌐 Anycast-IP | 🇵🇱 🇺🇸 [*CIDR]",
-        "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]"
+        "🇧🇬 Bulgaria [*CIDR]",
+        "🌐 Anycast-IP | 🇰🇼 🇷🇴 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇵🇱 🇷🇴 🇺🇸 [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇨🇭 Switzerland [*CIDR]",
-        "🌐 Anycast-IP | 🇵🇱 🇺🇸 [*CIDR]",
-        "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]"
+        "🇧🇬 Bulgaria [*CIDR]",
+        "🌐 Anycast-IP | 🇰🇼 🇷🇴 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇷🇴 🇺🇸 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -74,8 +74,30 @@
         ],
         "utls": {
           "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "91.215.43.80",
+      "server_port": 443,
+      "uuid": "e9b117e4-8be9-4105-9354-a5e0663294f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "metrics.api.downloader-pet.xyz",
+        "utls": {
+          "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "metrics.api.downloader-pet.xyz"
+        },
+        "path": "/gateway/v1/ws/a901ed17102fc3090ca1ab052c672f47"
       }
     },
     {
@@ -88,7 +110,7 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%25252F1.1"
+          "http%2525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
@@ -104,49 +126,41 @@
       }
     },
     {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "tag": "🇧🇬 Bulgaria [*CIDR]",
       "type": "vless",
-      "server": "87.242.87.165",
-      "server_port": 443,
-      "uuid": "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6",
+      "server": "168.113.128.70",
+      "server_port": 20105,
+      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "codifyr.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "WCGVWrqI3t-c5ZIbUEmwjN3wiFFT7xV09PIio-OQGHU",
-          "short_id": "d16860c57700c886"
-        },
+        "server_name": "ripelever.net",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇵🇱 🇺🇸 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇰🇼 🇷🇴 [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
       "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
       "tls": {
         "enabled": true,
-        "server_name": "api.bakarova-top.ru",
+        "server_name": "static.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇷🇴 🇺🇸 [*CIDR]",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.bakarova-top.ru"
       }
     }
   ],
