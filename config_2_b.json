@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇷🇴 Romania [*CIDR]",
-        "🇷🇴 Romania [*CIDR]-2",
-        "🇨🇦 Canada [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇷🇺 Russia | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,81 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇷🇴 Romania [*CIDR]",
-        "🇷🇴 Romania [*CIDR]-2",
-        "🇨🇦 Canada [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇷🇺 Russia | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "renderer-bridge-2-133.mirra.now",
+      "server_port": 443,
+      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-bridge-2-133.mirra.now",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "VideoRenderer"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "8a4fe9f3-4da3-4004-b721-cae64ff0d018",
+      "tls": {
+        "enabled": true,
+        "server_name": "stechnostore.life",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "stechnostore.life"
+        },
+        "path": "/player/collect/9c8514f9552d/"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "aurora-coffee.site",
+      "server_port": 8443,
+      "uuid": "68a67906-5b37-4779-a6cc-58a1655f18b4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn-glavslush.herumhas.shop",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
     },
     {
       "tag": "🇱🇹 Lithuania [*CIDR]",
@@ -70,83 +137,7 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%25252525252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇷🇴 Romania [*CIDR]",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.bakarova-top.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇴 Romania [*CIDR]-2",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.bakarova-top.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇦 Canada [*CIDR]",
-      "type": "vless",
-      "server": "moscow1.banovano.space",
-      "server_port": 443,
-      "uuid": "cd9680e1-f115-4e16-91b9-ea59576c212d",
-      "tls": {
-        "enabled": true,
-        "server_name": "moscow1.banovano.space",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%25252F1.1"
+          "http%2F1.1"
         ],
         "utls": {
           "enabled": true,
@@ -159,6 +150,26 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "aurora-coffee.site",
+      "server_port": 8443,
+      "uuid": "68a67906-5b37-4779-a6cc-58a1655f18b4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn-glavslush.herumhas.shop",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       }
     }
   ],

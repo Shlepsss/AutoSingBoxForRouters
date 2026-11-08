@@ -31,33 +31,155 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇪🇪 🇷🇺 [*CIDR] VK"
+        "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN-2",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN-3"
       ],
-      "default": "🌐 Anycast-IP | 🇪🇪 🇷🇺 [*CIDR] VK",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇪🇪 🇷🇺 [*CIDR] VK",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN-2",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN",
+        "🇳🇱 The Netherlands | [*CIDR] CDN",
+        "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN-3"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN",
       "type": "vless",
-      "server": "rapira-dof.whitenw.net",
-      "server_port": 8445,
-      "uuid": "cd138479-c87a-4d4c-b6ea-4beeb6ef2b47",
-      "flow": "xtls-rprx-vision",
+      "server": "6b9iw.guardora.pro",
+      "server_port": 443,
+      "uuid": "d9cc5c37-b53c-1131-b4e1-1b9f7fbea1b1",
       "tls": {
         "enabled": true,
-        "server_name": "passport.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "l06r0clkHjHk7HRGpkDBJwZ1JJscSqfwHUQOrV3v3hQ",
-          "short_id": ""
-        },
+        "server_name": "6b9iw.guardora.pro",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "6b9iw.guardora.pro"
+        },
+        "path": "/ogVAL8moh5SB"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN-2",
+      "type": "vless",
+      "server": "6b9iw.guardora.pro",
+      "server_port": 10018,
+      "uuid": "d9cc5c37-b53c-1131-b4e1-1b9f7fbea1b1",
+      "tls": {
+        "enabled": true,
+        "server_name": "6b9iw.guardora.pro",
+        "reality": {
+          "enabled": true,
+          "public_key": "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY",
+          "short_id": "c1a7e9b4711d5f60"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN",
+      "type": "vless",
+      "server": "6b9iw.guardora.pro",
+      "server_port": 10018,
+      "uuid": "d9cc5c37-b53c-14a1-b4e1-1b9f7fbea1b1",
+      "tls": {
+        "enabled": true,
+        "server_name": "6b9iw.guardora.pro",
+        "reality": {
+          "enabled": true,
+          "public_key": "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY",
+          "short_id": "c1a7e9b4711d5f60"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] CDN",
+      "type": "vless",
+      "server": "6b9iw.guardora.pro",
+      "server_port": 443,
+      "uuid": "d9cc5c37-b53c-14a1-b4e1-1b9f7fbea1b1",
+      "tls": {
+        "enabled": true,
+        "server_name": "6b9iw.guardora.pro",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "6b9iw.guardora.pro"
+        },
+        "path": "/ogVAL8moh5SB"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇱🇹 🇺🇸 | [*CIDR] CDN-3",
+      "type": "vless",
+      "server": "6b9iw.guardora.pro",
+      "server_port": 10018,
+      "uuid": "d9cc5c37-b53c-1131-b4e1-1b9f7fbea1b1",
+      "tls": {
+        "enabled": true,
+        "server_name": "6b9iw.guardora.pro",
+        "reality": {
+          "enabled": true,
+          "public_key": "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY",
+          "short_id": "c1a7e9b4711d5f60"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     }
   ],

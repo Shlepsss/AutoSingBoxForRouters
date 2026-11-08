@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 Bulgaria [*CIDR]",
-        "🇧🇬 Bulgaria [*CIDR]-2",
-        "🇷🇴 Romania [*CIDR]",
-        "🇷🇴 Romania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]"
+        "🇱🇻 Latvia | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇨🇦 Canada [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,79 +51,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 Bulgaria [*CIDR]",
-        "🇧🇬 Bulgaria [*CIDR]-2",
-        "🇷🇴 Romania [*CIDR]",
-        "🇷🇴 Romania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]"
+        "🇱🇻 Latvia | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇨🇦 Canada [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇬 Bulgaria [*CIDR]",
+      "tag": "🇱🇻 Latvia | [*CIDR]",
       "type": "vless",
-      "server": "168.113.128.70",
-      "server_port": 20105,
-      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
+      "server": "direct.vpndoctor.top",
+      "server_port": 443,
+      "uuid": "4d079fbe-33ac-4a80-8441-b0e1818b286a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ripelever.net",
-        "alpn": [
-          "[h2,http/1.1]"
-        ],
+        "server_name": "direct.vpndoctor.top",
+        "reality": {
+          "enabled": true,
+          "public_key": "QPmrizvOUCOOIvlupGnt1reR5bui3U8EZl00VHU4GRA",
+          "short_id": "3f9537eb0626292b"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [*CIDR]-2",
-      "type": "vless",
-      "server": "168.113.128.70",
-      "server_port": 20105,
-      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ripelever.net",
-        "alpn": [
-          "h2,http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇴 Romania [*CIDR]",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.bakarova-top.ru",
-        "alpn": [
-          "h2"
-        ]
-      }
-    },
-    {
-      "tag": "🇷🇴 Romania [*CIDR]-2",
-      "type": "vless",
-      "server": "185.178.208.140",
-      "server_port": 443,
-      "uuid": "ea277838-a188-44f1-a2e8-94aa110c4f27",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.bakarova-top.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -137,8 +91,80 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%2F1.1"
-        ]
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "18b99163-5196-4ddc-85f8-8fdf5efdcd53",
+      "tls": {
+        "enabled": true,
+        "server_name": "stechnostore.life",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "stechnostore.life"
+        },
+        "path": "/player/collect/9c8514f9552d/"
+      }
+    },
+    {
+      "tag": "🇨🇦 Canada [*CIDR]",
+      "type": "vless",
+      "server": "94.156.181.35",
+      "server_port": 443,
+      "uuid": "cd9680e1-f115-4e16-91b9-ea59576c212d",
+      "tls": {
+        "enabled": true,
+        "server_name": "moscow1.banovano.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]-2",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%252F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",

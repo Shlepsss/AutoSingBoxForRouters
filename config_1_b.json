@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
+        "🇫🇷 France | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇧🇬 Bulgaria [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-3",
-        "🇧🇬 Bulgaria [*CIDR]-2"
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
+        "🇫🇷 France | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇧🇬 Bulgaria [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-3",
-        "🇧🇬 Bulgaria [*CIDR]-2"
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "msk3.gacvpn.site",
+      "server_port": 443,
+      "uuid": "3f5e89d5-591f-4ac9-b071-b05680b573c3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fr2.gacvpn.site",
+        "reality": {
+          "enabled": true,
+          "public_key": "uMKTD8AKrlaZTlfNfr0qMgrzLSe9LDw_otYw4OfuDy8",
+          "short_id": "fed2f8be3a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇱🇹 Lithuania [*CIDR]",
@@ -70,11 +91,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%2F1.1"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -83,6 +104,26 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇫🇷 France | [*CIDR]",
+      "type": "vless",
+      "server": "mapzapravki.space",
+      "server_port": 8443,
+      "uuid": "68a67906-5b37-4779-a6cc-58a1655f18b4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lada.locallynet.org",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
       }
     },
     {
@@ -95,11 +136,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252525252525252F1.1"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -111,66 +152,28 @@
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN",
       "type": "vless",
-      "server": "168.113.128.70",
-      "server_port": 20105,
-      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
-      "flow": "xtls-rprx-vision",
+      "server": "6b9iw.guardora.pro",
+      "server_port": 10018,
+      "uuid": "d9cc5c37-b53c-14a1-b4e1-1b9f7fbea1b1",
       "tls": {
         "enabled": true,
-        "server_name": "ripelever.net",
+        "server_name": "6b9iw.guardora.pro",
+        "reality": {
+          "enabled": true,
+          "public_key": "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY",
+          "short_id": "c1a7e9b4711d5f60"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-3",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
+        "type": "grpc",
+        "service_name": "grpc"
       }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [*CIDR]-2",
-      "type": "vless",
-      "server": "168.113.128.70",
-      "server_port": 20105,
-      "uuid": "9aff658c-1f80-4c82-9213-48ca26996142",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ripelever.net",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "packet_encoding": "xudp"
     }
   ],
   "route": {
