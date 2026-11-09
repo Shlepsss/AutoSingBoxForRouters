@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇫🇷 France | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇳🇱 [*CIDR] CDN",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,128 +51,126 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇫🇷 France | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇵🇱 Poland [*CIDR]",
+        "🌐 Anycast-IP | 🇳🇱 [*CIDR] CDN",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "msk3.gacvpn.site",
+      "server": "185.178.208.167",
       "server_port": 443,
-      "uuid": "3f5e89d5-591f-4ac9-b071-b05680b573c3",
-      "flow": "xtls-rprx-vision",
+      "uuid": "8a4fe9f3-4da3-4004-b721-cae64ff0d018",
       "tls": {
         "enabled": true,
-        "server_name": "fr2.gacvpn.site",
-        "reality": {
-          "enabled": true,
-          "public_key": "uMKTD8AKrlaZTlfNfr0qMgrzLSe9LDw_otYw4OfuDy8",
-          "short_id": "fed2f8be3a"
-        },
+        "server_name": "stechnostore.life",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "android"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "lorettmay.top"
+          "Host": "stechnostore.life"
         },
-        "path": "/blog/posts"
+        "path": "/player/collect/9c8514f9552d/"
       }
     },
     {
-      "tag": "🇫🇷 France | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
       "type": "vless",
-      "server": "mapzapravki.space",
-      "server_port": 8443,
-      "uuid": "68a67906-5b37-4779-a6cc-58a1655f18b4",
-      "flow": "xtls-rprx-vision",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "18b99163-5196-4ddc-85f8-8fdf5efdcd53",
       "tls": {
         "enabled": true,
-        "server_name": "lada.locallynet.org",
+        "server_name": "stechnostore.life",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "stechnostore.life"
+        },
+        "path": "/player/collect/9c8514f9552d/"
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "server": "168.113.128.70",
+      "server_port": 20103,
+      "uuid": "6eb642a2-f8ee-47cc-9c13-fabb0a50350d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "lorettmay.top",
+        "server_name": "flatknot.net",
         "alpn": [
+          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] CDN",
+      "tag": "🌐 Anycast-IP | 🇳🇱 [*CIDR] CDN",
       "type": "vless",
       "server": "6b9iw.guardora.pro",
-      "server_port": 10018,
+      "server_port": 443,
       "uuid": "d9cc5c37-b53c-14a1-b4e1-1b9f7fbea1b1",
       "tls": {
         "enabled": true,
         "server_name": "6b9iw.guardora.pro",
-        "reality": {
-          "enabled": true,
-          "public_key": "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY",
-          "short_id": "c1a7e9b4711d5f60"
-        },
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "6b9iw.guardora.pro"
+        },
+        "path": "/ogVAL8moh5SB"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "188.225.42.208",
+      "server_port": 443,
+      "uuid": "3f5e89d5-591f-4ac9-b071-b05680b573c3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "shop.okhta-mebel.site",
+        "reality": {
+          "enabled": true,
+          "public_key": "CfHPtlNvqfK3QPvYfV7u-NjZcQh-buXZTA9gaGwvKmI",
+          "short_id": "b781a152ee"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       }
     }
   ],

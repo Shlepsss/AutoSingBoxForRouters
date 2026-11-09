@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇻 Latvia | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇨🇦 Canada [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇩🇪 Germany [*CIDR]",
+        "🌐 Anycast-IP | 🇧🇬 [*CIDR] CDN",
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇫🇷 France [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,33 +51,93 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇻 Latvia | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇨🇦 Canada [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🇩🇪 Germany [*CIDR]",
+        "🌐 Anycast-IP | 🇧🇬 [*CIDR] CDN",
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇫🇷 France [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇻 Latvia | [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "direct.vpndoctor.top",
+      "server": "renderer-bridge-2-133.mirra.now",
       "server_port": 443,
-      "uuid": "4d079fbe-33ac-4a80-8441-b0e1818b286a",
-      "flow": "xtls-rprx-vision",
+      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
       "tls": {
         "enabled": true,
-        "server_name": "direct.vpndoctor.top",
+        "server_name": "renderer-bridge-2-133.mirra.now",
+        "alpn": [
+          "h2"
+        ]
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "VideoRenderer"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇧🇬 [*CIDR] CDN",
+      "type": "vless",
+      "server": "46.243.232.71",
+      "server_port": 444,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "passport.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QPmrizvOUCOOIvlupGnt1reR5bui3U8EZl00VHU4GRA",
-          "short_id": "3f9537eb0626292b"
+          "public_key": "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]-2",
+      "type": "vless",
+      "server": "renderer-bridge-2-133.mirra.now",
+      "server_port": 443,
+      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-bridge-2-133.mirra.now",
+        "utls": {
+          "enabled": true,
           "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "VideoRenderer"
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]",
+      "type": "vless",
+      "server": "mapzapravki.space",
+      "server_port": 8443,
+      "uuid": "68a67906-5b37-4779-a6cc-58a1655f18b4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lada.locallynet.org",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
         }
       }
     },
@@ -90,80 +150,9 @@
       "tls": {
         "enabled": true,
         "server_name": "lorettmay.top",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "185.178.208.167",
-      "server_port": 443,
-      "uuid": "18b99163-5196-4ddc-85f8-8fdf5efdcd53",
-      "tls": {
-        "enabled": true,
-        "server_name": "stechnostore.life",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "stechnostore.life"
-        },
-        "path": "/player/collect/9c8514f9552d/"
-      }
-    },
-    {
-      "tag": "🇨🇦 Canada [*CIDR]",
-      "type": "vless",
-      "server": "94.156.181.35",
-      "server_port": 443,
-      "uuid": "cd9680e1-f115-4e16-91b9-ea59576c212d",
-      "tls": {
-        "enabled": true,
-        "server_name": "moscow1.banovano.space",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       },
       "transport": {
