@@ -35,9 +35,9 @@
       "tag": "auto",
       "outbounds": [
         "🇩🇪 Germany [*CIDR]",
-        "🌐 Anycast-IP | 🇧🇬 [*CIDR] CDN",
+        "🇨🇦 Canada [*CIDR]",
         "🇩🇪 Germany [*CIDR]-2",
-        "🇫🇷 France [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
@@ -52,9 +52,9 @@
       "outbounds": [
         "auto",
         "🇩🇪 Germany [*CIDR]",
-        "🌐 Anycast-IP | 🇧🇬 [*CIDR] CDN",
+        "🇨🇦 Canada [*CIDR]",
         "🇩🇪 Germany [*CIDR]-2",
-        "🇫🇷 France [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]"
       ],
       "default": "auto",
@@ -71,27 +71,7 @@
         "server_name": "renderer-bridge-2-133.mirra.now",
         "alpn": [
           "h2"
-        ]
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "VideoRenderer"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇧🇬 [*CIDR] CDN",
-      "type": "vless",
-      "server": "46.243.232.71",
-      "server_port": 444,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "passport.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA",
-          "short_id": ""
-        },
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -99,7 +79,25 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc"
+        "service_name": "VideoRenderer"
+      }
+    },
+    {
+      "tag": "🇨🇦 Canada [*CIDR]",
+      "type": "vless",
+      "server": "moscow1.banovano.space",
+      "server_port": 443,
+      "uuid": "32386d71-0d5e-4118-aa8d-8c0ca4ade7b9",
+      "tls": {
+        "enabled": true,
+        "server_name": "moscow1.banovano.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc"
       }
     },
     {
@@ -113,7 +111,7 @@
         "server_name": "renderer-bridge-2-133.mirra.now",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -122,22 +120,23 @@
       }
     },
     {
-      "tag": "🇫🇷 France [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "mapzapravki.space",
-      "server_port": 8443,
-      "uuid": "68a67906-5b37-4779-a6cc-58a1655f18b4",
+      "server": "141.133.184.54",
+      "server_port": 443,
+      "uuid": "a7281f9b-39b7-47ab-9750-dac255326d5d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "lada.locallynet.org",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "13.143.195.113.sslip.io",
+        "reality": {
+          "enabled": true,
+          "public_key": "p0M6RumtfcATPNPUIFnFcgWy2rzk2gGVWx21sql1hV0",
+          "short_id": "8238d76df92c2560"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -150,10 +149,9 @@
       "tls": {
         "enabled": true,
         "server_name": "lorettmay.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "alpn": [
+          "http%2525252525252F1.1"
+        ]
       },
       "transport": {
         "type": "ws",
