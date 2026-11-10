@@ -34,8 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇳🇱 The Netherlands | [*CIDR] VK",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇪🇪 Estonia [*CIDR] YA"
+        "🇳🇱 The Netherlands | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | [*CIDR] VK-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -48,14 +51,83 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇳🇱 The Netherlands | [*CIDR] VK",
         "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇪🇪 Estonia [*CIDR] YA"
+        "🇳🇱 The Netherlands | [*CIDR] VK-2",
+        "🇳🇱 The Netherlands [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | [*CIDR] VK-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "type": "vless",
+      "server": "fst.krevetkabs111.net",
+      "server_port": 443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "fst.krevetkabs111.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "fst.krevetkabs111.net"
+        },
+        "path": "/api/generate"
+      }
+    },
+    {
       "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "type": "vless",
+      "server": "95.163.209.247",
+      "server_port": 443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "fst.krevetkabs111.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "fst.krevetkabs111.net"
+        },
+        "path": "/api/generate"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "95.163.209.247",
+      "server_port": 443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "fst.krevetkabs111.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "fst.krevetkabs111.net"
+        },
+        "path": "/api/generate"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] VK-2",
       "type": "vless",
       "server": "fst.krevetkabs111.net",
       "server_port": 443,
@@ -77,24 +149,25 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK-3",
       "type": "vless",
-      "server": "158.160.190.15",
-      "server_port": 8443,
-      "uuid": "50ed9601-ebd4-4ba7-a234-ffe642d351cd",
-      "flow": "xtls-rprx-vision",
+      "server": "fst.krevetkabs111.net",
+      "server_port": 443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "GtR_ZuUkKAvY22-mOhrGYK0eyzliFCrZkoqFV7BfjHg",
-          "short_id": "335cb6cbe00da58b"
-        },
+        "server_name": "fst.krevetkabs111.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "safari"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "fst.krevetkabs111.net"
+        },
+        "path": "/api/generate"
       }
     }
   ],

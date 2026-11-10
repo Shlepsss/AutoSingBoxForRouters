@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 Hong Kong [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇪🇸 Spain [*CIDR]",
-        "🇷🇸 Serbia [*CIDR]"
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]-2",
+        "🇨🇦 Canada | 🌐 | [*CIDR]",
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,44 +51,107 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 Hong Kong [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇪🇸 Spain [*CIDR]",
-        "🇷🇸 Serbia [*CIDR]"
+        "🇬🇧 United Kingdom | [*CIDR]",
+        "🇬🇧 United Kingdom | [*CIDR]-2",
+        "🇨🇦 Canada | 🌐 | [*CIDR]",
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇭🇰 Hong Kong [*CIDR]",
+      "tag": "🇬🇧 United Kingdom | [*CIDR]",
       "type": "vless",
-      "server": "eu90.cdn77.icu",
-      "server_port": 20032,
-      "uuid": "2f094d48-7186-47ca-9e57-e977bbac3b08",
-      "tls": {
-        "enabled": true,
-        "server_name": "eu64.cdn77.icu",
-        "reality": {
-          "enabled": true,
-          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
-          "short_id": "1ed136481e0ede74"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "api.file-obmen.top",
+      "server": "95.163.232.240",
       "server_port": 443,
       "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
       "tls": {
         "enabled": true,
-        "server_name": "api.file-obmen.top",
+        "server_name": "files.neurixai.app",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files.neurixai.app"
+        },
+        "path": "/api/generate"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | [*CIDR]-2",
+      "type": "vless",
+      "server": "lt.krevetkabs111.net",
+      "server_port": 14443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "lt.krevetkabs111.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lt.krevetkabs111.net"
+        },
+        "path": "/api/generate"
+      }
+    },
+    {
+      "tag": "🇨🇦 Canada | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "5.53.124.191",
+      "server_port": 8008,
+      "uuid": "b48e1596-e835-4547-bdae-31daadf9ea17",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [*CIDR]",
+      "type": "vless",
+      "server": "files.neurixai.app",
+      "server_port": 443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "files.neurixai.app",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files.neurixai.app"
+        },
+        "path": "/api/generate"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "type": "vless",
+      "server": "fst.krevetkabs111.net",
+      "server_port": 443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "fst.krevetkabs111.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -97,68 +160,9 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "api.file-obmen.top"
+          "Host": "fst.krevetkabs111.net"
         },
         "path": "/api/generate"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "185.173.179.218",
-      "server_port": 443,
-      "uuid": "f219ffe2-bc36-495f-a83d-8f9ac4af05fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.cdn-space.org",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇸 Spain [*CIDR]",
-      "type": "vless",
-      "server": "83.171.241.142",
-      "server_port": 443,
-      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "7aa271t.es1.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE",
-          "short_id": "42426c882c5fcd41"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇸 Serbia [*CIDR]",
-      "type": "vless",
-      "server": "eu90.cdn77.icu",
-      "server_port": 20058,
-      "uuid": "2f094d48-7186-2710-9e57-e977bbac3b08",
-      "tls": {
-        "enabled": true,
-        "server_name": "eu64.cdn77.icu",
-        "reality": {
-          "enabled": true,
-          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
-          "short_id": "1ed136481e0ede74"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     }
   ],
