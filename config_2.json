@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 Canada | [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇨🇦 Canada [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]"
+        "🌐 Anycast-IP | 🇧🇪 [*CIDR]",
+        "🇷🇸 Serbia [*CIDR]",
+        "🇺🇸 United States | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,48 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 Canada | [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇨🇦 Canada [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]"
+        "🌐 Anycast-IP | 🇧🇪 [*CIDR]",
+        "🇷🇸 Serbia [*CIDR]",
+        "🇺🇸 United States | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇨🇦 Canada | [*CIDR]",
-      "type": "vless",
-      "server": "5.53.124.191",
-      "server_port": 8008,
-      "uuid": "b48e1596-e835-4547-bdae-31daadf9ea17",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [*CIDR]",
-      "type": "vless",
-      "server": "83.171.241.153",
-      "server_port": 443,
-      "uuid": "c82031be-e90f-4b15-ab4f-7ccef236d3ca",
-      "tls": {
-        "enabled": true,
-        "server_name": "d58daft.plp1.h1cloud.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "ixnCbdlT5sAVd-ilp2nG11CvnNsBCf9xPD56TlXxlR4",
-          "short_id": "a91531ad58c8611c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "🇳🇱 The Netherlands [*CIDR]",
@@ -105,11 +71,7 @@
         "server_name": "chat.gpt.prem-ai.shop",
         "alpn": [
           "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        ]
       },
       "transport": {
         "type": "ws",
@@ -120,21 +82,69 @@
       }
     },
     {
-      "tag": "🇨🇦 Canada [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇧🇪 [*CIDR]",
       "type": "vless",
-      "server": "5.53.124.191",
-      "server_port": 8008,
-      "uuid": "b48e1596-e835-4547-bdae-31daadf9ea17",
+      "server": "176.122.25.48",
+      "server_port": 443,
+      "uuid": "3253407a-f03f-4353-8035-df10c0565162",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
+        "server_name": "st.vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "JH1FteoTVW6inmHDUgZATEXXxctafAXV2i7AFq352kc",
+          "short_id": "53095f58d13a6503"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇷🇸 Serbia [*CIDR]",
+      "type": "vless",
+      "server": "eu90.cdn77.icu",
+      "server_port": 20058,
+      "uuid": "2f094d48-7186-2710-9e57-e977bbac3b08",
+      "tls": {
+        "enabled": true,
+        "server_name": "eu64.cdn77.icu",
+        "reality": {
+          "enabled": true,
+          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
+          "short_id": "1ed136481e0ede74"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "46.161.14.13",
+      "server_port": 443,
+      "uuid": "798ab01c-eb0f-4e1e-9a99-a486ca4eaaf3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vkuseraudio.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wj4JJuI6yc1jICZFE3vGZjFP5Js4RyvaSIRKFNVSsB0",
+          "short_id": "5dffebe33d1e36"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
       "type": "vless",
       "server": "chat.gpt.prem-ai.shop",
       "server_port": 443,
@@ -147,7 +157,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       },
       "transport": {

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 Canada | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇨🇦 Canada | [*CIDR]-2",
-        "🇨🇦 Canada [*CIDR]",
-        "🇨🇦 Canada | [*CIDR]-3"
+        "🇨🇦 Canada | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇧🇪 [*CIDR]",
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇷🇺 [*CIDR] YA",
+        "🇱🇹 Lithuania [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,106 +51,120 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 Canada | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇨🇦 Canada | [*CIDR]-2",
-        "🇨🇦 Canada [*CIDR]",
-        "🇨🇦 Canada | [*CIDR]-3"
+        "🇨🇦 Canada | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇧🇪 [*CIDR]",
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇷🇺 [*CIDR] YA",
+        "🇱🇹 Lithuania [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇦 Canada | [*CIDR]",
+      "tag": "🇨🇦 Canada | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "94.156.181.35",
-      "server_port": 443,
-      "uuid": "32386d71-0d5e-4118-aa8d-8c0ca4ade7b9",
+      "server": "eu90.cdn77.icu",
+      "server_port": 20016,
+      "uuid": "2f094d48-7186-47ca-9e57-e977bbac3b08",
       "tls": {
         "enabled": true,
-        "server_name": "moscow1.banovano.space",
+        "server_name": "eu64.cdn77.icu",
+        "reality": {
+          "enabled": true,
+          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
+          "short_id": "1ed136481e0ede74"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇧🇪 [*CIDR]",
       "type": "vless",
-      "server": "chat.gpt.prem-ai.shop",
+      "server": "176.122.25.48",
       "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "uuid": "3253407a-f03f-4353-8035-df10c0565162",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "chat.gpt.prem-ai.shop",
+        "server_name": "eh.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "JH1FteoTVW6inmHDUgZATEXXxctafAXV2i7AFq352kc",
+          "short_id": "e93a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [*CIDR]",
+      "type": "vless",
+      "server": "eu90.cdn77.icu",
+      "server_port": 20029,
+      "uuid": "2f094d48-7186-47ca-9e57-e977bbac3b08",
+      "tls": {
+        "enabled": true,
+        "server_name": "eu64.cdn77.icu",
+        "reality": {
+          "enabled": true,
+          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
+          "short_id": "1ed136481e0ede74"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇷🇺 [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.190.15",
+      "server_port": 8443,
+      "uuid": "50ed9601-ebd4-4ba7-a234-ffe642d351cd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "GtR_ZuUkKAvY22-mOhrGYK0eyzliFCrZkoqFV7BfjHg",
+          "short_id": "335cb6cbe00da58b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
         "alpn": [
           "http/1.1"
         ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "chat.gpt.prem-ai.shop"
-        },
-        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
-      }
-    },
-    {
-      "tag": "🇨🇦 Canada | [*CIDR]-2",
-      "type": "vless",
-      "server": "5.53.124.191",
-      "server_port": 8008,
-      "uuid": "b48e1596-e835-4547-bdae-31daadf9ea17",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇦 Canada [*CIDR]",
-      "type": "vless",
-      "server": "94.156.181.35",
-      "server_port": 443,
-      "uuid": "32386d71-0d5e-4118-aa8d-8c0ca4ade7b9",
-      "tls": {
-        "enabled": true,
-        "server_name": "moscow1.banovano.space",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇨🇦 Canada | [*CIDR]-3",
-      "type": "vless",
-      "server": "94.156.181.35",
-      "server_port": 443,
-      "uuid": "32386d71-0d5e-4118-aa8d-8c0ca4ade7b9",
-      "tls": {
-        "enabled": true,
-        "server_name": "moscow1.banovano.space",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
       }
     }
   ],
