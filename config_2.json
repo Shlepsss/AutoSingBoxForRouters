@@ -35,15 +35,15 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
-        "🇬🇧 United Kingdom [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR]-8"
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇳🇱 The Netherlands [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -57,15 +57,15 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [*CIDR]",
-        "🇬🇧 United Kingdom [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR]-8"
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
+        "🇳🇱 The Netherlands [*CIDR]-3",
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -81,7 +81,7 @@
         "server_name": "vps3.nemnogogo.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -90,29 +90,7 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [*CIDR]",
-      "type": "vless",
-      "server": "95.163.232.240",
-      "server_port": 443,
-      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
-      "tls": {
-        "enabled": true,
-        "server_name": "files.neurixai.app",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "files.neurixai.app"
-        },
-        "path": "/api/generate"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia | [*CIDR]",
       "type": "vless",
       "server": "vps3.nemnogogo.com",
       "server_port": 443,
@@ -120,9 +98,12 @@
       "tls": {
         "enabled": true,
         "server_name": "vps3.nemnogogo.com",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -131,7 +112,57 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "chat.gpt.prem-ai.shop",
+      "server_port": 443,
+      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "tls": {
+        "enabled": true,
+        "server_name": "chat.gpt.prem-ai.shop",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "chat.gpt.prem-ai.shop"
+        },
+        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
+      "type": "vless",
+      "server": "chat.gpt.prem-ai.shop",
+      "server_port": 443,
+      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "tls": {
+        "enabled": true,
+        "server_name": "chat.gpt.prem-ai.shop",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "chat.gpt.prem-ai.shop"
+        },
+        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
       "type": "vless",
       "server": "vps3.nemnogogo.com",
       "server_port": 443,
@@ -153,7 +184,54 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
+      "type": "vless",
+      "server": "vps3.nemnogogo.com",
+      "server_port": 443,
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "vps3.nemnogogo.com",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
+      "type": "vless",
+      "server": "chat.gpt.prem-ai.shop",
+      "server_port": 443,
+      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "tls": {
+        "enabled": true,
+        "server_name": "chat.gpt.prem-ai.shop",
+        "alpn": [
+          "http%2F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "chat.gpt.prem-ai.shop"
+        },
+        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
       "type": "vless",
       "server": "vps3.nemnogogo.com",
       "server_port": 443,
@@ -175,7 +253,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
       "type": "vless",
       "server": "vps3.nemnogogo.com",
       "server_port": 443,
@@ -183,12 +261,9 @@
       "tls": {
         "enabled": true,
         "server_name": "vps3.nemnogogo.com",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -197,59 +272,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
-      "type": "vless",
-      "server": "vps3.nemnogogo.com",
-      "server_port": 443,
-      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "tls": {
-        "enabled": true,
-        "server_name": "vps3.nemnogogo.com",
-        "alpn": [
-          "h2"
-        ]
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "mobile.api.Event"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "trojan",
-      "server": "de-bots4.h1cloud.net",
-      "server_port": 25267,
-      "password": "happybirthdaydaniel",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "t.me/FuckTheWall",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-7",
-      "type": "vless",
-      "server": "vps3.nemnogogo.com",
-      "server_port": 443,
-      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "tls": {
-        "enabled": true,
-        "server_name": "vps3.nemnogogo.com"
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "mobile.api.Event"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-8",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "vps3.nemnogogo.com",
       "server_port": 443,
@@ -259,7 +282,7 @@
         "server_name": "vps3.nemnogogo.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {

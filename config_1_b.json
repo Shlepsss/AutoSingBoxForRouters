@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 🇺🇸 [*CIDR]"
+        "🇫🇷 France | 🌐 | [*CIDR]",
+        "🇫🇷 France | 🌐 | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇵🇱 Poland | 🌐 | [*CIDR]",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,69 +51,26 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 🇺🇸 [*CIDR]"
+        "🇫🇷 France | 🌐 | [*CIDR]",
+        "🇫🇷 France | 🌐 | [*CIDR]-2",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇵🇱 Poland | 🌐 | [*CIDR]",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom [*CIDR]",
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "files.neurixai.app",
+      "server": "185.221.213.22",
       "server_port": 443,
       "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
       "tls": {
         "enabled": true,
-        "server_name": "files.neurixai.app",
+        "server_name": "Frfast11.onlineai.pro",
         "alpn": [
           "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "files.neurixai.app"
-        },
-        "path": "/api/generate"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "185.173.179.218",
-      "server_port": 443,
-      "uuid": "f219ffe2-bc36-495f-a83d-8f9ac4af05fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.cdn-space.org",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "chat.gpt.prem-ai.shop",
-      "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
-      "tls": {
-        "enabled": true,
-        "server_name": "chat.gpt.prem-ai.shop",
-        "alpn": [
-          "http%2F1.1"
         ],
         "utls": {
           "enabled": true,
@@ -123,20 +80,20 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "chat.gpt.prem-ai.shop"
+          "Host": "Frfast11.onlineai.pro"
         },
-        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
+        "path": "/assets/sync-6d2f4a"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "chat.gpt.prem-ai.shop",
+      "server": "185.221.213.22",
       "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
       "tls": {
         "enabled": true,
-        "server_name": "chat.gpt.prem-ai.shop",
+        "server_name": "Frfast11.onlineai.pro",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -145,30 +102,75 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "chat.gpt.prem-ai.shop"
+          "Host": "Frfast11.onlineai.pro"
         },
-        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
+        "path": "/assets/sync-6d2f4a"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 🇺🇸 [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "194.93.0.240",
-      "server_port": 8443,
-      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+      "server": "176.109.85.60",
+      "server_port": 443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
       "tls": {
         "enabled": true,
-        "server_name": "vp4.1145678.xyz",
+        "server_name": "api.file-obmen.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "api.file-obmen.top"
+        },
+        "path": "/api/generate"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 | [*CIDR]",
+      "type": "trojan",
+      "server": "stream.yabenzin.app",
+      "server_port": 443,
+      "password": "duJyVGgB2y0tCFs37Y89NE1fMHXk8C5j",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn12.yabenzin.app",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
+        "type": "grpc",
+        "service_name": "TrojanGRPC"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "5.42.107.38",
+      "server_port": 14443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "germ.onlineai.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
         "type": "ws",
         "headers": {
-          "Host": "vp4.1145678.xyz"
-        }
+          "Host": "germ.onlineai.pro"
+        },
+        "path": "/api/generate"
       }
     }
   ],
