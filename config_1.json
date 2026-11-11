@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇹 Lithuania [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
         "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
+        "🇬🇧 United Kingdom [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]",
         "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
+        "🇬🇧 United Kingdom [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -70,7 +70,7 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%25252F1.1"
+          "http%252F1.1"
         ]
       },
       "transport": {
@@ -79,48 +79,6 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "176.109.85.60",
-      "server_port": 443,
-      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.file-obmen.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "api.file-obmen.top"
-        },
-        "path": "/api/generate"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "537df6t.nl16.h1clayd.click",
-      "server_port": 443,
-      "uuid": "546fdb65-0967-45e8-a61b-b22ff85f11c9",
-      "tls": {
-        "enabled": true,
-        "server_name": "537df6t.nl16.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "U-i0W0UqanfhBrLz1OBlAJQejwhs3rE23nFAjlR6pEU",
-          "short_id": "b64bde4903453877"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     },
     {
@@ -134,14 +92,35 @@
         "server_name": "ru1.cdn-space.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "chat.gpt.prem-ai.shop",
+      "server_port": 443,
+      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "tls": {
+        "enabled": true,
+        "server_name": "chat.gpt.prem-ai.shop",
+        "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "chat.gpt.prem-ai.shop"
+        },
+        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
       }
     },
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "185.173.179.218",
+      "server": "ru1.cdn-space.org",
       "server_port": 443,
       "uuid": "f219ffe2-bc36-495f-a83d-8f9ac4af05fd",
       "tls": {
@@ -154,6 +133,24 @@
           "enabled": true,
           "fingerprint": "ios"
         }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [*CIDR]",
+      "type": "vless",
+      "server": "95.163.232.240",
+      "server_port": 443,
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "files.neurixai.app"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files.neurixai.app"
+        },
+        "path": "%2Fapi%2Fgenerate"
       }
     }
   ],

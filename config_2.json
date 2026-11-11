@@ -35,15 +35,15 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
+        "🇬🇧 United Kingdom [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
         "🇷🇺 Russia [*CIDR]-5",
         "🇷🇺 Russia [*CIDR]-6",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR]-8",
-        "🇷🇺 Russia [*CIDR]-9",
-        "🇷🇺 Russia [*CIDR]-10"
+        "🇷🇺 Russia [*CIDR]-8"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -57,15 +57,15 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [*CIDR]",
+        "🇬🇧 United Kingdom [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
         "🇷🇺 Russia [*CIDR]-5",
         "🇷🇺 Russia [*CIDR]-6",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🇷🇺 Russia [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR]-8",
-        "🇷🇺 Russia [*CIDR]-9",
-        "🇷🇺 Russia [*CIDR]-10"
+        "🇷🇺 Russia [*CIDR]-8"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -81,7 +81,7 @@
         "server_name": "vps3.nemnogogo.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -90,65 +90,77 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇬🇧 United Kingdom [*CIDR]",
       "type": "vless",
-      "server": "rus2.qik-server.uk",
+      "server": "95.163.232.240",
       "server_port": 443,
-      "uuid": "38de3363-7945-402e-9a9b-6f2f9015a44e",
-      "flow": "xtls-rprx-vision",
+      "uuid": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
       "tls": {
         "enabled": true,
-        "server_name": "rus2.qik-server.uk",
-        "alpn": [
-          "h2,http/1.1"
-        ]
+        "server_name": "files.neurixai.app",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "files.neurixai.app"
+        },
+        "path": "/api/generate"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "vps3.nemnogogo.com",
+      "server_port": 443,
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "vps3.nemnogogo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
-      "server": "rus2.qik-server.uk",
+      "server": "vps3.nemnogogo.com",
       "server_port": 443,
-      "uuid": "38de3363-7945-402e-9a9b-6f2f9015a44e",
-      "flow": "xtls-rprx-vision",
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
       "tls": {
         "enabled": true,
-        "server_name": "rus2.qik-server.uk",
+        "server_name": "vps3.nemnogogo.com",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
-      "server": "rus2.qik-server.uk",
+      "server": "vps3.nemnogogo.com",
       "server_port": 443,
-      "uuid": "38de3363-7945-402e-9a9b-6f2f9015a44e",
-      "flow": "xtls-rprx-vision",
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
       "tls": {
         "enabled": true,
-        "server_name": "rus2.qik-server.uk",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
-      "type": "vless",
-      "server": "vps2.nemnogogo.com",
-      "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
-      "tls": {
-        "enabled": true,
-        "server_name": "vps2.nemnogogo.com",
+        "server_name": "vps3.nemnogogo.com",
         "alpn": [
           "h2"
         ],
@@ -163,33 +175,73 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "tag": "🇷🇺 Russia [*CIDR]-5",
       "type": "vless",
-      "server": "rus2.qik-server.uk",
+      "server": "vps3.nemnogogo.com",
       "server_port": 443,
-      "uuid": "38de3363-7945-402e-9a9b-6f2f9015a44e",
-      "flow": "xtls-rprx-vision",
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
       "tls": {
         "enabled": true,
-        "server_name": "rus2.qik-server.uk",
+        "server_name": "vps3.nemnogogo.com",
         "alpn": [
-          "[h2,http/1.1]"
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "type": "vless",
+      "server": "vps3.nemnogogo.com",
+      "server_port": 443,
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "vps3.nemnogogo.com",
+        "alpn": [
+          "h2"
         ]
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "trojan",
+      "server": "de-bots4.h1cloud.net",
+      "server_port": 25267,
+      "password": "happybirthdaydaniel",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "t.me/FuckTheWall",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-7",
       "type": "vless",
-      "server": "vps2.nemnogogo.com",
+      "server": "vps3.nemnogogo.com",
       "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
       "tls": {
         "enabled": true,
-        "server_name": "vps2.nemnogogo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "server_name": "vps3.nemnogogo.com"
       },
       "transport": {
         "type": "grpc",
@@ -199,54 +251,15 @@
     {
       "tag": "🇷🇺 Russia [*CIDR]-8",
       "type": "vless",
-      "server": "rus2.qik-server.uk",
+      "server": "vps3.nemnogogo.com",
       "server_port": 443,
-      "uuid": "38de3363-7945-402e-9a9b-6f2f9015a44e",
-      "flow": "xtls-rprx-vision",
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
       "tls": {
         "enabled": true,
-        "server_name": "rus2.qik-server.uk",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "vps3.nemnogogo.com",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-9",
-      "type": "vless",
-      "server": "vps2.nemnogogo.com",
-      "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
-      "tls": {
-        "enabled": true,
-        "server_name": "vps2.nemnogogo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "mobile.api.Event"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-10",
-      "type": "vless",
-      "server": "vps2.nemnogogo.com",
-      "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
-      "tls": {
-        "enabled": true,
-        "server_name": "vps2.nemnogogo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       },
       "transport": {
