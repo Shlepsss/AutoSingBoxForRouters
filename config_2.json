@@ -35,12 +35,15 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇪🇪 Estonia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-7",
+        "🇷🇺 Russia [*CIDR]-8"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,12 +57,15 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇪🇪 Estonia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇷🇺 Russia [*CIDR]-5",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-7",
+        "🇷🇺 Russia [*CIDR]-8"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -73,42 +79,14 @@
       "tls": {
         "enabled": true,
         "server_name": "vps3.nemnogogo.com",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "mobile.api.Event"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
       }
     },
     {
@@ -120,9 +98,12 @@
       "tls": {
         "enabled": true,
         "server_name": "vps3.nemnogogo.com",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -139,36 +120,14 @@
       "tls": {
         "enabled": true,
         "server_name": "vps3.nemnogogo.com",
-        "alpn": [
-          "h2"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "mobile.api.Event"
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia [*CIDR]",
-      "type": "vless",
-      "server": "165.231.157.124",
-      "server_port": 8443,
-      "uuid": "97fd7807-7e2b-49da-8a0e-e40197088f97",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-6af3f40b.adhil.uk",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
       }
     },
     {
@@ -179,11 +138,7 @@
       "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
       "tls": {
         "enabled": true,
-        "server_name": "vps3.nemnogogo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "server_name": "vps3.nemnogogo.com"
       },
       "transport": {
         "type": "grpc",
@@ -201,10 +156,109 @@
         "server_name": "vps3.nemnogogo.com",
         "alpn": [
           "h2"
+        ]
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "chat.gpt.prem-ai.shop",
+      "server_port": 443,
+      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "tls": {
+        "enabled": true,
+        "server_name": "chat.gpt.prem-ai.shop"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "chat.gpt.prem-ai.shop"
+        },
+        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "type": "vless",
+      "server": "vps3.nemnogogo.com",
+      "server_port": 443,
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "vps3.nemnogogo.com",
+        "alpn": [
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-7",
+      "type": "vless",
+      "server": "vps3.nemnogogo.com",
+      "server_port": 443,
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "vps3.nemnogogo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-8",
+      "type": "vless",
+      "server": "vps3.nemnogogo.com",
+      "server_port": 443,
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "vps3.nemnogogo.com",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       },
       "transport": {
