@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇱🇹 Lithuania | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2"
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,58 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇱🇹 Lithuania | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]-2",
-        "🇳🇱 The Netherlands [*CIDR]-3",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]-2"
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇱🇹 Lithuania | [*CIDR]",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%25252525252525252525252F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "type": "vless",
+      "server": "vps3.nemnogogo.com",
+      "server_port": 443,
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "vps3.nemnogogo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
+      }
     },
     {
       "tag": "🇳🇱 The Netherlands [*CIDR]",
@@ -74,7 +118,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -86,29 +130,17 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
       "type": "vless",
-      "server": "ru1.cdn-space.org",
+      "server": "lorettmay.top",
       "server_port": 443,
-      "uuid": "f219ffe2-bc36-495f-a83d-8f9ac4af05fd",
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "ru1.cdn-space.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
-      "type": "vless",
-      "server": "chat.gpt.prem-ai.shop",
-      "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
-      "tls": {
-        "enabled": true,
-        "server_name": "chat.gpt.prem-ai.shop",
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%2525252F1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -117,49 +149,34 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "chat.gpt.prem-ai.shop"
+          "Host": "lorettmay.top"
         },
-        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
+        "path": "/blog/posts"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]-3",
+      "tag": "🇱🇹 Lithuania [*CIDR]-2",
       "type": "vless",
-      "server": "chat.gpt.prem-ai.shop",
+      "server": "lorettmay.top",
       "server_port": 443,
-      "uuid": "95f85937-7b95-45c4-8d69-95da6a978569",
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "chat.gpt.prem-ai.shop",
+        "server_name": "lorettmay.top",
         "alpn": [
-          "http%2F1.1"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "chat.gpt.prem-ai.shop"
+          "Host": "lorettmay.top"
         },
-        "path": "/gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "185.173.179.218",
-      "server_port": 443,
-      "uuid": "f219ffe2-bc36-495f-a83d-8f9ac4af05fd",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.cdn-space.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+        "path": "/blog/posts"
       }
     }
   ],
