@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇹 Lithuania [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇱🇹 Lithuania | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
-        "🇱🇹 Lithuania | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2",
+        "🇳🇱 The Netherlands | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -70,32 +70,7 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "vps3.nemnogogo.com",
-      "server_port": 443,
-      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "tls": {
-        "enabled": true,
-        "server_name": "vps3.nemnogogo.com",
-        "alpn": [
-          "h2"
+          "http%252525252525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
@@ -103,12 +78,57 @@
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "mobile.api.Event"
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
       }
     },
     {
-      "tag": "🇱🇹 Lithuania | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "138.124.14.209",
+      "server_port": 443,
+      "uuid": "c059d2b8-d7d6-4873-b5e8-2c5f6cd908bb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.savesafe.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "X5QCQAU6PhQ0ZYdMfsOD8SzK2tAcKqGbqHcGKOCkHg0",
+          "short_id": "3e70d4cbb01bddfd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "138.124.14.209",
+      "server_port": 443,
+      "uuid": "c059d2b8-d7d6-4873-b5e8-2c5f6cd908bb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.savesafe.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "X5QCQAU6PhQ0ZYdMfsOD8SzK2tAcKqGbqHcGKOCkHg0",
+          "short_id": "3e70d4cbb01bddfd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]-2",
       "type": "vless",
       "server": "lorettmay.top",
       "server_port": 443,
@@ -116,9 +136,12 @@
       "tls": {
         "enabled": true,
         "server_name": "lorettmay.top",
+        "alpn": [
+          "http%2525252525252525252F1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -130,29 +153,7 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "vps3.nemnogogo.com",
-      "server_port": 443,
-      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "tls": {
-        "enabled": true,
-        "server_name": "vps3.nemnogogo.com",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "mobile.api.Event"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
       "server": "chat.gpt.prem-ai.shop",
       "server_port": 443,
