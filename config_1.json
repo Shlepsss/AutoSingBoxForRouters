@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3",
-        "🇮🇷 Iran | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK"
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,64 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3",
-        "🇮🇷 Iran | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR] VK"
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 [*CIDR]",
+      "type": "vless",
+      "server": "ws3.falmero.store",
+      "server_port": 443,
+      "uuid": "820fa845-a1eb-4a83-b613-e6714cea8a1a",
+      "tls": {
+        "enabled": true,
+        "server_name": "falmero.store",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "falmero.store"
+        },
+        "path": "/api/de1/stream"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "46.243.205.186",
+      "server_port": 443,
+      "uuid": "a3f3b947-b895-4f23-bc8c-2a0a75d142e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.floweroom.vip",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "api.floweroom.vip"
+        },
+        "path": "/cart/sync/g-jSjxyhq24P"
+      }
     },
     {
       "tag": "🇱🇹 Lithuania [*CIDR]",
@@ -70,11 +120,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252525252525252525252F1.1"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -95,11 +145,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252F1.1"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -111,39 +161,14 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]-3",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "lorettmay.top",
+      "server": "silk.filnex.baby",
       "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "uuid": "820fa845-a1eb-4a83-b613-e6714cea8a1a",
       "tls": {
         "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇮🇷 Iran | [*CIDR] VK",
-      "type": "vless",
-      "server": "nguyxejonb.flowersgood.top",
-      "server_port": 443,
-      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
-      "tls": {
-        "enabled": true,
-        "server_name": "nguyxejonb.flowersgood.top",
+        "server_name": "silk.filnex.baby",
         "alpn": [
           "http/1.1"
         ],
@@ -155,31 +180,9 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "nguyxejonb.flowersgood.top"
+          "Host": "silk.filnex.baby"
         },
-        "path": "/service/telemetry/0294da469190/"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.147.175",
-      "server_port": 443,
-      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
-      "tls": {
-        "enabled": true,
-        "server_name": "bhjolq0d0l.flowersgood.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "bhjolq0d0l.flowersgood.top"
-        },
-        "path": "/service/telemetry/045d381f1166/"
+        "path": "/api/de5/stream"
       }
     }
   ],
