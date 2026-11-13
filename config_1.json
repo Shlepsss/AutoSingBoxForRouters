@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3"
+        "🇱🇹 Lithuania [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,47 +51,26 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3"
+        "🇱🇹 Lithuania [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇷 France | [*CIDR]",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
       "type": "vless",
-      "server": "189.74.117.28",
+      "server": "lorettmay.top",
       "server_port": 443,
-      "uuid": "06123471-6c45-400c-920a-3e6990060b63",
-      "flow": "xtls-rprx-vision",
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "api.videodolina.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "astravellion.xyz",
-      "server_port": 443,
-      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
-      "tls": {
-        "enabled": true,
-        "server_name": "astravellion.xyz",
+        "server_name": "lorettmay.top",
         "alpn": [
-          "h2"
+          "http%252525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
@@ -99,12 +78,15 @@
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "glush.de1.v1"
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "tag": "🇱🇹 Lithuania [*CIDR]-2",
       "type": "vless",
       "server": "lorettmay.top",
       "server_port": 443,
@@ -129,7 +111,7 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
+      "tag": "🇱🇹 Lithuania [*CIDR]-3",
       "type": "vless",
       "server": "lorettmay.top",
       "server_port": 443,
@@ -138,11 +120,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%25252525252525252F1.1"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -154,28 +136,44 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]-3",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "lorettmay.top",
+      "server": "astravellion.xyz",
       "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
       "tls": {
         "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252F1.1"
-        ],
+        "server_name": "astravellion.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "glush.de1.v1"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.147.175",
+      "server_port": 443,
+      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
+      "tls": {
+        "enabled": true,
+        "server_name": "bhjolq0d0l.flowersgood.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "lorettmay.top"
+          "Host": "bhjolq0d0l.flowersgood.top"
         },
-        "path": "/blog/posts"
+        "path": "/service/telemetry/045d381f1166/"
       }
     }
   ],
