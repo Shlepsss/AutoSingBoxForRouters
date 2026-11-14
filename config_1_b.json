@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇱 Israel | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3"
+        "🇱🇹 Lithuania [*CIDR]-3",
+        "🇱🇹 Lithuania [*CIDR]-4",
+        "🇱🇹 Lithuania [*CIDR]-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,34 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇱 Israel | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3"
+        "🇱🇹 Lithuania [*CIDR]-3",
+        "🇱🇹 Lithuania [*CIDR]-4",
+        "🇱🇹 Lithuania [*CIDR]-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇮🇱 Israel | [*CIDR]",
-      "type": "vless",
-      "server": "83.171.241.180",
-      "server_port": 443,
-      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "tls": {
-        "enabled": true,
-        "server_name": "80cb66x.nl17.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0",
-          "short_id": "f72d4a2c7cbbacb1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
     },
     {
       "tag": "🇱🇹 Lithuania [*CIDR]",
@@ -90,7 +70,7 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%2F1.1"
+          "http%252525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
@@ -106,25 +86,6 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "luminexorizon.ink",
-      "server_port": 443,
-      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
-      "tls": {
-        "enabled": true,
-        "server_name": "luminexorizon.ink",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "glush.de3.v1"
-      }
-    },
-    {
       "tag": "🇱🇹 Lithuania [*CIDR]-2",
       "type": "vless",
       "server": "lorettmay.top",
@@ -133,12 +94,9 @@
       "tls": {
         "enabled": true,
         "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252525252525252525252F1.1"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -159,11 +117,61 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252525252F1.1"
+          "http%25252525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]-4",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%2525252525252525252525252F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]-5",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       },
       "transport": {
