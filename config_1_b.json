@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇷 Iran | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇬🇧 🇷🇴 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇮🇱 Israel | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK"
+        "🇮🇷 Iran [*CIDR] VK",
+        "🇰🇷 South Korea [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2",
+        "🌐 Anycast-IP | 🇬🇧 🇷🇴 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇷 Iran | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇬🇧 🇷🇴 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇮🇱 Israel | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK"
+        "🇮🇷 Iran [*CIDR] VK",
+        "🇰🇷 South Korea [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2",
+        "🌐 Anycast-IP | 🇬🇧 🇷🇴 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇮🇷 Iran | [*CIDR] VK",
+      "tag": "🇮🇷 Iran [*CIDR] VK",
       "type": "vless",
-      "server": "nguyxejonb.flowersgood.top",
+      "server": "185.86.147.175",
       "server_port": 443,
       "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
       "tls": {
@@ -74,7 +74,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
@@ -86,7 +86,73 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇷🇴 | [*CIDR]",
+      "tag": "🇰🇷 South Korea [*CIDR]",
+      "type": "vless",
+      "server": "eu90.cdn77.icu",
+      "server_port": 20043,
+      "uuid": "1e697474-7836-47ed-aaca-b559efcbb298",
+      "tls": {
+        "enabled": true,
+        "server_name": "eu64.cdn77.icu",
+        "reality": {
+          "enabled": true,
+          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
+          "short_id": "1ed136481e0ede74"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%2525252525252525252F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]-2",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%25252525252525252525252525252F1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇷🇴 [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -96,69 +162,8 @@
         "server_name": "kfx7q.bakarova-top.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "luminexorizon.ink",
-      "server_port": 443,
-      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
-      "tls": {
-        "enabled": true,
-        "server_name": "luminexorizon.ink",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "glush.de3.v1"
-      }
-    },
-    {
-      "tag": "🇮🇱 Israel | [*CIDR]",
-      "type": "vless",
-      "server": "83.171.241.180",
-      "server_port": 443,
-      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "tls": {
-        "enabled": true,
-        "server_name": "f0d7aft.nl17.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI",
-          "short_id": "8956c57cb4c4f8d2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.147.175",
-      "server_port": 443,
-      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
-      "tls": {
-        "enabled": true,
-        "server_name": "bhjolq0d0l.flowersgood.top",
-        "utls": {
-          "enabled": true,
           "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "bhjolq0d0l.flowersgood.top"
-        },
-        "path": "/service/telemetry/045d381f1166/"
       }
     }
   ],
