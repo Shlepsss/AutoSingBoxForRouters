@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇹 Lithuania [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
         "🇱🇹 Lithuania [*CIDR]-3",
-        "🇺🇸 United States [*CIDR]",
-        "🌐 Anycast-IP | 🇵🇱 [*CIDR]"
+        "🇱🇹 Lithuania [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇱🇹 Lithuania [*CIDR]",
+        "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
         "🇱🇹 Lithuania [*CIDR]-3",
-        "🇺🇸 United States [*CIDR]",
-        "🌐 Anycast-IP | 🇵🇱 [*CIDR]"
+        "🇱🇹 Lithuania [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -70,8 +70,12 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http/1.1"
-        ]
+          "http%252F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
       },
       "transport": {
         "type": "ws",
@@ -79,6 +83,24 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇷🇴 [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "5be144a2-75d3-476a-badb-fa57336617e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "kfx7q.bakarova-top.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
     },
     {
@@ -91,12 +113,8 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%25252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
+          "http%2525252525252525252525252525252F1.1"
+        ]
       },
       "transport": {
         "type": "ws",
@@ -116,7 +134,32 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252525252525252525252525252F1.1"
+          "http%25252525252525252525252F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]-4",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%25252F1.1"
         ],
         "utls": {
           "enabled": true,
@@ -129,37 +172,6 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [*CIDR]",
-      "type": "vless",
-      "server": "171.22.133.5",
-      "server_port": 9443,
-      "uuid": "0b22812b-4a79-42b1-93ec-5b157b0f2f7f",
-      "tls": {
-        "enabled": true,
-        "server_name": "fin.krabvpn.pro",
-        "reality": {
-          "enabled": true,
-          "public_key": "zd4L59ejBo94N8N9GQtZMox2eBBF9TQf2TLyIgpwlCg",
-          "short_id": "fd7624659f1e7d66"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR]",
-      "type": "vless",
-      "server": "84.54.57.122",
-      "server_port": 443,
-      "uuid": "f87e553a-009d-0001-9aa3-4e737a4d0192",
-      "tls": {
-        "enabled": true,
-        "server_name": "minjd-ru-61sb.my-fade.cloud"
       }
     }
   ],
