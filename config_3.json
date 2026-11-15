@@ -34,16 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇵🇱 Poland [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK",
+        "🇵🇱 Poland [*CIDR] VK-2",
         "🇷🇺 Russia [*CIDR] VK-2",
         "🇷🇺 Russia [*CIDR] VK-3",
         "🇷🇺 Russia [*CIDR] VK-4",
         "🇷🇺 Russia [*CIDR] VK-5",
-        "🇵🇱 Poland [*CIDR] VK",
-        "🇵🇱 Poland [*CIDR] VK-2",
-        "🇵🇱 Poland [*CIDR] VK-3",
         "🇷🇺 Russia [*CIDR] VK-6",
-        "🇷🇺 Russia [*CIDR] VK-7"
+        "🇷🇺 Russia [*CIDR] VK-7",
+        "🌐 Anycast-IP | 🇱🇻 🇳🇱 [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -56,19 +56,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇵🇱 Poland [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK",
+        "🇵🇱 Poland [*CIDR] VK-2",
         "🇷🇺 Russia [*CIDR] VK-2",
         "🇷🇺 Russia [*CIDR] VK-3",
         "🇷🇺 Russia [*CIDR] VK-4",
         "🇷🇺 Russia [*CIDR] VK-5",
-        "🇵🇱 Poland [*CIDR] VK",
-        "🇵🇱 Poland [*CIDR] VK-2",
-        "🇵🇱 Poland [*CIDR] VK-3",
         "🇷🇺 Russia [*CIDR] VK-6",
-        "🇷🇺 Russia [*CIDR] VK-7"
+        "🇷🇺 Russia [*CIDR] VK-7",
+        "🌐 Anycast-IP | 🇱🇻 🇳🇱 [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.145.55",
+      "server_port": 10470,
+      "uuid": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "wn-pl4.static-s3.org",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "wn-adaptcloud"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] VK",
@@ -92,6 +114,25 @@
       }
     },
     {
+      "tag": "🇵🇱 Poland [*CIDR] VK-2",
+      "type": "vless",
+      "server": "185.86.145.55",
+      "server_port": 10470,
+      "uuid": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "wn-pl4.static-s3.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "wn-adaptcloud"
+      }
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "212.233.90.78",
@@ -108,7 +149,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       }
     },
@@ -150,7 +191,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -171,65 +212,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.145.55",
-      "server_port": 10470,
-      "uuid": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
-      "tls": {
-        "enabled": true,
-        "server_name": "wn-pl4.static-s3.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "wn-adaptcloud"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] VK-2",
-      "type": "vless",
-      "server": "185.86.145.55",
-      "server_port": 10470,
-      "uuid": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
-      "tls": {
-        "enabled": true,
-        "server_name": "wn-pl4.static-s3.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "wn-adaptcloud"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] VK-3",
-      "type": "vless",
-      "server": "185.86.145.55",
-      "server_port": 10470,
-      "uuid": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
-      "tls": {
-        "enabled": true,
-        "server_name": "wn-pl4.static-s3.org",
-        "utls": {
-          "enabled": true,
           "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "wn-adaptcloud"
       }
     },
     {
@@ -249,7 +233,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       }
     },
@@ -270,7 +254,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇱🇻 🇳🇱 [*CIDR] VK",
+      "type": "vless",
+      "server": "sub-edge-14-1g.whitenw.net",
+      "server_port": 10454,
+      "uuid": "3e1e0b5e-554d-4513-a5e9-14649033cf19",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "onf.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "MAQju7q8wIeEznBQoDXP9l4SpuAkEs8CGDKaNNpKlHI",
+          "short_id": "4326"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     }

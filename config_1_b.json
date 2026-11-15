@@ -36,9 +36,9 @@
       "outbounds": [
         "🇱🇹 Lithuania [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3",
-        "🇱🇹 Lithuania [*CIDR]-4",
-        "🇱🇹 Lithuania [*CIDR]-5"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇭🇺 Hungary | 🌐 [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,9 +53,9 @@
         "auto",
         "🇱🇹 Lithuania [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3",
-        "🇱🇹 Lithuania [*CIDR]-4",
-        "🇱🇹 Lithuania [*CIDR]-5"
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇭🇺 Hungary | 🌐 [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -70,12 +70,8 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252525252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
+          "http%252525252F1.1"
+        ]
       },
       "transport": {
         "type": "ws",
@@ -94,10 +90,9 @@
       "tls": {
         "enabled": true,
         "server_name": "lorettmay.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "alpn": [
+          "http%2525252525252525252525252F1.1"
+        ]
       },
       "transport": {
         "type": "ws",
@@ -105,6 +100,49 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "196.240.125.10",
+      "server_port": 8443,
+      "uuid": "97fd7807-7e2b-49da-8a0e-e40197088f97",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-v1-6af86f4c.vmagnum.win",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇺 Hungary | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "212.41.8.76",
+      "server_port": 11443,
+      "uuid": "a628c583-24a8-4ce5-98ad-c6458abf1cc4",
+      "tls": {
+        "enabled": true,
+        "server_name": "s3.storage.selcloud.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "LR_FEXsJiKJUtXcmO1UR4Oi2IMmRcaS04D05oooqn28",
+          "short_id": "9edc24fc"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cas-hu"
       }
     },
     {
@@ -117,61 +155,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%25252525252525252F1.1"
+          "http%252525252525252525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-4",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%2525252525252525252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-5",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "android"
         }
       },
       "transport": {
