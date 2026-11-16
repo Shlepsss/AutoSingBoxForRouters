@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇪🇪 [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3",
-        "🇱🇹 Lithuania [*CIDR]-4"
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,36 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇪🇪 [*CIDR]",
+        "🇱🇹 Lithuania | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3",
-        "🇱🇹 Lithuania [*CIDR]-4"
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇪🇪 [*CIDR]",
+      "type": "vless",
+      "server": "159.194.210.102",
+      "server_port": 443,
+      "uuid": "ecf65acd-ea72-0002-be5f-cd23afb2722f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "box.vpvi.store",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania | [*CIDR]",
       "type": "vless",
       "server": "lorettmay.top",
       "server_port": 443,
@@ -70,11 +89,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%252525252525252525252F1.1"
+          "http%2525252525252525252525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "android"
         }
       },
       "transport": {
@@ -86,26 +105,28 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
       "type": "vless",
-      "server": "201.34.133.20",
+      "server": "lorettmay.top",
       "server_port": 443,
-      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
       "tls": {
         "enabled": true,
-        "server_name": "luminexorizon.ink",
+        "server_name": "lorettmay.top",
         "alpn": [
-          "h2",
-          "http/1.1"
+          "http%252525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "android"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "glush.de3.v1"
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
       }
     },
     {
@@ -118,53 +139,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%25252525252F1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-3",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%25252525252525252F1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-4",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%2F1.1"
+          "http%25252F1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -173,6 +152,28 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "luminexorizon.ink",
+      "server_port": 443,
+      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
+      "tls": {
+        "enabled": true,
+        "server_name": "luminexorizon.ink",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "glush.de3.v1"
       }
     }
   ],
