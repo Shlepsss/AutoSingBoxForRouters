@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇮🇷 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
+        "🌐 Anycast-IP | 🇮🇷 [*CIDR]-2",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇮🇱 Israel [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3"
+        "🌐 Anycast-IP | 🇮🇷 [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,83 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇮🇷 [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
+        "🌐 Anycast-IP | 🇮🇷 [*CIDR]-2",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇮🇱 Israel [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2",
-        "🇱🇹 Lithuania [*CIDR]-3"
+        "🌐 Anycast-IP | 🇮🇷 [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇮🇷 [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "89e2dc6c-dd20-43e6-aac2-d8c482d9cc36",
+      "tls": {
+        "enabled": true,
+        "server_name": "uwugirl.dev",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "speakpro.lol"
+        },
+        "path": "/player/collect/9c8514f9552d/"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇫🇮 [*CIDR]",
+      "type": "vless",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "b525921f-1902-0001-9b18-34aa847f5b57",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.14887277.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "api.14887277.xyz"
+        },
+        "path": "/session"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇮🇷 [*CIDR]-2",
+      "type": "vless",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "4eebdec5-08eb-4772-a0e6-35fec4c91cb0",
+      "tls": {
+        "enabled": true,
+        "server_name": "uwugirl.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "speakpro.lol"
+        },
+        "path": "/player/collect/9c8514f9552d/"
+      }
     },
     {
       "tag": "🇱🇹 Lithuania [*CIDR]",
@@ -70,12 +139,8 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%2525252525252525252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
+          "http%252525252525252F1.1"
+        ]
       },
       "transport": {
         "type": "ws",
@@ -86,96 +151,28 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇮🇷 [*CIDR]-3",
       "type": "vless",
-      "server": "201.34.133.20",
+      "server": "185.178.208.167",
       "server_port": 443,
-      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
+      "uuid": "4eebdec5-08eb-4772-a0e6-35fec4c91cb0",
       "tls": {
         "enabled": true,
-        "server_name": "luminexorizon.ink",
+        "server_name": "uwugirl.dev",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "glush.de3.v1"
-      }
-    },
-    {
-      "tag": "🇮🇱 Israel [*CIDR]",
-      "type": "vless",
-      "server": "f0d7aft.nl17.h1clayd.click",
-      "server_port": 443,
-      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "tls": {
-        "enabled": true,
-        "server_name": "f0d7aft.nl17.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI",
-          "short_id": "8956c57cb4c4f8d2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-2",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%25252525252525252525252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "lorettmay.top"
+          "Host": "speakpro.lol"
         },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR]-3",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%25252525252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
+        "path": "/player/collect/9c8514f9552d/"
       }
     }
   ],
