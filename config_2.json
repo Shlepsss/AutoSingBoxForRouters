@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇳🇱 🇷🇴 | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🌐 Anycast-IP | 🇳🇱 🇷🇴 [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇴 [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,42 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇳🇱 🇷🇴 | [*CIDR]",
         "🇱🇹 Lithuania [*CIDR]",
-        "🇪🇪 Estonia | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR]-2"
+        "🌐 Anycast-IP | 🇳🇱 🇷🇴 [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]-2",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇴 [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇴 | [*CIDR]",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%252525252525252525252525252F1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇴 [*CIDR]",
       "type": "vless",
       "server": "185.178.208.140",
       "server_port": 443,
@@ -79,67 +104,6 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania [*CIDR]",
-      "type": "vless",
-      "server": "lorettmay.top",
-      "server_port": 443,
-      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
-      "tls": {
-        "enabled": true,
-        "server_name": "lorettmay.top",
-        "alpn": [
-          "http%252F1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "lorettmay.top"
-        },
-        "path": "/blog/posts"
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
-      "type": "vless",
-      "server": "159.194.210.102",
-      "server_port": 443,
-      "uuid": "ecf65acd-ea72-0002-be5f-cd23afb2722f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "box.vpvi.store",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "62.113.36.217",
-      "server_port": 8443,
-      "uuid": "df5f4ac8-517d-4728-8517-d2f4a2698b4b",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "X7_QrmZO4eXDeamGa3clQwXLt_1Z003Mb2jjdYlEqWs",
-          "short_id": "e6ee7094"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "tag": "🇱🇹 Lithuania [*CIDR]-2",
       "type": "vless",
       "server": "lorettmay.top",
@@ -149,11 +113,11 @@
         "enabled": true,
         "server_name": "lorettmay.top",
         "alpn": [
-          "http%25252525252F1.1"
+          "http%2525252525252525252525252F1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -162,6 +126,40 @@
           "Host": "lorettmay.top"
         },
         "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇴 [*CIDR]-2",
+      "type": "vless",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "5be144a2-75d3-476a-badb-fa57336617e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "kfx7q.bakarova-top.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "luminexorizon.ink",
+      "server_port": 443,
+      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
+      "tls": {
+        "enabled": true,
+        "server_name": "luminexorizon.ink",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "glush.de3.v1"
       }
     }
   ],
