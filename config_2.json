@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] YA",
-        "🇷🇺 Russia | [*CIDR] YA-2",
-        "🇫🇮 Finland [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇷🇺 Russia [*CIDR] YA-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,40 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇷🇺 Russia | [*CIDR] YA",
-        "🇷🇺 Russia | [*CIDR] YA-2",
-        "🇫🇮 Finland [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇱🇹 Lithuania [*CIDR]",
+        "🇷🇺 Russia [*CIDR] YA-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]",
-      "type": "vless",
-      "server": "83.171.241.238",
-      "server_port": 443,
-      "uuid": "537d8ade-134d-4ec2-905c-0187e7e1e22e",
-      "tls": {
-        "enabled": true,
-        "server_name": "f0f0bet.fi2.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "_oCg5rCW6XTxriBPzbd_AX0os6QhenVYO9cbrsDSyRY",
-          "short_id": "cf2a731a5f2dc451"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] YA",
+      "tag": "🇷🇺 Russia [*CIDR] YA",
       "type": "vless",
       "server": "94.139.250.226",
       "server_port": 443,
@@ -104,7 +81,28 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] YA-2",
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "lorettmay.top",
+      "server_port": 443,
+      "uuid": "2232d904-8e6a-4202-8240-6efd8aec02e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "lorettmay.top",
+        "alpn": [
+          "http%25252525252F1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "lorettmay.top"
+        },
+        "path": "/blog/posts"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] YA-2",
       "type": "vless",
       "server": "94.139.250.226",
       "server_port": 443,
@@ -124,51 +122,46 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "f0f0bet.fi2.h1clayd.click",
+      "server": "luminexorizon.ink",
       "server_port": 443,
-      "uuid": "537d8ade-134d-4ec2-905c-0187e7e1e22e",
+      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
       "tls": {
         "enabled": true,
-        "server_name": "f0f0bet.fi2.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "_oCg5rCW6XTxriBPzbd_AX0os6QhenVYO9cbrsDSyRY",
-          "short_id": "cf2a731a5f2dc451"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "95.129.236.216",
-      "server_port": 443,
-      "uuid": "77998cc6-8a4d-4251-b974-ebff48a84c4d",
-      "tls": {
-        "enabled": true,
-        "server_name": "crm.hourtley.com",
+        "server_name": "luminexorizon.ink",
         "alpn": [
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "crm.hourtley.com"
+        "type": "grpc",
+        "service_name": "glush.de3.v1"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] YA-3",
+      "type": "vless",
+      "server": "94.139.250.226",
+      "server_port": 443,
+      "uuid": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+      "tls": {
+        "enabled": true,
+        "server_name": "net-api-ctl.galioncc.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
+          "short_id": "6d2f8a41c9e705b3"
         },
-        "path": "/stream/video/ffmpeg"
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],
