@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3",
         "🇮🇷 Iran [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 [*CIDR]"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇮🇷 Iran [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2",
+        "🇮🇷 Iran [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,86 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3",
         "🇮🇷 Iran [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 [*CIDR]"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇮🇷 Iran [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2",
+        "🇮🇷 Iran [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "5.129.243.162",
-      "server_port": 443,
-      "uuid": "80a06811-f74b-4b82-ac99-7e66c2a98e1c",
-      "tls": {
-        "enabled": true,
-        "server_name": "clover.filnex.baby",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "clover.filnex.baby"
-        },
-        "path": "/api/de6/stream"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "5.129.243.162",
-      "server_port": 443,
-      "uuid": "80a06811-f74b-4b82-ac99-7e66c2a98e1c",
-      "tls": {
-        "enabled": true,
-        "server_name": "rivulet.filnex.baby",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rivulet.filnex.baby"
-        },
-        "path": "/api/de6/stream"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "reedbed.filnex.baby",
-      "server_port": 443,
-      "uuid": "80a06811-f74b-4b82-ac99-7e66c2a98e1c",
-      "tls": {
-        "enabled": true,
-        "server_name": "reedbed.filnex.baby",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "reedbed.filnex.baby"
-        },
-        "path": "/api/de6/stream"
-      }
     },
     {
       "tag": "🇮🇷 Iran [*CIDR]",
@@ -146,7 +74,57 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "uwugirl.dev"
+        },
+        "path": "/player/collect/9c8514f9552d/"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "5.129.243.162",
+      "server_port": 443,
+      "uuid": "80a06811-f74b-4b82-ac99-7e66c2a98e1c",
+      "tls": {
+        "enabled": true,
+        "server_name": "rivulet.filnex.baby",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rivulet.filnex.baby"
+        },
+        "path": "/api/de6/stream"
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran [*CIDR]-2",
+      "type": "vless",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "89e2dc6c-dd20-43e6-aac2-d8c482d9cc36",
+      "tls": {
+        "enabled": true,
+        "server_name": "uwugirl.dev",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -158,24 +136,46 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "194.93.0.240",
-      "server_port": 8443,
-      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+      "server": "luminexorizon.ink",
+      "server_port": 443,
+      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
       "tls": {
         "enabled": true,
-        "server_name": "vp4.1145678.xyz",
+        "server_name": "luminexorizon.ink",
+        "alpn": [
+          "h2"
+        ]
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "glush.de3.v1"
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran [*CIDR]-3",
+      "type": "vless",
+      "server": "185.178.208.167",
+      "server_port": 443,
+      "uuid": "6eeb6e0e-5efd-400d-851e-60fc2bfb1eaa",
+      "tls": {
+        "enabled": true,
+        "server_name": "uwugirl.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "vp4.1145678.xyz"
-        }
+          "Host": "speakpro.lol"
+        },
+        "path": "/player/collect/9c8514f9552d/"
       }
     }
   ],

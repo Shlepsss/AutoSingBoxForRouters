@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 Czechia [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
         "🇮🇷 Iran [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇮🇷 Iran [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2",
+        "🇮🇷 Iran [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,51 +51,48 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 Czechia [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
         "🇮🇷 Iran [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇮🇷 Iran [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2",
+        "🇮🇷 Iran [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇿 Czechia [*CIDR]",
+      "tag": "🇮🇷 Iran [*CIDR]",
       "type": "vless",
-      "server": "176.108.245.73",
+      "server": "speakpro.lol",
       "server_port": 443,
-      "uuid": "1b7ee703-fa08-4305-8469-ae3e30e61e44",
-      "flow": "xtls-rprx-vision",
+      "uuid": "18b99163-5196-4ddc-85f8-8fdf5efdcd53",
       "tls": {
         "enabled": true,
-        "server_name": "pawuk.belka.tv",
-        "reality": {
-          "enabled": true,
-          "public_key": "_qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ",
-          "short_id": "a9dc98a7dc87a7dc"
+        "server_name": "uwugirl.dev",
+        "alpn": [
+          "http%2F1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "uwugirl.dev"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
+        "path": "/player/collect/9c8514f9552d/"
       }
     },
     {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "5.129.243.162",
+      "server": "clover.filnex.baby",
       "server_port": 443,
       "uuid": "80a06811-f74b-4b82-ac99-7e66c2a98e1c",
       "tls": {
         "enabled": true,
         "server_name": "clover.filnex.baby",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -104,6 +101,27 @@
           "Host": "clover.filnex.baby"
         },
         "path": "/api/de6/stream"
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran [*CIDR]-2",
+      "type": "vless",
+      "server": "speakpro.lol",
+      "server_port": 443,
+      "uuid": "18b99163-5196-4ddc-85f8-8fdf5efdcd53",
+      "tls": {
+        "enabled": true,
+        "server_name": "uwugirl.dev",
+        "alpn": [
+          "http%252F1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "uwugirl.dev"
+        },
+        "path": "/player/collect/9c8514f9552d/"
       }
     },
     {
@@ -117,7 +135,7 @@
         "server_name": "luminexorizon.ink",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -126,7 +144,7 @@
       }
     },
     {
-      "tag": "🇮🇷 Iran [*CIDR]",
+      "tag": "🇮🇷 Iran [*CIDR]-3",
       "type": "vless",
       "server": "speakpro.lol",
       "server_port": 443,
@@ -139,7 +157,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -148,28 +166,6 @@
           "Host": "speakpro.lol"
         },
         "path": "/player/collect/9c8514f9552d/"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "clover.filnex.baby",
-      "server_port": 443,
-      "uuid": "80a06811-f74b-4b82-ac99-7e66c2a98e1c",
-      "tls": {
-        "enabled": true,
-        "server_name": "clover.filnex.baby",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "clover.filnex.baby"
-        },
-        "path": "/api/de6/stream"
       }
     }
   ],
