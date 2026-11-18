@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 Czechia | [*CIDR]",
         "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇮🇷 Iran | [*CIDR]"
+        "🇩🇪 Germany | 🌐 [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]-3",
+        "🇮🇷 Iran [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,48 +51,30 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 Czechia | [*CIDR]",
         "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇮🇷 Iran | [*CIDR]"
+        "🇩🇪 Germany | 🌐 [*CIDR]-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]-3",
+        "🇮🇷 Iran [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇿 Czechia | [*CIDR]",
-      "type": "vless",
-      "server": "45.151.101.219",
-      "server_port": 443,
-      "uuid": "24e3a924-fc4b-4e3f-98a8-85d506d530f9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "chexi.serverslocal.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "zvOXkaCzQIFA5H6_gpK2_IMDnkwBkw8nch5AODNsAiY",
-          "short_id": "88086e66870f03e6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "clover.filnex.baby",
+      "server": "5.129.243.162",
       "server_port": 443,
       "uuid": "80a06811-f74b-4b82-ac99-7e66c2a98e1c",
       "tls": {
         "enabled": true,
         "server_name": "clover.filnex.baby",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -104,29 +86,32 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "reedbed.filnex.baby",
+      "server": "5.129.243.162",
       "server_port": 443,
       "uuid": "80a06811-f74b-4b82-ac99-7e66c2a98e1c",
       "tls": {
         "enabled": true,
-        "server_name": "reedbed.filnex.baby",
+        "server_name": "rivulet.filnex.baby",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "reedbed.filnex.baby"
+          "Host": "rivulet.filnex.baby"
         },
         "path": "/api/de6/stream"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-3",
       "type": "vless",
       "server": "reedbed.filnex.baby",
       "server_port": 443,
@@ -134,9 +119,6 @@
       "tls": {
         "enabled": true,
         "server_name": "reedbed.filnex.baby",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
@@ -151,7 +133,7 @@
       }
     },
     {
-      "tag": "🇮🇷 Iran | [*CIDR]",
+      "tag": "🇮🇷 Iran [*CIDR]",
       "type": "vless",
       "server": "speakpro.lol",
       "server_port": 443,
@@ -164,15 +146,36 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "uwugirl.dev"
+          "Host": "speakpro.lol"
         },
         "path": "/player/collect/9c8514f9552d/"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇮🇪 🇳🇱 [*CIDR]",
+      "type": "vless",
+      "server": "194.93.0.240",
+      "server_port": 8443,
+      "uuid": "5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+      "tls": {
+        "enabled": true,
+        "server_name": "vp4.1145678.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "vp4.1145678.xyz"
+        }
       }
     }
   ],
