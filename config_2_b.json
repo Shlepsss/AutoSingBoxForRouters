@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 United States | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇺🇸 United States | [*CIDR]-2",
-        "🇺🇸 United States | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK"
+        "🌐 Anycast-IP | 🇦🇿 🇷🇺 | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] VK",
+        "🇨🇿 Czechia | [*CIDR]",
+        "🇫🇷 France | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,33 +51,57 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 United States | [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇺🇸 United States | [*CIDR]-2",
-        "🇺🇸 United States | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK"
+        "🌐 Anycast-IP | 🇦🇿 🇷🇺 | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] VK",
+        "🇨🇿 Czechia | [*CIDR]",
+        "🇫🇷 France | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇦🇿 🇷🇺 | [*CIDR]",
       "type": "vless",
-      "server": "168.113.143.5",
+      "server": "95.129.234.108",
+      "server_port": 8443,
+      "uuid": "d86e6fda-e519-46ab-98eb-9ff9a9da5984",
+      "tls": {
+        "enabled": true,
+        "server_name": "rowan-quay.cdn.cachefleet.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "01ef4cdceb3b3439"
+      }
+    },
+    {
+      "tag": "🇦🇹 Austria | [*CIDR]",
+      "type": "vless",
+      "server": "189.74.115.26",
       "server_port": 443,
-      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
+      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "rsk3.betust.net",
+        "server_name": "api.mediaroshcha.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] VK",
       "type": "vless",
       "server": "r0xnfzk9ud.newwl.pro",
       "server_port": 443,
@@ -85,6 +109,9 @@
       "tls": {
         "enabled": true,
         "server_name": "r0xnfzk9ud.newwl.pro",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -99,63 +126,43 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR]-2",
+      "tag": "🇨🇿 Czechia | [*CIDR]",
       "type": "vless",
-      "server": "168.113.143.5",
+      "server": "189.74.118.4",
       "server_port": 443,
-      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
-      "flow": "xtls-rprx-vision",
+      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
       "tls": {
         "enabled": true,
-        "server_name": "rsk3.betust.net",
+        "server_name": "cz-next.mediastvor.cc",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "r7Kp4mN9tQ2v"
       }
     },
     {
-      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
+      "tag": "🇫🇷 France | [*CIDR]",
       "type": "vless",
-      "server": "95.129.236.50",
+      "server": "189.74.117.3",
       "server_port": 443,
-      "uuid": "1547ed3d-3bb7-4153-afdc-8eb3e9373c84",
+      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "video.get.downloader-pet.xyz",
+        "server_name": "api.videodolina.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "video.get.downloader-pet.xyz"
-        },
-        "path": "/gateway/v1/ws/de963c1a03a37c66383da198813099b1"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "r0xnfzk9ud.newwl.pro",
-      "server_port": 443,
-      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
-      "tls": {
-        "enabled": true,
-        "server_name": "r0xnfzk9ud.newwl.pro",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "r0xnfzk9ud.newwl.pro"
-        },
-        "path": "/service/telemetry/045d381f1166/"
       }
     }
   ],
