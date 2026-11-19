@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
-        "🇺🇸 United States | [*CIDR]",
-        "🇧🇪 Belgium | 🌐 [*CIDR]"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇰🇿 Kazakhstan | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,90 +51,90 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🇳🇱 The Netherlands | [*CIDR]-2",
-        "🇺🇸 United States | [*CIDR]",
-        "🇧🇪 Belgium | 🌐 [*CIDR]"
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇰🇿 Kazakhstan | [*CIDR]",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "80.66.84.151",
+      "server": "harbor.gerqix.online",
       "server_port": 443,
-      "uuid": "f59f02e8-9d66-48e8-afc2-2ce7972d51bd",
-      "flow": "xtls-rprx-vision",
+      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
       "tls": {
         "enabled": true,
-        "server_name": "api-7c4e.deepl-dev.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.145.183",
-      "server_port": 443,
-      "uuid": "38afdada-1991-466b-9dc4-3cd0ffac883d",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.quick-frost.ru",
+        "server_name": "harbor.gerqix.online",
         "alpn": [
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "cdn.quick-frost.ru"
+          "Host": "harbor.gerqix.online"
         },
-        "path": "/nl7ws"
+        "path": "/api/de1/stream"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
+      "tag": "🇰🇿 Kazakhstan | [*CIDR]",
       "type": "vless",
-      "server": "80.66.84.151",
+      "server": "89.169.2.136",
       "server_port": 443,
-      "uuid": "f59f02e8-9d66-48e8-afc2-2ce7972d51bd",
+      "uuid": "1547ed3d-3bb7-4153-afdc-8eb3e9373c84",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-7c4e.deepl-dev.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "node-kz-1.nztpro.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "cOnDGs0VQDa-LnjQNWLb1w2jyso0EqZ0epfDCTrNrA8",
+          "short_id": "274aec426d8627f2"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇺🇸 United States | [*CIDR]",
+      "tag": "🇪🇪 Estonia | [*CIDR]",
       "type": "vless",
-      "server": "rsk3.betust.net",
+      "server": "84.38.189.122",
       "server_port": 443,
-      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
-      "flow": "xtls-rprx-vision",
+      "uuid": "240fb69e-a0c3-0001-825d-cfc876846ea4",
       "tls": {
         "enabled": true,
-        "server_name": "rsk3.betust.net",
+        "server_name": "shyrc-ru-75sel.my-fade.cloud",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "nursery.elvano.website",
+      "server_port": 443,
+      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
+      "tls": {
+        "enabled": true,
+        "server_name": "nursery.elvano.website",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -142,17 +142,22 @@
       }
     },
     {
-      "tag": "🇧🇪 Belgium | 🌐 [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "45.129.2.18",
-      "server_port": 8080,
-      "uuid": "FastKey_305996",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "google.com"
-        },
-        "path": "/api"
+      "server": "nursery.elvano.website",
+      "server_port": 443,
+      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
+      "tls": {
+        "enabled": true,
+        "server_name": "nursery.elvano.website",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
       }
     }
   ],
