@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇺🇸 United States [*CIDR]",
-        "🇨🇿 Czechia | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]",
-        "🇫🇷 France | [*CIDR]"
+        "🇺🇸 United States [*CIDR]-2",
+        "🇧🇪 Belgium | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇳🇱 The Netherlands | [*CIDR]",
         "🇺🇸 United States [*CIDR]",
-        "🇨🇿 Czechia | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇦🇹 Austria | [*CIDR]",
-        "🇫🇷 France | [*CIDR]"
+        "🇺🇸 United States [*CIDR]-2",
+        "🇧🇪 Belgium | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "80.66.84.151",
+      "server_port": 443,
+      "uuid": "f59f02e8-9d66-48e8-afc2-2ce7972d51bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-7c4e.deepl-dev.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
     },
     {
       "tag": "🇺🇸 United States [*CIDR]",
@@ -72,89 +92,57 @@
         "server_name": "rsk3.betust.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "random"
         }
       }
     },
     {
-      "tag": "🇨🇿 Czechia | [*CIDR]",
+      "tag": "🇺🇸 United States [*CIDR]-2",
       "type": "vless",
-      "server": "189.74.118.4",
+      "server": "168.113.143.5",
       "server_port": 443,
-      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
+      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cz-next.mediastvor.cc",
+        "server_name": "rsk3.betust.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
-      },
+      }
+    },
+    {
+      "tag": "🇧🇪 Belgium | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "45.129.2.18",
+      "server_port": 8080,
+      "uuid": "FastKey_305996",
       "transport": {
-        "type": "grpc",
-        "service_name": "r7Kp4mN9tQ2v"
+        "type": "ws",
+        "headers": {
+          "Host": "google.com"
+        },
+        "path": "/api"
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
       "type": "vless",
-      "server": "189.74.106.141",
+      "server": "80.66.84.151",
       "server_port": 443,
-      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
+      "uuid": "f59f02e8-9d66-48e8-afc2-2ce7972d51bd",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api.setevoypriliv.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇦🇹 Austria | [*CIDR]",
-      "type": "vless",
-      "server": "189.74.115.26",
-      "server_port": 443,
-      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.mediaroshcha.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
+        "server_name": "api-7c4e.deepl-dev.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France | [*CIDR]",
-      "type": "vless",
-      "server": "189.74.117.3",
-      "server_port": 443,
-      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.videodolina.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
         }
       }
     }

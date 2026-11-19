@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇨🇿 Czechia | [*CIDR]",
-        "🇨🇿 Czechia | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
+        "🇺🇸 United States [*CIDR]",
+        "🇺🇸 United States [*CIDR]-2",
+        "🇺🇸 United States [*CIDR]-3",
+        "🇺🇸 United States [*CIDR]-4",
+        "🇳🇱 The Netherlands [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,105 +51,96 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇨🇿 Czechia | [*CIDR]",
-        "🇨🇿 Czechia | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2"
+        "🇺🇸 United States [*CIDR]",
+        "🇺🇸 United States [*CIDR]-2",
+        "🇺🇸 United States [*CIDR]-3",
+        "🇺🇸 United States [*CIDR]-4",
+        "🇳🇱 The Netherlands [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇺🇸 United States [*CIDR]",
       "type": "vless",
-      "server": "orchard.elvano.website",
+      "server": "rsk3.betust.net",
       "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
+      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "orchard.elvano.website",
+        "server_name": "rsk3.betust.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]-2",
+      "type": "vless",
+      "server": "168.113.143.5",
+      "server_port": 443,
+      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rsk3.betust.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]-3",
+      "type": "vless",
+      "server": "168.113.143.5",
+      "server_port": 443,
+      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rsk3.betust.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]-4",
+      "type": "vless",
+      "server": "168.113.143.5",
+      "server_port": 443,
+      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rsk3.betust.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "80.66.84.151",
+      "server_port": 443,
+      "uuid": "f59f02e8-9d66-48e8-afc2-2ce7972d51bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-7c4e.deepl-dev.com",
         "alpn": [
           "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "189.74.106.141",
-      "server_port": 443,
-      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.setevoypriliv.cc",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇿 Czechia | [*CIDR]",
-      "type": "vless",
-      "server": "189.74.118.4",
-      "server_port": 443,
-      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
-      "tls": {
-        "enabled": true,
-        "server_name": "cz-next.mediastvor.cc",
-        "utls": {
-          "enabled": true,
           "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "r7Kp4mN9tQ2v"
-      }
-    },
-    {
-      "tag": "🇨🇿 Czechia | [*CIDR]-2",
-      "type": "vless",
-      "server": "189.74.118.4",
-      "server_port": 443,
-      "uuid": "5d89e94f-9de8-43d8-83c8-ae09a2495bdd",
-      "tls": {
-        "enabled": true,
-        "server_name": "cz-next.mediastvor.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "r7Kp4mN9tQ2v"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "201.24.48.120",
-      "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
-      "tls": {
-        "enabled": true,
-        "server_name": "orchard.elvano.website",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
         }
       }
     }
