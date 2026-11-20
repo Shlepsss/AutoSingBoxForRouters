@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2",
-        "🇦🇹 Austria | [*CIDR]",
-        "🇦🇹 Austria | 🌐 | [*CIDR]"
+        "🇱🇺 Luxembourg | [*CIDR]",
+        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇱🇺 Luxembourg | [*CIDR]-2",
+        "🇫🇮 Finland | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,73 +51,90 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]",
-        "🇵🇱 Poland | [*CIDR]-2",
-        "🇦🇹 Austria | [*CIDR]",
-        "🇦🇹 Austria | 🌐 | [*CIDR]"
+        "🇱🇺 Luxembourg | [*CIDR]",
+        "🇨🇭 Switzerland | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇱🇺 Luxembourg | [*CIDR]-2",
+        "🇫🇮 Finland | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland | [*CIDR]",
+      "tag": "🇱🇺 Luxembourg | [*CIDR]",
       "type": "vless",
-      "server": "f0f0bet.fi2.h1clayd.click",
+      "server": "eu90.cdn77.icu",
       "server_port": 443,
-      "uuid": "537d8ade-134d-4ec2-905c-0187e7e1e22e",
+      "uuid": "8da0029e-6ff3-1b61-8b4d-120432cc6414",
       "tls": {
         "enabled": true,
-        "server_name": "f0f0bet.fi2.h1clayd.click",
+        "server_name": "eu64.cdn77.icu",
         "reality": {
           "enabled": true,
-          "public_key": "_oCg5rCW6XTxriBPzbd_AX0os6QhenVYO9cbrsDSyRY",
-          "short_id": "cf2a731a5f2dc451"
+          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
+          "short_id": "1ed136481e0ede74"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]",
+      "tag": "🇨🇭 Switzerland | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "api.mediatropa.cc",
-      "server_port": 443,
-      "uuid": "31d0f8a6-3dac-4f89-b2f1-aca50f293f70",
-      "flow": "xtls-rprx-vision",
+      "server": "eu90.cdn77.icu",
+      "server_port": 20017,
+      "uuid": "8da0029e-6ff3-49cc-8b4d-120432cc6414",
       "tls": {
         "enabled": true,
-        "server_name": "api.mediatropa.cc",
+        "server_name": "eu64.cdn77.icu",
         "reality": {
           "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
+          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
+          "short_id": "1ed136481e0ede74"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland | [*CIDR]-2",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "api.mediatropa.cc",
+      "server": "95.163.2.47",
       "server_port": 443,
-      "uuid": "31d0f8a6-3dac-4f89-b2f1-aca50f293f70",
-      "flow": "xtls-rprx-vision",
+      "uuid": "c8c17d77-cc46-4c81-a2bf-779e75532bdc",
       "tls": {
         "enabled": true,
-        "server_name": "api.mediatropa.cc",
+        "server_name": "zisvpn.tech",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "zisvpn.tech"
+        },
+        "path": "/vless-nl"
+      }
+    },
+    {
+      "tag": "🇱🇺 Luxembourg | [*CIDR]-2",
+      "type": "vless",
+      "server": "eu90.cdn77.icu",
+      "server_port": 443,
+      "uuid": "8da0029e-6ff3-1b61-8b4d-120432cc6414",
+      "tls": {
+        "enabled": true,
+        "server_name": "eu64.cdn77.icu",
         "reality": {
           "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
+          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
+          "short_id": "1ed136481e0ede74"
         },
         "utls": {
           "enabled": true,
@@ -126,39 +143,19 @@
       }
     },
     {
-      "tag": "🇦🇹 Austria | [*CIDR]",
+      "tag": "🇫🇮 Finland | [*CIDR] VK",
       "type": "vless",
-      "server": "api.mediaroshcha.cc",
-      "server_port": 443,
-      "uuid": "31d0f8a6-3dac-4f89-b2f1-aca50f293f70",
+      "server": "83.166.237.124",
+      "server_port": 8444,
+      "uuid": "a77d6228-85a9-449f-b600-ccf4018230eb",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api.mediaroshcha.cc",
+        "server_name": "game2.stich.my",
         "reality": {
           "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "a8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇦🇹 Austria | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "130.49.172.150",
-      "server_port": 30010,
-      "uuid": "c1f4f185-5786-40c9-893f-2f100b7165f2",
-      "tls": {
-        "enabled": true,
-        "server_name": "eu71.cdn77.icu",
-        "reality": {
-          "enabled": true,
-          "public_key": "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8",
-          "short_id": ""
+          "public_key": "h16vbQ_IBohiTlEVzz1oEZBf63peHSTbhQ3sJuQO-Vw",
+          "short_id": "eab3935b74dd7756"
         },
         "utls": {
           "enabled": true,
