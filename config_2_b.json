@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 Bulgaria | [*CIDR]",
-        "🇰🇿 Kazakhstan | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇪🇸 Spain | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
-        "🇪🇪 Estonia | [*CIDR]"
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,53 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 Bulgaria | [*CIDR]",
-        "🇰🇿 Kazakhstan | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
+        "🇪🇪 Estonia | [*CIDR]",
+        "🇪🇸 Spain | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
-        "🇪🇪 Estonia | [*CIDR]"
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [*CIDR]",
-      "type": "vless",
-      "server": "84.38.189.122",
-      "server_port": 443,
-      "uuid": "4ea2dd37-eb08-0001-9e81-57ceca28c933",
-      "tls": {
-        "enabled": true,
-        "server_name": "shyrc-ru-75sel.my-fade.cloud",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "tag": "🇰🇿 Kazakhstan | [*CIDR]",
-      "type": "vless",
-      "server": "89.169.2.136",
-      "server_port": 443,
-      "uuid": "1547ed3d-3bb7-4153-afdc-8eb3e9373c84",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "node-kz-1.nztpro.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "cOnDGs0VQDa-LnjQNWLb1w2jyso0EqZ0epfDCTrNrA8",
-          "short_id": "274aec426d8627f2"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK",
@@ -112,7 +75,7 @@
         "server_name": "wholebeam.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       }
     },
@@ -132,22 +95,52 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
+      "tag": "🇪🇪 Estonia | [*CIDR]",
       "type": "vless",
-      "server": "185.86.145.173",
+      "server": "185.178.208.167",
       "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "uuid": "c2b17066-5386-0001-803b-5e652c0528f9",
       "tls": {
         "enabled": true,
-        "server_name": "wholebeam.com",
+        "server_name": "trx.tools",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "api.14887277.xyz"
+        },
+        "path": "/session"
+      }
+    },
+    {
+      "tag": "🇪🇸 Spain | [*CIDR]",
+      "type": "vless",
+      "server": "b3cd32g.es9.h1clayd.click",
+      "server_port": 443,
+      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
+      "tls": {
+        "enabled": true,
+        "server_name": "b3cd32g.es9.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "7efBhLzPwoTtEC1GlukCdiTllobUfa2_XuAKNSLJx30",
+          "short_id": "e7cffac9f8cfb434"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
         }
+      },
+      "transport": {
+        "type": "grpc"
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
       "type": "vless",
       "server": "185.86.145.173",
       "server_port": 443,
@@ -162,17 +155,32 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia | [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
       "type": "vless",
-      "server": "176.108.244.162",
+      "server": "185.86.145.173",
       "server_port": 443,
-      "uuid": "6c870724-643c-0001-b7ea-04aabeedfb4e",
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
       "tls": {
         "enabled": true,
-        "server_name": "ohyjf-ru-65sb.my-fade.cloud",
+        "server_name": "wholebeam.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-5",
+      "type": "vless",
+      "server": "185.86.145.173",
+      "server_port": 443,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "wholebeam.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
