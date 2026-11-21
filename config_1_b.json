@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 Switzerland [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3"
+        "🇩🇪 Germany | 🌐 [*CIDR]-2",
+        "NO GEO [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,116 +51,45 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 Switzerland [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3"
+        "🇩🇪 Germany | 🌐 [*CIDR]-2",
+        "NO GEO [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇭 Switzerland [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "77.232.40.206",
+      "server": "greenhouse.elvano.website",
       "server_port": 443,
-      "uuid": "c50eae6b-18de-4bdc-a22f-9edda40a57ed",
-      "flow": "xtls-rprx-vision",
+      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
       "tls": {
         "enabled": true,
-        "server_name": "ch02.tunnely.space",
-        "reality": {
-          "enabled": true,
-          "public_key": "pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM",
-          "short_id": "2e40144ddc07e8e1"
-        },
+        "server_name": "greenhouse.elvano.website",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
     {
       "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "files-qzgs.login.opendns.stream",
+      "server": "sw-api.telemetryapi.org",
       "server_port": 443,
-      "uuid": "a71d6c6d-c95e-4ec1-a892-22e21733bf09",
+      "uuid": "6bd1d88f-0a26-4d21-b325-15d85120b883",
       "tls": {
         "enabled": true,
-        "server_name": "files-qzgs.login.opendns.stream",
+        "server_name": "sw-api.telemetryapi.org",
         "alpn": [
           "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "files-qzgs.login.opendns.stream"
-        },
-        "path": "/origin/246825491/fetch"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "estuary.gerqix.online",
-      "server_port": 443,
-      "uuid": "572463d3-dab5-4dcb-8459-2b51735186e0",
-      "tls": {
-        "enabled": true,
-        "server_name": "estuary.gerqix.online",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "estuary.gerqix.online"
-        },
-        "path": "/api/de7/stream"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-      "type": "vless",
-      "server": "81.200.158.26",
-      "server_port": 443,
-      "uuid": "572463d3-dab5-4dcb-8459-2b51735186e0",
-      "tls": {
-        "enabled": true,
-        "server_name": "fernglade.gerqix.online",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "glush.de1.v1"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "81.200.158.26",
-      "server_port": 443,
-      "uuid": "572463d3-dab5-4dcb-8459-2b51735186e0",
-      "tls": {
-        "enabled": true,
-        "server_name": "fernglade.gerqix.online",
-        "alpn": [
-          "h2"
         ],
         "utls": {
           "enabled": true,
@@ -168,8 +97,76 @@
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "glush.de1.v1"
+        "type": "ws",
+        "headers": {
+          "Host": "sw-api.telemetryapi.org"
+        },
+        "path": "/api/v2/client/session/connect"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "rowanberry.moltex.click",
+      "server_port": 443,
+      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
+      "tls": {
+        "enabled": true,
+        "server_name": "rowanberry.moltex.click",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rowanberry.moltex.click"
+        },
+        "path": "/api/de7/stream"
+      }
+    },
+    {
+      "tag": "NO GEO [*CIDR]",
+      "type": "vless",
+      "server": "82.202.142.227",
+      "server_port": 23444,
+      "uuid": "a9ff24d3-f308-4e72-acb9-a76062583837",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fontanka.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8",
+          "short_id": "6ad3c0f1e9b2478a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-3",
+      "type": "vless",
+      "server": "ochre.merlano.monster",
+      "server_port": 443,
+      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
+      "tls": {
+        "enabled": true,
+        "server_name": "ochre.merlano.monster",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],
