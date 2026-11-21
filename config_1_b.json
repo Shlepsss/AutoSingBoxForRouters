@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇨🇭 Switzerland [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]"
+        "🇩🇪 Germany | 🌐 | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,86 +51,98 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇨🇭 Switzerland [*CIDR]",
+        "🇩🇪 Germany [*CIDR]",
         "🇩🇪 Germany | 🌐 | [*CIDR]",
         "🇩🇪 Germany | 🌐 | [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]"
+        "🇩🇪 Germany | 🌐 | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇨🇭 Switzerland [*CIDR]",
       "type": "vless",
-      "server": "ledger.filnex.baby",
+      "server": "77.232.40.206",
       "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
+      "uuid": "c50eae6b-18de-4bdc-a22f-9edda40a57ed",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "copperdell.merlano.monster",
+        "server_name": "ch02.tunnely.space",
+        "reality": {
+          "enabled": true,
+          "public_key": "pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM",
+          "short_id": "2e40144ddc07e8e1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "files-qzgs.login.opendns.stream",
+      "server_port": 443,
+      "uuid": "a71d6c6d-c95e-4ec1-a892-22e21733bf09",
+      "tls": {
+        "enabled": true,
+        "server_name": "files-qzgs.login.opendns.stream",
         "alpn": [
-          "h2"
+          "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "glush.de2.v1"
+        "type": "ws",
+        "headers": {
+          "Host": "files-qzgs.login.opendns.stream"
+        },
+        "path": "/origin/246825491/fetch"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "estuary.gerqix.online",
+      "server_port": 443,
+      "uuid": "572463d3-dab5-4dcb-8459-2b51735186e0",
+      "tls": {
+        "enabled": true,
+        "server_name": "estuary.gerqix.online",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "estuary.gerqix.online"
+        },
+        "path": "/api/de7/stream"
       }
     },
     {
       "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-2",
       "type": "vless",
-      "server": "willowbank.moltex.click",
+      "server": "81.200.158.26",
       "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
+      "uuid": "572463d3-dab5-4dcb-8459-2b51735186e0",
       "tls": {
         "enabled": true,
-        "server_name": "daylily.moltex.click",
+        "server_name": "fernglade.gerqix.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-3",
-      "type": "vless",
-      "server": "ledger.filnex.baby",
-      "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
-      "tls": {
-        "enabled": true,
-        "server_name": "copperdell.merlano.monster",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "glush.de2.v1"
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "almanac.filnex.baby",
-      "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
-      "tls": {
-        "enabled": true,
-        "server_name": "morningfen.merlano.monster",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -139,22 +151,25 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "willowbank.moltex.click",
+      "server": "81.200.158.26",
       "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
+      "uuid": "572463d3-dab5-4dcb-8459-2b51735186e0",
       "tls": {
         "enabled": true,
-        "server_name": "daylily.moltex.click",
+        "server_name": "fernglade.gerqix.online",
         "alpn": [
-          "h2",
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "glush.de1.v1"
       }
     }
   ],
