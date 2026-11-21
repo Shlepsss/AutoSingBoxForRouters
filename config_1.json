@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]-2",
         "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]-3"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR] VK",
+        "🇩🇪 Germany [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,43 +51,83 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]-2",
         "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]-3"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR] VK",
+        "🇩🇪 Germany [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "willowbank.moltex.click",
+      "server": "ledger.filnex.baby",
       "server_port": 443,
       "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
       "tls": {
         "enabled": true,
-        "server_name": "daylily.moltex.click",
+        "server_name": "copperdell.merlano.monster",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "glush.de2.v1"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "sunfield.moltex.click",
+      "server_port": 443,
+      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
+      "tls": {
+        "enabled": true,
+        "server_name": "sunfield.moltex.click",
         "alpn": [
           "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]-2",
+      "tag": "🇫🇮 Finland | [*CIDR] VK",
       "type": "vless",
-      "server": "willowbank.moltex.click",
+      "server": "83.166.237.124",
+      "server_port": 8444,
+      "uuid": "a77d6228-85a9-449f-b600-ccf4018230eb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "game2.stich.my",
+        "reality": {
+          "enabled": true,
+          "public_key": "h16vbQ_IBohiTlEVzz1oEZBf63peHSTbhQ3sJuQO-Vw",
+          "short_id": "eab3935b74dd7756"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "sunfield.moltex.click",
       "server_port": 443,
       "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
       "tls": {
         "enabled": true,
-        "server_name": "daylily.moltex.click",
+        "server_name": "sunfield.moltex.click",
         "alpn": [
           "h2",
           "http/1.1"
@@ -95,21 +135,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "willowbank.moltex.click",
-      "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
-      "tls": {
-        "enabled": true,
-        "server_name": "daylily.moltex.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
         }
       }
     },
@@ -124,31 +149,12 @@
         "server_name": "copperdell.merlano.monster",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "random"
         }
       },
       "transport": {
         "type": "grpc",
         "service_name": "glush.de2.v1"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]-3",
-      "type": "vless",
-      "server": "willowbank.moltex.click",
-      "server_port": 443,
-      "uuid": "25ac78e7-6d1d-4c9a-a450-c01a4871769f",
-      "tls": {
-        "enabled": true,
-        "server_name": "daylily.moltex.click",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
       }
     }
   ],
