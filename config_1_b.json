@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "NO GEO [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇮🇪 Ireland | [*CIDR]",
+        "🌐 Anycast-IP | 🇦🇪 🇨🇿 | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,36 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "NO GEO [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇮🇪 Ireland | [*CIDR]",
+        "🌐 Anycast-IP | 🇦🇪 🇨🇿 | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "greenhouse.elvano.website",
-      "server_port": 443,
-      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
-      "tls": {
-        "enabled": true,
-        "server_name": "greenhouse.elvano.website",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
       "server": "sw-api.telemetryapi.org",
       "server_port": 443,
@@ -88,12 +69,9 @@
       "tls": {
         "enabled": true,
         "server_name": "sw-api.telemetryapi.org",
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -105,17 +83,44 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
+      "tag": "🇮🇪 Ireland | [*CIDR]",
       "type": "vless",
-      "server": "rowanberry.moltex.click",
+      "server": "168.113.253.178",
       "server_port": 443,
-      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
+      "uuid": "608172ed-68e4-0001-85dc-f92c25d0eb92",
       "tls": {
         "enabled": true,
-        "server_name": "rowanberry.moltex.click",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "uzndiuvzvqqljdyhzs.fcloudservices.site",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇪 🇨🇿 | [*CIDR]",
+      "type": "vless",
+      "server": "168.113.253.178",
+      "server_port": 443,
+      "uuid": "eb88bb1a-7bf0-0001-b9cd-4f97c89f0e9b",
+      "tls": {
+        "enabled": true,
+        "server_name": "uzndiuvzvqqljdyhzs.fcloudservices.site",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "type": "vless",
+      "server": "185.221.199.244",
+      "server_port": 443,
+      "uuid": "dd64a54e-f3d5-4093-bf2b-31d34f02bf05",
+      "tls": {
+        "enabled": true,
+        "server_name": "chunk.grg.digital",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -124,45 +129,20 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "rowanberry.moltex.click"
+          "Host": "chunk.grg.digital"
         },
-        "path": "/api/de7/stream"
+        "path": "/assets/chunk/ru-nl"
       }
     },
     {
-      "tag": "NO GEO [*CIDR]",
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
-      "server": "82.202.142.227",
-      "server_port": 23444,
-      "uuid": "a9ff24d3-f308-4e72-acb9-a76062583837",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fontanka.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8",
-          "short_id": "6ad3c0f1e9b2478a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "ochre.merlano.monster",
+      "server": "107.150.93.43",
       "server_port": 443,
-      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
+      "uuid": "e9958027-03be-4eb5-bcec-70415b2e4844",
       "tls": {
         "enabled": true,
-        "server_name": "ochre.merlano.monster",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "e9958027.ferrin.uk",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"

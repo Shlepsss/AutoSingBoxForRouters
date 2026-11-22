@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]"
+        "🇮🇪 Ireland | [*CIDR]",
+        "🇦🇱 Albania [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇮🇷 Iran [*CIDR] CDN",
+        "🇨🇿 Czechia | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]"
+        "🇮🇪 Ireland | [*CIDR]",
+        "🇦🇱 Albania [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇮🇷 Iran [*CIDR] CDN",
+        "🇨🇿 Czechia | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
+      "tag": "🇮🇪 Ireland | [*CIDR]",
       "type": "vless",
       "server": "168.113.253.178",
       "server_port": 443,
@@ -76,45 +76,7 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "wildflower.elvano.website",
-      "server_port": 443,
-      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
-      "tls": {
-        "enabled": true,
-        "server_name": "wildflower.elvano.website",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "moonstone.gerqix.online",
-      "server_port": 443,
-      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
-      "tls": {
-        "enabled": true,
-        "server_name": "moonstone.gerqix.online",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇦🇱 Albania [*CIDR]",
       "type": "vless",
       "server": "82.202.142.227",
       "server_port": 23444,
@@ -130,29 +92,77 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "176.108.243.24",
+      "server": "sw-api.telemetryapi.org",
       "server_port": 443,
-      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
-      "flow": "xtls-rprx-vision",
+      "uuid": "6bd1d88f-0a26-4d21-b325-15d85120b883",
       "tls": {
         "enabled": true,
-        "server_name": "sbmicro740.gangtype.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "QMPA4RVilYFEnDrbdj93up66oDk5I_btjil9vC7ppgc",
-          "short_id": "9e5b8e221733245f"
-        },
+        "server_name": "sw-api.telemetryapi.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "qq"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "sw-api.telemetryapi.org"
+        },
+        "path": "/api/v2/client/session/connect"
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran [*CIDR] CDN",
+      "type": "vless",
+      "server": "pssdwynorv.newwl.pro",
+      "server_port": 443,
+      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
+      "tls": {
+        "enabled": true,
+        "server_name": "pssdwynorv.newwl.pro",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pssdwynorv.newwl.pro"
+        },
+        "path": "/service/telemetry/0294da469190/"
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia | [*CIDR]",
+      "type": "vless",
+      "server": "189.74.118.4",
+      "server_port": 443,
+      "uuid": "de4729d8-4b52-4cac-b796-4ae1bb723631",
+      "tls": {
+        "enabled": true,
+        "server_name": "cz-next.mediastvor.cc",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "r7Kp4mN9tQ2v"
       }
     }
   ],
