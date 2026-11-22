@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR]",
-        "🇮🇪 Ireland | [*CIDR]",
-        "🌐 Anycast-IP | 🇦🇪 🇨🇿 | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]"
+        "🇩🇪 Germany [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇮🇷 Iran [*CIDR] CDN",
+        "🇮🇷 Iran [*CIDR] CDN-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇮🇪 Ireland | [*CIDR]",
-        "🌐 Anycast-IP | 🇦🇪 🇨🇿 | [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]"
+        "🇩🇪 Germany [*CIDR]",
+        "🇫🇮 Finland [*CIDR]",
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇮🇷 Iran [*CIDR] CDN",
+        "🇮🇷 Iran [*CIDR] CDN-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
       "server": "sw-api.telemetryapi.org",
       "server_port": 443,
@@ -83,59 +83,7 @@
       }
     },
     {
-      "tag": "🇮🇪 Ireland | [*CIDR]",
-      "type": "vless",
-      "server": "168.113.253.178",
-      "server_port": 443,
-      "uuid": "608172ed-68e4-0001-85dc-f92c25d0eb92",
-      "tls": {
-        "enabled": true,
-        "server_name": "uzndiuvzvqqljdyhzs.fcloudservices.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇦🇪 🇨🇿 | [*CIDR]",
-      "type": "vless",
-      "server": "168.113.253.178",
-      "server_port": 443,
-      "uuid": "eb88bb1a-7bf0-0001-b9cd-4f97c89f0e9b",
-      "tls": {
-        "enabled": true,
-        "server_name": "uzndiuvzvqqljdyhzs.fcloudservices.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "185.221.199.244",
-      "server_port": 443,
-      "uuid": "dd64a54e-f3d5-4093-bf2b-31d34f02bf05",
-      "tls": {
-        "enabled": true,
-        "server_name": "chunk.grg.digital",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "chunk.grg.digital"
-        },
-        "path": "/assets/chunk/ru-nl"
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR]",
+      "tag": "🇫🇮 Finland [*CIDR]",
       "type": "vless",
       "server": "107.150.93.43",
       "server_port": 443,
@@ -145,8 +93,77 @@
         "server_name": "e9958027.ferrin.uk",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]-2",
+      "type": "vless",
+      "server": "sw-api.telemetryapi.org",
+      "server_port": 443,
+      "uuid": "6bd1d88f-0a26-4d21-b325-15d85120b883",
+      "tls": {
+        "enabled": true,
+        "server_name": "sw-api.telemetryapi.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "sw-api.telemetryapi.org"
+        },
+        "path": "/api/v2/client/session/connect"
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran [*CIDR] CDN",
+      "type": "vless",
+      "server": "pssdwynorv.newwl.pro",
+      "server_port": 443,
+      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
+      "tls": {
+        "enabled": true,
+        "server_name": "pssdwynorv.newwl.pro",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pssdwynorv.newwl.pro"
+        },
+        "path": "/service/telemetry/0294da469190/"
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran [*CIDR] CDN-2",
+      "type": "vless",
+      "server": "46.243.233.194",
+      "server_port": 443,
+      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
+      "tls": {
+        "enabled": true,
+        "server_name": "pssdwynorv.newwl.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pssdwynorv.newwl.pro"
+        },
+        "path": "/service/telemetry/0294da469190/"
       }
     }
   ],

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇪 Ireland | [*CIDR]",
-        "🇦🇱 Albania [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇮🇷 Iran [*CIDR] CDN",
-        "🇨🇿 Czechia | [*CIDR]"
+        "🇫🇮 Finland [*CIDR]",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]",
+        "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
+        "🇮🇷 Iran [*CIDR]",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,89 +51,79 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇪 Ireland | [*CIDR]",
-        "🇦🇱 Albania [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇮🇷 Iran [*CIDR] CDN",
-        "🇨🇿 Czechia | [*CIDR]"
+        "🇫🇮 Finland [*CIDR]",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]",
+        "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
+        "🇮🇷 Iran [*CIDR]",
+        "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇮🇪 Ireland | [*CIDR]",
+      "tag": "🇫🇮 Finland [*CIDR]",
       "type": "vless",
-      "server": "168.113.253.178",
+      "server": "107.150.93.43",
       "server_port": 443,
-      "uuid": "608172ed-68e4-0001-85dc-f92c25d0eb92",
+      "uuid": "e9958027-03be-4eb5-bcec-70415b2e4844",
       "tls": {
         "enabled": true,
-        "server_name": "uzndiuvzvqqljdyhzs.fcloudservices.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇦🇱 Albania [*CIDR]",
-      "type": "vless",
-      "server": "82.202.142.227",
-      "server_port": 23444,
-      "uuid": "a9ff24d3-f308-4e72-acb9-a76062583837",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "fontanka.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8",
-          "short_id": "6ad3c0f1e9b2478a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "sw-api.telemetryapi.org",
-      "server_port": 443,
-      "uuid": "6bd1d88f-0a26-4d21-b325-15d85120b883",
-      "tls": {
-        "enabled": true,
-        "server_name": "sw-api.telemetryapi.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "sw-api.telemetryapi.org"
-        },
-        "path": "/api/v2/client/session/connect"
-      }
-    },
-    {
-      "tag": "🇮🇷 Iran [*CIDR] CDN",
-      "type": "vless",
-      "server": "pssdwynorv.newwl.pro",
-      "server_port": 443,
-      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
-      "tls": {
-        "enabled": true,
-        "server_name": "pssdwynorv.newwl.pro",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "e9958027.ferrin.uk",
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
         }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]",
+      "type": "vless",
+      "server": "195.209.217.111",
+      "server_port": 443,
+      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ruhsds737.gangtype.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "cwP4lx0DIWttNWp4IeLj2S-e1Yo2tnBedJ5RiMLtT0E",
+          "short_id": "7e49fe98f9487e19"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
+      "type": "vless",
+      "server": "176.109.108.17",
+      "server_port": 443,
+      "uuid": "440c34ed-de29-0001-a467-153c5816a42b",
+      "tls": {
+        "enabled": true,
+        "server_name": "wrdgkmglxsfcfazlsf.fcloudservices.site",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇮🇷 Iran [*CIDR]",
+      "type": "vless",
+      "server": "91.185.83.43",
+      "server_port": 443,
+      "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
+      "tls": {
+        "enabled": true,
+        "server_name": "pssdwynorv.newwl.pro"
       },
       "transport": {
         "type": "ws",
@@ -144,25 +134,24 @@
       }
     },
     {
-      "tag": "🇨🇿 Czechia | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 [*CIDR]-2",
       "type": "vless",
-      "server": "189.74.118.4",
+      "server": "176.108.243.24",
       "server_port": 443,
-      "uuid": "de4729d8-4b52-4cac-b796-4ae1bb723631",
+      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cz-next.mediastvor.cc",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "sbmicro740.gangtype.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "QMPA4RVilYFEnDrbdj93up66oDk5I_btjil9vC7ppgc",
+          "short_id": "9e5b8e221733245f"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "random"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "r7Kp4mN9tQ2v"
       }
     }
   ],
