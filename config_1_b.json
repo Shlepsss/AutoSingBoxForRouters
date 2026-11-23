@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇭 [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇸🇪 Sweden | 🌐 | [*CIDR]",
-        "🌐 Anycast-IP | 🇰🇷 [*CIDR]"
+        "🇩🇪 Germany [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
+        "🌐 Anycast-IP | 🇦🇿 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,24 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇭 [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇸🇪 Sweden | 🌐 | [*CIDR]",
-        "🌐 Anycast-IP | 🇰🇷 [*CIDR]"
+        "🇩🇪 Germany [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]",
+        "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
+        "🌐 Anycast-IP | 🇦🇿 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR] VK",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "185.86.145.183",
+      "server": "sw-api.telemetryapi.org",
       "server_port": 443,
-      "uuid": "4877b146-b0c0-439b-b794-31059912167a",
+      "uuid": "6bd1d88f-0a26-4d21-b325-15d85120b883",
       "tls": {
         "enabled": true,
-        "server_name": "for.quick-frost.ru",
+        "server_name": "sw-api.telemetryapi.org",
         "alpn": [
           "http/1.1"
         ],
@@ -80,65 +80,42 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "for.quick-frost.ru"
+          "Host": "sw-api.telemetryapi.org"
         },
-        "path": "/nl7ws"
+        "path": "/api/v2/client/session/connect"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇭 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "82.148.14.100",
-      "server_port": 52006,
-      "uuid": "cde5d3ef-7d14-06a4-a74d-ac98e39bf9ec",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "mvp.dont-block-please.dad",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR]",
-      "type": "vless",
-      "server": "83.171.241.136",
+      "server": "31.177.111.136",
       "server_port": 443,
-      "uuid": "2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df",
+      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
       "tls": {
         "enabled": true,
-        "server_name": "78ec29x.fi2.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "yDvxKBE3JdXsnptGoLiUwQAnf_xw1DVWD9NcyphwRn4",
-          "short_id": "b81a22dc3a846efd"
-        },
+        "server_name": "q075gi2cms.schoolbag.top",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "q075gi2cms.schoolbag.top"
+        },
+        "path": "/collector/runtime/channel/open"
       }
     },
     {
-      "tag": "🇸🇪 Sweden | 🌐 | [*CIDR]",
+      "tag": "🇦🇹 Austria | [*CIDR]",
       "type": "vless",
-      "server": "168.113.132.167",
-      "server_port": 52006,
-      "uuid": "cde5d3ef-7d14-32c8-a74d-ac98e39bf9ec",
-      "flow": "xtls-rprx-vision",
+      "server": "185.244.182.162",
+      "server_port": 443,
+      "uuid": "c50eae6b-18de-4bdc-a22f-9edda40a57ed",
       "tls": {
         "enabled": true,
-        "server_name": "168.113.132.167",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "atd1.tunnely.space",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -146,23 +123,37 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇰🇷 [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇮🇪 [*CIDR]",
       "type": "vless",
-      "server": "82.148.14.100",
-      "server_port": 52006,
-      "uuid": "cde5d3ef-7d14-01f4-a74d-ac98e39bf9ec",
-      "flow": "xtls-rprx-vision",
+      "server": "168.113.254.3",
+      "server_port": 443,
+      "uuid": "43b2f457-35fe-0001-b072-bd45a66d105d",
       "tls": {
         "enabled": true,
-        "server_name": "mvp.dont-block-please.dad",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "rbzummkhxtmdipkpij.fcloudservices.site",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇿 [*CIDR]",
+      "type": "vless",
+      "server": "95.129.234.108",
+      "server_port": 8443,
+      "uuid": "d86e6fda-e519-46ab-98eb-9ff9a9da5984",
+      "tls": {
+        "enabled": true,
+        "server_name": "rowan-quay.cdn.cachefleet.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "01ef4cdceb3b3439"
       }
     }
   ],

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇮🇹 [*CIDR]",
-        "🇹🇷 Turkey [*CIDR]",
-        "🇧🇪 Belgium | [*CIDR]",
-        "🌐 Anycast-IP | 🇯🇵 [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]"
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-2",
+        "🇳🇱 The Netherlands | [*CIDR]-3",
+        "🇩🇿 Algeria | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,47 +51,96 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇮🇹 [*CIDR]",
-        "🇹🇷 Turkey [*CIDR]",
-        "🇧🇪 Belgium | [*CIDR]",
-        "🌐 Anycast-IP | 🇯🇵 [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]"
+        "🇳🇱 The Netherlands | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-2",
+        "🇳🇱 The Netherlands | [*CIDR]-3",
+        "🇩🇿 Algeria | [*CIDR]",
+        "🇳🇱 The Netherlands | [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇮🇹 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]",
       "type": "vless",
-      "server": "82.148.14.100",
-      "server_port": 52006,
-      "uuid": "cde5d3ef-7d14-08fc-a74d-ac98e39bf9ec",
-      "flow": "xtls-rprx-vision",
+      "server": "31.177.111.136",
+      "server_port": 443,
+      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
       "tls": {
         "enabled": true,
-        "server_name": "mvp.dont-block-please.dad",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "q075gi2cms.schoolbag.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "q075gi2cms.schoolbag.top"
+        },
+        "path": "/collector/runtime/channel/openfp=firefox"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [*CIDR]-2",
+      "type": "vless",
+      "server": "31.177.111.136",
+      "server_port": 443,
+      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
+      "tls": {
+        "enabled": true,
+        "server_name": "q075gi2cms.schoolbag.top",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "q075gi2cms.schoolbag.top"
+        },
+        "path": "/collector/runtime/channel/openfp=firefox"
       }
     },
     {
-      "tag": "🇹🇷 Turkey [*CIDR]",
-      "type": "trojan",
-      "server": "37.233.80.144",
-      "server_port": 2087,
-      "password": "UyJoqPqycR",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]-3",
+      "type": "vless",
+      "server": "31.177.111.136",
+      "server_port": 443,
+      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
       "tls": {
         "enabled": true,
-        "server_name": "37.233.80.144",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "q075gi2cms.schoolbag.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "q075gi2cms.schoolbag.top"
+        },
+        "path": "/collector/runtime/channel/openfp=firefox"
+      }
+    },
+    {
+      "tag": "🇩🇿 Algeria | [*CIDR]",
+      "type": "vless",
+      "server": "168.113.252.145",
+      "server_port": 443,
+      "uuid": "1b7ee703-fa08-4305-8469-ae3e30e61e44",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tarakan.belka.tv",
+        "reality": {
+          "enabled": true,
+          "public_key": "_qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ",
+          "short_id": "a9dc98a7dc87a7dc"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
@@ -99,63 +148,25 @@
       }
     },
     {
-      "tag": "🇧🇪 Belgium | [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | [*CIDR]-4",
       "type": "vless",
-      "server": "82.148.14.100",
-      "server_port": 52006,
-      "uuid": "cde5d3ef-7d14-0320-a74d-ac98e39bf9ec",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "mvp.dont-block-please.dad",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇯🇵 [*CIDR]",
-      "type": "vless",
-      "server": "82.148.14.100",
-      "server_port": 52006,
-      "uuid": "cde5d3ef-7d14-0190-a74d-ac98e39bf9ec",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "mvp.dont-block-please.dad",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR]",
-      "type": "vless",
-      "server": "83.171.241.136",
+      "server": "31.177.111.136",
       "server_port": 443,
-      "uuid": "2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df",
+      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
       "tls": {
         "enabled": true,
-        "server_name": "a80b5386.fi2.h1clayd.click",
-        "reality": {
-          "enabled": true,
-          "public_key": "PslSaSQWP4BZZmkL7irab4FMti8sW6BvoC7ytFjJFyc",
-          "short_id": "cc678f10161992a9"
-        },
+        "server_name": "q075gi2cms.schoolbag.top",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "q075gi2cms.schoolbag.top"
+        },
+        "path": "/collector/runtime/channel/open"
       }
     }
   ],
