@@ -36,14 +36,14 @@
       "outbounds": [
         "🇷🇺 Russia | 🌐 | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-5",
-        "🇷🇺 Russia | 🌐 | [*CIDR] VK-6",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR] VK-7"
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-6"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -58,14 +58,14 @@
         "auto",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-5",
-        "🇷🇺 Russia | 🌐 | [*CIDR] VK-6",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
-        "🇷🇺 Russia | 🌐 | [*CIDR] VK-7"
+        "🇷🇺 Russia | [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR] VK-6"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -81,7 +81,7 @@
         "server_name": "wholebeam.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       }
     },
@@ -94,10 +94,39 @@
       "tls": {
         "enabled": true,
         "server_name": "wholebeam.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "95.129.236.239",
+      "server_port": 443,
+      "uuid": "77998cc6-8a4d-4251-b974-ebff48a84c4d",
+      "tls": {
+        "enabled": true,
+        "server_name": "content-iv1k.login.opendns.stream",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "content-iv1k.login.opendns.stream"
+        },
+        "path": "/sock/relay/007f9c12e265"
       }
     },
     {
@@ -116,40 +145,6 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.145.173",
-      "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "wholebeam.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
-      "type": "vless",
-      "server": "185.86.145.173",
-      "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "wholebeam.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
       "type": "vless",
       "server": "185.86.145.173",
@@ -160,7 +155,7 @@
         "server_name": "wholebeam.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -179,7 +174,62 @@
         ],
         "utls": {
           "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "95.129.236.239",
+      "server_port": 443,
+      "uuid": "77998cc6-8a4d-4251-b974-ebff48a84c4d",
+      "tls": {
+        "enabled": true,
+        "server_name": "content-iv1k.login.opendns.stream",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "content-iv1k.login.opendns.stream"
+        },
+        "path": "/sock/relay/007f9c12e265"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.145.173",
+      "server_port": 443,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "wholebeam.com",
+        "utls": {
+          "enabled": true,
           "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "185.86.145.173",
+      "server_port": 443,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "wholebeam.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
@@ -198,37 +248,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
-      "type": "vless",
-      "server": "185.86.145.173",
-      "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "wholebeam.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-7",
-      "type": "vless",
-      "server": "185.86.145.173",
-      "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "wholebeam.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       }
     }

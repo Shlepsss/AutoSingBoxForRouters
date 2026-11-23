@@ -34,14 +34,14 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
+        "🇷🇺 Russia | [*CIDR] VK-2",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-5",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-6",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-7"
       ],
@@ -56,14 +56,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-2",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
+        "🇷🇺 Russia | [*CIDR] VK-2",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-3",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-4",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-5",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-6",
         "🇷🇺 Russia | 🌐 | [*CIDR] VK-7"
       ],
@@ -71,7 +71,47 @@
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "95.129.236.239",
+      "server_port": 443,
+      "uuid": "77998cc6-8a4d-4251-b974-ebff48a84c4d",
+      "tls": {
+        "enabled": true,
+        "server_name": "content-iv1k.login.opendns.stream",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "content-iv1k.login.opendns.stream"
+        },
+        "path": "/sock/relay/007f9c12e265"
+      }
+    },
+    {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK",
+      "type": "vless",
+      "server": "185.86.145.173",
+      "server_port": 443,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "wholebeam.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] VK",
       "type": "vless",
       "server": "185.86.145.173",
       "server_port": 443,
@@ -94,43 +134,28 @@
       "tls": {
         "enabled": true,
         "server_name": "wholebeam.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.145.173",
-      "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "wholebeam.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-2",
-      "type": "vless",
-      "server": "185.86.145.173",
-      "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "wholebeam.com",
         "alpn": [
           "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
+      "type": "vless",
+      "server": "185.86.145.173",
+      "server_port": 443,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "wholebeam.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     },
@@ -149,7 +174,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       }
     },
@@ -164,42 +189,12 @@
         "server_name": "wholebeam.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
       }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-5",
-      "type": "vless",
-      "server": "185.86.145.173",
-      "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "wholebeam.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK-3",
-      "type": "vless",
-      "server": "185.86.145.173",
-      "server_port": 443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "wholebeam.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-6",
       "type": "vless",
       "server": "185.86.145.173",
       "server_port": 443,
@@ -218,7 +213,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-7",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-6",
       "type": "vless",
       "server": "185.86.145.173",
       "server_port": 443,
@@ -228,7 +223,26 @@
         "server_name": "wholebeam.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR] VK-7",
+      "type": "vless",
+      "server": "185.86.145.173",
+      "server_port": 443,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "wholebeam.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }
