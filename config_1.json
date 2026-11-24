@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR]",
-        "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
         "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2"
+        "🇫🇷 France | 🌐 [*CIDR]",
+        "🇫🇷 France | 🌐 | [*CIDR]-2",
+        "🇫🇷 France | 🌐 | [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,55 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR]",
-        "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
         "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2"
+        "🇫🇷 France | 🌐 [*CIDR]",
+        "🇫🇷 France | 🌐 | [*CIDR]-2",
+        "🇫🇷 France | 🌐 | [*CIDR]-3",
+        "🇩🇪 Germany | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "sw-api.telemetryapi.org",
+      "server": "45.67.215.20",
       "server_port": 443,
-      "uuid": "6bd1d88f-0a26-4d21-b325-15d85120b883",
+      "uuid": "2b7a122f-f6ff-4860-a919-7bf51be03c02",
       "tls": {
         "enabled": true,
-        "server_name": "sw-api.telemetryapi.org",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "sw-api.telemetryapi.org"
-        },
-        "path": "/api/v2/client/session/connect"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR]",
-      "type": "vless",
-      "server": "186.246.48.214",
-      "server_port": 443,
-      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rusbox596.aidating.am",
-        "reality": {
-          "enabled": true,
-          "public_key": "WSoclfqxCDnfT4JJOeRXkXedigewJQFCvfKrScqvYTs",
-          "short_id": "5d4c3c6c3990a22a"
-        },
+        "server_name": "mama1472.baklajann.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -107,29 +76,22 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇫🇷 France | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "files-qzgs.login.opendns.stream",
+      "server": "45.67.215.20",
       "server_port": 443,
-      "uuid": "a71d6c6d-c95e-4ec1-a892-22e21733bf09",
+      "uuid": "2b7a122f-f6ff-4860-a919-7bf51be03c02",
       "tls": {
         "enabled": true,
-        "server_name": "files-qzgs.login.opendns.stream",
+        "server_name": "mama1472.baklajann.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "files-qzgs.login.opendns.stream"
-        },
-        "path": "/origin/246825491/fetch"
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]-2",
       "type": "vless",
       "server": "45.67.215.111",
       "server_port": 443,
@@ -144,33 +106,41 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]-2",
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]-3",
       "type": "vless",
-      "server": "files-qzgs.login.opendns.stream",
+      "server": "45.67.215.111",
       "server_port": 443,
-      "uuid": "a71d6c6d-c95e-4ec1-a892-22e21733bf09",
+      "uuid": "2b7a122f-f6ff-4860-a919-7bf51be03c02",
       "tls": {
         "enabled": true,
-        "server_name": "files-qzgs.login.opendns.stream",
+        "server_name": "newmama.baklajann.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "moonwort.gerqix.autos",
+      "server_port": 443,
+      "uuid": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "birchmeadow.moltex.click",
         "alpn": [
-          "http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "files-qzgs.login.opendns.stream"
-        },
-        "path": "/origin/246825491/fetch"
       }
     }
   ],

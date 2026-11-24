@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇫🇷 France | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇹🇷 Turkey | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇫🇷 France | 🌐 | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,67 +51,52 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇫🇷 France | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇩🇪 Germany [*CIDR]-2"
+        "🇩🇪 Germany | [*CIDR]",
+        "🇹🇷 Turkey | [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇫🇷 France | 🌐 | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
+      "tag": "🇩🇪 Germany | [*CIDR]",
       "type": "vless",
-      "server": "91.132.190.161",
+      "server": "sw-api.telemetryapi.org",
       "server_port": 443,
-      "uuid": "04920673-035c-410d-94e4-5b1469d3fb6f",
-      "flow": "xtls-rprx-vision",
+      "uuid": "6bd1d88f-0a26-4d21-b325-15d85120b883",
       "tls": {
         "enabled": true,
-        "server_name": "171.22.183.166",
+        "server_name": "sw-api.telemetryapi.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "95.129.236.239",
-      "server_port": 443,
-      "uuid": "a71d6c6d-c95e-4ec1-a892-22e21733bf09",
-      "tls": {
-        "enabled": true,
-        "server_name": "files-qzgs.login.opendns.stream",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
         }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "files-qzgs.login.opendns.stream"
+          "Host": "sw-api.telemetryapi.org"
         },
-        "path": "/origin/246825491/fetch"
+        "path": "/api/v2/client/session/connect"
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]",
+      "tag": "🇹🇷 Turkey | [*CIDR]",
       "type": "vless",
-      "server": "45.67.215.20",
+      "server": "147.45.213.56",
       "server_port": 443,
-      "uuid": "2b7a122f-f6ff-4860-a919-7bf51be03c02",
+      "uuid": "42c83523-9f96-41b2-82d6-2edb71a4ac19",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "mama1472.baklajann.ru",
-        "alpn": [
-          "h2",
-          "h3",
-          "http/1.1"
-        ],
+        "server_name": "zkgbzlv5d42.vortenix-data59.cfd",
+        "reality": {
+          "enabled": true,
+          "public_key": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -119,28 +104,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "vless",
-      "server": "5.42.104.35",
-      "server_port": 443,
-      "uuid": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rufinmicro2.gangplatform.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZYYEU2KMrEartaw0Sz1jsTS4fC1RqU0p_Vj2OiO0Alc",
-          "short_id": "401287b3f6f20ecd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]-2",
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
       "type": "vless",
       "server": "files-qzgs.login.opendns.stream",
       "server_port": 443,
@@ -159,6 +123,47 @@
           "Host": "files-qzgs.login.opendns.stream"
         },
         "path": "/origin/246825491/fetch"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "45.67.215.20",
+      "server_port": 443,
+      "uuid": "2b7a122f-f6ff-4860-a919-7bf51be03c02",
+      "tls": {
+        "enabled": true,
+        "server_name": "19.baklajann.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "31.177.111.183",
+      "server_port": 443,
+      "uuid": "b432a23a-acff-425c-bf69-70480cd6ed09",
+      "tls": {
+        "enabled": true,
+        "server_name": "e3.cdnwh.icu",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "e3.cdnwh.icu"
+        },
+        "path": "/edge/chunk/b2265efffa29/"
       }
     }
   ],
