@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇻 Latvia | 🌐 [*CIDR] VK",
-        "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]"
+        "🇱🇻 Latvia | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇦🇪 United Arab Emirates | [*CIDR]",
+        "🇵🇱 Poland | 🌐 | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,63 +51,46 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇻 Latvia | 🌐 [*CIDR] VK",
-        "🇫🇷 France | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]"
+        "🇱🇻 Latvia | [*CIDR]",
+        "🇫🇮 Finland | [*CIDR]",
+        "🇦🇪 United Arab Emirates | [*CIDR]",
+        "🇵🇱 Poland | 🌐 | [*CIDR]",
+        "🇦🇹 Austria | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇻 Latvia | 🌐 [*CIDR] VK",
+      "tag": "🇱🇻 Latvia | [*CIDR]",
       "type": "vless",
-      "server": "84.23.54.115",
-      "server_port": 443,
-      "uuid": "7cbd9bf9-a3b1-4257-8406-df6109cd882f",
-      "flow": "xtls-rprx-vision",
+      "server": "213.183.45.23",
+      "server_port": 8450,
+      "uuid": "eb62cabf-5901-403a-aa0c-b1d9ed1b346d",
       "tls": {
         "enabled": true,
-        "server_name": "lv.chick-chirik.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "2v1vd2gw3A9Sw6w36s63QaSeMYnY4DrkEPUdKAbBPzE",
-          "short_id": "25f11b01338a8963"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "45.67.215.21",
-      "server_port": 443,
-      "uuid": "216a03d5-bc3c-40c6-a2fd-dc153dbb3867",
-      "tls": {
-        "enabled": true,
-        "server_name": "mama147.baklajann.ru",
+        "server_name": "fonts.plumstatic.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "fonts.plumstatic.com"
+        },
+        "path": "/ws"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
+      "tag": "🇫🇮 Finland | [*CIDR]",
       "type": "vless",
-      "server": "hawthorn.falmero.store",
+      "server": "45.132.178.108",
       "server_port": 443,
-      "uuid": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
+      "uuid": "244d4130-4e72-0001-b93f-c1296cba97d0",
       "tls": {
         "enabled": true,
-        "server_name": "paperbirch.merlano.monster",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "ysbnggurlwwotbmkuf.fcloudservices.site",
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
@@ -115,38 +98,54 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "tag": "🇦🇪 United Arab Emirates | [*CIDR]",
       "type": "vless",
-      "server": "moonwort.gerqix.autos",
-      "server_port": 443,
-      "uuid": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
+      "server": "213.183.41.31",
+      "server_port": 8459,
+      "uuid": "eb62cabf-5901-403a-aa0c-b1d9ed1b346d",
       "tls": {
         "enabled": true,
-        "server_name": "birchmeadow.moltex.click",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "photos.plumstatic.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "photos.plumstatic.com"
+        },
+        "path": "/ws"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "45.67.215.21",
+      "server_port": 443,
+      "uuid": "3493b1bc-1c65-46e6-9cb6-9dd62b99afea",
+      "tls": {
+        "enabled": true,
+        "server_name": "51.baklajann.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇦🇹 Austria | [*CIDR]",
       "type": "vless",
-      "server": "moonwort.gerqix.autos",
+      "server": "194.53.175.27",
       "server_port": 443,
-      "uuid": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
+      "uuid": "11d14aed-3d44-4bb2-b9c0-24e661589e5a",
       "tls": {
         "enabled": true,
-        "server_name": "birchmeadow.moltex.click",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "atd2.tunnely.space",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     }
