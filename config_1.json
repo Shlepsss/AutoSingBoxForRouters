@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 Turkey [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇱🇻 Latvia | 🌐 [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]"
+        "🇫🇷 France | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,54 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 Turkey [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇱🇻 Latvia | 🌐 [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR]"
+        "🇫🇷 France | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 | [*CIDR]",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇹🇷 Turkey [*CIDR]",
-      "type": "vless",
-      "server": "147.45.213.56",
-      "server_port": 443,
-      "uuid": "42c83523-9f96-41b2-82d6-2edb71a4ac19",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "zkgbzlv5d42.vortenix-data59.cfd",
-        "reality": {
-          "enabled": true,
-          "public_key": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "vellum.filnex.baby",
-      "server_port": 443,
-      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
-      "tls": {
-        "enabled": true,
-        "server_name": "rookery.moltex.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "glush.de3.v1"
-      }
     },
     {
       "tag": "🇱🇻 Latvia | 🌐 [*CIDR] VK",
@@ -117,22 +77,36 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "45.67.215.21",
+      "server_port": 443,
+      "uuid": "216a03d5-bc3c-40c6-a2fd-dc153dbb3867",
+      "tls": {
+        "enabled": true,
+        "server_name": "mama147.baklajann.ru",
+        "utls": {
+          "enabled": true,
           "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "176.98.176.60",
+      "server": "hawthorn.falmero.store",
       "server_port": 443,
-      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
       "tls": {
         "enabled": true,
-        "server_name": "mosaic.topp-con.xyz",
+        "server_name": "paperbirch.merlano.monster",
         "alpn": [
-          "h2,http/1.1"
+          "h2"
         ],
         "utls": {
           "enabled": true,
@@ -141,23 +115,38 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "72.56.38.83",
+      "server": "moonwort.gerqix.autos",
       "server_port": 443,
-      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
-      "flow": "xtls-rprx-vision",
+      "uuid": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
       "tls": {
         "enabled": true,
-        "server_name": "absolute-disaster.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8",
-          "short_id": ""
-        },
+        "server_name": "birchmeadow.moltex.click",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "moonwort.gerqix.autos",
+      "server_port": 443,
+      "uuid": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "birchmeadow.moltex.click",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
