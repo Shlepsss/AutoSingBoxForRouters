@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 Bulgaria | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        "🇧🇬 Bulgaria | [*CIDR] CDN-2"
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
+        "🌐 Anycast-IP | 🇦🇪 🇩🇪 🇺🇸 | [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇮 🇺🇸 | [*CIDR]",
+        "🇫🇷 France | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,95 +51,108 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 Bulgaria | [*CIDR] CDN",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 [*CIDR]",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        "🇧🇬 Bulgaria | [*CIDR] CDN-2"
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
+        "🌐 Anycast-IP | 🇦🇪 🇩🇪 🇺🇸 | [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇮 🇺🇸 | [*CIDR]",
+        "🇫🇷 France | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇬 Bulgaria | [*CIDR] CDN",
-      "type": "vless",
-      "server": "plaindune.com",
-      "server_port": 8443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "plaindune.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇿 🇷🇺 [*CIDR]",
+      "tag": "🇬🇧 United Kingdom [*CIDR]",
       "type": "trojan",
-      "server": "185.178.208.167",
-      "server_port": 443,
-      "password": "7y5Uu8KlqLL-HjnB0MPkPw",
+      "server": "5.101.51.138",
+      "server_port": 2095,
+      "password": "cWM5aWtWR9",
       "tls": {
         "enabled": true,
-        "server_name": "inetdostup.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "api.14887277.xyz"
-        },
-        "path": "/flow-direct/"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "196.240.125.250",
-      "server_port": 8443,
-      "uuid": "0173d52e-8e1b-4681-831e-11529677b72f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-v2-6b07048f.vmagnum.win",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-      "type": "vless",
-      "server": "plaindune.com",
-      "server_port": 8443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "plaindune.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [*CIDR] CDN-2",
-      "type": "vless",
-      "server": "46.243.234.248",
-      "server_port": 8443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "plaindune.com",
+        "server_name": "ru-1.krugvpn.me",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
+      "type": "vless",
+      "server": "85.8.201.186",
+      "server_port": 443,
+      "uuid": "7aa77858-f235-000d-9434-7ab060848b17",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.mornismp.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇪 🇩🇪 🇺🇸 | [*CIDR]",
+      "type": "vless",
+      "server": "85.8.201.186",
+      "server_port": 443,
+      "uuid": "7aa77858-f235-0001-9434-7ab060848b17",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.mornismp.ru",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇫🇮 🇺🇸 | [*CIDR]",
+      "type": "vless",
+      "server": "85.8.201.186",
+      "server_port": 443,
+      "uuid": "7aa77858-f235-0004-9434-7ab060848b17",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.mornismp.ru",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇫🇷 France | [*CIDR]",
+      "type": "vless",
+      "server": "189.74.117.20",
+      "server_port": 443,
+      "uuid": "9b0eb7db-c3be-4564-bf69-025ae05d02b4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.videodolina.cc",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }

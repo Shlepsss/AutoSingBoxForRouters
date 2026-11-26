@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-3"
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,89 +51,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
-        "🇳🇱 The Netherlands | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-3"
+        "🇬🇧 United Kingdom [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
+        "🌐 Anycast-IP | 🇳🇱 🇷🇺 [*CIDR]",
+        "🇺🇸 United States | [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "tag": "🇬🇧 United Kingdom [*CIDR]",
       "type": "trojan",
-      "server": "ru-1.krugvpn.me",
-      "server_port": 2097,
-      "password": "cWM5aWtWR9",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru-1.krugvpn.me",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | 🌐 [*CIDR] CDN",
-      "type": "vless",
-      "server": "plaindune.com",
-      "server_port": 8443,
-      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
-      "tls": {
-        "enabled": true,
-        "server_name": "plaindune.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
-      "type": "vless",
-      "server": "r3.pythonmakemigreat.wiki",
-      "server_port": 8443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.study.golangwikito.cfd",
-        "reality": {
-          "enabled": true,
-          "public_key": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [*CIDR]",
-      "type": "vless",
-      "server": "196.240.125.250",
-      "server_port": 8443,
-      "uuid": "0173d52e-8e1b-4681-831e-11529677b72f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-v2-6b07048f.vmagnum.win",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-3",
-      "type": "trojan",
-      "server": "ru-1.krugvpn.me",
-      "server_port": 8443,
+      "server": "5.101.51.138",
+      "server_port": 2095,
       "password": "cWM5aWtWR9",
       "tls": {
         "enabled": true,
@@ -144,6 +75,89 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇫🇮 | [*CIDR]",
+      "type": "vless",
+      "server": "85.8.201.193",
+      "server_port": 443,
+      "uuid": "7aa77858-f235-000d-9434-7ab060848b17",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.mornismp.ru",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇺 [*CIDR]",
+      "type": "vless",
+      "server": "217.19.123.47",
+      "server_port": 443,
+      "uuid": "48818046-00b5-4576-bbe8-d2971fe0f844",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "player.mediavitrina.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "d4735e3a265e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [*CIDR]",
+      "type": "vless",
+      "server": "api.ggssstreaming.ru",
+      "server_port": 443,
+      "uuid": "9a9f167d-b461-466f-be50-f0ffd598a6f8",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.ggssstreaming.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "r445h-YroH5eENllZFKxE6XndWGAc9SBPAzfyIHnajQ",
+          "short_id": "07b7580eec1fec3a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "yellow-4hmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "48818046-00b5-4576-bbe8-d2971fe0f844",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "player.mediavitrina.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "d4735e3a265e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
