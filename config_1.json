@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇱 Albania | [*CIDR]",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🌐 Anycast-IP | 🇮🇷 🇳🇱 | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-3",
+        "🇧🇬 Bulgaria | 🌐 | [*CIDR] CDN",
+        "🇧🇬 Bulgaria | [*CIDR] CDN"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,30 +51,45 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇱 Albania | [*CIDR]",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🌐 Anycast-IP | 🇮🇷 🇳🇱 | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-3",
+        "🇧🇬 Bulgaria | 🌐 | [*CIDR] CDN",
+        "🇧🇬 Bulgaria | [*CIDR] CDN"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇦🇱 Albania | [*CIDR]",
-      "type": "vless",
-      "server": "185.229.9.242",
-      "server_port": 442,
-      "uuid": "29c46e15-5adc-461a-add7-4c8e834bb488",
-      "flow": "xtls-rprx-vision",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "type": "trojan",
+      "server": "ru-1.krugvpn.me",
+      "server_port": 443,
+      "password": "cWM5aWtWR9",
       "tls": {
         "enabled": true,
-        "server_name": "lk.x5.ru",
-        "reality": {
+        "server_name": "ru-1.krugvpn.me",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
           "enabled": true,
-          "public_key": "-Yuih9QnY-4Zo2Z6S7i-wjsny5DNBuqkdIxXS4lbKG0",
-          "short_id": ""
-        },
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
+      "type": "trojan",
+      "server": "ru-1.krugvpn.me",
+      "server_port": 443,
+      "password": "cWM5aWtWR9",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru-1.krugvpn.me",
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
@@ -82,84 +97,50 @@
       }
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "r3.pythonmakemigreat.wiki",
-      "server_port": 8443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-3",
+      "type": "trojan",
+      "server": "ru-1.krugvpn.me",
+      "server_port": 2097,
+      "password": "cWM5aWtWR9",
       "tls": {
         "enabled": true,
-        "server_name": "assets.study.golangwikito.cfd",
-        "reality": {
+        "server_name": "ru-1.krugvpn.me",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
           "enabled": true,
-          "public_key": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "short_id": ""
-        },
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria | 🌐 | [*CIDR] CDN",
+      "type": "vless",
+      "server": "plaindune.com",
+      "server_port": 8443,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "plaindune.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria | [*CIDR] CDN",
+      "type": "vless",
+      "server": "46.243.234.248",
+      "server_port": 8443,
+      "uuid": "37af0181-5598-4aad-a040-d926bcb65757",
+      "tls": {
+        "enabled": true,
+        "server_name": "plaindune.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "r4.pythonmakemigreat.wiki",
-      "server_port": 8443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.study.golangwikito.cfd",
-        "reality": {
-          "enabled": true,
-          "public_key": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "short_id": "40a4b9403abe554c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇮🇷 🇳🇱 | [*CIDR]",
-      "type": "vless",
-      "server": "94.139.255.140",
-      "server_port": 443,
-      "uuid": "29c46e15-5adc-461a-add7-4c8e834bb488",
-      "tls": {
-        "enabled": true,
-        "server_name": "akb-omsk.store",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "akb-omsk.store"
-        },
-        "path": "/catalog/feed/WzTT7S74q5VP"
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
-      "type": "vless",
-      "server": "r3.pythonmakemigreat.wiki",
-      "server_port": 8443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.study.golangwikito.cfd",
-        "reality": {
-          "enabled": true,
-          "public_key": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
         }
       }
     }
