@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR]",
-        "🇨🇦 Canada | 🌐 | [*CIDR]",
-        "🌐 Anycast-IP | 🇳🇱 🇷🇺 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🌐 Anycast-IP | 🇫🇮 🇺🇸 [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,49 +51,50 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇨🇦 Canada | 🌐 | [*CIDR]",
-        "🌐 Anycast-IP | 🇳🇱 🇷🇺 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]"
+        "🌐 Anycast-IP | 🇫🇮 🇺🇸 [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]-2",
+        "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]",
+        "🇵🇱 Poland [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇫🇮 🇺🇸 [*CIDR]",
       "type": "vless",
-      "server": "r3.pythonmakemigreat.wiki",
-      "server_port": 8443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.study.golangwikito.cfd",
-        "reality": {
-          "enabled": true,
-          "public_key": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "short_id": "40a4b9403abe554c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇦 Canada | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "157.22.191.75",
+      "server": "85.8.201.186",
       "server_port": 443,
-      "uuid": "f4b08bf1-d9bd-4755-aa88-ba922282c608",
+      "uuid": "7aa77858-f235-0004-9434-7ab060848b17",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "rucanmicro1.gangplatform.com",
+        "server_name": "cdn.mornismp.ru",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "72.56.38.83",
+      "server_port": 443,
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "absolute-disaster.org",
         "reality": {
           "enabled": true,
-          "public_key": "3U3hb-HmOG5qptCzXIt8NQE3TE40eeTJsNpBV_B9hQA",
-          "short_id": "1dde6750d22c5634"
+          "public_key": "ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -102,64 +103,66 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇳🇱 🇷🇺 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands [*CIDR]-2",
       "type": "vless",
-      "server": "yellow-5hmq5ehr3ievlnabv8l2.concept7.ru",
+      "server": "72.56.38.83",
       "server_port": 443,
-      "uuid": "48818046-00b5-4576-bbe8-d2971fe0f844",
+      "uuid": "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "river-3-369.rtbcdn.ru",
+        "insecure": true,
+        "server_name": "absolute-disaster.org",
         "reality": {
           "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4b227777d4dd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "217.19.123.45",
-      "server_port": 443,
-      "uuid": "48818046-00b5-4576-bbe8-d2971fe0f844",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "river-3-369.rtbcdn.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4b227777d4dd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "r9.pythonmakemigreat.wiki",
-      "server_port": 8443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "tls": {
-        "enabled": true,
-        "server_name": "stream.study.golangwikito.cfd",
-        "reality": {
-          "enabled": true,
-          "public_key": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
+          "public_key": "ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇰🇷 [*CIDR]",
+      "type": "vless",
+      "server": "5.42.104.42",
+      "server_port": 443,
+      "uuid": "f4b08bf1-d9bd-4755-aa88-ba922282c608",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rugermicro2.gangplatform.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "nPYLh9nRxKK0OQVQrboJyKN4Y3DViI412cbN9Tbz9AQ",
+          "short_id": "53668ac88eefee81"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR]",
+      "type": "vless",
+      "server": "176.98.177.15",
+      "server_port": 9443,
+      "uuid": "08d03a59-891b-4017-945c-eff6870f24a8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sub.skycore.lol",
+        "reality": {
+          "enabled": true,
+          "public_key": "uMJD9Ecu3aUygm_Zq03L7PRU_w7uvANcnEwliGZOjVo",
+          "short_id": "cd7e8c81880e46a2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

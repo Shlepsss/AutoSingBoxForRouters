@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇴 Romania | [*CIDR]",
+        "🇦🇱 Albania | 🌐 | [*CIDR]",
+        "🇦🇱 Albania | 🌐 | [*CIDR]-2",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        "🇨🇦 Canada | 🌐 | [*CIDR]"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,106 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR]",
+        "🇷🇴 Romania | [*CIDR]",
+        "🇦🇱 Albania | 🌐 | [*CIDR]",
+        "🇦🇱 Albania | 🌐 | [*CIDR]-2",
         ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-        "🇨🇦 Canada | 🌐 | [*CIDR]"
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
+      "tag": "🇷🇴 Romania | [*CIDR]",
       "type": "vless",
-      "server": "r3.pythonmakemigreat.wiki",
+      "server": "185.178.208.140",
+      "server_port": 443,
+      "uuid": "e5d92bb5-e2d1-4671-b548-ad7ba10fcf4b",
+      "tls": {
+        "enabled": true,
+        "server_name": "abrodom.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇦🇱 Albania | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "185.12.127.228",
+      "server_port": 2087,
+      "uuid": "81c9cfa5-7522-490b-a613-99cdd2a52d29",
+      "tls": {
+        "enabled": true,
+        "server_name": "press.stonebridge-atelier.vip",
+        "reality": {
+          "enabled": true,
+          "public_key": "PzV1ayb6Elgyc6vn9yS08g8c6KDP1Xh-0R181Fazhio",
+          "short_id": "6ab75ab2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cas-al"
+      }
+    },
+    {
+      "tag": "🇦🇱 Albania | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "185.12.127.228",
+      "server_port": 2087,
+      "uuid": "81c9cfa5-7522-490b-a613-99cdd2a52d29",
+      "tls": {
+        "enabled": true,
+        "server_name": "press.stonebridge-atelier.vip",
+        "reality": {
+          "enabled": true,
+          "public_key": "PzV1ayb6Elgyc6vn9yS08g8c6KDP1Xh-0R181Fazhio",
+          "short_id": "6ab75ab2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cas-al"
+      }
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
+      "type": "vless",
+      "server": "87.242.102.222",
+      "server_port": 443,
+      "uuid": "bfce4086-02f9-4006-b579-472210753a63",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.happofficial.store",
+        "reality": {
+          "enabled": true,
+          "public_key": "WaU5vsybQPp-NZNXWSjUEVfbAG-hqDPipci1z1xkhiw",
+          "short_id": "b7d7a3622d85f30a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]-2",
+      "type": "vless",
+      "server": "r4.pythonmakemigreat.wiki",
       "server_port": 8443,
       "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
       "tls": {
@@ -76,90 +163,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "type": "vless",
-      "server": "r7.pythonmakemigreat.wiki",
-      "server_port": 8443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.study.golangwikito.cfd",
-        "reality": {
-          "enabled": true,
-          "public_key": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "short_id": "40a4b9403abe554c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]",
-      "type": "vless",
-      "server": "217.19.123.45",
-      "server_port": 443,
-      "uuid": "48818046-00b5-4576-bbe8-d2971fe0f844",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "river-3-369.rtbcdn.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4b227777d4dd"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "217.19.123.45",
-      "server_port": 443,
-      "uuid": "48818046-00b5-4576-bbe8-d2971fe0f844",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "river-3-369.rtbcdn.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4b227777d4dd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇦 Canada | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "157.22.191.75",
-      "server_port": 443,
-      "uuid": "f4b08bf1-d9bd-4755-aa88-ba922282c608",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rucanmicro1.gangplatform.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "3U3hb-HmOG5qptCzXIt8NQE3TE40eeTJsNpBV_B9hQA",
-          "short_id": "1dde6750d22c5634"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
         }
       }
     }
